@@ -6,7 +6,7 @@
 
     <nav role="navigation">
         <div class="header container">
-            <div class="row">
+            <div class="row"> 
                 <div class="col-12">
                     <div class="navbar-header brand">
                         <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
