@@ -70,7 +70,7 @@
                                     <!-- Quantity Drop Down Menu -->
                                     <div class="attribute quantity col-4">
                                         <isinclude template="product/components/quantity" />
-                                    </div>
+                                    </div> 
                                 </isif>
                             </div>
                         </isloop>
