@@ -6,17 +6,23 @@
 
     <nav role="navigation">
         <div class="header container">
-            <div class="row"> 
+            <div class="row">
                 <div class="col-12">
                     <div class="navbar-header brand">
                         <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
-                            <img class="hidden-md-down" src="${URLUtils.staticURL('/images/logo-mf.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                            <img class="hidden-md-down" id="logoCustom" src="${URLUtils.staticURL('/images/logo-mf.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
                             <img class="d-lg-none" src="${URLUtils.staticURL('/images/logo-mf.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
                         </a>
                     </div>
                     <div class="navbar-header">
-                        <div class="pull-left">
-                            <div class="hidden-md-down">
+                        
+                        <div class="pull-right">
+                            <div class="search hidden-xs-down">
+                                <isinclude template="components/header/search" />
+                            </div>
+
+                        <div class="loginCustom" >
+                            <div class="hidden-md-down" id="loginCustom">
                                 <isinclude url="${URLUtils.url('Account-Header')}" />
                                 <isinclude url="${URLUtils.url('Page-Locale')}" />
                             </div>
@@ -24,10 +30,7 @@
                                 &#9776; <span class="hidden-xs-down">Menu</span>
                             </button>
                         </div>
-                        <div class="pull-right">
-                            <div class="search hidden-xs-down">
-                                <isinclude template="components/header/search" />
-                            </div>
+
                             <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
                                 <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
                             </div>

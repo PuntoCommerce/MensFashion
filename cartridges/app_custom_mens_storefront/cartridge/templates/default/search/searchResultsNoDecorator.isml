@@ -56,11 +56,12 @@
                     </div>
 
                     
-                    <div class="d-flex justify-content-between">
-                        <div>
+                    <div class="d-flex justify-content-between mb-3 border-bottom">
+                        <div class="resultsCountCustom">
                             <isinclude template="search/resultsCount" />
                         </div>
                         <div>
+                            <span class="orderByCsutom">${Resource.msg('label.orderBy', 'search', null)}</span>
                             <isinclude template="search/sortOrderMenu" />
                         </div>
                     </div>

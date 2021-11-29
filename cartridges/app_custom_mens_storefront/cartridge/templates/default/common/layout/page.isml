@@ -5,6 +5,7 @@
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/custom.css');
+        assets.addCss('/css/custom2.css');
     </isscript>
 
 
