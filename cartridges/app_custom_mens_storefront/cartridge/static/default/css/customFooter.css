@@ -1,0 +1,35 @@
+footer {
+  background-color: #ededed;
+}
+
+footer .container {
+  max-width: 1390px;
+  margin: auto;
+  color: #929292;
+}
+
+footer .container a {
+  color: #929292;
+}
+
+.row-btn-back-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-row-custom {
+  align-items: center;
+}
+
+.menu-footer a:hover {
+  text-decoration: underline #f77b28;
+}
+
+.footer-sociales {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-footer-item {
+  padding: 0;
+}
