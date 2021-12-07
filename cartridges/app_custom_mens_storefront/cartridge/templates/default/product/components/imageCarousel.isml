@@ -1,4 +1,4 @@
-<div class="primary-images col-12 col-sm-6">
+<div class="col-6 col-sm-6">
     <div id="pdpCarousel-${product.id}" class="carousel slide" data-interval="0" data-prev="${Resource.msg('button.previous', 'common', null)}" data-next="${Resource.msg('button.next', 'common', null)}">
         <isif condition="${product.images['large'].length > 1}">
             <ol class="carousel-indicators" aria-hidden="true">
