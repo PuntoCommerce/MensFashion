@@ -3,6 +3,7 @@
         var assets = require('*/cartridge/scripts/assets');
         assets.addJs('/js/search.js');
         assets.addCss('/css/search.css');
+        assets.addCss('/css/customFooter.css');
     </isscript>
 
     <isinclude template="search/searchResultsNoDecorator" />
