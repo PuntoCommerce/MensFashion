@@ -14,11 +14,30 @@
                     alt="${Resource.msg('global.storename', 'common', null)}" />
             </div>
             <div class="footer-item col-sm-6 store footer-sociales custom-footer-item">
-                <a class="logo-sociales" href="${URLUtils.url('Home-Show')}" title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
-                                                                                    'global.home', 'common', null))}">
-                    <img class="hidden-md-down" id="logoCustom" src="${URLUtils.staticURL('/images/footsoc.png')}"
+                <a class="logo-sociales a-facebook" href="http://www.facebook.com" rel="noopener" target="_blank" title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                                                                                                                         'global.home', 'common', null))}">
+                    <img class="hidden-md-down logo-facebook" id="logoCustom"
+                        src="${URLUtils.staticURL('/images/facebook.png')}"
                         alt="${Resource.msg('global.storename', 'common', null)}" />
-                    <img class="d-lg-none" src="${URLUtils.staticURL('/images/footsoc.png')}"
+                    <img class="d-lg-none" src="${URLUtils.staticURL('/images/facebook.png')}"
+                        alt="${Resource.msg('global.storename', 'common', null)}" />
+                </a>
+                <a class="logo-sociales a-instagram" href="http://www.instagram.com" rel="noopener" target="_blank"
+                    title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                           'global.home', 'common', null))}">
+                    <img class="hidden-md-down logo-instagram" id="logoCustom"
+                        src="${URLUtils.staticURL('/images/instagram.png')}"
+                        alt="${Resource.msg('global.storename', 'common', null)}" />
+                    <img class="d-lg-none" src="${URLUtils.staticURL('/images/instagram.png')}"
+                        alt="${Resource.msg('global.storename', 'common', null)}" />
+                </a>
+                <a class="logo-sociales a-youtube" href="http://www.youtube.com" rel="noopener" target="_blank"
+                    title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                           'global.home', 'common', null))}">
+                    <img class="hidden-md-down logo-youtube" id="logoCustom"
+                        src="${URLUtils.staticURL('/images/youtube.png')}"
+                        alt="${Resource.msg('global.storename', 'common', null)}" />
+                    <img class="d-lg-none" src="${URLUtils.staticURL('/images/youtube.png')}"
                         alt="${Resource.msg('global.storename', 'common', null)}" />
                 </a>
             </div>
