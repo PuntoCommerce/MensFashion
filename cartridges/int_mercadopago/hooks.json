@@ -1,0 +1,12 @@
+{
+  "hooks": [
+    {
+      "name": "app.payment.form.processor.mercadopago",
+      "script": "./cartridge/scripts/hooks/payment/processor/mercadopago_form"
+    },
+    {
+      "name": "app.payment.processor.mercadopago",
+      "script": "./cartridge/scripts/hooks/payment/processor/mercadopago"
+    }
+  ]
+}
