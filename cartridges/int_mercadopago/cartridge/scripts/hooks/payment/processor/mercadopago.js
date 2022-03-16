@@ -202,15 +202,22 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
         error = true;
         serverErrors.push(Resource.msg("error.technical", "mercadopago", null));
       } else {
-        if (paymentMP.status === "approved") {
-          paymentInstrument.paymentTransaction.setTransactionID(paymentMP.id);
-          order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
-          // order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
+        order.custom.isMercadoPago = true;
+        paymentInstrument.paymentTransaction.setTransactionID(paymentMP.id);
+        if (
+          paymentMP.status === "approved" ||
+          paymentMP.status === "pending" ||
+          paymentMP.status === "in_process" ||
+          paymentMP.status === "in_mediation"
+        ) {
+          if (paymentMP.status === "approved") {
+            order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
+          }
         } else {
-          error = true;
-          serverErrors.push(
-            Resource.msg("error.rejected", "mercadopago", null)
-          );
+          // error = true;
+          // serverErrors.push(
+          //   Resource.msg("error.rejected", "mercadopago", null)
+          // );
         }
       }
       paymentInstrument.paymentTransaction.setPaymentProcessor(
