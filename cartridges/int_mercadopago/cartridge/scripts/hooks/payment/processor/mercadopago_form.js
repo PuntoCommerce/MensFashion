@@ -108,7 +108,7 @@ function savePaymentInformation(req, basket, billingData) {
     req.currentCustomer.raw.authenticated &&
     req.currentCustomer.raw.registered &&
     billingData.saveCard &&
-    billingData.paymentMethod.value === "CREDIT_CARD"
+    billingData.paymentMethod.value === "MercadoPago"
   ) {
     var customer = CustomerMgr.getCustomerByCustomerNumber(
       req.currentCustomer.profile.customerNo

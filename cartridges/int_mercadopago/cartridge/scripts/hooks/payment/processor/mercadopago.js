@@ -106,7 +106,6 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
     paymentInstrument.setCreditCardHolder(
       currentBasket.billingAddress.fullName
     );
-    // payment;
     paymentInstrument.setBankAccountNumber(issuer_id);
     paymentInstrument.setCreditCardNumber(cardNumber);
     paymentInstrument.setCreditCardType(cardType);

@@ -1,0 +1,15 @@
+<div class="mercado-pago-type">
+    <iscomment> <span>${Resource.msg('msg.payment.type.credit', 'confirmation', null)}
+    ${payment.type}</span>
+</div>
+<div class="credit-card-number">
+    ${payment.maskedCreditCardNumber}
+</div>
+<div class="credit-card-expiration-date">
+    <span>${Resource.msg('msg.card.type.ending', 'confirmation', null)} ${payment.expirationMonth}/${payment.expirationYear}</span> </iscomment>
+
+
+    <span>${Resource.msg('brand.mercadopago', 'mercadopago', null)}</span> <br />
+    <span>${Resource.msg('customer.email', 'mercadopago', null)}</span> <span>${pdict.order.orderEmail}</span><br />
+    <span>${Resource.msg('customer.total', 'mercadopago', null)}</span> <span>${pdict.order.priceTotal}</span><br />
+</div>
