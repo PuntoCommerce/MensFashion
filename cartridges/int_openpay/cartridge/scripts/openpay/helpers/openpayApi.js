@@ -14,6 +14,5 @@ const rest = (path, method, body = null) => {
 };
 
 module.exports = {
-  createCardToken: createCardToken,
+  rest: rest,
 };
-j;
