@@ -8,7 +8,6 @@
 * @constructor
 */
 function billing(addressModel, paymentModel, associatedAddressId) {
-    
     this.billingAddress = addressModel;
     this.payment = paymentModel;
     this.matchingAddressId = associatedAddressId;

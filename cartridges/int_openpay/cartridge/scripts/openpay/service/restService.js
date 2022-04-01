@@ -35,27 +35,14 @@ const createRequest = (service, data) => {
   service.setURL(creteUrlPath(credential, openpayId, path));
   service.addHeader("Content-Type", "application/json");
   service.setRequestMethod(method);
-  service.addHeader("Authorization", "Basic " + credential.password);
+  // service.setAu
+  // service.addHeader(" " + credential.password);
 
   return body ? JSON.stringify(body) : "";
 };
 
 const parseResponse = (_, httpClient) => {
   return JSON.parse(httpClient.getText());
-};
-
-const call = (data) => {
-  let result;
-  try {
-    result = restService.setThrowOnError.call(data);
-  } catch (error) {
-    return error;
-  }
-  if (result.isOk()) {
-    return restService.response;
-  } else {
-    return false;
-  }
 };
 
 module.exports = (() => {
@@ -71,6 +58,18 @@ module.exports = (() => {
   }
 
   return {
-    call: call,
+    call: (data) => {
+      let result;
+      try {
+        result = restService.setThrowOnError().call(data);
+      } catch (error) {
+        return error;
+      }
+      if (result.isOk()) {
+        return restService.response;
+      } else {
+        return result.response;
+      }
+    },
   };
 })();

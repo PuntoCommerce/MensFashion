@@ -1,6 +1,6 @@
 'use strict';
 
-    var decorators = require('*/cartridge/models/product/decorators/index');
+var decorators = require('*/cartridge/models/product/decorators/index');
 
 /**
  * Decorate product with full product information
@@ -17,7 +17,6 @@
  * @returns {Object} - Decorated product model
  */
 module.exports = function fullProduct(product, apiProduct, options) {
-
     decorators.base(product, apiProduct, options.productType);
     decorators.price(product, apiProduct, options.promotions, false, options.optionModel);
 
@@ -46,7 +45,7 @@ module.exports = function fullProduct(product, apiProduct, options) {
         category = apiProduct.getMasterProduct().getPrimaryCategory();
     }
 
-    if (category) {
+    if (category && 'sizeChartID' in category.custom) {
         decorators.sizeChart(product, category.custom.sizeChartID);
     }
 

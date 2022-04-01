@@ -1,12 +1,12 @@
 <header>
     <isinclude template="/components/header/skipNav" />
-
-    <!-- Campaign Banner Component renders here -->
-    <isprint value="${pdict.regions.headerbanner.render()}" encoding="off"/>
-
+    <isif condition="${pdict.regions.headerbanner}">
+        <!-- Campaign Banner Component renders here -->
+        <isprint value="${pdict.regions.headerbanner.render()}" encoding="off"/>
+    </isif>
     <nav role="navigation">
         <div class="header container">
-            <div class="row"> 
+            <div class="row">
                 <div class="col-12">
                     <div class="navbar-header brand">
                         <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">

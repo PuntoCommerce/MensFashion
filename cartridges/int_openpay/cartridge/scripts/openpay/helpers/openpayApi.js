@@ -1,6 +1,6 @@
-const restservice = require("~/cartridge/scripts/openpay/service/restservice");
+const restservice = require("~/cartridge/scripts/openpay/service/restService");
 
-const rest = (path, method, body = null) => {
+const rest = (path, method, body) => {
   try {
     const result = restservice.call({
       path: path,
