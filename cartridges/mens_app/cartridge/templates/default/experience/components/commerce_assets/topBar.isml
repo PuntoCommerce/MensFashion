@@ -1,8 +1,9 @@
-<div class="campaign-banner">
+<div class="campaign-banner d-none">
     <div class="container">
         <div class="campaign-banner-container d-flex justify-content-between">
             <div></div>
             <div class="campaign-banner-message pt-3">
+                <iscomment> <iframe srcdoc="${pdict.bannerMessage}"></iframe> </iscomment>
                 <isprint value="${pdict.bannerMessage}" encoding="off"/>
             </div>
             <div class="close-button">

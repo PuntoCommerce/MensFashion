@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Avenir-LT-Std";
+  src: url("../fonts/AvenirLTStd-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir-Next";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+}
+
+header .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+header .navbar-header {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+@media (min-width: 992px) {
+  .brand {
+    padding-top: 1em !important;
+  }
+}
+
+.store-locator {
+  display: inline-block;
+  margin: 1.125em 0 0 0.5em;
+}
+
+.actionIcons {
+  min-width: 178px;
+}
+
+.navbar-nav {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav a {
+  color: #000000 !important;
+  font-family: "Avenir-LT-Std" !important;
+  font-size: 14px !important;
+}
+
+#searcHeader {
+  background-color: transparent;
+  border: none;
+  padding-top: 3px;
+}
+
+#searcHeader::after {
+  content: url(../images/search.svg);
+}
+
+.search-field {
+  border: 1px solid #000000 !important;
+  border-radius: 0 !important;
+  width: 308px !important;
+  height: 23px !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.campaign-banner {
+  background-color: #231f20 !important;
+  height: 50px;
+  display: flex;
+}
+
+.campaign-banner .campaign-banner-container {
+  height: 50px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.campaign-banner .campaign-banner-message {
+  padding-top: 0px !important;
+}
+
+.campaign-banner-container h1,
+.campaign-banner-container h2,
+.campaign-banner-container h3,
+.campaign-banner-container h4,
+.campaign-banner-container h5,
+.campaign-banner-container h6,
+.campaign-banner-container p {
+  font-family: "Avenir-Next" !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.campaign-banner img {
+  vertical-align: text-bottom !important;
+}
+.campaign-banner .close-button {
+  display: none;
+}
+
+.suggestions {
+  top: 20px;
+  right: -86px;
+}
+
+.suggestions .category {
+  background-color: #231f20 !important;
+}
+.suggestions .category span {
+  color: #ffffff !important;
+}
+
+.suggestions .category div {
+  margin-left: 65px; /* No Image margin */
+}
+
+.suggestions .header {
+  border: none !important;
+}
+
+.borderTopHeader:not(:first-child) {
+  border-top: 0.5px solid #000000 !important;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+}
