@@ -8,6 +8,12 @@
   src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
+/*  */
+
+#homepage p {
+  height: 1500px;
+}
+
 /* **************************** HEADER **************************** */
 
 header .container {
@@ -184,7 +190,6 @@ header .navbar-header {
 }
 
 /* **************************** FOOTER **************************** */
-
 footer {
   background-color: #231f20;
 }

@@ -54,7 +54,8 @@ var backToTopBtn = $C(".goToUp");
 
 window.addEventListener("scroll", () => {
   console.log(window.scrollY);
-  if (window.scrollY > 700) {
+  console.log(window.scrollY);
+  if (window.scrollY > 500) {
     backToTopBtn.classList.remove("hidden");
   } else {
     backToTopBtn.classList.add("hidden");
