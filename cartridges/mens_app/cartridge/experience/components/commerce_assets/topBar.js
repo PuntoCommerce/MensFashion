@@ -15,6 +15,7 @@ module.exports.render = function (context, modelIn) {
   var content = context.content;
 
   model.bannerMessage = content.bannerMessage;
+  model.bannerMessageResponsive = content.bannerMessageResponsive;
 
   return new Template("experience/components/commerce_assets/topBar").render(
     model

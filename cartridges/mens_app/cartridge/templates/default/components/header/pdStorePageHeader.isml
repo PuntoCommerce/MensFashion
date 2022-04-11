@@ -16,23 +16,25 @@
                     </div>
                     <div class="navbar-header">
                         <div class="pull-left">
-                            <div class="search hidden-xs-down">
+                            <div class="search desk">
                                 <isinclude template="components/header/search" />
                             </div>
                             
-                            <button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                                &#9776; <span class="hidden-xs-down">Menu</span>
-                            </button>
+                            
                         </div>
                         <div class="pull-right">
                             <div class="d-flex justify-content-between align-items-center actionIcons">
+
+                                <div class="search responsive">
+                                    <isinclude template="components/header/search" />
+                                </div>
                                 
-                                <div class="hidden-md-down">
+                                <div class="">
                                     <isinclude url="${URLUtils.url('Account-Header')}" />
                                     <iscomment> <isinclude url="${URLUtils.url('Page-Locale')}" /> </iscomment>
                                 </div>
 
-                                <div class="store-locator">
+                                <div class="store-locator desk">
                                     <a href="${URLUtils.url("Stores-Find")}">
                                      <img src="${URLUtils.staticURL('/images/store_locator.svg')}"/>
                                     </a>
@@ -40,11 +42,14 @@
 
                                 <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
                                     <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+
+                                <button class="navbar-toggler " type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                    &#9776; 
+                                </button>
                                 </div>
 
-
                             </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -55,9 +60,6 @@
                     <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
                 </div>
             </div>
-        </div>
-        <div class="search-mobile d-sm-none">
-            <isinclude template="components/header/search" />
         </div>
     </nav>
 </header>

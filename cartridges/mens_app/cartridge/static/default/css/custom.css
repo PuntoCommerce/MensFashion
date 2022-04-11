@@ -16,6 +16,20 @@
 
 /* **************************** HEADER **************************** */
 
+.responsive {
+  display: none !important;
+}
+
+@media (max-width: 543px) {
+  .desk {
+    display: none !important;
+  }
+
+  .responsive {
+    display: block !important;
+  }
+}
+
 header .container {
   width: 100% !important;
   max-width: 100% !important;
@@ -78,6 +92,7 @@ header .navbar-header {
 
 .form-control:focus {
   box-shadow: none !important;
+  color: #ffffff;
 }
 .hidden {
   display: none;
@@ -160,21 +175,9 @@ header .navbar-header {
   margin-right: 8px;
 }
 
-.responsive {
-  display: none !important;
-}
-
 /* MOBILE */
 
 @media (max-width: 991px) {
-  .desk {
-    display: none !important;
-  }
-
-  .responsive {
-    display: block !important;
-  }
-
   .site-search {
     display: block;
   }
@@ -190,15 +193,24 @@ header .navbar-header {
 }
 
 /* **************************** FOOTER **************************** */
+
+footer {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 footer {
   background-color: #231f20;
 }
 
+footer .newsletter::placeholder {
+  color: #ffffff;
+}
 footer .newsletter {
+  font-size: 14px;
   background-color: #231f20;
   border: 1px solid #ffffff;
   border-radius: 0px;
-  color: #ffffff;
   height: 32px;
   width: 268px;
 }
@@ -206,7 +218,7 @@ footer .newsletter {
 footer .newsletter:focus {
   background-color: #231f20;
   border: 1px solid #ffffff;
-  color: #ffffff;
+  color: #ffffff !important;
   box-shadow: none;
 }
 
@@ -215,11 +227,15 @@ footer .input-group-append {
 }
 
 footer .input-group {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 93%;
   padding-top: 10px;
   display: grid;
 }
 
 footer .subscribe-email {
+  font-size: 14px;
   background-color: #ffffff;
   border-radius: 0px;
   border: 1px solid #ffffff;
@@ -255,7 +271,7 @@ footer .content,
 .goToUp {
   position: fixed !important;
   bottom: 20% !important;
-  left: 90% !important;
+  left: 95% !important;
 }
 
 .goToUp i {
@@ -277,9 +293,22 @@ footer .content,
   font-family: "Avenir-Next";
   font-size: 12px !important;
   margin-top: 10px;
-
   position: relative;
   top: 32px;
+}
+
+.copyright .copyright-container span {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.hecho-con {
+  margin-left: 80px;
+}
+
+footer .space {
+  margin-top: 20px;
 }
 
 #facebook {
@@ -362,6 +391,7 @@ footer .content,
 
 .suscribe-label {
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 footer .socialMedia-paymentMethods {

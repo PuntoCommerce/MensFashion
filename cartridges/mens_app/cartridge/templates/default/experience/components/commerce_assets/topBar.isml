@@ -1,16 +1,21 @@
-<div class="campaign-banner d-none">
+
+<div class="campaign-banner">
     <div class="container">
         <div class="campaign-banner-container d-flex justify-content-between">
-            <div></div>
             <div class="campaign-banner-message pt-3">
-                <iscomment> <iframe srcdoc="${pdict.bannerMessage}"></iframe> </iscomment>
-                <isprint value="${pdict.bannerMessage}" encoding="off"/>
+                <div class="desk">
+                    <isprint id="TBdesk" value="${pdict.bannerMessage}" encoding="off"/>
+                </div>
+                <div class="responsive">
+                    <isprint id="TBresponsive" value="${pdict.bannerMessageResponsive}" encoding="off"/>
+                </div>
             </div>
-            <div class="close-button">
+            
+            <iscomment> <div class="close-button">
                 <button class="close pt-3" aria-label="${Resource.msg('button.close','campaignBanner',null)}">
                     <img src="${URLUtils.staticURL('/images/close-icon.svg')}"/>
                 </button>
-            </div>
+            </div> </iscomment>
         </div>
     </div>
 </div>

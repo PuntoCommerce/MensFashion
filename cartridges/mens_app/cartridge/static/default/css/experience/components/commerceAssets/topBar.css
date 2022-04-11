@@ -1,0 +1,19 @@
+.responsive {
+  display: none !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 543px) {
+  .desk {
+    display: none !important;
+  }
+
+  .responsive {
+    display: block !important;
+  }
+}
+
+.campaign-banner .desk {
+  background-color: yellow !important;
+}
