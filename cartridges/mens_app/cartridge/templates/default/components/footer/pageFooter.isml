@@ -1,0 +1,77 @@
+<footer id="footercontent">
+    <div class="container">
+        <div class="footer-container row">
+            <div class="footer-item col-sm-2 collapsible-xs">
+                <iscontentasset aid="about-us-mens" />
+            </div>
+            <div class="footer-item col-sm-2 collapsible-xs">
+                <iscontentasset aid="terms-and-conditions-mens" />
+            </div>
+            <div class="footer-item col-sm-4 collapsible-xs">
+                <iscontentasset aid="customer-service-mens" />
+            </div>
+            <div class="footer-item col-sm-4">
+                <div class="footer-email-signup">
+                    <div class="container">
+                        <form role="form">
+                            <div class="row">
+                                <div class="input-group">
+                                <div class="suscribe-label d-flex justify-content-start">
+                                    <span>Suscríbete a nuestro newsletter</span>
+                                </div>
+                                    <div class="d-flex justify-content-start align-items-center input-button">
+                                        
+                                        <input type="text" class="form-control newsletter" name="hpEmailSignUp"
+                                            placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}"
+                                            aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
+                                        <span class="input-group-append">
+                                            <button type="submit" class="subscribe-email"
+                                                data-href="${URLUtils.url('EmailSubscribe-Subscribe')}"><iscomment> ${Resource.msg('button.form.emailsignup', 'homePage', null)} </iscomment> GO </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+                <div class="socialMedia-paymentMethods container">
+                    <div class="socialMedia d-flex justify-content-start">
+                        <iscontentasset aid="social-media-mens" />
+                    </div>
+                    <div class="paymentMethods">
+                        <iscontentasset aid="payment-methods-mens" /> 
+                    </div>
+                </div>
+                <div class="socialMedia-paymentMethods-mobile">
+                    <div class="paymentMethods">
+                        <div class="d-flex justify-content-center">
+                            <span>Pagos Seguros</span>
+                        </div>
+                        <iscontentasset aid="payment-methods-mens" /> 
+                    </div>
+                    <div class="socialMedia">
+                        <iscontentasset aid="social-media-mens" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <div class="row goToUp hidden">
+            <div class="col-lg-4 col-sm-5 push-sm-7 push-lg-8 social">
+                <isslot id="footer-column-m" description="Content in column 1 of the Footer" context="global" />
+                <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}" aria-label="${Resource.msg('button.back_to_top', 'common', null)}">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                        <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                        <img src="${URLUtils.staticURL('/images/toUp.svg')}"/>
+                        <iscomment> <i class="fa fa-arrow-up fa-stack-1x"></i> </iscomment>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row copyright">
+            <div class="col-sm-12">
+                <iscontentasset aid="copyright-mens" />
+            </div>            
+        </div>
+</footer>
