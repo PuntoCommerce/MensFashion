@@ -1,0 +1,29 @@
+<div class="site-search search-responsive d-flex align-items-center justify-content-center">
+    <form role="search"
+          action="${URLUtils.url('Search-Show')}"
+          method="get"
+          name="simpleSearch">
+        <div class="search-form-container d-flex justify-content-end align-items-center">
+          <input class="form-control search-field search-field-responsive"
+                type="text"
+                name="q"
+                value=""
+                placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}"
+                role="combobox"
+                aria-describedby="search-assistive-text"
+                aria-haspopup="listbox"
+                aria-owns="search-results"
+                aria-expanded="false"
+                aria-autocomplete="list"
+                aria-activedescendant=""
+                aria-controls="search-results"
+                aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
+                autocomplete="off" />
+          <button type="reset" name="reset-button" class="reset-button search-desk-reset-button" aria-label="${Resource.msg('label.header.search.clear', 'common', null)}">
+            <img src="${URLUtils.staticURL('/images/close.svg')}"/>
+          </button>
+          <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
+          <input type="hidden" value="${pdict.locale}" name="lang">
+        </div>
+    </form>
+</div>

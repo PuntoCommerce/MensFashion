@@ -1,0 +1,3 @@
+<div>
+  <button type="button" id="searcHeaderResponsive" name="search-button" aria    -label="${Resource.msg('label.header.search.go', 'common', null)}"></button>
+</div>

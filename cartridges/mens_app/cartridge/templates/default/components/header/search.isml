@@ -1,4 +1,4 @@
-<div class="site-search desk">
+<div class="site-search">
     <form role="search"
           action="${URLUtils.url('Search-Show')}"
           method="get"
@@ -6,6 +6,7 @@
         <div class="d-flex align-items-center">
         <button type="button" id="searcHeader" name="search-button" aria    -label="${Resource.msg('label.header.search.go', 'common', null)}"></button>
         <input class="form-control search-field hidden"
+            id="searchFieldDesk"
                type="text"
                name="q"
                value=""
@@ -20,37 +21,11 @@
                aria-controls="search-results"
                aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
                autocomplete="off" />
-        <button type="reset" name="reset-button" class="fa fa-times reset-button d-none" aria-label="${Resource.msg('label.header.search.clear', 'common', null)}"></button>
+               
+        <button type="reset" name="reset-button" class="reset-button hidden" aria-label="${Resource.msg('label.header.search.clear', 'common', null)}">
+          <img src="${URLUtils.staticURL('/images/close.svg')}"/>
+        </button>
        
-        <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
-        <input type="hidden" value="${pdict.locale}" name="lang">
-        </div>
-    </form>
-</div>
-
-<div class="site-search responsive">
-    <form role="search"
-          action="${URLUtils.url('Search-Show')}"
-          method="get"
-          name="simpleSearch">
-        <div class="d-flex align-items-center">
-        <input class="form-control search-field-responsive hidden"
-               type="text"
-               name="q"
-               value=""
-               placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}"
-               role="combobox"
-               aria-describedby="search-assistive-text"
-               aria-haspopup="listbox"
-               aria-owns="search-results"
-               aria-expanded="false"
-               aria-autocomplete="list"
-               aria-activedescendant=""
-               aria-controls="search-results"
-               aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
-               autocomplete="off" />
-        <button type="reset" name="reset-button" class="fa fa-times reset-button d-none" aria-label="${Resource.msg('label.header.search.clear', 'common', null)}"></button>
-        <button type="button" id="searcHeaderResponsive" name="search-button" aria    -label="${Resource.msg('label.header.search.go', 'common', null)}"></button>
         <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
         <input type="hidden" value="${pdict.locale}" name="lang">
         </div>
