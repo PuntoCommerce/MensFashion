@@ -52,7 +52,7 @@
                                     <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
                                 </div>
                                 <div>
-                                    <button class="navbar-toggler responsive " type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button class="responsive " type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                                         &#9776; 
                                     </button>
                                 </div>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+        <div class="main-menu menu-toggleable-left" id="sg-navbar-collapse">
             <div class="container">
                 <div class="row">
                     <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>

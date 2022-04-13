@@ -287,6 +287,32 @@ header .navbar-header {
   }
 }
 
+/* Menu */
+
+.dropdown-menu {
+  position: fixed !important;
+  width: 100vw;
+  top: 177px;
+
+  box-shadow: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.dropdown-menu .category-item {
+  font-weight: bold;
+}
+
+.dropdown-menu .subcategories {
+  padding-inline-start: 0px;
+}
+
+.nav-link::after {
+  display: none;
+}
+
 /* **************************** FOOTER **************************** */
 
 footer {
