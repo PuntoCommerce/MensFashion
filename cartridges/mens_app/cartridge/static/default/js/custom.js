@@ -61,17 +61,28 @@ searchFieldResponsive.addEventListener("focusout", () => {
 
 /* ########################################## Manu ########################################## */
 
-const menuItems = $$C(".dropdown-menu .item");
-const imageMenu = $C("#imageMenu");
+const toggleSubCategories = $$C(".toggle-subcategories");
 
-menuItems.forEach((item) => {
-  item.addEventListener("mouseover", () => {
-    const itemImage = item.getAttribute("imageurl");
-    if (itemImage) {
-      imageMenu.src = itemImage;
+toggleSubCategories.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    const idAttribute = toggle.getAttribute("item-target");
+    const subCategory = $C(`#submenu-${idAttribute}`);
+    if (subCategory) {
+      subCategory.classList.toggle("hidden");
     }
   });
 });
+
+const customMenuResponsive = $C("#customMenuResponsive");
+
+const openCustomMenu = () => {
+  customMenuResponsive.classList.remove("hidden");
+};
+
+const closeCustomMenu = () => {
+  customMenuResponsive.classList.add("hidden");
+};
 
 /* ########################################## ⬆️ Btn Back to top & Sticky Nav Bar⬆️ ####################################################### */
 // Listen on scroll event to show/hide btn back to top & add sticky nav

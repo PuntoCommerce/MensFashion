@@ -1,25 +1,18 @@
-<nav class="navbar navbar-expand-md bg-inverse col-12">
-    <div class="close-menu clearfix ">
-        <div class="back pull-left">
-            <button role="button" aria-label="${Resource.msg('label.header.menu.back', 'common', null)}">
-                <span class="caret-left"></span>
-                ${Resource.msg('link.header.menu.back', 'common', null)}
-            </button>
-        </div>
-        <div class="close-button pull-right">
-            <button role="button" aria-label="${Resource.msg('label.header.menu.close', 'common', null)}">
-                ${Resource.msg('link.header.menu.close', 'common', null)}
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    </div>
-    <div class="menu-group" role="navigation">
+<nav class="navbar navbar-expand-md bg-inverse col-12" id="customMenu">
+
+    <div id="menuDesk" class="menu-group" role="navigation">
         <ul class="nav navbar-nav" role="menu">
             <isif condition="${pdict.categories}">
-                <isloop items="${pdict.categories}" var="category">
+                <isloop items="${pdict.categories}" var="category" status="status_item">
                     <isif condition="${category.subCategories}">
-                        <li class="nav-item dropdown" role="presentation">
-                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">${category.name}</a>
+                        <li class="nav-item dropdown ${status_item.last ? 'last_category_item' : '' }" role="presentation">
+                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" id="${category.id}" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                            ${category.name}
+                            <div class="hover-underline">    
+                            </div>
+                            </a>
+                            
+                            
                             <isset name="menuItem" value="${category}" scope="page" />
                             <isinclude template="components/header/menuItem" />
                         </li>
@@ -30,8 +23,70 @@
                     </isif>
                 </isloop>
             </isif>
-            <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
-            <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
+        </ul>
+    </div>
+</nav>
+
+<nav id="customMenuResponsive" class="navbar navbar-expand-md bg-inverse col-12 hidden">
+    <div class="col-12">
+        <div class="close-button pull-right">
+            <button role="button" onclick="closeCustomMenu()" aria-label="${Resource.msg('label.header.menu.close', 'common', null)}">
+                <img src="${URLUtils.staticURL('/images/close.svg')}"/>
+            </button>
+        </div>
+    </div>
+    <div id="image-container">
+        <div>
+            <img src="${pdict.mobileImege}" alt="${pdict.mobileTitle}"> 
+        </div>
+    </div>
+    <div id="menu-container" class="d-flex justify-content-center col-12">
+        <ul class="category-items">
+            <isif condition="${pdict.categories}">
+                <isloop items="${pdict.categories}" var="category" status="itemStatus">
+                    <isif condition="${category.subCategories}">
+                        <li class="nav-item dropdown" role="presentation">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>"class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">${category.name}</a>
+                                <button item-target="${category.id}" role="button" class="toggle-subcategories">
+                                    <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+                                </button>
+                            </div>
+                            <div class="underline"></div>
+                            <isset name="menuItem" value="${category}" scope="page" />
+                            <isinclude template="components/header/responsiveMenuItem" />
+
+                        </li>
+                    <iselse/>
+                        <li class="nav-item" role="presentation">
+                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link" role="link" tabindex="0">${category.name}</a>
+                        </li>
+                    </isif>
+                </isloop>
+            </isif>
+        </ul>
+    </div>
+    <div id="actions-icons" class="d-flex justify-content-center col-12">
+        <ul class="items">
+                
+            <li>
+                <a href="${URLUtils.url("Stores-Find")}" class="d-flex justify-content-start align-items-center">
+                    <span>${Resource.msg('location.label.mobile.menu', 'menu', null)}</span>
+                    <img src="${URLUtils.staticURL('/images/store_locator.svg')}" alt="LOCALIZA TU TIENDA"/>
+                </a>
+            </li>
+
+            <li>
+                <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
+            </li>
+
+            <li>
+                <a href="" class="d-flex justify-content-start align-items-center">
+                    <span>${Resource.msg('needhelp.label.mobile.menu', 'menu', null)}</span>
+                    <img class="chat-boot" src="${URLUtils.staticURL('/images/chat.svg')}" alt="NECESITAS AYUDA"/>
+                </a>
+            </li>
+
         </ul>
     </div>
 </nav>

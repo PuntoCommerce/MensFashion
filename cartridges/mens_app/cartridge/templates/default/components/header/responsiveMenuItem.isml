@@ -1,13 +1,9 @@
-<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="${category.id}">
-
-    <isset name="categoryImage" value="${category.image}" scope="page" />
-    
-
+<ul class="subCategory-item">
     <div class="d-flex justify-content-center row">
-        <div class="col-6 d-flex justify-content-center">
+        <div class="col-12 hidden" id="submenu-${category.id}">
             <div>
                 <isloop items="${menuItem.subCategories}" var="category">
-                    <li class="category-item item" imageurl="<isprint value="${category.image}" encoding="htmldoublequote"/>">
+                    <li class="category-item item" >
                         <a href="${category.url}">${category.name}</a>
                     </li>   
                     <isif condition="${category.subCategories}">
@@ -21,9 +17,6 @@
                     </isif>
                 </isloop>
             </div>
-        </div>
-        <div class="col-6 d-flex justify-content-start align-self-center">
-            <img id="imageMenu" src="${categoryImage}" alt="${category.name}" height="300px" >
         </div>
     </div>
 </ul>
