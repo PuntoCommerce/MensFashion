@@ -309,7 +309,7 @@ header .navbar-header {
   }
 
   .site-search .reset-button {
-    padding-bottom: 0px;
+    padding-bottom: 3px;
   }
 
   .suggestions-responsive {
@@ -469,6 +469,10 @@ ul {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  #customMenuResponsive .close-button {
+    padding: 10px;
   }
 
   #actions-icons .items,
