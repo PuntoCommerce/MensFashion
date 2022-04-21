@@ -1,0 +1,9 @@
+<div class="useContentAsset">
+  
+  <isscript>
+      var assets = require('*/cartridge/scripts/assets.js');
+      assets.addCss("/css/experience/components/commerceAssets/useContentAsset.css");
+  </isscript>
+  <isinclude url="${URLUtils.url('Page-Include', 'cid', pdict.assetID)}" />
+
+</div>

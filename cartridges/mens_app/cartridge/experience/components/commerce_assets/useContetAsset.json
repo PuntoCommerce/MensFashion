@@ -1,0 +1,20 @@
+{
+    "name": "Use Content Asset",
+    "description": "Renders a content asset on Page Designer",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "contentAssetID",
+            "attribute_definitions": [
+                {
+                    "id": "assetID",
+                    "name": "Asset ID",
+                    "description": "Type the asset id",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
