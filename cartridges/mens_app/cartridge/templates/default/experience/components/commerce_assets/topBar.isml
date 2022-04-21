@@ -1,4 +1,7 @@
-
+<isscript>
+      var assets = require('*/cartridge/scripts/assets.js');
+      assets.addCss("/css/experience/components/commerceAssets/topBar.css");
+  </isscript>
 <div class="campaign-banner">
     <div class="container">
         <div class="campaign-banner-container d-flex justify-content-between">
