@@ -1,0 +1,24 @@
+<div class="categoryCard">
+  <isscript>
+      let assets = require('*/cartridge/scripts/assets.js');
+      assets.addCss("/css/experience/components/commerceAssets/categoryCard.css");
+
+  </isscript>
+
+  <isset name="horizontalPosition" value="${pdict.horizontalPosition == "left" ? "start" : pdict.horizontalPosition == "middle" ? "center" : "end"}" scope="page" />
+  <isset name="verticalPosition" value="${pdict.verticalPosition == "top" ? "start" : pdict.verticalPosition == "center" ? "center" : "end"}" scope="page" />
+  <isset name="justification" value="${pdict.justification}" scope="page" />
+  
+  
+
+  <div class="cc-container">
+    <img src="${pdict.image.src.desktop}" alt="${pdict.image.alt}">
+    <div class="content-into-image d-flex justify-content-${horizontalPosition} align-items-${verticalPosition}">
+      <div class="text-button-container d-flex align-items-${justification}">
+        <isprint id="cc-text" value="${pdict.text}" encoding="off"/>
+        <a href="${pdict.category}" class="cc-action-button">${Resource.msg("categoryCard.button.bynow", "pdComponents", null)}</a>
+      </div>
+    </div>
+  </div>
+
+</div>

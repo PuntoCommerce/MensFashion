@@ -1,0 +1,74 @@
+{
+  "name": "Category Card",
+  "description": "Card for category, include text, image, and button",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "categoryCardContent",
+      "name": "Category Card Content",
+      "description": "Content to be displayed.",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "description": "Image to be displayed into the card.",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "text",
+          "name": "Text",
+          "description": "Text to be displayed into the card.",
+          "type": "markup",
+          "required": true
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "description": "Category to be displayed into the card.",
+          "type": "category",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "categoryCardLayout",
+      "name": "Layout Content",
+      "description": "Layout of the content.",
+      "attribute_definitions": [
+        {
+          "id": "verticalPosition",
+          "name": "Vertical Position",
+          "description": "Vertical position of the content into the container.",
+          "type": "enum",
+          "values": ["top", "center", "bottom"],
+          "required": true
+        },
+        {
+          "id": "horizontalPosition",
+          "name": "Hrizontal Position",
+          "description": "Horizontal position of the content into the container.",
+          "type": "enum",
+          "values": ["left", "middle", "right"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "itemsJustification",
+      "name": "Items Justification",
+      "description": "Justification of the items.",
+      "attribute_definitions": [
+        {
+          "id": "justification",
+          "name": "Justification",
+          "description": "Justification of the items.",
+          "type": "enum",
+          "values": ["start", "center", "end"],
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
