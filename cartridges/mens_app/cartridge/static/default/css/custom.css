@@ -852,3 +852,7 @@ footer .socialMedia-paymentMethods {
 .experience-commerce_layouts-carousel .carousel-control-next {
   right: 3%;
 }
+
+#maincontent .experience-commerce_assets-topBar {
+  padding-bottom: 1rem !important;
+}
