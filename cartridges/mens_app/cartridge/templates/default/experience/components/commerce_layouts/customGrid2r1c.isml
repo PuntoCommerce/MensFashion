@@ -1,0 +1,12 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<div class="mobile-2r-1c">
+    <div class="row">
+        <isprint value="${pdict.regions.row1.setClassName("region col-12").render()}" encoding="off"/>
+    </div>
+    <div class="row">
+        <isprint value="${pdict.regions.row2.setClassName("region col-12").render()}" encoding="off"/>
+    </div>
+</div>
