@@ -1,29 +1,33 @@
-<ul class="dropdown-menu" role="menu" aria-hidden="true" aria-label="${category.id}">
-
-    <isset name="categoryImage" value="${category.image}" scope="page" />
-    
-
-    <div class="d-flex justify-content-center row">
-        <div class="col-6 d-flex justify-content-center">
-            <div>
-                <isloop items="${menuItem.subCategories}" var="category">
-                    <li class="category-item item" imageurl="<isprint value="${category.image}" encoding="htmldoublequote"/>">
+<div class="dropdown-menu ">
+   <div class="d-flex">
+      <div class="dropdown-menu-content" role="menu" aria-hidden="true" aria-label="${category.id}">
+         <isset name="categoryImage" value="${category.image}" scope="page" />
+         <div class="d-flex justify-content-center row">
+            <div class="col-12 d-flex justify-content-around">
+               <isloop items="${menuItem.subCategories}" var="category">
+                <div>
+                    
+                    <div class="category-item item">
                         <a href="${category.url}">${category.name}</a>
-                    </li>   
+                    </div>
                     <isif condition="${category.subCategories}">
                         <ul class="subcategories">
                             <isloop items="${category.subCategories}" var="subCategory">
-                                <li class="sub-category-item item" imageurl="<isprint value="${subCategory.image}" encoding="htmldoublequote"/>">
-                                    <a href="${subCategory.url}">${subCategory.name}</a>
-                                </li>
+                            <li class="sub-category-item item" imageurl="
+                            <isprint value="${subCategory.image}" encoding="htmldoublequote"/>
+                            ">
+                            <a href="${subCategory.url}">${subCategory.name}</a>
+                            </li>
                             </isloop>
                         </ul>
                     </isif>
-                </isloop>
+                </div>
+               </isloop>
             </div>
-        </div>
-        <div class="col-6 d-flex justify-content-start align-self-center">
-            <img id="imageMenu" src="${categoryImage}" alt="${category.name}" height="300px" >
-        </div>
-    </div>
-</ul>
+         </div>
+      </div>
+      <div class="d-flex justify-content-start align-self-start">
+         <img id="imageMenu" src="${categoryImage}" alt="${category.name}" height="300px" >
+      </div>
+   </div>
+</div>

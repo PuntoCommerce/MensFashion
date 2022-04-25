@@ -116,24 +116,24 @@ header .navbar-header {
   transition: width 0.5s;
 }
 
-#menuDesk .nav-item .dropdown-menu:hover .hover-underline,
+#menuDesk .nav-item:hover .hover-underline,
 #menuDesk .nav-item a:hover .hover-underline {
   width: 50%;
 }
 
-#menuDesk .nav-item.dropdown.last_category_item .hover-underline {
+#menuDesk .nav-item.last_category_item .hover-underline {
   background-color: #ff0000;
 }
 
-#menuDesk .nav-item.dropdown.last_category_item a:hover {
+#menuDesk .nav-item.last_category_item a:hover {
   color: #ff0000 !important;
 }
 
-#menuDesk .nav-item.dropdown.last_category_item a {
+#menuDesk .nav-item.last_category_item a {
   color: #ff0000;
 }
 #menuDesk .dropdown-menu .category-item.item a,
-#menuDesk .nav-item.dropdown a {
+#menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
   font-size: 14px;
@@ -308,6 +308,10 @@ header .navbar-header {
   box-shadow: none !important;
 }
 
+.dropdown-menu-content {
+  width: 65%;
+}
+
 ul {
   list-style-type: none;
 }
@@ -357,7 +361,7 @@ ul {
 
   #customMenuResponsive {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     background-color: #ffffff !important;
   }
