@@ -1,0 +1,34 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageNoMargin.css');
+</isscript>
+<div class="photo-tile-container component-mobile">
+    <div class="row">
+        <div class="col-12">
+            <figure class="image-0-margin-container">
+                <picture>
+                    <img class="image-0-margin" src="${pdict.imageMobile.src.mobile}"
+                        style="--focal-point-x:${pdict.imageMobile.focalPointX}; --focal-point-y:${pdict.imageMobile.focalPointY}"
+                        <isif condition="${pdict.imageMobile.alt}">alt="${pdict.imageMobile.alt}"
+                    title="${pdict.imageMobile.alt}"</isif>
+                    />
+                </picture>
+            </figure>
+        </div>
+    </div>
+</div>
+<div class="photo-tile-container component-desktop">
+    <div class="row">
+        <div class="col-12">
+            <figure class="image-0-margin-container">
+                <picture>
+                    <img class="image-0-margin" src="${pdict.imageDesktop.src.mobile}"
+                        style="--focal-point-x:${pdict.imageDesktop.focalPointX}; --focal-point-y:${pdict.imageDesktop.focalPointY}"
+                        <isif condition="${pdict.imageMobile.alt}">alt="${pdict.imageMobile.alt}"
+                    title="${pdict.imageMobile.alt}"</isif>
+                    />
+                </picture>
+            </figure>
+        </div>
+    </div>
+</div>

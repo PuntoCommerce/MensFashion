@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
-var Template = require('dw/util/Template');
-var HashMap = require('dw/util/HashMap');
-var carouselBuilder = require('*/cartridge/scripts/experience/utilities/carouselBuilder.js');
+var Template = require("dw/util/Template");
+var HashMap = require("dw/util/HashMap");
+var carouselBuilder = require("*/cartridge/scripts/experience/utilities/carouselBuilder.js");
 
 /**
  * Render logic for storefront.carousel layout.
@@ -12,9 +12,11 @@ var carouselBuilder = require('*/cartridge/scripts/experience/utilities/carousel
  * @returns {string} The markup to be displayed
  */
 module.exports.render = function (context, modelIn) {
-    var model = modelIn || new HashMap();
+  var model = modelIn || new HashMap();
 
-    model = carouselBuilder.init(model, context);
+  model = carouselBuilder.init(model, context);
 
-    return new Template('experience/components/commerce_layouts/carousel').render(model).text;
+  return new Template("experience/components/commerce_layouts/carousel").render(
+    model
+  ).text;
 };

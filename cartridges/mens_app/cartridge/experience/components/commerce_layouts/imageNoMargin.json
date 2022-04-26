@@ -1,0 +1,29 @@
+{
+    "name": "Image 0 Margin",
+    "description": "Select a photo that you want to insert into your layout component",
+    "group": "commerce_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "imageNoMarginDesktop",
+            "name": "Image Tile No Margins Desktop",
+            "description": "This is a simple Image Tile component where you drag and drop it into any layout component ",
+            "attribute_definitions": [
+                {
+                    "id": "imageMobile",
+                    "name": "Image Tile Mobile",
+                    "description": "Select a photo to be displayed on Desktop",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imageDesktop",
+                    "name": "Image Tile Desktop/Tablet",
+                    "description": "Select a photo to be displayed on Desktop",
+                    "type": "image",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

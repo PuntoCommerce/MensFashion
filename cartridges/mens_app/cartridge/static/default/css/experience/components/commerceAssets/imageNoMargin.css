@@ -1,0 +1,27 @@
+/* Image 0 margin PD Custom Component */
+.image-0-margin-container {
+    margin: 0;
+    height: 100%;
+}
+.image-0-margin {
+    width: 100%;
+    height: 100%;
+}
+.image-0-margin.component-mobile {
+    margin-top: -3px;
+}
+.component-desktop {
+    display: none;
+}
+@media (min-width: 750px) {
+    .component-mobile {
+        display: none !important;
+    }
+    .component-desktop {
+        display: block;
+    }
+}
+.experience-component.experience-commerce_assets-imageNoMargin,
+.experience-component.experience-commerce_assets-imageNoMarginMobile {
+    margin-bottom: -1px;
+}
