@@ -867,3 +867,19 @@ footer .socialMedia-paymentMethods {
 #maincontent .experience-commerce_assets-topBar {
   padding-bottom: 1rem !important;
 }
+
+.editorialRichText-component-container .text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editorialRichText-component-container .text-center p,
+.editorialRichText-component-container .text-center a,
+.editorialRichText-component-container .text-center h1,
+.editorialRichText-component-container .text-center h2,
+.editorialRichText-component-container .text-center h3,
+.editorialRichText-component-container .text-center h4 {
+  color: #000000 !important;
+  text-decoration: none;
+}
