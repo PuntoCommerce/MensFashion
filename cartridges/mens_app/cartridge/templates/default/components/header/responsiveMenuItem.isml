@@ -5,9 +5,12 @@
                 <isloop items="${menuItem.subCategories}" var="category">
                     <li class="category-item item" >
                         <a href="${category.url}">${category.name}</a>
+                        <button item-target="${category.id}" role="button" class="toggle-subcategories">
+                            <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+                        </button>
                     </li>   
                     <isif condition="${category.subCategories}">
-                        <ul class="subcategories">
+                        <ul class="subcategories hidden" id="submenu-${category.id}" > 
                             <isloop items="${category.subCategories}" var="subCategory">
                                 <li class="sub-category-item item" imageurl="<isprint value="${subCategory.image}" encoding="htmldoublequote"/>">
                                     <a href="${subCategory.url}">${subCategory.name}</a>

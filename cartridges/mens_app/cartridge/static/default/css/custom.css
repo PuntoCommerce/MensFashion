@@ -245,6 +245,9 @@ header .navbar-header {
   padding-top: 20px;
 }
 
+.suggestions .header div,
+.suggestions .children div,
+.suggestions span.name,
 .search input::placeholder {
   font-family: "Avenir-LT-Std";
 }
@@ -391,6 +394,10 @@ ul {
     transform: rotate(-90deg);
   }
 
+  .subCategory-item .toggle-subcategories {
+    right: 10%;
+  }
+
   .category-items .active {
     transform: rotate(0deg);
   }
@@ -497,7 +504,7 @@ footer .subscribe-email {
   border: 1px solid #ffffff;
   color: #000000 !important;
   height: 32px !important;
-  width: 71px !important;
+  width: 80px !important;
 }
 
 footer .subscribe-email {
