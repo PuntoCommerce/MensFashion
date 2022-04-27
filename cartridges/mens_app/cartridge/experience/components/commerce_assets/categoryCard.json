@@ -28,6 +28,14 @@
           "description": "Category to be displayed into the card.",
           "type": "category",
           "required": true
+        },
+        {
+          "id": "isShort",
+          "name": "Is Short",
+          "description": "Is the card short or long. long is full height and short is half height.",
+          "type": "boolean",
+          "default_value": false,
+          "required": false
         }
       ]
     },

@@ -28,6 +28,7 @@ module.exports.render = function (context, modelIn) {
   model.verticalPosition = content.verticalPosition;
   model.horizontalPosition = content.horizontalPosition;
   model.justification = content.justification;
+  model.isShort = content.isShort;
 
   return new Template(
     "experience/components/commerce_assets/categoryCard"

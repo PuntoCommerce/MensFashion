@@ -11,7 +11,7 @@
   
   
 
-  <div class="cc-container">
+  <div class="cc-container" style="height: ${pdict.isShort ? '343.5px' : '700px'}">
     <img src="${pdict.image.src.desktop}" alt="${pdict.image.alt}">
     <div class="content-into-image d-flex justify-content-${horizontalPosition} align-items-${verticalPosition}">
       <div class="text-button-container d-flex align-items-${justification}">
