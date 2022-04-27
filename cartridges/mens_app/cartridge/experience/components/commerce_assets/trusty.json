@@ -1,0 +1,29 @@
+{
+  "name": "Trusty",
+  "description": "Trusty component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "trusty",
+      "name": "Trusty attributes",
+      "description": "Content of the trusty component",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Trsuty image",
+          "description": "Image to be displayed in the trusty component",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id": "message",
+          "name": "Trusty message",
+          "description": "Message to be displayed in the trusty component",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

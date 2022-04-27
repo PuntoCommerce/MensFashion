@@ -1,0 +1,17 @@
+
+<isscript>
+    let assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss("/css/experience/components/commerceAssets/trusty.css");
+</isscript>
+
+<div class="trusty d-flex flex-column justify-content-center">
+  <div class="d-flex justify-content-center">
+    
+    <img src="${pdict.image.src.desktop}" height="42px" width="42px" alt="${pdict.image.alt}">
+  </div>
+  <div class="text d-flex justify-content-center">
+    <span>
+      <isprint id="trusty-text" value="${pdict.message}" encoding="off"/>
+    </span>
+  </div>
+</div>

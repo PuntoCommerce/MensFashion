@@ -1,0 +1,17 @@
+.trusty {
+  height: 210px;
+}
+
+.trusty .text {
+  font-family: "Avenir-Next";
+  font-weight: 500;
+  font-size: 13px;
+  color: #000000;
+
+  margin-top: 15px;
+}
+
+.trusty .text span {
+  max-width: 120px;
+  text-align: center;
+}

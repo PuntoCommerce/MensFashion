@@ -883,3 +883,19 @@ footer .socialMedia-paymentMethods {
   color: #000000 !important;
   text-decoration: none;
 }
+
+.mobile-2r-2c .region:not(:first-child) {
+  border-left: 1px solid #000000;
+}
+
+@media (max-width: 544px) {
+  .mobile-2r-2c .region:is(:first-child) {
+    border-bottom: 1px solid #000000;
+  }
+  .mobile-2r-2c .region:is(:last-child) {
+    border-top: 1px solid #000000;
+  }
+  .mobile-2r-2c .region {
+    margin-bottom: 0px;
+  }
+}
