@@ -1,0 +1,47 @@
+<isscript>
+    let assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss("/css/experience/components/commerceAssets/promotionCard.css");
+</isscript>
+
+<isset name="cardPosition" value="${pdict.cardPosition === 'left' ? 'start' : 'end'}" scope="page" />
+<isset name="imagePosition" value="${cardPosition === 'start' ? 'end' : 'start'}" scope="page" />
+
+<div class="promotionCard">
+  <div class="pc-container">
+    <div class="image-container d-flex justify-content-${imagePosition}">
+      <img src="${pdict.image.src.desktop}" alt="${pdict.image.alt}">
+    </div>
+    <div class="pc-content d-flex justify-content-${cardPosition} align-items-center">
+      <div class="pc-card">
+        <div class="d-flex justify-content-center">
+          <span class="pc-title">${pdict.title}</span>
+        </div>
+        <div class="d-flex justify-content-center subtitle">
+          <isprint id="pc-text" value="${pdict.subtitle}" encoding="off"/>
+        </div>
+        <div class="d-flex justify-content-center button-container">
+          <a href="${pdict.url}" class="pc-action-button">COMPRAR AHORA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<iscomment> 
+<div class="promotionCardMobile">
+  <div class="pc-container">
+    <div class="image-container">
+      <img src="${pdict.image.src.desktop}" alt="${pdict.image.alt}">
+    </div>
+    <div class="pc-content">
+      <div class="d-flex justify-content-center">
+        <span class="pc-title">${pdict.title}</span>
+      </div>
+      <div class="d-flex justify-content-center button-container">
+        <a href="${pdict.url}" class="pc-action-button">COMPRAR</a>
+      </div>
+    </div>
+
+    
+  </div>
+</div> </iscomment>

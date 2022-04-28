@@ -1,0 +1,139 @@
+.promotionCard .pc-container {
+  height: 674px;
+}
+
+.promotionCard .pc-container img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promotionCard .pc-container .pc-content {
+  position: relative;
+  left: 0%;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.promotionCard .pc-container .pc-content .pc-card {
+  width: 40%;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 50px 50px 0px 0px;
+
+  padding: 100px;
+
+  align-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promotionCard .pc-container .image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.promotionCard .pc-container span {
+  font-family: "Avenir-LT-Std-BlackOblique";
+  text-align: center;
+}
+
+.promotionCard .pc-container p,
+.promotionCard .pc-container h1,
+.promotionCard .pc-container h2,
+.promotionCard .pc-container h3,
+.promotionCard .pc-container h4 {
+  font-family: "Avenir-LT-Std";
+  text-align: center;
+}
+
+.promotionCard .pc-container .subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: #64656a;
+}
+
+.promotionCard .pc-container .pc-title {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: -0.005em;
+  color: #fa4238;
+  line-height: 59px;
+}
+
+.promotionCard .pc-container .pc-action-button {
+  font-family: "Avenir-Next";
+  font-weight: 400 !important;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000 !important;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  padding: 5px 15px 5px 15px;
+}
+
+.promotionCard .pc-container .button-container {
+  width: 100%;
+}
+
+.promotionCard .pc-container .block {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .promotionCard .pc-container {
+    height: 340px;
+  }
+
+  .promotionCard .pc-container .subtitle {
+    display: none !important;
+  }
+
+  .promotionCard .pc-container img {
+    width: 100%;
+  }
+
+  .promotionCard .pc-container .pc-content .pc-card {
+    background-color: transparent;
+  }
+
+  .promotionCard .pc-container .pc-card {
+    align-items: flex-end !important;
+  }
+
+  .promotionCard .pc-container .pc-content .pc-card {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 60%;
+    width: 100%;
+  }
+  .promotionCard .pc-container .pc-action-button {
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+  }
+
+  .promotionCard .pc-container .pc-card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .promotionCard .pc-container .pc-content {
+    align-items: flex-end !important;
+  }
+
+  .promotionCard .pc-container .pc-content .pc-card .pc-title {
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Prmotion Card",
+  "description": "Card for promotion",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "promotionAttributes",
+      "name": "Promotion Attributes",
+      "description": "Attributes for promotion",
+      "attribute_definitions": [
+        {
+          "id": "image",
+          "name": "Image",
+          "description": "Image for the background of the card",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "description": "Title of the card",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "description": "Subtitle of the card",
+          "type": "markup",
+          "required": true
+        },
+        {
+          "id": "url",
+          "name": "Button url",
+          "description": "Url to redirect",
+          "type": "url",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "layoutAttributes",
+      "name": "Layour Attributes",
+      "description": "Attributes for promotion layout",
+      "attribute_definitions": [
+        {
+          "id": "cardPosition",
+          "name": "Card Position",
+          "description": "Position of the card",
+          "type": "enum",
+          "values": ["left", "right"],
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

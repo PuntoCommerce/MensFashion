@@ -8,6 +8,11 @@
   src: url("../fonts/AvenirNextLTPro-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Avenir-LT-Std-BlackOblique";
+  src: url(../fonts/AvenirLTStd-BlackOblique_0.otf) format("opentype");
+}
+
 /*  */
 
 /* **************************** HEADER **************************** */
