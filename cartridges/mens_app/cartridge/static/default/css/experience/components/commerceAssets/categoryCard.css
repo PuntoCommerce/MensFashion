@@ -48,3 +48,18 @@
 .categoryCard .text-button-container {
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  .categoryCard .content-into-image {
+    justify-content: center !important;
+    align-items: flex-end !important;
+  }
+
+  .categoryCard .content-into-image .text-button-container {
+    align-items: center !important;
+  }
+
+  .categoryCard .content-into-image .cc-action-button {
+    padding: 0px;
+  }
+}
