@@ -836,8 +836,8 @@ footer .socialMedia-paymentMethods {
   overflow-x: hidden;
 }
 
-.experience-commerce_layouts-carousel .carousel-control-next,
-.experience-commerce_layouts-carousel .carousel-control-prev {
+.experience-commerce_layouts-bannerCarousel .carousel-control-next,
+.experience-commerce_layouts-bannerCarousel .carousel-control-prev {
   top: 50%;
   display: flex;
   justify-content: center;
@@ -852,20 +852,20 @@ footer .socialMedia-paymentMethods {
   display: none;
 }
 
-.experience-commerce_layouts-carousel .carousel-control-prev::after {
+.experience-commerce_layouts-bannerCarousel .carousel-control-prev::after {
   content: url(../images/carrucel-arrow.svg);
 }
 
-.experience-commerce_layouts-carousel .carousel-control-next::after {
+.experience-commerce_layouts-bannerCarousel .carousel-control-next::after {
   content: url(../images/carrucel-arrow.svg);
   transform: rotate(180deg);
 }
 
-.experience-commerce_layouts-carousel .carousel-control-prev {
+.experience-commerce_layouts-bannerCarousel .carousel-control-prev {
   left: 3%;
 }
 
-.experience-commerce_layouts-carousel .carousel-control-next {
+.experience-commerce_layouts-bannerCarousel .carousel-control-next {
   right: 3%;
 }
 
@@ -885,6 +885,7 @@ footer .socialMedia-paymentMethods {
 .editorialRichText-component-container .text-center h2,
 .editorialRichText-component-container .text-center h3,
 .editorialRichText-component-container .text-center h4 {
+  font-family: "Avenir-LT-Std";
   color: #000000 !important;
   text-decoration: none;
 }
@@ -893,13 +894,35 @@ footer .socialMedia-paymentMethods {
   border-left: 1px solid #000000;
 }
 
-@media (max-width: 544px) {
-  .mobile-2r-2c .region:is(:first-child) {
-    border-bottom: 1px solid #000000;
+#bannerCarousel {
+  margin-bottom: 15px;
+}
+#bannerCarousel .col-12 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#bannerCarousel .row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+#bannerCarousel .photo-tile-container {
+  width: 100%;
+}
+
+/* @media (max-width: 991px) {
+  .mobile-2r-1c .row {
+    flex-direction: column !important;
   }
+} */
+
+@media (max-width: 544px) {
+  .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
     border-top: 1px solid #000000;
   }
+
   .mobile-2r-2c .region {
     margin-bottom: 0px;
   }
