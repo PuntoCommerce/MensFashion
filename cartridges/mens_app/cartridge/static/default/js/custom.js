@@ -112,3 +112,9 @@ const changeSubMenuItem = () => {
     sub.style.top = rectMenu.y + menuHeight + "px";
   });
 };
+
+/* HOME */
+const mobile2r2c = $C(".mobile-2r-2c");
+const newElement = document.createElement("div");
+newElement.classList.add("mobile-2r-2c-cross");
+mobile2r2c.appendChild(newElement);
