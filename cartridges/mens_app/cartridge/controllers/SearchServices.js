@@ -45,7 +45,7 @@ server.get(
     var minChars = preferences.minTermLength;
     // Unfortunately, by default, max suggestions is set to 10 and is not configurable in Business
     // Manager.
-    var maxSuggestions = 3;
+    var maxSuggestions = 8;
 
     if (searchTerms && searchTerms.length >= minChars) {
       suggestions = new SuggestModel();

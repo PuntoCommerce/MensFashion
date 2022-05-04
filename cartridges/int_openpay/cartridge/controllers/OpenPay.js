@@ -3,28 +3,25 @@
 const server = require("server");
 const OpenPay = require("~/cartridge/scripts/openpay/helpers/openpayApi");
 
-server.use("prueba", (req, res, next) => {
-  const body = {
-    card_number: "4111111111111111",
-    holder_name: "Juan Perez Ramirez",
-    expiration_year: "23",
-    expiration_month: "12",
-    cvv2: "110",
-    address: {
-      city: "Querétaro",
-      country_code: "MX",
-      postal_code: "76900",
-      line1: "Av 5 de Febrero",
-      line2: "Roble 207",
-      line3: "col carrillo",
-      state: "Queretaro",
-    },
-  };
-  const token = OpenPay.rest("/tokens", "POST", body);
+server.post("CreateToken", (req, res, next) => {
+  try {
+    const { name, cardNumber, cvv, month, year } = req.form;
 
-  res.json({
-    token: token,
-  });
+    const body = {
+      card_number: cardNumber,
+      holder_name: name,
+      expiration_year: year,
+      expiration_month: month,
+      cvv2: "110",
+    };
+
+    const response = OpenPay.rest("/tokens", "POST", body);
+
+    res.json({ openpay: response });
+  } catch (error) {
+    const err = error;
+    res.json({ error: err });
+  }
   next();
 });
 

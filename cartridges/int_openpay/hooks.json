@@ -1,0 +1,12 @@
+{
+  "hooks": [
+    {
+      "name": "app.payment.form.processor.openpay",
+      "script": "./cartridge/scripts/hooks/payment/processor/openpay_form"
+    },
+    {
+      "name": "app.payment.processor.openpay",
+      "script": "./cartridge/scripts/hooks/payment/processor/openpay"
+    }
+  ]
+}

@@ -8,6 +8,8 @@ const LocalServiceRegistry = require("dw/svc/LocalServiceRegistry");
 const PaymentMgr = require("dw/order/PaymentMgr");
 const Resource = require("dw/web/Resource");
 
+const { Base64 } = require("*/cartridge/scripts/openpay/utils/Base64");
+
 const creteUrlPath = (credential, openpayId, path) => {
   var url = credential.URL;
   if (!url.match(/.+\/$/)) {
@@ -32,9 +34,12 @@ const createRequest = (service, data) => {
 
   const openpayId = paymentProcessor.getPreferenceValue("openpay_id");
 
+  const b64Password = Base64.encode(credential.password + ":");
+
   service.setURL(creteUrlPath(credential, openpayId, path));
   service.addHeader("Content-Type", "application/json");
   service.setRequestMethod(method);
+  service.addHeader("Authorization", "Basic " + b64Password);
   // service.setAu
   // service.addHeader(" " + credential.password);
 
