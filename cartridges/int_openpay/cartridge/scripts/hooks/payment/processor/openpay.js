@@ -141,6 +141,8 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
         error = true;
         serverErrors.push(Resource.msg("error.payment.fail", "openpay", null));
       } else {
+        paymentInstrument.paymentTransaction.setTransactionID(OPResponse.id);
+
         if (OPResponse.status === "completed") {
           order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
         }
