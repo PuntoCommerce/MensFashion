@@ -3,5 +3,8 @@
         <isif condition="${payment.paymentMethod === 'OpenPay'}">
             <isinclude template="checkout/billing/paymentOptions/openpaySummary" />
         </isif>
+        <isif condition="${payment.paymentMethod === 'MercadoPago'}">
+            <isinclude template="mercadopago/checkout/summary" />
+        </isif>
     </isloop>
 </div>
