@@ -11,40 +11,43 @@
             name="${pdict.forms.billingForm.paymentMethod.htmlName}"
             value="OpenPay">
          <div class="pymnt-itm card active">
-            <h2>Tarjeta de crédito o débito</h2>
             <div class="pymnt-cntnt">
-               <div class="sctn-row">
-                  <div class="sctn-col l">
+               <div class="row">
+                  <div class="d-flex flex-column col">
                      <label>Nombre del titular</label><input 
                      <isprint value=${openpay.name_openpay.attributes} encoding="off"/>
                      >
                   </div>
-                  <div class="sctn-col">
+                  <div class="d-flex flex-column col">
                      <label>Número de tarjeta</label><input 
                         <isprint value=${openpay.card_number.attributes} encoding="off"/> 
                      <isprint value=${openpay.card_number_openpay.attributes} encoding="off"/>
                      >
                   </div>
                </div>
-               <div class="sctn-row">
-                  <div class="sctn-col l">
+               <div class="row">
+                  <div class="d-flex flex-column col">
                      <label>Fecha de expiración</label>
-                     <div class="sctn-col half l">
-                        <select 
-                        id="month_openpay"
-                        <isprint value=${openpay.month_openpay.attributes} encoding="off"/>
-                        >
-                        </select>
+                     <div class="d-flex justify-content-around">
+                        
+                        <div class="sctn-col half l">
+                           <select 
+                           id="month_openpay"
+                           <isprint value=${openpay.month_openpay.attributes} encoding="off"/>
+                           >
+                           </select>
+                        </div>
+                        <div class="sctn-col half l">
+                           <select 
+                           id="year_openpay"
+                           <isprint value=${openpay.year_openpay.attributes} encoding="off"/>
+                           >
+                           </select>
+                        </div>
                      </div>
-                     <div class="sctn-col half l">
-                        <select 
-                        id="year_openpay"
-                        <isprint value=${openpay.year_openpay.attributes} encoding="off"/>
-                        >
-                        </select>
-                     </div>
+
                   </div>
-                  <div class="sctn-col cvv">
+                  <div class="d-flex flex-column col">
                      <label>Código de seguridad</label>
                      <div class="sctn-col half l">
                         <input 
