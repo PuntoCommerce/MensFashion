@@ -3,7 +3,7 @@
     <field formid="device_session_id" type="string" mandatory="false" />
     
     <field formid="name_openpay" type="string" mandatory="true"/>
-    <field formid="card_number_openpay" type="string" mandatory="true" max-length="20" />
+    <field formid="card_number_openpay" type="string" mandatory="true" max-length="16" />
     <field formid="month_openpay" type="string" mandatory="true" />
     <field formid="year_openpay" type="string" mandatory="true" />
     <field formid="cvv_openpay" type="string" mandatory="true" max-length="4" />

@@ -9,7 +9,7 @@ const rest = (path, method, body) => {
     });
     return result;
   } catch (error) {
-    return false;
+    return { error: true, message: error.message };
   }
 };
 

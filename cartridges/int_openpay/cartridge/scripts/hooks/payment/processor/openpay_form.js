@@ -15,18 +15,6 @@ function processForm(req, paymentForm, viewFormData) {
   var viewData = viewFormData;
   var creditCardErrors = {};
 
-  // if (!req.form.storedPaymentUUID) {
-  //     // verify credit card form data
-  //     creditCardErrors = COHelpers.validateCreditCard(paymentForm);
-  // }
-
-  // if (Object.keys(creditCardErrors).length) {
-  //     return {
-  //         fieldErrors: creditCardErrors,
-  //         error: true,
-  //     };
-  // }
-
   viewData.paymentMethod = {
     value: paymentForm.paymentMethod.value,
     htmlName: paymentForm.paymentMethod.value,
@@ -52,6 +40,14 @@ function processForm(req, paymentForm, viewFormData) {
     expirationYear: {
       value: parseInt(paymentForm.openpay.year_openpay.value, 10),
       htmlName: paymentForm.openpay.year_openpay.htmlName,
+    },
+    holderName: {
+      value: paymentForm.openpay.name_openpay.value,
+      htmlName: paymentForm.openpay.name_openpay.htmlName,
+    },
+    deviceSessionId: {
+      value: paymentForm.openpay.device_session_id.value,
+      htmlName: paymentForm.openpay.device_session_id.htmlName,
     },
   };
 

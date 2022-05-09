@@ -533,6 +533,7 @@ function createOrder(currentBasket) {
       return OrderMgr.createOrder(currentBasket);
     });
   } catch (error) {
+    const err = error;
     return null;
   }
   return order;

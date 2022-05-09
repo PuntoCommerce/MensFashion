@@ -13,21 +13,7 @@ const CustomerMgr = require("dw/customer/CustomerMgr");
 const Logger = require("dw/system/Logger");
 const Order = require("dw/order/Order");
 
-const {
-  getPaymentMethods,
-  getCardToken,
-  createPayment,
-} = require("*/cartridge/scripts/mercadopago/helpers/mercadoPagoApi");
-
-const paymentMethodIdMP = "MercadoPago";
-
-/**
- * Creates a token. This should be replaced by utilizing a tokenization provider
- * @returns {string} a token
- */
-function createToken() {
-  return Math.random().toString(36).substr(2);
-}
+const OpenPay = require("*/cartridge/scripts/openpay/helpers/openpayApi");
 
 /**
  * Verifies that entered credit card information is a valid card. If the information is valid a
@@ -45,15 +31,25 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
   var cardSecurityCode = paymentInformation.securityCode.value;
   var expirationMonth = paymentInformation.expirationMonth.value;
   var expirationYear = paymentInformation.expirationYear.value;
+  var holderName = paymentInformation.holderName.value;
+  var deviceSessionId = paymentInformation.deviceSessionId.value;
   var serverErrors = [];
   var creditCardStatus;
 
-  const paymentMEthodsMP = getPaymentMethods(cardNumber);
-  if (paymentMEthodsMP.error && !paymentMEthodsMP.length) {
-    // Invalid Payment Instrumentx
+  const body = {
+    card_number: cardNumber,
+    holder_name: holderName,
+    expiration_year: expirationYear,
+    expiration_month: expirationMonth,
+    cvv2: cardSecurityCode,
+  };
+
+  const OPResponse = OpenPay.rest("/tokens", "POST", body);
+
+  if (OPResponse.error) {
     let invalidPaymentMethod = Resource.msg(
-      "error.payment.not.valid",
-      "mercadopago",
+      "error.payment.data",
+      "openpay",
       null
     );
     return {
@@ -63,55 +59,27 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
     };
   }
 
-  const issuer_id = paymentMEthodsMP.results[0].issuer.id;
-
-  const cartToken = getCardToken(
-    currentBasket.billingAddress.fullName,
-    cardNumber,
-    expirationMonth,
-    expirationYear,
-    cardSecurityCode
-  );
-
-  if (!cartToken) {
-    // Invalid Payment Instrumentx
-    let invalidPaymentMethod = Resource.msg(
-      "error.payment.not.valid",
-      "mercadopago",
-      null
-    );
-    return {
-      fieldErrors: [],
-      serverErrors: [invalidPaymentMethod],
-      error: true,
-    };
-  }
-  const cartTokenId = cartToken.id;
-
-  var cardType = paymentInformation.cardType.value;
+  const cardToken = OPResponse.id;
 
   Transaction.wrap(function () {
     var paymentInstruments =
-      currentBasket.getPaymentInstruments(paymentMethodIdMP);
+      currentBasket.getPaymentInstruments(paymentMethodID);
 
     collections.forEach(paymentInstruments, function (item) {
       currentBasket.removePaymentInstrument(item);
     });
 
     var paymentInstrument = currentBasket.createPaymentInstrument(
-      paymentMethodIdMP,
+      paymentMethodID,
       currentBasket.totalGrossPrice
     );
 
-    paymentInstrument.setCreditCardHolder(
-      currentBasket.billingAddress.fullName
-    );
-    paymentInstrument.setBankAccountNumber(issuer_id);
+    paymentInstrument.setCreditCardHolder(holderName);
     paymentInstrument.setCreditCardNumber(cardNumber);
-    paymentInstrument.setCreditCardType(cardType);
     paymentInstrument.setCreditCardExpirationMonth(expirationMonth);
     paymentInstrument.setCreditCardExpirationYear(expirationYear);
-    paymentInstrument.setCreditCardToken(cartTokenId);
+    paymentInstrument.setCreditCardType(deviceSessionId);
+    paymentInstrument.setCreditCardToken(cardToken);
   });
 
   return {
@@ -145,78 +113,36 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
     };
   }
 
-  const items = getListedItemsForMP(order);
-  const customer = order.getCustomer();
-
-  const shippingInfo = order.shipments[0].shippingAddress;
-
-  const payer = {
-    address: {},
-    phone: {
-      area_code: 52,
-      number: shippingInfo.phone,
-    },
-    first_name: shippingInfo.firstName,
-    last_name: shippingInfo.lastName,
-    // email: order.customerEmail,
-  };
-
-  const shipments = {
-    receiver_address: {
-      zip_code: shippingInfo.postalCode,
-      state_name: shippingInfo.stateCode,
-      city_name: shippingInfo.city,
-      street_name: shippingInfo.address1,
-      street_number: shippingInfo.address2 || 0,
-    },
-  };
-
   const body = {
-    additional_info: {
-      items: items,
-      payer: payer,
-      shipments: shipments,
-    },
-    transaction_amount: order.totalGrossPrice.value,
-    token: paymentInstrument.creditCardToken,
-    installments: 1,
-    issuer_id: parseInt(paymentInstrument.bankAccountNumber),
-    payer: {
+    source_id: paymentInstrument.creditCardToken,
+    method: "card",
+    amount: order.totalGrossPrice.value,
+    currency: order.currencyCode,
+    description: "Order #" + order.orderNo,
+    order_id: order.orderNo,
+    device_session_id: paymentInstrument.creditCardType,
+    customer: {
+      name: order.billingAddress.firstName,
+      last_name: order.billingAddress.lastName,
+      phone_number: order.billingAddress.phone,
       email: order.customerEmail,
     },
   };
 
-  const logger = Logger.getLogger("mercadopago", "mercadopago");
-
   try {
-    const paymentMP = createPayment(body);
-    // if(paymentMP.ok){}
+    const OPResponse = OpenPay.rest("/charges", "POST", body);
+
+    if (OPResponse.error) {
+      serverErrors.push(OPResponse.error.message);
+      error = true;
+    }
     Transaction.wrap(function () {
-      if (paymentMP.error) {
-        logger.error(
-          "\n Fail in payment.\nError: {0} \nRequest: {1}",
-          paymentMP.errorMessage,
-          JSON.stringify(body)
-        );
+      if (OPResponse.status === "failed") {
         error = true;
-        serverErrors.push(Resource.msg("error.technical", "mercadopago", null));
+        serverErrors.push(Resource.msg("error.payment.fail", "openpay", null));
       } else {
-        order.custom.isMercadoPago = true;
-        paymentInstrument.paymentTransaction.setTransactionID(paymentMP.id);
-        if (
-          paymentMP.status === "approved" ||
-          paymentMP.status === "pending" ||
-          paymentMP.status === "in_process" ||
-          paymentMP.status === "in_mediation"
-        ) {
-          if (paymentMP.status === "approved") {
-            order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
-          }
-        } else {
-          // error = true;
-          // serverErrors.push(
-          //   Resource.msg("error.rejected", "mercadopago", null)
-          // );
+        if (OPResponse.status === "completed") {
+          order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
         }
       }
       paymentInstrument.paymentTransaction.setPaymentProcessor(
@@ -235,25 +161,5 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
   };
 }
 
-function getListedItemsForMP(order) {
-  const items = [];
-  for (var i = 0; i < order.productLineItems.length; i++) {
-    const item = order.productLineItems[i];
-    // const product = ProductMgr.getProduct(item.productID);
-
-    items.push({
-      id: item.productID,
-      title: item.productName,
-      description: "",
-      picture_url: "",
-      category_id: "",
-      quantity: item.quantityValue,
-      unit_price: parseFloat(item.priceValue.toFixed(2)),
-    });
-  }
-  return items;
-}
-
 exports.Handle = Handle;
 exports.Authorize = Authorize;
-exports.createToken = createToken;

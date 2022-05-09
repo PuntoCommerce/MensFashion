@@ -73,7 +73,7 @@ module.exports = (() => {
       if (result.isOk()) {
         return restService.response;
       } else {
-        return result.response;
+        return { error: true, message: result.errorMessage };
       }
     },
   };
