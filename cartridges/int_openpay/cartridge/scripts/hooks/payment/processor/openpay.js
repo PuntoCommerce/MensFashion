@@ -144,7 +144,7 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
         paymentInstrument.paymentTransaction.setTransactionID(OPResponse.id);
         order.custom.isOpenPay = true;
         if (OPResponse.status === "completed") {
-          // order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
+          order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
         }
       }
       paymentInstrument.paymentTransaction.setPaymentProcessor(
