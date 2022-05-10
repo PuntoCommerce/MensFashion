@@ -142,9 +142,9 @@ function Authorize(orderNumber, paymentInstrument, paymentProcessor) {
         serverErrors.push(Resource.msg("error.payment.fail", "openpay", null));
       } else {
         paymentInstrument.paymentTransaction.setTransactionID(OPResponse.id);
-
+        order.custom.isOpenPay = true;
         if (OPResponse.status === "completed") {
-          order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
+          // order.setPaymentStatus(Order.PAYMENT_STATUS_PAID);
         }
       }
       paymentInstrument.paymentTransaction.setPaymentProcessor(

@@ -8,7 +8,7 @@ const LocalServiceRegistry = require("dw/svc/LocalServiceRegistry");
 const PaymentMgr = require("dw/order/PaymentMgr");
 const Resource = require("dw/web/Resource");
 
-const { Base64 } = require("*/cartridge/scripts/openpay/utils/Base64");
+const { Base64 } = require("~/cartridge/scripts/openpay/utils/Base64");
 
 const creteUrlPath = (credential, openpayId, path) => {
   var url = credential.URL;
