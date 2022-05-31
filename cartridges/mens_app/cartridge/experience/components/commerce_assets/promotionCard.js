@@ -20,6 +20,7 @@ module.exports.render = function (context, modelIn) {
   model.image = ImageTransformation.getScaledImage(content.image);
   model.title = content.title;
   model.subtitle = content.subtitle;
+  model.buttonText = content.buttonText;
   model.url = URLUtils.url(content.url);
   model.cardPosition = content.cardPosition;
 

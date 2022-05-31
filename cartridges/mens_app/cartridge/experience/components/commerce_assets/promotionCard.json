@@ -30,6 +30,13 @@
           "required": true
         },
         {
+          "id": "buttonText",
+          "name": "Button Text",
+          "description": "Text for the button",
+          "type": "string",
+          "required": true
+        },
+        {
           "id": "url",
           "name": "Button url",
           "description": "Url to redirect",
