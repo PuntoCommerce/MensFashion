@@ -17,4 +17,11 @@
     <!-- fields for OpenPay selection -->
     <include formid="openpay" name="openpay" />
 
+     <!-- fields for PayPal selection -->
+	<include formid="paypal" name="paypal"/>
+
+    <!-- fields for Gift Certificate selection -->
+    <include formid="giftCertFields" name="billinggiftcert"/>
+
+
 </form>

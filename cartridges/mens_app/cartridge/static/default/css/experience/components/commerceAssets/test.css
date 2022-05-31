@@ -1,0 +1,11 @@
+.hola-mundo {
+  background-color: yellow;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hola-mundo span {
+  font-size: 2em;
+}

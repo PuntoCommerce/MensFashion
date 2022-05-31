@@ -1,0 +1,32 @@
+{
+  "name": "Test",
+  "description": "This is a test",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "test",
+      "name": "Test",
+      "attribute_definitions": [
+        {
+          "id": "text",
+          "name": "text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "image",
+          "name": "image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "url",
+          "name": "redirection",
+          "type": "url",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

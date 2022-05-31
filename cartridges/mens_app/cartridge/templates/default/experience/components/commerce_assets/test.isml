@@ -1,0 +1,9 @@
+<isscript>
+  let assets = require('*/cartridge/scripts/assets.js');
+  assets.addCss("/css/experience/components/commerceAssets/test.css");
+</isscript>
+
+<a class="hola-mundo" href="${pdict.url}">
+  <span>${pdict.text}</span>
+  <img src="${pdict.image.src.desktop}" alt="${pdict.image.alt}">
+</a>
