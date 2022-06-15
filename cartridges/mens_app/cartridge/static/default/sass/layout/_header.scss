@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+
+/*  */
+
+/* **************************** HEADER **************************** */
+
+.responsive {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .desk {
+        display: none !important;
+    }
+
+    .responsive {
+        display: block !important;
+    }
+}
+
+/* @media (max-width: 991px) {
+    .tablet {
+      display: none !important;
+    }
+  
+    .responsive {
+      display: block !important;
+    }
+  } */
+
+header .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header .navbar-header {
+    padding-left: 26px;
+    padding-right: 26px;
+    height: 65px;
+}
+
+@media (max-width: 991px) {
+    .site-search {
+        width: 100% !important;
+    }
+
+    .search {
+        margin: 0 0 0 0 !important;
+        padding-top: 9px;
+    }
+
+    #searchContainer form {
+        width: 100%;
+    }
+
+    .search-field-responsive,
+    .search-field {
+        width: 100% !important;
+    }
+
+    .search-form-container {
+        flex-direction: column;
+    }
+
+    .suggestions {
+        right: 0px !important;
+    }
+
+    .suggestions,
+    .suggestions-wrapper {
+        width: 100%;
+    }
+}

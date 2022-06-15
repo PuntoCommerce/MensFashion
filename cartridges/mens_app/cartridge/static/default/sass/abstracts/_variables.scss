@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Avenir-LT-Std', 'Avenir-Next', 'Avenir-LT-Std-BlackOblique';
+
+/// Index font family Avenir Std
+/// @type length
+$avenir-LT-Std: 1;
+
+/// Index font family Avenir Next
+/// @type length
+$avenir-Next: 2;
+
+/// Index font family Avenir Black
+/// @type length
+$avenir-LT-Black: 3;
+
+///Font style
+/// @type string
+$font-style: 'normal';
+
+
+
+
+/// Main brand color
+/// @type Color
+$brand-color: #FA4238;
+
+/// Dark main brand color
+/// @type Color
+$brand-color-dark: #AB0E06;
+
+/// Light Grey
+/// @type Color
+$light-grey: #C2C3C6;
+
+/// Medium Grey
+/// @type Color
+$mid-grey: #64656A;
+
+/// Blue
+/// @type Color
+$blue-color: #0079C0;
+
+/// Blue links
+/// @type Color
+$blue-color-links: #007BDB;
+
+/// Black general color
+/// @type Color
+$text-color: #000000;
+
+/// White general color
+/// @type Color
+$text-color: #ffffff;
+
+
+
+
+
+/// Fonts size H1
+/// @type Length
+$font-size-h1: 55px;
+
+/// Fonts size H2
+/// @type Length
+$font-size-h2: 40px;
+
+/// Fonts size H3
+/// @type Length
+$font-size-h3: 32px;
+
+/// Fonts size H4
+/// @type Length
+$font-size-h4: 28px;
+
+/// Fonts size H5 and Paragraph
+/// @type Length
+$font-size-h5-and-paragraph: 16px;
+
+
+
+
+
+/// Line height H1
+/// @type Length
+$line-height-h1: 75.13px;
+
+/// Line height H2
+/// @type Length
+$line-height-h2: 54.64px;
+
+/// Line height H3
+/// @type Length
+$line-height-h3: 43.71;
+
+/// Line height H4
+/// @type Length
+$line-height-h4: 38.25px;
+
+/// Line height H5 and Paragraph
+/// @type Length
+$line-height-h5-and-paragraph: 21.86px;
+
+
+
+
+/// Line height H5 and Paragraph
+/// @type Length
+$max-width: 1200px;

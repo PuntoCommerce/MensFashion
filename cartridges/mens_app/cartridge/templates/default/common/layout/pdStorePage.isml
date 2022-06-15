@@ -12,7 +12,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
 
-    assets.addCss('/css/custom.css');
+    assets.addCss('/css/style.css');
     assets.addJs('/js/custom.js');
     
 </isscript>
