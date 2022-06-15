@@ -27,4 +27,8 @@
   &__small {
     padding: $spacing-x-small;
   }
+
+  &:focus {
+    box-shadow: none;
+  }
 }

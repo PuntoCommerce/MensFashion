@@ -1036,6 +1036,8 @@ ul {
       color: #ffffff !important; }
   .btn__small {
     padding: 6px; }
+  .btn:focus {
+    box-shadow: none; }
 
 .summary .tile-body {
   padding-top: 24px; }
