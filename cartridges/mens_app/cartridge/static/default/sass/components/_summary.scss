@@ -1,4 +1,18 @@
 .summary {
+  &__images {
+    .second {
+      display: none;
+    }
+    &:hover {
+      .first {
+        display: none;
+      }
+      .second {
+        display: block;
+      }
+    }
+  }
+
   .tile-body {
     padding-top: $spacing-medium;
   }

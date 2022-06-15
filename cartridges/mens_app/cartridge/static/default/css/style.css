@@ -1039,6 +1039,15 @@ ul {
   .btn:focus {
     box-shadow: none; }
 
+.summary__images .second {
+  display: none; }
+
+.summary__images:hover .first {
+  display: none; }
+
+.summary__images:hover .second {
+  display: block; }
+
 .summary .tile-body {
   padding-top: 24px; }
 
