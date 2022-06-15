@@ -1,0 +1,7 @@
+{
+  "name": "Transparent Header",
+  "description": "Makes the header transparent",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [],
+  "region_definitions": []
+}

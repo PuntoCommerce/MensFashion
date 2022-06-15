@@ -1,0 +1,4 @@
+<isscript>
+    let assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss("/css/experience/components/commerceAssets/transparentHeader.css");
+</isscript>
