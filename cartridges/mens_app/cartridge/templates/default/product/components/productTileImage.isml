@@ -2,7 +2,10 @@
 
     <a href="${pdict.urls.product}" class="summary__images">
         <isloop items="${product.images.medium}" var="image" status="loopstatus">
-            <img class="tile-image ${loopstatus.index == 0 ? 'first' : 'second'}"
+            <img class="tile-image 
+                ${product.images.medium.length === 1 ? 'unique'   
+                    : loopstatus.index == 0 ? 'first' : 'second'}"
+
                 src="${image.url}"
                 alt="${product.productName}"
                 title="${image.title}"
