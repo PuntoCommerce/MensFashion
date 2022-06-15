@@ -6,8 +6,8 @@
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/experience/components/commerceAssets/campaignBanner.css');
     assets.addJs('/js/campaignBanner.js');
-
-    assets.addCss('/css/custom.css');
+    
+    assets.addCss('/css/style.css');
     assets.addJs('/js/custom.js');
     
 </isscript>
