@@ -2,13 +2,9 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Avenir-LT-Std', 'Avenir-Next', 'Avenir-LT-Std-BlackOblique';
+$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique";
 
 /// Index font family Avenir Std
 /// @type length
@@ -24,34 +20,31 @@ $avenir-LT-Black: 3;
 
 ///Font style
 /// @type string
-$font-style: 'normal';
-
-
-
+$font-style: "normal";
 
 /// Main brand color
 /// @type Color
-$brand-color: #FA4238;
+$brand-color: #fa4238;
 
 /// Dark main brand color
 /// @type Color
-$brand-color-dark: #AB0E06;
+$brand-color-dark: #ab0e06;
 
 /// Light Grey
 /// @type Color
-$light-grey: #C2C3C6;
+$light-grey: #c2c3c6;
 
 /// Medium Grey
 /// @type Color
-$mid-grey: #64656A;
+$mid-grey: #64656a;
 
 /// Blue
 /// @type Color
-$blue-color: #0079C0;
+$blue-color: #0079c0;
 
 /// Blue links
 /// @type Color
-$blue-color-links: #007BDB;
+$blue-color-links: #007bdb;
 
 /// Black general color
 /// @type Color
@@ -59,11 +52,7 @@ $text-color: #000000;
 
 /// White general color
 /// @type Color
-$text-color: #ffffff;
-
-
-
-
+$white-color: #ffffff;
 
 /// Fonts size H1
 /// @type Length
@@ -81,13 +70,13 @@ $font-size-h3: 32px;
 /// @type Length
 $font-size-h4: 28px;
 
+/// Fonts size H5
+/// @type Length
+$font-size-h5: 20px;
+
 /// Fonts size H5 and Paragraph
 /// @type Length
 $font-size-h5-and-paragraph: 16px;
-
-
-
-
 
 /// Line height H1
 /// @type Length
@@ -109,9 +98,17 @@ $line-height-h4: 38.25px;
 /// @type Length
 $line-height-h5-and-paragraph: 21.86px;
 
-
-
-
 /// Line height H5 and Paragraph
 /// @type Length
 $max-width: 1200px;
+
+$font-weight-bolder: 900;
+
+$spacing-x-small: 6px;
+$spacing-small: 12px;
+$spacing-small-medium: 18px;
+$spacing-medium: 24px;
+$spacing-medium-large: 36px;
+$spacing-medium-x-large: 45px;
+$spacing-medium-larger: 65px;
+$spacing-large: 72px;

@@ -350,7 +350,7 @@ html {
  * Basic typography style for copy text
  */
 body {
-  color: #ffffff;
+  color: #000000;
   font: normal 125%/1.4 "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique"; }
 
 h1, h2, h3, h4, h5, html, body {
@@ -1017,6 +1017,55 @@ ul {
   #actions-icons .items,
   .category-items {
     width: 50%; } }
+
+.btn {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 12px;
+  font-family: "Avenir-LT-Std";
+  font-size: 20px;
+  font-weight: 900;
+  color: #000000 !important;
+  background-color: #ffffff; }
+  .btn--gray {
+    background-color: #c2c3c6;
+    color: #000000 !important; }
+    .btn--gray:hover {
+      background-color: #000000;
+      color: #ffffff !important; }
+  .btn__small {
+    padding: 6px; }
+
+.summary .tile-body {
+  padding-top: 24px; }
+
+.summary__name {
+  font-family: "Avenir-LT-Std"; }
+  .summary__name a {
+    color: #000000 !important; }
+
+.summary__pricing .strike-through span {
+  color: #c2c3c6;
+  font-size: 15px;
+  text-decoration: line-through; }
+
+.summary__pricing .price span {
+  display: flex;
+  flex-direction: column; }
+
+.summary__swatches {
+  align-items: flex-end;
+  display: flex; }
+  .summary__swatches .swatch-circle {
+    height: 15px;
+    margin: 5px;
+    width: 15px; }
+  .summary__swatches .color-swatches {
+    min-height: 0 !important; }
+
+.summary__footer {
+  padding-top: 18px; }
 
 /* **************************** HOME **************************** */
 #maincontent .container {

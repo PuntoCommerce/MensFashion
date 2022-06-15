@@ -1,0 +1,30 @@
+<div class="product-tile summary">
+    <!-- dwMarker="product" dwContentID="${product.uuid}" -->
+    <isinclude template="product/components/productTileImage" />
+    <div class="tile-body">
+
+        <div class="summary__name">
+            <isinclude template="product/components/productTileName" />
+        </div>
+
+        <div class="row">
+            <div class="summary__pricing col-6">
+                <isset name="price" value="${product.price}" scope="page" />
+                <isif condition="${product.productType === 'set'}">
+                    <isinclude template="product/components/pricing/setPrice" />
+                <iselse>
+                    <isinclude template="product/components/pricing/main" />
+                </isif>
+            </div>
+            <div class="summary__swatches col-6">
+                <isif condition="${pdict.display.swatches !== false}">
+                    <isinclude template="product/components/productTileSwatch" />
+                </isif>
+            </div>
+        </div>
+        <div class="summary__footer">
+            <a class="btn btn--gray btn__small" href="${pdict.urls.product}" >COMPRAR</a>
+        </div>
+    </div>
+    <!-- END_dwmarker -->
+</div>
