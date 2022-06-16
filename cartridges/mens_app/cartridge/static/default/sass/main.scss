@@ -13,6 +13,14 @@
 @import "layout/header", "layout/footer", "layout/navigation";
 
 // 5. Components
+@import
+  'components/button',
+  'components/filters';
+
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/plp';
 @import "components/button", "components/summary";
 
 // 6. Page-specific styles

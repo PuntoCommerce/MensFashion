@@ -1027,6 +1027,18 @@ ul {
   .category-items {
     width: 50%; } }
 
+.filter-header {
+  margin: 0; }
+
+.refinement-bar {
+  padding: 30px; }
+
+.header-bar {
+  background-color: transparent; }
+
+.refinements ul li button {
+  color: #000000 !important;
+  font-size: 15px; }
 .btn {
   text-align: center;
   width: 100%;
@@ -1126,3 +1138,12 @@ ul {
     border-top: 1px solid #000000; }
   .mobile-2r-2c .region {
     margin-bottom: 0px; } }
+
+.hero.slant-down::after {
+  border-width: 0; }
+
+.hero.slant-down .header.page-title,
+.hero.slant-down .page-title::before {
+  background-color: transparent;
+  font-size: 30px;
+  line-height: 34px; }

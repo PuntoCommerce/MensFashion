@@ -48,7 +48,7 @@ $blue-color-links: #007bdb;
 
 /// Black general color
 /// @type Color
-$text-color: #000000;
+$text-color-black: #000000;
 
 /// White general color
 /// @type Color
@@ -66,6 +66,10 @@ $font-size-h2: 40px;
 /// @type Length
 $font-size-h3: 32px;
 
+/// Fonts size Heading PLP
+/// @type Length
+$font-size-heading-plp: 30px;
+
 /// Fonts size H4
 /// @type Length
 $font-size-h4: 28px;
@@ -77,6 +81,14 @@ $font-size-h5: 20px;
 /// Fonts size H5 and Paragraph
 /// @type Length
 $font-size-h5-and-paragraph: 16px;
+
+/// Fonts size filters
+/// @type Length
+$font-size-filters: 15px;
+
+
+
+
 
 /// Line height H1
 /// @type Length
@@ -94,9 +106,25 @@ $line-height-h3: 43.71;
 /// @type Length
 $line-height-h4: 38.25px;
 
+/// Line height Heading PLP
+/// @type Length
+$line-height-heading-plp: 34px;
+
 /// Line height H5 and Paragraph
 /// @type Length
 $line-height-h5-and-paragraph: 21.86px;
+
+
+
+
+
+/// Line height H5 and Paragraph
+/// @type Length
+$spacing-30: 30px;
+
+
+
+
 
 /// Line height H5 and Paragraph
 /// @type Length

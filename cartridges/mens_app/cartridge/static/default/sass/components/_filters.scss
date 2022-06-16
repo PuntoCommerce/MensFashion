@@ -1,0 +1,16 @@
+.filter-header {
+    margin: 0;
+}
+
+.refinement-bar {
+    padding: $spacing-30;
+}
+
+.header-bar {
+    background-color: transparent;
+}
+
+.refinements ul li button {
+    color: $text-color-black!important;
+    font-size: $font-size-filters;
+}
