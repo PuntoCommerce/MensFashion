@@ -1,0 +1,58 @@
+.summary {
+  &__images {
+    .second {
+      display: none;
+    }
+    &:hover {
+      .first {
+        display: none;
+      }
+      .second {
+        display: block;
+      }
+    }
+  }
+
+  .tile-body {
+    padding-top: $spacing-medium;
+  }
+  &__name {
+    font-family: nth($text-font-stack, $avenir-LT-Std);
+
+    a {
+      color: $text-color !important;
+    }
+  }
+  &__pricing {
+    .strike-through {
+      span {
+        color: $light-grey;
+        font-size: 15px;
+        text-decoration: line-through;
+      }
+    }
+    .price {
+      span {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  &__swatches {
+    align-items: flex-end;
+    display: flex;
+
+    .swatch-circle {
+      height: 15px;
+      margin: 5px;
+      width: 15px;
+    }
+    .color-swatches {
+      min-height: 0 !important;
+    }
+  }
+
+  &__footer {
+    padding-top: $spacing-small-medium;
+  }
+}

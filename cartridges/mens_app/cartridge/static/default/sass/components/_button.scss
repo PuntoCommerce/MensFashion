@@ -1,3 +1,34 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.btn {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  padding: $spacing-small;
+
+  font-family: nth($text-font-stack, $avenir-LT-Std);
+  font-size: $font-size-h5;
+
+  font-weight: $font-weight-bolder;
+  color: $text-color !important;
+  background-color: $white-color;
+
+  &--gray {
+    background-color: $light-grey;
+    color: $text-color !important;
+    &:hover {
+      background-color: $text-color;
+      color: $white-color !important;
+    }
+  }
+
+  &__small {
+    padding: $spacing-x-small;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}

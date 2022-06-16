@@ -1,0 +1,32 @@
+<div class="image-container">
+
+    <a href="${pdict.urls.product}" class="summary__images">
+        <isloop items="${product.images.medium}" var="image" status="loopstatus">
+            <img class="tile-image 
+                ${product.images.medium.length === 1 ? 'unique'   
+                    : loopstatus.index == 0 ? 'first' : 'second'}"
+
+                src="${image.url}"
+                alt="${product.productName}"
+                title="${image.title}"
+                />
+            <isif condition="${loopstatus.index === 1}">
+                <isbreak/>
+            </isif>
+        </isloop>
+    </a>
+
+    <isif condition="${pdict.display.showQuickView !== false}">
+        <a class="quickview hidden-sm-down" href="${pdict.urls.quickView}"
+           data-toggle="modal"
+           data-target="#quickViewModal"
+           title="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
+           aria-label="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
+        >
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-1x"></i>
+            </span>
+        </a>
+    </isif>
+</div>
