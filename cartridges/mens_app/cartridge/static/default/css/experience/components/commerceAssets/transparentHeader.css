@@ -20,4 +20,17 @@
   header:hover {
     background-color: #fff;
   }
+
+  header:hover .nav-item a {
+    color: #000 !important;
+  }
+  header:hover .nav-item.last_category_item a,
+  header .nav-item.last_category_item a {
+    color: #ff0000 !important;
+  }
+
+  header .nav-item a {
+    font-weight: 700;
+    color: #fff !important;
+  }
 }
