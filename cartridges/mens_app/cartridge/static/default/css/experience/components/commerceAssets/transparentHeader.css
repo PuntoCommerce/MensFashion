@@ -21,16 +21,23 @@
     background-color: #fff;
   }
 
-  header:hover .nav-item a {
-    color: #000 !important;
-  }
-  header:hover .nav-item.last_category_item a,
-  header .nav-item.last_category_item a {
-    color: #ff0000 !important;
-  }
-
   header .nav-item a {
     font-weight: 700;
     color: #fff !important;
+  }
+
+  header:hover .last_category_item a,
+  header .last_category_item a {
+    color: #ff0000 !important;
+  }
+
+  header .category-item a,
+  header .sub-category-item a,
+  header:hover .nav-item a {
+    color: #000 !important;
+  }
+
+  header .sub-category-item a {
+    font-weight: 400;
   }
 }
