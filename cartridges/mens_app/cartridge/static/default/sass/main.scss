@@ -24,8 +24,10 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/filters';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/plp';
