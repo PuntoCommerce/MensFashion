@@ -792,11 +792,18 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item.last_category_item a {
   color: #ff0000; }
 
+#menuDesk .nav-item.last_category_item .sub-category-item a {
+  color: #000000; }
+
 #menuDesk .dropdown-menu .category-item.item a,
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
   font-size: 14px; }
+
+.nav.navbar-nav {
+  display: flex;
+  justify-content: space-evenly; }
 
 /* #menuDesk .dropdown-menu .category-item.item a .hover-underline {
   display: ;
@@ -947,7 +954,8 @@ ul {
   display: none; }
 
 #menuDesk {
-  display: block; }
+  display: flex;
+  justify-content: center; }
 
 #menuResponsive {
   display: none; }

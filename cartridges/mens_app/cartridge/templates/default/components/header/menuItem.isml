@@ -1,7 +1,7 @@
 <div class="dropdown-menu ">
    <div class="d-flex">
       <div class="dropdown-menu-content" role="menu" aria-hidden="true" aria-label="${category.id}">
-         <isset name="categoryImage" value="${category.image}" scope="page" />
+         <isset name="categoryImage" value="${category.thumbnail}" scope="page" />
          <div class="d-flex justify-content-center row">
             <div class="col-12 d-flex justify-content-around">
                <isloop items="${menuItem.subCategories}" var="category">

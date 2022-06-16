@@ -29,14 +29,11 @@ function categoryToObject(category) {
     name: category.getDisplayName(),
     url: getCategoryUrl(category),
     id: category.ID,
+    // thumbnail: category.thumbnail,
   };
   var subCategories = category.hasOnlineSubCategories()
     ? category.getOnlineSubCategories()
     : null;
-
-  if (category.image) {
-    result.image = category.image.url.toString();
-  }
 
   if (subCategories) {
     collections.forEach(subCategories, function (subcategory) {
@@ -59,6 +56,10 @@ function categoryToObject(category) {
         return !!item.subCategories;
       });
     }
+  }
+
+  if (category.thumbnail) {
+    result.thumbnail = category.thumbnail.url.toString();
   }
 
   return result;
