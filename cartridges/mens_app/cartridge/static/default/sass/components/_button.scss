@@ -12,14 +12,14 @@
   font-size: $font-size-h5;
 
   font-weight: $font-weight-bolder;
-  color: $text-color !important;
+  color: $text-color-black !important;
   background-color: $white-color;
 
   &--gray {
     background-color: $light-grey;
-    color: $text-color !important;
+    color: $text-color-black !important;
     &:hover {
-      background-color: $text-color;
+      background-color: $text-color-black;
       color: $white-color !important;
     }
   }

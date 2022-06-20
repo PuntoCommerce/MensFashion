@@ -1,0 +1,27 @@
+.row.grid-header {
+    margin: 0;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .filters {
+        display: flex;
+        align-items: center;
+
+        &__text {
+            margin: 0 $spacing-medium 0 0;
+        }
+    }
+}
+
+.refinement-bar {
+    // display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-color: $white-color;
+    z-index: 5;
+    &--show {
+        display: block;
+    }
+}
+

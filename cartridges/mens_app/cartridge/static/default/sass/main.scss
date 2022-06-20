@@ -15,13 +15,14 @@
 // 5. Components
 @import
   'components/button',
-  'components/filters';
+  'components/filters',
+  'components/refinement-bar',
+  "components/summary";
 
 // 6. Page-specific styles
 @import
   'pages/home',
   'pages/plp';
-@import "components/button", "components/summary";
 
 // 6. Page-specific styles
 @import "pages/home";
