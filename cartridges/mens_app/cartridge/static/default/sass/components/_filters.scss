@@ -9,7 +9,7 @@
 }
 
 .refinement-bar {
-    padding: $spacing-30;
+  padding: $spacing-30;
 }
 
 .header-bar {
@@ -63,4 +63,11 @@
 
 .card-body {
     padding: 0 $spacing-small;
+
+  background-color: transparent;
+}
+
+.refinements ul li button {
+  color: $text-color-black !important;
+  font-size: $font-size-filters;
 }

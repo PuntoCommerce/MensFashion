@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md bg-inverse col-12" id="customMenu">
 
-    <div id="menuDesk" class="menu-group" role="navigation">
-        <ul class="nav navbar-nav" role="menu">
+    <div id="menuDesk" class="menu-group row" role="navigation">
+        <ul class="nav navbar-nav col-10" role="menu">
             <isif condition="${pdict.categories}">
                 <isloop items="${pdict.categories}" var="category" status="status_item">
                     <isif condition="${category.subCategories}">
