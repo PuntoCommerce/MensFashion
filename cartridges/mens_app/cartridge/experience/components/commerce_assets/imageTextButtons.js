@@ -11,6 +11,59 @@ var ImageTransformation = require("*/cartridge/experience/utilities/ImageTransfo
  *
  * @returns {string} The markup to be displayed
  */
+
+const getComponentSize = (selection) => {
+  switch (selection) {
+    case "Large":
+      return "1480px";
+      break;
+    case "Medium":
+      return "782px";
+      break;
+    case "Small":
+      return "500px";
+      break;
+    default:
+      return "110px";
+      break;
+  }
+};
+
+const getItemsLayout = (selection) => {
+  switch (selection) {
+    case "Text-Left-Buttons-Right":
+      return {
+        content: "justify-content: space-around; flex-direction: row",
+        buttons: "column",
+      };
+      break;
+    case "Text-Right-Buttons-Left":
+      return {
+        content: "justify-content: space-around; flex-direction: row-reverse;",
+        buttons: "column",
+      };
+      break;
+    case "Center-Text-Up-Buttons-Down":
+      return {
+        content: "justify-content: center; flex-direction: column",
+        buttons: "row",
+      };
+      break;
+    case "Center-Text-Down-Buttons-Up":
+      return {
+        content: "justify-content: center; flex-direction: column-reverse",
+        buttons: "row",
+      };
+      break;
+    default:
+      return {
+        content: "justify-content: center; flex-direction: row",
+        buttons: "column",
+      };
+      break;
+  }
+};
+
 module.exports.render = function (context, modelIn) {
   var model = modelIn || new HashMap();
   var content = context.content;
@@ -19,6 +72,10 @@ module.exports.render = function (context, modelIn) {
     content.backgroundImage
   );
   model.text = content.text;
+  model.layoutSize = {
+    componentSize: getComponentSize(content.componentSize),
+    itemsLayout: getItemsLayout(content.itemsLayout),
+  };
 
   model.buttons = [
     {

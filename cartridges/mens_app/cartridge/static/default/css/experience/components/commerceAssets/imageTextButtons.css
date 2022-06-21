@@ -4,9 +4,9 @@
   object-fit: cover;
 }
 
-.ITBC-container {
-  height: 1350px;
-}
+/* .ITBC-container {
+  height: --componentHeight);
+} */
 
 .ITBC-content p,
 .ITBC-content h1,
@@ -54,9 +54,15 @@
   padding: 20px;
 
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ITBC-content .ITBC-buttons {
+  display: flex;
   justify-content: center;
   align-items: center;
+  grid-gap: 30px;
 }
 
 .ITBC-content .btn-ITBC {
@@ -66,5 +72,43 @@
   color: #000000 !important;
   font-weight: bold;
   text-decoration: none;
-  margin-right: 10px;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .ITBC-container {
+    height: 534px !important;
+  }
+
+  .ITBC-content {
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .ITBC-content .ITBC-buttons {
+    justify-content: center;
+    grid-gap: 10px;
+  }
+  .ITBC-content .btn-ITBC {
+    min-width: 150px;
+    padding: 10px 25px;
+  }
+
+  .ITBC-content h1 {
+    font-size: 40px;
+  }
+  .ITBC-content h2 {
+    font-size: 34px;
+  }
+  .ITBC-content h3 {
+    font-size: 28px;
+  }
+  .ITBC-content h1 {
+    font-size: 22px;
+  }
+  .ITBC-content p {
+    font-size: 12px;
+  }
 }
