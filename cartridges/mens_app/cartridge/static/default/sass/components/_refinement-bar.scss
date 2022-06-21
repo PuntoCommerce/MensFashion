@@ -10,18 +10,22 @@
         &__text {
             margin: 0 $spacing-medium 0 0;
         }
+
+        svg {
+            cursor: pointer;
+        }
     }
 }
 
 .refinement-bar {
-    // display: none;
+    display: none!important;
     position: absolute;
     top: 56px;
     left: 0;
     background-color: $white-color;
     z-index: 5;
     &--show {
-        display: block;
+        display: block!important;
     }
 }
 

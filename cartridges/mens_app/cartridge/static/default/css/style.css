@@ -1093,15 +1093,18 @@ ul {
     align-items: center; }
     .row.grid-header .filters__text {
       margin: 0 24px 0 0; }
+    .row.grid-header .filters svg {
+      cursor: pointer; }
 
 .refinement-bar {
+  display: none !important;
   position: absolute;
   top: 56px;
   left: 0;
   background-color: #ffffff;
   z-index: 5; }
   .refinement-bar--show {
-    display: block; }
+    display: block !important; }
 
 .summary__images .second {
   display: none; }
