@@ -1,5 +1,11 @@
+////// Filters styles
+.filters {
+    margin: 0;
+}
+
 .filter-header {
-  margin: 0;
+    margin: 0;
+    padding: $spacing-small ;
 }
 
 .refinement-bar {
@@ -7,6 +13,57 @@
 }
 
 .header-bar {
+    background-color: transparent;
+    border: none;
+}
+
+.refinements ul li button {
+    color: $text-color-black !important;
+    font-size: $font-size-filters;
+}
+
+////// Card header
+.checkBox {
+    margin-right: 10px;
+}
+
+.values.content {
+    padding: 0;
+
+    li {
+        padding: $spacing-x-small-bigger 0;
+
+        &:first-child {
+            padding-top: $spacing-small-medium;
+        }
+    }
+
+    button {
+        padding: 0;
+    }
+
+    .values.content {
+        padding-left: $spacing-small;
+    }
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    border: none;
+    padding: $spacing-small;
+
+    .d-none.d-md-block.pull-left {
+        font-size: $font-size-h5-and-paragraph;
+        line-height: $line-height-h5-and-paragraph;
+    }
+}
+
+.card-body {
+    padding: 0 $spacing-small;
+
   background-color: transparent;
 }
 

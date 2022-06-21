@@ -30,7 +30,7 @@
                     <button class="title btn text-left btn-block d-md-none"
                        aria-controls="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
                        aria-expanded="false"
-                    >
+                    >z
                         <span>${refinement.displayName}</span>
                     </button>
                     <h2 aria-label="${refinement.displayName}" class="d-none d-md-block">${refinement.displayName}</h2>

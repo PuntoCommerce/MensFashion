@@ -766,7 +766,7 @@ footer .socialMedia-paymentMethods {
   min-width: 178px; }
 
 /* .navbar-header {
-  height: 65px;
+    height: 65px;
 } */
 .main-menu,
 .navbar-nav {
@@ -811,7 +811,7 @@ footer .socialMedia-paymentMethods {
 } */
 /* 
 #menuDesk .nav:is(:last-child) a {
-  color: #ff0000 !important;
+    color: #ff0000 !important;
 } */
 #searcHeaderResponsive,
 #searcHeader {
@@ -836,7 +836,7 @@ footer .socialMedia-paymentMethods {
   padding-bottom: 4px; }
 
 /* .search-field-responsive {
-  margin-top: 5px !important;
+    margin-top: 5px !important;
 } */
 .form-control:focus {
   box-shadow: none !important;
@@ -1048,18 +1048,116 @@ ul {
   .btn:focus {
     box-shadow: none; }
 
-.filter-header {
+.filters {
   margin: 0; }
+
+.filter-header {
+  margin: 0;
+  padding: 12px; }
 
 .refinement-bar {
   padding: 30px; }
 
 .header-bar {
+  background-color: transparent;
+  border: none; }
+
+.refinements ul li button {
+  color: #000000 !important;
+  font-size: 15px; }
+
+.checkBox {
+  margin-right: 10px; }
+
+.values.content {
+  padding: 0; }
+  .values.content li {
+    padding: 8px 0; }
+    .values.content li:first-child {
+      padding-top: 18px; }
+  .values.content button {
+    padding: 0; }
+  .values.content .values.content {
+    padding-left: 12px; }
+
+.card {
+  border: none; }
+
+.card-header {
+  border: none;
+  padding: 12px; }
+  .card-header .d-none.d-md-block.pull-left {
+    font-size: 16px;
+    line-height: 21.86px; }
+
+.card-body {
+  padding: 0 12px;
   background-color: transparent; }
 
 .refinements ul li button {
   color: #000000 !important;
   font-size: 15px; }
+
+.row.grid-header {
+  margin: 0;
+  justify-content: space-evenly;
+  align-items: center; }
+  .row.grid-header .filters {
+    display: flex;
+    align-items: center; }
+    .row.grid-header .filters__text {
+      margin: 0 24px 0 0; }
+    .row.grid-header .filters svg {
+      cursor: pointer; }
+
+.refinement-bar {
+  display: none !important;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 5; }
+  .refinement-bar--show {
+    display: block !important; }
+
+.summary__images .second {
+  display: none; }
+
+.summary__images:hover .first {
+  display: none; }
+
+.summary__images:hover .second {
+  display: block; }
+
+.summary .tile-body {
+  padding-top: 24px; }
+
+.summary__name {
+  font-family: "Avenir-LT-Std"; }
+  .summary__name a {
+    color: #000000 !important; }
+
+.summary__pricing .strike-through span {
+  color: #c2c3c6;
+  font-size: 15px;
+  text-decoration: line-through; }
+
+.summary__pricing .price span {
+  display: flex;
+  flex-direction: column; }
+
+.summary__swatches {
+  align-items: flex-end;
+  display: flex; }
+  .summary__swatches .swatch-circle {
+    height: 15px;
+    margin: 5px;
+    width: 15px; }
+  .summary__swatches .color-swatches {
+    min-height: 0 !important; }
+
+.summary__footer {
+  padding-top: 18px; }
 
 /* **************************** HOME **************************** */
 #maincontent .container {
@@ -1109,66 +1207,6 @@ ul {
   background-color: transparent;
   font-size: 30px;
   line-height: 34px; }
-
-.btn {
-  text-align: center;
-  width: 100%;
-  border-radius: 0;
-  padding: 12px;
-  font-family: "Avenir-LT-Std";
-  font-size: 20px;
-  font-weight: 900;
-  color: #000000 !important;
-  background-color: #ffffff; }
-  .btn--gray {
-    background-color: #c2c3c6;
-    color: #000000 !important; }
-    .btn--gray:hover {
-      background-color: #000000;
-      color: #ffffff !important; }
-  .btn__small {
-    padding: 6px; }
-  .btn:focus {
-    box-shadow: none; }
-
-.summary__images .second {
-  display: none; }
-
-.summary__images:hover .first {
-  display: none; }
-
-.summary__images:hover .second {
-  display: block; }
-
-.summary .tile-body {
-  padding-top: 24px; }
-
-.summary__name {
-  font-family: "Avenir-LT-Std"; }
-  .summary__name a {
-    color: #000000 !important; }
-
-.summary__pricing .strike-through span {
-  color: #c2c3c6;
-  font-size: 15px;
-  text-decoration: line-through; }
-
-.summary__pricing .price span {
-  display: flex;
-  flex-direction: column; }
-
-.summary__swatches {
-  align-items: flex-end;
-  display: flex; }
-  .summary__swatches .swatch-circle {
-    height: 15px;
-    margin: 5px;
-    width: 15px; }
-  .summary__swatches .color-swatches {
-    min-height: 0 !important; }
-
-.summary__footer {
-  padding-top: 18px; }
 
 /* **************************** HOME **************************** */
 #maincontent .container {
