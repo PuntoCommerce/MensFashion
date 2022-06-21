@@ -1,11 +1,14 @@
 .breadcrumb {
     border-bottom: 0!important;
+    padding: 0;
+    margin: 0;
 }
 .plp-tools__item {
     
     &--breadcrums {
         padding: 0;
         display: flex;
+        margin: 0;
 
         li {
             list-style: none;

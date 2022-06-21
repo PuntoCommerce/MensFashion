@@ -1,0 +1,25 @@
+.grid-header {
+    &.row {
+        margin: 0;
+        justify-content: space-around;
+        align-items: center;
+    
+        .filters {
+            display: flex;
+            align-items: center;
+    
+            &__text {
+                margin: 0 $spacing-medium 0 0;
+            }
+    
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+    }
+}

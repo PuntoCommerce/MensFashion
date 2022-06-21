@@ -1028,11 +1028,14 @@ ul {
     width: 50%; } }
 
 .breadcrumb {
-  border-bottom: 0 !important; }
+  border-bottom: 0 !important;
+  padding: 0;
+  margin: 0; }
 
 .plp-tools__item--breadcrums {
   padding: 0;
-  display: flex; }
+  display: flex;
+  margin: 0; }
   .plp-tools__item--breadcrums li {
     list-style: none; }
     .plp-tools__item--breadcrums li .item, .plp-tools__item--breadcrums li .last-item {
@@ -1101,17 +1104,21 @@ ul {
   color: #000000 !important;
   font-size: 15px; }
 
-.row.grid-header {
+.grid-header.row {
   margin: 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center; }
-  .row.grid-header .filters {
+  .grid-header.row .filters {
     display: flex;
     align-items: center; }
-    .row.grid-header .filters__text {
+    .grid-header.row .filters__text {
       margin: 0 24px 0 0; }
-    .row.grid-header .filters svg {
+    .grid-header.row .filters svg {
       cursor: pointer; }
+
+.grid-header__column {
+  display: flex;
+  align-items: center; }
 
 .refinement-bar {
   display: none !important;
