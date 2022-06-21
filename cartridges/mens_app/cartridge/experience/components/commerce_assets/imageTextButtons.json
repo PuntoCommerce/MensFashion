@@ -1,0 +1,78 @@
+{
+  "name": "Image Text and Buttons",
+  "description": "Image Text and Buttons to redirect to other pages",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "imagetext",
+      "name": "Image Tile No Margins Desktop",
+      "description": "This is a simple Image Tile component where you drag and drop it into any layout component ",
+      "attribute_definitions": [
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "description": "Background Image for the component",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "text",
+          "name": "Text",
+          "description": "Text for the component",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "buttons",
+      "name": "Buttons",
+      "description": "Buttons to be displayed in the component",
+      "attribute_definitions": [
+        {
+          "id": "url1",
+          "name": "URL 1",
+          "description": "URL for the first button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text1",
+          "name": "Text 1",
+          "description": "Text for the first button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "url2",
+          "name": "URL 2",
+          "description": "URL for the second button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text2",
+          "name": "Text 2",
+          "description": "Text for the second button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "url3",
+          "name": "URL 3",
+          "description": "URL for the third button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text3",
+          "name": "Text 3",
+          "description": "Text for the third button",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

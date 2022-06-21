@@ -1,0 +1,70 @@
+.ITBC-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ITBC-container {
+  height: 1350px;
+}
+
+.ITBC-content p,
+.ITBC-content h1,
+.ITBC-content h2,
+.ITBC-content h3,
+.ITBC-content h4 {
+  font-family: "Avenir-LT-Std";
+  text-align: center;
+  color: #ffffff;
+}
+
+.ITBC-content p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.ITBC-content h1 {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.ITBC-content h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.ITBC-content h3 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.ITBC-content h4 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.ITBC-content {
+  position: relative;
+  left: 0%;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: transparent;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ITBC-content .btn-ITBC {
+  font-family: "Avenir-Next";
+  padding: 15px 40px;
+  background-color: #ffffff;
+  color: #000000 !important;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 10px;
+}

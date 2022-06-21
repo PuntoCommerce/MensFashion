@@ -1,0 +1,22 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageTextButtons.css');
+</isscript>
+
+
+<div class="ITBC-container">
+    <img src="${pdict.backgroundImage.src.desktop}" alt="HOlA " />
+    <div class="ITBC-content">
+      <div class="ITBC-markup">
+        <isprint value="${pdict.text}" encoding="off"/>
+      </div>
+      <div class="ITBC-buttons">
+        <isloop items="${pdict.buttons}" var="button" status="loopstatus">
+          <isif condition="${button.active}">  
+            <a class="btn-ITBC with" href="${button.url}">${button.text}</a>
+          </isif>
+      </isloop>
+      </div>
+    </div>
+</div>
