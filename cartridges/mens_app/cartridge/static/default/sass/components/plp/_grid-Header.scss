@@ -1,8 +1,10 @@
 .grid-header {
     &.row {
         margin: 0;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid $light-grey;
+        padding: $spacing-medium 0;
     
         .filters {
             display: flex;
@@ -21,5 +23,15 @@
     &__column {
         display: flex;
         align-items: center;
+    }
+
+    &__column-item {
+        &--right {
+            margin-right: $spacing-large;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
     }
 }
