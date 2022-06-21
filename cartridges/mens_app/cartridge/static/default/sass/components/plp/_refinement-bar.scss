@@ -1,0 +1,12 @@
+.refinement-bar {
+    display: none!important;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background-color: $white-color;
+    z-index: 5;
+    &--show {
+        display: block!important;
+    }
+}
+

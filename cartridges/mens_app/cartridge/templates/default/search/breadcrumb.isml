@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col  plp-tools__item plp-tools__item--no-responsive">
         <ol class="plp-tools__item--breadcrums">
-            <li class="">
+            <li class="breadcumbs-item">
                 <a href="${URLUtils.url("Home-Show")}" class="item">Inicio</a>
             </li>
             <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" status="loopState">

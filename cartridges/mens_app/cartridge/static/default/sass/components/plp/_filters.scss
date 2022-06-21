@@ -1,6 +1,17 @@
 ////// Filters styles
 .filters {
     margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+        background-color: transparent;
+    }
+    &:focus-visible, 
+    &:focus {
+        outline: none;
+    }
 }
 
 .filter-header {
