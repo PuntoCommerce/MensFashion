@@ -1047,9 +1047,12 @@ ul {
 .filters {
   margin: 0;
   background-color: transparent;
-  box-shadow: none; }
+  box-shadow: none;
+  border: none; }
   .filters:hover {
     background-color: transparent; }
+  .filters:focus-visible, .filters:focus {
+    outline: none; }
 
 .filter-header {
   margin: 0;
