@@ -1027,29 +1027,29 @@ ul {
   .category-items {
     width: 50%; } }
 
-.btn {
-  text-align: center;
-  width: 100%;
-  border-radius: 0;
-  padding: 12px;
-  font-family: "Avenir-LT-Std";
-  font-size: 20px;
-  font-weight: 900;
-  color: #000000 !important;
-  background-color: #ffffff; }
-  .btn--gray {
-    background-color: #c2c3c6;
-    color: #000000 !important; }
-    .btn--gray:hover {
-      background-color: #000000;
-      color: #ffffff !important; }
-  .btn__small {
-    padding: 6px; }
-  .btn:focus {
-    box-shadow: none; }
+.breadcrumb {
+  border-bottom: 0 !important; }
+
+.plp-tools__item--breadcrums {
+  padding: 0;
+  display: flex; }
+  .plp-tools__item--breadcrums li {
+    list-style: none; }
+    .plp-tools__item--breadcrums li .item, .plp-tools__item--breadcrums li .last-item {
+      color: #979797 !important;
+      font-size: 14px; }
+    .plp-tools__item--breadcrums li .item::after {
+      content: "/";
+      padding: 0 6px; }
+    .plp-tools__item--breadcrums li .last-item {
+      color: #000000 !important; }
 
 .filters {
-  margin: 0; }
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none; }
+  .filters:hover {
+    background-color: transparent; }
 
 .filter-header {
   margin: 0;
@@ -1119,6 +1119,27 @@ ul {
   z-index: 5; }
   .refinement-bar--show {
     display: block !important; }
+
+.btn {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 12px;
+  font-family: "Avenir-LT-Std";
+  font-size: 20px;
+  font-weight: 900;
+  color: #000000 !important;
+  background-color: #ffffff; }
+  .btn--gray {
+    background-color: #c2c3c6;
+    color: #000000 !important; }
+    .btn--gray:hover {
+      background-color: #000000;
+      color: #ffffff !important; }
+  .btn__small {
+    padding: 6px; }
+  .btn:focus {
+    box-shadow: none; }
 
 .summary__images .second {
   display: none; }

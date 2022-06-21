@@ -13,11 +13,15 @@
 @import "layout/header", "layout/footer", "layout/navigation";
 
 // 5. Components
+@import 
+  'components/plp/breadcrumb',
+  'components/plp/filters',
+  'components/plp//refinement-bar';
+
 @import
   'components/button',
-  'components/filters',
-  'components/refinement-bar',
   "components/summary";
+
 
 // 6. Page-specific styles
 @import

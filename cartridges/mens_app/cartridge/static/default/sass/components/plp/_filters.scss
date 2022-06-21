@@ -1,6 +1,12 @@
 ////// Filters styles
 .filters {
     margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+        background-color: transparent;
+    }
 }
 
 .filter-header {
