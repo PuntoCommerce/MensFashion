@@ -54,5 +54,20 @@
 
   &__footer {
     padding-top: $spacing-small-medium;
+    // display: none;
+    visibility: visible;
+  }
+
+  @include respond(tab-port) {
+    &__footer {
+      // display: none;
+      visibility: hidden;
+    }
+    &:hover {
+      .summary__footer {
+        // display: block;
+        visibility: visible;
+      }
+    }
   }
 }
