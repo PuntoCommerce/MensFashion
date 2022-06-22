@@ -1,4 +1,4 @@
-<div class="campaign-banner">
+<div class="campaign-banner d-none">
     <div class="container">
         <div class="campaign-banner-container d-flex justify-content-between">
             <div></div>
