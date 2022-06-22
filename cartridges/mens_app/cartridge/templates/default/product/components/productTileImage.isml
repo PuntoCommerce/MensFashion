@@ -16,7 +16,7 @@
         </isloop>
     </a>
 
-    <isif condition="${pdict.display.showQuickView !== false}">
+    <isif condition="${pdict.urls.quickView}">
         <a class="quickview hidden-sm-down" href="${pdict.urls.quickView}"
            data-toggle="modal"
            data-target="#quickViewModal"
