@@ -1,3 +1,4 @@
+<isset name="product" value="${pdict.product}" scope="page" />
 <div class="product-tile summary">
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
     <isinclude template="product/components/productTileImage" />

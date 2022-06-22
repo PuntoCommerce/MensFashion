@@ -1235,7 +1235,14 @@ ul {
     min-height: 0 !important; }
 
 .summary__footer {
-  padding-top: 18px; }
+  padding-top: 18px;
+  visibility: visible; }
+
+@media only screen and (min-width: 56.25em) {
+  .summary__footer {
+    visibility: hidden; }
+  .summary:hover .summary__footer {
+    visibility: visible; } }
 
 .btn {
   text-align: center;

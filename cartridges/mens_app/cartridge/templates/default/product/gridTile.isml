@@ -1,0 +1,4 @@
+<isset name="showQuickView" value="${true}" scope="page" />
+<div class="product" data-pid="${pdict.product.id}">
+    <isinclude template="product/productTile" />
+</div>
