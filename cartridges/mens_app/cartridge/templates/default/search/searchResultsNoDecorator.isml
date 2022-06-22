@@ -68,7 +68,10 @@
                             
                             <div class='grid-header__column grid-header__column--2'>
                                 <isif condition="${pdict.productSearch.productIds.length > 0}">
-                                    <div class="">
+                                    <div class="sort">
+                                    <p class='sort__text'>
+                                        Ordenar por:
+                                    </p>
                                         <isinclude template="search/sortOrderMenu" />
                                     </div>
 
@@ -85,7 +88,7 @@
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
                     <!--- Refinement bar --->
                     <div class="row">
-                        <div class="refinement-bar col-md-3" id="refinement-bar">
+                        <div class="refinement-bar col-md-4" id="refinement-bar">
                             <isinclude url="${pdict.refineurl}"/>
                         </div>
 

@@ -1150,6 +1150,33 @@ ul {
   .refinement-bar--show {
     display: block !important; }
 
+.sort {
+  display: flex;
+  align-items: center; }
+  .sort__text {
+    margin: 0 12px 0 0;
+    width: auto; }
+  .sort .custom-select {
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/down-arrow-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0; }
+    .sort .custom-select::-ms-expand {
+      display: none;
+      /*Evita que se muestre la flecha por defecto en versiones de IE*/ }
+    .sort .custom-select option {
+      width: 150px;
+      white-space: pre-wrap;
+      word-wrap: break-word; }
+
 .btn {
   text-align: center;
   width: 100%;

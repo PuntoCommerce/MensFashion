@@ -13,9 +13,18 @@
 @import "layout/header", "layout/footer", "layout/navigation";
 
 // 5. Components
-@import "components/plp/breadcrumb", "components/plp/containerCustomPlp",
-  "components/plp/filters", "components/plp/grid-Header",
-  "components/plp/grid-products", "components/plp//refinement-bar";
+@import 
+  'components/plp/breadcrumb',
+  'components/plp/containerCustomPlp',
+  'components/plp/filters',
+  'components/plp/grid-Header',
+  'components/plp/grid-products',
+  'components/plp/refinement-bar',
+  'components/plp/sort';
+
+@import
+  'components/button',
+  "components/summary";
 
 @import "components/button", "components/summary";
 
