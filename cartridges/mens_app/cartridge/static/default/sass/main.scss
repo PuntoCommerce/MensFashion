@@ -26,11 +26,10 @@
   'components/button',
   "components/summary";
 
+@import "components/button", "components/summary";
 
 // 6. Page-specific styles
-@import
-  'pages/home',
-  'pages/plp';
+@import "pages/home", "pages/plp";
 
 // 6. Page-specific styles
 @import "pages/home";

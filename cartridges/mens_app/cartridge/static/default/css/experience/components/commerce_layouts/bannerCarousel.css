@@ -1,35 +1,22 @@
-.experience-commerce_layouts-customBannerCarousel .carousel-control-next,
-.experience-commerce_layouts-customBannerCarousel .carousel-control-prev {
-  top: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 38px;
-  height: 38px;
-  background-color: transparent;
-}
-
-/* .carousel-control-prev-icon,
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none;
-} */
-/* 
-.experience-commerce_layouts-customBannerCarousel
-  .carousel-control-prev::after {
-  content: url(../images/carrucel-arrow.svg);
 }
 
-.experience-commerce_layouts-customBannerCarousel
-  .carousel-control-next::after {
-  content: url(../images/carrucel-arrow.svg);
-  transform: rotate(180deg);
-} */
+.experience-commerce_layouts-bannerCarousel .carousel-control-prev::after {
+  content: url(../../../../images/carrucel-arrow.svg);
+}
 
-.experience-commerce_layouts-customBannerCarousel .carousel-control-prev {
+.experience-commerce_layouts-bannerCarousel .carousel-control-next::after {
+  content: url(../../../../images/carrucel-arrow.svg);
+  transform: rotate(180deg);
+}
+
+.experience-commerce_layouts-bannerCarousel .carousel-control-prev {
   left: 3%;
 }
 
-.experience-commerce_layouts-customBannerCarousel .carousel-control-next {
+.experience-commerce_layouts-bannerCarousel .carousel-control-next {
   right: 3%;
 }
 
