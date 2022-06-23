@@ -1149,6 +1149,11 @@ ul {
   z-index: 5; }
   .refinement-bar--show {
     display: block !important; }
+  .refinement-bar .refinement-color .values.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  .refinement-bar .refinement-color .color-attribute {
+    text-align: center; }
 
 .sort {
   display: flex;
@@ -1302,7 +1307,14 @@ ul {
     min-height: 0 !important; }
 
 .summary__footer {
-  padding-top: 18px; }
+  padding-top: 18px;
+  visibility: visible; }
+
+@media only screen and (min-width: 56.25em) {
+  .summary__footer {
+    visibility: hidden; }
+  .summary:hover .summary__footer {
+    visibility: visible; } }
 
 /* **************************** HOME **************************** */
 #maincontent .container {
