@@ -1,0 +1,28 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_layouts/navTabs.css');
+</isscript>
+
+<div>
+  <ul class="nav nav-pills mb-3 customNav" id="pills-tab" role="tablist">
+    <isloop items="${pdict.content}" var="content" status="loopstatus">
+      <isif condition="${content.name}">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link ${content.active}" id="pills-${content.id}-tab" data-toggle="pill" href="${'#' + 'pills-' + content.id}"
+            role="tab" aria-controls="pills-${content.id}" aria-selected="true">${content.name}</a>
+        </li>
+      </isif>
+    </isloop>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <isloop items="${pdict.content}" var="content" status="loopstatus">
+      <isif condition="${content.name}">
+        <div class="tab-pane fade show ${content.active}" id="pills-${content.id}" role="tabpanel"
+          aria-labelledby="pills-${content.id}-tab">
+          <isprint value="${content.content.render()}" encoding="off" />
+        </div>
+      </isif>
+    </isloop>
+  </div>
+</div>

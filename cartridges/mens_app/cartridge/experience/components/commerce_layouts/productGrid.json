@@ -1,0 +1,46 @@
+{
+  "name": "Desktop Grid - Mobile Carousel",
+  "description": "This layout renders a product grid with a highlighted item and a carousel for mobile",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "configuration",
+      "attribute_definitions": [
+        {
+          "id": "layout",
+          "name": "Grid Layout",
+          "type": "enum",
+          "values": ["Big-Item-Left", "Big-Item-Right", "Big-Item-Center"],
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": [
+    {
+      "id": "item1",
+      "name": "Item 1",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "item2",
+      "name": "Item 2",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "item3",
+      "name": "Item 3",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "item4",
+      "name": "Item 4",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "item5",
+      "name": "Item 5",
+      "component_type_exclusions": []
+    }
+  ]
+}

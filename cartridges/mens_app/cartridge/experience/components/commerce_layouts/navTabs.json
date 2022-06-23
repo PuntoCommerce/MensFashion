@@ -1,0 +1,69 @@
+{
+  "name": "Navigation Tabs",
+  "description": "Navigation Tabs to render content",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "tabs",
+      "attribute_definitions": [
+        {
+          "id": "tab1",
+          "name": "Name tab 1",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "tab2",
+          "name": "Name tab 2",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "tab3",
+          "name": "Name tab 3",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "tab4",
+          "name": "Name tab 4",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "tab5",
+          "name": "Name tab 5",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": [
+    {
+      "id": "content1",
+      "name": "Content 1",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "content2",
+      "name": "Content 2",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "content3",
+      "name": "Content 3",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "content4",
+      "name": "Content 4",
+      "component_type_exclusions": []
+    },
+    {
+      "id": "content5",
+      "name": "Content 5",
+      "component_type_exclusions": []
+    }
+  ]
+}

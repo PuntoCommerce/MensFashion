@@ -1244,6 +1244,73 @@ ul {
   .summary:hover .summary__footer {
     visibility: visible; } }
 
+.btn {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 12px;
+  font-family: "Avenir-LT-Std";
+  font-size: 20px;
+  font-weight: 900;
+  color: #000000 !important;
+  background-color: #ffffff; }
+  .btn--gray {
+    background-color: #D8D8D8;
+    color: #000000 !important; }
+    .btn--gray:hover {
+      background-color: #000000;
+      color: #ffffff !important; }
+  .btn__small {
+    padding: 6px; }
+  .btn:focus {
+    box-shadow: none; }
+
+.summary__images .second {
+  display: none; }
+
+.summary__images:hover .first {
+  display: none; }
+
+.summary__images:hover .second {
+  display: block; }
+
+.summary .tile-body {
+  padding-top: 24px; }
+
+.summary__name {
+  font-family: "Avenir-LT-Std"; }
+  .summary__name a {
+    color: #000000 !important; }
+
+.summary__pricing .strike-through span {
+  color: #D8D8D8;
+  font-size: 15px;
+  text-decoration: line-through; }
+
+.summary__pricing .price span {
+  display: flex;
+  flex-direction: column; }
+
+.summary__swatches {
+  align-items: flex-end;
+  display: flex; }
+  .summary__swatches .swatch-circle {
+    height: 15px;
+    margin: 5px;
+    width: 15px; }
+  .summary__swatches .color-swatches {
+    min-height: 0 !important; }
+
+.summary__footer {
+  padding-top: 18px;
+  visibility: visible; }
+
+@media only screen and (min-width: 56.25em) {
+  .summary__footer {
+    visibility: hidden; }
+  .summary:hover .summary__footer {
+    visibility: visible; } }
+
 /* **************************** HOME **************************** */
 #maincontent .container {
   max-width: 100vw;

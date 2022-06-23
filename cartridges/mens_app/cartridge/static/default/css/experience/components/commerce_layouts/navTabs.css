@@ -1,0 +1,13 @@
+.customNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customNav .nav-item .nav-link {
+  background-color: transparent;
+  color: black !important;
+  font-family: "Avenir-LT-Std";
+  font-size: 20px;
+  font-weight: 800;
+}

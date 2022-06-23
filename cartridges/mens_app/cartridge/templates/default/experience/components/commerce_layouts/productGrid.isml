@@ -1,0 +1,30 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_layouts/productGrid.css');
+</isscript>
+
+<div class="product-grid-component" style="grid-template-columns: ${pdict.layout.containerStyle};">
+  <isif condition="${pdict.layout.position === "left"}">
+    <div class="product-container">
+      <isprint value="${pdict.regions.item1.setClassName("bigger").render()}" encoding="off" />
+    </div>
+  </isif>
+  <div class="product-container">
+    <isprint value="${pdict.regions.item2.render()}" encoding="off" />
+    <isprint value="${pdict.regions.item3.render()}" encoding="off" />
+  </div>
+  <isif condition="${pdict.layout.position === "center"}">
+    <div class="product-container">
+      <isprint value="${pdict.regions.item1.setClassName("bigger").render()}" encoding="off" />
+    </div>
+  </isif>
+  <div class="product-container">
+    <isprint value="${pdict.regions.item4.render()}" encoding="off" />
+    <isprint value="${pdict.regions.item5.render()}" encoding="off" />
+  </div>
+  <isif condition="${pdict.layout.position === "right"}">
+    <div class="product-container">
+      <isprint value="${pdict.regions.item1.setClassName("bigger").render()}" encoding="off" />
+    </div>
+  </isif>
+</div>

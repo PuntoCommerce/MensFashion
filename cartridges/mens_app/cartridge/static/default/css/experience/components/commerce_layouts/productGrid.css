@@ -1,0 +1,39 @@
+.product-grid-component {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.product-grid-component .summary .image-container,
+.product-grid-component .summary .tile-body {
+  width: 100%;
+}
+
+.bigger,
+.product-container,
+.product-container,
+.product-container .experience-component,
+.product-container .experience-component .summary,
+.product-container .experience-component .summary .image-container a {
+  height: 100%;
+}
+
+.product-grid-component .summary {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-container .experience-component .summary {
+  justify-content: space-between;
+}
+
+.product-container .experience-component .summary .image-container {
+  flex: 1;
+}
+.product-container .experience-component .summary .image-container img {
+  object-fit: cover;
+  height: 100%;
+  object-position: 50% 50%;
+}
