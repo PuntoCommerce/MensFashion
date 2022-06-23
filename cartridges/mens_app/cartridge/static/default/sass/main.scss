@@ -22,14 +22,16 @@
   'components/plp/refinement-bar',
   'components/plp/sort';
 
+// @import 
+//   'components/commerce_assets';
+
+@import 
+  'components/commerce_layouts/carousel-fix',
+  'components/commerce_layouts/promo-carousel';
+
 @import
   'components/button',
   "components/summary";
 
-@import "components/button", "components/summary";
-
 // 6. Page-specific styles
 @import "pages/home", "pages/plp";
-
-// 6. Page-specific styles
-@import "pages/home";
