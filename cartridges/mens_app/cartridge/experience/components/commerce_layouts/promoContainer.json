@@ -1,0 +1,36 @@
+{
+    "name": "Promo container",
+    "description": "Custom container width percent responsive with mobile/desk",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "heading",
+            "attribute_definitions": [
+              {
+                "id": "title",
+                "name": "carousel title",
+                "type": "string",
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "countdown",
+            "attribute_definitions": [
+              {
+                "id": "countdownDate",
+                "name": "Countdown sale",
+                "type": "string",
+                "required": false
+              }
+            ]
+          }
+    ],
+    "region_definitions": [
+        {
+            "id":"column1",
+            "name":"Container",
+            "component_type_exclusions": []
+        }
+    ]
+}

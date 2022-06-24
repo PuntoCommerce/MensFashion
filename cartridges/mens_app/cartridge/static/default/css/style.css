@@ -1352,15 +1352,15 @@ ul {
   color: #fff;
   text-align: center; }
 
-.experience-commerce_layouts-promoCarousel {
+.promo-container {
   background-color: #D81E1F; }
 
 .promo-carousel {
   margin: 0 auto;
   padding: 0 24px; }
   .promo-carousel__headings {
-    margin: 0 auto;
-    padding: 30px 30px 0 30px; }
+    width: 100%;
+    padding: 30px 24px 0 24px; }
   .promo-carousel .carousel-inner.row {
     width: auto; }
   .promo-carousel__title {
@@ -1397,6 +1397,8 @@ ul {
       color: #ffffff; }
       .promo-carousel .product-tile .tile-body .summary__name a {
         color: #ffffff !important; }
+  .promo-carousel .value {
+    font-size: 20px; }
 
 .btn {
   text-align: center;
