@@ -1651,91 +1651,63 @@ ul {
   text-align: center;
 }
 
-.btn {
-  text-align: center;
-  width: 100%;
-  border-radius: 0;
-  padding: 12px;
-  font-family: "Avenir-LT-Std";
+.experience-commerce_layouts-promoCarousel {
+  background-color: #d81e1f;
+}
+
+.promo-carousel {
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.promo-carousel__headings {
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+}
+.promo-carousel .carousel-inner.row {
+  width: auto;
+}
+.promo-carousel__title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 55px;
+  /* identical to box height */
+  text-align: left;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.promo-carousel__countdown {
+  font-weight: 800;
   font-size: 20px;
-  font-weight: 900;
-  color: #000000 !important;
-  background-color: #ffffff;
+  line-height: 27px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+  margin: 0;
 }
-.btn--gray {
-  background-color: #d8d8d8;
-  color: #000000 !important;
+.promo-carousel .carousel-control-next,
+.promo-carousel .carousel-control-prev {
+  opacity: 1;
 }
-.btn--gray:hover {
-  background-color: #000000;
+.promo-carousel .carousel-control-next:focus,
+.promo-carousel .carousel-control-prev:focus {
+  outline: 0;
+}
+.promo-carousel .product-tile {
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+  background-color: transparent;
+}
+.promo-carousel .product-tile .tile-body {
+  color: #ffffff;
+}
+.promo-carousel .product-tile .tile-body .summary__name a {
   color: #ffffff !important;
-}
-.btn__small {
-  padding: 6px;
-}
-.btn:focus {
-  box-shadow: none;
-}
-
-.summary__images .second {
-  display: none;
-}
-
-.summary__images:hover .first {
-  display: none;
-}
-
-.summary__images:hover .second {
-  display: block;
-}
-
-.summary .tile-body {
-  padding-top: 24px;
-}
-
-.summary__name {
-  font-family: "Avenir-LT-Std";
-}
-.summary__name a {
-  color: #000000 !important;
-}
-
-.summary__pricing .strike-through span {
-  color: #d8d8d8;
-  font-size: 15px;
-  text-decoration: line-through;
-}
-
-.summary__pricing .price span {
-  display: flex;
-  flex-direction: column;
-}
-
-.summary__swatches {
-  align-items: flex-end;
-  display: flex;
-}
-.summary__swatches .swatch-circle {
-  height: 15px;
-  margin: 5px;
-  width: 15px;
-}
-.summary__swatches .color-swatches {
-  min-height: 0 !important;
-}
-
-.summary__footer {
-  padding-top: 18px;
-  visibility: visible;
-}
-
-@media only screen and (min-width: 56.25em) {
-  .summary__footer {
-    visibility: hidden;
-  }
-  .summary:hover .summary__footer {
-    visibility: visible;
-  }
 }
 
 .btn {

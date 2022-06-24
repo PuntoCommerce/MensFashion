@@ -1,0 +1,64 @@
+.experience-commerce_layouts-promoCarousel {
+    background-color: #D81E1F;
+}
+.promo-carousel {
+    margin: 0 auto;
+    padding: 0 $spacing-medium;
+
+    &__headings {
+        margin: 0 auto;
+        padding:$spacing-30 $spacing-30 0 $spacing-30;
+    }
+    
+    .carousel-inner.row {
+        width: auto;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 55px;
+        /* identical to box height */
+
+        text-align: left;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__countdown {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        text-align: left;
+
+        margin: 0;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        opacity: 1;
+    }
+    .carousel-control-next:focus, .carousel-control-prev:focus { 
+        outline: 0;
+    }
+    .product-tile {
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        background-color: transparent;
+
+        .tile-body {
+            color: $white-color;
+            .summary__name a {
+                color: $white-color!important;
+            }
+        }
+    }
+}
