@@ -1400,6 +1400,51 @@ ul {
   .promo-carousel .value {
     font-size: 20px; }
 
+.responsive {
+  display: none !important; }
+
+.campaign-banner .campaign-banner-message strong {
+  color: #fa4238 !important; }
+
+/* MOBILE */
+@media (max-width: 543px) {
+  .desk {
+    display: none !important; }
+  .responsive {
+    display: block !important; } }
+
+.campaign-banner {
+  background-color: #231f20 !important;
+  height: 50px;
+  display: flex; }
+
+.campaign-banner .campaign-banner-container {
+  height: 50px !important;
+  justify-content: center !important;
+  align-items: center !important; }
+
+.campaign-banner .campaign-banner-message {
+  padding-top: 0px !important; }
+
+.campaign-banner-container h1,
+.campaign-banner-container h2,
+.campaign-banner-container h3,
+.campaign-banner-container h4,
+.campaign-banner-container h5,
+.campaign-banner-container h6,
+.campaign-banner-container p {
+  font-family: "Avenir-Next" !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important; }
+
+.campaign-banner img {
+  vertical-align: text-bottom !important; }
+
+.campaign-banner .close-button {
+  display: none; }
+
 .btn {
   text-align: center;
   width: 100%;
