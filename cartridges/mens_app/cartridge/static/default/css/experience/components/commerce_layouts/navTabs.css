@@ -11,3 +11,29 @@
   font-size: 20px;
   font-weight: 800;
 }
+
+.mobile-navTabs {
+  display: none;
+  justify-content: center;
+}
+
+#mobile-select-navTabs {
+  padding: 10px 20px;
+  font-size: 17px;
+  align-items: center;
+  display: flex;
+  font-family: "Avenir-LT-Std";
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 0px;
+  color: #000;
+}
+
+@media (max-width: 991px) {
+  .mobile-navTabs {
+    display: flex;
+  }
+  .desk-navTabs {
+    display: none;
+  }
+}

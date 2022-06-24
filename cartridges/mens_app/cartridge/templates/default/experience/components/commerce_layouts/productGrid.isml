@@ -3,7 +3,7 @@
     assets.addCss('/css/experience/components/commerce_layouts/productGrid.css');
 </isscript>
 
-<div class="product-grid-component" style="grid-template-columns: ${pdict.layout.containerStyle};">
+<div class="product-grid-component desk-product-grid" style="grid-template-columns: ${pdict.layout.containerStyle};">
   <isif condition="${pdict.layout.position === "left"}">
     <div class="product-container">
       <isprint value="${pdict.regions.item1.setClassName("bigger").render()}" encoding="off" />
@@ -27,4 +27,22 @@
       <isprint value="${pdict.regions.item1.setClassName("bigger").render()}" encoding="off" />
     </div>
   </isif>
+</div>
+
+<div id="carouselProductGrid" class="carousel slide " data-ride="carousel">
+  <div class="carousel-inner">
+    <isprint value="${pdict.regions.item1.setClassName("carousel-item active").render()}" encoding="off" />
+    <isprint value="${pdict.regions.item2.setClassName("carousel-item").render()}" encoding="off" />
+    <isprint value="${pdict.regions.item3.setClassName("carousel-item").render()}" encoding="off" />
+    <isprint value="${pdict.regions.item4.setClassName("carousel-item").render()}" encoding="off" />
+    <isprint value="${pdict.regions.item5.setClassName("carousel-item").render()}" encoding="off" />
+  </div>
+ <button class="carousel-control-prev" type="button" data-target="#carouselProductGrid" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselProductGrid" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
 </div>

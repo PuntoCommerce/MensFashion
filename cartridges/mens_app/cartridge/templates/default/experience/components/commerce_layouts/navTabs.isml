@@ -3,8 +3,8 @@
     assets.addCss('/css/experience/components/commerce_layouts/navTabs.css');
 </isscript>
 
-<div>
-  <ul class="nav nav-pills mb-3 customNav" id="pills-tab" role="tablist">
+<div class="row d-flex justify-content-center">
+  <ul class="nav nav-pills mb-3 customNav desk-navTabs" id="pills-tab" role="tablist">
     <isloop items="${pdict.content}" var="content" status="loopstatus">
       <isif condition="${content.name}">
         <li class="nav-item" role="presentation">
@@ -15,10 +15,20 @@
     </isloop>
   </ul>
 
+  <div class="col-12 mobile-navTabs">
+    <select id="mobile-select-navTabs">
+      <isloop items="${pdict.content}" var="content" status="loopstatus">
+        <isif condition="${content.name}">
+        <option value="${content.id}">${content.name}</option>
+        </isif>
+      </isloop>
+    </select>
+  </div>
+
   <div class="tab-content" id="pills-tabContent">
     <isloop items="${pdict.content}" var="content" status="loopstatus">
       <isif condition="${content.name}">
-        <div class="tab-pane fade show ${content.active}" id="pills-${content.id}" role="tabpanel"
+        <div class="tab-pane fade show ${content.active} tab-pane-customNav" id="pills-${content.id}" role="tabpanel"
           aria-labelledby="pills-${content.id}-tab">
           <isprint value="${content.content.render()}" encoding="off" />
         </div>

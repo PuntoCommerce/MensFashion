@@ -94,7 +94,6 @@ window.addEventListener("scroll", () => {
   } else {
     backToTopBtn.classList.add("hidden");
   }
-
   changeSubMenuItem();
 });
 
@@ -113,8 +112,18 @@ const changeSubMenuItem = () => {
   });
 };
 
-/* HOME */
-const mobile2r2c = $C(".mobile-2r-2c");
-const newElement = document.createElement("div");
-newElement.classList.add("mobile-2r-2c-cross");
-mobile2r2c.appendChild(newElement);
+/* Product Grid Component */
+const pgcSelect = $C("#mobile-select-navTabs");
+const pgcTabs = Array.from($$C(".tab-pane-customNav"));
+
+pgcSelect.addEventListener("change", (e) => {
+  e.preventDefault();
+  pgcTabs.forEach((t) => t.classList.remove("active"));
+  $C(`#pills-${e.target.value}`).classList.add("active");
+});
+
+// /* HOME */
+// const mobile2r2c = $C(".mobile-2r-2c");
+// const newElement = document.createElement("div");
+// newElement.classList.add("mobile-2r-2c-cross");
+// mobile2r2c.appendChild(newElement);
