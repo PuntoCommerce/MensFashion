@@ -1,4 +1,4 @@
-.experience-commerce_layouts-promoCarousel {
+.promo-container {
     background-color: #D81E1F;
 }
 .promo-carousel {
@@ -6,8 +6,8 @@
     padding: 0 $spacing-medium;
 
     &__headings {
-        margin: 0 auto;
-        padding:$spacing-30 $spacing-30 0 $spacing-30;
+        width: 100%;
+        padding:$spacing-30 $spacing-medium 0 $spacing-medium;
     }
     
     .carousel-inner.row {
@@ -60,5 +60,8 @@
                 color: $white-color!important;
             }
         }
+    }
+    .value {
+        font-size: 20px;
     }
 }

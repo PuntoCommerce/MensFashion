@@ -1,0 +1,16 @@
+<div class='promo-container'>
+    <div class="promo-carousel col-10">
+        <isif condition="${pdict.title}">
+            <div class="row">
+                <div class="promo-carousel__headings row">
+                    <h3 class="carousel-title col-5 promo-carousel__title">${pdict.title}</h3>
+                    <isif condition="${pdict.countdownDate}">
+                        <h3 class="col-6 promo-carousel__countdown">Termina en: <span>${pdict.countdownDate}</span></h3>
+                    </isif>
+                </div>
+            </div>
+        </isif>
+        
+        <isprint value="${pdict.regions.column1.render()}" encoding="off"/>
+    </div>
+</div>

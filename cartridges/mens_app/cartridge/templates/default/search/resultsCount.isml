@@ -1,11 +1,11 @@
 <isobject object="${pdict.apiProductSearch}" view="none">
     <isif condition="${pdict.productSearch.isCategorySearch}">
-        <span>
+        <span class="d-none d-sm-block">
             ${pdict.productSearch.count} Productos
         </span>
     <iselse>
         <p>
-            <span class="search-result-count">
+            <span class="search-result-count d-none d-sm-block">
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
                     ${Resource.msgf('label.resultsfor', 'search', null, pdict.productSearch.count)}
                 <iselse>
