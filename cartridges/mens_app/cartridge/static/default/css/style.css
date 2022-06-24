@@ -1631,3 +1631,6 @@ ul {
   background-color: transparent;
   font-size: 30px;
   line-height: 34px; }
+
+.show-more {
+  visibility: hidden; }

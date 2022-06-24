@@ -1,13 +1,16 @@
 .hero.slant-down {
+  &::after {
+    border-width: 0;
+  }
 
-    &::after {
-        border-width: 0;
-    }
+  .header.page-title,
+  .page-title::before {
+    background-color: transparent;
+    font-size: $font-size-heading-plp;
+    line-height: $line-height-heading-plp;
+  }
+}
 
-    .header.page-title,
-    .page-title::before {
-        background-color: transparent;
-        font-size: $font-size-heading-plp;
-        line-height: $line-height-heading-plp;
-    }
+.show-more {
+  visibility: hidden;
 }

@@ -116,11 +116,31 @@ const changeSubMenuItem = () => {
 const pgcSelect = $C("#mobile-select-navTabs");
 const pgcTabs = Array.from($$C(".tab-pane-customNav"));
 
-pgcSelect.addEventListener("change", (e) => {
-  e.preventDefault();
-  pgcTabs.forEach((t) => t.classList.remove("active"));
-  $C(`#pills-${e.target.value}`).classList.add("active");
-});
+if (pgcSelect) {
+  pgcSelect.addEventListener("change", (e) => {
+    e.preventDefault();
+    pgcTabs.forEach((t) => t.classList.remove("active"));
+    $C(`#pills-${e.target.value}`).classList.add("active");
+  });
+}
+
+/* PLP */
+// SHOW MORE BUTTON
+
+const showMoreButton = $C("#show-more-button");
+if (showMoreButton) {
+  window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    console.log(document.body.clientHeight);
+    console.log(document.body.clientHeight - document.body.clientHeight * 0.8);
+    if (
+      window.scrollY >=
+      document.body.clientHeight - document.body.clientHeight * 0.3
+    ) {
+      showMoreButton.click();
+    }
+  });
+}
 
 // /* HOME */
 // const mobile2r2c = $C(".mobile-2r-2c");
