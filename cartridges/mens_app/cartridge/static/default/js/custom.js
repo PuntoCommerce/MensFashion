@@ -142,6 +142,47 @@ if (showMoreButton) {
   });
 }
 
+/* HOME */
+// Promotion Carousel
+
+const formatDateItem = (item) => {
+  if (item < 10) {
+    item = `0${item}`;
+  }
+  return `<div class="item">
+            <span class="number">${item.number}</span>
+            <span class="type">${item.type}</span>
+          </div>`;
+};
+
+const promoCountDown = $C("#countdown-carousel");
+
+if (promoCountDown) {
+  const finalDate = new Date(promoCountDown.getAttribute("data"));
+  var x = setInterval(() => {
+    var now = new Date().getTime();
+    var distance = finalDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    promoCountDown.innerHTML = `${formatDateItem({
+      number: days,
+      type: "dias",
+    })} ${formatDateItem({ number: hours, type: "horas" })} ${formatDateItem({
+      number: minutes,
+      type: "minutos",
+    })} ${formatDateItem({ number: seconds, type: "segundos" })}`;
+    // days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+      clearInterval(x);
+      promoCountDown.innerHTML = "EXPIRED";
+    }
+  }, 1000);
+}
+
 // /* HOME */
 // const mobile2r2c = $C(".mobile-2r-2c");
 // const newElement = document.createElement("div");

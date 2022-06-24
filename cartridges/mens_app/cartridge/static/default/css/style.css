@@ -1424,7 +1424,9 @@ ul {
   text-align: center; }
 
 .promo-container {
-  background-color: #D81E1F; }
+  background-color: #D81E1F;
+  margin-left: 30px;
+  margin-right: 30px; }
 
 .promo-carousel {
   margin: 0 auto;
@@ -1439,6 +1441,7 @@ ul {
     font-size: 40px;
     line-height: 55px;
     /* identical to box height */
+    font-family: "Avenir-LT-Std";
     text-align: left;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -1451,6 +1454,7 @@ ul {
     line-height: 27px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    font-family: "Avenir-LT-Std";
     color: #FFFFFF;
     text-align: left;
     margin: 0; }

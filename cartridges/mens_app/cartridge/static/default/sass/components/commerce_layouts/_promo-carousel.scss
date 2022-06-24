@@ -1,5 +1,7 @@
 .promo-container {
     background-color: #D81E1F;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .promo-carousel {
     margin: 0 auto;
@@ -20,6 +22,8 @@
         line-height: 55px;
         /* identical to box height */
 
+        font-family: "Avenir-LT-Std";
+
         text-align: left;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -35,6 +39,8 @@
         line-height: 27px;
         letter-spacing: 0.06em;
         text-transform: uppercase;
+
+        font-family: "Avenir-LT-Std";
 
         color: #FFFFFF;
         text-align: left;
