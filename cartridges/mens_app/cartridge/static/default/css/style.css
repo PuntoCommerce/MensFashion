@@ -460,9 +460,12 @@ header .container {
   padding-right: 15px; }
 
 header .navbar-header {
-  padding-left: 26px;
-  padding-right: 26px;
   height: 65px; }
+
+@media (min-width: 992px) {
+  .brand {
+    width: 15.125em;
+    margin-left: -8.0625em; } }
 
 @media (max-width: 991px) {
   .site-search {
@@ -787,11 +790,17 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item.last_category_item .hover-underline {
   background-color: #ff0000; }
 
-#menuDesk .nav-item.last_category_item a:hover {
+#menuDesk .dropdown-menu-content a:hover {
   color: #ff0000 !important; }
 
 #menuDesk .nav-item.last_category_item a {
   color: #ff0000; }
+
+#menuDesk .nav-item {
+  text-shadow: 0px 7px 17px black; }
+
+#menuDesk .nav-item:hover.dropdown {
+  text-shadow: none; }
 
 #menuDesk .nav-item.last_category_item .sub-category-item a {
   color: #000000; }
@@ -800,7 +809,7 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
-  font-size: 14px; }
+  font-size: 18px; }
 
 .nav.navbar-nav {
   display: flex;

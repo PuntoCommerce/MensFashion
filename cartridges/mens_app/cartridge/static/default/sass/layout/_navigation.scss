@@ -41,12 +41,20 @@
   background-color: #ff0000;
 }
 
-#menuDesk .nav-item.last_category_item a:hover {
+#menuDesk .dropdown-menu-content a:hover {
   color: #ff0000 !important;
 }
 
 #menuDesk .nav-item.last_category_item a {
   color: #ff0000;
+}
+
+#menuDesk .nav-item {
+  text-shadow: 0px 7px 17px rgb(0, 0, 0);
+}
+
+#menuDesk .nav-item:hover.dropdown {
+  text-shadow: none;
 }
 
 #menuDesk .nav-item.last_category_item .sub-category-item a {
@@ -57,7 +65,7 @@
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .nav.navbar-nav {

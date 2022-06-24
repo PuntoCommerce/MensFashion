@@ -2,23 +2,22 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-
 /*  */
 
 /* **************************** HEADER **************************** */
 
 .responsive {
-    display: none !important;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
-    .desk {
-        display: none !important;
-    }
+  .desk {
+    display: none !important;
+  }
 
-    .responsive {
-        display: block !important;
-    }
+  .responsive {
+    display: block !important;
+  }
 }
 
 /* @media (max-width: 991px) {
@@ -32,48 +31,54 @@
   } */
 
 header .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 header .navbar-header {
-    padding-left: 26px;
-    padding-right: 26px;
-    height: 65px;
+  // padding-left: 26px;
+  // padding-right: 26px;
+  height: 65px;
 }
 
+@media (min-width: 992px) {
+  .brand {
+    width: 15.125em;
+    margin-left: -8.0625em;
+  }
+}
 @media (max-width: 991px) {
-    .site-search {
-        width: 100% !important;
-    }
+  .site-search {
+    width: 100% !important;
+  }
 
-    .search {
-        margin: 0 0 0 0 !important;
-        padding-top: 9px;
-    }
+  .search {
+    margin: 0 0 0 0 !important;
+    padding-top: 9px;
+  }
 
-    #searchContainer form {
-        width: 100%;
-    }
+  #searchContainer form {
+    width: 100%;
+  }
 
-    .search-field-responsive,
-    .search-field {
-        width: 100% !important;
-    }
+  .search-field-responsive,
+  .search-field {
+    width: 100% !important;
+  }
 
-    .search-form-container {
-        flex-direction: column;
-    }
+  .search-form-container {
+    flex-direction: column;
+  }
 
-    .suggestions {
-        right: 0px !important;
-    }
+  .suggestions {
+    right: 0px !important;
+  }
 
-    .suggestions,
-    .suggestions-wrapper {
-        width: 100%;
-    }
+  .suggestions,
+  .suggestions-wrapper {
+    width: 100%;
+  }
 }
