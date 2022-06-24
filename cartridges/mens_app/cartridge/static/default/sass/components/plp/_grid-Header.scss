@@ -4,18 +4,47 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $light-grey;
-        padding: $spacing-medium 0;
+        padding: 0 $spacing-small-medium;
+        @include respond(phone) {
+            padding: $spacing-medium 0;
+        }
     
         .filters {
             display: flex;
             align-items: center;
-    
-            &__text {
-                margin: 0 $spacing-medium 0 0;
+            flex: 1;
+            padding-left: $spacing-30;
+
+            @include respond(phone) {
+                flex: auto;
+                padding: 0;
             }
     
-            svg {
+            &__text {
+                margin: 0;
+                width: 100%;
+                padding: $spacing-small 0;
+                background-color: $text-color-black;
+                color: $white-color;
+
+                @include respond(phone) {
+                    margin: 0 $spacing-medium 0 0;
+                    color: $text-color-black;
+                    padding: 0;
+                    background-color: $white-color;
+                    width: auto;
+                }
+            }
+    
+            &__icon {
                 cursor: pointer;
+                width: 22px;
+                height: 22px;
+                path {
+                    width: 22px;
+                    height: 22px;
+
+                }
             }
         }
     }
@@ -23,15 +52,49 @@
     &__column {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        @include respond(phone) {
+            justify-content: unset;
+            flex-direction: row;
+        }
+
+        &--1 {
+            width: 100%;
+            @include respond(phone) {
+                width: auto;
+            }
+        }
+
+        &--2 {
+            .sort {
+                @include respond(phone) {
+                    display: flex!important;
+                }
+            }
+        }
     }
 
     &__column-item {
         &--right {
-            margin-right: $spacing-large;
+            margin: 0;
+            @include respond(phone) {
+                margin-right: $spacing-large;
+            }
         }
 
         &:last-child {
             margin: 0;
         }
     }
+    .page-title-mobile { 
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 34px;
+    }
+}
+
+.search-nav {
+    margin: 0;
 }

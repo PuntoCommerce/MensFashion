@@ -4,7 +4,7 @@
 
 <!--- Search Results Banner --->
 <isif condition="${pdict.productSearch.isCategorySearch}">
-    <div class="hero slant-down search-banner"
+    <div class="hero slant-down search-banner d-none d-sm-block"
         <!--- If no image, default is specified in search.scss > .search-banner --->
         <isif condition="${pdict.productSearch.bannerImageUrl}">
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
@@ -50,14 +50,16 @@
                                     <p class='filters__text'>
                                         FILTROS
                                     </p>
-                                    <svg id="filter" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="filters__icon d-none d-sm-block" id="filter"  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12 15C12 15.2652 11.8946 15.5196 11.7071 15.7071C11.5196 15.8946 11.2652 16 11 16C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V12H7C6.73478 12 6.48043 11.8946 6.29289 11.7071C6.10536 11.5196 6 11.2652 6 11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H10V7C10 6.73478 10.1054 6.48043 10.2929 6.29289C10.4804 6.10536 10.7348 6 11 6C11.2652 6 11.5196 6.10536 11.7071 6.29289C11.8946 6.48043 12 6.73478 12 7V10H15C15.2652 10 15.5196 10.1054 15.7071 10.2929C15.8946 10.4804 16 10.7348 16 11C16 11.2652 15.8946 11.5196 15.7071 11.7071C15.5196 11.8946 15.2652 12 15 12H12V15Z" fill="black"/>
                                     </svg>
                                 </button>
-                                <div class='breadcrumb grid-header__column-item grid-header__column-item--right'>
+                                <h1 class="page-title-mobile d-block d-sm-none"><isprint value="${pdict.apiProductSearch.category ? pdict.apiProductSearch.category.displayName : pdict.apiProductSearch.searchPhrase}" encoding="off"/>
+                                </h1>  
+                                <div class='breadcrumb grid-header__column-item grid-header__column-item--right d-none d-sm-block'>
                                     <isinclude url="${URLUtils.url("Search-Breadcrums", "cgid", pdict.productSearch.category.id)}"/>
                                 </div>
-                                <div class="result-count text-center grid-header__column-item grid-header__column-item--right">
+                                <div class="result-count text-center grid-header__column-item grid-header__column-item--right d-none d-sm-block">
                                     <iselse>
                                         <div class="row grid-header justify-content-center">
                                             <div class="result-count col">
@@ -68,18 +70,18 @@
                             
                             <div class='grid-header__column grid-header__column--2'>
                                 <isif condition="${pdict.productSearch.productIds.length > 0}">
-                                    <div class="sort">
+                                    <div class="sort d-none d-sm-block">
                                     <p class='sort__text'>
                                         Ordenar por:
                                     </p>
                                         <isinclude template="search/sortOrderMenu" />
                                     </div>
 
-                                    <div class="text-right d-md-none">
+                                    <iscomment> <div class="text-right d-md-none">
                                         <button type="button" class="btn btn-primary filter-results col-12">
                                             ${Resource.msg('button.filter', 'search', null)}
                                         </button>
-                                    </div>
+                                    </div> </iscomment>
                                 </isif>
                             </div>
 
@@ -94,9 +96,9 @@
 
                         <div class="col-sm-12 col-md-9 product-grid--full-width">
                              <!--- Selected filters bar --->
-                             <div class="row filter-bar d-md-none">
+                             <iscomment> <div class="row filter-bar d-md-none ">
                                  <isinclude template="search/filterBar" />
-                             </div>
+                             </div> </iscomment>
 
                              <!--- Product Grid --->
                              <div class="row product-grid product-grid--full-width" itemtype="http://schema.org/SomeProducts" itemid="#product">
