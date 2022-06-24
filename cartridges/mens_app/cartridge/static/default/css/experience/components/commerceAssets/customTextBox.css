@@ -1,0 +1,12 @@
+.customTextBox-component-container p,
+.customTextBox-component-container h1,
+.customTextBox-component-container h2,
+.customTextBox-component-container h3,
+.customTextBox-component-container h4 {
+  font-family: "Avenir-Next";
+  font-weight: 800;
+}
+
+.customTextBox-component-container p {
+  font-size: 20px;
+}

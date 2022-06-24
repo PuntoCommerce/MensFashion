@@ -1,0 +1,15 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/customTextBox.css');
+</isscript>
+
+<div class="customTextBox-component-container">
+    <div class="row">
+        <div class="col-12 pl-5 pr-5 pt-5 pb-3 d-flex align-items-center justify-content-${pdict.layout == 'left' ? 'start' : pdict.layout == 'center' ? 'center' : 'end' }">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+              <isprint value="${pdict.text}" encoding="off"/>
+          </div>
+        </div>
+    </div>
+</div>
+

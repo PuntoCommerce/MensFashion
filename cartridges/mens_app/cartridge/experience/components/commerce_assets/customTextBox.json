@@ -1,0 +1,37 @@
+{
+  "name": "Custom Textbox",
+  "description": "This is the Custom Textbox Component",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "textContent",
+      "name": "Text Content",
+      "description": "The content to show in this component",
+      "attribute_definitions": [
+        {
+          "id": "text",
+          "name": "content",
+          "description": "This is the rich text content area",
+          "type": "markup",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "textLayout",
+      "name": "Text Layour",
+      "description": "The layout of this component",
+      "attribute_definitions": [
+        {
+          "id": "layout",
+          "name": "Layout",
+          "description": "This is the layout of the component",
+          "type": "enum",
+          "values": ["left", "center", "right"],
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
