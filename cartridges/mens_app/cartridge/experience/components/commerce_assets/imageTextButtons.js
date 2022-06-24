@@ -76,6 +76,7 @@ module.exports.render = function (context, modelIn) {
     componentSize: getComponentSize(content.componentSize),
     itemsLayout: getItemsLayout(content.itemsLayout),
   };
+  model.markupLayout = content.markupLayout || "center";
 
   model.buttons = [
     {

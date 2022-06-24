@@ -7,9 +7,11 @@
 <div class="ITBC-container" style="height: ${pdict.layoutSize.componentSize}">
     <img style="object-position: ${pdict.backgroundImage.focalPointX} ${pdict.backgroundImage.focalPointY}" src="${pdict.backgroundImage.src.desktop}" alt="HOlA " />
     <div class="ITBC-content"  style="${pdict.layoutSize.itemsLayout.content}">
+    <div class="markup-wrapper" style="align-items: ${pdict.markupLayout == 'left' ? 'start' : pdict.markupLayout == 'center' ? 'center' : 'end'};">
       <div class="ITBC-markup">
         <isprint value="${pdict.text}" encoding="off"/>
       </div>
+    </div>
       <div class="ITBC-buttons" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
         <isloop items="${pdict.buttons}" var="button" status="loopstatus">
           <isif condition="${button.active}">  

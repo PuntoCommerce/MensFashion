@@ -51,7 +51,7 @@
   height: 100%;
   z-index: 0;
   background-color: transparent;
-  padding: 20px;
+  padding: 30px;
 
   display: flex;
   justify-content: space-around;
@@ -76,6 +76,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ITBC-markup {
+  width: fit-content;
+}
+
+.markup-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
 @media (max-width: 991px) {
