@@ -4,7 +4,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique";
+$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique","AvenirLTStd-Heavy";
 
 /// Index font family Avenir Std
 /// @type length
@@ -17,6 +17,10 @@ $avenir-Next: 2;
 /// Index font family Avenir Black
 /// @type length
 $avenir-LT-Black: 3;
+
+/// Index font family Avenir Black
+/// @type length
+$avenir-LT-Black: 4;
 
 ///Font style
 /// @type string

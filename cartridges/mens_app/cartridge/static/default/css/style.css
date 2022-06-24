@@ -346,12 +346,16 @@ html {
   font-family: "Avenir-LT-Std-BlackOblique";
   src: url(../fonts/AvenirLTStd-BlackOblique_0.otf) format("opentype"); }
 
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url(../fonts/AvenirLTStd-Heavy.otf) format("opentype"); }
+
 /**
  * Basic typography style for copy text
  */
 body {
   color: #000000;
-  font: normal 125%/1.4 "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique"; }
+  font: normal 125%/1.4 "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique", "AvenirLTStd-Heavy"; }
 
 h1, h2, h3, h4, h5, html, body {
   font-family: "Avenir-LT-Std";
@@ -1447,7 +1451,11 @@ ul {
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
-    padding: 0; }
+    padding: 0 0 16px 0;
+    display: flex;
+    flex-direction: column-reverse; }
+  .promo-carousel__wrapper-countdown {
+    display: flex; }
   .promo-carousel__countdown {
     font-weight: 800;
     font-size: 20px;
@@ -1457,7 +1465,32 @@ ul {
     font-family: "Avenir-LT-Std";
     color: #FFFFFF;
     text-align: left;
-    margin: 0; }
+    margin: 0 0 31px 0;
+    flex: 1;
+    display: flex;
+    align-items: center; }
+    .promo-carousel__countdown__item {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 31px; }
+      .promo-carousel__countdown__item .item {
+        height: 70px;
+        width: 79px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .promo-carousel__countdown__item .item .number {
+          font-size: 32px;
+          line-height: 35px;
+          font-weight: bold;
+          font-family: "AvenirLTStd-Heavy"; }
+        .promo-carousel__countdown__item .item .type {
+          font-size: 9px;
+          line-height: 12.29px;
+          font-family: "AvenirLTStd-Heavy"; }
   .promo-carousel .carousel-control-next, .promo-carousel .carousel-control-prev {
     opacity: 1; }
   .promo-carousel .carousel-control-next:focus, .promo-carousel .carousel-control-prev:focus {
