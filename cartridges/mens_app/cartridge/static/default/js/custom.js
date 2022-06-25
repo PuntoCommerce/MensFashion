@@ -146,11 +146,12 @@ if (showMoreButton) {
 // Promotion Carousel
 
 const formatDateItem = (item) => {
-  if (item < 10) {
-    item = `0${item}`;
+  let currentNumber = item.number;
+  if (currentNumber < 10) {
+    currentNumber = `0${currentNumber}`;
   }
   return `<div class="item">
-            <span class="number">${item.number}</span>
+            <span class="number">${currentNumber}</span>
             <span class="type">${item.type}</span>
           </div>`;
 };
