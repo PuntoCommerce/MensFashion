@@ -29,7 +29,7 @@
   </isif>
 </div>
 
-<div id="carouselProductGrid" class="carousel slide " data-ride="carousel">
+<div id="carouselProductGrid" class="carousel slide mobile-product-carousel" data-ride="carousel">
   <div class="carousel-inner">
     <isprint value="${pdict.regions.item1.setClassName("carousel-item active").render()}" encoding="off" />
     <isprint value="${pdict.regions.item2.setClassName("carousel-item").render()}" encoding="off" />
