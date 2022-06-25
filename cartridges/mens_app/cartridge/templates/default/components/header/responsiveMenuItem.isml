@@ -1,25 +1,21 @@
-<ul class="subCategory-item">
-    <div class="d-flex justify-content-center row">
-        <div class="col-12 hidden" id="submenu-${category.id}">
-            <div>
-                <isloop items="${menuItem.subCategories}" var="category">
-                    <li class="category-item item" >
-                        <a href="${category.url}">${category.name}</a>
-                        <button item-target="${category.id}" role="button" class="toggle-subcategories">
-                            <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
-                        </button>
-                    </li>   
-                    <isif condition="${category.subCategories}">
-                        <ul class="subcategories hidden" id="submenu-${category.id}" > 
-                            <isloop items="${category.subCategories}" var="subCategory">
-                                <li class="sub-category-item item" imageurl="<isprint value="${subCategory.image}" encoding="htmldoublequote"/>">
-                                    <a href="${subCategory.url}">${subCategory.name}</a>
-                                </li>
-                            </isloop>
-                        </ul>
-                    </isif>
-                </isloop>
-            </div>
+
+ <div style="height: 100%;width: 100%;" class="hidden sub-items" id="submenu-${category.id}">
+    <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}')" role="button" class="toggle-category-button back">
+        <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+    </button>
+    <isloop items="${menuItem.subCategories}" var="category">
+        <div class="d-flex justify-content-between">
+            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>
+            <isif condition="${category.subCategories}">
+                <iscomment> <button item-target="${category.id}" role="button" class="toggle-subcategories"> </iscomment>
+                <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}')" role="button" class="toggle-category-button">
+                        <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+                </button>
+            </isif>
         </div>
-    </div>
-</ul>
+        <isif condition="${category.subCategories}">
+            <isset name="menuItem" value="${category}" scope="page" />
+            <isinclude template="components/header/responsiveMenuItem" />
+        </isif>
+    </isloop>
+</div>

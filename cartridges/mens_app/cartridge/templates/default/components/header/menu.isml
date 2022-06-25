@@ -29,66 +29,53 @@
     </div>
 </nav>
 
-<nav id="customMenuResponsive" class="navbar navbar-expand-md bg-inverse col-12 hidden">
+<nav id="customMenuResponsive" class="navbar hidden">
     <div class="col-12">
         <div class="close-button pull-right">
             <button role="button" onclick="closeCustomMenu()" aria-label="${Resource.msg('label.header.menu.close', 'common', null)}">
                 <img src="${URLUtils.staticURL('/images/close.svg')}"/>
             </button>
         </div>
-    </div>
-    <div id="image-container">
-        <div>
-            <img src="${pdict.mobileImege}" alt="${pdict.mobileTitle}"> 
-        </div>
-    </div>
-    <div id="menu-container" class="d-flex justify-content-center col-12">
-        <ul class="category-items">
-            <isif condition="${pdict.categories}">
-                <isloop items="${pdict.categories}" var="category" status="itemStatus">
-                    <isif condition="${category.subCategories}">
-                        <li class="nav-item dropdown" role="presentation">
-                            <div class="d-flex justify-content-start align-items-center">
-                                <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>"class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">${category.name}</a>
-                                <button item-target="${category.id}" role="button" class="toggle-subcategories">
-                                    <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
-                                </button>
-                            </div>
-                            <div class="underline"></div>
-                            <isset name="menuItem" value="${category}" scope="page" />
-                            <isinclude template="components/header/responsiveMenuItem" />
 
-                        </li>
-                    <iselse/>
-                        <li class="nav-item" role="presentation">
-                            <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link" role="link" tabindex="0">${category.name}</a>
-                        </li>
+        <div id="menu-container" class="d-flex flex-column justify-content-between col-12">
+            <div>
+                <isloop items="${pdict.categories}" var="category" status="itemStatus">
+                    <div style="height: 100%;width: 100%;" class="d-flex justify-content-between">
+                        <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>
+                        <isif condition="${category.subCategories}">
+                            <iscomment> <button item-target="${category.id}" role="button" class="toggle-subcategories"> </iscomment>
+                            <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}')" role="button" class="toggle-category-button">
+                                    <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+                            </button>
+                        </isif>
+                    </div>
+                    <isif condition="${category.subCategories}">
+                        <isset name="menuItem" value="${category}" scope="page" />
+                        <isinclude template="components/header/responsiveMenuItem" />
                     </isif>
                 </isloop>
-            </isif>
-        </ul>
-    </div>
-    <div id="actions-icons" class="d-flex justify-content-center col-12">
-        <ul class="items">
                 
-            <li>
-                <a href="${URLUtils.url("Stores-Find")}" class="d-flex justify-content-start align-items-center">
-                    <span>${Resource.msg('location.label.mobile.menu', 'menu', null)}</span>
-                    <img src="${URLUtils.staticURL('/images/store_locator.svg')}" alt="LOCALIZA TU TIENDA"/>
-                </a>
-            </li>
-
-            <li>
-                <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
-            </li>
-
-            <li>
-                <a href="" class="d-flex justify-content-start align-items-center">
-                    <span>${Resource.msg('needhelp.label.mobile.menu', 'menu', null)}</span>
-                    <img class="chat-boot" src="${URLUtils.staticURL('/images/chat.svg')}" alt="NECESITAS AYUDA"/>
-                </a>
-            </li>
-
-        </ul>
+            </div>
+            <div id="actions-icons" class="d-flex justify-content-start">
+                <ul class="items">
+                    <li>
+                        <a href="${URLUtils.url("StoreLocator-Start")}" class="d-flex justify-content-start align-items-center">
+                            <img src="${URLUtils.staticURL('/images/store_locator.svg')}" alt="LOCALIZA TU TIENDA"/>
+                            <span>${Resource.msg('location.label.mobile.menu', 'menu', null)}</span>
+                        </a>
+                    </li>
+                    <li>
+                        <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
+                    </li>
+                    <li>
+                        <a href="" class="d-flex justify-content-start align-items-center">
+                            <img class="chat-boot" src="${URLUtils.staticURL('/images/chat.svg')}" alt="NECESITAS AYUDA"/>
+                            <span>${Resource.msg('needhelp.label.mobile.menu', 'menu', null)}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
     </div>
 </nav>

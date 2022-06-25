@@ -1,15 +1,15 @@
 <isif condition="${pdict.name === null}">
     <li class="nav-item" role="menuitem">
         <a href="${URLUtils.https('Login-Show')}" class="nav-link">
-            <span class="user-message">${Resource.msg('link.header.login', 'menu', null)}</span>
             <img src="${URLUtils.staticURL('/images/user_icon.svg')}" alt="store locator"/>
+            <span class="user-message">${Resource.msg('link.header.login', 'menu', null)}</span>
         </a>
     </li>
 <iselse/>
     <li class="nav-item" role="menuitem">
         <a href="${URLUtils.https('Account-Show')}" >
-            <span class="user-message">${pdict.name}</span>
             <img src="${URLUtils.staticURL('/images/user_icon.svg')}" alt="store locator"/>
+            <span class="user-message">${pdict.name}</span>
         </a>
         <iscomment> <ul class="dropdown-menu" role="menu" aria-hidden="true">
             <li class="dropdown-item" role="menuitem">
