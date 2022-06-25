@@ -4,17 +4,11 @@
     position: absolute;
     z-index: 10;
     width: 100%;
-
-    pointer-events: none;
   }
 
   header .navbar-nav,
   header .main-menu {
     background-color: transparent !important;
-  }
-
-  header li {
-    pointer-events: auto;
   }
 
   header:hover {
