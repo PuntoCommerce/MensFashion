@@ -1,0 +1,18 @@
+@keyframes moveInLeftOut {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translateX(15rem);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}

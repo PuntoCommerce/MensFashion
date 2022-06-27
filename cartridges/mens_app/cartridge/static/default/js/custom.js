@@ -75,13 +75,22 @@ toggleSubCategories.forEach((toggle) => {
 });
 
 const customMenuResponsive = $C("#customMenuResponsive");
+const page = $C(".page");
 
 const openCustomMenu = () => {
+  customMenuResponsive.classList.remove("closeMenu");
   customMenuResponsive.classList.remove("hidden");
+  customMenuResponsive.classList.add("viewMenu");
+  page.classList.add('filter-blur');
 };
 
 const closeCustomMenu = () => {
-  customMenuResponsive.classList.add("hidden");
+  customMenuResponsive.classList.add("closeMenu");
+  setTimeout(() => {
+    customMenuResponsive.classList.add("hidden");
+  }, 180);
+  customMenuResponsive.classList.remove("viewMenu");
+  page.classList.remove('filter-blur');
 };
 
 const toggleSubMenu = (category) => {

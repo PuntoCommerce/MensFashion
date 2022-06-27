@@ -296,7 +296,7 @@ ul {
   }
 
   #customMenuResponsive {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 2;
@@ -391,4 +391,23 @@ ul {
       margin-right: 10px;
     }
   }
+}
+
+
+
+/// Animations
+
+/***** View menu responsive with animation  *****/
+.viewMenu {
+  transform: translateX(0);
+  animation-name: moveInRight;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+}
+
+/***** View menu responsive with animation  *****/
+.closeMenu {
+  animation-name: moveInLeftOut;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
 }
