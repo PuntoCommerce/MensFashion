@@ -1485,6 +1485,9 @@ ul {
   color: #fff;
   text-align: center; }
 
+.carousel .carousel-control-next:focus, .carousel .carousel-control-prev:focus {
+  outline: none; }
+
 .promo-container {
   background-color: #D81E1F;
   margin: 0; }
