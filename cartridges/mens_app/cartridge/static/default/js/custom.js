@@ -93,8 +93,16 @@ const closeCustomMenu = () => {
   page.classList.remove('filter-blur');
 };
 
-const toggleSubMenu = (category) => {
-  $C(`#submenu-${category}`).classList.toggle("hidden");
+const toggleSubMenu = (category,back=false) => {
+  $C(`#submenu-${category}`).classList.toggle("viewMenu");
+  $C(`#submenu-${category}`).classList.toggle("viewMenuOut");
+  if (back) {
+    setTimeout(() => {
+      $C(`#submenu-${category}`).classList.toggle("hidden");
+    }, 180);
+  } else {
+    $C(`#submenu-${category}`).classList.toggle("hidden");
+  }
 };
 
 /* ########################################## ⬆️ Btn Back to top & Sticky Nav Bar⬆️ ####################################################### */

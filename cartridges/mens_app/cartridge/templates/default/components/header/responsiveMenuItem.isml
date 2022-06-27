@@ -1,10 +1,10 @@
 
- <div style="height: 100%;width: 100%;" class="hidden sub-items" id="submenu-${category.id}">
-    <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}')" role="button" class="toggle-category-button back">
+ <div style="height: 100%;width: 100%;" class="hidden sub-items viewMenuOut" id="submenu-${category.id}">
+    <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}',${true})" role="button" class="toggle-category-button back">
         <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
         <span>${backName}</span>
     </button>
-    <h3>${parent}</h3>
+    <h3 class="category-title">${parent}</h3>
     <isloop items="${menuItem.subCategories}" var="category">
         <div class="d-flex justify-content-between">
             <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>

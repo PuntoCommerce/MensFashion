@@ -323,6 +323,12 @@ template {
   100% {
     transform: translateX(15rem); } }
 
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(25rem); } }
+
 @keyframes moveInRight {
   0% {
     transform: translateX(10rem); }
@@ -1061,12 +1067,25 @@ ul {
     #customMenuResponsive #actions-icons {
       margin-top: 30px; }
     #customMenuResponsive #actions-icons img {
-      margin-right: 10px; } }
+      margin-right: 10px; }
+    #customMenuResponsive .category-title {
+      font-family: "AvenirLTStd-Heavy";
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: uppercase;
+      text-align: left; } }
 
 /***** View menu responsive with animation  *****/
 .viewMenu {
   transform: translateX(0);
   animation-name: moveInRight;
+  animation-duration: .2s;
+  animation-timing-function: ease-out; }
+
+/***** View menu responsive with animation  *****/
+.viewMenuOut {
+  transform: translateX(0);
+  animation-name: moveInLeft;
   animation-duration: .2s;
   animation-timing-function: ease-out; }
 

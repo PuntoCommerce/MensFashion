@@ -390,6 +390,14 @@ ul {
     #actions-icons img {
       margin-right: 10px;
     }
+    
+    .category-title {
+      font-family: nth($text-font-stack,$avenir-LT-Black);
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: uppercase;
+      text-align: left;
+    }
   }
 }
 
@@ -401,6 +409,14 @@ ul {
 .viewMenu {
   transform: translateX(0);
   animation-name: moveInRight;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+}
+
+/***** View menu responsive with animation  *****/
+.viewMenuOut {
+  transform: translateX(0);
+  animation-name: moveInLeft;
   animation-duration: .2s;
   animation-timing-function: ease-out;
 }
