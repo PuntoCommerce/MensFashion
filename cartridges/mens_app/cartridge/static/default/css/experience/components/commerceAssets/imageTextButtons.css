@@ -73,7 +73,7 @@
   color: #000000 !important;
   font-weight: bold;
   text-decoration: none;
-  min-width: 250px;
+  /* min-width: 250px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +105,7 @@
     grid-gap: 10px;
   }
   .ITBC-content .btn-ITBC {
-    min-width: 150px;
+    width: 150px;
     padding: 10px 25px;
   }
 
@@ -121,7 +121,9 @@
   .ITBC-content h1 {
     font-size: 22px;
   }
-  .ITBC-content p {
+  .ITBC-content p,
+  .ITBC-content a {
     font-size: 12px;
   }
+  .
 }

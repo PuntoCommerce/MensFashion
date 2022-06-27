@@ -1655,11 +1655,27 @@ ul {
 .mobile-2r-2c .region:not(:first-child) {
   border-left: 1px solid #000000; }
 
-/* @media (max-width: 991px) {
-    .mobile-2r-1c .row {
-      flex-direction: column !important;
-    }
-  } */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none; }
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent !important; }
+
+.carousel-control-prev::after {
+  content: url(../images/carrucel-arrow.svg); }
+
+.carousel-control-next::after {
+  content: url(../images/carrucel-arrow.svg);
+  transform: rotate(180deg); }
+
+.carousel-control-prev {
+  left: 3% !important; }
+
+.carousel-control-next {
+  right: 3% !important; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
