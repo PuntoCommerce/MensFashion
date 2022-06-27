@@ -1,0 +1,26 @@
+.items-colum-direction .customTextBox-component-container .item {
+  padding: 2rem 5px 1rem 2px !important;
+  margin: 10px;
+}
+
+.items-colum-direction .scroll {
+  overflow-y: auto;
+}
+
+.items-colum-direction .scroll .item {
+  min-width: 200px;
+}
+
+.items-colum-direction .scroll::-webkit-scrollbar {
+  height: 3px !important;
+}
+
+.items-colum-direction .scroll::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50%;
+}
+
+.items-colum-direction .scroll::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 10px !important;
+}

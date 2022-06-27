@@ -1,0 +1,9 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_layouts/itemsColumDirection.css');
+</isscript>
+
+<div class="items-colum-direction" >
+ <isprint value="${pdict.regions.items.render()}" encoding="off"/>
+</div>

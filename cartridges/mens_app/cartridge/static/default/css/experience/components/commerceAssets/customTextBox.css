@@ -1,10 +1,26 @@
+.customTextBox-component-container a,
 .customTextBox-component-container p,
 .customTextBox-component-container h1,
 .customTextBox-component-container h2,
 .customTextBox-component-container h3,
 .customTextBox-component-container h4 {
   font-family: "Avenir-Next";
+  color: #000;
+}
+.customTextBox-component-container h1,
+.customTextBox-component-container h2,
+.customTextBox-component-container h3,
+.customTextBox-component-container h4 {
   font-weight: 800;
+}
+
+.customTextBox-component-container s {
+  color: red !important;
+  text-decoration: none;
+}
+
+.customTextBox-component-container a {
+  color: #000 !important;
 }
 
 .customTextBox-component-container p {
