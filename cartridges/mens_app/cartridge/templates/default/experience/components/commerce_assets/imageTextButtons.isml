@@ -4,7 +4,8 @@
     assets.addCss('/css/experience/components/commerceAssets/imageTextButtons.css');
 </isscript>
 
-<div class="ITBC-container" style="height: ${pdict.layoutSize.componentSize}">
+<iscomment> <div class="ITBC-container" style="height: ${pdict.layoutSize.componentSize}"> </iscomment>
+<div class="ITBC-container">
     <img style="object-position: ${pdict.backgroundImage.focalPointX} ${pdict.backgroundImage.focalPointY}" src="${pdict.backgroundImage.src.desktop}" alt="HOlA " />
     <div class="ITBC-content"  style="${pdict.layoutSize.itemsLayout.content}">
     <div class="markup-wrapper" style="align-items: ${pdict.markupLayout == 'left' ? 'start' : pdict.markupLayout == 'center' ? 'center' : 'end'};">

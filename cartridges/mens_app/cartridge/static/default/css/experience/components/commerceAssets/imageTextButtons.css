@@ -1,12 +1,13 @@
 .ITBC-container img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
-/* .ITBC-container {
-  height: --componentHeight);
-} */
+.ITBC-container {
+  position: relative;
+}
 
 .ITBC-content p,
 .ITBC-content h1,
@@ -44,9 +45,9 @@
 }
 
 .ITBC-content {
-  position: relative;
-  left: 0%;
-  top: -100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 0;

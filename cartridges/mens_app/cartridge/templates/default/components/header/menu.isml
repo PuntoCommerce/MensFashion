@@ -50,6 +50,8 @@
                         </isif>
                     </div>
                     <isif condition="${category.subCategories}">
+                    <isset name="backName" value="${'Todo'}" scope="page" />
+                        <isset name="parent" value="${category.name}" scope="page" />
                         <isset name="menuItem" value="${category}" scope="page" />
                         <isinclude template="components/header/responsiveMenuItem" />
                     </isif>

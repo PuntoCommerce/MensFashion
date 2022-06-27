@@ -1030,9 +1030,15 @@ ul {
     #customMenuResponsive .toggle-category-button {
       background-color: transparent;
       border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #customMenuResponsive .toggle-category-button img {
       transform: rotate(-90deg); }
-    #customMenuResponsive .toggle-category-button.back {
+    #customMenuResponsive .toggle-category-button.back img {
       transform: rotate(90deg);
+      margin-right: 10px; }
+    #customMenuResponsive .toggle-category-button.back {
       margin-bottom: 20px; }
     #customMenuResponsive .nav-link.parent {
       font-weight: 800; }

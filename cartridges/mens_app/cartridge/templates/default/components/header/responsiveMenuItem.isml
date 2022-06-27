@@ -2,7 +2,9 @@
  <div style="height: 100%;width: 100%;" class="hidden sub-items" id="submenu-${category.id}">
     <button item-target="${category.id}" onclick="toggleSubMenu('${category.id}')" role="button" class="toggle-category-button back">
         <img src="${URLUtils.staticURL('/images/arrow.svg')}"/>
+        <span>${backName}</span>
     </button>
+    <h3>${parent}</h3>
     <isloop items="${menuItem.subCategories}" var="category">
         <div class="d-flex justify-content-between">
             <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>
@@ -14,6 +16,8 @@
             </isif>
         </div>
         <isif condition="${category.subCategories}">
+            <isset name="backName" value="${parent}" scope="page" />
+            <isset name="parent" value="${category.name}" scope="page" />
             <isset name="menuItem" value="${category}" scope="page" />
             <isinclude template="components/header/responsiveMenuItem" />
         </isif>

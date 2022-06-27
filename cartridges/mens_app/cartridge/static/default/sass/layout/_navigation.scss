@@ -366,10 +366,19 @@ ul {
     .toggle-category-button {
       background-color: transparent;
       border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .toggle-category-button img {
       transform: rotate(-90deg);
     }
-    .toggle-category-button.back {
+    .toggle-category-button.back img {
       transform: rotate(90deg);
+      margin-right: 10px;
+    }
+
+    .toggle-category-button.back {
       margin-bottom: 20px;
     }
     .nav-link.parent {
