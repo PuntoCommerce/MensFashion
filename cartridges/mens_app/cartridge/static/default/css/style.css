@@ -1485,10 +1485,6 @@ ul {
 .promo-container {
   background-color: #D81E1F;
   margin: 0; }
-  @media only screen and (min-width: 37.5em) {
-    .promo-container {
-      margin-left: 30px;
-      margin-right: 30px; } }
 
 .promo-carousel {
   margin: 0 auto;
@@ -1589,6 +1585,20 @@ ul {
         color: #ffffff !important; }
   .promo-carousel .value {
     font-size: 20px; }
+  .promo-carousel .carousel-control-prev,
+  .promo-carousel .carousel-control-next {
+    height: 100% !important;
+    top: 0 !important;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center; }
+    .promo-carousel .carousel-control-prev svg,
+    .promo-carousel .carousel-control-next svg {
+      margin-bottom: 3rem; }
+  .promo-carousel .carousel-control-next {
+    margin-right: -15px; }
+  .promo-carousel .carousel-control-prev {
+    margin-left: -15px; }
 
 .responsive {
   display: none !important; }

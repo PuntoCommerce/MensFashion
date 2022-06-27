@@ -1,10 +1,6 @@
 .promo-container {
     background-color: #D81E1F;
     margin: 0;
-    @include respond(phone) {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
 }
 .promo-carousel {
     margin: 0 auto;
@@ -139,5 +135,24 @@
     }
     .value {
         font-size: 20px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        height: 100%!important;
+        top: 0!important;
+        background-color: transparent!important;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-bottom: 3rem;
+        }
+    }
+    .carousel-control-next {
+        margin-right: -15px;
+    }
+    .carousel-control-prev {
+        margin-left: -15px;
     }
 }
