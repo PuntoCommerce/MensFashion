@@ -317,6 +317,24 @@ template {
 [hidden] {
   display: none; }
 
+@keyframes moveInLeftOut {
+  0% {
+    transform: translate(0); }
+  100% {
+    transform: translateX(15rem); } }
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translate(25rem); } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem); }
+  100% {
+    transform: translate(0); } }
+
 /**
  * Set up a decent box model on the root element
  */
@@ -435,6 +453,10 @@ h5, html, body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+/* Filter blur in all the element */
+.filter-blur {
+  filter: blur(3px); }
 
 /*  */
 /* **************************** HEADER **************************** */
@@ -984,7 +1006,7 @@ ul {
   .brand {
     padding-top: 18px; }
   #customMenuResponsive {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 2;
@@ -1045,7 +1067,33 @@ ul {
     #customMenuResponsive #actions-icons {
       margin-top: 30px; }
     #customMenuResponsive #actions-icons img {
-      margin-right: 10px; } }
+      margin-right: 10px; }
+    #customMenuResponsive .category-title {
+      font-family: "AvenirLTStd-Heavy";
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: uppercase;
+      text-align: left; } }
+
+/***** View menu responsive with animation  *****/
+.viewMenu {
+  transform: translateX(0);
+  animation-name: moveInRight;
+  animation-duration: .2s;
+  animation-timing-function: ease-out; }
+
+/***** View menu responsive with animation  *****/
+.viewMenuOut {
+  transform: translateX(0);
+  animation-name: moveInLeft;
+  animation-duration: .2s;
+  animation-timing-function: ease-out; }
+
+/***** View menu responsive with animation  *****/
+.closeMenu {
+  animation-name: moveInLeftOut;
+  animation-duration: .2s;
+  animation-timing-function: ease-out; }
 
 .breadcrumb {
   border-bottom: 0 !important;
