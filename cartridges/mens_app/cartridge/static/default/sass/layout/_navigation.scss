@@ -1,8 +1,10 @@
 .navbar-header .country-selector,
+.navbar-header .favorites,
 .navbar-header .minicart,
 .navbar-header .navbar-toggler,
 .navbar-header .user {
   line-height: 1.5;
+  margin: 1.125em 0 0 0.5em;
   height: auto;
 }
 
@@ -55,6 +57,14 @@
 
 #menuDesk .nav-item:hover.dropdown {
   text-shadow: none;
+}
+
+#menuDesk .nav:hover .nav-item {
+  text-shadow: none;
+}
+
+.sub-category-item.item {
+  margin-bottom: 3px;
 }
 
 #menuDesk .nav-item.last_category_item .sub-category-item a {
@@ -261,6 +271,11 @@ ul {
 
 .nav-link::after {
   display: none;
+}
+
+.nav-link.dropdown-toggle,
+.nav-link {
+  font-family: nth($text-font-stack,$avenir-LT-Black)!important;
 }
 
 #openCustomMenu {

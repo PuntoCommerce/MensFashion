@@ -89,7 +89,7 @@
 
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
                     <!--- Refinement bar --->
-                    <div class="row">
+                    <div class="row row-no-margin">
                         <div class="refinement-bar col-md-4" id="refinement-bar">
                             <isinclude url="${pdict.refineurl}"/>
                         </div>
@@ -101,7 +101,7 @@
                              </div> </iscomment>
 
                              <!--- Product Grid --->
-                             <div class="row product-grid product-grid--full-width" itemtype="http://schema.org/SomeProducts" itemid="#product">
+                             <div class="row row-no-margin product-grid product-grid--full-width" itemtype="http://schema.org/SomeProducts" itemid="#product">
                                  <isinclude template="search/productGrid" />
                              </div>
                         </div>

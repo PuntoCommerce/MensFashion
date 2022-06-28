@@ -203,3 +203,7 @@
     color: #fff;
     text-align: center
 }
+
+.carousel .carousel-control-next:focus, .carousel .carousel-control-prev:focus {
+    outline: none;
+  }

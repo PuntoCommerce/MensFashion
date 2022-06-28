@@ -458,6 +458,9 @@ h5, html, body {
 .filter-blur {
   filter: blur(3px); }
 
+.row-no-margin {
+  margin: 0 !important; }
+
 /*  */
 /* **************************** HEADER **************************** */
 .responsive {
@@ -781,10 +784,12 @@ footer .socialMedia-paymentMethods {
     align-items: center; } }
 
 .navbar-header .country-selector,
+.navbar-header .favorites,
 .navbar-header .minicart,
 .navbar-header .navbar-toggler,
 .navbar-header .user {
   line-height: 1.5;
+  margin: 1.125em 0 0 0.5em;
   height: auto; }
 
 .store-locator {
@@ -827,6 +832,12 @@ footer .socialMedia-paymentMethods {
 
 #menuDesk .nav-item:hover.dropdown {
   text-shadow: none; }
+
+#menuDesk .nav:hover .nav-item {
+  text-shadow: none; }
+
+.sub-category-item.item {
+  margin-bottom: 3px; }
 
 #menuDesk .nav-item.last_category_item .sub-category-item a {
   color: #000000; }
@@ -983,6 +994,10 @@ ul {
 
 .nav-link::after {
   display: none; }
+
+.nav-link.dropdown-toggle,
+.nav-link {
+  font-family: "AvenirLTStd-Heavy" !important; }
 
 #openCustomMenu {
   background-color: transparent;
@@ -1482,35 +1497,57 @@ ul {
   color: #fff;
   text-align: center; }
 
+.carousel .carousel-control-next:focus, .carousel .carousel-control-prev:focus {
+  outline: none; }
+
 .promo-container {
   background-color: #D81E1F;
-  margin-left: 30px;
-  margin-right: 30px; }
+  margin: 0; }
 
 .promo-carousel {
   margin: 0 auto;
-  padding: 0 24px; }
+  padding: 0 24px;
+  width: 95%; }
+  @media only screen and (min-width: 37.5em) {
+    .promo-carousel {
+      width: 100%; } }
   .promo-carousel__headings {
     width: 100%;
-    padding: 30px 24px 0 24px; }
+    padding: 0; }
+    @media only screen and (min-width: 37.5em) {
+      .promo-carousel__headings {
+        padding: 30px 24px 0 24px; } }
   .promo-carousel .carousel-inner.row {
     width: auto; }
   .promo-carousel__title {
     font-weight: 800;
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 30px;
+    line-height: 41px;
     /* identical to box height */
     font-family: "Avenir-LT-Std";
-    text-align: left;
+    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
-    padding: 0 0 16px 0;
+    padding: 43px 0 16px 0;
     display: flex;
     flex-direction: column-reverse; }
+    @media only screen and (min-width: 37.5em) {
+      .promo-carousel__title {
+        padding: 0 0 16px 0;
+        font-size: 40px;
+        line-height: 55px;
+        text-align: left; } }
   .promo-carousel__wrapper-countdown {
-    display: flex; }
+    display: flex;
+    flex-direction: column;
+    padding: 0; }
+    @media only screen and (min-width: 37.5em) {
+      .promo-carousel__wrapper-countdown {
+        flex-direction: row;
+        padding-right: 15px;
+        padding-left: 15px; } }
   .promo-carousel__countdown {
     font-weight: 800;
     font-size: 20px;
@@ -1519,11 +1556,15 @@ ul {
     text-transform: uppercase;
     font-family: "Avenir-LT-Std";
     color: #FFFFFF;
-    text-align: left;
+    text-align: center;
     margin: 0 0 31px 0;
     flex: 1;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (min-width: 37.5em) {
+      .promo-carousel__countdown {
+        text-align: left; } }
     .promo-carousel__countdown__item {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1562,6 +1603,20 @@ ul {
         color: #ffffff !important; }
   .promo-carousel .value {
     font-size: 20px; }
+  .promo-carousel .carousel-control-prev,
+  .promo-carousel .carousel-control-next {
+    height: 100% !important;
+    top: 0 !important;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center; }
+    .promo-carousel .carousel-control-prev svg,
+    .promo-carousel .carousel-control-next svg {
+      margin-bottom: 3rem; }
+  .promo-carousel .carousel-control-next {
+    margin-right: -15px; }
+  .promo-carousel .carousel-control-prev {
+    margin-left: -15px; }
 
 .responsive {
   display: none !important; }
@@ -1674,6 +1729,17 @@ ul {
     visibility: hidden; }
   .summary:hover .summary__footer {
     visibility: visible; } }
+
+.wishlist {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  height: auto; }
+  .wishlist__Unselected, .wishlist__Selected {
+    display: none; }
+    .wishlist__Unselected--show, .wishlist__Selected--show {
+      display: block; }
 
 /* **************************** HOME **************************** */
 #maincontent .container {
