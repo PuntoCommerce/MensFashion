@@ -987,6 +987,10 @@ ul {
 .nav-link::after {
   display: none; }
 
+.nav-link.dropdown-toggle,
+.nav-link {
+  font-family: "AvenirLTStd-Heavy" !important; }
+
 #openCustomMenu {
   background-color: transparent;
   border: none;

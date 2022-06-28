@@ -263,6 +263,11 @@ ul {
   display: none;
 }
 
+.nav-link.dropdown-toggle,
+.nav-link {
+  font-family: nth($text-font-stack,$avenir-LT-Black)!important;
+}
+
 #openCustomMenu {
   background-color: transparent;
   border: none;
