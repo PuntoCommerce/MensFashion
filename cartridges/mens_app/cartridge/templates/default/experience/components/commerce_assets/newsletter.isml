@@ -1,0 +1,20 @@
+<isscript>
+    let assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss("/css/experience/components/commerceAssets/newsletter.css");
+</isscript>
+
+<div class="newsletter row">
+  <p class="text-top">${pdict.textTop}</p>
+  <div class="container col-12" style="background-image: url('${pdict.image.src.desktop}'); background-position: ${pdict.image.focalPointX} ${pdict.image.focalPointY} ">
+    <div class="markup d-none d-lg-flex">
+      <isprint value="${pdict.contentText}" encoding="off" />
+    </div>
+    <div class="form">
+      <p class="text-top">${pdict.textTop}</p>
+      <div class="row">
+        <input type="text" class="col-7" name="hpEmailSignUp" placeholder="EMAIL: " aria-label="EMAIL: ">
+        <button type="submit" class="col-5" data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">${Resource.msg('button.form.emailsignup', 'homePage', null)} </button>
+      </div>
+    </div>
+  </div>
+</div>

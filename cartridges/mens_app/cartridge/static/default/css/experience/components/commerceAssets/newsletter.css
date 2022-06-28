@@ -1,0 +1,92 @@
+.newsletter {
+  padding: 20px;
+}
+
+.newsletter .container {
+  padding: 20px;
+  height: 500px;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.newsletter .container .markup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter .container .form p,
+.newsletter .container .markup a,
+.newsletter .container .markup p,
+.newsletter .container .markup h1,
+.newsletter .container .markup h2,
+.newsletter .container .markup h3,
+.newsletter .container .markup h4 {
+  font-family: "AvenirLTStd-Heavy";
+  color: #fff !important;
+}
+
+.newsletter p {
+  font-family: "AvenirLTStd-Heavy";
+  color: #000;
+}
+
+.newsletter p,
+.newsletter .container .markup p,
+.newsletter .container .markup a {
+  font-size: 20px;
+}
+
+.newsletter .container .markup h4 {
+  font-size: 24px;
+}
+.newsletter .container .markup h3 {
+  font-size: 30px;
+}
+.newsletter .container .markup h2 {
+  font-size: 36px;
+}
+.newsletter .container .markup h1 {
+  font-size: 40px;
+}
+
+.newsletter .container .form input {
+  width: 100%;
+  height: 79px;
+  font-size: 20px;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+
+.newsletter .container .form button,
+.newsletter .container .form input,
+.newsletter .container .form input::placeholder {
+  color: #000;
+  font-family: "AvenirLTStd-Heavy";
+}
+
+.newsletter .container .form button {
+  background: #ee5938;
+  border: 2px solid #000000;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.newsletter .container .form .text-top {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .newsletter .text-top {
+    display: none;
+  }
+  .newsletter .container .form .text-top {
+    display: block;
+  }
+}
