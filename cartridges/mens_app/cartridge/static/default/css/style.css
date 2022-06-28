@@ -1730,6 +1730,17 @@ ul {
   .summary:hover .summary__footer {
     visibility: visible; } }
 
+.wishlist {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  height: auto; }
+  .wishlist__Unselected, .wishlist__Selected {
+    display: none; }
+    .wishlist__Unselected--show, .wishlist__Selected--show {
+      display: block; }
+
 /* **************************** HOME **************************** */
 #maincontent .container {
   max-width: 100vw;

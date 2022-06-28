@@ -71,3 +71,22 @@
     }
   }
 }
+
+
+/// productTileImage
+.wishlist {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  height: auto;
+
+  &__Unselected,
+  &__Selected {
+      display: none;
+
+      &--show {
+          display: block;
+      }
+  }
+}
