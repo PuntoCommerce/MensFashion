@@ -1,0 +1,31 @@
+.container-custom-size {
+  margin: 0 auto;
+  width: 100%;
+}
+.container-custom-width-95 {
+  width: 95%;
+}
+.container-custom-width-90 {
+  width: 90%;
+}
+.container-custom-width-85 {
+  width: 85%;
+}
+.container-custom-width-80 {
+  width: 80%;
+}
+.container-custom-width-75 {
+  width: 75%;
+}
+.container-custom-width-70 {
+  width: 70%;
+}
+.container-custom-width-65 {
+  width: 65%;
+}
+.container-custom-width-60 {
+  width: 60%;
+}
+.container-custom-size .region {
+  margin-bottom: 0;
+}

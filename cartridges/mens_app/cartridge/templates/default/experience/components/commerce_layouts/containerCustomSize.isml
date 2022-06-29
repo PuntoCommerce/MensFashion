@@ -1,0 +1,10 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerce_layouts/containerCustomSize.css');
+</isscript>
+
+<div class="container-custom-size container-custom-width-${pdict.width}">
+    <div class="row">
+        <isprint value="${pdict.regions.customSizeContainer.setClassName(" region col-12").render()}" encoding="off" />
+    </div>
+</div>
