@@ -73,10 +73,13 @@
   color: #000000 !important;
   font-weight: bold;
   text-decoration: none;
-  /* min-width: 250px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* min-width: 250px; */
+  @media (max-width: 991px) {
+    min-width: 250px;
+  }
 }
 
 .ITBC-markup {
