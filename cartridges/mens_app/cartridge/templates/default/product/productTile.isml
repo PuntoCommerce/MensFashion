@@ -15,7 +15,7 @@
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />
-                <iselse>
+                <iselse/>
                     <isinclude template="product/components/pricing/main" />
                 </isif>
             </div>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="summary__footer">
-            <a class="btn btn--gray btn__small" href="${pdict.urls.product}" >COMPRAR</a>
+            <a class="btn btn--gray btn__small" href="${pdict.urls.product}">${Resource.msg('productTile.button.buy', 'pdComponents', null)}</a>
         </div>
     </div>
     <!-- END_dwmarker -->

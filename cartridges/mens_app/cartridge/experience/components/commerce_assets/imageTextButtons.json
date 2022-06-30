@@ -16,6 +16,14 @@
           "required": true
         },
         {
+            "id": "imageBrightness",
+            "name": "Image Brightness",
+            "description": "Select a value to change the image brightness",
+            "type": "enum",
+            "values": ["100%", "90%", "80%", "70%", "60%", "50%"],
+            "required": false
+        },
+        {
           "id": "text",
           "name": "Text",
           "description": "Text for the component",

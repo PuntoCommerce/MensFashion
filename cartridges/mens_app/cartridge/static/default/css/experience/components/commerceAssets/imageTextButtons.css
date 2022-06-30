@@ -67,17 +67,20 @@
 }
 
 .ITBC-content .btn-ITBC {
-  font-family: "Avenir-Next";
   padding: 15px 40px;
   background-color: #ffffff;
   color: #000000 !important;
-  font-weight: bold;
+  font-family: "Avenir-Bold";
   text-decoration: none;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-width: 250px; */
-  @media (max-width: 991px) {
+  font-size: 20px;
+  letter-spacing: 0.06rem;
+}
+@media (max-width: 991px) {
+  .ITBC-content .btn-ITBC {
     min-width: 250px;
   }
 }
@@ -98,7 +101,6 @@
   .ITBC-container {
     height: 534px !important;
   }
-
   .ITBC-content {
     flex-direction: column !important;
     justify-content: center !important;
@@ -128,5 +130,11 @@
   .ITBC-content a {
     font-size: 12px;
   }
-  .
+}
+
+@media (min-width: 1200px) {
+  .ITBC-content .btn-ITBC {
+    width: 100%;
+    min-width: 329px;
+  }
 }
