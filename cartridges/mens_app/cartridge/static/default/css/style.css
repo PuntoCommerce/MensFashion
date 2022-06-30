@@ -802,7 +802,7 @@ footer .space {
 
 .suscribe-label {
   margin-bottom: 10px;
-  font-weight: bold;
+  font-family: "Avenir-Bold";
 }
 
 footer .socialMedia-paymentMethods {
@@ -1204,7 +1204,7 @@ ul {
 }
 
 .dropdown-menu .category-item {
-  font-weight: bold;
+  font-family: "Avenir-Bold";
 }
 
 .dropdown-menu .subcategories {
@@ -1950,8 +1950,7 @@ ul {
 .promo-carousel__countdown__item .item .number {
   font-size: 32px;
   line-height: 35px;
-  font-weight: bold;
-  font-family: "AvenirLTStd-Heavy";
+  font-family: "Avenir-Bold";
 }
 .promo-carousel__countdown__item .item .type {
   font-size: 9px;
@@ -2243,4 +2242,11 @@ ul {
 
 .show-more {
   visibility: hidden;
+}
+
+.cust-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }

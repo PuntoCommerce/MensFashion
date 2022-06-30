@@ -71,6 +71,7 @@ module.exports.render = function (context, modelIn) {
   model.backgroundImage = ImageTransformation.getScaledImage(
     content.backgroundImage
   );
+  model.imageBrightness = content.imageBrightness ? content.imageBrightness : "100%";
   model.text = content.text;
   model.layoutSize = {
     componentSize: getComponentSize(content.componentSize),
