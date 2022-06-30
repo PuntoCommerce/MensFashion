@@ -15,14 +15,17 @@
   color: $text-color-black !important;
   background-color: $white-color;
 
+  &-primary,
   &--gray {
-    background-color: $light-grey;
+    background-color: $light-grey !important;
     color: $text-color-black !important;
     &:hover {
       background-color: $text-color-black;
       color: $white-color !important;
     }
   }
+
+
 
   &__small {
     padding: $spacing-x-small;

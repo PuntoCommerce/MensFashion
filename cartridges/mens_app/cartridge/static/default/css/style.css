@@ -1704,10 +1704,10 @@ ul {
   font-weight: 900;
   color: #000000 !important;
   background-color: #ffffff; }
-  .btn--gray {
-    background-color: #D8D8D8;
+  .btn-primary, .btn--gray {
+    background-color: #D8D8D8 !important;
     color: #000000 !important; }
-    .btn--gray:hover {
+    .btn-primary:hover, .btn--gray:hover {
       background-color: #000000;
       color: #ffffff !important; }
   .btn__small {
