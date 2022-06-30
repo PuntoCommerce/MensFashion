@@ -81,7 +81,7 @@ const openCustomMenu = () => {
   customMenuResponsive.classList.remove("closeMenu");
   customMenuResponsive.classList.remove("hidden");
   customMenuResponsive.classList.add("viewMenu");
-  page.classList.add('filter-blur');
+  page.classList.add("filter-blur");
 };
 
 const closeCustomMenu = () => {
@@ -90,10 +90,10 @@ const closeCustomMenu = () => {
     customMenuResponsive.classList.add("hidden");
   }, 180);
   customMenuResponsive.classList.remove("viewMenu");
-  page.classList.remove('filter-blur');
+  page.classList.remove("filter-blur");
 };
 
-const toggleSubMenu = (category,back=false) => {
+const toggleSubMenu = (category, back = false) => {
   $C(`#submenu-${category}`).classList.toggle("viewMenu");
   $C(`#submenu-${category}`).classList.toggle("viewMenuOut");
   if (back) {
@@ -150,16 +150,18 @@ if (pgcSelect) {
 
 const showMoreButton = $C("#show-more-button");
 if (showMoreButton) {
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", (e) => {
     console.log(window.scrollY);
     console.log(document.body.clientHeight);
     console.log(document.body.clientHeight - document.body.clientHeight * 0.8);
-    if (
-      window.scrollY >=
-      document.body.clientHeight - document.body.clientHeight * 0.3
-    ) {
-      showMoreButton.click();
-    }
+    setTimeout(() => {
+      if (
+        window.scrollY >=
+        document.body.clientHeight - document.body.clientHeight * 0.3
+      ) {
+        showMoreButton.click();
+      }
+    }, 1000);
   });
 }
 
