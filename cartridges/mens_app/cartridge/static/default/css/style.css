@@ -1336,6 +1336,14 @@ ul {
   font-family: "Avenir-LT-Std";
   font-size: 14px;
   z-index: 1; }
+  .highlight--black {
+    background-color: #000; }
+    .highlight--black span {
+      color: #fff; }
+  .highlight--container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .highlightCont {
   padding: 9px 6px; }

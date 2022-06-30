@@ -8,6 +8,13 @@ const findPromotions = (productId) => {
   return promotions;
 };
 
+const findAttribiutes = (productId) => {
+  const attributes = ["proximamente"];
+  const apiProduct = ProductMgr.getProduct(productId);
+  return { proximamente: apiProduct.custom.proximamente };
+};
+
 module.exports = {
   findPromotions: findPromotions,
+  findAttribiutes: findAttribiutes,
 };

@@ -7,6 +7,20 @@
   font-family: "Avenir-LT-Std";
   font-size: 14px;
   z-index: 1;
+
+  &--black {
+    background-color: #000;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  &--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .highlightCont {
