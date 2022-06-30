@@ -3,15 +3,6 @@
   display: none;
 }
 
-.experience-commerce_layouts-bannerCarousel .carousel-control-prev::after {
-  content: url(../../../../images/carrucel-arrow.svg);
-}
-
-.experience-commerce_layouts-bannerCarousel .carousel-control-next::after {
-  content: url(../../../../images/carrucel-arrow.svg);
-  transform: rotate(180deg);
-}
-
 .experience-commerce_layouts-bannerCarousel .carousel-control-prev {
   left: 3%;
 }

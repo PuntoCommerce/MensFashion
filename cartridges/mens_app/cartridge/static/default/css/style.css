@@ -2197,18 +2197,20 @@ ul {
   display: none;
 }
 
-.experience-commerce_layouts-carousel .carousel-control-prev,
-.experience-commerce_layouts-carousel .carousel-control-next {
+.experience-component .carousel-control-prev,
+.experience-component .carousel-control-next {
   width: 38px;
   height: 38px;
   border-radius: 50%;
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  opacity: 1;
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
 }
-.experience-commerce_layouts-carousel .carousel-control-prev:hover,
-.experience-commerce_layouts-carousel .carousel-control-next:hover {
+.experience-component .carousel-control-prev:hover,
+.experience-component .carousel-control-next:hover {
   opacity: 0.7;
 }
 .experience-commerce_layouts-carousel .carousel-control-prev {
