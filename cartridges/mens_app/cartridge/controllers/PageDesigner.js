@@ -3,6 +3,10 @@
 const server = require("server");
 server.extend(module.superModule);
 
+const {
+  findPromotions,
+} = require("*/cartridge/scripts/helpers/promotionHelper");
+
 server.replace("CommerceAssets_ProductTile", (req, res, next) => {
   var URLUtils = require("dw/web/URLUtils");
   var ProductFactory = require("*/cartridge/scripts/factories/product");
@@ -12,6 +16,8 @@ server.replace("CommerceAssets_ProductTile", (req, res, next) => {
     pview: context.pview,
     pid: context.productID,
   });
+
+  context.product.promotions = findPromotions(context.product.id);
   context.urls = {
     product: URLUtils.url("Product-Show", "pid", context.product.id)
       .relative()

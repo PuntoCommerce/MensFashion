@@ -1,0 +1,7 @@
+<isif condition="${product.promotions.length > 0}">
+  <div class="highlight">
+    <isloop items="${product.promotions}" var="promotion" status="loopstatus">
+      <isprint value="${promotion.calloutMsg}" encoding="off" />
+    </isloop>
+  </div>
+</isif>
