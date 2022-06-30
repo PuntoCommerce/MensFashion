@@ -2250,3 +2250,41 @@ ul {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+
+.highlight{
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  width: 94px;
+  height: 37px;
+  font-family: "Avenir-LT-Std";
+  font-size: 14px;
+  z-index: 1;
+}
+
+.highlightCont{
+  padding: 9px 6px;
+}
+
+.modal-content{
+  font-family: 'Avenir-Next';
+}
+
+.modal-header .full-pdp-link{
+  color: #000000 !important;
+}
+
+.quick-view-dialog .modal-header{
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+.modal-body .product-name{
+  font-family: 'Avenir-LT-Std';
+  line-height: 1.5 !important;
+}
+
+.modal-footer .add-to-cart-global{
+  background-color: #000000;
+  color: #ffffff;
+}
