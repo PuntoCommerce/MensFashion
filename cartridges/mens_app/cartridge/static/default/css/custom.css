@@ -519,25 +519,6 @@ footer .content,
   font-family: "Avenir-LT-Std" !important;
 }
 
-.goToUp {
-  position: fixed !important;
-  bottom: 25%;
-  right: 20px;
-}
-
-.goToUp i {
-  /* height: 52px !important;
-  width: 52px !important; */
-  color: #000 !important;
-  z-index: -1 !important;
-}
-
-.goToUp img {
-  height: 17px;
-  width: 24px;
-  vertical-align: initial !important;
-}
-
 .copyright {
   background-color: #64656a;
   color: #ffffff;
@@ -800,13 +781,6 @@ footer .socialMedia-paymentMethods {
 
   .footer-item button:focus {
     box-shadow: none;
-  }
-
-  .goToUp .fa-lg {
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 

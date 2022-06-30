@@ -13,20 +13,15 @@
 </isif>
 
 <div id="${pdict.id}"
-     class="carousel slide carousel-xs-${pdict.slidesToDisplay.xs}
+    class="carousel slide carousel-xs-${pdict.slidesToDisplay.xs}
         carousel-sm-${pdict.slidesToDisplay.sm} carousel-md-${pdict.slidesToDisplay.md}
         ${pdict.displayIndicators.xs} ${pdict.displayIndicators.sm} ${pdict.displayIndicators.md}
         ${pdict.displayControls.xs} ${pdict.displayControls.sm} ${pdict.displayControls.md}
         ${pdict.insufficientNumberOfSlides.xs} ${pdict.insufficientNumberOfSlides.sm} ${pdict.insufficientNumberOfSlides.md}"
-     data-keyboard="true"
-     data-interval="false"
-     data-number-of-slides="${pdict.numberOfSlides}"
-     data-sm="${pdict.slidesToDisplay.sm}"
-     data-xs="${pdict.slidesToDisplay.xs}"
-     data-md="${pdict.slidesToDisplay.md}"
->
+    data-keyboard="true" data-interval="false" data-number-of-slides="${pdict.numberOfSlides}"
+    data-sm="${pdict.slidesToDisplay.sm}" data-xs="${pdict.slidesToDisplay.xs}" data-md="${pdict.slidesToDisplay.md}">
 
-    <isprint value="${pdict.regions.slides.render()}" encoding="off"/>
+    <isprint value="${pdict.regions.slides.render()}" encoding="off" />
 
     <ol class="pd-carousel-indicators">
         <isloop items=${pdict.regions.slides.region.visibleComponents} var="indicator" status="loopState">
@@ -35,18 +30,14 @@
     </ol>
 
     <a class="carousel-control-prev" href="${'#' + pdict.id}" role="button" data-slide="prev">
-        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="19" cy="19" r="19" fill="white" fill-opacity="0.92"/>
-            <path d="M21.4098 10.0289L13.205 18.4459C13.0609 18.5937 12.9802 18.792 12.9802 18.9985C12.9802 19.2049 13.0609 19.4032 13.205 19.551L21.4098 27.9712C21.4769 28.0401 21.5572 28.0949 21.6459 28.1324C21.7345 28.1698 21.8298 28.189 21.926 28.189C22.0222 28.189 22.1175 28.1698 22.2061 28.1324C22.2948 28.0949 22.375 28.0401 22.4421 27.9712C22.5802 27.8298 22.6576 27.64 22.6576 27.4424C22.6576 27.2447 22.5802 27.0549 22.4421 26.9135L14.7266 18.9985L22.4421 11.085C22.5798 10.9437 22.6568 10.7542 22.6568 10.5569C22.6568 10.3597 22.5798 10.1702 22.4421 10.0289C22.375 9.95994 22.2948 9.90514 22.2061 9.86773C22.1175 9.83031 22.0222 9.81104 21.926 9.81104C21.8298 9.81104 21.7345 9.83031 21.6459 9.86773C21.5572 9.90514 21.4769 9.95994 21.4098 10.0289Z" fill="black"/>
-        </svg>
+        <img class="btn-prev mr-1" src="${URLUtils.staticURL('/images/arrow-left.svg')}"
+            alt="${Resource.msg('carousel.button.prev', 'common', null)}" />
         <span class="sr-only">Previous</span>
     </a>
 
     <a class="carousel-control-next" href="${'#' + pdict.id}" role="button" data-slide="next">
-        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="19" cy="19" r="19" transform="rotate(-180 19 19)" fill="white" fill-opacity="0.92"/>
-            <path d="M16.5902 27.9711L24.795 19.5541C24.9391 19.4063 25.0198 19.208 25.0198 19.0015C25.0198 18.7951 24.9391 18.5968 24.795 18.449L16.5902 10.0288C16.5231 9.95986 16.4428 9.90506 16.3542 9.86765C16.2655 9.83023 16.1702 9.81096 16.074 9.81096C15.9778 9.81096 15.8825 9.83023 15.7939 9.86765C15.7052 9.90506 15.625 9.95986 15.5579 10.0288C15.4198 10.1702 15.3424 10.36 15.3424 10.5576C15.3424 10.7553 15.4198 10.9451 15.5579 11.0865L23.2734 19.0015L15.5579 26.915C15.4202 27.0563 15.3432 27.2458 15.3432 27.4431C15.3432 27.6403 15.4202 27.8298 15.5579 27.9711C15.625 28.0401 15.7052 28.0949 15.7939 28.1323C15.8825 28.1697 15.9778 28.189 16.074 28.189C16.1702 28.189 16.2655 28.1697 16.3541 28.1323C16.4428 28.0949 16.5231 28.0401 16.5902 27.9711Z" fill="black"/>
-        </svg>
+        <img class="btn-next ml-1" src="${URLUtils.staticURL('/images/arrow-right.svg')}"
+            alt="${Resource.msg('carousel.button.next', 'common', null)}" />
         <span class="sr-only">Next</span>
     </a>
 </div>
