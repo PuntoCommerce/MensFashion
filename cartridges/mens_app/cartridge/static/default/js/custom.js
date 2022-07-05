@@ -149,19 +149,18 @@ if (pgcSelect) {
 // SHOW MORE BUTTON
 
 const showMoreButton = $C("#show-more-button");
+let changeSize = false;
 if (showMoreButton) {
-  window.addEventListener("scroll", (e) => {
-    console.log(window.scrollY);
-    console.log(document.body.clientHeight);
-    console.log(document.body.clientHeight - document.body.clientHeight * 0.8);
-    setTimeout(() => {
-      if (
-        window.scrollY >=
-        document.body.clientHeight - document.body.clientHeight * 0.3
-      ) {
-        showMoreButton.click();
-      }
-    }, 1000);
+  window.addEventListener("scroll", () => {
+    if (
+      window.scrollY >=
+        document.body.clientHeight - document.body.clientHeight * 0.3 &&
+      !changeSize
+    ) {
+      showMoreButton.click();
+      changeSize = true;
+      setTimeout(() => (changeSize = false), 3000);
+    }
   });
 }
 
