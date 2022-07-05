@@ -997,7 +997,7 @@ ul {
 
 .nav-link.dropdown-toggle,
 .nav-link {
-  font-family: "AvenirLTStd-Heavy" !important; }
+  font-family: "Avenir-LT-Std-BlackOblique" !important; }
 
 #openCustomMenu {
   background-color: transparent;
@@ -1084,7 +1084,7 @@ ul {
     #customMenuResponsive #actions-icons img {
       margin-right: 10px; }
     #customMenuResponsive .category-title {
-      font-family: "AvenirLTStd-Heavy";
+      font-family: "Avenir-LT-Std-BlackOblique";
       font-size: 20px;
       line-height: 27px;
       text-transform: uppercase;
@@ -1196,7 +1196,7 @@ ul {
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #D8D8D8;
+  border-bottom: 1px solid #d8d8d8;
   padding: 0 18px; }
   @media only screen and (min-width: 37.5em) {
     .grid-header.row {
@@ -1621,11 +1621,11 @@ ul {
           font-size: 32px;
           line-height: 35px;
           font-weight: bold;
-          font-family: "AvenirLTStd-Heavy"; }
+          font-family: "Avenir-LT-Std-BlackOblique"; }
         .promo-carousel__countdown__item .item .type {
           font-size: 9px;
           line-height: 12.29px;
-          font-family: "AvenirLTStd-Heavy"; }
+          font-family: "Avenir-LT-Std-BlackOblique"; }
   .promo-carousel .carousel-control-next, .promo-carousel .carousel-control-prev {
     opacity: 1; }
   .promo-carousel .carousel-control-next:focus, .promo-carousel .carousel-control-prev:focus {
@@ -1713,12 +1713,13 @@ ul {
   color: #000000 !important;
   background-color: #ffffff; }
   .btn-primary, .btn--gray {
-    background-color: #D8D8D8 !important;
+    background-color: #d8d8d8;
     color: #000000 !important; }
     .btn-primary:hover, .btn--gray:hover {
       background-color: #000000;
       color: #ffffff !important; }
   .btn__small {
+    font-size: 14px;
     padding: 6px; }
   .btn:focus {
     box-shadow: none; }
@@ -1741,13 +1742,18 @@ ul {
     color: #000000 !important; }
 
 .summary__pricing .strike-through span {
-  color: #D8D8D8;
+  color: #d8d8d8;
   font-size: 15px;
   text-decoration: line-through; }
 
 .summary__pricing .price span {
   display: flex;
   flex-direction: column; }
+
+.summary__pricing .price .range {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
 .summary__swatches {
   align-items: flex-end;
@@ -1814,7 +1820,8 @@ ul {
 
 .carousel-control-prev,
 .carousel-control-next {
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  opacity: 1; }
 
 .carousel-control-prev::after {
   content: url(../images/carrucel-arrow.svg); }

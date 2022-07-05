@@ -30,14 +30,10 @@
     </ol>
 
     <a class="carousel-control-prev" href="${'#' + pdict.id}" role="button" data-slide="prev">
-        <img class="btn-prev mr-1" src="${URLUtils.staticURL('/images/arrow-left.svg')}"
-            alt="${Resource.msg('carousel.button.prev', 'common', null)}" />
         <span class="sr-only">Previous</span>
     </a>
 
     <a class="carousel-control-next" href="${'#' + pdict.id}" role="button" data-slide="next">
-        <img class="btn-next ml-1" src="${URLUtils.staticURL('/images/arrow-right.svg')}"
-            alt="${Resource.msg('carousel.button.next', 'common', null)}" />
         <span class="sr-only">Next</span>
     </a>
 </div>

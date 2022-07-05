@@ -17,7 +17,7 @@
 
   &-primary,
   &--gray {
-    background-color: $light-grey !important;
+    background-color: $light-grey;
     color: $text-color-black !important;
     &:hover {
       background-color: $text-color-black;
@@ -25,9 +25,8 @@
     }
   }
 
-
-
   &__small {
+    font-size: $font-size-minimal;
     padding: $spacing-x-small;
   }
 

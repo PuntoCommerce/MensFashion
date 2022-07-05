@@ -4,7 +4,8 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique","AvenirLTStd-Heavy";
+$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique",
+  "AvenirLTStd-Heavy";
 
 /// Index font family Avenir Std
 /// @type length
@@ -20,7 +21,7 @@ $avenir-LT-Black: 3;
 
 /// Index font family Avenir Black
 /// @type length
-$avenir-LT-Black: 4;
+$avenir-LT-Heavy: 4;
 
 ///Font style
 /// @type string
@@ -36,7 +37,7 @@ $brand-color-dark: #ab0e06;
 
 /// Light Grey
 /// @type Color
-$light-grey: #D8D8D8;
+$light-grey: #d8d8d8;
 
 /// Light Medium Grey
 /// @type Color
@@ -94,13 +95,11 @@ $font-size-h5-and-paragraph: 16px;
 /// @type Length
 $font-size-filters: 15px;
 
+$font-size-minimal: 14px;
+
 /// Fonts size breadcrumb
 /// @type Length
 $font-size-breadcrumb: 14px;
-
-
-
-
 
 /// Line height H1
 /// @type Length
@@ -126,17 +125,9 @@ $line-height-heading-plp: 34px;
 /// @type Length
 $line-height-h5-and-paragraph: 21.86px;
 
-
-
-
-
 /// Line height H5 and Paragraph
 /// @type Length
 $spacing-30: 30px;
-
-
-
-
 
 /// Line height H5 and Paragraph
 /// @type Length

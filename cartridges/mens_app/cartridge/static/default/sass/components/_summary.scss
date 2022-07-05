@@ -36,6 +36,11 @@
         display: flex;
         flex-direction: column;
       }
+      .range {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
     }
   }
   &__swatches {
@@ -72,7 +77,6 @@
   }
 }
 
-
 /// productTileImage
 .wishlist {
   position: absolute;
@@ -83,10 +87,10 @@
 
   &__Unselected,
   &__Selected {
-      display: none;
+    display: none;
 
-      &--show {
-          display: block;
-      }
+    &--show {
+      display: block;
+    }
   }
 }
