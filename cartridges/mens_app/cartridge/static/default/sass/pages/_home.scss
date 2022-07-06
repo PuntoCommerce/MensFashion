@@ -64,6 +64,11 @@
   right: 3% !important;
 }
 
+#customBannerCarousel .ITBC-buttons{
+  position: absolute;
+  bottom: 300px;
+}
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {

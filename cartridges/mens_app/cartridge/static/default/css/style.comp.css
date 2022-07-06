@@ -494,7 +494,7 @@ header .navbar-header {
 @media (min-width: 992px) {
   .brand {
     width: 20.125em;
-    margin-left: -10.0625em; } }
+    margin-left: -12.0625em; } }
 
 @media (max-width: 991px) {
   .site-search {
@@ -1330,7 +1330,7 @@ ul {
 .highlight {
   position: absolute;
   top: 10px;
-  left: 50px;
+  left: 3px;
   width: 94px;
   height: 37px;
   font-family: "Avenir-LT-Std";
@@ -1753,8 +1753,7 @@ ul {
 .summary__pricing .price .range {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  font-size: 0.875em; }
+  justify-content: space-between; }
 
 .summary__swatches {
   align-items: flex-end;
@@ -1836,10 +1835,6 @@ ul {
 
 .carousel-control-next {
   right: 3% !important; }
-
-#customBannerCarousel .ITBC-buttons {
-  position: absolute;
-  bottom: 300px; }
 
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
