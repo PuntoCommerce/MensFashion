@@ -1,0 +1,21 @@
+.product-detail {
+    & .product-images {
+        max-height: 100vh;
+        overflow: auto;
+    }
+    & .product-name {
+        color: $dark-grey;
+        font-family: 'Avenir-Bold';
+        font-size: 30px;
+        font-weight: 700;
+        margin: 44px 0 12px 0;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .product-detail {
+        & .product-name {
+            margin: 5px 0 22px 0;
+        }
+    }
+    
+}

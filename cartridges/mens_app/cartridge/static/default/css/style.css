@@ -352,6 +352,9 @@ html {
 *::after {
   box-sizing: inherit; }
 
+.page {
+  overflow-x: hidden; }
+
 @font-face {
   font-family: "Avenir-LT-Std";
   src: url("../fonts/AvenirLTStd-Light.otf") format("opentype"); }
@@ -367,6 +370,10 @@ html {
 @font-face {
   font-family: "AvenirLTStd-Heavy";
   src: url(../fonts/AvenirLTStd-Heavy.otf) format("opentype"); }
+
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../fonts/AvenirBold.otf") format("opentype"); }
 
 /**
  * Basic typography style for copy text
@@ -1366,6 +1373,14 @@ ul {
   background-color: #000000;
   color: #ffffff; }
 
+.product-breadcrumb a {
+  font-size: 14px;
+  font-family: 'Avenir-Next';
+  text-transform: initial; }
+
+.product-breadcrumb .breadcrumb li:last-of-type a {
+  font-weight: 600; }
+
 .carousel {
   position: relative; }
 
@@ -1859,3 +1874,18 @@ ul {
 
 .show-more {
   visibility: hidden; }
+
+.product-detail .product-images {
+  max-height: 100vh;
+  overflow: auto; }
+
+.product-detail .product-name {
+  color: #393939;
+  font-family: 'Avenir-Bold';
+  font-size: 30px;
+  font-weight: 700;
+  margin: 44px 0 12px 0; }
+
+@media only screen and (min-width: 1200px) {
+  .product-detail .product-name {
+    margin: 5px 0 22px 0; } }

@@ -1,0 +1,12 @@
+.product-breadcrumb {
+    a {
+        font-size: 14px;
+        font-family: 'Avenir-Next';
+        text-transform: initial;
+    }
+    .breadcrumb li {
+        &:last-of-type a {
+            font-weight: 600;
+        }
+    }
+}
