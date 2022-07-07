@@ -736,7 +736,7 @@ footer .socialMedia-paymentMethods {
 @media (max-width: 991px) {
   .container div.collapsible-xs button.title {
     font-family: "Avenir-LT-Std" !important;
-    color: #ffffff; }
+    color: #ffffff !important; }
   footer .input-button {
     width: 100%;
     display: block !important; }
@@ -775,6 +775,8 @@ footer .socialMedia-paymentMethods {
     border-bottom: none !important; }
   .footer-email-signup .newsletter {
     text-align: center; }
+  .newsletter .form {
+    padding: 0 45px; }
   .footer-item button:focus {
     box-shadow: none; }
   .goToUp .fa-lg {
@@ -1841,12 +1843,34 @@ ul {
   position: absolute;
   bottom: 300px; }
 
+.ITBC-content .btn-ITBC {
+  height: 71px; }
+
+.ITBC-content .btn-ITBC:hover {
+  background-color: #000000;
+  color: #ffffff !important; }
+
+.customTextBox-component-container a u {
+  text-decoration: none; }
+
+.experience-commerce_layouts-navTabs {
+  box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 15px; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
     border-top: 1px solid #000000; }
   .mobile-2r-2c .region {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+  .ITBC-content .btn-ITBC {
+    height: 51px;
+    min-width: 170px;
+    font-size: 12px; }
+  #customBannerCarousel .ITBC-buttons {
+    position: initial; } }
 
 .hero.slant-down::after {
   border-width: 0; }

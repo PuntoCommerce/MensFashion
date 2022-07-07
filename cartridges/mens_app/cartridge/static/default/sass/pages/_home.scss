@@ -69,6 +69,26 @@
   bottom: 300px;
 }
 
+.ITBC-content .btn-ITBC{
+  height: 71px;
+}
+
+.ITBC-content .btn-ITBC:hover{
+  background-color: #000000;
+  color: #ffffff !important;
+}
+
+.customTextBox-component-container a u{
+  text-decoration: none;
+}
+
+.experience-commerce_layouts-navTabs{
+  box-shadow: 2px -4px 9px 3px rgba(0,0,0,0.12);
+  -webkit-box-shadow: 2px -4px 9px 3px rgba(0,0,0,0.12);
+  -moz-box-shadow: 2px -4px 9px 3px rgba(0,0,0,0.12);
+  margin-bottom: 15px;
+}
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
@@ -77,5 +97,15 @@
 
   .mobile-2r-2c .region {
     margin-bottom: 0px;
+  }
+
+  .ITBC-content .btn-ITBC{
+    height: 51px;
+    min-width: 170px;
+    font-size: 12px;
+  }
+  
+  #customBannerCarousel .ITBC-buttons{
+    position: initial;
   }
 }
