@@ -515,6 +515,16 @@ header .navbar-header {
   .suggestions-wrapper {
     width: 100%; } }
 
+.brand.checkout {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  left: 50%; }
+  @media only screen and (max-width: 56.25em) {
+    .brand.checkout a {
+      left: -25%;
+      position: relative; } }
+
 /* **************************** FOOTER **************************** */
 footer {
   overflow-x: hidden;

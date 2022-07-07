@@ -82,3 +82,17 @@ header .navbar-header {
     width: 100%;
   }
 }
+
+.brand.checkout {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  left: 50%;
+
+  @include respond(tab-port-max) {
+    a {
+      left: -25%;
+      position: relative;
+    }
+  }
+}
