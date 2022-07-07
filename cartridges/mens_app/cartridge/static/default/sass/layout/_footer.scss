@@ -293,7 +293,7 @@ footer .socialMedia-paymentMethods {
 @media (max-width: 991px) {
     .container div.collapsible-xs button.title {
         font-family: "Avenir-LT-Std" !important;
-        color: #ffffff;
+        color: #ffffff !important;
     }
 
     footer .input-button {
@@ -359,6 +359,11 @@ footer .socialMedia-paymentMethods {
 
     .footer-email-signup .newsletter {
         text-align: center;
+    }
+
+
+    .newsletter .form{
+        padding: 0 45px;
     }
 
     .footer-item button:focus {
