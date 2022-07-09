@@ -18,15 +18,15 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <!--Breadcrumbs-->
-                        <div class="row">
-                            <div class="product-breadcrumb col hidden-sm-down">
-                                <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
-                            </div>
+                        <div class="product-breadcrumb hidden-sm-down col">
+                            <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
                         </div>
 
                         <!-- Product Name -->
                         <div class="row">
-                            <span class="product-name">${product.productName}</span>
+                            <div class="col">
+                                <span class="product-name">${product.productName}</span>
+                            </div>
                         </div>
 
                         <div class="row d-lg-none">
