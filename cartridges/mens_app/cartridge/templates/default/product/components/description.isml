@@ -1,5 +1,5 @@
 <isif condition="${product.shortDescription}">
-    <div class="col-12 value content"
+    <div class="col-12 value content mt-3"
         id="collapsible-description-${loopState && loopState.count ? loopState.count : '1'}">
         <isprint value="${product.shortDescription}" encoding="off" />
     </div>

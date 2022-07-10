@@ -5,8 +5,12 @@
         text-transform: initial;
     }
     .breadcrumb li {
+        & a {
+            color: #000;
+            letter-spacing: 1px;
+        }
         &:last-of-type a {
-            font-weight: 600;
+            font-family: 'Avenir-Bold';
         }
     }
 }

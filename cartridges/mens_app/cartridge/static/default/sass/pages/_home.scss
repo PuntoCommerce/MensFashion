@@ -89,6 +89,18 @@
   margin-bottom: 15px;
 }
 
+.prices-container {
+  display: flex;
+  flex-direction: column;
+  & del {
+    margin-bottom: 15px;
+    & span {
+      color: #000 !important;
+      font-size: 25px;
+    }
+  }
+}
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {

@@ -10,10 +10,10 @@
 
                 <div class="col-12 col-sm-6">
                     <div class="row justify-content-center">
-                        <div class="col-lg-8">
+                        <div class="col-11 col-lg-8">
                             <!--Breadcrumbs-->
                             <div class="row">
-                                <div class="product-breadcrumb col hidden-sm-down">
+                                <div class="product-breadcrumb col d-none d-md-block">
                                     <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
                                 </div>
                             </div>
@@ -25,12 +25,6 @@
                                 </div>
                             </div>
 
-                            <div class="row d-lg-none">
-                                <div class="col">
-                                    <isinclude template="product/components/pidRating" />
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <!-- Prices -->
                                 <div class="prices col-6">
@@ -38,12 +32,14 @@
                                     <isinclude template="product/components/pricing/main" />
                                 </div>
                                 <!-- Sizes Guide -->
-                                <div class="sizes-guide col-6">
-                                    <a href="">Guia de tallas</a>
+                                <div class="sizes-guide d-flex justify-content-start align-items-end col-6">
+                                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
+                                        alt="Guia de tallas" />
+                                    <a class="link" href="">${Resource.msg('size.guide', 'common', null)}</a>
                                 </div>
                             </div>
 
-                            <div class="row d-none d-lg-block">
+                            <div class="row d-xs-block d-md-none">
                                 <div class="col">
                                     <isinclude template="product/components/pidRating" />
                                 </div>
@@ -51,7 +47,9 @@
 
                             <div class="attributes">
                                 <!-- Attributes and Quantity -->
-                                <isinclude template="product/components/mainAttributes" />
+                                <iscomment>
+                                    <isinclude template="product/components/mainAttributes" />
+                                </iscomment>
 
                                 <isset name="isBundle" value="${false}" scope="page" />
                                 <isset name="loopState" value="{count: 1}" scope="page" />
@@ -60,13 +58,19 @@
                                         <div class="col-8">
                                             <isinclude template="product/components/variationAttribute" />
                                         </div>
-
+                                    </div>
+                                    <div class="row">
                                         <isif condition="${attributeStatus.last && !isBundle}">
                                             <!-- Quantity Drop Down Menu -->
                                             <div class="attribute quantity col-4">
                                                 <isinclude template="product/components/quantity" />
                                             </div>
                                         </isif>
+                                        <!-- Add to wishlist -->
+                                        <div class="attribute col-lg-2">
+                                            <label for="addToWishlist" class="d-none d-lg-block"></label>
+                                            <span class="mensButton" id="addToWishlist">Wish</span>
+                                        </div>
                                     </div>
                                 </isloop>
 
@@ -105,9 +109,14 @@
                                     </div>
                                 </div>
 
-                                <div class="add-to-cart-actions">
+                                <div class="add-to-cart-actions mb-3">
                                     <!-- Cart and [Optionally] Apple Pay -->
                                     <isinclude template="product/components/addToCartProduct" />
+                                </div>
+
+                                <div class="add-to-cart-and-checkout mb-3">
+                                    <!-- Cart and Checkout -->
+                                    <isinclude template="product/components/buyNowProduct" />
                                 </div>
 
                                 <isset name="loopState" value="{count: 1}" scope="page" />

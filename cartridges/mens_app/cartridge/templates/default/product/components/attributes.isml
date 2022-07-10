@@ -5,7 +5,7 @@
             ${Resource.msg('label.attributes', 'product', null)}
         </button>
     </div>
-    <div class="col-12 value content"
+    <div class="col-12 value content mt-3"
         id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
         <isloop items="${product.attributes}" var="attrGroup">
             <isif condition="${attrGroup.ID !== 'mainAttributes'}">

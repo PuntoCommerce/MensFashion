@@ -1,4 +1,4 @@
-<div class="col-12 col-sm-6">
+<div class="col-md-6">
     <div class="product-images ">
         <isloop items="${product.images['large']}" var="image" status="loopStatus">
             <img src="${image.url}" class="d-block img-fluid mb-3" alt="${image.alt} image number ${image.index}"
