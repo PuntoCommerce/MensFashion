@@ -68,13 +68,12 @@
                                         <div class="attribute quantity col-lg-4">
                                             <isinclude template="product/components/quantity" />
                                         </div>
+                                        <!-- Add to wishlist -->
+                                        <div class="attribute col-lg-2">
+                                            <label for="addToWishlist" class="d-none d-lg-block"></label>
+                                            <span class="mensButton" id="addToWishlist">Wish</span>
+                                        </div>
                                     </isif>
-
-                                    <!-- Add to wishlist -->
-                                    <div class="attribute col-lg-2">
-                                        <label for="addToWishlist" class="d-none d-lg-block"></label>
-                                        <span class="mensButton" id="addToWishlist">Wish</span>
-                                    </div>
                                 </div>
                             </isloop>
 

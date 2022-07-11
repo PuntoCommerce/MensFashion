@@ -1,15 +1,25 @@
 .product-detail {
     font-family: 'Avenir-Next';
-    & .product-images {
-        max-height: 100vh;
-        overflow: auto;
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        &::-webkit-scrollbar {
+    & .pdp-scroll-carosuel {
+        & .carousel-inner {
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            overflow: auto;
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        & .carousel-item {
+            display: block;
+        }
+        & .carousel-control-prev, .carousel-control-next, .carousel-indicators {
             display: none;
         }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
     }
     & .fa.icon-prev, .fa.icon-next {
         display: none;
