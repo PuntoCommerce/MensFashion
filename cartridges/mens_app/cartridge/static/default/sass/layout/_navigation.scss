@@ -59,10 +59,6 @@
   text-shadow: none;
 }
 
-#menuDesk .nav:hover .nav-item {
-  text-shadow: none;
-}
-
 .sub-category-item.item {
   margin-bottom: 3px;
 }
@@ -275,7 +271,7 @@ ul {
 
 .nav-link.dropdown-toggle,
 .nav-link {
-  font-family: nth($text-font-stack,$avenir-LT-Std)!important;
+  font-family: nth($text-font-stack, $avenir-LT-Std) !important;
 }
 
 #openCustomMenu {
@@ -405,9 +401,9 @@ ul {
     #actions-icons img {
       margin-right: 10px;
     }
-    
+
     .category-title {
-      font-family: nth($text-font-stack,$avenir-LT-Black);
+      font-family: nth($text-font-stack, $avenir-LT-Black);
       font-size: 20px;
       line-height: 27px;
       text-transform: uppercase;
@@ -416,15 +412,13 @@ ul {
   }
 }
 
-
-
 /// Animations
 
 /***** View menu responsive with animation  *****/
 .viewMenu {
   transform: translateX(0);
   animation-name: moveInRight;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out;
 }
 
@@ -432,13 +426,13 @@ ul {
 .viewMenuOut {
   transform: translateX(0);
   animation-name: moveInLeft;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out;
 }
 
 /***** View menu responsive with animation  *****/
 .closeMenu {
   animation-name: moveInLeftOut;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out;
 }
