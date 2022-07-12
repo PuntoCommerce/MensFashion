@@ -850,9 +850,6 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item:hover.dropdown {
   text-shadow: none; }
 
-#menuDesk .nav:hover .nav-item {
-  text-shadow: none; }
-
 .sub-category-item.item {
   margin-bottom: 3px; }
 
@@ -1111,20 +1108,20 @@ ul {
 .viewMenu {
   transform: translateX(0);
   animation-name: moveInRight;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 /***** View menu responsive with animation  *****/
 .viewMenuOut {
   transform: translateX(0);
   animation-name: moveInLeft;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 /***** View menu responsive with animation  *****/
 .closeMenu {
   animation-name: moveInLeftOut;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 .breadcrumb {
@@ -2066,10 +2063,15 @@ ul {
     position: absolute;
     right: 0;
     z-index: 1; }
+<<<<<<< HEAD
   .product-detail .cart-and-ipay {
     padding: 0; }
     .product-detail .cart-and-ipay button:disabled {
       opacity: 0.5 !important; }
+=======
+  .product-detail .cart-and-ipay button:disabled {
+    opacity: 0.5 !important; }
+>>>>>>> 08c24fa8defb642ed0689aa713040b56d01f6b9e
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }

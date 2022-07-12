@@ -34,4 +34,8 @@
   header .sub-category-item a {
     font-weight: 400;
   }
+
+  #menuDesk .nav:hover .nav-item {
+    text-shadow: none;
+  }
 }
