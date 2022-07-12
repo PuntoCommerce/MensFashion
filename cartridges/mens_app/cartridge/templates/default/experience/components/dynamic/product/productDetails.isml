@@ -15,7 +15,7 @@
             <isinclude template="product/components/imageScroll" />
             <div class="d-none d-md-block col-md-6">
                 <!-- Product Description and Details Desktop -->
-                <isinclude template="product/components/descriptionAndDetailsWrapper" />
+                <isinclude template="product/components/pdpDetailsWrapper" />
             </div>
         </div>
         <div>
@@ -29,3 +29,5 @@
         </div>
     </div>
 </isobject>
+<!-- Modal Size Guide -->
+<isinclude template="product/components/modalSizeGuide" />

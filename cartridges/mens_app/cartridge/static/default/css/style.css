@@ -850,9 +850,6 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item:hover.dropdown {
   text-shadow: none; }
 
-#menuDesk .nav:hover .nav-item {
-  text-shadow: none; }
-
 .sub-category-item.item {
   margin-bottom: 3px; }
 
@@ -1117,20 +1114,20 @@ ul {
 .viewMenu {
   transform: translateX(0);
   animation-name: moveInRight;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 /***** View menu responsive with animation  *****/
 .viewMenuOut {
   transform: translateX(0);
   animation-name: moveInLeft;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 /***** View menu responsive with animation  *****/
 .closeMenu {
   animation-name: moveInLeftOut;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-out; }
 
 .breadcrumb {
@@ -1932,8 +1929,19 @@ ul {
   visibility: hidden; }
 
 .product-detail {
-  font-family: 'Avenir-Next'; }
-  .product-detail .fa.icon-prev, .product-detail .fa.icon-next {
+  font-family: "Avenir-Next";
+  /* Show the tooltip text when you mouse over the tooltip container */ }
+  .product-detail .image-details-container .carousel-inner {
+    display: flex;
+    flex-direction: column; }
+  .product-detail .image-details-container .carousel-indicators,
+  .product-detail .image-details-container .carousel-control-prev,
+  .product-detail .image-details-container .carousel-control-next {
+    display: none; }
+  .product-detail .image-details-container .carousel-item {
+    display: block; }
+  .product-detail .fa.icon-prev,
+  .product-detail .fa.icon-next {
     display: none; }
   .product-detail .product-details-container {
     background-color: #fff; }
@@ -1946,35 +1954,71 @@ ul {
     border: 0;
     color: #393939;
     display: inline-block;
-    font-family: 'Avenir-Bold';
+    font-family: "Avenir-Bold";
     font-size: 30px;
     font-weight: 700;
     margin: 34px 0 12px 0;
     line-height: normal; }
+  .product-detail .color-attribute:focus {
+    border: none;
+    outline: none; }
   .product-detail .sizes-guide {
     padding-bottom: 0.5em;
     padding-top: 0.5em; }
-    .product-detail .sizes-guide .link {
-      line-height: normal;
-      text-decoration: underline; }
-  .product-detail .prices .price {
-    text-align: left; }
+    .product-detail .sizes-guide button {
+      text-decoration: underline;
+      border: 0;
+      background: none;
+      padding: 0;
+      display: flex;
+      align-items: end; }
+      .product-detail .sizes-guide button:focus {
+        border: none;
+        outline: none; }
+  .product-detail .prices-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .product-detail .prices-container del {
+      margin-bottom: 10px;
+      font-size: 25px; }
+  .product-detail .prices {
+    display: flex;
+    align-items: flex-end; }
+    .product-detail .prices .price {
+      text-align: left; }
+      .product-detail .prices .price .sales {
+        font-size: 30px; }
+    .product-detail .prices .range {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; }
   .product-detail .attribute label {
     font-size: 16px;
     min-height: 22px; }
-  .product-detail select, .product-detail button, .product-detail .mensButton {
+  .product-detail select,
+  .product-detail button,
+  .product-detail .mensButton {
     border-radius: 0;
     border: 1px solid #000;
     color: #000;
     display: inline-block;
     height: calc(1.5em + 0.75rem + 2px);
     padding: 5px 10px; }
-    .product-detail select option, .product-detail button option, .product-detail .mensButton option {
+    .product-detail select option,
+    .product-detail button option,
+    .product-detail .mensButton option {
       color: #000;
       font-size: 14px; }
-    .product-detail select:hover, .product-detail button:hover, .product-detail .mensButton:hover {
+    .product-detail select:hover,
+    .product-detail button:hover,
+    .product-detail .mensButton:hover {
       cursor: pointer; }
-    .product-detail select:focus, .product-detail button:focus, .product-detail .mensButton:focus {
+    .product-detail select:focus,
+    .product-detail button:focus,
+    .product-detail .mensButton:focus {
       border-color: #495057;
       color: #000; }
   .product-detail .color-attribute {
@@ -1993,19 +2037,42 @@ ul {
       background-color: #d8d8d8;
       color: #000 !important;
       cursor: pointer; }
-  .product-detail .buy-now.btn.btn-primary, .product-detail .add-to-cart-global.btn.btn-primary {
-    background: #D9D9D9;
-    border: 1px solid #D9D9D9;
+  .product-detail .buy-now.btn.btn-primary,
+  .product-detail .add-to-cart-global.btn.btn-primary {
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
     color: #000;
-    font-family: 'Avenir-Bold';
+    font-family: "Avenir-Bold";
     font-size: 16px;
     opacity: 1;
     text-transform: uppercase;
     transition: 0.3s ease all; }
-    .product-detail .buy-now.btn.btn-primary:hover, .product-detail .add-to-cart-global.btn.btn-primary:hover {
+    .product-detail .buy-now.btn.btn-primary:hover,
+    .product-detail .add-to-cart-global.btn.btn-primary:hover {
       background-color: #fff;
       color: #000 !important;
       cursor: pointer; }
+  .product-detail .tooltipAddToCart:hover:disabled .tooltiptext,
+  .product-detail .tooltipAddToCart:hover[disabled] {
+    visibility: visible; }
+  .product-detail .tooltipAddToCart {
+    position: relative;
+    display: inline-block; }
+  .product-detail .tooltipAddToCart .tooltiptext {
+    visibility: hidden;
+    width: fit-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    z-index: 1; }
+  .product-detail .cart-and-ipay {
+    padding: 0; }
+    .product-detail .cart-and-ipay button:disabled {
+      opacity: 0.5 !important; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }
@@ -2017,7 +2084,7 @@ ul {
       color: #000;
       font-size: 12px; }
   .product-detail hr {
-    border-top: 1px solid #F0F0F4; }
+    border-top: 1px solid #f0f0f4; }
   .product-detail .description-and-detail .row {
     margin: 15px 0; }
   .product-detail .description-and-detail .title.btn {
@@ -2026,6 +2093,8 @@ ul {
     padding-left: 0; }
   .product-detail .description-and-detail .product-attributes ul {
     list-style-type: disc; }
+  .product-detail .promotions {
+    height: auto; }
   .product-detail .separator-set-price {
     border-color: #000;
     margin: 1.5rem auto; }
@@ -2053,9 +2122,24 @@ ul {
     content: url("../images/pdp/plus.svg"); }
   .product-detail .collapsible-xl.active .title:after {
     content: url("../images/pdp/less.svg"); }
+  .product-detail .promotions .collapsible-xl .title:after {
+    display: none; }
+  .product-detail .promotions button {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    .product-detail .promotions button div {
+      background: none !important;
+      justify-content: flex-start !important; }
+      .product-detail .promotions button div span {
+        color: #000 !important;
+        font-family: "Avenir-Next";
+        font-size: 16px;
+        text-decoration: underline; }
 
 @media only screen and (max-width: 768px) {
-  .product-detail .product-images {
+  .product-detail .image-details-container .carousel-inner {
     max-height: 40vh;
     overflow: auto; } }
 

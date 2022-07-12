@@ -1,12 +1,9 @@
 <isif condition="${product.attributes && product.attributes.length}">
-    <div class="col-12">
-        <button class="title btn text-left btn-block" aria-expanded="false"
-            aria-controls="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
-            ${Resource.msg('label.attributes', 'product', null)}
-        </button>
-    </div>
-    <div class="col-12 value content mt-3"
-        id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
+    <button class="title btn text-left btn-block" aria-expanded="false"
+        aria-controls="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
+        ${Resource.msg('label.attributes', 'product', null)}
+    </button>
+    <div class="value content mt-3" id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
         <isloop items="${product.attributes}" var="attrGroup">
             <isif condition="${attrGroup.ID !== 'mainAttributes'}">
                 <ul>
