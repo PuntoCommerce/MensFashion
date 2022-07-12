@@ -121,6 +121,9 @@
             line-height: normal;
             padding-left: 0;
         }
+        & .product-attributes ul {
+            list-style-type: disc;
+        }
     }
     & .separator-set-price {
         border-color: #000;

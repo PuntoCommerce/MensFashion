@@ -2005,6 +2005,8 @@ ul {
     font-size: 16px;
     line-height: normal;
     padding-left: 0; }
+  .product-detail .description-and-detail .product-attributes ul {
+    list-style-type: disc; }
   .product-detail .separator-set-price {
     border-color: #000;
     margin: 1.5rem auto; }
