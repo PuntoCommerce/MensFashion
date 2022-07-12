@@ -1,3 +1,7 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/pdpAddToCartUX.js');
+</isscript>
 <div class="custom-padding product-details-container h-100">
     <div class="row justify-content-center h-100">
         <div class="col-lg-9 product-details-wrapper sticky-details">
@@ -91,13 +95,6 @@
                 <!-- Product Availability -->
                 <isinclude template="product/components/productAvailability" />
 
-                <!-- Applicable Promotions -->
-                <div class="row">
-                    <div class="col-12 promotions">
-                        <isinclude template="product/components/promotions" />
-                    </div>
-                </div>
-
                 <div class="add-to-cart-actions mb-3">
                     <!-- Cart and [Optionally] Apple Pay -->
                     <isinclude template="product/components/addToCartProduct" />
@@ -110,6 +107,13 @@
 
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isinclude template="product/components/descriptionAndDetails" />
+
+                <!-- Applicable Promotions -->
+                <div class="row">
+                    <div class="col-12 promotions">
+                        <isinclude template="product/components/promotionsPdp" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

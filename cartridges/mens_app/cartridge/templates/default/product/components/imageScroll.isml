@@ -34,6 +34,6 @@
     </div>
     <div class="d-block d-md-none mobile-fixed-details-wrapper">
         <!-- Product Description and Details Desktop -->
-        <isinclude template="product/components/descriptionAndDetailsWrapper" />
+        <isinclude template="product/components/pdpDetailsWrapper" />
     </div>
 </div>
