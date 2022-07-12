@@ -1,5 +1,17 @@
 .product-detail {
     font-family: 'Avenir-Next';
+    & .image-details-container {
+        & .carousel-inner {
+            display: flex;
+            flex-direction: column;
+        }
+        & .carousel-indicators, .carousel-control-prev, .carousel-control-next {
+            display: none;
+        }
+        & .carousel-item {
+            display: block;
+        }
+    }
     & .fa.icon-prev, .fa.icon-next {
         display: none;
     }
@@ -26,14 +38,43 @@
     & .sizes-guide {
         padding-bottom: 0.5em;
         padding-top: 0.5em;
-        & .link {
-            line-height: normal;
+        & button {
             text-decoration: underline;
+            border: 0;
+            background: none;
+            padding: 0;
+            display: flex;
+            align-items: end;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .prices-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        & del {
+            margin-bottom: 10px;
+            font-size: 25px;
         }
     }
     .prices {
+        display: flex;
+        align-items: flex-end;
         & .price {
             text-align: left;
+            & .sales {
+                font-size: 30px;
+            }
+        }
+        & .range {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
     }
     & .attribute label {
@@ -170,9 +211,11 @@
 }
 @media only screen and (max-width: 768px) {
     .product-detail {
-        & .product-images {
-            max-height: 40vh;
-            overflow: auto;
+        & .image-details-container {
+            & .carousel-inner {
+                max-height: 40vh;
+                overflow: auto;
+            }
         }
     }
 }

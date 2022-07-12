@@ -31,11 +31,14 @@
                                     <isset name="price" value="${product.price}" scope="page" />
                                     <isinclude template="product/components/pricing/main" />
                                 </div>
-                                <!-- Sizes Guide -->
+                                <!-- Trigger Modal Sizes Guide -->
                                 <div class="sizes-guide d-flex justify-content-start align-items-end col-6">
                                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
                                         alt="Guia de tallas" />
-                                    <a class="link" href="">${Resource.msg('size.guide', 'common', null)}</a>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
+                                        ${Resource.msg('size.guide', 'common', null)}
+                                    </button>
                                 </div>
                             </div>
 

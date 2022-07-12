@@ -1927,6 +1927,13 @@ ul {
 
 .product-detail {
   font-family: 'Avenir-Next'; }
+  .product-detail .image-details-container .carousel-inner {
+    display: flex;
+    flex-direction: column; }
+  .product-detail .image-details-container .carousel-indicators, .product-detail .image-details-container .carousel-control-prev, .product-detail .image-details-container .carousel-control-next {
+    display: none; }
+  .product-detail .image-details-container .carousel-item {
+    display: block; }
   .product-detail .fa.icon-prev, .product-detail .fa.icon-next {
     display: none; }
   .product-detail .product-details-container {
@@ -1948,11 +1955,36 @@ ul {
   .product-detail .sizes-guide {
     padding-bottom: 0.5em;
     padding-top: 0.5em; }
-    .product-detail .sizes-guide .link {
-      line-height: normal;
-      text-decoration: underline; }
-  .product-detail .prices .price {
-    text-align: left; }
+    .product-detail .sizes-guide button {
+      text-decoration: underline;
+      border: 0;
+      background: none;
+      padding: 0;
+      display: flex;
+      align-items: end; }
+      .product-detail .sizes-guide button:focus {
+        border: none;
+        outline: none; }
+  .product-detail .prices-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .product-detail .prices-container del {
+      margin-bottom: 10px;
+      font-size: 25px; }
+  .product-detail .prices {
+    display: flex;
+    align-items: flex-end; }
+    .product-detail .prices .price {
+      text-align: left; }
+      .product-detail .prices .price .sales {
+        font-size: 30px; }
+    .product-detail .prices .range {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start; }
   .product-detail .attribute label {
     font-size: 16px;
     min-height: 22px; }
@@ -2049,7 +2081,7 @@ ul {
     content: url("../images/pdp/less.svg"); }
 
 @media only screen and (max-width: 768px) {
-  .product-detail .product-images {
+  .product-detail .image-details-container .carousel-inner {
     max-height: 40vh;
     overflow: auto; } }
 

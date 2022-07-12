@@ -39,5 +39,7 @@
             <isinclude template="product/components/addToCartGlobal" />
         </div>
     </div>
-
 </div>
+
+<!-- Modal Size Guide -->
+<isinclude template="product/components/modalSizeGuide" />
