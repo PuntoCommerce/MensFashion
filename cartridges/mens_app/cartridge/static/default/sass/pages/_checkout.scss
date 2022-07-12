@@ -1,0 +1,35 @@
+.checkout {
+  font-family: nth($text-font-stack, $avenir-LT-Std);
+  font-size: $font-size-h5-and-paragraph;
+
+  &--rightBorder {
+    @include respond(tab-port) {
+      border-right: 1px solid $text-color-black;
+    }
+  }
+
+  &--topBorder {
+    @include respond(tab-port-max) {
+      border-top: 1px solid $text-color-black;
+    }
+  }
+
+  &__guess {
+    border-bottom: 1px solid #000;
+  }
+
+  &__form {
+    padding: 10px 0 10px 0;
+    border-radius: 0;
+    border: 1px solid $text-color-black;
+  }
+
+  &__text {
+    &--space {
+      margin-left: 2px;
+    }
+    &--bold {
+      font-family: nth($text-font-stack, $avenir-LT-Heavy);
+    }
+  }
+}

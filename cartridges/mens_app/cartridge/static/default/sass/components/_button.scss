@@ -15,6 +15,10 @@
   color: $text-color-black !important;
   background-color: $white-color;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &-primary,
   &--gray {
     background-color: $light-grey;

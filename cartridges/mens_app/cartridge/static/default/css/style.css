@@ -1724,6 +1724,8 @@ ul {
   font-weight: 900;
   color: #000000 !important;
   background-color: #ffffff; }
+  .btn:hover {
+    cursor: pointer; }
   .btn-primary, .btn--gray {
     background-color: #d8d8d8;
     color: #000000 !important; }
@@ -1893,3 +1895,23 @@ ul {
 
 .show-more {
   visibility: hidden; }
+
+.checkout {
+  font-family: "Avenir-LT-Std";
+  font-size: 16px; }
+  @media only screen and (min-width: 56.25em) {
+    .checkout--rightBorder {
+      border-right: 1px solid #000000; } }
+  @media only screen and (max-width: 56.25em) {
+    .checkout--topBorder {
+      border-top: 1px solid #000000; } }
+  .checkout__guess {
+    border-bottom: 1px solid #000; }
+  .checkout__form {
+    padding: 10px 0 10px 0;
+    border-radius: 0;
+    border: 1px solid #000000; }
+  .checkout__text--space {
+    margin-left: 2px; }
+  .checkout__text--bold {
+    font-family: "AvenirLTStd-Heavy"; }
