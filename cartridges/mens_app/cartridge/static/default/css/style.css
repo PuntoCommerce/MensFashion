@@ -1062,6 +1062,12 @@ ul {
     padding-bottom: 10px; }
   #actions-icons .items .nav-item {
     text-transform: uppercase; }
+  #customMenuResponsive .category-title {
+    font-family: "Avenir-LT-Std" !important;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: left; }
   #customMenuResponsive #image-container img {
     width: 100%;
     object-fit: cover;
@@ -2063,8 +2069,10 @@ ul {
     position: absolute;
     right: 0;
     z-index: 1; }
-  .product-detail .cart-and-ipay button:disabled {
-    opacity: 0.5 !important; }
+  .product-detail .cart-and-ipay {
+    padding: 0; }
+    .product-detail .cart-and-ipay button:disabled {
+      opacity: 0.5 !important; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }

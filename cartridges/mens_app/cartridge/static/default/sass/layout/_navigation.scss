@@ -344,6 +344,14 @@ ul {
     text-transform: uppercase;
   }
 
+  #customMenuResponsive .category-title {
+    font-family: nth($text-font-stack,$avenir-LT-Std)!important;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: left; 
+  } 
+
   #customMenuResponsive #image-container img {
     width: 100%;
     object-fit: cover;

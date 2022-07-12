@@ -165,8 +165,11 @@
       right: 0;
       z-index: 1;
   }
-  & .cart-and-ipay button:disabled {
-    opacity: 0.5 !important;
+  & .cart-and-ipay {
+    padding: 0;
+    &  button:disabled {
+      opacity: 0.5 !important;
+    }
   }
   & .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
