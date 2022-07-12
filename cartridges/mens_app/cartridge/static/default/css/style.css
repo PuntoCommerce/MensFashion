@@ -352,6 +352,9 @@ html {
 *::after {
   box-sizing: inherit; }
 
+.page {
+  overflow-x: hidden; }
+
 @font-face {
   font-family: "Avenir-LT-Std";
   src: url("../fonts/AvenirLTStd-Light.otf") format("opentype"); }
@@ -367,6 +370,10 @@ html {
 @font-face {
   font-family: "AvenirLTStd-Heavy";
   src: url(../fonts/AvenirLTStd-Heavy.otf) format("opentype"); }
+
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../fonts/AvenirBold.otf") format("opentype"); }
 
 /**
  * Basic typography style for copy text
@@ -1380,6 +1387,18 @@ ul {
   background-color: #000000;
   color: #ffffff; }
 
+.product-breadcrumb a {
+  font-size: 14px;
+  font-family: 'Avenir-Next';
+  text-transform: initial; }
+
+.product-breadcrumb .breadcrumb li a {
+  color: #000;
+  letter-spacing: 1px; }
+
+.product-breadcrumb .breadcrumb li:last-of-type a {
+  font-family: 'Avenir-Bold'; }
+
 .carousel {
   position: relative; }
 
@@ -1905,3 +1924,154 @@ ul {
 
 .show-more {
   visibility: hidden; }
+
+.product-detail {
+  font-family: 'Avenir-Next'; }
+  .product-detail .pdp-scroll-carosuel .carousel-inner {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: auto;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
+    .product-detail .pdp-scroll-carosuel .carousel-inner::-webkit-scrollbar {
+      display: none; }
+  .product-detail .pdp-scroll-carosuel .carousel-item {
+    display: block; }
+  .product-detail .pdp-scroll-carosuel .carousel-control-prev, .product-detail .pdp-scroll-carosuel .carousel-control-next, .product-detail .pdp-scroll-carosuel .carousel-indicators {
+    display: none; }
+  .product-detail .fa.icon-prev, .product-detail .fa.icon-next {
+    display: none; }
+  .product-detail .product-name {
+    border: 0;
+    color: #393939;
+    display: inline-block;
+    font-family: 'Avenir-Bold';
+    font-size: 30px;
+    font-weight: 700;
+    margin: 34px 0 12px 0;
+    line-height: normal; }
+  .product-detail .sizes-guide {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em; }
+    .product-detail .sizes-guide .link {
+      line-height: normal;
+      text-decoration: underline; }
+  .product-detail .prices .price {
+    text-align: left; }
+  .product-detail .attribute label {
+    font-size: 16px;
+    min-height: 22px; }
+  .product-detail select, .product-detail button, .product-detail .mensButton {
+    border-radius: 0;
+    border: 1px solid #000;
+    color: #000;
+    display: inline-block;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 5px 10px; }
+    .product-detail select option, .product-detail button option, .product-detail .mensButton option {
+      color: #000;
+      font-size: 14px; }
+    .product-detail select:hover, .product-detail button:hover, .product-detail .mensButton:hover {
+      cursor: pointer; }
+    .product-detail select:focus, .product-detail button:focus, .product-detail .mensButton:focus {
+      border-color: #495057; }
+  .product-detail .color-attribute {
+    border: 0;
+    height: auto;
+    padding: 0; }
+  .product-detail .add-to-cart.btn.btn-primary {
+    background: none;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 16px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: 0.3s ease all; }
+    .product-detail .add-to-cart.btn.btn-primary:hover {
+      background-color: #d8d8d8;
+      color: #000 !important;
+      cursor: pointer; }
+  .product-detail .buy-now.btn.btn-primary, .product-detail .add-to-cart-global.btn.btn-primary {
+    background: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    color: #000;
+    font-family: 'Avenir-Bold';
+    font-size: 16px;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: 0.3s ease all; }
+    .product-detail .buy-now.btn.btn-primary:hover, .product-detail .add-to-cart-global.btn.btn-primary:hover {
+      background-color: #fff;
+      color: #000 !important;
+      cursor: pointer; }
+  .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
+    color: #393939;
+    font-size: 30px; }
+  .product-detail .price .sales .value {
+    font-size: 30px; }
+  .product-detail .product-number-rating {
+    border: 0; }
+    .product-detail .product-number-rating div {
+      color: #000;
+      font-size: 12px; }
+  .product-detail hr {
+    border-top: 1px solid #F0F0F4; }
+  .product-detail .description-and-detail .row {
+    margin: 15px 0; }
+  .product-detail .description-and-detail .title.btn {
+    font-size: 16px;
+    line-height: normal;
+    padding-left: 0; }
+  .product-detail .description-and-detail .product-attributes ul {
+    list-style-type: disc; }
+  .product-detail .separator-set-price {
+    border-color: #000;
+    margin: 1.5rem auto; }
+  @media (max-width: 543.98px) {
+    .product-detail .collapsible-xs .title:after {
+      content: url("../images/pdp/plus.svg"); }
+    .product-detail .collapsible-xs.active .title:after {
+      content: url("../images/pdp/less.svg"); } }
+  @media (max-width: 768.98px) {
+    .product-detail .collapsible-sm .title:after {
+      content: url("../images/pdp/plus.svg"); }
+    .product-detail .collapsible-sm.active .title:after {
+      content: url("../images/pdp/less.svg"); } }
+  @media (max-width: 991.98px) {
+    .product-detail .collapsible-md .title:after {
+      content: url("../images/pdp/plus.svg"); }
+    .product-detail .collapsible-md.active .title:after {
+      content: url("../images/pdp/less.svg"); } }
+  @media (max-width: 1199.98px) {
+    .product-detail .collapsible-lg .title:after {
+      content: url("../images/pdp/plus.svg"); }
+    .product-detail .collapsible-lg.active .title:after {
+      content: url("../images/pdp/less.svg"); } }
+  .product-detail .collapsible-xl .title:after {
+    content: url("../images/pdp/plus.svg"); }
+  .product-detail .collapsible-xl.active .title:after {
+    content: url("../images/pdp/less.svg"); }
+
+@media only screen and (min-width: 468px) {
+  .product-detail .product-name {
+    margin: 5px 0 22px 0; } }
+
+@media only screen and (min-width: 1200px) {
+  .sizes-guide img {
+    width: 25px; } }
+
+@media only screen and (max-width: 768px) {
+  .product-detail .custom-margin {
+    margin: 0 20px; } }
+
+@media only screen and (max-width: 997px) {
+  .product-detail .selector-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .product-detail .selector-wrapper div {
+      margin-top: 0; } }
