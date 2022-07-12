@@ -1,8 +1,12 @@
-<div class="col-md-6">
-    <div class="product-images ">
+<div class="col-md-6 mobile-image-details-container">
+    <div class="product-images">
         <isloop items="${product.images['large']}" var="image" status="loopStatus">
             <img src="${image.url}" class="d-block img-fluid mb-3" alt="${image.alt} image number ${image.index}"
                 itemprop="image" />
         </isloop>
+    </div>
+    <div class="d-block d-md-none mobile-fixed-details-wrapper">
+        <!-- Product Description and Details Desktop -->
+        <isinclude template="product/components/descriptionAndDetailsWrapper" />
     </div>
 </div>
