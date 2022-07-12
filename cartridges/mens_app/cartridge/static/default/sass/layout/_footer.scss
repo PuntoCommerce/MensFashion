@@ -51,7 +51,7 @@ footer .subscribe-email {
     border-radius: 0px;
     border: 1px solid #ffffff;
     color: #000000 !important;
-    height: 32px !important;
+    height: 42px !important;
     width: 80px !important;
 }
 
@@ -211,6 +211,10 @@ footer .socialMedia-paymentMethods {
     padding-right: 0px !important;
 }
 
+.newsletter{
+    padding: 20px 60px;
+}
+
 @media (min-width: 1200px) {
     footer .container {
         margin-top: 20px;
@@ -336,6 +340,10 @@ footer .socialMedia-paymentMethods {
     .navbar-header {
         padding-right: 0px !important;
     }
+
+    .newsletter{
+        padding: 20px !important;
+    }
 }
 
 @media (max-width: 769px) {
@@ -360,7 +368,6 @@ footer .socialMedia-paymentMethods {
     .footer-email-signup .newsletter {
         text-align: center;
     }
-
 
     .newsletter .form{
         padding: 0 45px;

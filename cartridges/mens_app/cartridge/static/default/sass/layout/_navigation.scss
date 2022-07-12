@@ -75,7 +75,7 @@
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .nav.navbar-nav {
@@ -275,7 +275,7 @@ ul {
 
 .nav-link.dropdown-toggle,
 .nav-link {
-  font-family: nth($text-font-stack,$avenir-LT-Black)!important;
+  font-family: nth($text-font-stack,$avenir-LT-Std)!important;
 }
 
 #openCustomMenu {

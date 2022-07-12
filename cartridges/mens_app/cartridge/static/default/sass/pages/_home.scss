@@ -57,11 +57,11 @@
 }
 
 .carousel-control-prev {
-  left: 3% !important;
+  left: -3% !important;
 }
 
 .carousel-control-next {
-  right: 3% !important;
+  right: -3% !important;
 }
 
 #customBannerCarousel .ITBC-buttons{
@@ -89,6 +89,17 @@
   margin-bottom: 15px;
 }
 
+.promo-carousel__countdown{
+  justify-content: end;
+  margin-right: 12px;
+}
+
+.promo-carousel__countdown__item .item .number {
+  font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
+}
+.promo-carousel__countdown__item .item .type {
+  font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
+}
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {

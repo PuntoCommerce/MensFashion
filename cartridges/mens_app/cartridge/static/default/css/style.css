@@ -466,6 +466,9 @@ h5, html, body {
 .responsive {
   display: none !important; }
 
+.campaign-banner .campaign-banner-container .campaign-banner .campaign-banner-message .responsive p {
+  text-align: center; }
+
 @media (max-width: 768px) {
   .desk {
     display: none !important; }
@@ -556,7 +559,7 @@ footer .subscribe-email {
   border-radius: 0px;
   border: 1px solid #ffffff;
   color: #000000 !important;
-  height: 32px !important;
+  height: 42px !important;
   width: 80px !important; }
 
 footer .subscribe-email {
@@ -683,6 +686,9 @@ footer .socialMedia-paymentMethods {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 
+.newsletter {
+  padding: 20px 60px; }
+
 @media (min-width: 1200px) {
   footer .container {
     margin-top: 20px;
@@ -759,7 +765,9 @@ footer .socialMedia-paymentMethods {
   footer .footer-container {
     flex-wrap: wrap; }
   .navbar-header {
-    padding-right: 0px !important; } }
+    padding-right: 0px !important; }
+  .newsletter {
+    padding: 20px !important; } }
 
 @media (max-width: 769px) {
   .hecho-con {
@@ -848,7 +856,7 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-LT-Std";
-  font-size: 18px; }
+  font-size: 14px; }
 
 .nav.navbar-nav {
   display: flex;
@@ -999,7 +1007,7 @@ ul {
 
 .nav-link.dropdown-toggle,
 .nav-link {
-  font-family: "Avenir-LT-Std-BlackOblique" !important; }
+  font-family: "Avenir-LT-Std" !important; }
 
 #openCustomMenu {
   background-color: transparent;
@@ -1274,6 +1282,10 @@ ul {
     width: 100%;
     max-width: 100%;
     flex: 1; }
+
+.summary__pricing .strike-through span {
+  color: #444444 !important;
+  opacity: 80%; }
 
 .refinement-bar {
   display: none !important;
@@ -1834,10 +1846,10 @@ ul {
   transform: rotate(180deg); }
 
 .carousel-control-prev {
-  left: 3% !important; }
+  left: -3% !important; }
 
 .carousel-control-next {
-  right: 3% !important; }
+  right: -3% !important; }
 
 #customBannerCarousel .ITBC-buttons {
   position: absolute;
@@ -1858,6 +1870,16 @@ ul {
   -webkit-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
   margin-bottom: 15px; }
+
+.promo-carousel__countdown {
+  justify-content: end;
+  margin-right: 12px; }
+
+.promo-carousel__countdown__item .item .number {
+  font-family: "AvenirLTStd-Heavy" !important; }
+
+.promo-carousel__countdown__item .item .type {
+  font-family: "AvenirLTStd-Heavy" !important; }
 
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),

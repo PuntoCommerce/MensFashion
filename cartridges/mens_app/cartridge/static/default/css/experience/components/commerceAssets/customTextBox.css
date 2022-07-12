@@ -12,7 +12,7 @@
 .customTextBox-component-container h3,
 .customTextBox-component-container h4,
 .customTextBox-component-container strong {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Next";
 }
 
 .customTextBox-component-container s {
@@ -26,4 +26,5 @@
 
 .customTextBox-component-container p {
   font-size: 20px;
+  margin-bottom: 30px;
 }
