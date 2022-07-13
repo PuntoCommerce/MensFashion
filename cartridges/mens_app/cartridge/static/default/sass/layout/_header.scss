@@ -85,4 +85,28 @@ header .navbar-header {
   .suggestions-wrapper {
     width: 100%;
   }
+
+  .favItem{
+    margin-bottom: 7px;
+  }
+
+  .favItem span{
+    margin-left: 10px;
+  }
+
+  #customMenuResponsive .minicart{
+    display: flex;
+    margin-top: 12px !important;
+  }
+
+  #customMenuResponsive .cartLabel{
+    margin-top: 4px;
+    margin-left: 4px;
+    color: #000000 !important;   
+  }
+
+  #customMenuResponsive .nav-link.parent{
+    font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
+  
+  }
 }

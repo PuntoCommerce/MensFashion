@@ -523,7 +523,20 @@ header .navbar-header {
     right: 0px !important; }
   .suggestions,
   .suggestions-wrapper {
-    width: 100%; } }
+    width: 100%; }
+  .favItem {
+    margin-bottom: 7px; }
+  .favItem span {
+    margin-left: 10px; }
+  #customMenuResponsive .minicart {
+    display: flex;
+    margin-top: 12px !important; }
+  #customMenuResponsive .cartLabel {
+    margin-top: 4px;
+    margin-left: 4px;
+    color: #000000 !important; }
+  #customMenuResponsive .nav-link.parent {
+    font-family: "AvenirLTStd-Heavy" !important; } }
 
 /* **************************** FOOTER **************************** */
 footer {
@@ -724,7 +737,12 @@ footer .socialMedia-paymentMethods {
   .socialMedia-paymentMethods {
     display: none; }
   .socialMedia-paymentMethods-mobile {
-    display: block; } }
+    display: block; }
+  .customTextBox-component-container p {
+    margin-bottom: 0; }
+  .items-colum-direction .customTextBox-component-container .item {
+    padding: 0 5px 1rem 2px !important;
+    margin: 10px; } }
 
 @media (max-width: 769px) {
   footer .newsletter {
@@ -799,6 +817,12 @@ footer .socialMedia-paymentMethods {
     display: flex;
     justify-content: center;
     align-items: center; } }
+
+@media (max-width: 543px) {
+  .newsletter .container .form button {
+    font-size: 16px; }
+  .newsletter .container .form input {
+    font-size: 16px; } }
 
 .navbar-header .country-selector,
 .navbar-header .favorites,
@@ -1909,6 +1933,12 @@ ul {
     font-size: 12px; }
   #customBannerCarousel .ITBC-buttons {
     position: initial; } }
+
+@media (max-width: 991px) {
+  .customTextBox-component-container h1 {
+    margin: 5px 0; }
+  .mobile-navTabs {
+    margin: 20px 0; } }
 
 .hero.slant-down::after {
   border-width: 0; }
