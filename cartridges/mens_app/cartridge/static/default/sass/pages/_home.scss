@@ -120,3 +120,14 @@
     position: initial;
   }
 }
+
+@media (max-width: 991px){
+
+  .customTextBox-component-container h1{
+    margin: 5px 0;
+  }
+  
+  .mobile-navTabs{
+    margin: 20px 0;
+  }
+}

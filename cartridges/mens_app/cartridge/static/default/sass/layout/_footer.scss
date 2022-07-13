@@ -259,6 +259,15 @@ footer .socialMedia-paymentMethods {
     .socialMedia-paymentMethods-mobile {
         display: block;
     }
+
+    .customTextBox-component-container p{
+        margin-bottom: 0;
+    }
+
+    .items-colum-direction .customTextBox-component-container .item {
+        padding: 0 5px 1rem 2px !important;
+        margin: 10px;
+    }
 }
 
 @media (max-width: 769px) {
@@ -382,5 +391,16 @@ footer .socialMedia-paymentMethods {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 543px) {
+
+    .newsletter .container .form button{
+        font-size: 16px;
+    }
+
+    .newsletter .container .form input{
+        font-size: 16px;
     }
 }
