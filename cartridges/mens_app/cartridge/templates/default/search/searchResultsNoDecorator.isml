@@ -45,6 +45,9 @@
 
                     <isif condition="${pdict.productSearch.productIds.length > 0}">
                         <div class="row grid-header">
+                           <div class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
+                                <isinclude url="${URLUtils.url("Search-Breadcrums", "cgid", pdict.productSearch.category.id)}"/>
+                            </div>
                             <div class='grid-header__column grid-header__column--1'>
                                 <button class='filters grid-header__column-item grid-header__column-item--right' onclick="toggleFilters()">
                                     <p class='filters__text'>
