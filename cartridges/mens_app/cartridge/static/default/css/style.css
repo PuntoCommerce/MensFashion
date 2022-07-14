@@ -1952,6 +1952,10 @@ ul {
 .show-more {
   visibility: hidden; }
 
+#productdetailpage .product-tile .image-container a .tile-image {
+  max-height: 513px;
+  object-fit: contain; }
+
 .product-detail {
   font-family: "Avenir-Next";
   /* Show the tooltip text when you mouse over the tooltip container */ }
