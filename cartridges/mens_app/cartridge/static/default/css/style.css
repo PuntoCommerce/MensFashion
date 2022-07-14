@@ -1906,11 +1906,14 @@ ul {
     .checkout--topBorder {
       border-top: 1px solid #000000; } }
   .checkout__guess {
-    border-bottom: 1px solid #000; }
+    border-bottom: 1px solid #000000; }
   .checkout__form {
+    color: #000000 !important;
     padding: 10px 0 10px 0;
     border-radius: 0;
     border: 1px solid #000000; }
+    .checkout__form:focus {
+      border: 1px solid #000000; }
   .checkout__text--space {
     margin-left: 2px; }
   .checkout__text--bold {

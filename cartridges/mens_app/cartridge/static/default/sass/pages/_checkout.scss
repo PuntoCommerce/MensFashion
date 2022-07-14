@@ -15,13 +15,18 @@
   }
 
   &__guess {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $text-color-black;
   }
 
   &__form {
+    color: $text-color-black !important;
     padding: 10px 0 10px 0;
     border-radius: 0;
     border: 1px solid $text-color-black;
+
+    &:focus {
+      border: 1px solid $text-color-black;
+    }
   }
 
   &__text {

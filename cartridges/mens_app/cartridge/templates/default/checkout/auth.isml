@@ -2,73 +2,55 @@
   <div class="mt-5 mb-5 checkout">
     
     <div class="row d-flex justify-content-center form-checkout ">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <div class="col-12 pl-5 pr-5 col-md-6 d-flex justify-content-center align-items-center">
         <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-        Envío a domicilio de 5-7 días hábiles
+        ${Resource.msg('check.shipping', 'checkout', null)}
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <div class="col-12 pl-5 pr-5 col-md-6 d-flex justify-content-center align-items-center">
         <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-        Disfruta de meses sin intereses en tus compras, consulta tarjetas participantes</div>
+        ${Resource.msg('check.interest.free', 'checkout', null)}
+      </div>
     </div>
 
     <div class="row d-flex justify-content-center form-checkout">
       <div class="col-12 col-md-6 row p-5 d-flex justify-content-center checkout--rightBorder">
         <div class="row d-flex justify-content-center">
           <div class="checkout__guess pb-5 d-flex justify-content-center flex-column col-9">
-            <a class="mb-3 btn btn--gray btn__small">CONTINUAR COMO INVITADO</a>
-            <p>También puedes pagar sin crear una cuenta, podrás crear una cuenta en otro momento.</p>
+            <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
+            <p>${Resource.msg('msg.pay.without.auth', 'checkout', null)}</p>
           </div>
         </div>
 
         <div class="row d-flex justify-content-center">
           <div class="checkout_create pt-5 d-flex justify-content-center flex-column col-9">
-            <a class="mb-3 btn btn--gray btn__small">CREAR CUENTA NUEVA</a>
-            <p>También puedes pagar sin crear una cuenta, podrás crear una cuenta en otro momento.</p>
+            <a href="${URLUtils.url('Login-Show')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
+            <p>${Resource.msg('msg.create.account', 'checkout', null)}</p>
             <div class="checks">
               <div class="item mb-3">
                 <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                Guarda tu forma de pago, para un pago rápido
+                ${Resource.msg('check.save.payment', 'checkout', null)}
               </div>
               <div class="item mb-3">
                 <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                Ve tu historial de pedidos
+                ${Resource.msg('check.order.record', 'checkout', null)}
               </div>
               <div class="item mb-3">
                 <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                Crea una lista de deseos
+                ${Resource.msg('check.wishlist.create', 'checkout', null)}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center ">
-        <div class="guess pt-5 d-flex flex-column col-9 checkout--topBorder">
-          <h3 class="checkout__text--bold">Clientes registrados</h3>
-          <p>Si eres un usuario registrado, introduce tu dirección de correo electrónico y contraseña.</p>
+        <div class="pt-5 d-flex flex-column col-9 checkout--topBorder">
+          <h3 class="checkout__text--bold">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
+          <p>${Resource.msg('msg.registered.client', 'checkout', null)}</p>
           <div class="checkout_login d-flex justify-content-center flex-column">
-            <div class="mb-4 d-flex flex-column">
-              <div class="d-flex ">
-                <span class="checkout__text--bold">Correo</span> <span class="checkout__text--space">Requerido</span>
-              </div>
-              <input class="checkout__form" placeholder="Correo" type="text" name="" value="">
-            </div>
-            <div class="mb-4 d-flex flex-column">
-              <div class="d-flex ">
-                <span class="checkout__text--bold">Contraseña</span> <span class="checkout__text--space">Requerido</span>
-              </div>
-              <input class="checkout__form" placeholder="Contraseña" type="password" name="" value="">
-            </div>
-            <a class="mb-4 btn btn--gray btn__small" href="">INICIAR SESION</a>
+            <isinclude template="account/components/loginForm" />
           </div>
-
-          <div class="d-flex justify-content-between">
-            <a href="">Olvidaste la contraseña</a>
-            <div>
-              <input type="checkbox" id="cbox2"> <label for="cbox2">Recuérdame</label>
-            </div>
-          </div>
+          
         </div>
-
       </div>
     </div>
   </div>
