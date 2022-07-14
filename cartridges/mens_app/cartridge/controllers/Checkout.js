@@ -7,9 +7,38 @@
 const server = require("server");
 server.extend(module.superModule);
 
-server.get("oAuth", (req, res, next) => {
-  res.render("checkout/auth");
-  next();
-});
+const URLUtils = require("dw/web/URLUtils");
+const csrfProtection = require("*/cartridge/scripts/middleware/csrf");
+const consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
+
+server.get(
+  "oAuth",
+  consentTracking.consent,
+  server.middleware.https,
+  csrfProtection.generateToken,
+  (req, res, next) => {
+    const actionUrl = URLUtils.url("Account-Login", "rurl", 2);
+    let rememberMe = false;
+    if (req.currentCustomer.credentials) {
+      rememberMe = true;
+    }
+
+    const isAuth = req.session;
+
+    const profileForm = server.forms.getForm("profile");
+    profileForm.clear();
+
+    if (req.session.raw.customer.authenticated) {
+      res.redirect(URLUtils.url("Checkout-Begin"));
+    } else {
+      res.render("checkout/auth", {
+        profileForm: profileForm,
+        rememberMe: rememberMe,
+        actionUrl: actionUrl,
+      });
+    }
+    next();
+  }
+);
 
 module.exports = server.exports();
