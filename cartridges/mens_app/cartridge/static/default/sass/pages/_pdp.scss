@@ -1,3 +1,9 @@
+#productdetailpage {
+  & .product-tile .image-container a .tile-image {
+    max-height: 513px;
+    object-fit: contain;
+  }
+}
 .product-detail {
   font-family: "Avenir-Next";
   & .image-details-container {
