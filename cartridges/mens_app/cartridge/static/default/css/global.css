@@ -14014,8 +14014,8 @@ h6 {
     padding-bottom: 26px;
   }
   .cart-and-ipay .btn {
-    width: 98%;
-    margin: 1%;
+    width: 100%;
+    margin: 0;
     display: block;
   }
 }

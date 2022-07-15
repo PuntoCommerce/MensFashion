@@ -1972,6 +1972,13 @@ ul {
 .product-detail {
   font-family: "Avenir-Next";
   /* Show the tooltip text when you mouse over the tooltip container */ }
+  .product-detail #addToWishlist.mensButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .product-detail .scroll-images .carousel-item {
+    margin-bottom: 1rem; }
   .product-detail .image-details-container .carousel-inner {
     display: flex;
     flex-direction: column; }
@@ -1987,7 +1994,7 @@ ul {
   .product-detail .product-details-container {
     background-color: #fff; }
   .product-detail .custom-padding {
-    padding: 0 10px; }
+    padding: 0 15px; }
   .product-detail .mobile-fixed-details-wrapper {
     max-height: 52vh;
     overflow: auto; }
@@ -2024,11 +2031,17 @@ ul {
     .product-detail .prices-container del {
       margin-bottom: 10px;
       font-size: 25px; }
+  .product-detail .prices, .product-detail .sizes-guide {
+    width: fit-content; }
+  .product-detail .prices-size-guide-container {
+    justify-content: space-between; }
   .product-detail .prices {
     display: flex;
     align-items: flex-end; }
     .product-detail .prices .price {
       text-align: left; }
+      .product-detail .prices .price .strike-through {
+        color: #000; }
       .product-detail .prices .price .sales {
         font-size: 30px; }
     .product-detail .prices .range {
@@ -2036,6 +2049,10 @@ ul {
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start; }
+  .product-detail .product-number {
+    color: #000;
+    font-size: 12px;
+    padding: 0; }
   .product-detail .attribute label {
     font-size: 16px;
     min-height: 22px; }
@@ -2047,7 +2064,7 @@ ul {
     color: #000;
     display: inline-block;
     height: calc(1.5em + 0.75rem + 2px);
-    padding: 5px 10px; }
+    padding: 5px 20px; }
     .product-detail select option,
     .product-detail button option,
     .product-detail .mensButton option {
@@ -2185,11 +2202,9 @@ ul {
     overflow: auto; } }
 
 @media only screen and (max-width: 997px) {
-  .product-detail .selector-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); }
-    .product-detail .selector-wrapper div {
-      margin-top: 0; } }
+  .product-detail .selector-wrapper[data-attr="color"] .col-lg-6 {
+    flex: 1;
+    max-width: 100%; } }
 
 @media only screen and (min-width: 468px) {
   .product-detail .product-name {
@@ -2219,4 +2234,6 @@ ul {
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
-    width: 25px; } }
+    width: 25px; }
+  .product-detail .product-number {
+    font-family: 'Avenir-Bold'; } }

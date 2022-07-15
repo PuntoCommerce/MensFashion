@@ -6,6 +6,15 @@
 }
 .product-detail {
   font-family: "Avenir-Next";
+  & #addToWishlist.mensButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & .scroll-images .carousel-item {
+    margin-bottom: 1rem;
+  }
   & .image-details-container {
     & .carousel-inner {
       display: flex;
@@ -28,7 +37,7 @@
     background-color: #fff;
   }
   & .custom-padding {
-    padding: 0 10px;
+    padding: 0 15px;
   }
   & .mobile-fixed-details-wrapper {
     max-height: 52vh;
@@ -74,11 +83,20 @@
       font-size: 25px;
     }
   }
+  .prices, .sizes-guide {
+    width: fit-content;
+  }
+  .prices-size-guide-container {
+    justify-content: space-between;
+  }
   .prices {
     display: flex;
     align-items: flex-end;
     & .price {
       text-align: left;
+      & .strike-through {
+        color: #000;
+      }
       & .sales {
         font-size: 30px;
       }
@@ -89,6 +107,11 @@
       justify-content: flex-start;
       align-items: flex-start;
     }
+  }
+  & .product-number {
+    color: #000;
+    font-size: 12px;
+    padding: 0;
   }
   & .attribute label {
     font-size: 16px;
@@ -102,7 +125,7 @@
     color: #000;
     display: inline-block;
     height: calc(1.5em + 0.75rem + 2px);
-    padding: 5px 10px;
+    padding: 5px 20px;
     & option {
       color: #000;
       font-size: 14px;
@@ -290,14 +313,11 @@
 }
 @media only screen and (max-width: 997px) {
   .product-detail {
-    & .selector-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      & div {
-        margin-top: 0;
+      & .selector-wrapper[data-attr="color"] .col-lg-6 {
+        flex: 1;
+        max-width: 100%;
       }
     }
-  }
 }
 @media only screen and (min-width: 468px) {
   .product-detail {
@@ -338,6 +358,11 @@
   .sizes-guide {
     & img {
       width: 25px;
+    }
+  }
+  .product-detail {
+    & .product-number {
+      font-family: 'Avenir-Bold';
     }
   }
 }

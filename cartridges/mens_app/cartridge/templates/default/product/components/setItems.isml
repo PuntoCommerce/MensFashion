@@ -25,14 +25,14 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row prices-size-guide-container">
                                 <!-- Prices -->
-                                <div class="prices col-8">
+                                <div class="prices col-lg-8">
                                     <isset name="price" value="${product.price}" scope="page" />
                                     <isinclude template="product/components/pricing/main" />
                                 </div>
                                 <!-- Trigger Modal Sizes Guide -->
-                                <div class="sizes-guide d-flex justify-content-start align-items-end col-4">
+                                <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
                                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
                                         alt="Guia de tallas" />
                                     <!-- Button trigger modal -->
@@ -42,9 +42,12 @@
                                 </div>
                             </div>
 
-                            <div class="row d-xs-block d-md-none">
+                            <div class="row">
                                 <div class="col">
-                                    <isinclude template="product/components/pidRating" />
+                                    <!-- Product Number -->
+                                    <div class="product-number">
+                                        <isinclude template="product/components/productNumber" />
+                                    </div>
                                 </div>
                             </div>
 
@@ -72,7 +75,9 @@
                                         <!-- Add to wishlist -->
                                         <div class="attribute col-lg-2">
                                             <label for="addToWishlist" class="d-none d-lg-block"></label>
-                                            <span class="mensButton" id="addToWishlist">Wish</span>
+                                            <span class="mensButton" id="addToWishlist"><img
+                                                    src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
+                                                    alt="Guia de tallas" /></span>
                                         </div>
                                     </div>
                                 </isloop>

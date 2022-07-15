@@ -19,23 +19,35 @@
 
             <div class="row d-xs-block d-md-none">
                 <div class="col">
-                    <isinclude template="product/components/pidRating" />
+                    <!-- Product Number -->
+                    <div class="product-number">
+                        <isinclude template="product/components/productNumber" />
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row prices-size-guide-container">
                 <!-- Prices -->
-                <div class="prices col-6">
+                <div class="prices col-lg-8">
                     <isset name="price" value="${product.price}" scope="page" />
                     <isinclude template="product/components/pricing/main" />
                 </div>
                 <!-- Trigger Modal Sizes Guide -->
-                <div class="sizes-guide d-flex justify-content-start align-items-end col-6">
+                <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->
                     <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
                         ${Resource.msg('size.guide', 'common', null)}
                     </button>
+                </div>
+            </div>
+
+            <div class="row d-none d-md-block">
+                <div class="col-12">
+                    <!-- Product Number -->
+                    <div class="product-number">
+                        <isinclude template="product/components/productNumber" />
+                    </div>
                 </div>
             </div>
 
@@ -49,19 +61,19 @@
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
                     <div class="row selector-wrapper" data-attr="${attr.id}">
-                        <div class="col-lg-6">
-                            <isinclude template="product/components/variationAttribute" />
-                        </div>
+                        <isinclude template="product/components/variationAttribute" />
 
                         <isif condition="${attributeStatus.last && !isBundle}">
                             <!-- Quantity Drop Down Menu -->
-                            <div class="attribute quantity col-lg-4">
+                            <div class="attribute quantity col-5 col-lg-4">
                                 <isinclude template="product/components/quantity" />
                             </div>
                             <!-- Add to wishlist -->
-                            <div class="attribute col-lg-2">
+                            <div class="attribute col-2 col-lg-2">
                                 <label for="addToWishlist" class="d-none d-lg-block"></label>
-                                <span class="mensButton" id="addToWishlist">Wish</span>
+                                <span class="mensButton" id="addToWishlist"><img
+                                        src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
+                                        alt="Guia de tallas" /></span>
                             </div>
                         </isif>
                     </div>
@@ -91,9 +103,6 @@
                         </div>
                     </div>
                 </isif>
-
-                <!-- Product Availability -->
-                <isinclude template="product/components/productAvailability" />
 
                 <div class="add-to-cart-actions mb-3">
                     <!-- Cart and [Optionally] Apple Pay -->
