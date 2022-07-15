@@ -1888,6 +1888,12 @@ ul {
   content: url(../images/carrucel-arrow.svg);
   transform: rotate(180deg); }
 
+#customBannerCarousel .carousel-control-prev {
+  left: 3% !important; }
+
+#customBannerCarousel .carousel-control-next {
+  right: 3% !important; }
+
 .carousel-control-prev {
   left: -3% !important; }
 
@@ -1941,7 +1947,11 @@ ul {
   .customTextBox-component-container h1 {
     margin: 5px 0; }
   .mobile-navTabs {
-    margin: 20px 0; } }
+    margin: 20px 0; }
+  .customTextBox-component-container .item {
+    padding-top: 0 !important; }
+  .customTextBox-component-container strong {
+    font-family: "AvenirLTStd-Heavy" !important; } }
 
 .hero.slant-down::after {
   border-width: 0; }

@@ -56,6 +56,14 @@
   transform: rotate(180deg);
 }
 
+#customBannerCarousel .carousel-control-prev{
+  left: 3% !important;
+}
+
+#customBannerCarousel .carousel-control-next{
+  right: 3% !important;
+}
+
 .carousel-control-prev {
   left: -3% !important;
 }
@@ -129,5 +137,13 @@
   
   .mobile-navTabs{
     margin: 20px 0;
+  }
+
+  .customTextBox-component-container .item{
+    padding-top: 0 !important;
+  }
+
+  .customTextBox-component-container strong{
+    font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
   }
 }
