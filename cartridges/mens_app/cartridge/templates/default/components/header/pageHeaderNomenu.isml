@@ -1,12 +1,21 @@
 <header>
     <isinclude template="/components/header/skipNav" />
     <nav role="navigation">
-        <div class="header container">
-            <div class="col-12">
-                <div class="navbar-header brand checkout row">
+        <div class="header container d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-between align-items-center checkout header">
+                <div class="d-none d-sm-block">
+                    <a href="${URLUtils.url('Home-Show')}">Seguir comprando</a>
+                </div>
+                <div class="checkout logo row">
                     <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
                         <img class="" src="${URLUtils.staticURL('/images/mens_logo_2.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
                     </a>
+                </div>
+                <div class="d-none d-sm-block">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img src="${URLUtils.staticURL('/images/lock.svg')}" alt="lock"/>
+                        <span class="checkout__text--space">Compra segura</span>
+                    </div>
                 </div>
             </div>
         </div>

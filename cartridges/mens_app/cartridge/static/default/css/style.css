@@ -515,15 +515,14 @@ header .navbar-header {
   .suggestions-wrapper {
     width: 100%; } }
 
-.brand.checkout {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  left: 50%; }
-  @media only screen and (max-width: 56.25em) {
-    .brand.checkout a {
-      left: -25%;
-      position: relative; } }
+.checkout.logo img {
+  height: 2em; }
+
+.checkout.header {
+  padding: 2em; }
+  @media only screen and (max-width: 37.5em) {
+    .checkout.header {
+      justify-content: center !important; } }
 
 /* **************************** FOOTER **************************** */
 footer {
@@ -1915,6 +1914,6 @@ ul {
     .checkout__form:focus {
       border: 1px solid #000000; }
   .checkout__text--space {
-    margin-left: 2px; }
+    margin-left: 5px; }
   .checkout__text--bold {
     font-family: "AvenirLTStd-Heavy"; }

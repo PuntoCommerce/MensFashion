@@ -83,16 +83,16 @@ header .navbar-header {
   }
 }
 
-.brand.checkout {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  left: 50%;
-
-  @include respond(tab-port-max) {
-    a {
-      left: -25%;
-      position: relative;
+.checkout {
+  &.logo {
+    img {
+      height: 2em;
+    }
+  }
+  &.header {
+    padding: 2em;
+    @include respond(phone-max) {
+      justify-content: center !important;
     }
   }
 }
