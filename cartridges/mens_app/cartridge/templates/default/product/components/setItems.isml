@@ -27,12 +27,12 @@
 
                             <div class="row">
                                 <!-- Prices -->
-                                <div class="prices col-6">
+                                <div class="prices col-8">
                                     <isset name="price" value="${product.price}" scope="page" />
                                     <isinclude template="product/components/pricing/main" />
                                 </div>
                                 <!-- Trigger Modal Sizes Guide -->
-                                <div class="sizes-guide d-flex justify-content-start align-items-end col-6">
+                                <div class="sizes-guide d-flex justify-content-start align-items-end col-4">
                                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
                                         alt="Guia de tallas" />
                                     <!-- Button trigger modal -->

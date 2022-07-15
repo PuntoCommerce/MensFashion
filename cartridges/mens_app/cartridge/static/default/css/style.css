@@ -355,6 +355,9 @@ html {
 .page {
   overflow-x: hidden; }
 
+.nav-link.dropdown-toggle, .category-item a {
+  text-transform: uppercase; }
+
 @font-face {
   font-family: "Avenir-LT-Std";
   src: url("../fonts/AvenirLTStd-Light.otf") format("opentype"); }
