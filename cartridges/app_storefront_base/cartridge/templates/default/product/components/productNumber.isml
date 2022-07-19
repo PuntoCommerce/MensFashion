@@ -1,2 +1,2 @@
 ${Resource.msg('label.item', 'product', null)}
-<span class="product-id">${JSON.stringify(product)}</span>
+<span class="product-id">${product.id}</span>
