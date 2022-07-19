@@ -1,0 +1,4 @@
+<div class="store-locator-link-container d-flex">
+    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/store_locator_link.svg')}" alt="Ubicar Tiendas Link" />
+    <a href="">${Resource.msg('link.store.locator', 'pdp', null)}</a>
+</div>

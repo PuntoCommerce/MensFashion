@@ -18,15 +18,6 @@
                 <isinclude template="product/components/pdpDetailsWrapper" />
             </div>
         </div>
-        <div>
-            <isslot id="cts-recommendations-m" description="Complete the set products" context="global"
-                context-object="${pdict.product.raw}" />
-        </div>
-
-        <div class="recommendations">
-            <isslot id="product-recommendations-m" description="Recommended products" context="global"
-                context-object="${pdict.product.raw}" />
-        </div>
     </div>
 </isobject>
 <!-- Modal Size Guide -->
