@@ -2055,6 +2055,9 @@ ul {
     padding: 0; }
   .product-detail .attribute label {
     font-size: 16px;
+    min-height: 13px; }
+  .product-detail .attribute .wishlist-btn-label {
+    font-size: 16px;
     min-height: 22px; }
   .product-detail select,
   .product-detail button,

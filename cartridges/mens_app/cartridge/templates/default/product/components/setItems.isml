@@ -5,137 +5,16 @@
         <div class="container product-detail set-item" data-pid="${product.id}">
 
             <div class="row">
-                <!-- Product Images Scroll -->
+                <!-- Product Images Carousel -->
                 <isinclude template="product/components/imageCarousel" />
-
-                <div class="col-12 col-sm-6">
-                    <div class="row justify-content-center">
-                        <div class="col-11 col-lg-8">
-                            <!--Breadcrumbs-->
-                            <div class="row">
-                                <div class="product-breadcrumb col d-none d-md-block">
-                                    <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
-                                </div>
-                            </div>
-
-                            <!-- Product Name -->
-                            <div class="row">
-                                <div class="col">
-                                    <h1 class="product-name">${product.productName}</h1>
-                                </div>
-                            </div>
-
-                            <div class="row prices-size-guide-container">
-                                <!-- Prices -->
-                                <div class="prices col-lg-8">
-                                    <isset name="price" value="${product.price}" scope="page" />
-                                    <isinclude template="product/components/pricing/main" />
-                                </div>
-                                <!-- Trigger Modal Sizes Guide -->
-                                <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
-                                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
-                                        alt="Guia de tallas" />
-                                    <!-- Button trigger modal -->
-                                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
-                                        ${Resource.msg('size.guide', 'common', null)}
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Product Number -->
-                                    <div class="product-number">
-                                        <isinclude template="product/components/productNumber" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="attributes">
-                                <!-- Attributes and Quantity -->
-                                <iscomment>
-                                    <isinclude template="product/components/mainAttributes" />
-                                </iscomment>
-
-                                <isset name="isBundle" value="${false}" scope="page" />
-                                <isset name="loopState" value="{count: 1}" scope="page" />
-                                <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
-                                    <div class="row" data-attr="${attr.id}">
-                                        <div class="col-8">
-                                            <isinclude template="product/components/variationAttribute" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <isif condition="${attributeStatus.last && !isBundle}">
-                                            <!-- Quantity Drop Down Menu -->
-                                            <div class="attribute quantity col-4">
-                                                <isinclude template="product/components/quantity" />
-                                            </div>
-                                        </isif>
-                                        <!-- Add to wishlist -->
-                                        <div class="attribute col-lg-2">
-                                            <label for="addToWishlist" class="d-none d-lg-block"></label>
-                                            <span class="mensButton" id="addToWishlist"><img
-                                                    src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
-                                                    alt="Guia de tallas" /></span>
-                                        </div>
-                                    </div>
-                                </isloop>
-
-                                <isif condition="${!product.variationAttributes}">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="simple-quantity">
-                                                <isinclude template="product/components/quantity" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </isif>
-
-                                <div class="product-options">
-                                    <isif condition="${product.options && product.options.length > 0}">
-                                        <isinclude template="product/components/options" />
-                                    </isif>
-                                </div>
-
-                                <!-- Size Chart -->
-                                <isif condition="${product.variationAttributes && product.sizeChartId}">
-                                    <div class="row">
-                                        <div class="size-chart col-12">
-                                            <isinclude template="product/components/sizeChart" />
-                                        </div>
-                                    </div>
-                                </isif>
-
-                                <!-- Product Availability -->
-                                <isinclude template="product/components/productAvailability" />
-
-                                <div class="add-to-cart-actions mb-3">
-                                    <!-- Cart and [Optionally] Apple Pay -->
-                                    <isinclude template="product/components/addToCartProduct" />
-                                </div>
-
-                                <div class="add-to-cart-and-checkout mb-3">
-                                    <!-- Cart and Checkout -->
-                                    <isinclude template="product/components/buyNowProduct" />
-                                </div>
-
-                                <isset name="loopState" value="{count: 1}" scope="page" />
-                                <isinclude template="product/components/descriptionAndDetails" />
-
-                                <!-- Applicable Promotions -->
-                                <div class="row">
-                                    <div class="col-12 promotions">
-                                        <isinclude template="product/components/promotionsPdp" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="d-none d-md-block col-md-6">
+                    <!-- Product Description and Details Desktop -->
+                    <isinclude template="product/components/pdpDetailsWrapper" />
                 </div>
+            </div>
 
-                <isif condition="${loopState.last === false}">
-                    <hr />
-                </isif>
+            <isif condition="${loopState.last === false}">
+                <hr />
+            </isif>
     </isloop>
 </div>
