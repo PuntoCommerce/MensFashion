@@ -2915,7 +2915,7 @@ input[type="submit"].btn-block {
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 0.1875rem;
 }
 .dropdown-menu-left {

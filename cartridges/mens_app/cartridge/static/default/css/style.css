@@ -533,7 +533,7 @@ header .navbar-header {
     margin-left: 10px; }
   #customMenuResponsive .minicart {
     display: flex;
-    margin-top: 12px !important; }
+    margin-bottom: 12px !important; }
   #customMenuResponsive .cartLabel {
     margin-top: 4px;
     margin-left: 4px;
@@ -1751,7 +1751,8 @@ ul {
   font-size: 13px !important;
   color: #ffffff !important;
   margin-top: 0px !important;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px !important;
+  text-align: center; }
 
 .campaign-banner img {
   vertical-align: text-bottom !important; }

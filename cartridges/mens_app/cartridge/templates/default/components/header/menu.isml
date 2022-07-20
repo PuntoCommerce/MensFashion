@@ -78,17 +78,17 @@
                         <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
                     </li>
                     <li>
-                        <a href="" class="d-flex justify-content-start align-items-center">
-                            <img class="chat-boot" src="${URLUtils.staticURL('/images/chat.svg')}" alt="NECESITAS AYUDA"/>
-                            <span>${Resource.msg('needhelp.label.mobile.menu', 'menu', null)}</span>
-                        </a>
-                    </li>
-                    <li>
                         <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
                             <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
                             <span class="cartLabel">${Resource.msg('cart.label.mobile.menu', 'menu', null)}</span>
                         </div>
                     
+                    </li>
+                    <li>
+                        <a href="" class="d-flex justify-content-start align-items-center">
+                            <img class="chat-boot" src="${URLUtils.staticURL('/images/chat.svg')}" alt="NECESITAS AYUDA"/>
+                            <span>${Resource.msg('needhelp.label.mobile.menu', 'menu', null)}</span>
+                        </a>
                     </li>
                 </ul>
             </div>
