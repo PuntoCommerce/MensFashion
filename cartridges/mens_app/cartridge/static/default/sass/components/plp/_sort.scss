@@ -20,6 +20,7 @@
         appearance: none;
         border: none;
         padding: 0;
+        font-size: 0 !important;
         
         &::-ms-expand {
             display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/

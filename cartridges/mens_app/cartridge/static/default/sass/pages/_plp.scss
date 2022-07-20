@@ -14,3 +14,17 @@
 .show-more {
   visibility: hidden;
 }
+
+@media only screen and (min-width: 37.5em) {
+    .grid-header__column-item--right {
+      margin-right: 150px; } 
+  }
+
+  .summary__name{
+    height: 50px !important;
+  }
+
+
+  .container-custom-plp  .highlight {
+      left: 5px;
+  }  

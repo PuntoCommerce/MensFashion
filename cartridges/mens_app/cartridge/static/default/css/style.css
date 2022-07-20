@@ -1363,7 +1363,8 @@ ul {
     -o-appearance: none;
     appearance: none;
     border: none;
-    padding: 0; }
+    padding: 0;
+    font-size: 0 !important; }
     .sort .custom-select::-ms-expand {
       display: none;
       /*Evita que se muestre la flecha por defecto en versiones de IE*/ }
@@ -1965,6 +1966,16 @@ ul {
 
 .show-more {
   visibility: hidden; }
+
+@media only screen and (min-width: 37.5em) {
+  .grid-header__column-item--right {
+    margin-right: 150px; } }
+
+.summary__name {
+  height: 50px !important; }
+
+.container-custom-plp .highlight {
+  left: 5px; }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
