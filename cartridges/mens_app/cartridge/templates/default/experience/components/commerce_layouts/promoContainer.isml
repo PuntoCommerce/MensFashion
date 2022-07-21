@@ -1,5 +1,5 @@
 <div class='promo-container'>
-    <div class="promo-carousel col-10">
+    <div class="promo-carousel col-12">
         <isif condition="${pdict.title}">
             <div class="row">
                 <div class="promo-carousel__headings row">
