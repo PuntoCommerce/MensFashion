@@ -1,0 +1,13 @@
+{
+    "name": "Is Full Width Container",
+    "description": "This component render a custom size container on full width",
+    "group": "Habers_Layouts",
+    "attribute_definition_groups": [],
+    "region_definitions": [
+        {
+            "id": "isFullWidth",
+            "name": "Container",
+            "component_type_exclusions": []
+        }
+    ]
+}

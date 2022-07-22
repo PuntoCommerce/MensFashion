@@ -15267,3 +15267,15 @@ div.availability {
   top: 0.4em;
   width: 0.8em;
 }
+.isFullWidth {
+  width: 100vw;
+}
+.isFullWidth .carousel-inner {
+  width: 100%;
+}
+.isFullWidth .carousel-inner .carousel-control-prev {
+  left: 3% !important;
+}
+.isFullWidth .carousel-inner .carousel-control-next {
+  right: 3% !important;
+}
