@@ -1889,11 +1889,10 @@ ul {
   opacity: 1; }
 
 .carousel-control-prev::after {
-  content: url(../images/carrucel-arrow.svg); }
+  content: url(../images/pdp/arrow_left_38.svg); }
 
 .carousel-control-next::after {
-  content: url(../images/carrucel-arrow.svg);
-  transform: rotate(180deg); }
+  content: url(../images/pdp/arrow_right_38.svg); }
 
 #customBannerCarousel .carousel-control-prev {
   left: 3% !important; }
