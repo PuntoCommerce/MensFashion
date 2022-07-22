@@ -22,6 +22,10 @@
   .responsive {
     display: block !important;
   }
+
+  header .main-menu{
+    margin-top: 0 !important;
+  }
 }
 
 /* @media (max-width: 991px) {
@@ -86,10 +90,6 @@ header .navbar-header {
     width: 100%;
   }
 
-  .favItem{
-    margin-bottom: 7px;
-  }
-
   .favItem span{
     margin-left: 10px;
   }
@@ -109,4 +109,8 @@ header .navbar-header {
     font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
   
   }
+}
+
+header .main-menu{
+  margin-top: 24px;
 }

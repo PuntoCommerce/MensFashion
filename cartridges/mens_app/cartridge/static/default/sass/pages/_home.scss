@@ -78,8 +78,12 @@
 }
 
 .ITBC-content .btn-ITBC{
-  height: 71px;
+  height: 71px;  
+  font-family: nth($text-font-stack,$avenir-Next)!important ; 
+  font-weight: 600;
 }
+
+
 
 .ITBC-content .btn-ITBC:hover{
   background-color: #000000;
@@ -88,6 +92,7 @@
 
 .customTextBox-component-container a u{
   text-decoration: none;
+  font-size: 14px;
 }
 
 .experience-commerce_layouts-navTabs{
@@ -100,7 +105,6 @@
 .promo-carousel__countdown{
   margin-right: 12px;
 }
-
 
 .promo-carousel__countdown__item .item .number {
   font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
