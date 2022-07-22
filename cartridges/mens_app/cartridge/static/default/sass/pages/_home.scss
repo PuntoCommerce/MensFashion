@@ -98,9 +98,9 @@
 }
 
 .promo-carousel__countdown{
-  justify-content: end;
   margin-right: 12px;
 }
+
 
 .promo-carousel__countdown__item .item .number {
   font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
@@ -145,5 +145,9 @@
 
   .customTextBox-component-container strong{
     font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
+  }
+
+  .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region{
+    margin-bottom: 0 !important;
   }
 }

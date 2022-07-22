@@ -712,6 +712,9 @@ footer .socialMedia-paymentMethods {
 .newsletter {
   padding: 20px 60px; }
 
+.content-asset {
+  padding: 0 25px; }
+
 @media (min-width: 1200px) {
   footer .container {
     margin-top: 20px;
@@ -745,7 +748,9 @@ footer .socialMedia-paymentMethods {
     margin-bottom: 0; }
   .items-colum-direction .customTextBox-component-container .item {
     padding: 0 5px 1rem 2px !important;
-    margin: 10px; } }
+    margin: 10px; }
+  .newsletter p {
+    font-size: 18px; } }
 
 @media (max-width: 769px) {
   footer .newsletter {
@@ -1923,7 +1928,6 @@ ul {
   margin-bottom: 15px; }
 
 .promo-carousel__countdown {
-  justify-content: end;
   margin-right: 12px; }
 
 .promo-carousel__countdown__item .item .number {
@@ -1953,7 +1957,9 @@ ul {
   .customTextBox-component-container .item {
     padding-top: 0 !important; }
   .customTextBox-component-container strong {
-    font-family: "AvenirLTStd-Heavy" !important; } }
+    font-family: "AvenirLTStd-Heavy" !important; }
+  .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
+    margin-bottom: 0 !important; } }
 
 .hero.slant-down::after {
   border-width: 0; }
