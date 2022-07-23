@@ -14,30 +14,17 @@
 <isset name="product" value="${pdict.product}" scope="page" />
 <isobject object="${product.raw}" view="detail" />
 
+<!-- Modal Size Guide -->
+<isinclude template="product/components/modalSizeGuide" />
+
 <div class="container product-detail" data-pid="${product.id}">
-    <div class="row">
-        <div class="col-12">
-            <!---Breadcrumbs--->
-            <div class="product-breadcrumb col">
-                <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
-            </div>
-
-            <!-- Product Name -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="product-name">${product.productName}</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row product-bundle">
-        <div class="row">
+    <div class="product-bundle">
+        <div class="row justify-content-center">
             <!-- Product Images Carousel -->
             <isinclude template="product/components/imageCarousel" />
 
-            <div class="col-lg-6 row justify-content-center h-100">
-                <div class="col-9">
+            <div class="col-md-6 justify-content-center h-100">
+                <div class="col-lg-9">
                     <!--Breadcrumbs-->
                     <div class="product-breadcrumb col d-none d-md-block">
                         <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
@@ -47,15 +34,6 @@
                     <div class="row">
                         <div class="col">
                             <span class="product-name">${product.productName}</span>
-                        </div>
-                    </div>
-
-                    <div class="row d-xs-block d-md-none">
-                        <div class="col">
-                            <!-- Product Number -->
-                            <div class="product-number">
-                                <isinclude template="product/components/productNumber" />
-                            </div>
                         </div>
                     </div>
 
@@ -99,20 +77,19 @@
                             </div>
                         </isloop>
 
-                        <!-- Add to wishlist -->
-                        <div class="attribute col-2 col-lg-2">
-                            <label for="addToWishlist" class="d-none d-lg-block wishlist-btn-label"></label>
-                            <span class="mensButton" id="addToWishlist"><img
-                                    src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
-                                    alt="Guia de tallas" /></span>
-                        </div>
-
                         <isif condition="${!product.variationAttributes}">
                             <div class="row">
-                                <div class="col-12">
+                                <div class="col-6">
                                     <div class="simple-quantity">
                                         <isinclude template="product/components/quantity" />
                                     </div>
+                                </div>
+                                <!-- Add to wishlist -->
+                                <div class="attribute col-6">
+                                    <label for="addToWishlist" class="d-none d-lg-block wishlist-btn-label"></label>
+                                    <span class="mensButton" id="addToWishlist"><img
+                                            src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
+                                            alt="Guia de tallas" /></span>
                                 </div>
                             </div>
                         </isif>
@@ -131,6 +108,16 @@
                                 </div>
                             </div>
                         </isif>
+
+                        <div class="add-to-cart-actions mb-3">
+                            <!-- Cart and [Optionally] Apple Pay -->
+                            <isinclude template="product/components/addToCartGlobal" />
+                        </div>
+
+                        <div class="add-to-cart-and-checkout mb-3">
+                            <!-- Cart and Checkout -->
+                            <isinclude template="product/components/buyNowProduct" />
+                        </div>
 
                         <isinclude template="product/components/descriptionAndDetails" />
 
@@ -153,41 +140,9 @@
         </div>
     </div>
 
-    <hr>
+    <hr />
 
     <isinclude template="product/components/bundleItems" />
 
-    <hr>
-
-    <div class="row">
-        <div class="col-12 col-sm-6 offset-sm-6 bundle-footer">
-            <!-- Quantity -->
-            <isset name="loopState" value="{count: 1}" scope="page" />
-            <isset name="product" value="${bundle}" scope="page" />
-            <isinclude template="product/components/quantity" />
-
-            <!-- Availability -->
-            <div class="availability clearfix global-availability" data-ready-to-order="${bundle.readyToOrder}">
-                <isinclude template="product/components/availabilityBundleContainer" />
-            </div>
-
-            <div class="col-12 prices-add-to-cart-actions">
-                <!-- Prices -->
-                <div class="prices">
-                    <isset name="price" value="${product.price}" scope="page" />
-                    <isinclude template="product/components/pricing/main" />
-                </div>
-
-                <!-- Cart and [Optionally] Apple Pay -->
-                <isinclude template="product/components/addToCartGlobal" />
-            </div>
-
-        </div>
-    </div>
-
-    <isinclude template="product/components/descriptionAndDetails" />
-
-    <div class="recommendations">
-        <isslot id="product-recommendations-m" description="Recommended products" context="global" />
-    </div>
+    <hr />
 </div>

@@ -2048,7 +2048,8 @@ ul {
     .product-detail .prices-container del {
       margin-bottom: 10px;
       font-size: 25px; }
-  .product-detail .prices, .product-detail .sizes-guide {
+  .product-detail .prices,
+  .product-detail .sizes-guide {
     width: fit-content; }
   .product-detail .prices-size-guide-container {
     justify-content: space-between; }
@@ -2216,14 +2217,39 @@ ul {
         font-size: 16px;
         text-decoration: underline; }
 
-.product-set-detail .set-item .carousel-control-prev, .product-bundle .set-item .carousel-control-prev {
+.product-bundle .carousel-item img {
+  margin: 0 auto; }
+
+.product-bundle .carousel-control-next {
+  right: 3% !important; }
+
+.product-bundle .carousel-control-prev {
+  left: 3% !important; }
+
+.product-detail.bundle-item .carousel-item img {
+  margin: 0 auto; }
+
+.product-detail.bundle-item .carousel-control-next {
+  right: 3% !important; }
+
+.product-detail.bundle-item .carousel-control-prev {
+  left: 3% !important; }
+
+.product-detail.bundle-item .carousel-indicators {
+  display: none; }
+
+.product-set-detail .set-item .carousel-control-prev,
+.product-bundle .set-item .carousel-control-prev {
   left: 0% !important; }
-  .product-set-detail .set-item .carousel-control-prev:after, .product-bundle .set-item .carousel-control-prev:after {
+  .product-set-detail .set-item .carousel-control-prev:after,
+  .product-bundle .set-item .carousel-control-prev:after {
     content: url(../images/pdp/arrow_left_38.svg); }
 
-.product-set-detail .set-item .carousel-control-next, .product-bundle .set-item .carousel-control-next {
+.product-set-detail .set-item .carousel-control-next,
+.product-bundle .set-item .carousel-control-next {
   right: 0% !important; }
-  .product-set-detail .set-item .carousel-control-next:after, .product-bundle .set-item .carousel-control-next:after {
+  .product-set-detail .set-item .carousel-control-next:after,
+  .product-bundle .set-item .carousel-control-next:after {
     content: url(../images/pdp/arrow_right_38.svg);
     transform: rotate(0); }
 
@@ -2267,4 +2293,6 @@ ul {
   .sizes-guide img {
     width: 25px; }
   .product-detail .product-number {
-    font-family: 'Avenir-Bold'; } }
+    font-family: "Avenir-Bold"; }
+  .modal-dialog.size-guide-modal .modal-content {
+    width: 50vw; } }
