@@ -73,16 +73,24 @@
                         </div>
                         <!---totals, and checkout actions--->
                         <div class="col-sm-6 col-12">
-                            <isinclude template="cart/cartPromoCode" />
-                            <div class="coupons-and-promos">
-                                <isinclude template="cart/cartCouponDisplay" />
+                            <div class="checkout__totals checkout__text">
+                                
+                                <isinclude template="cart/cartPromoCode" />
+                                <div class="coupons-and-promos">
+                                    <isinclude template="cart/cartCouponDisplay" />
+                                </div>
+                                <div class="row">
+                                    <isinclude template="cart/cartShippingMethodSelection" />
+                                </div>
+                                <isinclude template="cart/cartTotals" />
+                                <div class="row d-none d-sm-block">
+                                    <div class="col-12 ">
+                                        <isinclude template="cart/checkoutButtons" />
+                                    </div>
+                                </div>
                             </div>
-                            <div class="row">
-                                <isinclude template="cart/cartShippingMethodSelection" />
-                            </div>
-                            <isinclude template="cart/cartTotals" />
-                            <div class="row">
-                                <div class="col-12 checkout-continue">
+                            <div class="row d-block d-sm-none mt-3">
+                                <div class="col-12">
                                     <isinclude template="cart/checkoutButtons" />
                                 </div>
                             </div>

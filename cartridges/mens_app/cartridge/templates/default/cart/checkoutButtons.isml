@@ -1,6 +1,6 @@
 <div class="mb-sm-3">
     <a href="${URLUtils.https('Checkout-oAuth')}"
-        class="btn btn-primary btn-block checkout-btn ${pdict.valid.error ? 'disabled' : ''}" role="button">
+        class="btn btn--dark btn__small ${pdict.valid.error ? 'disabled' : ''}" role="button">
         ${Resource.msg('button.checkout', 'cart', null)}
     </a>
 </div>

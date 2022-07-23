@@ -27,12 +27,24 @@
 
   &__form {
     color: $text-color-black !important;
-    padding: 10px 0 10px 0;
+    padding: 10px 5px 10px 5px;
     border-radius: 0;
     border: 1px solid $text-color-black;
+    font-family: nth($text-font-stack, $avenir-LT-Std);
+    font-size: $font-size-minimal;
+
+    &::placeholder {
+      font-family: nth($text-font-stack, $avenir-LT-Std);
+      font-size: $font-size-minimal;
+      color: $text-color-black !important;
+    }
 
     &:focus {
       border: 1px solid $text-color-black;
+    }
+
+    &--padding-half {
+      padding: 5px 5px 5px 5px;
     }
   }
 
@@ -64,7 +76,7 @@
 
   &__text {
     color: $text-color-black !important;
-    font-family: nth($text-font-stack, $avenir-Next);
+    font-family: nth($text-font-stack, $avenir-Next) !important;
     font-size: $font-size-minimal;
 
     &--space {
@@ -85,5 +97,11 @@
     @include respond(tab-port-max) {
       height: 300px;
     }
+  }
+
+  &__totals {
+    background-color: $white-color !important;
+    padding: 20px;
+    border: 1px solid $text-color-black;
   }
 }

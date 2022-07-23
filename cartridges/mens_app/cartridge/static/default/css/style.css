@@ -1731,9 +1731,19 @@ ul {
     .btn-primary:hover, .btn--gray:hover {
       background-color: #000000;
       color: #ffffff !important; }
+  .btn--dark {
+    background-color: #000000;
+    color: #ffffff !important; }
+    .btn--dark:hover {
+      background-color: #ffffff;
+      color: #000000 !important;
+      border: 1px solid #000000; }
   .btn__small {
     font-size: 14px;
     padding: 6px; }
+  .btn__small-b {
+    font-size: 14px;
+    padding: 8px; }
   .btn:focus {
     box-shadow: none; }
 
@@ -1913,11 +1923,19 @@ ul {
           border-bottom: none; } }
   .checkout__form {
     color: #000000 !important;
-    padding: 10px 0 10px 0;
+    padding: 10px 5px 10px 5px;
     border-radius: 0;
-    border: 1px solid #000000; }
+    border: 1px solid #000000;
+    font-family: "Avenir-LT-Std";
+    font-size: 14px; }
+    .checkout__form::placeholder {
+      font-family: "Avenir-LT-Std";
+      font-size: 14px;
+      color: #000000 !important; }
     .checkout__form:focus {
       border: 1px solid #000000; }
+    .checkout__form--padding-half {
+      padding: 5px 5px 5px 5px; }
   .checkout__cart {
     background-color: #ffffff; }
     @media only screen and (min-width: 37.5em) {
@@ -1934,7 +1952,7 @@ ul {
       margin-left: 10%; }
   .checkout__text {
     color: #000000 !important;
-    font-family: "Avenir-Next";
+    font-family: "Avenir-Next" !important;
     font-size: 14px; }
     .checkout__text--space {
       margin-left: 5px; }
@@ -1948,3 +1966,7 @@ ul {
     @media only screen and (max-width: 56.25em) {
       .checkout__item {
         height: 300px; } }
+  .checkout__totals {
+    background-color: #ffffff !important;
+    padding: 20px;
+    border: 1px solid #000000; }
