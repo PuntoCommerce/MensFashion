@@ -483,7 +483,9 @@ h5, html, body {
   .desk {
     display: none !important; }
   .responsive {
-    display: block !important; } }
+    display: block !important; }
+  header .main-menu {
+    margin-top: 0 !important; } }
 
 /* @media (max-width: 991px) {
     .tablet {
@@ -527,8 +529,6 @@ header .navbar-header {
   .suggestions,
   .suggestions-wrapper {
     width: 100%; }
-  .favItem {
-    margin-bottom: 7px; }
   .favItem span {
     margin-left: 10px; }
   #customMenuResponsive .minicart {
@@ -540,6 +540,9 @@ header .navbar-header {
     color: #000000 !important; }
   #customMenuResponsive .nav-link.parent {
     font-family: "AvenirLTStd-Heavy" !important; } }
+
+header .main-menu {
+  margin-top: 24px; }
 
 /* **************************** FOOTER **************************** */
 footer {
@@ -1017,7 +1020,7 @@ footer .socialMedia-paymentMethods {
 .dropdown-menu {
   position: fixed !important;
   width: 100vw;
-  top: 177px;
+  top: 135px;
   box-shadow: none !important; }
 
 .dropdown-menu-content {
@@ -1911,14 +1914,17 @@ ul {
   bottom: 300px; }
 
 .ITBC-content .btn-ITBC {
-  height: 71px; }
+  height: 71px;
+  font-family: "Avenir-Next" !important;
+  font-weight: 600; }
 
 .ITBC-content .btn-ITBC:hover {
   background-color: #000000;
   color: #ffffff !important; }
 
 .customTextBox-component-container a u {
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 14px; }
 
 .experience-commerce_layouts-navTabs {
   box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
@@ -1960,6 +1966,9 @@ ul {
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
     margin-bottom: 0 !important; } }
 
+.refinements h2 {
+  font-family: "Avenir-LT-Std" !important; }
+
 .hero.slant-down::after {
   border-width: 0; }
 
@@ -1981,6 +1990,10 @@ ul {
 
 .container-custom-plp .highlight {
   left: 5px; }
+
+@media only screen and (max-width: 420px) {
+  .btn__small {
+    font-size: 12px; } }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;

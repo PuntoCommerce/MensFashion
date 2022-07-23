@@ -1,3 +1,7 @@
+.refinements h2{
+  font-family: nth($text-font-stack,$avenir-LT-Std)!important ; 
+}
+
 .hero.slant-down {
   &::after {
     border-width: 0;
@@ -28,3 +32,9 @@
   .container-custom-plp  .highlight {
       left: 5px;
   }  
+
+@media only screen and (max-width: 420px) {
+  .btn__small {
+    font-size: 12px;
+  }
+}

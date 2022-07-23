@@ -69,13 +69,13 @@
                         </a>
                     </li>
                     <li>
+                        <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
+                    </li>
+                    <li>
                         <a href="${URLUtils.url("StoreLocator-Start")}" class="d-flex justify-content-start align-items-center">
                             <img src="${URLUtils.staticURL('/images/store_locator.svg')}" alt="LOCALIZA TU TIENDA"/>
                             <span>${Resource.msg('location.label.mobile.menu', 'menu', null)}</span>
                         </a>
-                    </li>
-                    <li>
-                        <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
                     </li>
                     <li>
                         <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
