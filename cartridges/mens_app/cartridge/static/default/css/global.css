@@ -15276,3 +15276,18 @@ div.availability {
 .isFullWidth .carousel-inner .carousel-control-next {
   right: 3% !important;
 }
+.btn.btn-primary.add-to-wish-list {
+  background: none !important;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 16px;
+  opacity: 1;
+  text-transform: uppercase;
+  transition: 0.3s ease all;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 5px 20px;
+}
+.btn.btn-primary.add-to-wish-list:hover {
+  border: 1px solid #000 !important;
+  background-color: #d8d8d8 !important;
+}

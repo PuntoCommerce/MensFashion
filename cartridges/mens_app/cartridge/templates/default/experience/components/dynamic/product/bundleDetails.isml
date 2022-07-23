@@ -86,10 +86,7 @@
                                 </div>
                                 <!-- Add to wishlist -->
                                 <div class="attribute col-6">
-                                    <label for="addToWishlist" class="d-none d-lg-block wishlist-btn-label"></label>
-                                    <span class="mensButton" id="addToWishlist"><img
-                                            src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}"
-                                            alt="Guia de tallas" /></span>
+                                    <isinclude template="wishlist/components/addToWishListButton" />
                                 </div>
                             </div>
                         </isif>

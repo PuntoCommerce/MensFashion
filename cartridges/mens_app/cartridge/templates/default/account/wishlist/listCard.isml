@@ -1,0 +1,56 @@
+<div class="account-wishlist-item card">
+    <div class="line-item-header row">
+        <!--- product name--->
+        <div class="line-item-name col-10">
+            ${item.name}
+        </div>
+        <!--- remove wishlist icon--->
+        <div class="col-2 hidden-xs-down">
+            <!---hide xs--->
+            <button type="button" class="remove-btn remove-from-wishlist btn btn-light"
+                data-url="${URLUtils.url('Wishlist-RemoveProductAccount', 'pid', item.pid)}" <isif
+                condition="${item.variantAttributes}">
+                aria-label="${Resource.msgf('wishlist.remove.item.variant', 'wishlist', null, item.name, item.variantAttributes)}">
+                <iselse>
+                    aria-label="${Resource.msgf('wishlist.remove.item', 'wishlist', null, item.name)}">
+                    </isif>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="width: 18px;" fill="#F93549">
+                        <path
+                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z" />
+                    </svg>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 account-wl-image">
+            <img class="product-image img-fluid" src="${item.imageObj.small[0].url}" alt="${item.imageObj.small[0].alt}"
+                title="${item.imageObj.small[0].title}">
+        </div>
+        <div class="col-8 account-wl-attributes">
+            <isloop items="${item.variationAttributes}" var="attribute">
+                <isloop items="${attribute.values}" var="eachValue">
+                    <isif condition="${!!eachValue.selected}" />
+                    <p class="line-item-attributes">${attribute.displayName}: ${eachValue.displayValue}</p>
+                    </isif>
+                </isloop>
+            </isloop>
+            <isif condition="${item.options}" />
+            <isloop items="${item.options}" var="option">
+                <isif condition="${!!option}" />
+                <p class="line-item-attributes">${option.displayName}:${option.displayValue}</p>
+                </isif>
+            </isloop>
+            </isif>
+            <div class="line-item-availability availability-${item.UUID}">
+                <isloop items="${item.availability.messages}" var="message">
+                    <p class="line-item-attributes">${message}</p>
+                </isloop>
+                <isif condition="${item.availability.inStockDate}">
+                    <p class="line-item-attributes line-item-instock-date">
+                        ${item.availability.inStockDate}
+                    </p>
+                </isif>
+            </div>
+        </div>
+    </div>
+</div>
