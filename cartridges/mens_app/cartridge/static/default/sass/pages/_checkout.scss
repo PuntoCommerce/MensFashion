@@ -72,6 +72,19 @@
     span {
       margin-left: 10%;
     }
+
+    @include respond(phone-max) {
+      font-size: $font-size-h5;
+      background-color: $light-grey;
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      color: $text-color-black;
+      span {
+        margin-left: 0%;
+      }
+    }
   }
 
   &__text {
