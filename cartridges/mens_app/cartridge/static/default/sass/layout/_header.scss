@@ -91,23 +91,32 @@ header .navbar-header {
   }
 
   .favItem span{
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   #customMenuResponsive .minicart{
     display: flex;
     margin-bottom: 12px !important;
+    padding-top: 12px;
   }
 
   #customMenuResponsive .cartLabel{
     margin-top: 4px;
-    margin-left: 4px;
     color: #000000 !important;   
+  }
+
+  #customMenuResponsive #actions-icons img {
+    margin-right: 18px !important; 
   }
 
   #customMenuResponsive .nav-link.parent{
     font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
+    text-transform: uppercase;
   
+  }
+
+  .nav-link{
+    padding: 0 0 10px 0 !important;
   }
 }
 

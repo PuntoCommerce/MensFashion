@@ -530,16 +530,21 @@ header .navbar-header {
   .suggestions-wrapper {
     width: 100%; }
   .favItem span {
-    margin-left: 10px; }
+    margin-left: 15px; }
   #customMenuResponsive .minicart {
     display: flex;
-    margin-bottom: 12px !important; }
+    margin-bottom: 12px !important;
+    padding-top: 12px; }
   #customMenuResponsive .cartLabel {
     margin-top: 4px;
-    margin-left: 4px;
     color: #000000 !important; }
+  #customMenuResponsive #actions-icons img {
+    margin-right: 18px !important; }
   #customMenuResponsive .nav-link.parent {
-    font-family: "AvenirLTStd-Heavy" !important; } }
+    font-family: "AvenirLTStd-Heavy" !important;
+    text-transform: uppercase; }
+  .nav-link {
+    padding: 0 0 10px 0 !important; } }
 
 header .main-menu {
   margin-top: 24px; }
@@ -1086,9 +1091,6 @@ ul {
     padding-top: 10px; }
   .chat-boot {
     margin-right: -5px; }
-  #actions-icons .items .nav-item {
-    padding-top: 10px;
-    padding-bottom: 10px; }
   #actions-icons .items .nav-item {
     text-transform: uppercase; }
   #customMenuResponsive .category-title {
