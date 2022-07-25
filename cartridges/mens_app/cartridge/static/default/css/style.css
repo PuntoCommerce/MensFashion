@@ -1328,6 +1328,12 @@ ul {
   color: #444444 !important;
   opacity: 80%; }
 
+@media (max-width: 768.98px) {
+  .summary__pricing .strike-through span {
+    color: #444444 !important;
+    opacity: 80%;
+    font-size: 10px !important; } }
+
 .refinement-bar {
   display: none !important;
   position: absolute;
@@ -1385,10 +1391,8 @@ ul {
 
 .highlight {
   position: absolute;
-  top: 10px;
-  left: 50px;
-  width: 94px;
-  height: 37px;
+  top: 0;
+  left: -10px;
   font-family: "Avenir-LT-Std";
   font-size: 14px;
   z-index: 1; }
@@ -1402,7 +1406,7 @@ ul {
     align-items: center; }
 
 .highlightCont {
-  padding: 9px 6px; }
+  padding: 10px 20px; }
 
 .modal-content {
   font-family: "Avenir-Next"; }
@@ -1815,10 +1819,6 @@ ul {
   font-size: 15px;
   text-decoration: line-through; }
 
-.summary__pricing .price span {
-  display: flex;
-  flex-direction: column; }
-
 .summary__pricing .price .range {
   display: flex;
   flex-direction: row;
@@ -1943,6 +1943,20 @@ ul {
 .promo-carousel__countdown__item .item .type {
   font-family: "AvenirLTStd-Heavy" !important; }
 
+.experience-component.experience-commerce_layouts-mobileGrid2r1c {
+  margin-bottom: 15px; }
+
+.product-tile.summary {
+  position: relative; }
+
+.isFullWidth .carousel-control-prev {
+  left: 0% !important;
+  top: 47% !important; }
+
+.isFullWidth .carousel-control-next {
+  right: 0% !important;
+  top: 47% !important; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
@@ -1982,6 +1996,9 @@ ul {
 
 .show-more {
   visibility: hidden; }
+
+.swatches {
+  display: flex; }
 
 @media only screen and (min-width: 37.5em) {
   .grid-header__column-item--right {
@@ -2063,7 +2080,8 @@ ul {
     .product-detail .prices-container del {
       margin-bottom: 10px;
       font-size: 25px; }
-  .product-detail .prices, .product-detail .sizes-guide {
+  .product-detail .prices,
+  .product-detail .sizes-guide {
     width: fit-content; }
   .product-detail .prices-size-guide-container {
     justify-content: space-between; }
@@ -2231,14 +2249,39 @@ ul {
         font-size: 16px;
         text-decoration: underline; }
 
-.product-set-detail .set-item .carousel-control-prev, .product-bundle .set-item .carousel-control-prev {
+.product-bundle .carousel-item img {
+  margin: 0 auto; }
+
+.product-bundle .carousel-control-next {
+  right: 3% !important; }
+
+.product-bundle .carousel-control-prev {
+  left: 3% !important; }
+
+.product-detail.bundle-item .carousel-item img {
+  margin: 0 auto; }
+
+.product-detail.bundle-item .carousel-control-next {
+  right: 3% !important; }
+
+.product-detail.bundle-item .carousel-control-prev {
+  left: 3% !important; }
+
+.product-detail.bundle-item .carousel-indicators {
+  display: none; }
+
+.product-set-detail .set-item .carousel-control-prev,
+.product-bundle .set-item .carousel-control-prev {
   left: 0% !important; }
-  .product-set-detail .set-item .carousel-control-prev:after, .product-bundle .set-item .carousel-control-prev:after {
+  .product-set-detail .set-item .carousel-control-prev:after,
+  .product-bundle .set-item .carousel-control-prev:after {
     content: url(../images/pdp/arrow_left_38.svg); }
 
-.product-set-detail .set-item .carousel-control-next, .product-bundle .set-item .carousel-control-next {
+.product-set-detail .set-item .carousel-control-next,
+.product-bundle .set-item .carousel-control-next {
   right: 0% !important; }
-  .product-set-detail .set-item .carousel-control-next:after, .product-bundle .set-item .carousel-control-next:after {
+  .product-set-detail .set-item .carousel-control-next:after,
+  .product-bundle .set-item .carousel-control-next:after {
     content: url(../images/pdp/arrow_right_38.svg);
     transform: rotate(0); }
 
@@ -2282,4 +2325,6 @@ ul {
   .sizes-guide img {
     width: 25px; }
   .product-detail .product-number {
-    font-family: 'Avenir-Bold'; } }
+    font-family: "Avenir-Bold"; }
+  .modal-dialog.size-guide-modal .modal-content {
+    width: 50vw; } }

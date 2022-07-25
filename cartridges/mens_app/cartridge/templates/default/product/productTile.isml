@@ -10,7 +10,7 @@
             <isinclude template="product/components/productTileName" />
         </div>
 
-        <div class="row">
+        <div class="summary_price row">
             <div class="summary__pricing col-6">
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">

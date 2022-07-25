@@ -15,6 +15,9 @@
 <isset name="isQuickView" value="${false}" scope="page" />
 <isobject object="${product.raw}" view="detail" />
 
+<!-- Modal Size Guide -->
+<isinclude template="product/components/modalSizeGuide" />
+
 <div class="container product-detail product-set-detail" data-pid="${product.id}">
     <!-- Product Name -->
     <div class="row">
@@ -40,6 +43,3 @@
         </div>
     </div>
 </div>
-
-<!-- Modal Size Guide -->
-<isinclude template="product/components/modalSizeGuide" />

@@ -1,0 +1,4 @@
+<label for="addToWishlist" class="d-none d-lg-block wishlist-btn-label"></label>
+<button type="submit" class="btn btn-primary add-to-wish-list" data-href="${URLUtils.url('Wishlist-AddProduct')}">
+    <img src="${URLUtils.staticURL('/images/pdp/wihslist_icon.svg')}" alt="Guia de tallas" />
+</button>

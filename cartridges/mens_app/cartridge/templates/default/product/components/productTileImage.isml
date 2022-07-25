@@ -3,13 +3,8 @@
     <a href="${pdict.urls.product}" class="summary__images">
         <isloop items="${product.images.medium}" var="image" status="loopstatus">
             <img class="tile-image 
-                ${product.images.medium.length === 1 ? 'unique'   
-                    : loopstatus.index == 0 ? 'first' : 'second'}"
-
-                src="${image.url}"
-                alt="${product.productName}"
-                title="${image.title}"
-                />
+                ${product.images.medium.length === 1 ? 'unique' : loopstatus.index == 0 ? 'first' : 'second'}"
+                src="${image.url}" alt="${product.productName}" title="${image.title}" />
             <isif condition="${loopstatus.index === 1}">
                 <isbreak/>
             </isif>
@@ -17,12 +12,10 @@
     </a>
 
     <isif condition="${pdict.urls.quickView}">
-        <a class="quickview hidden-sm-down" href="${pdict.urls.quickView}"
-           data-toggle="modal"
-           data-target="#quickViewModal"
-           title="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
-           aria-label="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
-        >
+        <a class="quickview hidden-sm-down" href="${pdict.urls.quickView}" data-toggle="modal"
+            data-target="#quickViewModal"
+            title="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
+            aria-label="${Resource.msgf('button.quickview', 'common', null, product.productName)}">
             <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
                 <i class="fa fa-expand fa-stack-1x"></i>
@@ -31,15 +24,23 @@
     </isif>
 
     <div class='wishlist'>
-        <div class='wishlist__wrapper' class="">
-            <svg id="wishlistUnselected${product.id}" class="wishlist__Unselected wishlist__Unselected--show" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 1C3.239 1 1 3.216 1 5.95C1 8.157 1.875 13.395 10.488 18.69C10.6423 18.7839 10.8194 18.8335 11 18.8335C11.1806 18.8335 11.3577 18.7839 11.512 18.69C20.125 13.395 21 8.157 21 5.95C21 3.216 18.761 1 16 1C13.239 1 11 4 11 4C11 4 8.761 1 6 1Z" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class='wishlist__wrapper'>
+            <a class="wishlistTile" href="${URLUtils.url('Wishlist-AddProduct')}"
+                title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
+                <svg id="wishlistUnselected${product.id}" class="wishlist__Unselected wishlist__Unselected--show"
+                    width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6 1C3.239 1 1 3.216 1 5.95C1 8.157 1.875 13.395 10.488 18.69C10.6423 18.7839 10.8194 18.8335 11 18.8335C11.1806 18.8335 11.3577 18.7839 11.512 18.69C20.125 13.395 21 8.157 21 5.95C21 3.216 18.761 1 16 1C13.239 1 11 4 11 4C11 4 8.761 1 6 1Z"
+                        stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
-            <svg id="wishlistSelected${product.id}" class="wishlist__Selected" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 0C2.239 0 0 2.216 0 4.95C0 7.157 0.875 12.395 9.488 17.69C9.64228 17.7839 9.8194 17.8335 10 17.8335C10.1806 17.8335 10.3577 17.7839 10.512 17.69C19.125 12.395 20 7.157 20 4.95C20 2.216 17.761 0 15 0C12.239 0 10 3 10 3C10 3 7.761 0 5 0Z" fill="#FF0000"/>
-            </svg>
+                <svg id="wishlistSelected${product.id}" class="wishlist__Selected" width="20" height="18"
+                    viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5 0C2.239 0 0 2.216 0 4.95C0 7.157 0.875 12.395 9.488 17.69C9.64228 17.7839 9.8194 17.8335 10 17.8335C10.1806 17.8335 10.3577 17.7839 10.512 17.69C19.125 12.395 20 7.157 20 4.95C20 2.216 17.761 0 15 0C12.239 0 10 3 10 3C10 3 7.761 0 5 0Z"
+                        fill="#FF0000" />
+                </svg>
+            </a>
         </div>
     </div>
-
 </div>
