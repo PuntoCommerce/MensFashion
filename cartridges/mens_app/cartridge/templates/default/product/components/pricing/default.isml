@@ -1,7 +1,8 @@
 <span class="prices-container">
     <isset name="finalOrigPrice" value="${price}" scope="page" />
 
-    <isif condition="${finalOrigPrice.list !== null}">
+    <div class="strike-price">
+     <isif condition="${finalOrigPrice.list !== null}">
         <isset name="price" value="${finalOrigPrice.list}" scope="page" />
         <del>
             <span class="strike-through list">
@@ -16,8 +17,9 @@
                 </span>
             </span>
         </del>
-    </isif>
-
+        </isif>       
+    </div>
+    <div class="sales-price">
     <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
     <span class="sales">
         <isif condition="${isLowPrice == 'range-low'}">
@@ -31,5 +33,6 @@
         </isif>
         <isinclude template="/product/components/pricing/formatted" />
     </span>
+    </div>
 </span>
 </span>

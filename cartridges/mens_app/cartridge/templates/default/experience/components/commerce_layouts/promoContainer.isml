@@ -5,7 +5,7 @@
                 <div class="promo-carousel__headings row">
                     <h3 class="carousel-title col-12 col-sm-5 promo-carousel__title">${pdict.title}</h3>
                     <isif condition="${pdict.countdownDate}">
-                        <div class='promo-carousel__wrapper-countdown col-12 col-sm-7'>
+                        <div class='promo-carousel__wrapper-countdown col-12'>
                             <h3 class="promo-carousel__countdown" id="countdown-wrapper" >Termina en:</h3>
                             <span class="promo-carousel__countdown__item" id="countdown-carousel" data="${pdict.countdownDate}">${pdict.countdownDate}</span>
                         </div>

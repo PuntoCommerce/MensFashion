@@ -16,6 +16,13 @@
           "required": true
         },
         {
+          "id": "backgroundImageMobile",
+          "name": "Background Image Mobile",
+          "description": "Background Image Mobile for the component",
+          "type": "image",
+          "required": true
+        },
+        {
             "id": "imageBrightness",
             "name": "Image Brightness",
             "description": "Select a value to change the image brightness",

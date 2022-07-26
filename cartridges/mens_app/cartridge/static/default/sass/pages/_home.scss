@@ -103,6 +103,7 @@
 
 .promo-carousel__countdown{
   margin-right: 12px;
+  justify-content: flex-end;
 }
 
 .promo-carousel__countdown__item .item .number {
@@ -127,6 +128,42 @@
     top: 47% !important;
   }
 }
+
+
+.promo-carousel{
+
+  & .carousel-control-prev{
+    left: -12px !important;
+    top: -50px !important;
+  }
+
+
+  & .carousel-control-next {
+    right: -12px !important;
+    top: -50px !important;
+  }
+}
+
+.promo-carousel__wrapper-countdown{
+  padding-right: 200px;
+}
+
+.promo-carousel__title{
+  padding: 0 0 16px 100px ;
+}
+
+.newsletter .container .markup h4 img{
+  margin: 10px 325px;
+}
+
+.newsletter .container .markup h4{
+  margin: 0;
+}
+
+.newsletter .container .markup{
+  align-items: flex-start !important;
+}
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
@@ -140,11 +177,18 @@
   .ITBC-content .btn-ITBC{
     height: 51px;
     min-width: 170px;
-    font-size: 12px;
+    font-size: 16px;
+    padding: 10px 0px;
   }
   
   #customBannerCarousel .ITBC-buttons{
     position: initial;
+    margin-top: 25px;
+  }
+
+  .ITBC-content h1, .ITBC-content p, .ITBC-content a{
+    margin: 0;
+    line-height: 45px;
   }
 }
 
@@ -168,5 +212,21 @@
 
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region{
     margin-bottom: 0 !important;
+  }
+
+  .promo-carousel__wrapper-countdown{
+    padding-right: 0;
+    align-items: center;
+  }
+
+  .promo-carousel__countdown{
+    margin-right: 0;
+  }
+  .promo-carousel__title{
+    padding: 0 0 16px 0;
+  }
+
+  .promo-carousel .row{
+    justify-content: center;
   }
 }

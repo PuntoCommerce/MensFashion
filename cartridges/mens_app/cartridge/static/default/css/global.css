@@ -13936,6 +13936,10 @@ h6 {
 .price {
   color: #222;
 }
+
+.strike-price, .sales-price{
+  height: 30px;
+}
 .price .strike-through {
   text-decoration: line-through;
   color: #999;
