@@ -5,6 +5,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addCss('/css/style.css');
+    assets.addJs("/js/checkoutCustom.js");
 </isscript>
 
 <!DOCTYPE html>
