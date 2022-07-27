@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 45px !important;
+  margin-top: 45px !important;
 }
 
 .customNav .nav-item .nav-link {

@@ -1920,6 +1920,12 @@ ul {
   font-family: "Avenir-Next" !important;
   font-weight: 600; }
 
+.ITBC-markup img {
+  object-fit: scale-down; }
+
+.experience-commerce_layouts-mobileGrid2r1c .markup-wrapper {
+  justify-content: flex-end; }
+
 .ITBC-content .btn-ITBC:hover {
   background-color: #000000;
   color: #ffffff !important; }
