@@ -123,3 +123,17 @@ header .navbar-header {
 header .main-menu{
   margin-top: 24px;
 }
+
+.checkout {
+  &.logo {
+    img {
+      height: 2em;
+    }
+  }
+  &.header {
+    padding: 2em;
+    @include respond(phone-max) {
+      justify-content: center !important;
+    }
+  }
+}

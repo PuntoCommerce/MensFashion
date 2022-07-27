@@ -1,0 +1,111 @@
+<isdecorate template="common/layout/checkout">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/cart.css');
+    </isscript>
+
+    
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <div class="cart-error-messaging cart-error">
+        <isif condition="${pdict.valid.error && pdict.items.length !== 0}">
+            <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                ${pdict.valid.message}
+            </div>
+        </isif>
+    </div>
+
+    <div class="checkout__cartTitle">
+        <span>${Resource.msg('title.cart','checkout',null)}</span>
+    </div>
+
+    <div class="row d-flex justify-content-center aling-items-center checkout__cart pt-5 pb-5">
+        <div class="col-10">
+            <div class="container checkout__bottomBorder checkout__bottomBorder--noResponsive">
+                <div class="row cart-header">
+                    <div class="col-sm-4 hidden-xs-down d-flex justify-content-start align-items-center">
+                        <a class="continue-shopping-link checkout__text checkout__text--bold" href="${URLUtils.url('Home-Show')}" title="${Resource.msg('link.continue.shopping','cart',null)}">
+                            ${Resource.msg('link.continue.shopping','checkout',null)}
+                        </a>
+                    </div>  
+                    <div class="col-sm-3 text-center">
+                        <h2 class="checkout__text checkout__text--bold ">${Resource.msgf('label.number.items.in.cart','checkout', null, pdict.numItems)}</h2>
+                    </div>
+                    <div class="col-sm-5 text-right hidden-xs-down d-flex justify-content-end align-items-center">
+                        <div>
+                            <span class="checkout__text">${Resource.msg('info.need.help','cart',null)}</span>
+                            <span><a class="help-phone-number checkout__text checkout__text--bold" href="   tel:${Resource.msg('info.phone.number','common',null)}">${Resource.msg('info.phone.number','common',null)}</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <isif condition="${pdict.items.length === 0}">
+                <div class="container cart-empty">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>${Resource.msg('info.cart.empty.msg','cart',null)}</h1>
+                        </div>
+                    </div>
+                </div>
+            <iselse/>
+                <div class="container cart cart-page">
+                    <div class="row">
+                        <!---product cards--->
+                        <div class="col-sm-6 col-12">
+                            <isloop items="${pdict.items}" var="lineItem">
+                                <isif condition="${lineItem.productType === 'bundle'}">
+                                    <isinclude template="cart/productCard/cartBundleCard" />
+                                <iselse/>
+                                    <isif condition="${lineItem.noProduct === true}">
+                                        <isinclude template="cart/productCard/uncategorizedCartProductCard" />
+                                    <iselse/>
+                                        <isinclude template="cart/productCard/cartProductCard" />
+                                    </isif>
+                                </isif>
+                            </isloop>
+                            <isinclude template="cart/cartApproachingDiscount" />
+                        </div>
+                        <!---totals, and checkout actions--->
+                        <div class="col-sm-6 col-12">
+                            <div class="checkout__totals checkout__text">
+                                
+                                <isinclude template="cart/cartPromoCode" />
+                                <div class="coupons-and-promos">
+                                    <isinclude template="cart/cartCouponDisplay" />
+                                </div>
+                                <div class="row">
+                                    <isinclude template="cart/cartShippingMethodSelection" />
+                                </div>
+                                <isinclude template="cart/cartTotals" />
+                                <div class="row d-none d-sm-block">
+                                    <div class="col-12 ">
+                                        <isinclude template="cart/checkoutButtons" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-block d-sm-none mt-3">
+                                <div class="col-12">
+                                    <isinclude template="cart/checkoutButtons" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <isinclude template="cart/cartRemoveProductModal"/>
+                </div>
+
+                <isinclude template="cart/cartRemoveCouponModal"/>
+            </isif>
+            <div class="container">
+                <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
+            </div>
+        </div>
+    </div>
+
+
+</isdecorate>

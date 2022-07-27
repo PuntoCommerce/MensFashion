@@ -15,6 +15,10 @@
   color: $text-color-black !important;
   background-color: $white-color;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &-primary,
   &--gray {
     background-color: $light-grey;
@@ -25,9 +29,24 @@
     }
   }
 
+  &--dark {
+    background-color: $text-color-black;
+    color: $white-color !important;
+    &:hover {
+      background-color: $white-color;
+      color: $text-color-black !important;
+      border: 1px solid $text-color-black;
+    }
+  }
+
   &__small {
     font-size: $font-size-minimal;
     padding: $spacing-x-small;
+  }
+
+  &__small-b {
+    font-size: $font-size-minimal;
+    padding: $spacing-x-small-bigger;
   }
 
   &:focus {
