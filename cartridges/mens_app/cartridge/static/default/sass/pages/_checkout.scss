@@ -1,0 +1,201 @@
+.checkout {
+  font-family: nth($text-font-stack, $avenir-LT-Std);
+  font-size: $font-size-h5-and-paragraph;
+
+  &--rightBorder {
+    @include respond(tab-port) {
+      border-right: 1px solid $text-color-black;
+    }
+  }
+
+  &--topBorder {
+    @include respond(tab-port-max) {
+      border-top: 1px solid $text-color-black;
+    }
+  }
+
+  &__bottomBorder {
+    border-bottom: 1px solid $text-color-black;
+
+    &--noResponsive {
+      margin-bottom: 10px;
+      @include respond(phone-max) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__form {
+    color: $text-color-black !important;
+    padding: 10px 5px 10px 5px;
+    border-radius: 0;
+    border: 1px solid $text-color-black;
+    font-family: nth($text-font-stack, $avenir-LT-Std);
+    font-size: $font-size-minimal;
+
+    &::placeholder {
+      font-family: nth($text-font-stack, $avenir-LT-Std);
+      font-size: $font-size-minimal;
+      color: $text-color-black !important;
+    }
+
+    &:focus {
+      border: 1px solid $text-color-black;
+    }
+
+    &--padding-half {
+      padding: 5px 5px 5px 5px;
+    }
+  }
+
+  &__cart {
+    background-color: $white-color;
+    @include respond(phone) {
+      background: linear-gradient(
+        to left,
+        #c2c3c6 0%,
+        #c2c3c6 50%,
+        #f5f5f5 50%,
+        #f5f5f5 100%
+      );
+    }
+
+    &--image {
+      width: 100%;
+    }
+  }
+
+  &__cartTitle {
+    font-size: 36px;
+    font-family: nth($text-font-stack, $avenir-Next);
+    font-weight: 900;
+    color: #fff;
+    padding: 30px;
+    background-color: $text-color-black;
+
+    span {
+      margin-left: 10%;
+    }
+
+    @include respond(phone-max) {
+      font-size: $font-size-h5;
+      background-color: $light-grey;
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      color: $text-color-black;
+      span {
+        margin-left: 0%;
+      }
+    }
+  }
+
+  &__text {
+    color: $text-color-black !important;
+    font-family: nth($text-font-stack, $avenir-Next) !important;
+    font-size: $font-size-minimal;
+
+    &--space {
+      margin-left: 5px;
+    }
+    &--bold {
+      font-family: nth($text-font-stack, $avenir-LT-Heavy) !important;
+    }
+
+    &--h3 {
+      font-size: $font-size-h3;
+    }
+  }
+
+  &__item {
+    background-color: $white-color !important;
+    padding: 20px;
+    border: 1px solid $text-color-black;
+
+    height: 225px;
+
+    @include respond(tab-port-max) {
+      height: 300px;
+    }
+  }
+
+  &__totals {
+    background-color: $white-color !important;
+    padding: 20px;
+    border: 1px solid $text-color-black;
+  }
+
+  &__stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $light-grey;
+    padding: 20px 0 20px 0;
+
+    &--item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      color: $white-color;
+
+      &-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $mid-grey;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+
+        &-current,
+        &-done {
+          background-color: $text-color-black;
+        }
+      }
+
+      &-title {
+        font-family: nth($text-font-stack, $avenir-Next);
+        font-size: $font-size-h5-and-paragraph;
+        color: $text-color-black;
+      }
+    }
+
+    &--divider {
+      width: 10%;
+      height: 2px;
+      margin: 0 10px 0 10px;
+      background-color: $mid-grey;
+
+      &-done {
+        background-color: $text-color-black;
+      }
+    }
+  }
+
+  &__order {
+    border: 1px solid $text-color-black;
+    color: $text-color-black !important;
+    font-family: nth($text-font-stack, $avenir-Next) !important;
+    font-size: $font-size-minimal;
+
+    &--divider {
+      height: 1px;
+      width: 100%;
+      background-color: $mid-grey;
+    }
+
+    &--product {
+      padding: 20px;
+      background-color: $light-grey;
+    }
+  }
+}
+
+.customer-summary {
+  display: none;
+}
