@@ -13937,7 +13937,8 @@ h6 {
   color: #222;
 }
 
-.strike-price, .sales-price{
+.strike-price,
+.sales-price {
   height: 30px;
 }
 .price .strike-through {
@@ -15342,4 +15343,8 @@ div.availability {
 }
 button.close:focus {
   outline: none;
+}
+
+#guiaDeTallas .modal-body {
+  display: contents;
 }
