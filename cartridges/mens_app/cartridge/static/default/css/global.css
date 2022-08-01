@@ -15335,6 +15335,7 @@ div.availability {
   font-family: "Avenir-LT-Std";
   font-size: 20px;
   color: #000000 !important;
+  text-transform: uppercase;
 }
 
 .add-to-cart-global.btn.btn-primary:hover {
