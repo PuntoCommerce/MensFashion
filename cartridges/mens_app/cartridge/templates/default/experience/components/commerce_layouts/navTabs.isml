@@ -9,7 +9,10 @@
       <isif condition="${content.name}">
         <li class="nav-item" role="presentation">
           <a class="nav-link ${content.active}" id="pills-${content.id}-tab" data-toggle="pill" href="${'#' + 'pills-' + content.id}"
-            role="tab" aria-controls="pills-${content.id}" aria-selected="true">${content.name}</a>
+            role="tab" aria-controls="pills-${content.id}" aria-selected="true">${content.name}
+          <div class="hover-underline"></div>  
+          </a>
+     
         </li>
       </isif>
     </isloop>

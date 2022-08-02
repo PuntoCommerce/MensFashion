@@ -726,11 +726,8 @@ footer .socialMedia-paymentMethods {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 
-.newsletter {
-  padding: 20px 60px; }
-
 .content-asset {
-  padding: 0 25px; }
+  padding-left: 20px; }
 
 @media (min-width: 1200px) {
   footer .container {
@@ -753,6 +750,20 @@ footer .socialMedia-paymentMethods {
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 90% !important; } }
+
+@media (max-width: 2560px) {
+  .newsletter .form {
+    padding: 0 50px; } }
+
+@media (max-width: 1440px) {
+  .newsletter .form {
+    padding: 0 50px; }
+  .newsletter .container .markup h4 {
+    padding-left: 50px; } }
+
+@media (max-width: 1200px) {
+  .newsletter .form {
+    padding: 0 100px; } }
 
 @media (max-width: 991px) {
   footer .newsletter {
@@ -817,7 +828,9 @@ footer .socialMedia-paymentMethods {
   .navbar-header {
     padding-right: 0px !important; }
   .newsletter {
-    padding: 20px !important; } }
+    padding: 20px !important; }
+  .newsletter .form {
+    padding: 0 65px; } }
 
 @media (max-width: 769px) {
   .hecho-con {
@@ -882,6 +895,9 @@ footer .socialMedia-paymentMethods {
 
 #menuDesk .nav-item:hover .hover-underline,
 #menuDesk .nav-item a:hover .hover-underline {
+  width: 50%; }
+
+.customNav .nav-item .nav-link:hover .hover-underline, .customNav .nav-item .nav-link:focus .hover-underline {
   width: 50%; }
 
 #menuDesk .nav-item.last_category_item .hover-underline {
@@ -1342,9 +1358,8 @@ ul {
 
 @media (max-width: 768.98px) {
   .summary__pricing .strike-through span {
-    color: #444444 !important;
-    opacity: 80%;
-    font-size: 10px !important; } }
+    color: #ffffff !important;
+    font-size: 12px !important; } }
 
 .refinement-bar {
   display: none !important;
@@ -2000,7 +2015,8 @@ ul {
   padding-right: 200px; }
 
 .promo-carousel__title {
-  padding: 0 0 16px 100px; }
+  padding: 0 0 10px 85px;
+  margin-bottom: 31px; }
 
 .newsletter .container .markup h4 img {
   margin: 10px 325px; }
@@ -2019,15 +2035,22 @@ ul {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
     height: 51px;
-    min-width: 170px;
-    font-size: 16px;
+    min-width: 190px;
+    font-size: 20px;
     padding: 10px 0px; }
   #customBannerCarousel .ITBC-buttons {
     position: initial;
     margin-top: 25px; }
   .ITBC-content h1, .ITBC-content p, .ITBC-content a {
     margin: 0;
-    line-height: 45px; } }
+    line-height: 45px; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
+    margin: 0;
+    line-height: initial; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
+    justify-content: flex-end !important; }
+  .ITBC-content h1 {
+    font-size: 40px; } }
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
@@ -2048,7 +2071,11 @@ ul {
   .promo-carousel__title {
     padding: 0 0 16px 0; }
   .promo-carousel .row {
-    justify-content: center; } }
+    justify-content: center; }
+  .promo-carousel .carousel-title {
+    margin-top: 43px; }
+  .promo-carousel .btn__small {
+    font-size: 12px; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
@@ -2073,7 +2100,7 @@ ul {
     margin-right: 150px; } }
 
 .summary__name {
-  height: 50px !important; }
+  height: 50px; }
 
 .container-custom-plp .highlight {
   left: 5px; }
@@ -2081,6 +2108,13 @@ ul {
 @media only screen and (max-width: 420px) {
   .btn__small {
     font-size: 12px; } }
+
+@media only screen and (max-width: 768px) {
+  .summary__name {
+    height: 40px; }
+  .strike-price,
+  .sales-price {
+    height: 22px; } }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
@@ -2517,7 +2551,8 @@ ul {
   padding-right: 200px; }
 
 .promo-carousel__title {
-  padding: 0 0 16px 100px; }
+  padding: 0 0 10px 85px;
+  margin-bottom: 31px; }
 
 .newsletter .container .markup h4 img {
   margin: 10px 325px; }
@@ -2536,15 +2571,22 @@ ul {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
     height: 51px;
-    min-width: 170px;
-    font-size: 16px;
+    min-width: 190px;
+    font-size: 20px;
     padding: 10px 0px; }
   #customBannerCarousel .ITBC-buttons {
     position: initial;
     margin-top: 25px; }
   .ITBC-content h1, .ITBC-content p, .ITBC-content a {
     margin: 0;
-    line-height: 45px; } }
+    line-height: 45px; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
+    margin: 0;
+    line-height: initial; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
+    justify-content: flex-end !important; }
+  .ITBC-content h1 {
+    font-size: 40px; } }
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
@@ -2565,7 +2607,11 @@ ul {
   .promo-carousel__title {
     padding: 0 0 16px 0; }
   .promo-carousel .row {
-    justify-content: center; } }
+    justify-content: center; }
+  .promo-carousel .carousel-title {
+    margin-top: 43px; }
+  .promo-carousel .btn__small {
+    font-size: 12px; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
@@ -2590,7 +2636,7 @@ ul {
     margin-right: 150px; } }
 
 .summary__name {
-  height: 50px !important; }
+  height: 50px; }
 
 .container-custom-plp .highlight {
   left: 5px; }
@@ -2598,6 +2644,13 @@ ul {
 @media only screen and (max-width: 420px) {
   .btn__small {
     font-size: 12px; } }
+
+@media only screen and (max-width: 768px) {
+  .summary__name {
+    height: 40px; }
+  .strike-price,
+  .sales-price {
+    height: 22px; } }
 
 .checkout {
   font-family: "Avenir-LT-Std";

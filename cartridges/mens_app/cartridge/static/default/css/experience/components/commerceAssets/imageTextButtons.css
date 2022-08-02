@@ -30,8 +30,8 @@
 }
 
 .ITBC-content h2 {
-  font-size: 60px;
-  font-weight: 800;
+  font-size: 55px;
+  font-weight: 400;
 }
 
 .ITBC-content h3 {
@@ -146,6 +146,10 @@
   .ITBC-content p,
   .ITBC-content a {
     font-size: 20px;
+  }
+
+  #customBannerCarousel .ITBC-content p {
+    font-size: 12px;
   }
 }
 
