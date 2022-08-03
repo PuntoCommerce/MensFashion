@@ -15349,3 +15349,11 @@ button.close:focus {
 #guiaDeTallas .modal-body {
   display: contents;
 }
+
+.title-container {
+  background: #000;
+  padding: 20px 262px;
+}
+.myAccount-title {
+  color: #fff;
+}
