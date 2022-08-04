@@ -82,7 +82,13 @@
   font-weight: 600;
 }
 
+.ITBC-markup img{
+  object-fit: scale-down;
+}
 
+.experience-commerce_layouts-mobileGrid2r1c .markup-wrapper{
+  justify-content: flex-end;
+}
 
 .ITBC-content .btn-ITBC:hover{
   background-color: #000000;
@@ -149,7 +155,8 @@
 }
 
 .promo-carousel__title{
-  padding: 0 0 16px 100px ;
+  padding: 0 0 10px 85px ;
+  margin-bottom: 31px;
 }
 
 .newsletter .container .markup h4 img{
@@ -176,8 +183,8 @@
 
   .ITBC-content .btn-ITBC{
     height: 51px;
-    min-width: 170px;
-    font-size: 16px;
+    min-width: 190px;
+    font-size: 20px;
     padding: 10px 0px;
   }
   
@@ -189,6 +196,19 @@
   .ITBC-content h1, .ITBC-content p, .ITBC-content a{
     margin: 0;
     line-height: 45px;
+  }
+
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p{
+    margin: 0;
+    line-height: initial;
+  }
+
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content{
+    justify-content: flex-end !important;
+  }
+
+  .ITBC-content h1{
+    font-size: 40px;
   }
 }
 
@@ -229,4 +249,13 @@
   .promo-carousel .row{
     justify-content: center;
   }
+
+  .promo-carousel .carousel-title{
+    margin-top: 43px;
+  }
+
+  .promo-carousel .btn__small{
+    font-size: 12px;
+  }
+
 }

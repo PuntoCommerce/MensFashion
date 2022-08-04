@@ -58,6 +58,12 @@
     }
 }
 
+.refinement-color .values.content {
+    li {
+        padding: $spacing-x-small-bigger 0;
+    }
+}
+
 .card {
     border: none;
 }

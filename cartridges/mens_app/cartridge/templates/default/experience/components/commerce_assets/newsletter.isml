@@ -6,10 +6,10 @@
 <div class="newsletter row">
   <p class="text-top">${pdict.textTop}</p>
   <div class="container col-12" style="background-image: url('${pdict.image.src.desktop}'); background-position: ${pdict.image.focalPointX} ${pdict.image.focalPointY} ">
-    <div class="markup d-none d-lg-flex">
+    <div class="markup d-none d-xl-flex col-xl-8">
       <isprint value="${pdict.contentText}" encoding="off" />
     </div>
-    <div class="form">
+    <div class="form col-xl-4">
       <p class="text-top">${pdict.textTop}</p>
       <div class="row">
         <input type="text" class="col-7" name="hpEmailSignUp" placeholder="EMAIL: " aria-label="EMAIL: ">

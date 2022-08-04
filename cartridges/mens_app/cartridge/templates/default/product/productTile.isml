@@ -11,7 +11,7 @@
         </div>
 
         <div class="summary_price row">
-            <div class="summary__pricing col-6">
+            <div class="summary__pricing col-7">
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />
@@ -19,7 +19,7 @@
                     <isinclude template="product/components/pricing/main" />
                 </isif>
             </div>
-            <div class="summary__swatches col-6">
+            <div class="summary__swatches col-5">
                 <isif condition="${pdict.display.swatches !== false}">
                     <isinclude template="product/components/productTileSwatch" />
                 </isif>

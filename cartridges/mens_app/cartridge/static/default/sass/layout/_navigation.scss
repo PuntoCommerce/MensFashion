@@ -34,8 +34,13 @@
   transition: width 0.5s;
 }
 
+
 #menuDesk .nav-item:hover .hover-underline,
-#menuDesk .nav-item a:hover .hover-underline {
+#menuDesk .nav-item a:hover .hover-underline{
+  width: 50%;
+}
+
+.customNav .nav-item .nav-link:hover .hover-underline, .customNav .nav-item .nav-link:focus .hover-underline{
   width: 50%;
 }
 

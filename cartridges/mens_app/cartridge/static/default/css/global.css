@@ -13937,7 +13937,8 @@ h6 {
   color: #222;
 }
 
-.strike-price, .sales-price{
+.strike-price,
+.sales-price {
   height: 30px;
 }
 .price .strike-through {
@@ -14284,7 +14285,7 @@ div.availability {
   }
 }
 .product-tile .tile-body .price {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 @media (max-width: 991.98px) {
@@ -14294,7 +14295,7 @@ div.availability {
 }
 @media (max-width: 768.98px) {
   .product-tile .tile-body .price {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 .product-tile .tile-body .price .tiered {
@@ -15334,6 +15335,7 @@ div.availability {
   font-family: "Avenir-LT-Std";
   font-size: 20px;
   color: #000000 !important;
+  text-transform: uppercase;
 }
 
 .add-to-cart-global.btn.btn-primary:hover {
@@ -15342,4 +15344,256 @@ div.availability {
 }
 button.close:focus {
   outline: none;
+}
+
+#guiaDeTallas .modal-body {
+  display: contents;
+}
+
+.title-container {
+  background: #000;
+  padding: 20px 262px;
+}
+.myAccount-title {
+  color: #fff;
+  font-family: 'Avenir-Next';
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.login-form-nav{
+  margin: 13px 115px 0 115px;
+}
+
+.login-page .nav-tabs{
+  border: 0.3px solid #64656A;
+  border-radius: 3px; 
+}
+
+.login-page .tab-content{
+  border: 0.3px solid #64656A;
+  border-radius: 3px; 
+}
+
+.checkout__form{
+  border-radius: 3px;
+}
+
+.login-page .breadcrumb{
+  margin: 0 115px;
+}
+
+.login-page .card-body{
+  padding: 0;
+}
+
+.login-page .nav-tabs{
+  background-color: #64656A;
+  border-bottom: none;
+}
+
+.login-page .nav-tabs .nav-link{
+  font-family: 'Avenir Next';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.login-page .nav-tabs .nav-link.active{
+  border-bottom: none;
+  color: #ffffff;
+  position: relative;
+}
+
+.login-page .nav-tabs .nav-link:hover, .login-page .nav-tabs .nav-link.active:hover,.login-page .nav-tabs .nav-link.active:focus{
+  background-color: #64656A;
+}
+
+.login-page .nav-item .nav-link:focus, .login-page .nav-item .nav-link:hover, .login-page .nav-item.show .nav-link{
+  color: #ffffff !important;
+}
+
+.login-form-nav .form-group{
+  margin: 0 27px 0 43px;
+}
+
+.login-page .nav-tabs .nav-link.active:after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #ff0000;
+  width: 100px;
+  transform: translate(-50%, 0);
+  left: 50%;
+}
+
+.login-page .nav-item{
+  position: relative;
+}
+
+.login-form-nav .checkout__text--bold, .login-form-nav .checkout__text--space{
+  font-family: 'Avenir-Next' !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.login-page .login-form-nav .tab-pane {
+  margin-top: 38px !important;
+}
+
+#login-form-email, #login-form-password{
+  margin-bottom: 14px;
+  border-radius: 3px;
+  margin-top: 9px;
+}
+
+#password-reset{
+  margin-right: 27px;
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.login-form-nav .btn__small{
+  margin: 15px 27px 25px 43px;
+  height: 44px;
+  width: 438px;
+  font-family: 'Avenir-Next';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.login-form-nav .custom-checkbox .custom-control-label:before{
+  border-radius: 50%;
+}
+
+.login-form-nav .custom-checkbox  .custom-control-label{
+  font-family: 'Avenir-Next';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.login{
+  margin-bottom: 0;
+}
+
+.login-oauth .form-group{
+  border: 0.3px solid #000000;
+  border-radius: 3px;
+  width: 438px;
+  height: 30px;
+  margin-bottom: 16px;
+}
+
+.login-oauth .form-group a{
+  font-size: 14px;
+  padding: 5px 0 0 0;
+}
+
+.login-oauth .form-group:nth-last-child(){
+  margin-bottom: 30px;
+}
+
+.login-oauth .btn-outline-primary{
+  border: none;
+  border-radius: 3px;
+}
+
+#register label{
+  margin-bottom: 9px;
+  font-family: 'Avenir-LT-Std';
+  font-size: 16px;
+}
+
+#register .form-control{
+  margin-bottom: 20px;
+}
+
+
+#register button{
+  margin: 35px 27px 9px 43px;
+  width: 438px;
+  height: 34px;
+  padding: 0;
+  background: #000000;
+  color: #ffffff !important;
+  border: none;
+  font-family: 'Avenir-LT-Std';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#register .privacy-policy{
+  font-family: 'Avenir-LT-Std';
+  font-weight: 400;
+  font-size: 14px;
+  margin: 35px 27px 9px 43px;
+}
+
+.trackorder{
+  margin: 13px 115px 0 115px;
+}
+
+.track-order-header{
+  border: 1px solid #64656A !important;
+  background: #64656A !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  border-radius: 3px !important;
+  line-height: 15px;
+}
+
+.trackorder .card-body{
+  border: 0.3px solid #000000;
+  border-radius: 3px;
+  padding: 26px 31px 0 22px;
+}
+
+.track-order-header-text{
+  font-family: 'Avenir-Next';
+  font-size: 14px;
+}
+
+.trackorder .form-group label{
+  font-family: 'Avenir-Next';
+  font-size: 16px;
+}
+
+.trackorder .btn-block{
+  background-color: #000000;
+  width: 337px;
+  height: 34px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff !important;
+  padding: 0;
+  font-family: 'Avenir-LT-Std';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.trackorder .btn-block:hover{
+  background-color: #d8d8d8;
+  color: #000000 !important;
+}
+
+.login-oauth .btn-block{
+  height: 100%;
+}
+
+.login-oauth .btn-block:hover{
+  background-color: #000000;
+  color: #ffffff !important;
+}
+
+#register button:hover{
+  background-color: #d8d8d8;
+  color: #000000 !important;
 }

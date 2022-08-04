@@ -20,7 +20,7 @@
 }
 
 .ITBC-content p {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 900;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .ITBC-content h2 {
-  font-size: 60px;
-  font-weight: 800;
+  font-size: 55px;
+  font-weight: 400;
 }
 
 .ITBC-content h3 {
@@ -102,6 +102,22 @@
   .ITBC-container {
     height: 534px !important;
   }
+
+  .experience-commerce_layouts-mobileGrid2r1c  .ITBC-container {
+    height: 322px !important;
+    margin-bottom: 18px;
+  }
+
+  .experience-commerce_layouts-mobileGrid2r1c  .ITBC-container {
+    height: 322px !important;
+    margin-bottom: 18px;
+  }
+
+  .experience-commerce_layouts-mobileGrid2r1c  .ITBC-container {
+    height: 322px !important;
+    margin-bottom: 18px;
+  }
+
   .ITBC-content {
     flex-direction: column !important;
     justify-content: center !important;
@@ -129,6 +145,10 @@
   }
   .ITBC-content p,
   .ITBC-content a {
+    font-size: 20px;
+  }
+
+  #customBannerCarousel .ITBC-content p {
     font-size: 12px;
   }
 }

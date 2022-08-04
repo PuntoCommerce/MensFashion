@@ -26,9 +26,7 @@
     
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
-
-    <button type="submit" class="mb-4 btn btn--gray btn__small">${Resource.msg('button.text.loginform', 'login', null)}</button>
-
+    
     <div class="clearfix">
         <div class="form-group custom-control custom-checkbox pull-left remember-me">
             <input type="checkbox" class="custom-control-input" id="rememberMe" name="loginRememberMe" value="true"
@@ -54,5 +52,8 @@
                 ${Resource.msg('link.login.forgotpassword', 'login', null)}
             </a>
         </div>
-    </div>
+    </div>    
+
+    <button type="submit" class="mb-4 btn btn--gray btn__small">${Resource.msg('button.text.loginform', 'login', null)}</button>
+
 </form>

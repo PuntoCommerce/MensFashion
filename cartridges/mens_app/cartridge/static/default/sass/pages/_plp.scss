@@ -29,7 +29,7 @@
   }
 
   .summary__name{
-    height: 50px !important;
+    height: 50px;
   }
 
 
@@ -40,5 +40,16 @@
 @media only screen and (max-width: 420px) {
   .btn__small {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .summary__name{
+    height: 40px;
+  }
+
+  .strike-price,
+  .sales-price {
+    height: 22px;
   }
 }
