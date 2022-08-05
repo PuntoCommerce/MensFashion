@@ -57,29 +57,32 @@ function initAutocomplete() {
   });
 }
 
+const stateSelector = document.querySelector(
+  "select.form-control.shippingState"
+);
+stateSelector.replaceWith(stateSelector.cloneNode(true));
+
 const zipCodeField = document.querySelector(
-  "input.form-control.shippingZipCode-custom"
+  "input.form-control.shippingZipCode"
 );
 const checkedShippingMethod = document.querySelector(
   ".shipping-method-list .form-check-input[checked]"
 );
 
 const submitButton = document.querySelector("button.submit-shipping");
+const postalCodes = document
+  .getElementById(`shippingMethod-${checkedShippingMethod.value}`)
+  .getAttribute("data-logistic");
+const arrPostalCode = postalCodes.split(",");
 
 zipCodeField.addEventListener("change", (e) => {
   e.preventDefault();
-
-  const postalCodes = document
-    .getElementById(`shippingMethod-${checkedShippingMethod.value}`)
-    .getAttribute("data-logistic");
-  const arrPostalCode = postalCodes.split(",");
   const exist = arrPostalCode.includes(zipCodeField.value);
   if (!exist) {
     submitButton.disabled = true;
     zipCodeField.classList.add("is-invalid");
   } else {
     zipCodeField.classList.remove("is-invalid");
-
     submitButton.disabled = false;
   }
 });

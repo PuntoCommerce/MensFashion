@@ -315,7 +315,7 @@
                             <tr>
                                 <td>
                                     <isset name="address" value="${shippingModel.shippingAddress}" scope="page" />
-                                    <isinclude template="checkout/addressSummaryEmailConfirm" />
+                                    <iscomment> <isinclude template="checkout/addressSummaryEmailConfirm" /> </iscomment>
                                     <p style="font-weight:bold;color:#4d4d4d">
                                         <h3 style="margin-bottom:0;font-size:14px;color:#666666;font-weight:normal;">
                                             ${Resource.msg('label.order.shipping.method', 'confirmation', null)}</h3>
