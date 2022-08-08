@@ -206,8 +206,20 @@ if (promoCountDown) {
   }, 1000);
 }
 
-// /* HOME */
-// const mobile2r2c = $C(".mobile-2r-2c");
-// const newElement = document.createElement("div");
-// newElement.classList.add("mobile-2r-2c-cross");
-// mobile2r2c.appendChild(newElement);
+// PLP - price range
+
+function changeRange(e, type) {
+  const rangePrice = document.getElementById("range-price-button");
+  const pmin = document.getElementById("price-range-min");
+  const pmax = document.getElementById("price-range-max");
+
+  let url = new URL(location.origin + rangePrice.getAttribute("data-href"));
+  url.searchParams.set(type, e.value);
+  rangePrice.setAttribute("data-href", url.pathname + url.search);
+  // console.log(url);
+  if (type == "pmin") {
+    pmin.value = e.value;
+  } else {
+    pmax.value = e.value;
+  }
+}
