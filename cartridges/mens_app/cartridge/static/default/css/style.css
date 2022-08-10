@@ -959,7 +959,7 @@ footer .socialMedia-paymentMethods {
 } */
 .form-control:focus {
   box-shadow: none !important;
-  color: #ffffff; }
+  color: #000000; }
 
 .hidden {
   display: none; }
