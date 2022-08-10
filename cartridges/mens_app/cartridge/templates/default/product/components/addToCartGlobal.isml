@@ -1,7 +1,10 @@
 <div class="row cart-and-ipay">
     <div class="col-sm-12">
         <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}" />
-        <button class="add-to-cart-global btn btn-primary" data-pid="${product.id}" ${!product.available ? "disabled" : ""}>
+        <button class="add-to-cart-global btn btn-primary" 
+            data-pid="${product.id}" ${!product.available ? "disabled" : ""}
+            data-gtmdata="${JSON.stringify(product.gtmData)}"
+            data-gtmga4data="${JSON.stringify(product.gtmGA4Data)}">
             <isif condition="${product.productType === 'set' || product.productType === 'bundle'}">
                 ${Resource.msg('button.addalltocart', 'common', null)}
             <iselse/>
