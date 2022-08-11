@@ -5,10 +5,10 @@
  * events that are needed are initialized.
  */
 var events = {
-	homeshow: function () {},
-	productshow: function () {},
-    productshowincategory: function () {},
-	searchshow: function () {
+    homeshow: function () { },
+    productshow: function () { },
+    productshowincategory: function () { },
+    searchshow: function () {
         if (window.gtmEnabled) {
             $('body').on('click', '.product .image-container a:not(.quickview), .product .pdp-link a', function () {
                 var $ele = $(this).closest('.product');
@@ -16,13 +16,13 @@ var events = {
                 productClick(gtmdata);
             });
         }
-	},
-	cartshow: function () {},
-	checkoutbegin: function () {},
-	orderconfirm: function () {},
-	// events that should happen on every page
-	all: function () {
-		// Add to Cart
+    },
+    cartshow: function () { },
+    checkoutbegin: function () { },
+    orderconfirm: function () { },
+    // events that should happen on every page
+    all: function () {
+        // Add to Cart
         $('body').on('click', '.add-to-cart, .add-to-cart-global', function () {
             if (!$(this).hasClass('isDisabled') && !$(this).hasClass('disabled')) {
                 var $ele = $(this);
@@ -44,9 +44,9 @@ var events = {
         // Remove from Cart
         $('body').on('click', '.remove-product', function () {
             var $ele = $(this);
-			var gmtData = $ele.data('gtmdata') || $.parseJSON($ele.attr('data-gtmdata'));
+            var gmtData = $ele.data('gtmdata') || $.parseJSON($ele.attr('data-gtmdata'));
             var gtmGA4Data = $ele.data('gtmga4data') || $.parseJSON($ele.attr('data-gtmga4data'));
-			var qty = $ele.closest('.card').find('select.quantity').val();
+            var qty = $ele.closest('.card').find('select.quantity').val();
             qty = qty ? qty : 1;
 
             $('body').on('click', '#removeProductModal .cart-delete-confirmation-btn', function () {
@@ -66,45 +66,45 @@ var events = {
                 .attr('data-gtmdata', JSON.stringify(response.product.gtmData))
                 .attr('data-gtmga4data', JSON.stringify(response.product.gtmGA4Data));
         });
-	}
+    }
 };
 
 /**
  * @param {String} productId The product ID
  * @description gets the data for a product click
  */
-function productClick (productObject) {
-	var obj = {
-			'event': 'productClick',
-			'ecommerce': {
-				'click': {
-					'actionField': {'list': 'Search Results'},
-					'products': []
-				}
-			}
-		};
-	obj.ecommerce.click.products.push(productObject);
-	dataLayer.push(obj);
+function productClick(productObject) {
+    var obj = {
+        'event': 'productClick',
+        'ecommerce': {
+            'click': {
+                'actionField': { 'list': 'Search Results' },
+                'products': []
+            }
+        }
+    };
+    obj.ecommerce.click.products.push(productObject);
+    dataLayer.push(obj);
 }
 
 /**
  * @param productId
  * @description Click event for add product to cart
  */
-function addToCart (productObject, quantity) {
-	var quantObj = {'quantity': quantity},
-		obj = {
-			'event': 'addToCart',
-			'ecommerce': {
-				'add': {
-					'products': []
-				}
-			}
-		};
-	obj.ecommerce.add.products.push($.extend(productObject,quantObj));
-    
+function addToCart(productObject, quantity) {
+    var quantObj = { 'quantity': quantity },
+        obj = {
+            'event': 'addToCart',
+            'ecommerce': {
+                'add': {
+                    'products': []
+                }
+            }
+        };
+    obj.ecommerce.add.products.push($.extend(productObject, quantObj));
+
     dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object to prevent events affecting one another
-	dataLayer.push(obj);
+    dataLayer.push(obj);
 }
 
 /**
@@ -130,9 +130,9 @@ function addToCartGA4(productObject, quantity) {
  * @function removeFromCart
  * @description Click event for remove product from cart
  */
-function removeFromCart (productObject, quantity) {
-	var quantObj = {'quantity': quantity};
-	var obj = {
+function removeFromCart(productObject, quantity) {
+    var quantObj = { 'quantity': quantity };
+    var obj = {
         'event': 'removeFromCart',
         'ecommerce': {
             'remove': {
@@ -140,10 +140,10 @@ function removeFromCart (productObject, quantity) {
             }
         }
     };
-	obj.ecommerce.remove.products.push($.extend(productObject,quantObj));
-    
+    obj.ecommerce.remove.products.push($.extend(productObject, quantObj));
+
     dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object to prevent events affecting one another
-	dataLayer.push(obj);
+    dataLayer.push(obj);
 }
 
 /**
@@ -173,13 +173,13 @@ function removeFromCartGA4(productObject, quantity) {
  * @param {String} eventAction
  * @param {String} eventlabel
  */
-function pushEvent (event, eventCategory, eventAction, eventLabel) {
-	dataLayer.push({
-		'event': event,
-		'eventCategory': eventCategory,
-		'eventAction': eventAction,
-		'eventLabel': eventLabel
-	});
+function pushEvent(event, eventCategory, eventAction, eventLabel) {
+    dataLayer.push({
+        'event': event,
+        'eventCategory': eventCategory,
+        'eventAction': eventAction,
+        'eventLabel': eventLabel
+    });
 }
 
 /**
@@ -188,40 +188,59 @@ function pushEvent (event, eventCategory, eventAction, eventLabel) {
  * @param {String} nameSpace The current name space
  */
 $(document).ready(function () {
-	if (pageAction && events[pageAction]) {
-		events[pageAction]();
-	}
-	events.all();
+    if (pageAction && events[pageAction]) {
+        events[pageAction]();
+    }
+    events.all();
 });
 
 /**
  * listener for ajax events
  */
 function gtmEventLoader() {
-	try {
-		$(document).ajaxSuccess(function(event, request, settings, data) {
-			if (settings.dataTypes.indexOf('json') > -1) {
-				if (data && '__gtmEvents' in data && Array.isArray(data.__gtmEvents)) {
-					data.__gtmEvents.forEach(function gtmEvent(gtmEvent) {
-						if (gtmEvent) {
+    try {
+        $(document).ajaxSuccess(function (event, request, settings, data) {
+            if (settings.dataTypes.indexOf('json') > -1) {
+                if (data && '__gtmEvents' in data && Array.isArray(data.__gtmEvents)) {
+                    data.__gtmEvents.forEach(function gtmEvent(gtmEvent) {
+                        if (gtmEvent) {
                             dataLayer.push({ ecommerce: null }); // Clear previous ecommerce object to prevent events affecting one another
                             dataLayer.push(gtmEvent);
-						}
-					});
-				}
-			}
-		});
-		document.removeEventListener('DOMContentLoaded', gtmEventLoader);
-	} catch (e) {
-		console.error(e);
-	}
+                        }
+                    });
+                }
+            }
+        });
+        document.removeEventListener('DOMContentLoaded', gtmEventLoader);
+    } catch (e) {
+        console.error(e);
+    }
 }
 
 /**
  * setup ajax event listener
  */
 if (document.readyState === 'complete') {
-	gtmEventLoader();
+    gtmEventLoader();
 } else {
-	document.addEventListener('DOMContentLoaded', gtmEventLoader);
+    document.addEventListener('DOMContentLoaded', gtmEventLoader);
 }
+
+/*
+* Check for custom data attributes and add them to the dataLayer
+*/
+let customData = document.querySelector('[data-gtmpageview]').dataset.gtmpageview;
+let prodGtmData = document.querySelector('[data-gtmdata]');
+prodGtmData = prodGtmData ? prodGtmData.dataset.gtmdata : null;
+let pageGtmData = {
+    'event': 'pageVisited',
+    'pageView': {
+        'pageURL': window.location.href,
+        'pageName': customData ? customData : window.location.pathname,
+    }
+};
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+    pageGtmData,
+    prodGtmData
+});
