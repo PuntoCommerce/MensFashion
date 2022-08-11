@@ -14,12 +14,13 @@
         footer {
             background-color: #000000;
             width: 100%;
+            padding: 20px 0;
         }
 
         .email-container {
-            max-width: 768px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0px 1rem;
+            padding: 0;
         }
 
         .banner-email-body{
@@ -90,15 +91,28 @@
 
         .email-main h1 {
             font-size: 18px;
+            color: #000000;
         }
 
         .email-main p {
             font-size: 14px;
+            color: #000000;
+        }
+
+        .email-main p a{
+            font-size: 14px;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
         }
 
         table {
             margin: 10px auto 10px auto;
-            width: 85%;
+            width: 100%;
+        }
+
+        .text-container{
+            margin: 59px 0 99px 0;
         }
 
         @media only screen and (max-width:480px) {
@@ -144,13 +158,15 @@
                 </tr>                
                 <tr>
                     <td>
-                        <h1>${Resource.msg('email.msg.new.registration.dear', 'registration', null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName},</h1>
+                        <div class="text-container">
+                            <h1>${Resource.msg('email.msg.new.registration.dear', 'registration', null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName},</h1>
 
-                        <p>${Resource.msg('email.msg.new.registration.body1','registration',null)}</p>
+                            <p>${Resource.msg('email.msg.new.registration.body1','registration',null)}</p>
 
-                        <p><a href="${pdict.url}">${pdict.url}</a></p>
+                            <p><a href="${pdict.url}">${pdict.url}</a></p>
 
-                        <p>${Resource.msg('email.msg.new.registration.body2','registration',null)}</p>  
+                            <p>${Resource.msg('email.msg.new.registration.body2','registration',null)}</p>  
+                        </div>
                     </td>                 
                 </tr>
             </table>    
