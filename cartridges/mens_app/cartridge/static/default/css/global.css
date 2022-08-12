@@ -15324,6 +15324,11 @@ div.availability {
   .summary_price {
     padding: 0 15px;
   }
+
+  .login-form-nav, .trackorder{
+    margin: 13px 10px 0 10px !important;
+  }
+  
 }
 
 .add-to-cart-global.btn.btn-primary {
@@ -15415,7 +15420,13 @@ button.close:focus {
 }
 
 .login-form-nav .form-group{
-  margin: 0 27px 0 43px;
+  margin: 0 auto 0 auto;
+  width: 90%;
+}
+
+.clearfix{
+  width: 80%;
+  margin: 0 auto;
 }
 
 .login-page .nav-tabs .nav-link.active:after{
@@ -15459,9 +15470,10 @@ button.close:focus {
 }
 
 .login-form-nav .btn__small{
-  margin: 15px 27px 25px 43px;
+  margin: 15px auto 25px auto;
+  display: block;
   height: 44px;
-  width: 438px;
+  width: 90%;
   font-family: 'Avenir-Next';
   font-weight: 600;
   font-size: 16px;
@@ -15486,9 +15498,9 @@ button.close:focus {
 .login-oauth .form-group{
   border: 0.3px solid #000000;
   border-radius: 3px;
-  width: 438px;
+  width: 90%;
   height: 30px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px auto;
 }
 
 .login-oauth .form-group a{
@@ -15517,8 +15529,8 @@ button.close:focus {
 
 
 #register button{
-  margin: 35px 27px 9px 43px;
-  width: 438px;
+  margin: 35px auto 9px auto;
+  width: 20%;
   height: 34px;
   padding: 0;
   background: #000000;
@@ -15567,7 +15579,7 @@ button.close:focus {
 
 .trackorder .btn-block{
   background-color: #000000;
-  width: 337px;
+  width: 90%;
   height: 34px;
   margin: 0 auto;
   border: none;
