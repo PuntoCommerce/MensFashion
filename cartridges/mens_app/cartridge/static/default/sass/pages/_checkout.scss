@@ -61,7 +61,7 @@
     }
 
     &--image {
-      width: 100%;
+      width: 158px;
     }
   }
 
@@ -113,11 +113,7 @@
     padding: 20px;
     border: 1px solid $text-color-black;
 
-    height: 225px;
-
-    @include respond(tab-port-max) {
-      height: 300px;
-    }
+    height: fit-content;
   }
 
   &__totals {
