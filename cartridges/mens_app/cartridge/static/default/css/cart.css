@@ -741,7 +741,6 @@ div.availability {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-  max-height: 5.625em;
 }
 .promo-code-form {
   display: none;
@@ -762,9 +761,6 @@ div.availability {
   color: #999;
   font-size: 1.625em;
   padding: 0;
-  position: absolute;
-  top: -0.625rem;
-  right: 0.25rem;
   border: none;
   background-color: #fff;
 }
@@ -781,10 +777,6 @@ div.availability {
   border: none;
   border-radius: 0;
   font-size: 1.625em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
   padding-left: 0.3125rem;
   padding-right: 0.3125rem;
   z-index: 1;

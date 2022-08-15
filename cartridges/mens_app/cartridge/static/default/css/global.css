@@ -2424,13 +2424,9 @@ fieldset:disabled a.btn {
 }
 .btn-light {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
 }
 .btn-light:hover {
   color: #212529;
-  background-color: #e2e6ea;
-  border-color: #dae0e5;
 }
 .btn-light.focus,
 .btn-light:focus {
@@ -2439,15 +2435,11 @@ fieldset:disabled a.btn {
 .btn-light.disabled,
 .btn-light:disabled {
   color: #212529;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
 }
 .btn-light:not(:disabled):not(.disabled).active,
 .btn-light:not(:disabled):not(.disabled):active,
 .show > .btn-light.dropdown-toggle {
   color: #212529;
-  background-color: #dae0e5;
-  border-color: #d3d9df;
 }
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .btn-light:not(:disabled):not(.disabled):active:focus,
@@ -2456,8 +2448,6 @@ fieldset:disabled a.btn {
 }
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
 }
 .btn-dark:hover {
   color: #fff;
@@ -14340,6 +14330,10 @@ div.availability {
 .item-attributes {
   vertical-align: top;
   padding-left: 0;
+  padding: 15px;
+}
+.product-summary-block .item-attributes {
+  padding: 15px;
 }
 .line-item-attributes,
 .line-item-option {
@@ -14365,6 +14359,7 @@ div.availability {
 .line-item-pricing-info + .unit-price .price {
   font-size: 1em;
   font-weight: bolder;
+  white-space: nowrap;
 }
 .line-item-price-quantity-info {
   margin-top: 0.625em;
@@ -14378,7 +14373,6 @@ div.availability {
   font-weight: bolder;
 }
 .item-image {
-  margin-right: 0.938em;
   -ms-flex-positive: 0;
   flex-grow: 0;
   -ms-flex-negative: 0;
@@ -14389,7 +14383,6 @@ div.availability {
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-  max-height: 5.625em;
 }
 .non-adjusted-price {
   display: none;
@@ -15192,7 +15185,7 @@ button.close:focus {
   display: contents;
 }
 
-.title-container {
+.title-container-myaccount {
   background: #000;
   padding: 20px 262px;
 }

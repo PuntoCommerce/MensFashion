@@ -241,26 +241,13 @@
   display: none;
 }
 .next-step-button {
-  position: fixed;
   bottom: 0;
   z-index: 3;
-  padding-right: 0;
-  padding-left: 0;
 }
 @media (max-width: 543.98px) {
   .next-step-button {
     background-color: hsla(0, 0%, 100%, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-  .next-step-button div {
-    padding: 1rem;
-  }
-}
-@media (min-width: 544px) {
-  .next-step-button {
-    position: static;
-    padding-right: 0.938em;
-    padding-left: 0.938em;
   }
 }
 .shipping-methods {
@@ -445,4 +432,11 @@ span.ship-to-phone {
 }
 .card.order-product-summary .strike-price {
   height: auto;
+}
+.shipping-check-card {
+  position: relative;
+}
+.form-check-input.p-absolute {
+  top: 7%;
+  left: 10%;
 }
