@@ -1,25 +1,25 @@
 <div class="product-line-item checkout__order--product" data-product-line-item="${lineItem.UUID}">
-    <iscomment> <div class="line-item-header">
-        <isif condition=${miniCart}>
-            <isinclude template="checkout/productCard/productCardProductNameAndRemove" />
-        <iselse>
-            <isinclude template="checkout/productCard/productCardProductName" />
-        </isif>
-    </div> </iscomment>
+    <iscomment>
+        <div class="line-item-header">
+            <isif condition=${miniCart}>
+                <isinclude template="checkout/productCard/productCardProductNameAndRemove" />
+                <iselse>
+                    <isinclude template="checkout/productCard/productCardProductName" />
+            </isif>
+        </div>
+    </iscomment>
 
     <isif condition="${lineItem.productType === 'bundle'}">
-        <div class="bundle-includes">${Resource.msg('msg.bundle.includes','cart',null)}</div>
+        <div class="bundle-includes">${Resource.msg('msg.bundle.includes', 'cart', null)}</div>
         <!--- individual bundled line items --->
         <isinclude template="cart/productCard/cartProductCardBundledItems" />
     <iselse/>
-        <div class="d-flex flex-row">
-            <div class="item-image">
-                <img class="product-image"
-                    src="${lineItem.images.small[0].url}"
-                    alt="${lineItem.images.small[0].alt}"
+        <div class="row">
+            <div class="item-image col-4">
+                <img class="product-image" src="${lineItem.images.small[0].url}" alt="${lineItem.images.small[0].alt}"
                     title="${lineItem.images.small[0].title}">
             </div>
-            <div class="item-attributes">
+            <div class="item-attributes col-8">
                 <div class="checkout__text">
                     <span>${lineItem.productName}</span>
                 </div>
@@ -33,32 +33,32 @@
                 </div>
                 <div class="row checkout__text">
                     <!--- item price --->
-                    <div class="col-4 p-2">
+                    <div class="col-4">
                         <isif condition="${lineItem.price}">
-                        <p class="line-item-pricing-info">
-                            <span class="line-item-total-text unit-price-label">
-                                ${Resource.msg('label.each.item.price','cart',null)}
-                            </span><br/>
-                            <isset name="price" value="${lineItem.price}" scope="page"/>
-                            <div class="unit-price">
-                                <isinclude template="/product/components/pricing/main" />
-                            </div>
-                        </p>
+                            <p class="line-item-pricing-info">
+                                <span class="line-item-total-text unit-price-label">
+                                    ${Resource.msg('label.each.item.price', 'cart', null)}
+                                </span><br />
+                                <isset name="price" value="${lineItem.price}" scope="page" />
+                                <div class="unit-price">
+                                    <isinclude template="/product/components/pricing/main" />
+                                </div>
+                            </p>
                         </isif>
                     </div>
                     <!--- quantity --->
-                    <div class="col-4  p-2">
+                    <div class="col-4">
                         <isif condition=${miniCart}>
                             <isinclude template="checkout/productCard/productCardQuantitySelector" />
-                        <iselse>
-                            <isinclude template="checkout/productCard/productCardQuantityDisplay" />
+                            <iselse>
+                                <isinclude template="checkout/productCard/productCardQuantityDisplay" />
                         </isif>
                     </div>
                     <!--- line item total price --->
-                    <div class="col-4 p-2">
+                    <div class="col-4">
                         <p class="line-item-pricing-info">
                             <span class="line-item-total-text line-item-total-price-label">
-                                ${Resource.msg('label.total.price','cart',null)}
+                                ${Resource.msg('label.total.price', 'cart', null)}
                             </span>
                         </p>
                         <div class="item-total-${lineItem.UUID} price">
@@ -73,7 +73,7 @@
     <isif condition="${lineItem.productType === 'bundle' && ((pdict.order && !pdict.order.orderStatus) || miniCart)}">
         <isinclude template="cart/productCard/cartProductCardAvailability" />
     </isif>
-    
+
     <isif condition=${miniCart}>
         <div class="line-item-promo item-${lineItem.UUID}">
             <isinclude template="checkout/productCard/productCardProductPromotions" />

@@ -1,37 +1,37 @@
 <div class="col-lg-6 product-card-footer d-flex justify-content-between align-items-center">
-    <isif condition="${!lineItem.isBonusProductLineItem}"/>
-        <div class="row d-flex justify-content-between align-items-center">
-            <!---item price--->
-            <div class="col-4 d-none d-sm-block line-item-price-${lineItem.UUID}">
-                <p class="line-item-price-info">${Resource.msg('label.each.item.price','cart',null)}</p>
-                <isset name="price" value="${lineItem.price}" scope="page"/>
-                <div class="unit-price">
-                    <isinclude template="/product/components/pricing/main" />
-                </div>
+    <isif condition="${!lineItem.isBonusProductLineItem}" />
+    <div class="row d-flex justify-content-between align-items-center h-100">
+        <!---item price--->
+        <div class="cart-label col-4 d-none d-sm-block line-item-price-${lineItem.UUID} h-100">
+            <p class="line-item-price-info">${Resource.msg('label.each.item.price', 'cart', null)}</p>
+            <isset name="price" value="${lineItem.price}" scope="page" />
+            <div class="unit-price">
+                <isinclude template="/product/components/pricing/main" />
             </div>
-
-            <!--- quantity --->
-            <div class="col-4 col-lg-3 line-item-quantity">
-                <isinclude template="checkout/productCard/productCardQuantitySelector" />
-            </div>
-
-            <!--- line item total price --->
-            <div class="col-4 line-item-total-price">
-                <p class="line-item-price-info">
-                    ${Resource.msg('label.total.price','cart',null)}
-                </p>
-                <div class="item-total-${lineItem.UUID} price">
-                    <isinclude template="checkout/productCard/productCardProductTotalPrice" />
-                </div>
-            </div>
-
-            <!--- extra slot for spacing reasons due to large remove button --->
-            <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
         </div>
 
-        <!--- promotions --->
-        <div class="line-item-promo item-${lineItem.UUID}">
-            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        <!--- quantity --->
+        <div class="cart-label col-4 line-item-quantity h-100">
+            <isinclude template="checkout/productCard/productCardQuantitySelector" />
         </div>
+
+        <!--- line item total price --->
+        <div class="cart-label col-4 line-item-total-price h-100">
+            <p class="line-item-price-info">
+                ${Resource.msg('label.total.price', 'cart', null)}
+            </p>
+            <div class="item-total-${lineItem.UUID} price">
+                <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+            </div>
+        </div>
+
+        <!--- extra slot for spacing reasons due to large remove button --->
+        <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
+    </div>
+
+    <!--- promotions --->
+    <div class="line-item-promo item-${lineItem.UUID}">
+        <isinclude template="checkout/productCard/productCardProductPromotions" />
+    </div>
     </isif>
 </div>

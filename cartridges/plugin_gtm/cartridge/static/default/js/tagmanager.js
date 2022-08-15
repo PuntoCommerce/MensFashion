@@ -229,7 +229,7 @@ if (document.readyState === 'complete') {
 /*
 * Check for custom data attributes and add them to the dataLayer
 */
-let customData = document.querySelector('[data-gtmpageview]').dataset.gtmpageview;
+let customData = document.querySelector('[data-gtmpageview]') ? document.querySelector('[data-gtmpageview]').dataset.gtmpageview : null;
 let prodGtmData = document.querySelector('[data-gtmdata]');
 prodGtmData = prodGtmData ? prodGtmData.dataset.gtmdata : null;
 let pageGtmData = {

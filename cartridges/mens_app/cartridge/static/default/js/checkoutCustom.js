@@ -86,3 +86,9 @@ zipCodeField.addEventListener("change", (e) => {
     submitButton.disabled = false;
   }
 });
+
+let countrySelect = document.querySelector(".form-control.shippingCountry.custom-select");
+countrySelect.value = "MX";
+if (countrySelect.value === "MX") {
+  document.querySelector(".dwfrm_shipping_shippingAddress_addressFields_country").style.display = "none";
+}
