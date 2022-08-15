@@ -11,7 +11,7 @@
         <!---Address Book--->
         <isinclude template="account/addressBookCard" />
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 orderCol">
         <!---Order History--->
         <isif condition="${pdict.account.orderHistory}">
             <isset name="order" value="${pdict.account.orderHistory}" scope="page" />

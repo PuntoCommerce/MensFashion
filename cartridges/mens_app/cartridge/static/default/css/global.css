@@ -13874,15 +13874,7 @@ h1.page-title {
     font-size: 3rem;
   }
 }
-h1.page-title:before {
-  content: "";
-  background-color: var(--skin-primary-color-1);
-  height: 100%;
-  width: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
+
 @media (min-width: 1200px) {
   h1.page-title:before {
     width: calc((100vw - 1140px) / 2);
@@ -15366,6 +15358,16 @@ button.close:focus {
   font-weight: 700;
 }
 
+.page-title {
+  color: #fff !important;
+  font-family: 'Avenir-Next' !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #000000 !important;
+}
+
 .login-form-nav{
   margin: 13px 115px 0 115px;
 }
@@ -15530,7 +15532,7 @@ button.close:focus {
 
 #register button{
   margin: 35px auto 9px auto;
-  width: 20%;
+  width: 90%;
   height: 34px;
   padding: 0;
   background: #000000;
@@ -15608,4 +15610,94 @@ button.close:focus {
 #register button:hover{
   background-color: #d8d8d8;
   color: #000000 !important;
+}
+
+.confirmation-top .checkout__stepper{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.confirmation-banner{
+  width: 100%;
+}
+
+.cart-check-img{
+  width: 93.75px;
+  display: block;
+  margin: 40px auto;
+}
+
+.order-thank-you-msg{
+    text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    color: #64656A;
+    font-family: "Avenir-LT-Std";
+}
+
+.order-thank-you-email-msg{
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Avenir-LT-Std";
+}
+
+#submitEmailButton{
+  background-color: #000;
+  color: #fff !important;
+  margin-top: 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+.request-password-title{
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #64656A;
+    border-radius: 3px;
+    margin-top: 40px;
+    width: 100%;
+    padding: 12px;
+}
+
+.reset-password-form{
+  margin-bottom: 40px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 20px 15px;
+}
+
+.request-password-title{
+  margin-bottom: 0;
+}
+
+.container .myAccount{
+  position: relative;
+}
+
+.container .myAccount .row{
+  position: absolute;
+}
+
+.myAccount .breadcrumb{
+  padding: 27px 115px 0 115px;
+}
+
+.myAccount .col-sm-6{
+  padding: 85px 115px;
+}
+
+.breadcrumb-item a{
+  text-decoration: underline;
+}
+
+.myAccount .card{
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.myAccount .orderCol{
+  background-color:#C2C3C6;
 }
