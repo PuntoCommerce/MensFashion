@@ -12,10 +12,52 @@
     <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
 
     <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
-        <fieldset class="shipping">
-            <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
-
+        <fieldset class="shipping d-none">
             <isinclude template="checkout/shipping/shippingMethodCards" />
+        </fieldset>
+
+        <fieldset class="shipment-selector-btns">
+            <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
+            <div class="row">
+                <div class="col-12 col-lg-6 mb-3">
+                    <button id="selectShipping" class="shipping-check-card h-100">
+                        <div class="check-decorator">
+                            <div id="outer-circle">
+                                <div id="inner-circle">
+
+                                </div>
+                            </div>
+                        </div>
+                        <img class="mb-2" src="${URLUtils.staticURL('/images/checkout/shippingIcon.svg')}"
+                            alt="Envío a domicilio" />
+                        <div class="shipping-card-header mb-2">
+                            ${Resource.msg('check.shipping.method.card.header', 'checkout', null)}
+                        </div>
+                        <div>
+                            ${Resource.msg('check.shipping.method.card', 'checkout', null)}
+                        </div>
+                    </button>
+                </div>
+                <div class="col-12 col-lg-6 mb-3">
+                    <button id="selectPickup" class="shipping-check-card h-100">
+                        <div class="check-decorator">
+                            <div id="outer-circle">
+                                <div id="inner-circle">
+
+                                </div>
+                            </div>
+                        </div>
+                        <img class="mb-2" src="${URLUtils.staticURL('/images/checkout/pickupIcon.svg')}"
+                            alt="Envío a domicilio" />
+                        <div class="shipping-card-header mb-2">
+                            ${Resource.msg('check.pickup.method.card.header', 'checkout', null)}
+                        </div>
+                        <div>
+                            ${Resource.msg('check.pickup.method.card', 'checkout', null)}
+                        </div>
+                    </button>
+                </div>
+            </div>
         </fieldset>
 
         <fieldset
@@ -39,6 +81,7 @@
 
         <fieldset
             class="shipping-address-block ${shippingModel.selectedShippingMethod.storePickupEnabled ? 'd-none' : ''}">
+            <span class="checkout-summary-title-1 d-block mb-3">${Resource.msg('shipping.summary.title', 'checkout', null)}</span>
             <isinclude template="checkout/shipping/shippingAddress" />
         </fieldset>
 
@@ -53,6 +96,11 @@
     <div class="view-address-block ${shippingModel.shippingAddress ? '' : 'd-none'}">
         <isinclude template="checkout/shipping/shippingCard" />
     </div>
+
+    <fieldset class="shipping only-visible col-12 col-lg-7">
+        <span class="checkout-summary-title-2 d-block mb-3">${Resource.msg('check.shipping.summary.title', 'checkout', null)}</span>
+        <isinclude template="checkout/shipping/shippingMethod" />
+    </fieldset>
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
     </form>
