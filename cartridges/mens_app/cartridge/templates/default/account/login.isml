@@ -5,7 +5,7 @@
         assets.addJs('/js/login.js');
     </isscript>
 
-    <div class="title-container-myaccount">
+    <div class="title-container">
         <h1 class="myAccount-title m-0">${Resource.msg('header.hero.image.login', 'login', null)}</h1>
     </div>
     <div class="container login-page">
