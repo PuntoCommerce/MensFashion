@@ -10,11 +10,11 @@
         assets.addJs('/js/wishlist.js');
     </isscript>
 
-    <div class="hero slant-down account-image">
+    <div class="title-container">
         <h1 class="page-title">${Resource.msg('page.heading.dashboard', 'account', null)}</h1>
     </div>
 
-    <div class="container">
+    <div class="container myAccount">
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
         <isinclude template="account/dashboardProfileCards" />
