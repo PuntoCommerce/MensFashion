@@ -87,11 +87,16 @@ zipCodeField.addEventListener("change", (e) => {
   }
 });
 
-let countrySelect = document.querySelector(".form-control.shippingCountry.custom-select");
-countrySelect.value = "MX";
-if (countrySelect.value === "MX") {
-  document.querySelector(".dwfrm_shipping_shippingAddress_addressFields_country").style.display = "none";
+function pickCountry() {
+  setTimeout(() => {
+    let countrySelect = document.querySelector(".form-control.shippingCountry.custom-select");
+    countrySelect.value = "MX";
+    if (countrySelect.value === "MX") {
+      document.querySelector(".dwfrm_shipping_shippingAddress_addressFields_country").style.display = "none";
+    }
+  }, 1000);
 }
+pickCountry()
 
 function selectShipping(shippingMethod) {
   let shippingSelector = document.querySelectorAll('.form-check-input');
@@ -104,16 +109,35 @@ function selectShipping(shippingMethod) {
     }
   });
 }
+function updateSelectedShippingMethod() {
+  setTimeout(() => {
+    let findActiveShipping = document.querySelectorAll('.shipping.only-visible .form-check input');
+    findActiveShipping.forEach((item) => {
+      if (item.checked) {
+        item.parentElement.style.display = "block";
+        item.parentElement.nextElementSibling.style.display = "block";
+      } else {
+        item.parentElement.style.display = "none";
+        item.parentElement.nextElementSibling.style.display = "none";
+      }
+    });
+  }, 1000);
+}
 let selectShippingBtn = document.querySelector('#selectShipping');
 let selectPickupBtn = document.querySelector('#selectPickup');
 selectShippingBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  selectShippingBtn.classList.add('active');
+  selectPickupBtn.classList.remove('active');
   selectShipping("shipped");
+  updateSelectedShippingMethod();
+  pickCountry();
 });
 selectPickupBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  selectPickupBtn.classList.add('active');
+  selectShippingBtn.classList.remove('active');
   selectShipping("pickup");
+  updateSelectedShippingMethod();
+  pickCountry();
 });
-let findActiveShipping = document.querySelectorAll('.shipping.only-visible .form-check');
-let findActiveShippingPrice = document.querySelectorAll('.shipping.only-visible .shipping-method-pricing');
-
