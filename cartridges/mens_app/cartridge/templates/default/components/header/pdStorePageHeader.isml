@@ -60,7 +60,7 @@
 
 
                                 <div class="store-locator">
-                                    <a href="${URLUtils.url(" StoreLocator-Start")}">
+                                    <a href="${URLUtils.url("StoreLocator-Start")}">
                                         <img src="${URLUtils.staticURL('/images/store_locator.svg')}" />
                                     </a>
                                 </div>
