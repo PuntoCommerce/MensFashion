@@ -1,4 +1,4 @@
-<strong>${Resource.msg('label.order.totals', 'confirmation', null)}:</strong> <br/>
+<iscomment> <strong style="background: #64656A; color: #ffffff; font-size: 16px; font-weight: 700;">${Resource.msg('label.order.totals', 'confirmation', null)}:</strong> <br/> </iscomment>
 <!--- Subtotal --->
 ${Resource.msg('label.order.subtotal','confirmation', null)}:
 ${pdict.order.totals.subTotal}

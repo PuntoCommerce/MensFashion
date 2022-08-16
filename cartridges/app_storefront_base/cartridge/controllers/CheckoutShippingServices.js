@@ -361,8 +361,7 @@ server.post(
 
     res.json({
       customer: new AccountModel(req.currentCustomer),
-      order: basketModel,
-      shippingForm: server.forms.getForm("shipping"),
+      order: basketModel
     });
 
     return next();

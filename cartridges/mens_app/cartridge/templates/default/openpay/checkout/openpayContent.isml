@@ -1,0 +1,67 @@
+<script type="text/javascript" src="https://js.openpay.mx/openpay.v1.min.js"></script>
+<script type='text/javascript' src="https://js.openpay.mx/openpay-data.v1.min.js"></script>
+<isset name="openpay" value="${pdict.forms.billingForm.openpay}" scope="page" />
+<div class="tab-pane open-pay-content" id="open-pay-content" role="tabpanel">
+   <div id="payment-form-openpay">
+      <p> ${Resource.msg('heading.checkout.payment.card', 'checkout', null)}</p>
+      <fieldset class="payment-form-fields">
+         <input type="hidden" name="use_card_points" id="use_card_points" value="false">
+         <input type="hidden" class="form-control" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="OpenPay">
+         <div class="pymnt-itm card active">
+            <div class="pymnt-cntnt">
+               <div class="row">
+                  <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.name', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.openpay.name', 'openpay', null)}" <isprint
+                        value=${openpay.name_openpay.attributes} encoding="off" />
+                     >
+                  </div>
+                  <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.number', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.openpay.number', 'openpay', null)}" <isprint
+                        value=${openpay.card_number.attributes} encoding="off" />
+                     <isprint value=${openpay.card_number_openpay.attributes} encoding="off" />
+                     >
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="col-6">
+                     <label class="form-control-label"
+                        for="expirationMonth">${Resource.msg('field.credit.card.expiration.month', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
+                     <select id="month_openpay" class="form-control" <isprint value=${openpay.month_openpay.attributes}
+                        encoding="off" />
+                     >
+                     </select>
+                  </div>
+                  <div class="col-6">
+                     <label class="form-control-label"
+                        for="expirationYear">${Resource.msg('field.credit.card.expiration.year', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
+                     <select id="year_openpay" class="form-control" <isprint value=${openpay.year_openpay.attributes}
+                        encoding="off" />
+                     >
+                     </select>
+                  </div>
+               </div>
+               <div class="row form-group">
+                  <div class="d-flex flex-column col-12">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.security.code', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
+                     <input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.openpay.cvv', 'openpay', null)}" <isprint
+                        value=${openpay.cvv_openpay.attributes} encoding="off" />
+                     >
+                  </div>
+               </div>
+            </div>
+         </div>
+         <input id="device_session_id_field" style="visibility: hidden;" <isprint
+            value=${openpay.device_session_id.attributes} encoding="off" /> >
+      </fieldset>
+
+   </div>
+</div>
+
+<isscript>
+   var assets = require('*/cartridge/scripts/assets.js');
+   assets.addJs('/js/openpay.js');
+</isscript>
