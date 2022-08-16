@@ -80,16 +80,7 @@
 
                         <!-- Step 2: Shipping -->
                         <isinclude template="checkout/shipping/shipping" />
-                        <div class="card shipping-summary">
-                            <div class="card-header clearfix">
-                                <h2 class="pull-left card-header-custom">${Resource.msg('heading.checkout.shipping', 'checkout', null)}</h2>
-                                <button class="edit-button pull-right"
-                                    aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
-                            </div>
-                            <div class="card-body">
-                                <isinclude template="checkout/shipping/shippingSummary" />
-                            </div>
-                        </div>
+
 
                         <!-- Step 3: Payment and Billing-->
                         <isinclude template="checkout/billing/billing" />
@@ -109,29 +100,36 @@
                         <!----------------------------------------------------------------------------------->
                         <!-- Checkout Workflow Buttons -->
                         <!----------------------------------------------------------------------------------->
-                        <div class="row">
-                            <div class="next-step-button col-12">
-                                <div class="mb-sm-5">
-                                    <button class="btn btn--gray btn__small text-uppercase btn-block submit-shipping"
-                                        type="submit" name="submit" value="submit-shipping" <isif
-                                        condition="${pdict.order.usingMultiShipping && !pdict.order.shippable}">disabled
-                                        </isif>>
-                                        ${Resource.msg('button.next.payment', 'checkout', null)}
-                                    </button>
+                        <div class="card col">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="next-step-button col-12">
+                                        <div class="mb-sm-5">
+                                            <button
+                                                class="btn btn--gray btn__small text-uppercase btn-block submit-shipping col-sm-12 col-lg-10"
+                                                type="submit" name="submit" value="submit-shipping" <isif
+                                                condition="${pdict.order.usingMultiShipping && !pdict.order.shippable}">disabled
+                                                </isif>>
+                                                ${Resource.msg('button.next.payment', 'checkout', null)}
+                                            </button>
 
-                                    <button class="btn btn--gray btn__small text-uppercase btn-block submit-payment"
-                                        type="submit" name="submit" value="submit-payment">
-                                        ${Resource.msg('button.next.place.order', 'checkout', null)}
-                                    </button>
+                                            <button
+                                                class="btn btn--gray btn__small text-uppercase btn-block submit-payment"
+                                                type="submit" name="submit" value="submit-payment">
+                                                ${Resource.msg('button.next.place.order', 'checkout', null)}
+                                            </button>
 
-                                    <button class="btn btn--gray btn__small text-uppercase btn-block place-order"
-                                        data-action="${URLUtils.url('CheckoutServices-PlaceOrder')}" type="submit"
-                                        name="submit" value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
-                                    </button>
+                                            <button
+                                                class="btn btn--gray btn__small text-uppercase btn-block place-order"
+                                                data-action="${URLUtils.url('CheckoutServices-PlaceOrder')}"
+                                                type="submit" name="submit"
+                                                value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <!----------------------------------------------------------------------------------->
@@ -146,6 +144,15 @@
                                 <div class="checkout__order--divider"></div>
                             </div>
                             <div class="card-body order-total-summary ">
+                                <div class="card shipping-summary">
+                                    <div class="card-header clearfix summary-edit-btn">
+                                        <button class="edit-button pull-right"
+                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <isinclude template="checkout/shipping/shippingSummary" />
+                                    </div>
+                                </div>
                                 <isinclude template="checkout/orderTotalSummary" />
                             </div>
                         </div>

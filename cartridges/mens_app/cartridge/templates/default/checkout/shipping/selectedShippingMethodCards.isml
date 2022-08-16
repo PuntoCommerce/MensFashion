@@ -1,10 +1,10 @@
 <isif
     condition="${shippingModel.selectedShippingMethod && shippingMethod.ID === shippingModel.selectedShippingMethod.ID}">
     <input id="shippingMethod-${shippingMethod.ID}-${shippingModel.UUID}${lineItem ? '-' + lineItem.UUID : ''}"
-        name="${shippingAddress.shippingMethodID.htmlName}" type="radio" class="form-check-input p-absolute"
-        value="${shippingMethod.ID}" checked />
+        name="${shippingAddress.shippingMethodID.htmlName}" type="radio"
+        class="form-check-input p-absolute ${shippingMethod.ID}" value="${shippingMethod.ID}" checked />
 <iselse/>
     <input id="shippingMethod-${shippingMethod.ID}-${shippingModel.UUID}${lineItem ? '-' + lineItem.UUID : ''}"
         name="${shippingAddress.shippingMethodID.htmlName}" type="radio" value="${shippingMethod.ID}"
-        class="form-check-input p-absolute" />
+        class="form-check-input p-absolute ${shippingMethod.ID}" />
 </isif>

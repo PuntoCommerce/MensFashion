@@ -92,3 +92,28 @@ countrySelect.value = "MX";
 if (countrySelect.value === "MX") {
   document.querySelector(".dwfrm_shipping_shippingAddress_addressFields_country").style.display = "none";
 }
+
+function selectShipping(shippingMethod) {
+  let shippingSelector = document.querySelectorAll('.form-check-input');
+  shippingSelector.forEach((item) => {
+    if (shippingMethod === "pickup" && item.value == "pickup") {
+      item.click();
+    }
+    if (shippingMethod === "shipped" && item.value == "MEX001") {
+      item.click();
+    }
+  });
+}
+let selectShippingBtn = document.querySelector('#selectShipping');
+let selectPickupBtn = document.querySelector('#selectPickup');
+selectShippingBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  selectShipping("shipped");
+});
+selectPickupBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  selectShipping("pickup");
+});
+let findActiveShipping = document.querySelectorAll('.shipping.only-visible .form-check');
+let findActiveShippingPrice = document.querySelectorAll('.shipping.only-visible .shipping-method-pricing');
+

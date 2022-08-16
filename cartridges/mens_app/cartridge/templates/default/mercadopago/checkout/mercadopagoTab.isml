@@ -1,0 +1,6 @@
+<li class="nav-item" data-method-id="${paymentOption.ID}">
+    <a class="nav-link mercadopago-tab active" data-toggle="tab" href="#mercado-pago-content" role="tab">
+        <img class="credit-card-option" src="${URLUtils.staticURL('/images/mercado_pago.jpg')}" height="40"
+            alt="${paymentOption.name}" title="${paymentOption.name}">
+    </a>
+</li>

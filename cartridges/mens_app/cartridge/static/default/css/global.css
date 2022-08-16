@@ -13054,7 +13054,6 @@ a.skip:hover {
 .nav-item .nav-link:focus,
 .nav-item .nav-link:hover,
 .nav-item.show .nav-link {
-  background-color: #fff;
   color: #444;
 }
 @media (min-width: 769px) {
@@ -13064,7 +13063,6 @@ a.skip:hover {
 }
 @media (max-width: 768.98px) {
   .main-menu.menu-toggleable-left {
-    background-color: #fff;
     z-index: 4;
   }
 }
@@ -14255,7 +14253,6 @@ div.availability {
 .form-nav .nav-tabs .nav-link.active,
 .form-nav .nav-tabs .nav-link.active:focus,
 .form-nav .nav-tabs .nav-link.active:hover {
-  background-color: #fff;
   color: #333;
 }
 .nav-tabs .nav-link.active {

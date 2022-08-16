@@ -244,12 +244,6 @@
   bottom: 0;
   z-index: 3;
 }
-@media (max-width: 543.98px) {
-  .next-step-button {
-    background-color: hsla(0, 0%, 100%, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-}
 .shipping-methods {
   font-size: 1.125em;
   font-weight: 600;
@@ -439,4 +433,64 @@ span.ship-to-phone {
 .form-check-input.p-absolute {
   top: 7%;
   left: 10%;
+}
+.summary-edit-btn {
+  position: absolute;
+  right: 0;
+}
+#dwfrm_billing fieldset {
+  padding: 0;
+}
+.billing-nav.payment-information .nav-tabs .nav-link.active {
+  border-left: 0.188em solid var(--skin-primary-color-1);
+  border-bottom: 0;
+}
+.form-control.custom-select {
+  text-transform: capitalize;
+}
+.nav.nav-tabs.payment-options .nav-item .nav-link {
+  display: flex;
+  justify-content: flex-end;
+}
+.shipment-selector-btns button {
+  background: none;
+}
+.card-header-custom.header-shipping {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+}
+.shipment-selector-btns h3 {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 26px;
+}
+.shipping-card-header {
+  font-family: "Avenir-Bold";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 0;
+}
+.shipping-check-card:focus {
+  outline: solid;
+}
+@media (min-width: 768px) {
+  .shipment-selector-btns h3 {
+    font-family: "Avenir-Next";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .shipping-card-header {
+    font-family: "Avenir-Next";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+.shipping.only-visible {
+  /* pointer-events: none; */
 }
