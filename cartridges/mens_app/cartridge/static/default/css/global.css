@@ -15388,6 +15388,7 @@ button.close:focus {
 .login-page .tab-content{
   border: 0.3px solid #64656A;
   border-radius: 3px; 
+  padding: 0 31px 0 22px;
 }
 
 .checkout__form{
@@ -15470,7 +15471,7 @@ button.close:focus {
 #login-form-email, #login-form-password{
   margin: 9px auto 14px auto;
   border-radius: 3px;
-  width: 90%;
+  width: 100%;
 }
 
 #password-reset{
@@ -15535,7 +15536,7 @@ button.close:focus {
 
 #register .form-control{
   margin: 0 auto 20px auto;
-  width: 90%;
+  width: 100%;
 }
 
 
@@ -15815,4 +15816,51 @@ button.close:focus {
 .adrressBtns .btn-save:hover{
   color: #000 !important;
   border: 1px solid #000;
+}
+
+.order-top{
+  margin: 0 200px;
+}
+
+.order-top .form-group{ 
+  position: relative;
+  top: -50px;
+}
+
+.order-list-container .card-header, .orderDetail .card-header {
+  background: #e7e7e7;
+}
+
+.order-list-container .card-header h3, .orderDetail .card-header h2 {
+  font-family: 'Avenir-Next';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-list-container .card-header.clearfix{
+  width: 72%;
+  margin: 0 auto;
+}
+
+.order-list-container .card-body, .order-list-container .card-footer{
+  width: 72%;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.orderDetail{
+  margin: 0 200px;
+}
+
+.orderDetail .card-body{
+  border: 1px solid #000;
+}
+
+.orderDetail .checkout__order--product{
+  background: #fff;
+}
+
+.my-account a{
+  color:#2D64FC;
 }

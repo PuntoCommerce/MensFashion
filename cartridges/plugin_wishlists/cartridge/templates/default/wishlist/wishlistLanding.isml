@@ -6,7 +6,7 @@
         assets.addCss('/css/login.css');
         assets.addJs('/js/login.js');
     </isscript>
-    <div class="hero slant-down login-banner">
+    <div class="title-container-account">
         <h1 class="page-title">${Resource.msg('wishlist.hero.image.header', 'wishlist', null)}</h1>
     </div>
     <div class="container ${pdict.loggedIn ? '' : 'login-page'}">
