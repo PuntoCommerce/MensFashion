@@ -54,6 +54,6 @@
     </iscomment>
     ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter', pdict) || ''}
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
+    <isinclude template="/components/chatSales" />
 </body>
-
 </html>

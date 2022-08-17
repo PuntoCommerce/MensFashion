@@ -87,14 +87,21 @@
                         <!-- Step 3: Payment and Billing-->
                         <isinclude template="checkout/billing/billing" />
                         <div class="card payment-summary">
-                            <div class="card-header clearfix">
-                                <h2 class="pull-left card-header-custom">${Resource.msg('heading.payment', 'checkout', null)}</h2>
-                                <button class="edit-button pull-right"
-                                    aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                            <div class="card-header">
+                                <h2 class="card-header-custom">${Resource.msg('heading.payment.review', 'checkout', null)}</h2>
                             </div>
 
-                            <div class="card-body">
-                                <isinclude template="checkout/billing/billingSummary" />
+                            <div class="card-body row">
+                                <div class="col-6 checkout-summary-container">
+                                    <isinclude template="checkout/billing/billingSummary" />
+                                    <button class="custom_edit-button"
+                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                </div>
+                                <div class="col-6 checkout-summary-container">
+                                    <isinclude template="checkout/shipping/shippingSummary" />
+                                    <button class="custom_edit-button"
+                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                </div>
                             </div>
                         </div>
 
@@ -140,7 +147,8 @@
                     <div class="col-sm-5">
                         <div class="card checkout__order d-none d-lg-block mt-lg-4">
                             <div class="card-header d-flex justify-content-center align-items-center">
-                                <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}</h2>
+                                <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}
+                                </h2>
                             </div>
                             <div class="d-flex justify-content-center pb-3 pl-3 pr-3">
                                 <div class="checkout__order--divider"></div>
