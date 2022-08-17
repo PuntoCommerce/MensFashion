@@ -12,71 +12,102 @@
     <div class="confirmation-top">
         <ul class="checkout__stepper">
             <li class="checkout__stepper--item">
-                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}"
-        alt="Check" /></h3>
+                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img
+                        class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}" alt="Check" /></h3>
                 <p class="checkout__stepper--item-title">Envío</p>
             </li>
             <div class="checkout__stepper--divider"></div>
             <li class="checkout__stepper--item">
-                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}"
-        alt="Check" /></h3>
+                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img
+                        class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}" alt="Check" /></h3>
                 <p class="checkout__stepper--item-title">Pago</p>
             </li>
             <div class="checkout__stepper--divider"></div>
             <li class="checkout__stepper--item">
-                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}"
-        alt="Check" /></h3>
+                <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current"><img
+                        class="check-icon" src="${URLUtils.httpsStatic('/images/check.png')}" alt="Check" /></h3>
                 <p class="checkout__stepper--item-title">Realizar Pedido</p>
             </li>
         </ul>
     </div>
     <div class="banner-body">
         <img class="confirmation-banner" src="${URLUtils.httpsStatic('/images/banner_conf.png')}"
-        alt="Banner Mens Fashion" />
+            alt="Banner Mens Fashion" />
 
-    <div class="title-container">
-        <h1 class="page-title">${Resource.msg('title.thank.you.page', 'confirmation', null)}</h1>
-
-    </div>
-    <div class="container receipt <isif condition=" ${pdict.order.shipping.length > 1}">multi-ship</isif>">
-        <div class="row">
-            <div class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0'}">
-
-                    <img class="cart-check-img" src="${URLUtils.httpsStatic('/images/cart-check.png')}"
-                    alt="Banner Mens Fashion" />
-                <h2 class="order-thank-you-msg">¡${pdict.order.customerName}, ${Resource.msg('msg.placed.order.thank.you2','confirmation',null)}</h2>
-
-                <h2 class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you', 'confirmation', null)}</h2>
-
-                <isif condition="${pdict.order.orderEmail}">
-                    <p class="order-thank-you-email-msg">
-                        <isprint
-                            value="${Resource.msgf('info.receive.email.confirmation', 'confirmation', null, pdict.order.orderEmail)}"
-                            encoding="htmlcontent" />
-                    </p>
-                </isif>
-            </div>
+        <div class="title-container">
+            <h1 class="page-title">${Resource.msg('title.thank.you.page', 'confirmation', null)}</h1>
         </div>
-
-
-
-        <div class="row">
-            <isif condition="${pdict.returningCustomer === false && pdict.order.orderEmail}">
-                <div class="col-sm-6 offset-sm-3 offset-md-0 push-md-6">
-                    <isinclude template="checkout/confirmation/confirmationCreateAccount" />
+        <div class="container_custom receipt <isif condition=" ${pdict.order.shipping.length > 1}">multi-ship</isif>">
+            <div class="row justify-content-center">
+                <svg class="mt-3 mb-3" width="80" height="85" viewBox="0 0 80 85" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5 0C3.67392 0 2.40215 0.526784 1.46447 1.46447C0.526784 2.40215 0 3.67392 0 5C0 6.32608 0.526784 7.59785 1.46447 8.53553C2.40215 9.47322 3.67392 10 5 10H11.1L12.625 16.11C12.6401 16.1804 12.6568 16.2504 12.675 16.32L19.465 43.47L15 47.93C8.7 54.23 13.16 65 22.07 65H65C66.3261 65 67.5979 64.4732 68.5355 63.5355C69.4732 62.5979 70 61.3261 70 60C70 58.6739 69.4732 57.4021 68.5355 56.4645C67.5979 55.5268 66.3261 55 65 55H22.07L27.07 50H60C60.9283 49.9995 61.8382 49.7406 62.6276 49.2522C63.4171 48.7639 64.055 48.0654 64.47 47.235L79.47 17.235C79.8508 16.4729 80.0306 15.6261 79.9923 14.775C79.9539 13.9239 79.6988 13.0968 79.251 12.372C78.8032 11.6472 78.1776 11.0488 77.4336 10.6337C76.6897 10.2186 75.852 10.0005 75 10H21.4L19.85 3.785C19.5791 2.70377 18.9548 1.74404 18.076 1.05828C17.1973 0.372511 16.1146 2.93022e-05 15 0H5ZM70 77.5C70 79.4891 69.2098 81.3968 67.8033 82.8033C66.3968 84.2098 64.4891 85 62.5 85C60.5109 85 58.6032 84.2098 57.1967 82.8033C55.7902 81.3968 55 79.4891 55 77.5C55 75.5109 55.7902 73.6032 57.1967 72.1967C58.6032 70.7902 60.5109 70 62.5 70C64.4891 70 66.3968 70.7902 67.8033 72.1967C69.2098 73.6032 70 75.5109 70 77.5ZM22.5 85C24.4891 85 26.3968 84.2098 27.8033 82.8033C29.2098 81.3968 30 79.4891 30 77.5C30 75.5109 29.2098 73.6032 27.8033 72.1967C26.3968 70.7902 24.4891 70 22.5 70C20.5109 70 18.6032 70.7902 17.1967 72.1967C15.7902 73.6032 15 75.5109 15 77.5C15 79.4891 15.7902 81.3968 17.1967 82.8033C18.6032 84.2098 20.5109 85 22.5 85Z"
+                        fill="#FF5100" />
+                </svg>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="order-thank-you-msg text-center">
+                        <isloop var="shippingModel" items="${pdict.order.shipping}" status="shippingLoop">
+                            <isif condition="${shippingLoop.first}">
+                                <div class="single-shipping thankyou_text mb-3"
+                                    data-shipment-summary="${shippingModel.UUID}">
+                                    <isif condition="${shippingModel.shippingAddress !== null}">
+                                        <isset name="address" value="${shippingModel.shippingAddress}" scope="page" />
+                                        <iselse>
+                                            <isset name="address" value="${{}}" scope="page" />
+                                    </isif>
+                                    ¡<isif condition="${address && address.firstName}">${address.firstName}, </isif>
+                                    ${Resource.msg('msg.placed.order.thank.you', 'confirmation', null)}!
+                                </div>
+                            </isif>
+                        </isloop>
+                    </h2>
+                    <isif condition="${pdict.order.orderEmail}">
+                        <p class="order-thank-you-email-msg text-center mb-4">
+                            <isprint
+                                value="${Resource.msgf('info.receive.email.confirmation', 'confirmation', null, pdict.order.orderEmail)}"
+                                encoding="htmlcontent" />
+                        </p>
+                    </isif>
                 </div>
-            </isif>
-            <div
-                class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0 pull-md-6'}">
-                <isinclude template="checkout/confirmation/confirmationDetails" />
-                <div class="mb-3">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row container_confirmation">
+                        <isif condition="${pdict.returningCustomer === false && pdict.order.orderEmail}">
+                            <div class="col-sm-6 offset-sm-3 offset-md-0 push-md-6">
+                                <isinclude template="checkout/confirmation/confirmationCreateAccountConfirmation" />
+                            </div>
+                        </isif>
+                        <div
+                            class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0 pull-md-6'}">
+                            <isinclude template="checkout/confirmation/confirmationDetails" />
+                            <iscomment>
+                                <isinclude template="checkout/orderTotalSummary" />
+                            </iscomment>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-4"></div>
+                    <div class="row">
+                        <div class="col-sm-6 offset-sm-3 offset-md-0 push-md-6 pl-0 pr-0 pr-md-2 mb-4">
+                            <isinclude template="checkout/shipping/shippingSummaryConfirmation.isml" />
+                        </div>
+                        <div class="col-sm-6 offset-sm-3 offset-md-0 push-md-6 pr-0 pl-0 pl-md-2 mb-4">
+                            <isinclude template="checkout/billing/billingSummaryConfirmation.isml" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iscomment>
+                <div class="mb-3 col">
                     <a href="${URLUtils.url('Home-Show')}"
                         class="btn btn-primary btn-block order-confirmation-continue-shopping" role="button"
                         aria-pressed="true">
                         ${Resource.msg('button.continue.shopping', 'confirmation', null)}
                     </a>
                 </div>
-            </div>
+            </iscomment>
         </div>
-    </div>
 </isdecorate>

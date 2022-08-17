@@ -1,0 +1,37 @@
+<div class="address-summary text-center">
+    <div class="d-flex flex-col flex-md-row justify-content-center align-items-center mb-4">
+        <div class="icon-shipping mr-md-2">
+            <svg width="46" height="41" viewBox="0 0 46 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M44.6799 23.5H40.4999V38.5C40.4999 39.6125 40.0149 41 37.9999 41H27.9999V26H17.9999V41H7.9999C5.9849 41 5.4999 39.6125 5.4999 38.5V23.5H1.3199C-0.175102 23.5 0.144898 22.69 1.1699 21.63L21.2299 1.55002C21.7174 1.04502 22.3574 0.79502 22.9999 0.77002C23.6424 0.79502 24.2824 1.04252 24.7699 1.55002L44.8274 21.6275C45.8549 22.69 46.1749 23.5 44.6799 23.5Z"
+                    fill="#FF5100" />
+            </svg>
+
+        </div>
+        <div class="name-shipping">
+            <span class="firstName">
+                <isif condition="${address && address.firstName}">${address.firstName}</isif>
+            </span>
+            <span class="lastName">
+                <isif condition="${address && address.lastName}">${address.lastName}</isif>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="address1">
+        <isif condition="${address && address.address1}">${address.address1}, </isif>
+        <span class="city">
+            <isif condition="${address && address.city}">${address.city}, </isif>
+        </span>
+        <span class="stateCode">
+            <isif condition="${address && address.stateCode}">${address.stateCode}, </isif>
+        </span>
+        <span class="postalCode">
+            <isif condition="${address && address.postalCode}">${address.postalCode}</isif>
+        </span>
+    </div>
+    <div class="address2">
+        <isif condition="${address && address.address2}">${address.address2}</isif>
+    </div>
+</div>
