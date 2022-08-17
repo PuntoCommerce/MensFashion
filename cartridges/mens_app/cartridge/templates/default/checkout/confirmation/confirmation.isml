@@ -8,7 +8,7 @@
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
         <isinclude template="reporting/reportingUrls" />
     </isif>
-<<<<<<< HEAD
+
     <div class="confirmation-top">
         <ul class="checkout__stepper">
             <li class="checkout__stepper--item">
@@ -33,21 +33,21 @@
     <div class="banner-body">
         <img class="confirmation-banner" src="${URLUtils.httpsStatic('/images/banner_conf.png')}"
         alt="Banner Mens Fashion" />
-=======
-    <div class="title-container-myaccount">
+
+    <div class="title-container">
         <h1 class="page-title">${Resource.msg('title.thank.you.page', 'confirmation', null)}</h1>
->>>>>>> df05306ad6bcb2be02f4799257e158fac2cabb38
+
     </div>
     <div class="container receipt <isif condition=" ${pdict.order.shipping.length > 1}">multi-ship</isif>">
         <div class="row">
             <div class="${pdict.returningCustomer ? 'col-sm-6 offset-sm-3' : 'col-sm-6 offset-sm-3 offset-md-0'}">
-<<<<<<< HEAD
+
                     <img class="cart-check-img" src="${URLUtils.httpsStatic('/images/cart-check.png')}"
                     alt="Banner Mens Fashion" />
                 <h2 class="order-thank-you-msg">¡${pdict.order.customerName}, ${Resource.msg('msg.placed.order.thank.you2','confirmation',null)}</h2>
-=======
+
                 <h2 class="order-thank-you-msg">${Resource.msg('msg.placed.order.thank.you', 'confirmation', null)}</h2>
->>>>>>> df05306ad6bcb2be02f4799257e158fac2cabb38
+
                 <isif condition="${pdict.order.orderEmail}">
                     <p class="order-thank-you-email-msg">
                         <isprint

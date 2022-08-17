@@ -403,16 +403,15 @@ span.ship-to-phone {
   border-color: #000;
 }
 .form-control-label {
-  font-family: "Avenir-Next";
+  font-family: "Avenir-Bold";
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   color: #000000;
 }
 .form-control-label span {
+  font-family: "Avenir-Next";
   margin-left: 10px;
-  font-weight: 300;
   font-size: 12px;
 }
 .shipping-check-card {
@@ -442,7 +441,6 @@ span.ship-to-phone {
   padding: 0;
 }
 .billing-nav.payment-information .nav-tabs .nav-link.active {
-  border-left: 0.188em solid var(--skin-primary-color-1);
   border-bottom: 0;
 }
 .form-control.custom-select {
@@ -450,7 +448,7 @@ span.ship-to-phone {
 }
 .nav.nav-tabs.payment-options .nav-item .nav-link {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .shipment-selector-btns button {
   background: none;
@@ -492,5 +490,123 @@ span.ship-to-phone {
   }
 }
 .shipping.only-visible {
-  /* pointer-events: none; */
+  pointer-events: none;
+  border-top: 1px solid #000;
+  padding-top: 23px;
+}
+.shipping.only-visible .start-lines::before {
+  content: "";
+}
+.shipping.only-visible span,
+.shipping.only-visible .leading-lines label {
+  background: none;
+}
+.shipping.only-visible .shipping-method-option {
+  display: flex;
+  flex-direction: column;
+}
+.shipping.only-visible .shipping-method-option .display-name {
+  font-family: "Avenir-Bold";
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.shipping.only-visible .shipping-method-option .text-muted.arrival-time {
+  font-family: "Avenir-Next";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000 !important;
+}
+.checkout-summary-title-2 {
+  font-family: "Avenir-Bold";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+.checkout-summary-title-1 {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38px;
+  color: #000000;
+}
+.paypal-checkout-button {
+  display: flex;
+  justify-content: center;
+}
+.check-decorator {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+#outer-circle {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+#inner-circle {
+  background: #ff0000;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.shipping-check-card.active #inner-circle {
+  display: block;
+}
+.order-product-summary .item-image {
+  margin-right: 0;
+  height: fit-content;
+}
+.order-product-summary .item-image img.product-image {
+  width: 100%;
+  max-height: none;
+}
+.order-product-summary .item-attributes {
+  padding: 15px;
+}
+.card.payment-form .card-header-custom {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+}
+.outer-circle {
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+.inner-circle {
+  background: #000;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.nav-link.active .inner-circle {
+  display: block;
+}
+.label-payment {
+  font-family: "Avenir-LT-Std";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #555555;
 }

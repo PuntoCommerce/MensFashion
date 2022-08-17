@@ -57,4 +57,3 @@
         <p class="text-right checkout__text"><span class="grand-total-sum">${pdict.order.totals.grandTotal}</span></p>
     </div>
 </div>
-

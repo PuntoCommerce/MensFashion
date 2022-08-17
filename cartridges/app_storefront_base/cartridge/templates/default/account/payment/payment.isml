@@ -4,10 +4,10 @@
         assets.addJs('/js/paymentInstruments.js');
         assets.addCss('/css/account/payment.css');
     </isscript>
-    <div class="hero slant-down account-image">
+    <div class="title-container-account">
         <h1 class="page-title">${Resource.msg('page.heading.payments','payment',null)}</h1>
     </div>
-    <div class="container">
+    <div class="container account-sections">
         <isinclude template="account/payment/deletePaymentModal"/>
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
