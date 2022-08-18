@@ -1,0 +1,52 @@
+<h2 class="card-header-custom">${Resource.msg('title.receipt', 'confirmation', null)}</h2>
+
+<div class="product-summary-block">
+    <div class="order-products-summary">
+        <isloop items="${pdict.order.shipping}" var="shippingModel">
+            <isif condition="${pdict.order.shipping.length > 1}">
+                <div class="shipment-block">
+            </isif>
+            <isloop items="${shippingModel.productLineItems.items}" var="lineItem">
+                <isif condition="${lineItem.bonusProductLineItemUUID === 'bonus'}">
+                    <div class="card ${miniCart ? 'bonus-product-line-item' : ''} uuid-${lineItem.UUID}">
+                        <div class="card-body">
+                            <div class="item-image">
+                                <img class="product-image" src="${lineItem.images.small[0].url}"
+                                    alt="${lineItem.images.small[0].alt}" title="${lineItem.images.small[0].title}" />
+                            </div>
+                        </div>
+                    </div>
+                <iselse/>
+                    <isif condition="${lineItem.productType === 'bundle'}">
+                        <div class="bundle-includes">${Resource.msg('msg.bundle.includes', 'cart', null)}</div>
+                        <!--- individual bundled line items --->
+                        <isinclude template="cart/productCard/cartProductCardBundledItems" />
+                    <iselse/>
+                        <div class="item-image">
+                            <img class="product-image" src="${lineItem.images.small[0].url}"
+                                alt="${lineItem.images.small[0].alt}" title="${lineItem.images.small[0].title}" />
+                        </div>
+                    </isif>
+                </isif>
+            </isloop>
+        </isloop>
+    </div>
+    <div class="shipping-estimate-arrival mt-4">
+        <!--- Shipping Address --->
+        <isloop var="shippingModel" items="${pdict.order.shipping}" status="shippingLoop">
+            <isif condition="${shippingLoop.first}">
+                <div class="single-shipping" data-shipment-summary="${shippingModel.UUID}">
+                    <!--- Shipping information --->
+                    <p class="summary-section-label shipping-method-label mb-4">
+                        ${Resource.msg('label.order.shipping.method.custom', 'confirmation', null)}</p>
+                    <span class="shipping-method-title">${shippingModel.selectedShippingMethod.displayName}</span>
+                    <span class="shipping-method-arrival-time">
+                        <isif condition="${shippingModel.selectedShippingMethod.estimatedArrivalTime}">
+                            ${shippingModel.selectedShippingMethod.estimatedArrivalTime}
+                        </isif>
+                    </span>
+                </div>
+            </isif>
+        </isloop>
+    </div>
+</div>

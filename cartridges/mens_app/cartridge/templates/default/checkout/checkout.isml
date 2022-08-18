@@ -52,7 +52,7 @@
                     </div>
                 </iscomment>
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-12 col-lg-7">
 
                         <!----------------------------------------------------------------------------------->
                         <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
@@ -92,15 +92,15 @@
                             </div>
 
                             <div class="card-body row">
-                                <div class="col-6 checkout-summary-container">
-                                    <isinclude template="checkout/billing/billingSummary" />
-                                    <button class="custom_edit-button"
-                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
-                                </div>
-                                <div class="col-6 checkout-summary-container">
-                                    <isinclude template="checkout/shipping/shippingSummary" />
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container">
+                                    <isinclude template="checkout/shipping/shippingSummaryCheckout" />
                                     <button class="custom_edit-button"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container">
+                                    <isinclude template="checkout/billing/billingSummaryCheckout" />
+                                    <button class="custom_edit-button"
+                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                     <!----------------------------------------------------------------------------------->
                     <!-- Order Totals, Details and Summary -->
                     <!----------------------------------------------------------------------------------->
-                    <div class="col-sm-5">
+                    <div class="col-12 col-lg-5">
                         <div class="card checkout__order d-none d-lg-block mt-lg-4">
                             <div class="card-header d-flex justify-content-center align-items-center">
                                 <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}
@@ -162,6 +162,7 @@
                                     <div class="card-body">
                                         <isinclude template="checkout/shipping/shippingSummary" />
                                     </div>
+                                    <div class="checkout__order--divider"></div>
                                 </div>
                                 <isinclude template="checkout/orderTotalSummary" />
                             </div>
