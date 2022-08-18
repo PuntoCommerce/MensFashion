@@ -49,6 +49,7 @@
   }
 
   &__cart {
+    min-height: 50vh;
     background-color: $white-color;
     @include respond(phone) {
       background: linear-gradient(

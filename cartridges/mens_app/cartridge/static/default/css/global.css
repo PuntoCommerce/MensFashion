@@ -132,7 +132,15 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+#footercontent {
+  margin-top: auto;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 [tabindex="-1"]:focus {
   outline: 0 !important;
@@ -1743,7 +1751,7 @@ pre code {
   .title-container {
     background: #000;
     padding: 20px 40px !important;
-}
+  }
 }
 @media (max-width: 768.98px) {
   .table-responsive-md {
@@ -1755,19 +1763,18 @@ pre code {
   .table-responsive-md > .table-bordered {
     border: 0;
   }
-  .myAccount .col-sm-6{
+  .myAccount .col-sm-6 {
     padding: 85px 55px;
   }
-  .container.account-sections .row{
+  .container.account-sections .row {
     padding: 15px 25px !important;
   }
-  .login-page .nav-tabs .nav-link.active{
+  .login-page .nav-tabs .nav-link.active {
     padding-top: 8px !important ;
   }
-  .login-page .nav-tabs .nav-link{
+  .login-page .nav-tabs .nav-link {
     padding-top: 8px !important;
   }
-  
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -1790,7 +1797,7 @@ pre code {
   .table-responsive-xl > .table-bordered {
     border: 0;
   }
-  .myAccount .breadcrumb{
+  .myAccount .breadcrumb {
     left: -15% !important;
   }
 }
@@ -15335,10 +15342,10 @@ div.availability {
     padding: 0 15px;
   }
 
-  .login-form-nav, .trackorder{
+  .login-form-nav,
+  .trackorder {
     margin: 13px 10px 0 10px !important;
   }
-  
 }
 
 .add-to-cart-global.btn.btn-primary {
@@ -15369,19 +15376,19 @@ button.close:focus {
   background: #000;
   padding: 20px 100px;
 }
-.title-container .page-title{
+.title-container .page-title {
   position: initial;
 }
 .myAccount-title {
   color: #fff;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 36px;
   font-weight: 700;
 }
 
 .page-title {
   color: #fff !important;
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
   font-size: 36px !important;
   font-weight: 700 !important;
   padding: 0 !important;
@@ -15389,71 +15396,75 @@ button.close:focus {
   background-color: #000000 !important;
 }
 
-.login-form-nav{
+.login-form-nav {
   margin: 13px 115px 0 115px;
 }
 
-.login-page .nav-tabs{
-  border: 0.3px solid #64656A;
-  border-radius: 3px; 
-}
-
-.login-page .tab-content{
-  border: 0.3px solid #64656A;
-  border-radius: 3px; 
-  padding: 0 31px 0 22px;
-}
-
-.checkout__form{
+.login-page .nav-tabs {
+  border: 0.3px solid #64656a;
   border-radius: 3px;
 }
 
-.login-page .breadcrumb{
+.login-page .tab-content {
+  border: 0.3px solid #64656a;
+  border-radius: 3px;
+  padding: 0 31px 0 22px;
+}
+
+.checkout__form {
+  border-radius: 3px;
+}
+
+.login-page .breadcrumb {
   margin: 0 115px;
 }
 
-.login-page .card-body{
+.login-page .card-body {
   padding: 0;
 }
 
-.login-page .nav-tabs{
-  background-color: #64656A;
+.login-page .nav-tabs {
+  background-color: #64656a;
   border-bottom: none;
 }
 
-.login-page .nav-tabs .nav-link{
-  font-family: 'Avenir Next';
+.login-page .nav-tabs .nav-link {
+  font-family: "Avenir Next";
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
 }
 
-.login-page .nav-tabs .nav-link.active{
+.login-page .nav-tabs .nav-link.active {
   border-bottom: none;
   color: #ffffff;
   position: relative;
 }
 
-.login-page .nav-tabs .nav-link:hover, .login-page .nav-tabs .nav-link.active:hover,.login-page .nav-tabs .nav-link.active:focus{
-  background-color: #64656A;
+.login-page .nav-tabs .nav-link:hover,
+.login-page .nav-tabs .nav-link.active:hover,
+.login-page .nav-tabs .nav-link.active:focus {
+  background-color: #64656a;
 }
 
-.login-page .nav-item .nav-link:focus, .login-page .nav-item .nav-link:hover, .login-page .nav-item.show .nav-link{
+.login-page .nav-item .nav-link:focus,
+.login-page .nav-item .nav-link:hover,
+.login-page .nav-item.show .nav-link {
   color: #ffffff !important;
 }
 
-.login-form-nav .form-group{
+.login-form-nav .form-group {
   margin: 0 auto 0 auto;
   width: auto;
 }
 
-.clearfix{
+.clearfix {
   width: 80%;
   margin: 0 auto;
 }
 
-.login-page .nav-tabs .nav-link.active:after{
+.login-page .nav-tabs .nav-link.active:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -15466,12 +15477,13 @@ button.close:focus {
   left: 50%;
 }
 
-.login-page .nav-item{
+.login-page .nav-item {
   position: relative;
 }
 
-.login-form-nav .checkout__text--bold, .login-form-nav .checkout__text--space{
-  font-family: 'Avenir-Next' !important;
+.login-form-nav .checkout__text--bold,
+.login-form-nav .checkout__text--space {
+  font-family: "Avenir-Next" !important;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -15481,45 +15493,46 @@ button.close:focus {
   margin-top: 38px !important;
 }
 
-#login-form-email, #login-form-password{
+#login-form-email,
+#login-form-password {
   margin: 9px auto 14px auto;
   border-radius: 3px;
   width: 100%;
 }
 
-#password-reset{
+#password-reset {
   margin-right: 27px;
   color: #ff0000;
   font-size: 14px;
 }
 
-.login-form-nav .btn__small{
+.login-form-nav .btn__small {
   margin: 15px auto 25px auto;
   display: block;
   height: 44px;
   width: 90%;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.login-form-nav .custom-checkbox .custom-control-label:before{
+.login-form-nav .custom-checkbox .custom-control-label:before {
   border-radius: 50%;
 }
 
-.login-form-nav .custom-checkbox  .custom-control-label{
-  font-family: 'Avenir-Next';
+.login-form-nav .custom-checkbox .custom-control-label {
+  font-family: "Avenir-Next";
   font-weight: 400;
   font-size: 14px;
 }
 
-.login{
+.login {
   margin-bottom: 0;
 }
 
-.login-oauth .form-group{
+.login-oauth .form-group {
   border: 0.3px solid #000000;
   border-radius: 3px;
   width: 90%;
@@ -15527,33 +15540,32 @@ button.close:focus {
   margin: 0 auto 16px auto;
 }
 
-.login-oauth .form-group a{
+.login-oauth .form-group a {
   font-size: 14px;
   padding: 5px 0 0 0;
 }
 
-.login-oauth .form-group:nth-last-child(){
+.login-oauth .form-group:nth-last-child() {
   margin-bottom: 30px;
 }
 
-.login-oauth .btn-outline-primary{
+.login-oauth .btn-outline-primary {
   border: none;
   border-radius: 3px;
 }
 
-#register label{
+#register label {
   margin-bottom: 9px;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-size: 16px;
 }
 
-#register .form-control{
+#register .form-control {
   margin: 0 auto 20px auto;
   width: 100%;
 }
 
-
-#register button{
+#register button {
   margin: 35px auto 9px auto;
   width: 90%;
   height: 34px;
@@ -15561,48 +15573,48 @@ button.close:focus {
   background: #000000;
   color: #ffffff !important;
   border: none;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 14px;
 }
 
-#register .privacy-policy{
-  font-family: 'Avenir-LT-Std';
+#register .privacy-policy {
+  font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 14px;
   margin: 35px 27px 9px 43px;
 }
 
-.trackorder{
+.trackorder {
   margin: 13px 115px 0 115px;
 }
 
-.track-order-header{
-  border: 1px solid #64656A !important;
-  background: #64656A !important;
+.track-order-header {
+  border: 1px solid #64656a !important;
+  background: #64656a !important;
   color: #ffffff !important;
   font-size: 16px !important;
   border-radius: 3px !important;
   line-height: 15px;
 }
 
-.trackorder .card-body{
+.trackorder .card-body {
   border: 0.3px solid #000000;
   border-radius: 3px;
   padding: 26px 31px 0 22px;
 }
 
-.track-order-header-text{
-  font-family: 'Avenir-Next';
+.track-order-header-text {
+  font-family: "Avenir-Next";
   font-size: 14px;
 }
 
-.trackorder .form-group label{
-  font-family: 'Avenir-Next';
+.trackorder .form-group label {
+  font-family: "Avenir-Next";
   font-size: 16px;
 }
 
-.trackorder .btn-block{
+.trackorder .btn-block {
   background-color: #000000;
   width: 90%;
   height: 34px;
@@ -15611,62 +15623,62 @@ button.close:focus {
   border-radius: 3px;
   color: #ffffff !important;
   padding: 0;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 16px;
 }
 
-.trackorder .btn-block:hover{
+.trackorder .btn-block:hover {
   background-color: #d8d8d8;
   color: #000000 !important;
 }
 
-.login-oauth .btn-block{
+.login-oauth .btn-block {
   height: 100%;
 }
 
-.login-oauth .btn-block:hover{
+.login-oauth .btn-block:hover {
   background-color: #000000;
   color: #ffffff !important;
 }
 
-#register button:hover{
+#register button:hover {
   background-color: #d8d8d8;
   color: #000000 !important;
 }
 
-.confirmation-top .checkout__stepper{
+.confirmation-top .checkout__stepper {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.confirmation-banner{
+.confirmation-banner {
   width: 100%;
 }
 
-.cart-check-img{
+.cart-check-img {
   width: 93.75px;
   display: block;
   margin: 40px auto;
 }
 
-.order-thank-you-msg{
-    text-align: center;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    color: #64656A;
-    font-family: "Avenir-LT-Std";
+.order-thank-you-msg {
+  text-align: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  color: #64656a;
+  font-family: "Avenir-LT-Std";
 }
 
-.order-thank-you-email-msg{
+.order-thank-you-email-msg {
   text-align: center;
   font-weight: 400;
   font-size: 24px;
   font-family: "Avenir-LT-Std";
 }
 
-#submitEmailButton{
+#submitEmailButton {
   background-color: #000;
   color: #fff !important;
   margin-top: 20px;
@@ -15674,53 +15686,53 @@ button.close:focus {
   border-radius: 3px;
 }
 
-.request-password-title{
-    font-weight: 700;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #64656A;
-    border-radius: 3px;
-    margin-top: 40px;
-    width: 100%;
-    padding: 12px;
+.request-password-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #64656a;
+  border-radius: 3px;
+  margin-top: 40px;
+  width: 100%;
+  padding: 12px;
 }
 
-.reset-password-form{
+.reset-password-form {
   margin-bottom: 40px;
   border: 1px solid #000;
   border-radius: 3px;
   padding: 20px 15px;
 }
 
-.request-password-title{
+.request-password-title {
   margin-bottom: 0;
 }
 
-.myAccount .breadcrumb{
+.myAccount .breadcrumb {
   padding: 0;
   position: absolute;
   left: -9%;
 }
 
-.myAccount .col-sm-6{
+.myAccount .col-sm-6 {
   padding: 85px 115px;
 }
 
-.breadcrumb-item a{
+.breadcrumb-item a {
   text-decoration: underline;
 }
 
-.myAccount .card{
+.myAccount .card {
   border: 1px solid #000;
   border-radius: 3px;
 }
 
-.myAccount .orderCol{
-  background-color:#C2C3C6;
+.myAccount .orderCol {
+  background-color: #c2c3c6;
 }
 
-.myAccount .card-header{
-  background-color: #64656A;
+.myAccount .card-header {
+  background-color: #64656a;
   font-family: "Avenir-Next";
   font-weight: 700;
   font-size: 16px;
@@ -15730,170 +15742,171 @@ button.close:focus {
   padding: 0 20px;
 }
 
-.card-header>a{
+.card-header > a {
   margin-top: 20px;
 }
 
-.myAccount .clearfix::after{
+.myAccount .clearfix::after {
   background-image: url(../images/edit.png) !important;
- 
 }
 
-.card-body dt{
+.card-body dt {
   font-weight: bold;
 }
 
-.myAccount .card-link{
+.myAccount .card-link {
   color: #000;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 14px;
 }
 
-.myAccount .card-link:before{
+.myAccount .card-link:before {
   background-image: url(../images/plus.png) !important;
 }
 
-.myAccount .card-body{
+.myAccount .card-body {
   background-color: #fff;
 }
 
-.title-container-account h1.page-title{
+.title-container-account h1.page-title {
   display: block;
   text-align: center;
   position: inherit;
-  background-color: #E8E8E8 !important;
+  background-color: #e8e8e8 !important;
   color: #000 !important;
 }
 
-
-.account-sections .card-header{
+.account-sections .card-header {
   background: #e8e8e8;
   padding: 0 0 0 16px;
   font-weight: 900;
 }
 
-.account-sections .card-header h2{
+.account-sections .card-header h2 {
   font-weight: 900;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
-.account-sections .card-body{
+.account-sections .card-body {
   padding: 28px 68px;
   border: 1px solid #000;
 }
 
-.account-sections .form-group label{
+.account-sections .form-group label {
   font-weight: 700;
   font-size: 16px;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
-.account-sections .card-body .btn{
-  font-family: 'Avenir-LT-Std';
+.account-sections .card-body .btn {
+  font-family: "Avenir-LT-Std";
   font-weight: 100;
   text-transform: uppercase;
   border: 1px solid #000;
   padding: 5px 0;
 }
 
-.account-sections .card-body .btn:hover{
+.account-sections .card-body .btn:hover {
   background-color: #000;
   color: #ffffff !important;
 }
 
 .account-sections .card-body .btn-save {
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 100;
   text-transform: uppercase;
   background-color: #e8e8e8;
   border: none;
 }
 
-.profile-back-to-account-link{
+.profile-back-to-account-link {
   margin: 35px 0;
 }
 
-.container.account-sections .row{
+.container.account-sections .row {
   padding: 0 185px;
 }
 
-.container.account-sections .adrressBtns{
+.container.account-sections .adrressBtns {
   padding: 0 !important;
   margin: 35px 0;
 }
 
-.adrressBtns .btn-save{
+.adrressBtns .btn-save {
   background-color: #000000;
   color: #fff !important;
   padding: 5px 0;
   border: none;
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
   font-weight: 100 !important;
 }
 
-.adrressBtns .btn-save:hover{
+.adrressBtns .btn-save:hover {
   color: #000 !important;
   border: 1px solid #000;
 }
 
-.order-top{
+.order-top {
   margin: 0 200px;
 }
 
-.order-top .form-group{ 
+.order-top .form-group {
   position: relative;
   top: -50px;
 }
 
-.order-list-container .card-header, .orderDetail .card-header {
+.order-list-container .card-header,
+.orderDetail .card-header {
   background: #e7e7e7;
 }
 
-.order-list-container .card-header h3, .orderDetail .card-header h2 {
-  font-family: 'Avenir-Next';
+.order-list-container .card-header h3,
+.orderDetail .card-header h2 {
+  font-family: "Avenir-Next";
   font-size: 16px;
   font-weight: 600;
 }
 
-.order-list-container .card-header.clearfix{
+.order-list-container .card-header.clearfix {
   width: 72%;
   margin: 0 auto;
 }
 
-.order-list-container .card-body, .order-list-container .card-footer{
+.order-list-container .card-body,
+.order-list-container .card-footer {
   width: 72%;
   margin: 0 auto;
   border: 1px solid #000;
   border-top: none;
 }
 
-.orderDetail{
+.orderDetail {
   margin: 0 200px;
 }
 
-.orderDetail .card-body{
+.orderDetail .card-body {
   border: 1px solid #000;
 }
 
-.orderDetail .checkout__order--product{
+.orderDetail .checkout__order--product {
   background: #fff;
 }
 
-.my-account a{
-  color:#2D64FC;
+.my-account a {
+  color: #2d64fc;
 }
 
-.paymentsListBtns{
+.paymentsListBtns {
   margin: 20px 0;
 }
 
-.paymentsListBtns .btn-save{
+.paymentsListBtns .btn-save {
   background-color: #000;
   color: #fff !important;
   border: none;
 }
 
-.paymentsListBtns .btn-save:hover{
+.paymentsListBtns .btn-save:hover {
   background-color: #fff;
   color: #000 !important;
   border: 1px solid #000;
