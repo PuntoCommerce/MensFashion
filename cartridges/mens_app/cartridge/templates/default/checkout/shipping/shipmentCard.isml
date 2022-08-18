@@ -97,6 +97,10 @@
         <isinclude template="checkout/shipping/shippingCard" />
     </div>
 
+    <iscomment> <div class="pickup-form d-none">
+        <isinclude template="checkout/shipping/shippingAddressPickup" />
+    </div> </iscomment>
+
     <fieldset class="shipping only-visible col-12 col-lg-7">
         <span class="checkout-summary-title-2 d-block mb-3">${Resource.msg('check.shipping.summary.title', 'checkout', null)}</span>
         <isinclude template="checkout/shipping/shippingMethod" />
