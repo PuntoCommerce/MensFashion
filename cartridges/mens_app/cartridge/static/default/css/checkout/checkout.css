@@ -580,6 +580,12 @@ span.ship-to-phone {
   font-size: 20px;
   line-height: 27px;
 }
+.card.payment-summary .card-header-custom {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+}
 .outer-circle {
   background: #fff;
   border: 1px solid #d0d0d0;

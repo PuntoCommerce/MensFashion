@@ -1,0 +1,69 @@
+{
+    "name": "TextLanding",
+    "description": "This component render text",
+    "group": "Habers_Assets",
+    "attribute_definition_groups": [
+        {
+            "id": "richText",
+            "attribute_definitions": [
+                {
+                    "id": "text",
+                    "name": "text",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "fontSize",
+                    "name": "Font Size",
+                    "type": "enum",
+                    "values": [
+                        "16px",
+                        "20px",
+                        "24px",
+                        "28px"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "textAlign",
+                    "name": "Text Align",
+                    "type": "enum",
+                    "values": [
+                        "center",
+                        "justify",
+                        "left",
+                        "right"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "marginTop",
+                    "name": "Margin top",
+                    "type": "enum",
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "marginBottom",
+                    "name": "Margin bottom",
+                    "type": "enum",
+                    "values": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

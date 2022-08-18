@@ -3,7 +3,11 @@
         <h2 class="pull-left profile-header">${Resource.msg('label.profile','account',null)}</h2>
         <isif condition="${!pdict.account.isExternallyAuthenticated}">
             <a href="${URLUtils.url('Account-EditProfile')}" class="pull-right" aria-label="${Resource.msg('label.profile.edit','account',null)}"><img class="mb-2" src="${URLUtils.staticURL('/images/myAccount/edit-icon.svg')}"
+<<<<<<< HEAD
                             alt="Envío a domicilio" /></a>
+=======
+                            alt="${Resource.msg('link.edit','account',null)}" /></a>
+>>>>>>> b2590f03ecf2166d54b0d3b1ac2e62d19c07d9a0
         </isif>
     </div>
     <div class="card-body">
