@@ -1742,7 +1742,7 @@ pre code {
   }
   .title-container {
     background: #000;
-    padding: 20px 40px;
+    padding: 20px 40px !important;
 }
 }
 @media (max-width: 768.98px) {
@@ -1761,6 +1761,13 @@ pre code {
   .container.account-sections .row{
     padding: 15px 25px !important;
   }
+  .login-page .nav-tabs .nav-link.active{
+    padding-top: 8px !important ;
+  }
+  .login-page .nav-tabs .nav-link{
+    padding-top: 8px !important;
+  }
+  
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -1782,6 +1789,9 @@ pre code {
   }
   .table-responsive-xl > .table-bordered {
     border: 0;
+  }
+  .myAccount .breadcrumb{
+    left: -15% !important;
   }
 }
 .table-responsive {
@@ -15357,7 +15367,10 @@ button.close:focus {
 
 .title-container {
   background: #000;
-  padding: 20px 262px;
+  padding: 20px 100px;
+}
+.title-container .page-title{
+  position: initial;
 }
 .myAccount-title {
   color: #fff;
@@ -15684,8 +15697,9 @@ button.close:focus {
 }
 
 .myAccount .breadcrumb{
-  padding: 27px 115px 0 115px;
+  padding: 0;
   position: absolute;
+  left: -9%;
 }
 
 .myAccount .col-sm-6{
@@ -15713,8 +15727,12 @@ button.close:focus {
   color: #fff;
   width: 100%;
   margin: 0;
+  padding: 0 20px;
 }
 
+.card-header>a{
+  margin-top: 20px;
+}
 
 .myAccount .clearfix::after{
   background-image: url(../images/edit.png) !important;
@@ -15863,4 +15881,20 @@ button.close:focus {
 
 .my-account a{
   color:#2D64FC;
+}
+
+.paymentsListBtns{
+  margin: 20px 0;
+}
+
+.paymentsListBtns .btn-save{
+  background-color: #000;
+  color: #fff !important;
+  border: none;
+}
+
+.paymentsListBtns .btn-save:hover{
+  background-color: #fff;
+  color: #000 !important;
+  border: 1px solid #000;
 }

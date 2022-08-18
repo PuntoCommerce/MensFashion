@@ -18,8 +18,8 @@
         </isif>
         <isinclude template="account/payment/savedPayments"/>
         <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="row">
+            <div class="col-12">
+                <div class="row paymentsListBtns">
                     <div class="col">
                         <a href="${URLUtils.url('Account-Show')}" class="text-center back-to-account-link" aria-label="${Resource.msg('label.addressbook.myaccount','account',null)}">
                           ${Resource.msg('link.profile.backtomyaccount','account',null)}
