@@ -1,0 +1,23 @@
+.landing-text {
+  display: block;
+}
+.landing-text p {
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .landing-text p {
+    font-size: 24px;
+  }
+}
+.landing-text-align-left p {
+  text-align: left;
+}
+.landing-text-align-center p {
+  text-align: center;
+}
+.landing-text-align-right p {
+  text-align: right;
+}
+.landing-text-align-justify p {
+  text-align: justify;
+}
