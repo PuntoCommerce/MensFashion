@@ -5,9 +5,57 @@
         "@type-id": "custom.salesCloud.sendOrders",
         "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
-        "@supports-organization-context": "false",
+        "@supports-organization-context": "true",
         "description": "Send Orders to SalesCloud",
         "module": "mens_app/cartridge/scripts/salescloud/jobs/sendOrders.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {},
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
+        "@type-id": "custom.salesCloud.importInventory",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Send Orders to SalesCloud",
+        "module": "mens_app/cartridge/scripts/salescloud/jobs/importInventory.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {},
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
+        "@type-id": "custom.salesCloud.importPrices",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Send Orders to SalesCloud",
+        "module": "mens_app/cartridge/scripts/salescloud/jobs/importPrices.js",
         "function": "execute",
         "transactional": "true",
         "timeout-in-seconds": "900",

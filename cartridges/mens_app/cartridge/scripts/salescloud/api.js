@@ -17,4 +17,6 @@ const call = (path, method, body) => {
 module.exports = {
   sendOrder: (body) =>
     call("services/apexrest/OpportunityProducts", "POST", body),
+  getInventory: () => call("services/apexrest/inventory", "GET", {}),
+  getPrices: () => call("services/apexrest/pricebook", "GET", {}),
 };
