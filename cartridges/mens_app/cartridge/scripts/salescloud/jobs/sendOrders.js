@@ -4,6 +4,19 @@ const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
 
+const handleShipment = (shipment) => {
+  if (shipment.shippingMethodID == "pickup") {
+    return { pickUpStoreId: shipment.shippingAddress.lastName };
+  }
+  return {
+    shippingStreet: shipment.shippingAddress.address1,
+    shippingPostalCode: shipment.shippingAddress.postalCode,
+    shippingCity: shipment.shippingAddress.city,
+    shippingState: shipment.shippingAddress.stateCode,
+    shippingCountry: "Mexico",
+  };
+};
+
 exports.execute = () => {
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
@@ -27,8 +40,6 @@ exports.execute = () => {
     productLineItems.forEach((p) => {
       products.push({ ProductCode: p.productID, Quantity: p.quantityValue });
     });
-
-    let shippingAddress = order.shipments[0].shippingAddress;
     let paymentInstruments = order.paymentInstruments[0];
 
     let firstName = "";
@@ -38,24 +49,19 @@ exports.execute = () => {
       firstName = order.customer.firstName;
       lastName = order.customer.lastName;
     } else {
-      firstName = shippingAddress.firstName;
-      lastName = shippingAddress.lastName;
+      lastName = order.customerName;
     }
+
+    let defaultShipment = order.defaultShipment;
 
     let body = {
       account: {
-        FirstName: firstName,
+        FirstName: firstName || "",
         LastName: lastName,
         PersonEmail: order.customerEmail,
-        Phone: shippingAddress.phone,
+        Phone: defaultShipment.shippingAddress.phone,
       },
-      shippingInfo: {
-        shippingStreet: shippingAddress.address1,
-        shippingPostalCode: shippingAddress.postalcode,
-        shippingCity: shippingAddress.city,
-        shippingState: shippingAddress.stateCode,
-        shippingCountry: "Mexico",
-      },
+      shippingInfo: handleShipment(defaultShipment),
       paymentType: paymentInstruments.paymentMethod,
       oppName: order.orderNo,
       cadena: "Men's Fashion",

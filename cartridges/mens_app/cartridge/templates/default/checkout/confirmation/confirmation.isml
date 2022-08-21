@@ -67,8 +67,7 @@
                                     <iselse/>
                                         <isset name="address" value="${{}}" scope="page" />
                                     </isif>
-                                    ¡<isif condition="${address && address.firstName}">${address.firstName}, </isif>
-                                    ${Resource.msg('msg.placed.order.thank.you2', 'confirmation', null)}
+                                    ¡${pdict.order.customerName} ${Resource.msg('msg.placed.order.thank.you2', 'confirmation', null)}
                                 </div>
                             </isif>
                         </isloop>
