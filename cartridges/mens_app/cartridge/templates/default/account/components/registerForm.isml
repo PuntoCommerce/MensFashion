@@ -36,7 +36,7 @@
             data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
             aria-describedby="form-phone-error" <isprint value=${pdict.profileForm.customer.phone.attributes}
             encoding="off" />
-        placeholder="${Resource.msg('example.phone', 'forms', null)}">
+       >
         <div class="invalid-feedback" id="form-phone-error"></div>
     </div>
 
@@ -78,6 +78,10 @@
             data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
             aria-describedby="form-password-error" autocomplete="off" <isprint
             value=${pdict.profileForm.login.password.attributes} encoding="off" />>
+        <p>
+            ${Resource.msg('label.input.passwordInfo.profile', 'forms', null)}
+        </p>
+    </div>
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
 
@@ -110,7 +114,7 @@
     </button>
     <div class="privacy-policy">
         ${Resource.msg('description.privacypolicy.registration', 'registration', null)}
-        <a href="${'#'}">
+        <a href="${'Politicas-Show'}">
             ${Resource.msg('link.privacypolicy.registration', 'registration', null)}
         </a>
     </div>

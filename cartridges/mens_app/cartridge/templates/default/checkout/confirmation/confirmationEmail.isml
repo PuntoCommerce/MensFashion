@@ -132,7 +132,6 @@
 
         .order-sumary{
             border: 0.3px solid #000;
-            border-radius: 3px;
             padding: 0 15px;
         }
 
@@ -144,26 +143,59 @@
         .email-info-cont{
             border: 1px solid #000000;
             border-radius: 3px;
-            padding: 49px 0 0 49px;
+            padding: 49px;
+        }
+
+        .social-icons a{
+            margin: 0 20px;
         }
 
         .social-icons{
-            margin: 0 250px;
+            display: flex;
+            justify-content: center;
+            margin-top:30px;
+        }
+
+        .ofertas-btn-cont{
+            display: flex;
+            justify-content: center;  
         }
 
         .ofertas-btn{
             background: #D9D9D9;
             padding: 10px;
             border: none;
-            margin-left: 250px;
-            margin-bottom: 30px;
+            display: flex;
+            margin: 0 auto;
         }
 
         .ofertas-btn a{
             color: #000000;
             text-decoration: none;
         }
-        
+
+        .totalOrder{
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-top: none;
+        }
+
+        @media only screen and (max-width:990px) {
+            .email-info-cont{
+               border: none;
+               padding: 0;
+            }
+
+            .order-detail-cont{
+                margin: 0 auto 0 auto;
+            }
+
+            .email-info{
+            background:#f5f5f5;
+            padding: 59px 30px 100px 30px;
+            }
+
+        }        
 
         @media only screen and (max-width:480px) {
             .email-container {
@@ -176,7 +208,9 @@
                 max-width: 100%;
             }
 
-
+            .totalOrderInfo, .totalOrderTitle{
+                font-size: 10px;
+            }
         }
     </style>
 </head>
@@ -236,9 +270,9 @@
                         <iscomment> <isinclude template="checkout/confirmation/confirmationOrderTotal" /> </iscomment>
                         <div class="order-detail-cont">
                             <div class="order-detail-title-cont">
-                                <strong style="color: #ffffff; font-size: 16px; font-weight: 700;">${Resource.msg('label.order.totals', 'confirmation', null)}:</strong> <br/>
+                                <strong style="color: #ffffff; font-size: 16px; font-weight: 700;">${Resource.msg('label.order.totals', 'confirmation', null)}</strong> <br/>
                             </div>
-                            <table class="order-sumary" style="margin-bottom:40px;">
+                            <table class="order-sumary">
                                 <isif condition="${pdict.order.shipping.length === 1}">
                                     <isloop items="${pdict.order.items.items}" var="lineItem">
                                         <tr>
@@ -263,19 +297,12 @@
                                                 </p>
                                             </td>
                                         </tr>
-                                        <tr class="product-summary" style="margin-bottom:15px;">
-                                            <td style="width:20%;padding-bottom:15px;">
-                                                <img src="${lineItem.images.small[0].absURL}" alt="Product Image"
-                                                    style="height:250px;" />
-                                            </td>
+                                        <tr>
                                             <td style="padding-bottom:15px;">
                                                 <div>
-                                                    <div style="margin-bottom:35%;">
+                                                    <div>
                                                         <p style="font-size: 14px;font-weight: bold;color: #4D4D4D;">
                                                             ${lineItem.productName}
-                                                        </p>
-                                                        <p style="font-size: 11px;font-weight: bold;color: #B3B3B3;">Código:
-                                                            ${lineItem.id}
                                                         </p>
                                                     </div>
                                                     <div>
@@ -285,6 +312,12 @@
                                                         </isloop>
                                                     </div>
                                                 </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="product-summary" style="margin-bottom:15px;">
+                                            <td style="width:20%;padding-bottom:15px;">
+                                                <img src="${lineItem.images.small[0].absURL}" alt="Product Image"
+                                                    style="height:250px;" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -323,6 +356,27 @@
                                     </isloop>
                                 </isif>
                             </table>
+                            <table style="margin-bottom:40px;" class="totalOrder">
+                                <tr>
+                                    <td>
+                                        <p class="totalOrderTitle" style="font-weight: 700;"> ${Resource.msg('field.numberquantities', 'cart', null)}</p>
+                                        <p class="totalOrderInfo">${pdict.order.productQuantityTotal}</p>
+                                    </td>
+                                    <td>
+                                        <p class="totalOrderTitle" style="font-weight: 700;"> ${Resource.msg('label.subtotal.price', 'cart', null)}</p>
+                                        <p class="totalOrderInfo">${pdict.order.totals.subTotal}</p>
+                                    </td> 
+                                    <td> 
+                                        <p class="totalOrderTitle" style="font-weight: 700;"> ${Resource.msg('field.selectshippingmethod', 'cart', null)}</p>  
+                                        <p class="totalOrderInfo">${pdict.order.totals.totalShippingCost}</p>
+                                    </td> 
+                                    <td>
+                                        <p class="totalOrderTitle" style="font-weight: 700;"> ${Resource.msg('label.total.price', 'cart', null)}</p>   
+                                        <p class="totalOrderInfo">${pdict.order.totals.grandTotal}</p>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
                         </div>
                     </tr>
                 </table>  
@@ -331,11 +385,13 @@
                         <button class="ofertas-btn"><a href="https://bjgb-002.sandbox.us01.dx.commercecloud.salesforce.com/s/MensFashion/promociones">VER MÁS OFERTAS</a></button>
                     </div>
                     <div class="social-icons">
+                        <div class="social-icons-img">
                         <a href="https://www.facebook.com/MensFashionMx"><img class="soc-icon" src="${URLUtils.httpsStatic('/images/face.png')}" alt="Facebook" /></a>
 
                         <a href="instagram.com/mensfashionoficial/"><img class="soc-icon" src="${URLUtils.httpsStatic('/images/insta.png')}" alt="Instagram" /></a>
 
                         <a href="https://www.youtube.com/user/MensFashionMX"><img class="soc-icon" src="${URLUtils.httpsStatic('/images/youtube.png')}" alt="Youtube" /></a>
+                        <div>
                     </div>
                 </div>    
             </div>
