@@ -89,17 +89,21 @@ zipCodeField.addEventListener("change", (e) => {
 
 function pickCountry() {
   setTimeout(() => {
-    let countrySelect = document.querySelector(".form-control.shippingCountry.custom-select");
+    let countrySelect = document.querySelector(
+      ".form-control.shippingCountry.custom-select"
+    );
     countrySelect.value = "MX";
     if (countrySelect.value === "MX") {
-      document.querySelector(".dwfrm_shipping_shippingAddress_addressFields_country").style.display = "none";
+      document.querySelector(
+        ".dwfrm_shipping_shippingAddress_addressFields_country"
+      ).style.display = "none";
     }
   }, 1000);
 }
-pickCountry()
+pickCountry();
 
 function selectShipping(shippingMethod) {
-  let shippingSelector = document.querySelectorAll('.form-check-input');
+  let shippingSelector = document.querySelectorAll(".form-check-input");
   shippingSelector.forEach((item) => {
     if (shippingMethod === "pickup" && item.value == "pickup") {
       item.click();
@@ -111,7 +115,9 @@ function selectShipping(shippingMethod) {
 }
 function updateSelectedShippingMethod() {
   setTimeout(() => {
-    let findActiveShipping = document.querySelectorAll('.shipping.only-visible .form-check input');
+    let findActiveShipping = document.querySelectorAll(
+      ".shipping.only-visible .form-check input"
+    );
     findActiveShipping.forEach((item) => {
       if (item.checked) {
         item.parentElement.style.display = "block";
@@ -123,21 +129,45 @@ function updateSelectedShippingMethod() {
     });
   }, 1000);
 }
-let selectShippingBtn = document.querySelector('#selectShipping');
-let selectPickupBtn = document.querySelector('#selectPickup');
-selectShippingBtn.addEventListener('click', (e) => {
+
+const togglePickupForm = (selectPickupBtn) => {
+  const pickupForm = document.querySelector(
+    ".shipping-form .shipping-address-block"
+  );
+  const addressField = document.querySelectorAll(
+    ".shipping-form .shipping-address-block .hidde-pickup"
+  );
+  setTimeout(() => {
+    pickupForm.classList.remove("d-none");
+    if (selectPickupBtn.classList.contains("active")) {
+      addressField.forEach((el) => {
+        el.classList.add("d-none");
+      });
+    } else {
+      addressField.forEach((el) => {
+        el.classList.remove("d-none");
+      });
+    }
+  }, 500);
+};
+
+let selectShippingBtn = document.querySelector("#selectShipping");
+let selectPickupBtn = document.querySelector("#selectPickup");
+selectShippingBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  selectShippingBtn.classList.add('active');
-  selectPickupBtn.classList.remove('active');
+  selectShippingBtn.classList.add("active");
+  selectPickupBtn.classList.remove("active");
   selectShipping("shipped");
   updateSelectedShippingMethod();
   pickCountry();
+  togglePickupForm(selectPickupBtn);
 });
-selectPickupBtn.addEventListener('click', (e) => {
+selectPickupBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  selectPickupBtn.classList.add('active');
-  selectShippingBtn.classList.remove('active');
+  selectPickupBtn.classList.add("active");
+  selectShippingBtn.classList.remove("active");
   selectShipping("pickup");
   updateSelectedShippingMethod();
   pickCountry();
+  togglePickupForm(selectPickupBtn);
 });

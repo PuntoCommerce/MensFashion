@@ -453,11 +453,23 @@ span.ship-to-phone {
 .shipment-selector-btns button {
   background: none;
 }
+.confirmation-summary-container .card-header-custom {
+  margin-bottom: 1.5rem;
+}
 .card-header-custom.header-shipping {
   font-family: "Avenir-Bold";
   font-weight: 800;
   font-size: 32px;
   line-height: 44px;
+}
+.order-confirm-create-account .card-header-custom {
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #000000;
 }
 .shipment-selector-btns h3 {
   font-family: "Avenir-Bold";
@@ -615,4 +627,211 @@ span.ship-to-phone {
   font-size: 16px;
   line-height: 22px;
   color: #555555;
+}
+.card.payment-summary .summary-section-label {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+}
+.card.payment-summary .custom_edit-button {
+  border: 1px solid #000;
+  border-radius: 0;
+  background: none;
+  padding: 5px 15px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.011em;
+  margin-right: 30%;
+}
+.card.payment-summary .custom_edit-button:hover {
+  color: #fff;
+  background: #000;
+}
+.checkout-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  .card.payment-summary {
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    margin: 0 2% 2rem 2%;
+  }
+  .order-confirm-create-account .card-header-custom {
+    font-family: "Avenir-Bold";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+.order-total-summary .edit-button {
+  color: #000;
+}
+.order-total-summary .leading-lines p {
+  margin: 0;
+}
+.order-total-summary .grand-total {
+  margin: 1.5rem 0;
+}
+.order-total-summary .grand-total p span {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+}
+.card.checkout__order {
+  padding: 0px 1rem;
+}
+.checkout__order .checkout__order--divider {
+  width: 97%;
+}
+.billing-nav.payment-information .payment-options {
+  border-bottom: 0;
+}
+.container_custom.receipt {
+  max-width: 85vw;
+  margin: 0 auto;
+}
+.card-header-custom {
+  text-align: center;
+  font-family: "Avenir-Next";
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+.card-header-custom {
+  text-align: center;
+  font-family: "Avenir-Next";
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+@media (min-width: 1200px) {
+  .card-header-custom {
+    font-family: "Avenir-Bold";
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+.confirmation-summary-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+}
+.confirmation-summary-container .product-summary-block {
+  text-align: center;
+}
+.confirmation-summary-container .product-summary-block .item-image {
+  margin: auto;
+}
+.address-summary .icon-shipping {
+  margin-right: 15px;
+}
+.address-summary span,
+.payment-details span {
+  font-family: "Avenir-Next";
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+.confirmation-summary-container .container_confirmation {
+  border: 1px solid #000;
+  padding: 20px 15px;
+}
+.order-thank-you-msg {
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+  text-align: center;
+}
+.order-thank-you-email-msg {
+  font-family: "Avenir-Next";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+}
+.order-thank-you-email-msg span {
+  font-family: "Avenir-Bold";
+}
+.confirmation-summary-container .item-image {
+  height: auto;
+  width: auto;
+}
+.confirmation-summary-container .item-image img.product-image {
+  max-height: 100%;
+  max-width: 200px;
+}
+.container_confirmation .summary-section-label.shipping-method-label {
+  font-family: "Avenir-Next";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+}
+
+@media (min-width: 1200px) {
+  .order-thank-you-msg {
+    font-size: 30px;
+    color: #64656a;
+  }
+  .order-thank-you-email-msg {
+    font-size: 24px;
+  }
+  .container_confirmation .summary-section-label.shipping-method-label {
+    font-family: "Avenir-Bold";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .order-confirm-create-account {
+    padding: 5%;
+  }
+}
+.pickup-title {
+  font-family: "Avenir-Next";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #555555;
+}
+.store-locator-container input,
+.store-locator-container select {
+  border-radius: 0;
+}
+.store-locator-container .card-body {
+  padding: 0;
+}
+.store-locator-container .card.search-form .card-body {
+  display: flex;
+  flex-direction: column;
+}
+#user-location-search-store {
+  border: 0;
+  background: none;
+}
+#user-location-search-store:hover {
+  text-decoration: underline;
+}
+#user-location-search-store:focus {
+  outline: none;
+}
+.store-locator-container .card.results-card .card-header {
+  padding: 0;
+}
+.results.striped .card-body {
+  border: 1px solid #000;
+  margin: 15px;
+  padding: 15px;
+}
+@media (min-width: 1200px) {
+  .results.striped {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
