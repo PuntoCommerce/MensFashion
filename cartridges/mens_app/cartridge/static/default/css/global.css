@@ -1750,13 +1750,9 @@ pre code {
   }
   .title-container {
     background: #000;
-<<<<<<< HEAD
     padding: 0 40px !important;
-}
-=======
-    padding: 20px 40px !important;
   }
->>>>>>> 3efc5da5d3f51f387abb0965b40270a2063c24b9
+
 }
 @media (max-width: 768.98px) {
   .table-responsive-md {
@@ -15278,14 +15274,8 @@ div.availability {
     padding: 0 15px;
   }
 
-<<<<<<< HEAD
   .login-form-nav, .trackorder{
     margin: 13px 32px 0 37px !important;
-=======
-  .login-form-nav,
-  .trackorder {
-    margin: 13px 10px 0 10px !important;
->>>>>>> 3efc5da5d3f51f387abb0965b40270a2063c24b9
   }
 }
 
@@ -15422,16 +15412,10 @@ button.close:focus {
   position: relative;
 }
 
-<<<<<<< HEAD
-.login-form-nav .checkout__text--bold, .login-form-nav .checkout__text--space{
-  font-family: 'Avenir-Next' !important;
-  font-weight: 800;
-=======
 .login-form-nav .checkout__text--bold,
 .login-form-nav .checkout__text--space {
   font-family: "Avenir-Next" !important;
   font-weight: 400;
->>>>>>> 3efc5da5d3f51f387abb0965b40270a2063c24b9
   font-size: 16px;
   line-height: 22px;
 }
@@ -15845,10 +15829,8 @@ button.close:focus {
   color: #000 !important;
   border: 1px solid #000;
 }
-<<<<<<< HEAD
 
 .card-header.track-order-header{
   padding: 12px 20px;
 }
-=======
->>>>>>> 3efc5da5d3f51f387abb0965b40270a2063c24b9
+
