@@ -78,9 +78,6 @@
             data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
             aria-describedby="form-password-error" autocomplete="off" <isprint
             value=${pdict.profileForm.login.password.attributes} encoding="off" />>
-        <p>
-            ${Resource.msg('label.input.passwordInfo.profile', 'forms', null)}
-        </p>
     </div>
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
