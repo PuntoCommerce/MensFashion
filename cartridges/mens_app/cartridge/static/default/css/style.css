@@ -2780,6 +2780,7 @@ ul {
     .checkout__form--padding-half {
       padding: 5px 5px 5px 5px; }
   .checkout__cart {
+    min-height: 50vh;
     background-color: #ffffff; }
     @media only screen and (min-width: 37.5em) {
       .checkout__cart {

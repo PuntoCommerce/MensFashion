@@ -8,7 +8,7 @@ var gtmEnabled = Site.getCurrent().getCustomPreferenceValue('GTMEnable') || fals
 var gtmGA4Enabled = Site.getCurrent().getCustomPreferenceValue('GTMEnableGA4') || false;
 var gtmContainerId = Site.getCurrent().getCustomPreferenceValue('GTMID') || '';
 
-var SITE_NAME = 'Sites-'+Site.current.ID+'-Site';
+var SITE_NAME = 'Sites-' + Site.current.ID + '-Site';
 /**
  * @param {Object} res - current route response object
  * @returns {Object} an object of containing customer data
@@ -20,6 +20,7 @@ function getCustomerData(res) {
         session = request.session,
         customerObject = {};
 
+    customerObject.event = 'gtm.userInfo';
     customerObject.environment = (system.getInstanceType() === system.PRODUCTION_SYSTEM ? 'production' : 'development');
     customerObject.demandwareID = customer.ID;
     customerObject.loggedInState = customer.authenticated;

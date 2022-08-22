@@ -229,18 +229,37 @@ if (document.readyState === 'complete') {
 /*
 * Check for custom data attributes and add them to the dataLayer
 */
-let customData = document.querySelector('[data-gtmpageview]') ? document.querySelector('[data-gtmpageview]').dataset.gtmpageview : null;
-let prodGtmData = document.querySelector('[data-gtmdata]');
-prodGtmData = prodGtmData ? prodGtmData.dataset.gtmdata : null;
-let pageGtmData = {
-    'event': 'pageVisited',
-    'pageView': {
-        'pageURL': window.location.href,
-        'pageName': customData ? customData : window.location.pathname,
-    }
-};
 window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-    pageGtmData,
-    prodGtmData
-});
+// Page view event
+let customData = document.querySelector('[data-gtmpageview]') ? document.querySelector('[data-gtmpageview]').dataset.gtmpageview : null;
+if (customData) {
+    let pageGtmData = {
+        'event': 'gtm.pageView',
+        'pageURL': window.location.href,
+        'pageName': customData ? customData : window.location.pathname
+    };
+    window.dataLayer.push(pageGtmData);
+}
+
+// PDP VIEW event
+let prodGtmData = document.querySelector('[data-gtmdata]');
+if (prodGtmData) {
+    prodGtmData = prodGtmData ? prodGtmData.dataset.gtmdata : null;
+    prodGtmData = JSON.parse(prodGtmData)
+    prodGtmData.event = 'gtm.productView';
+    window.dataLayer.push(prodGtmData);
+}
+
+// Product Tile View
+let prodTileGtmData = document.querySelectorAll('[data-gtmdatatile]');
+let prodTileDataList = [];
+if (prodTileGtmData) {
+    prodTileGtmData.forEach(function (item) {
+        item = item.dataset.gtmdatatile;
+        item = JSON.parse(item)
+        prodTileDataList.push(item);
+        prodTileDataList.event = 'gtm.productTileView';
+    });
+    window.dataLayer.push(prodTileDataList);
+};
+

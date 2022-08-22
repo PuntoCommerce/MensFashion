@@ -98,15 +98,6 @@ header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
   color: var(--skin-primary-color-invert-1);
   opacity: 0.5;
 }
-.btn-outline-primary {
-  color: var(--skin-primary-color-1);
-  border-color: var(--skin-primary-color-1);
-}
-.btn-outline-primary:hover {
-  color: var(--skin-primary-color-invert-1);
-  background-color: var(--skin-primary-color-1);
-  border-color: var(--skin-primary-color-1);
-}
 h1,
 h2,
 h3,

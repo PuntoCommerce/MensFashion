@@ -1,7 +1,22 @@
 <div>
     <div class="card order-confirm-create-account">
         <div class="card-header">
-            <h3 class="card-header-custom">${Resource.msg('title.save.customer.information', 'confirmation', null)}</h3>
+            <h3 class="card-header-custom d-none d-lg-block">
+                <isloop var="shippingModel" items="${pdict.order.shipping}" status="shippingLoop">
+                    <isif condition="${shippingLoop.first}">
+                        <div class="single-shipping thankyou_text mb-4" data-shipment-summary="${shippingModel.UUID}">
+                            <isif condition="${shippingModel.shippingAddress !== null}">
+                                <isset name="address" value="${shippingModel.shippingAddress}" scope="page" />
+                            <iselse/>
+                                <isset name="address" value="${{}}" scope="page" />
+                            </isif>
+                            ¡<isif condition="${address && address.firstName}">${address.firstName},
+                                ${Resource.msg('title.save.customer.information', 'confirmation', null)}</isif>
+                        </div>
+                    </isif>
+                </isloop>
+            </h3>
+            <h3 class="card-header-custom d-lg-none">${Resource.msg('title.save.customer.information.mobile', 'confirmation', null)}</h3>
         </div>
         <div class="card-body">
             <form
@@ -31,7 +46,7 @@
 
                     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
 
-                    <button class="btn btn-primary btn-block">
+                    <button class="btn btn--gray btn__small text-uppercase">
                         ${Resource.msg('button.create.account', 'confirmation', null)}
                     </button>
             </form>
