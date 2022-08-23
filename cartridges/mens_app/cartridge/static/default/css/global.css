@@ -1750,8 +1750,9 @@ pre code {
   }
   .title-container {
     background: #000;
-    padding: 20px 40px !important;
+    padding: 0 40px !important;
   }
+
 }
 @media (max-width: 768.98px) {
   .table-responsive-md {
@@ -3415,7 +3416,7 @@ input[type="submit"].btn-block {
   border-radius: 0.1875rem;
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label:after {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3E%3C/svg%3E");
+  background-color: #fff;
 }
 .custom-checkbox
   .custom-control-input:indeterminate
@@ -9079,7 +9080,8 @@ dt {
   background: linear-gradient(#f9f9f9, #ccc);
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23ff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+   background: #FF0000;
+   border-radius: 50%;
 }
 .custom-radio .custom-control-label:before {
   border: 1px solid #000;
@@ -15272,9 +15274,8 @@ div.availability {
     padding: 0 15px;
   }
 
-  .login-form-nav,
-  .trackorder {
-    margin: 13px 10px 0 10px !important;
+  .login-form-nav, .trackorder{
+    margin: 13px 32px 0 37px !important;
   }
 }
 
@@ -15308,12 +15309,13 @@ button.close:focus {
 }
 .title-container .page-title {
   position: initial;
+  background-color: transparent;
 }
 .myAccount-title {
   color: #fff;
   font-family: "Avenir-Next";
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .page-title {
@@ -15323,7 +15325,6 @@ button.close:focus {
   font-weight: 700 !important;
   padding: 0 !important;
   margin: 0 !important;
-  background-color: #000000 !important;
 }
 
 .login-form-nav {
@@ -15399,7 +15400,7 @@ button.close:focus {
   bottom: 0;
   content: "";
   display: block;
-  height: 2px;
+  height: 3px;
   position: absolute;
   background: #ff0000;
   width: 100px;
@@ -15420,7 +15421,7 @@ button.close:focus {
 }
 
 .login-page .login-form-nav .tab-pane {
-  margin-top: 38px !important;
+  margin-top: 26px !important;
 }
 
 #login-form-email,
@@ -15488,6 +15489,7 @@ button.close:focus {
   margin-bottom: 9px;
   font-family: "Avenir-LT-Std";
   font-size: 16px;
+  font-weight: 800;
 }
 
 #register .form-control {
@@ -15498,10 +15500,10 @@ button.close:focus {
 #register button {
   margin: 35px auto 9px auto;
   width: 90%;
-  height: 34px;
+  height: 37px;
   padding: 0;
-  background: #000000;
-  color: #ffffff !important;
+  background: #d9d9d9;
+  color: #000000 !important;
   border: none;
   font-family: "Avenir-LT-Std";
   font-weight: 400;
@@ -15513,6 +15515,7 @@ button.close:focus {
   font-weight: 400;
   font-size: 14px;
   margin: 35px 27px 9px 43px;
+  text-align: center;
 }
 
 .trackorder {
@@ -15556,6 +15559,7 @@ button.close:focus {
   font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .trackorder .btn-block:hover {
@@ -15825,3 +15829,8 @@ button.close:focus {
   color: #000 !important;
   border: 1px solid #000;
 }
+
+.card-header.track-order-header{
+  padding: 12px 20px;
+}
+
