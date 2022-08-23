@@ -130,9 +130,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
     background-color: $light-grey;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 35px 0;
 
     &--item {
       display: flex;
@@ -153,7 +153,8 @@
         border-radius: 50%;
 
         &-current,
-        &-done {
+        &-done,
+        &.active {
           background-color: $text-color-black;
         }
       }
@@ -171,7 +172,8 @@
       margin: 0 10px 0 10px;
       background-color: $mid-grey;
 
-      &-done {
+      &-done,
+      &.active {
         background-color: $text-color-black;
       }
     }
@@ -193,5 +195,10 @@
       padding: 20px;
       background-color: $light-grey;
     }
+  }
+
+  &__stepper--item-title {
+    position: absolute;
+    bottom: 0;
   }
 }

@@ -171,3 +171,45 @@ selectPickupBtn.addEventListener("click", (e) => {
   pickCountry();
   togglePickupForm(selectPickupBtn);
 });
+
+const step1Btn = document.querySelector("button.submit-shipping");
+const step2Btn = document.querySelector("button.submit-payment");
+
+function updateProgressBar() {
+  const stepShipping = document.querySelector("#checkout-main");
+
+  const checkoutStep2 = document.querySelector("#checkoutStep2");
+  const checkoutStep3 = document.querySelector("#checkoutStep3");
+  const checkoutDivider1 = document.querySelector("#checkoutStepDivider1");
+  const checkoutDivider2 = document.querySelector("#checkoutStepDivider2");
+
+  let stage = stepShipping.dataset.checkoutStage;
+
+  if (stage === "shipping") {
+    checkoutDivider1.classList.remove("active");
+    checkoutStep2.classList.remove("active");
+    checkoutDivider2.classList.remove("active");
+    checkoutStep3.classList.remove("active");
+  }
+  if (stage === "payment") {
+    checkoutDivider1.classList.add("active");
+    checkoutStep2.classList.add("active");
+  }
+  if (stage === "placeOrder") {
+    checkoutDivider1.classList.add("active");
+    checkoutStep2.classList.add("active");
+    checkoutDivider2.classList.add("active");
+    checkoutStep3.classList.add("active");
+  }
+}
+updateProgressBar();
+step1Btn.addEventListener("click", (e) => {
+  setTimeout(() => {
+    updateProgressBar();
+  }, 1000);
+});
+step2Btn.addEventListener("click", (e) => {
+  setTimeout(() => {
+    updateProgressBar();
+  }, 1000);
+});

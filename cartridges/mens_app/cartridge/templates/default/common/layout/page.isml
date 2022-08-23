@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    <iscontentasset aid="top-banner-promo" />
     ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
     <isinclude template="/components/header/pdStorePageHeader" />
@@ -56,4 +57,5 @@
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
     <isinclude template="/components/chatSales" />
 </body>
+
 </html>

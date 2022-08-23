@@ -726,7 +726,7 @@ footer .socialMedia-paymentMethods {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 
-.content-asset {
+#footercontent .content-asset {
   padding-left: 20px; }
 
 @media (min-width: 1200px) {
@@ -2833,8 +2833,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: #d8d8d8;
-    padding: 20px 0 20px 0; }
+    padding: 20px 0 35px 0; }
     .checkout__stepper--item {
       display: flex;
       justify-content: center;
@@ -2849,7 +2850,7 @@ ul {
         height: 50px;
         width: 50px;
         border-radius: 50%; }
-        .checkout__stepper--item-circle-current, .checkout__stepper--item-circle-done {
+        .checkout__stepper--item-circle-current, .checkout__stepper--item-circle-done, .checkout__stepper--item-circle.active {
           background-color: #000000; }
       .checkout__stepper--item-title {
         font-family: "Avenir-Next";
@@ -2860,7 +2861,7 @@ ul {
       height: 2px;
       margin: 0 10px 0 10px;
       background-color: #64656a; }
-      .checkout__stepper--divider-done {
+      .checkout__stepper--divider-done, .checkout__stepper--divider.active {
         background-color: #000000; }
   .checkout__order {
     border: 1px solid #000000;
@@ -2874,3 +2875,6 @@ ul {
     .checkout__order--product {
       padding: 20px;
       background-color: #d8d8d8; }
+  .checkout__stepper--item-title {
+    position: absolute;
+    bottom: 0; }
