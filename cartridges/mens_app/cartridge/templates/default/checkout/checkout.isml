@@ -21,17 +21,17 @@
 
     <ul class="checkout__stepper">
         <li class="checkout__stepper--item">
-            <h3 class="checkout__stepper--item-circle checkout__stepper--item-circle-current">1</h3>
+            <h3 id="checkoutStep1" class="checkout__stepper--item-circle checkout__stepper--item-circle-current">1</h3>
             <p class="checkout__stepper--item-title">Envío</p>
         </li>
-        <div class="checkout__stepper--divider"></div>
+        <div id="checkoutStepDivider1" class="checkout__stepper--divider"></div>
         <li class="checkout__stepper--item">
-            <h3 class="checkout__stepper--item-circle">2</h3>
+            <h3 id="checkoutStep2" class="checkout__stepper--item-circle">2</h3>
             <p class="checkout__stepper--item-title">Pago</p>
         </li>
-        <div class="checkout__stepper--divider"></div>
+        <div id="checkoutStepDivider2" class="checkout__stepper--divider"></div>
         <li class="checkout__stepper--item">
-            <h3 class="checkout__stepper--item-circle">3</h3>
+            <h3 id="checkoutStep3" class="checkout__stepper--item-circle">3</h3>
             <p class="checkout__stepper--item-title">Realizar Pedido</p>
         </li>
     </ul>
