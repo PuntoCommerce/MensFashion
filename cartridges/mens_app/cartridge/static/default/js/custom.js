@@ -148,7 +148,8 @@ if (pgcSelect) {
 /* PLP */
 // SHOW MORE BUTTON
 
-const showMoreButton = $C("#show-more-button");
+let showMoreButton = $C(".grid-footer .show-more button");
+
 let changeSize = false;
 if (showMoreButton) {
   window.addEventListener("scroll", () => {
@@ -157,9 +158,13 @@ if (showMoreButton) {
         document.body.clientHeight - document.body.clientHeight * 0.3 &&
       !changeSize
     ) {
-      showMoreButton.click();
+      if (showMoreButton) showMoreButton.click();
       changeSize = true;
-      setTimeout(() => (changeSize = false), 3000);
+      setTimeout(() => {
+        changeSize = false;
+        showMoreButton = $C(".grid-footer .show-more button");
+        console.log(showMoreButton);
+      }, 3000);
     }
   });
 }
