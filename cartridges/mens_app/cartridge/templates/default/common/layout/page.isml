@@ -34,7 +34,8 @@
 
     <isinclude template="/components/header/pdStorePageHeader" />
 
-    <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}">
+    <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}"
+        data-gtmpageview="${pdict.action}">
 
         <div role="main" id="maincontent">
             <isreplace/>
