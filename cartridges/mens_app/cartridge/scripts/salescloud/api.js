@@ -19,4 +19,5 @@ module.exports = {
     call("services/apexrest/OpportunityProducts", "POST", body),
   getInventory: () => call("services/apexrest/inventory", "GET", {}),
   getPrices: () => call("services/apexrest/pricebook", "GET", {}),
+  sendAccount: (body) => call("services/apexrest/AccountC", "POST", body),
 };
