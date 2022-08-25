@@ -1768,7 +1768,7 @@ pre code {
   }
   
   .container.account-sections .row{
-    padding: 15px 25px !important;
+    padding: 27px 35px 0 34px !important;
   }
   .login-page .nav-tabs .nav-link.active{
     padding-top: 8px !important ;
@@ -1776,7 +1776,66 @@ pre code {
   .login-page .nav-tabs .nav-link{
     padding-top: 8px !important;
   }
+  .login-page .forgot-password{
+    float: right !important;
+  }
+  .login-page .forgot-password a{
+    color: #ff0000;
+    font-size: 12px;
+  }
+  .login-page .remember-me{
+    float: left !important;
+  }
+  .login-page .remember-me .custom-control-label{
+    font-size: 12px !important; 
+  }
+  #login .clearfix{
+    width: 100%;
+  }
+  .title-container-account h1.page-title{
+    height: 40px;
+    font-size: 20px !important;
+    line-height: 40px; 
+  }
+  .account-sections .card-header h2{
+    font-size: 14px !important;
+  }
+  .title-container .page-title{
+    font-size: 14px !important;
+    line-height: 40px;
+  }
+  .account-sections .card-header h4{
+    font-size: 14px !important;
+  }
   
+  .request-password-title{
+    font-size: 14px !important;
+  }
+  
+  .container.account-sections .row.passBody{
+    padding-top: 0 !important;
+  }
+
+  .request-password-title{
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  .account-sections .card-body{
+    padding: 21px 23px 20px 22px !important;
+    border: 1px solid #000;
+  }
+  .container.account-sections .row.accountBtns{
+    display: block !important;
+    padding: 0 !important;
+  }
+  .accountBtns .btn{
+    margin-bottom: 15px;
+    width: 300px;
+    height: 37px;
+  }
+  .container.account-sections .row.backBtn{
+    padding: 0 35px 0 34px !important;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -15379,7 +15438,8 @@ button.close:focus {
 }
 .title-container .page-title{
   position: initial;
-  background-color: #000000 !important;
+  background-color: transparent !important;
+  font-size: 36px;
 }
 .myAccount-title {
   color: #fff;
@@ -15713,7 +15773,7 @@ button.close:focus {
   margin-bottom: 40px;
   border: 1px solid #000;
   border-radius: 3px;
-  padding: 20px 15px;
+  padding: 24px 30px;
 }
 
 .request-password-title{
@@ -15787,6 +15847,7 @@ button.close:focus {
   position: inherit;
   background-color: #E8E8E8 !important;
   color: #000 !important;
+  font-size: 40px;
 }
 
 
@@ -15797,6 +15858,11 @@ button.close:focus {
 }
 
 .account-sections .card-header h2{
+  font-weight: 900;
+  font-family: 'Avenir-Next';
+}
+
+.account-sections .card-header h4{
   font-weight: 900;
   font-family: 'Avenir-Next';
 }
@@ -15834,11 +15900,8 @@ button.close:focus {
 }
 
 .profile-back-to-account-link{
-  margin: 35px 0;
-}
-
-.container.account-sections .row{
-  padding: 0 185px;
+  margin: 0 0 40px 0;
+  color:#2D64FC !important;
 }
 
 .container.account-sections .adrressBtns{
@@ -15918,4 +15981,23 @@ button.close:focus {
   background-color: #fff;
   color: #000 !important;
   border: 1px solid #000;
+}
+
+.form-group.required.passwordLabel:before{
+  content: "*";
+  color: #c00;
+}
+
+.request-password-title{
+  background: #e8e8e8;
+  padding: 0 0 0 16px;
+  font-weight: 900;
+  color: #000000;
+  font-weight: 900;
+  font-family: 'Avenir-Next';
+  margin-top: 0 !important;
+}
+
+.container.account-sections .row{
+  padding: 25px 177px;
 }
