@@ -575,7 +575,8 @@ footer .newsletter {
   border: 1px solid #ffffff;
   border-radius: 0px;
   height: 32px;
-  width: 268px; }
+  width: 268px;
+  color: #ffffff; }
 
 footer .newsletter:focus {
   background-color: #231f20;
