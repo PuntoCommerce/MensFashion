@@ -2,13 +2,10 @@
   display: block;
 }
 .landing-text p {
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Avenir-Next';
 }
-@media (min-width: 768px) {
-  .landing-text p {
-    font-size: 24px;
-  }
-}
+
 .landing-text-align-left p {
   text-align: left;
 }

@@ -1760,7 +1760,7 @@ pre code {
     margin: 20px 32px 40px 37px;
   }
   .myAccount .col-sm-6{
-    padding: 85px 55px;
+    padding: 30px 32px 16px 37px !important;
   }
   .myAccount-title {
     font-size: 20px !important;
@@ -1769,6 +1769,12 @@ pre code {
   
   .container.account-sections .row{
     padding: 27px 35px 0 34px !important;
+  }
+  .container.account-sections .row.addressBottom{
+    padding: 0 35px 0 34px !important;
+  }
+  .container.account-sections .row.backBtnAddress{
+    padding: 14px 0 26px 0 !important;
   }
   .login-page .nav-tabs .nav-link.active{
     padding-top: 8px !important ;
@@ -1834,7 +1840,32 @@ pre code {
     height: 37px;
   }
   .container.account-sections .row.backBtn{
-    padding: 0 35px 0 34px !important;
+    padding: 28px 35px 34px 34px !important;
+  }
+  .account-sections .card-header{
+    padding: 0 0 0 22px !important;
+  }
+  .myAccount .orderCol{
+    background-color: #ffffff !important;
+    padding-top: 0 !important;
+  }
+
+  .myAccount .profileCol{
+    padding-bottom: 0 !important;
+  }
+
+  .card-body dt{
+    font-size: 14px;
+  }
+  
+  .card-body dd{
+    font-size: 14px;
+  }
+  .container.account-sections .row.newAddress{
+    padding:0 !important;
+  }
+  .container.account-sections .row.payMonth{
+    padding: 0 !important;
   }
 }
 @media (max-width: 991.98px) {
@@ -1846,6 +1877,9 @@ pre code {
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
+  }
+  .card-header h2, .card-header h3{
+    font-size: 16px !important;
   }
 }
 @media (max-width: 1199.98px) {
@@ -3563,7 +3597,7 @@ input[type="submit"].btn-block {
 .custom-radio
   .custom-control-input:disabled:checked
   ~ .custom-control-label:before {
-  background-color: rgba(0, 161, 224, 0.5);
+  background-color: #ff0000;
 }
 .custom-switch {
   padding-left: 2.25rem;
@@ -4319,6 +4353,9 @@ input[type="submit"].btn-block {
 .card-subtitle,
 .card-text:last-child {
   margin-bottom: 0;
+}
+.card-link {
+  text-decoration: none;
 }
 .card-link:hover {
   text-decoration: none;
@@ -15797,6 +15834,7 @@ button.close:focus {
 .myAccount .card{
   border: 1px solid #000;
   border-radius: 3px;
+  font-family: 'Avenir-Next';
 }
 
 .myAccount .orderCol{
@@ -15825,16 +15863,17 @@ button.close:focus {
 
 .card-body dt{
   font-weight: bold;
+  color: #000000 !important;
+}
+
+.card-body dd{
+  color: #000000 !important;
 }
 
 .myAccount .card-link{
   color: #000;
   font-family: 'Avenir-Next';
   font-size: 14px;
-}
-
-.myAccount .card-link:before{
-  background-image: url(../images/plus.png) !important;
 }
 
 .myAccount .card-body{
@@ -15850,16 +15889,16 @@ button.close:focus {
   font-size: 40px;
 }
 
-
 .account-sections .card-header{
   background: #e8e8e8;
-  padding: 0 0 0 16px;
+  padding: 0 0 0 60px;
   font-weight: 900;
 }
 
 .account-sections .card-header h2{
   font-weight: 900;
   font-family: 'Avenir-Next';
+  font-size: 18px;
 }
 
 .account-sections .card-header h4{
@@ -15868,7 +15907,7 @@ button.close:focus {
 }
 
 .account-sections .card-body{
-  padding: 28px 68px;
+  padding: 28px 60px;
   border: 1px solid #000;
 }
 
@@ -15878,29 +15917,50 @@ button.close:focus {
   font-family: 'Avenir-Next';
 }
 
-.account-sections .card-body .btn{
+.account-sections .btn{
   font-family: 'Avenir-LT-Std';
   font-weight: 100;
   text-transform: uppercase;
   border: 1px solid #000;
   padding: 5px 0;
+  margin: 15px auto;
+  height: 37px;
 }
 
-.account-sections .card-body .btn:hover{
+.account-sections .btn:hover, .account-sections .btn:active{
   background-color: #000;
   color: #ffffff !important;
 }
 
-.account-sections .card-body .btn-save {
+.account-sections .btn-save {
   font-family: 'Avenir-LT-Std';
   font-weight: 100;
   text-transform: uppercase;
   background-color: #e8e8e8;
   border: none;
+  margin: 15px auto;
+  height: 37px;
+}
+
+.account-sections  .btn-save-address{
+  font-family: 'Avenir-LT-Std';
+  font-weight: 100;
+  text-transform: uppercase;
+  background-color: #e8e8e8 !important;
+  border: none;
+  margin: 15px auto;
+  height: 37px;
+  color: #000 !important;
+}
+.account-sections  .btn-save-address:hover{
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.account-sections .breadcrumb{
+  margin: 0;
 }
 
 .profile-back-to-account-link{
-  margin: 0 0 40px 0;
   color:#2D64FC !important;
 }
 
@@ -15918,7 +15978,7 @@ button.close:focus {
   font-weight: 100 !important;
 }
 
-.adrressBtns .btn-save:hover{
+.adrressBtns .btn-save:hover,.adrressBtns .btn-save:active{
   color: #000 !important;
   border: 1px solid #000;
 }
@@ -15999,5 +16059,76 @@ button.close:focus {
 }
 
 .container.account-sections .row{
-  padding: 25px 177px;
+  padding: 33px 177px;
+}
+
+.container.account-sections .row.backBtn{
+  padding-top: 11px;
+  padding-bottom: 80px;
+}
+
+#register .passwordLeyendCont{
+  margin-bottom: 20px;
+}
+
+.card-header h2, .card-header h3{
+  font-weight: 900 !important;
+}
+
+.myAccount .card-body{
+  margin-top: 23px;
+}
+
+.card-footer-border{
+  border: none !important;
+}
+
+.dashboard-order-card-footer-name{
+  font-weight: 600;
+}
+
+.dashboard-order-card-footer-value{
+  font-weight: 400 !important;
+}
+
+.wl-social-sharing  .share-icons{
+  margin: 0 6px;
+}
+.container.account-sections .row.newAddress{
+  padding: 25px 0;
+}
+
+.remove-address{
+  background-color: #fff !important;
+}
+
+.container.account-sections .addressBottom .adrressBtns{
+  margin: 0;
+}
+
+.container.account-sections .addressBottom .adrressBtns .btn-save{
+  background-color: #e8e8e8;
+  color: #000 !important;
+}
+
+.container.account-sections .addressBottom .adrressBtns .btn-save:hover{
+  background-color: #000000;
+  color: #fff !important;
+}
+
+.container.account-sections .row.order-top{
+  padding: 33px 177px 0 177px;
+}
+
+.container.account-sections .row.payMonth{
+  padding: 33px 0;
+}
+
+.backPay{
+  margin-bottom: 29px;
+}
+
+.paypal-account-button{
+  margin: 10px auto 5px auto;
+  padding: 0;
 }

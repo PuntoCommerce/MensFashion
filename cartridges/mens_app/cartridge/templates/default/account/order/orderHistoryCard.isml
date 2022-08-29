@@ -18,10 +18,11 @@
                     ${Resource.msg('label.orderhistory.mostrecentorder','account',null)}
                 </div>
             </isif>
-            <div class="col-4 hidden-xs-down">
+            <div class="col-4 ">
                 <img class="img-fluid" src="${order.firstLineItem.imageURL}" alt="${order.firstLineItem.alt}" title="${order.firstLineItem.title}">
             </div>
-            <div class="col-sm-8 col-12">
+            <div class="col-8 mt-4">
+                <p>${order.firstLineItem.title}</p>
                 <isif condition="${pdict.accountlanding}">
                     <p>${Resource.msg('label.orderhistory.ordernumber','account',null)} <isprint value="${order.orderNumber}"/></p>
                 </isif>
@@ -34,13 +35,13 @@
     <div class="card-footer">
         <div class="row">
             <div class="col-7 dashboard-order-card-footer-columns card-info-group">
-                <p>${Resource.msg('label.orderhistory.totalitems','account',null)}</p>
+                <p class="dashboard-order-card-footer-name">${Resource.msg('label.orderhistory.totalitems','account',null)}</p>
                 <p class="dashboard-order-card-footer-value">
                     <isprint value="${order.productQuantityTotal}" formatter="#"/>
                 </p>
             </div>
             <div class="col-5 dashboard-order-card-footer-columns card-info-group">
-                <p>${Resource.msg('label.orderhistory.ordertotal','account',null)} </p>
+                <p class="dashboard-order-card-footer-name">${Resource.msg('label.orderhistory.ordertotal','account',null)} </p>
                 <p class="dashboard-order-card-footer-value">
                     ${order.priceTotal}
                 </p>

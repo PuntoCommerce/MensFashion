@@ -78,6 +78,11 @@
             data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
             aria-describedby="form-password-error" autocomplete="off" <isprint
             value=${pdict.profileForm.login.password.attributes} encoding="off" />>
+            <div class="passwordLeyendCont">
+                <span class="checkout__text passwordLeyend">
+                    ${Resource.msg('label.input.login.leyend', 'login', null)}
+                </span>
+            </div>
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
 
@@ -91,6 +96,11 @@
             data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
             aria-describedby="form-password-confirm-error" autocomplete="off" <isprint
             value=${pdict.profileForm.login.passwordconfirm.attributes} encoding="off" />>
+            <div class="passwordLeyendCont">
+                <span class="checkout__text passwordLeyend">
+                    ${Resource.msg('label.input.login.leyend', 'login', null)}
+                </span>
+            </div>    
         <div class="invalid-feedback" id="form-password-confirm-error"></div>
     </div>
 

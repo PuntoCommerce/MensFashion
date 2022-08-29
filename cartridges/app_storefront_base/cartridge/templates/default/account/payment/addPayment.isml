@@ -26,5 +26,17 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row accountBtns">
+            <div class="col">
+                <button type="submit" name="save" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+            </div>
+            <div class="col">
+                <a href="${URLUtils.url('PaymentInstruments-List')}" class="btn btn-block btn-outline-primary">${Resource.msg('button.cancel','account',null)}</a>
+            </div>
+        </div>
+        <div class="row backBtn">
+            <div class="col text-center">
+                <a href="${URLUtils.url('Account-Show')}" class="profile-back-to-account-link">${Resource.msg('link.profile.backtomyaccount','account',null)}</a>
+            </div>
+        </div>
 </isdecorate>
