@@ -100,9 +100,21 @@ header .navbar-header {
     padding-top: 12px;
   }
 
+  #customMenuResponsive .locatorCont{
+    padding-top: 12px !important;
+  }
+
   #customMenuResponsive .cartLabel{
     margin-top: 4px;
     color: #000000 !important;   
+  }
+
+  #customMenuResponsive #actions-icons img.minicart-img{
+    margin-right: 0 !important;
+  }
+
+  #customMenuResponsive .minicart-quantityCustom{
+    margin-right: 6px;
   }
 
   #customMenuResponsive #actions-icons img {
@@ -112,7 +124,11 @@ header .navbar-header {
   #customMenuResponsive .nav-link.parent{
     font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
     text-transform: uppercase;
+  }
   
+  #customMenuResponsive .cartLabel{
+    font-family: nth($text-font-stack,$avenir-LT-Std)!important ; 
+    font-size: 14px;
   }
 
   .nav-link{

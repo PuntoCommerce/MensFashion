@@ -1,9 +1,9 @@
 <div class="card product-info uuid-${item.UUID} pid-${item.pid}">
      <isinclude template="wishlist/components/wishlistProductCardHeader">
     <!--- image, attributes, availability --->
-    <div class="row">
+    <div class="row wishlistRow">
         <div class="col-sm-6">
-            <div class="row">
+            <div class="row wishlistRow">
                 <div class="col-lg-12 d-flex flex-row">
                     <div class="item-image">
                         <img class="product-image" src="${item.imageObj.small[0].url}" alt="${item.imageObj.small[0].alt}" title="${item.imageObj.small[0].title}">
@@ -52,7 +52,7 @@
     </div>
     <div class="row">
         <div class="col-12"><hr class="wishlist-line-item-divider line-dotted"></div>
-        <isinclude template="wishlist/components/makePublicCheckbox">
+        <iscomment> <isinclude template="wishlist/components/makePublicCheckbox"> </iscomment>
         <isif condition="${!!item.master}">
             <isinclude template="wishlist/components/selectAttributesButton">
         <iselse>

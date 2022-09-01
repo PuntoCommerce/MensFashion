@@ -1867,6 +1867,42 @@ pre code {
   .container.account-sections .row.payMonth{
     padding: 0 !important;
   }
+  .backPay{
+    margin-top: 0 !important;
+    margin-bottom:29px !important;
+  }
+  #register label{
+    font-size: 12px !important;
+  }
+  .checkout__text.passwordLeyend{
+    font-size: 14px !important;
+    line-height: 14px;
+  }
+  #register .privacy-policy{
+    font-size: 12px !important;
+  }
+  .dashboardAccount .card-header{
+    height: 39px;
+  }
+  
+  .dashboardAccount .profile-header, .dashboardAccount h2{
+    line-height: 40px;
+    font-family: 'Avenir-Next' !important;
+  }
+  
+  .dashboardAccount .card-header>a{
+    margin-top: 8px;
+  }
+  .myAccount .card-body{
+    padding: 23px 0 0 28px;
+  }
+
+  #password{
+    margin-bottom: 21px;
+  }
+  .dashboardAccount .card-footer{
+    padding-top: 27px;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -15602,7 +15638,7 @@ button.close:focus {
   margin: 15px auto 25px auto;
   display: block;
   height: 44px;
-  width: 90%;
+  width: 100%;
   font-family: 'Avenir-Next';
   font-weight: 600;
   font-size: 16px;
@@ -15629,7 +15665,7 @@ button.close:focus {
 .login-oauth .form-group{
   border: 0.3px solid #000000;
   border-radius: 3px;
-  width: 90%;
+  width: 100%;
   height: 30px;
   margin: 0 auto 16px auto;
 }
@@ -15663,7 +15699,7 @@ button.close:focus {
 
 #register button{
   margin: 35px auto 9px auto;
-  width: 90%;
+  width: 100%;
   height: 34px;
   padding: 0;
   background: #D9D9D9;
@@ -15678,22 +15714,22 @@ button.close:focus {
   font-family: 'Avenir-LT-Std';
   font-weight: 400;
   font-size: 14px;
-  margin: 35px 27px 9px 43px;
+  margin: 35px 0 9px 0;
   text-align: center;
 }
 
 #register .privacy-policy a{
   color: #0280C8;
+  text-decoration: underline;
 }
-
 .trackorder{
   margin: 13px 115px 0 115px;
 }
 
 .card-header.track-order-header{
   padding: 12px 23px;
-  background-color: #e8e8e8 !important;
-  color: #000 !important;
+  background-color: #64656A !important;
+  color: #fff !important;
   font-size: 16px !important;
   font-weight: 900 !important;
   font-family: 'Avenir-Next' !important;
@@ -15724,7 +15760,7 @@ button.close:focus {
 
 .trackorder .btn-block{
   background-color: #d9d9d9 !important;
-  width: 90%;
+  width: 100%;
   height: 34px;
   margin: 0 auto;
   border: none;
@@ -15843,7 +15879,7 @@ button.close:focus {
 
 .myAccount .card-header{
   background-color: #64656A;
-  font-family: "Avenir-Next";
+  font-family: "Avenir-Next" !important;
   font-weight: 700;
   font-size: 16px;
   color: #fff;
@@ -15962,6 +15998,7 @@ button.close:focus {
 
 .profile-back-to-account-link{
   color:#2D64FC !important;
+  text-decoration: underline;
 }
 
 .container.account-sections .adrressBtns{
@@ -16076,7 +16113,7 @@ button.close:focus {
 }
 
 .myAccount .card-body{
-  margin-top: 23px;
+  padding-top: 23px;
 }
 
 .card-footer-border{
@@ -16100,6 +16137,7 @@ button.close:focus {
 
 .remove-address{
   background-color: #fff !important;
+  right: 10px !important;
 }
 
 .container.account-sections .addressBottom .adrressBtns{
@@ -16125,10 +16163,58 @@ button.close:focus {
 }
 
 .backPay{
-  margin-bottom: 29px;
+  margin-top: 25px;
+  margin-bottom:0;
 }
 
 .paypal-account-button{
   margin: 10px auto 5px auto;
   padding: 0;
+}
+
+.payCheckbox .custom-control-input:checked ~ .custom-control-label:before {
+  border-radius: 0;
+  background: #ff0000 !important;
+  height: 20px;
+  width: 20px;
+  border: none;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label:after{
+  background-image: url(../images/check.png);
+  background-repeat: no-repeat;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+.remove-payment{
+  background-color: #fff;
+}
+
+#homepage .wishlistTile{
+  display: none;
+}
+
+.wishlist-account-card .card .card-body{
+  margin-top: 0;
+}
+
+.account-wishlist-item .remove-from-wishlist{
+  top: 1rem !important;
+}
+
+.account-wishlist-item.card{
+  border-bottom: 1px solid #000 !important;
+  border-radius: 0 !important;
+  border: none;
+}
+
+.remove-from-wishlist{
+  height: 20px !important;
+  width: 20px !important;
+  border: none !important;
+}
+
+.container.account-sections .row.wishlistRow{
+  padding: 33px 0 !important;
 }

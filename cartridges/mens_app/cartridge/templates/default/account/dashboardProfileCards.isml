@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center dashboardAccount">
     <div class="col-sm-6 profileCol">
         <!---Profile--->
         <isinclude template="account/profileCard" />
@@ -10,6 +10,7 @@
 
         <!---Address Book--->
         <isinclude template="account/addressBookCard" />
+       
     </div>
     <div class="col-sm-6 orderCol">
         <!---Order History--->
@@ -30,5 +31,8 @@
                 <isinclude template="account/wishlist/listCards" />
             </div>
         </isif>
+        
+        <!---Log out--->
+        <isinclude template="account/logoutCard" />
     </div>
 </div>

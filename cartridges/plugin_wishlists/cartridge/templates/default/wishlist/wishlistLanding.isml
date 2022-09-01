@@ -9,7 +9,7 @@
     <div class="title-container-account">
         <h1 class="page-title">${Resource.msg('wishlist.hero.image.header', 'wishlist', null)}</h1>
     </div>
-    <div class="container ${pdict.loggedIn ? '' : 'login-page'}">
+    <div class="container account-sections ${pdict.loggedIn ? '' : 'login-page'}">
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
         <isif condition="${pdict.loggedIn}">

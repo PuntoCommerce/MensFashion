@@ -14,7 +14,7 @@
     <div class="card-body card-info-group">
         <div class="row">
             <isif condition="${pdict.accountlanding}">
-                <div class="col-12">
+                <div class="col-12" style="font-weight: bold;">
                     ${Resource.msg('label.orderhistory.mostrecentorder','account',null)}
                 </div>
             </isif>
