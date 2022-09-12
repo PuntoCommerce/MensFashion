@@ -6,7 +6,8 @@
 
 <div class="card payment-form">
     <div class="card-header">
-        <h2 class="card-header-custom">${Resource.msg('heading.payment', 'checkout', null)}</h2>
+        <h2 class="card-header-custom-title">${Resource.msg('heading.payment', 'checkout', null)}</h2>
+        <p class="card-header-custom">${Resource.msg('heading.payment2', 'checkout', null)}</p>
     </div>
     <div class="card-body">
         <form autocomplete="on" method="POST" action="${URLUtils.url('CheckoutServices-SubmitPayment')}"

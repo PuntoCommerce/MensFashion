@@ -35,7 +35,7 @@
           "name": "Text",
           "description": "Text for the component",
           "type": "markup",
-          "required": true
+          "required": false
         }
       ]
     },

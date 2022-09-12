@@ -485,7 +485,9 @@ h5, html, body {
   .responsive {
     display: block !important; }
   header .main-menu {
-    margin-top: 0 !important; } }
+    margin-top: 0 !important; }
+  .checkout.logo img {
+    height: 1.5em !important; } }
 
 /* @media (max-width: 991px) {
     .tablet {
@@ -783,7 +785,8 @@ footer .socialMedia-paymentMethods {
   .socialMedia-paymentMethods-mobile {
     display: block; }
   .customTextBox-component-container p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 25px; }
   .items-colum-direction .customTextBox-component-container .item {
     padding: 0 5px 1rem 2px !important;
     margin: 10px; }
@@ -1222,6 +1225,9 @@ ul {
   max-width: 1200px;
   margin: 0 auto; }
 
+.container-custom-plp .breadcrumb {
+  margin-right: 26px; }
+
 .filters {
   margin: 0;
   background-color: transparent;
@@ -1237,7 +1243,7 @@ ul {
   padding: 12px; }
 
 .refinement-bar {
-  padding: 30px; }
+  padding: 60px; }
 
 .header-bar {
   background-color: transparent;
@@ -1363,10 +1369,6 @@ ul {
     max-width: 100%;
     flex: 1; }
 
-.summary__pricing .strike-through span {
-  color: #444444 !important;
-  opacity: 80%; }
-
 @media (max-width: 768.98px) {
   .summary__pricing .strike-through span {
     color: #444444 !important;
@@ -1375,6 +1377,15 @@ ul {
     padding: 0 !important; }
   .promo-carousel .value {
     font-size: 16px !important; } }
+
+@media only screen and (max-width: 395px) {
+  .promo-carousel .value {
+    font-size: 12px !important; }
+  .summary__pricing .strike-through span {
+    color: #444444 !important;
+    font-size: 10px !important; }
+  .product-tile .tile-body .price {
+    font-size: 12PX; } }
 
 .refinement-bar {
   display: none !important;
@@ -1940,7 +1951,8 @@ ul {
       border: 1px solid #000000; }
   .btn__small {
     font-size: 14px;
-    padding: 6px; }
+    padding: 6px;
+    font-weight: 900; }
   .btn__small-b {
     font-size: 14px;
     padding: 8px; }
@@ -2066,9 +2078,10 @@ ul {
   bottom: 300px; }
 
 .ITBC-content .btn-ITBC {
-  height: 71px;
-  font-family: "Avenir-Next" !important;
-  font-weight: 600; }
+  font-family: "AvenirLTStd-Heavy" !important;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 15px 5px; }
 
 .ITBC-markup img {
   object-fit: scale-down; }
@@ -2081,7 +2094,7 @@ ul {
   color: #ffffff !important; }
 
 .customTextBox-component-container a u {
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 14px; }
 
 .experience-commerce_layouts-navTabs {
@@ -2145,7 +2158,6 @@ ul {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
-    height: 51px;
     min-width: 190px;
     font-size: 20px;
     padding: 10px 0px; }
@@ -2165,11 +2177,13 @@ ul {
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
-    margin: 5px 0; }
+    margin: 5px 0;
+    line-height: 65px !important; }
   .mobile-navTabs {
     margin: 20px 0; }
   .customTextBox-component-container .item {
-    padding-top: 28px !important; }
+    padding-top: 28px !important;
+    padding-bottom: 20px !important; }
   .customTextBox-component-container strong {
     font-family: "AvenirLTStd-Heavy" !important; }
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
@@ -2225,7 +2239,8 @@ ul {
     height: 40px; }
   .strike-price,
   .sales-price {
-    height: 22px; } }
+    height: 22px;
+    margin-bottom: 12px; } }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
@@ -2602,9 +2617,10 @@ ul {
   bottom: 300px; }
 
 .ITBC-content .btn-ITBC {
-  height: 71px;
-  font-family: "Avenir-Next" !important;
-  font-weight: 600; }
+  font-family: "AvenirLTStd-Heavy" !important;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 15px 5px; }
 
 .ITBC-markup img {
   object-fit: scale-down; }
@@ -2617,7 +2633,7 @@ ul {
   color: #ffffff !important; }
 
 .customTextBox-component-container a u {
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 14px; }
 
 .experience-commerce_layouts-navTabs {
@@ -2681,7 +2697,6 @@ ul {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
-    height: 51px;
     min-width: 190px;
     font-size: 20px;
     padding: 10px 0px; }
@@ -2701,11 +2716,13 @@ ul {
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
-    margin: 5px 0; }
+    margin: 5px 0;
+    line-height: 65px !important; }
   .mobile-navTabs {
     margin: 20px 0; }
   .customTextBox-component-container .item {
-    padding-top: 28px !important; }
+    padding-top: 28px !important;
+    padding-bottom: 20px !important; }
   .customTextBox-component-container strong {
     font-family: "AvenirLTStd-Heavy" !important; }
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
@@ -2761,7 +2778,8 @@ ul {
     height: 40px; }
   .strike-price,
   .sales-price {
-    height: 22px; } }
+    height: 22px;
+    margin-bottom: 12px; } }
 
 .checkout {
   font-family: "Avenir-LT-Std";
@@ -2801,9 +2819,7 @@ ul {
       .checkout__cart {
         background: linear-gradient(to left, #c2c3c6 0%, #c2c3c6 50%, #f5f5f5 50%, #f5f5f5 100%); } }
     .checkout__cart--image {
-      width: 158px;
       max-width: 100%;
-      max-height: 100%;
       object-fit: contain; }
   .checkout__cartTitle {
     font-size: 36px;
@@ -2837,7 +2853,7 @@ ul {
       font-size: 32px; }
   .checkout__item {
     background-color: #ffffff !important;
-    padding: 20px;
+    padding: 50px 25px;
     border: 1px solid #000000;
     height: fit-content; }
   .checkout__totals {
@@ -2850,7 +2866,8 @@ ul {
     align-items: center;
     position: relative;
     background-color: #d8d8d8;
-    padding: 20px 0 35px 0; }
+    padding: 20px 0 35px 0;
+    margin-bottom: 0; }
     .checkout__stepper--item {
       display: flex;
       justify-content: center;

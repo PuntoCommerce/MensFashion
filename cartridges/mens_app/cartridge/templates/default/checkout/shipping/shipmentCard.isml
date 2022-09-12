@@ -33,7 +33,7 @@
                         <div class="shipping-card-header mb-2">
                             ${Resource.msg('check.shipping.method.card.header', 'checkout', null)}
                         </div>
-                        <div>
+                        <div class="shipping-description">
                             ${Resource.msg('check.shipping.method.card', 'checkout', null)}
                         </div>
                     </button>
@@ -52,7 +52,7 @@
                         <div class="shipping-card-header mb-2">
                             ${Resource.msg('check.pickup.method.card.header', 'checkout', null)}
                         </div>
-                        <div>
+                        <div class="shipping-description">
                             ${Resource.msg('check.pickup.method.card', 'checkout', null)}
                         </div>
                     </button>

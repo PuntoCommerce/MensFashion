@@ -75,7 +75,7 @@ module.exports.render = function (context, modelIn) {
     content.backgroundImageMobile
   );
   model.imageBrightness = content.imageBrightness ? content.imageBrightness : "100%";
-  model.text = content.text;
+  model.text = content.text ? context.text : "";
   model.layoutSize = {
     componentSize: getComponentSize(content.componentSize),
     itemsLayout: getItemsLayout(content.itemsLayout),

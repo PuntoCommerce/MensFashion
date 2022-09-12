@@ -76,10 +76,11 @@
   bottom: 300px;
 }
 
-.ITBC-content .btn-ITBC{
-  height: 71px;  
-  font-family: nth($text-font-stack,$avenir-Next)!important ; 
+.ITBC-content .btn-ITBC{ 
+  font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
   font-weight: 600;
+  white-space: nowrap;
+  padding: 15px 5px;
 }
 
 .ITBC-markup img{
@@ -96,7 +97,7 @@
 }
 
 .customTextBox-component-container a u{
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 14px;
 }
 
@@ -182,7 +183,6 @@
   }
 
   .ITBC-content .btn-ITBC{
-    height: 51px;
     min-width: 190px;
     font-size: 20px;
     padding: 10px 0px;
@@ -216,6 +216,7 @@
 
   .customTextBox-component-container h1{
     margin: 5px 0;
+    line-height: 65px !important;
   }
   
   .mobile-navTabs{
@@ -224,6 +225,7 @@
 
   .customTextBox-component-container .item{
     padding-top: 28px !important;
+    padding-bottom: 20px !important;
   }
 
   .customTextBox-component-container strong{

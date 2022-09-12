@@ -1746,6 +1746,21 @@ pre code {
     height: 40px;
 }
 }
+
+@media (max-width: 426px) {
+  .checkout_top{
+    display: block !important;
+  }
+
+  .checkout_top_text{
+    text-align: center;
+  }
+
+  .checkout__text--h3{
+    font-size: 20px !important;
+  }
+}  
+
 @media (max-width: 768.98px) {
   .table-responsive-md {
     display: block;
@@ -1902,6 +1917,47 @@ pre code {
   }
   .dashboardAccount .card-footer{
     padding-top: 27px;
+  }
+  .experience-commerce_layouts-promoContainer .sales-price{
+    margin-top: 8px;
+  }
+  .cart-page .product-info{
+    margin-bottom: 22px;
+  }
+
+  .checkout__cart .product-card-footer{
+    margin-top: 32px;
+  }
+
+  .checkout__cart .product-card-footer .line-item-total-price{
+    padding: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .checkout__cart .item-attributes p,   .checkout__cart .item-attributes a, .line-item-price-info, .quantity-label, .quantity, .checkout__totals {
+    font-weight: 900;
+  }
+
+  .need-help-phonenumber .checkout-tel{
+    color: #0F41F3 !important;
+  }
+
+  .need-help-cont{
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+  }
+  .exampleText{
+    font-size: 14px;
+  }
+  .footerCheckCopy p{
+    margin-bottom: 0 ;
+  }
+  .footerCheckImg {
+    margin: 0 35px 15px 35px !important;
+  }
+  .checkout-mail-text{
+    font-size: 14px !important;
   }
 }
 @media (max-width: 991.98px) {
@@ -3556,8 +3612,8 @@ input[type="submit"].btn-block {
 }
 .custom-control-input:checked ~ .custom-control-label:before {
   color: #fff;
-  border-color: #00a1e0;
-  background-color: #00a1e0;
+  border-color: #000;
+  border-radius: 50%;
 }
 .custom-control-input:focus ~ .custom-control-label:before {
   box-shadow: 0 0 0 0.2rem rgba(0, 161, 224, 0.25);
@@ -14093,7 +14149,6 @@ h6 {
 }
 .price .strike-through {
   text-decoration: line-through;
-  color: #999;
   margin-right: 0.938rem;
 }
 .price .range,
@@ -14589,11 +14644,16 @@ div.availability {
     color: #333;
   }
 }
-.container .breadcrumb {
+.container.product-detail .breadcrumb {
   border-radius: 0;
   border-bottom: 1px solid #ccc;
-  margin: 35px 0;
+  margin: 35px 0 12px 0;
 }
+
+.container.product-detail .product-breadcrumb{
+  padding:0;
+} 
+
 .veil {
   z-index: 100;
   text-align: center;
@@ -16217,4 +16277,201 @@ button.close:focus {
 
 .container.account-sections .row.wishlistRow{
   padding: 33px 0 !important;
+}
+
+.promo-carousel .value{
+  font-family: 'Avenir-Next' !important;
+}
+
+.experience-commerce_layouts-promoContainer .price .strike-through{
+  color: #c4c4c4 !important;
+  font-size: 20px !important;
+}
+
+.hero.slant-down .header.page-title{
+  text-transform: uppercase;
+}
+
+.grid-header .page-title-mobile{
+  text-transform: uppercase;
+}
+
+.storelocator .modal-header{
+  border-bottom: none !important;
+}
+
+.storelocator .modal-footer{
+  border-top: none !important;
+}
+
+.storelocator .modal-body{
+  padding: 0 0 10px 0;
+}
+
+.storelocator .modal-body .sub-item{
+  padding-left: 30px;
+}
+
+#storeDetailModal #details-image{
+  padding-bottom: 9px;
+}
+
+#search-storelocator .title-container{
+  background-color: transparent;
+}
+
+#search-storelocator .title-container{
+  padding: 0 !important;
+  justify-content: flex-start;
+}
+
+.storelocator #listing .item .name{
+  font-weight: 900;
+}
+
+#storeDetailModal #details-name{
+  font-weight: 900;
+}
+
+#storeDetailModal button{
+  font-size: 18px !important;
+  font-family: "Avenir-Bold" !important;
+  font-weight: 900;
+}
+
+#details-hours span{
+  top: 0 !important;
+}
+
+#storeDetailModal #route{
+  background-color: transparent !important;
+  color: #000 !important;
+}
+
+#storeDetailModal button{
+  font-size: 14px !important;
+  font-family: 'Avenir-LT-Std' !important;
+  font-weight: 900;
+}
+
+.product-detail .prices{
+  margin-top: 20px;
+}
+
+.product-detail  .product-id{
+  margin-right: 20px;
+}
+
+.collapsible-xl.active .card-body, .collapsible-xl.active .content{
+  padding: 0 !important;
+}
+
+.product-detail .description-and-detail .product-attributes ul{
+  padding: 0;
+}
+
+.btn_checkout{
+  background-color: #d9d9d9 !important;
+  color: #000000 !important;
+}
+
+.btn_checkout:hover{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.checkout .btn{
+  font-family: 'AvenirLTStd-Heavy';
+}
+
+.checkout #password-reset {
+  color: #0280C8;
+  font-size: 14px;
+  text-align: left !important;
+}
+
+.checkout .clearfix{
+  width: 100%;
+}
+
+.checkout .custom-checkbox .custom-control-label:before{
+  border: 1px solid #000000;
+  background: #ffffff !important;
+  border-radius: 50%;
+}
+
+.checkout .custom-checkbox .custom-control-input:checked ~ .custom-control-label:after{
+  background: #000000 !important;
+}
+
+.checkout_top{
+  display: none;
+}
+
+.checkout__cart .prices-container .sales-price .sales .value, 
+.checkout__item .line-item-total-price .price .pricing {
+  font-size: 14px;
+}
+
+.checkout__cart .price .prices-container .strike-price{
+  height: 0 !important;
+}
+
+.cart_bottom{
+  margin-top: 55px;
+  margin-bottom: 110px;
+}
+
+.qty-card-quantity-count, .line-item-total-price-amount, .value{
+  font-weight: 400;
+}
+
+.need-help-description p{
+  margin: 0;
+}
+
+.need-help-email a{
+  text-decoration: underline;
+}
+
+.card.checkout__order .card-header-custom{
+  font-size: 20px;
+  font-family: "Avenir-Next";
+  font-weight: 400 !important;
+}
+
+.footerCheckText p, .footerCheckCopy p{
+  text-align: center;
+  color: #ffffff;
+}
+
+.footerCheckImg{
+  justify-content: space-evenly;
+  display: flex;
+  margin: 0 650px 15px 650px;
+}
+
+.checkout-mail-cont{
+  margin-top: 15px;
+}
+
+.card-header-custom-title{
+  font-size: 32px;
+  text-align: start;
+  font-family: 'Avenir-Bold';
+}
+
+.card-header-custom{
+  font-size: 32px;
+  text-align: start;
+  font-family: 'Avenir-Bold';
+}
+
+.submit-payment,  .add-payment{
+  font-family: 'AvenirLTStd-Heavy' !important;
+}
+
+.payment-options li{
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
 }
