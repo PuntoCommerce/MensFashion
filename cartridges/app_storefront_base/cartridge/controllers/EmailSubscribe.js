@@ -36,7 +36,7 @@ server.post('Subscribe', function (req, res, next) {
         isValidEmailid = validateEmail(email);
 
         if (isValidEmailid) {
-            hooksHelper('app.mailingList.subscribe', 'subscribe', [email], function () {});
+            hooksHelper('app.mailingList.subscribe', 'subscribe', [email], function () { });
             res.json({
                 success: true,
                 msg: Resource.msg('subscribe.email.success', 'homePage', null)
