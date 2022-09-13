@@ -615,3 +615,18 @@ label.availability {
     padding-right: 5px;
   }
 }
+#guiaDeTallas .modal-content {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+#guiaDeTallas .modal-content .carousel.slide {
+  height: 70vh;
+}
+#guiaDeTallas .modal-content .carousel-inner {
+  padding: 3rem;
+  max-height: 100%;
+}
+#guiaDeTallas .modal-content .carousel-item {
+  max-height: 100%;
+}
