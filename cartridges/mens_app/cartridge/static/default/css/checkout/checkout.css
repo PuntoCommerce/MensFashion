@@ -853,6 +853,3 @@ span.ship-to-phone {
 .form-check.start-lines:has(input:checked) + .shipping-method-pricing {
   display: block;
 }
-.pickup-in-store button.select-store {
-  display: none;
-}
