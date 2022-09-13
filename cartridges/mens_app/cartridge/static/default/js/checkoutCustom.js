@@ -213,3 +213,25 @@ step2Btn.addEventListener("click", (e) => {
     updateProgressBar();
   }, 1000);
 });
+
+// Instore pickup selector trigger
+window.addEventListener("load", function () {
+  const pickupSelectorBtn = document.querySelectorAll('.pickup-in-store button.select-store');
+  const changeStoreBtn = document.querySelectorAll('.pickup-in-store button.change-store');
+  const storeOptions = document.querySelectorAll(".store-locator-container .results.striped .card-body");
+  function listenerPickStore() {
+    storeOptions.forEach((item) => {
+      item.addEventListener("click", function () {
+        setTimeout(function () {
+          pickupSelectorBtn[0].click();
+        }, 1000);
+      });
+    });
+  }
+  listenerPickStore();
+  changeStoreBtn.forEach((item) => {
+    item.addEventListener("click", function () {
+      listenerPickStore();
+    });
+  });
+});
