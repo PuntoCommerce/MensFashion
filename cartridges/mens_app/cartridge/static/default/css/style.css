@@ -564,7 +564,7 @@ header .main-menu {
   height: 2em; }
 
 .checkout.header {
-  padding: 2em; }
+  padding: 2em 4em; }
   @media only screen and (max-width: 37.5em) {
     .checkout.header {
       justify-content: center !important; } }
@@ -2136,10 +2136,10 @@ ul {
   top: -50px !important; }
 
 .promo-carousel__wrapper-countdown {
-  padding-right: 200px; }
+  padding-right: 155px; }
 
 .promo-carousel__title {
-  padding: 0 0 10px 85px;
+  padding: 0 0 10px 70px;
   margin-bottom: 31px; }
 
 .newsletter .container .markup h4 img {
@@ -2675,10 +2675,10 @@ ul {
   top: -50px !important; }
 
 .promo-carousel__wrapper-countdown {
-  padding-right: 200px; }
+  padding-right: 155px; }
 
 .promo-carousel__title {
-  padding: 0 0 10px 85px;
+  padding: 0 0 10px 70px;
   margin-bottom: 31px; }
 
 .newsletter .container .markup h4 img {
@@ -2889,7 +2889,7 @@ ul {
         font-size: 16px;
         color: #000000; }
     .checkout__stepper--divider {
-      width: 10%;
+      width: 7%;
       height: 2px;
       margin: 0 10px 0 10px;
       background-color: #64656a; }

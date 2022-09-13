@@ -24,9 +24,6 @@
     <form role="form">
       <div class="row">
         <div class="input-group">
-          <div class="suscribe-label d-flex justify-content-start">
-            <span>${Resource.msg('description.form.emailsignup', 'homePage', null)}</span>
-          </div>
           <div class="d-flex justify-content-start align-items-center input-button">
             <input type="text" class="form-control newsletter" name="hpEmailSignUpCustom"
               placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}"
