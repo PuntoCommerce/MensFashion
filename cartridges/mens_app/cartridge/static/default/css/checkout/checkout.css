@@ -831,7 +831,7 @@ span.ship-to-phone {
   margin: 15px;
   padding: 15px;
 }
-.shipping-description{
+.shipping-description {
   font-family: "Avenir-Next";
   font-size: 16px;
 }
@@ -840,4 +840,19 @@ span.ship-to-phone {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+.form-check.start-lines:has(input) {
+  display: none;
+}
+.form-check.start-lines:has(input) + .shipping-method-pricing {
+  display: none;
+}
+.form-check.start-lines:has(input:checked) {
+  display: block;
+}
+.form-check.start-lines:has(input:checked) + .shipping-method-pricing {
+  display: block;
+}
+.pickup-in-store button.select-store {
+  display: none;
 }
