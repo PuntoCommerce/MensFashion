@@ -84,6 +84,10 @@
             aria-describedby="securityCodeInvalidMessage" >
             <div class="invalid-feedback" id="securityCodeInvalidMessage"></div>
         </div>
+        <div class="cart_bottom">
+            <p class="cart_bottom_text"><img class="mr-3 cart_bottom_img" src="${URLUtils.staticURL('/images/click.svg')}" alt="lock"/>Click and collect</p>
+            <p class="cart_bottom_text"><img class="mr-3 cart_bottom_img" src="${URLUtils.staticURL('/images/envio.svg')}" alt="lock"/>Envío gratutio a partir de $600</p>
+        </div>
     </div>
 </div>
 
