@@ -25,7 +25,7 @@
       <div class="row">
         <div class="input-group">
           <div class="d-flex justify-content-start align-items-center input-button">
-            <input type="text" class="form-control newsletter" name="hpEmailSignUpCustom"
+            <input type="text" class="form-control newsletter-banner" name="hpEmailSignUpCustom"
               placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}"
               aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
             <span class="input-group-append">

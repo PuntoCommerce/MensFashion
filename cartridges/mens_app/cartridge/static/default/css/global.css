@@ -1959,6 +1959,9 @@ pre code {
   .checkout-mail-text{
     font-size: 14px !important;
   }
+  #checkout-main{
+    margin-top:0 !important;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -16474,4 +16477,8 @@ button.close:focus {
 .payment-options li{
   padding: 20px 0;
   border-bottom: 1px solid #000;
+}
+
+#checkout-main{
+  margin-top: 90px;
 }

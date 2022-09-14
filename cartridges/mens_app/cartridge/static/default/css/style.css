@@ -2097,6 +2097,9 @@ ul {
   text-decoration: underline;
   font-size: 14px; }
 
+.customTextBox-component-container a u:hover {
+  color: red; }
+
 .experience-commerce_layouts-navTabs {
   box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
@@ -2635,6 +2638,9 @@ ul {
 .customTextBox-component-container a u {
   text-decoration: underline;
   font-size: 14px; }
+
+.customTextBox-component-container a u:hover {
+  color: red; }
 
 .experience-commerce_layouts-navTabs {
   box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);

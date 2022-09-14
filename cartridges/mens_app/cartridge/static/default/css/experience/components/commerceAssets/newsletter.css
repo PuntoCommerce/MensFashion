@@ -2,6 +2,18 @@
   padding: 20px;
 }
 
+.form-control.newsletter-banner{
+  height: 79px;
+  border: 1px solid #000;
+  border-radius: 0;
+}
+
+.subscribe-email-custom{
+  height: 79px;
+  background: #EE5938;
+  padding: 0 35px;
+}
+
 .newsletter .container {
   padding: 20px;
   height: 500px;
