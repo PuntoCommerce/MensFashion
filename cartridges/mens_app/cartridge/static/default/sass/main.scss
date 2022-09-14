@@ -1,34 +1,51 @@
 @charset "UTF-8";
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/mixins";
+@import "abstracts/variables", 
+"abstracts/mixins";
 
 // 2. Vendors
 @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/animations", "base/base", "base/fonts", "base/typography",
-  "base/helpers";
+@import "base/animations", 
+"base/base", 
+"base/fonts", 
+"base/typography",
+ "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer", "layout/navigation";
+@import "layout/header", 
+"layout/footer", 
+"layout/navigation";
 
 // 5. Components
-@import "components/plp/breadcrumb", "components/plp/containerCustomPlp",
-  "components/plp/filters", "components/plp/grid-Header",
-  "components/plp/grid-products", "components/plp/refinement-bar",
-  "components/plp/sort", "components/plp/hightLight", "components/plp/quickView",
-  "components/pdp/breadcrumb";
+@import "components/plp/breadcrumb", 
+"components/plp/containerCustomPlp",
+ "components/plp/filters", 
+ "components/plp/grid-Header",
+ "components/plp/grid-products", 
+ "components/plp/refinement-bar",
+ "components/plp/sort", 
+ "components/plp/hightLight", 
+ "components/plp/quickView",
+ "components/pdp/breadcrumb";
 
 // @import
 //   'components/commerce_assets';
 
 @import "components/commerce_layouts/carousel-fix",
-  "components/commerce_layouts/promo-carousel",
-  "components/commerce_layouts/promo-banner";
+ "components/commerce_layouts/promo-carousel",
+ "components/commerce_layouts/promo-banner";
 
-@import "components/button", "components/summary";
+@import "components/button", 
+"components/summary";
 
 // 6. Page-specific styles
-@import "pages/home", "pages/plp", "pages/pdp";
-@import "pages/home", "pages/plp", "pages/checkout";
+@import "pages/home", 
+"pages/plp", 
+"pages/pdp";
+@import "pages/home", 
+"pages/plp", 
+"pages/checkout",
+"pages/myaccount";

@@ -61,7 +61,7 @@
         <div class="row accountBtns">
             <div class="col-12 col-md-6">
                 <div class="col">
-                    <a href="${URLUtils.url('Address-AddAddress')}" class="btn btn-save btn-block btn-primary" aria-label="${Resource.msg('label.addressbook.addnewaddress','account',null)}">${Resource.msg('button.addnew','account',null)}</a>
+                    <a href="${URLUtils.url('Address-AddAddress')}" class="btn btn-save btn-block" aria-label="${Resource.msg('label.addressbook.addnewaddress','account',null)}">${Resource.msg('button.addnew','account',null)}</a>
                 </div>
             </div>   
             <div class="col-12 col-md-6 backBtn backPay">
