@@ -216,22 +216,22 @@ step2Btn.addEventListener("click", (e) => {
 
 // Instore pickup selector trigger
 window.addEventListener("load", function () {
-  const pickupSelectorBtn = document.querySelectorAll('.pickup-in-store button.select-store');
-  const changeStoreBtn = document.querySelectorAll('.pickup-in-store button.change-store');
-  const storeOptions = document.querySelectorAll(".store-locator-container .results.striped .card-body");
+  let changeStoreBtn = document.querySelector("#dwfrm_shipping > div.shipping-address > button")
   function listenerPickStore() {
-    storeOptions.forEach((item) => {
-      item.addEventListener("click", function () {
-        setTimeout(function () {
-          pickupSelectorBtn[0].click();
-        }, 1000);
+    setTimeout(() => {
+      let pickupSelectorBtn = document.querySelector('.pickup-in-store button.select-store');
+      let storeOptions = document.querySelectorAll(".store-locator-container .results.striped .card-body");
+      storeOptions.forEach((item) => {
+        item.addEventListener("click", function () {
+          setTimeout(function () {
+            pickupSelectorBtn.click();
+          }, 1000);
+        });
       });
-    });
+    }, 1000);
   }
   listenerPickStore();
-  changeStoreBtn.forEach((item) => {
-    item.addEventListener("click", function () {
-      listenerPickStore();
-    });
+  changeStoreBtn.addEventListener("click", function () {
+    listenerPickStore();
   });
 });
