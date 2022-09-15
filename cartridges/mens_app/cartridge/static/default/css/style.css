@@ -1301,7 +1301,8 @@ ul {
     display: flex;
     align-items: center;
     flex: 1;
-    padding-left: 30px; }
+    padding-left: 30px;
+    justify-content: flex-end; }
     @media only screen and (min-width: 37.5em) {
       .grid-header.row .filters {
         flex: auto;
@@ -1358,6 +1359,9 @@ ul {
   font-weight: 800;
   font-size: 30px;
   line-height: 34px; }
+  @media (max-width: 490px) {
+    .grid-header .page-title-mobile {
+      font-size: 19px; } }
 
 .search-nav {
   margin: 0; }
@@ -1416,7 +1420,9 @@ ul {
 
 .r-price {
   hidde-height: 1px;
-  hidde-overflow-y: hidden; }
+  hidde-overflow-y: hidden;
+  /* Superposition ranges */
+  /**/ }
   .r-price body {
     display: flex;
     height: 100vh; }
@@ -1431,15 +1437,40 @@ ul {
   .r-price .range-slider input[type="range"] {
     position: absolute;
     left: 0;
-    bottom: 0; }
+    bottom: 0;
+    background: none; }
   .r-price input[type="range"] {
     -webkit-appearance: none;
     width: 100%; }
   .r-price input[type="range"]:focus {
     outline: none; }
+  .r-price .rangeslider::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #003D7C;
+    display: block;
+    position: relative;
+    top: 16px; }
+  .r-price input[type="range"]:nth-child(1) {
+    position: absolute;
+    overflow: visible !important;
+    height: 0; }
+  .r-price input[type="range"]:nth-child(2) {
+    position: absolute;
+    overflow: visible !important;
+    height: 0; }
+  .r-price input[type="range"]::-moz-range-thumb {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 1px solid #003d7c;
+    border-radius: 25px;
+    z-index: 1; }
   .r-price input[type="range"]:focus::-ms-fill-lower {
     background: #000; }
-  .r-price x input[type="range"]:focus::-ms-fill-upper {
+  .r-price input[type="range"]:focus::-ms-fill-upper {
     background: #000; }
   .r-price input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
@@ -1479,7 +1510,7 @@ ul {
     height: 18px;
     width: 18px;
     border-radius: 25px;
-    background: #fff;
+    background: red;
     cursor: pointer; }
   .r-price input[type="range"]::-ms-track {
     width: 100%;
@@ -1957,6 +1988,10 @@ ul {
     padding: 8px; }
   .btn:focus {
     box-shadow: none; }
+
+.btn-add-wishlist {
+  display: flex;
+  justify-content: center; }
 
 .summary__images .second {
   display: none; }
@@ -2900,6 +2935,9 @@ ul {
     position: absolute;
     bottom: 0; }
 
+.attributes-collapse-container {
+  margin-left: 15px; }
+
 .accountBtns {
   display: flex;
   font-size: 16px;
@@ -2988,28 +3026,6 @@ ul {
   border-top: 1px solid gray;
   margin: 26px 22px; }
 
-@media (max-width: 768px) {
-  .wishlist-container .container.account-sections .row {
-    padding: 5px 20px !important; }
-  .wl-social-sharing {
-    padding: 0; }
-  .order-top {
-    margin-top: 14px; }
-  .card-wishlist {
-    margin-top: 10px; }
-  .card-product-info__body--price-container .quantity-form-wishlist {
-    display: grid; }
-  .card-product-info__footer--btn-add-cart {
-    width: 100%;
-    margin-right: 0;
-    margin-top: 19px; }
-  .product-card-price {
-    margin-top: 17px;
-    display: flex;
-    justify-content: center; }
-  .line-dotted {
-    display: none; } }
-
 .card-myaccount {
   flex: 0 0 66.66667%;
   margin-top: 15px; }
@@ -3017,6 +3033,27 @@ ul {
     width: 70%;
     display: flex;
     margin: 0 auto 64px auto; }
+  @media (max-width: 768px) {
+    .card-myaccount .wishlist-container .container.account-sections .row {
+      padding: 5px 20px !important; }
+    .card-myaccount .wl-social-sharing {
+      padding: 0; }
+    .card-myaccount .order-top {
+      margin-top: 14px; }
+    .card-myaccount .card-wishlist {
+      margin-top: 10px; }
+    .card-myaccount .card-product-info__body--price-container .quantity-form-wishlist {
+      display: grid; }
+    .card-myaccount .card-product-info__footer--btn-add-cart {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 19px; }
+    .card-myaccount .product-card-price {
+      margin-top: 17px;
+      display: flex;
+      justify-content: center; }
+    .card-myaccount .line-dotted {
+      display: none; } }
   @media (max-width: 768px) {
     .card-myaccount {
       flex: 100%; }
