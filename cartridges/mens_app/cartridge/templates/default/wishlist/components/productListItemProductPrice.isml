@@ -1,4 +1,4 @@
-<div class="col-sm-6 product-card-price">
+<div class="col-sm-12 col-md-6 product-card-price">
     <div class="row card-product-info__body--price-container">
         <!---item unit price --->
         <div class="col-5">

@@ -33,6 +33,10 @@
  }
 }
 
+.card-wishlist {
+ margin-top: 53px;
+}
+
 .card-header.wishlist-owner {
  background: #64656a;
  color: #fff;
@@ -104,6 +108,7 @@
    font-size: 16px;
    text-transform: uppercase;
    margin-bottom: 34px;
+   margin-right: 8px;
   }
  }
 }
@@ -119,4 +124,50 @@
 .line-dotted {
  border-top: 1px solid gray;
  margin: 26px 22px;
+}
+
+@media (max-width: 768px) {
+ .wishlist-container .container.account-sections .row {
+  padding: 5px 20px !important;
+ }
+ 
+ .wl-social-sharing{
+  padding: 0;
+ }
+
+.order-top{
+  margin-top: 14px;
+}
+
+.card-wishlist{
+  margin-top: 10px;
+}
+ 
+ .card-product-info {
+  &__body {
+   &--price-container {
+    .quantity-form-wishlist {
+     display: grid;
+    }
+   }
+  }
+
+  &__footer {
+   &--btn-add-cart {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 19px;
+   }
+  }
+ }
+
+ .product-card-price{
+  margin-top: 17px;
+  display: flex;
+  justify-content: center;
+ }
+
+ .line-dotted {
+  display: none;
+ }
 }

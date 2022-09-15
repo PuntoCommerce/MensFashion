@@ -2923,6 +2923,9 @@ ul {
 .address--labels {
   font-family: "AvenirLTStd-Heavy"; }
 
+.card-wishlist {
+  margin-top: 53px; }
+
 .card-header.wishlist-owner {
   background: #64656a;
   color: #fff;
@@ -2972,7 +2975,8 @@ ul {
   font-family: "AvenirLTStd-Heavy";
   font-size: 16px;
   text-transform: uppercase;
-  margin-bottom: 34px; }
+  margin-bottom: 34px;
+  margin-right: 8px; }
 
 .card-header-body {
   margin: 24px 34px 11px 34px; }
@@ -2983,3 +2987,25 @@ ul {
 .line-dotted {
   border-top: 1px solid gray;
   margin: 26px 22px; }
+
+@media (max-width: 768px) {
+  .wishlist-container .container.account-sections .row {
+    padding: 5px 20px !important; }
+  .wl-social-sharing {
+    padding: 0; }
+  .order-top {
+    margin-top: 14px; }
+  .card-wishlist {
+    margin-top: 10px; }
+  .card-product-info__body--price-container .quantity-form-wishlist {
+    display: grid; }
+  .card-product-info__footer--btn-add-cart {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 19px; }
+  .product-card-price {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center; }
+  .line-dotted {
+    display: none; } }
