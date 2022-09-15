@@ -1962,6 +1962,12 @@ pre code {
   #checkout-main{
     margin-top:0 !important;
   }
+  .cart_bottom{
+    display: none;
+  }
+  .cart_cvc{
+    margin-right: 0 !important;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -15855,11 +15861,6 @@ button.close:focus {
   color: #ffffff !important;
 }
 
-.confirmation-top .checkout__stepper{
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
 .confirmation-banner{
   width: 100%;
 }
@@ -16481,4 +16482,34 @@ button.close:focus {
 
 #checkout-main{
   margin-top: 90px;
+}
+
+.cart_bottom_text{
+  font-family: 'Avenir-Next';
+  font-weight: 900;
+  font-size: 12px;
+}
+ 
+.cart_bottom_img{
+  width: 20px;
+}
+
+.cart-cvc{
+  font-size: 12px;
+  font-family: 'Avenir-Next';
+}
+
+.cart_cvc_cont{
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.cart_cvc{
+  margin-right: 47%;
+  margin-left: 10px;
+}
+
+.login-checkout{
+  padding: 0 40px;
 }
