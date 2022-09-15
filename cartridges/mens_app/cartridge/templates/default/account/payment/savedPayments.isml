@@ -2,7 +2,7 @@
 	<!-- Rows for Credit Cards -->
 	<isloop items="${pdict.paymentInstruments}" var="paymentInstrument">
 	    <div class="row justify-content-center" id="uuid-${paymentInstrument.UUID}">
-	        <div class="col-sm-8 col-md-12">
+	        <div class="col-md-12 card-myaccount">
 	            <div class="card">
 	                <div class="card-header">
 	                    <h2 class="pull-left">${paymentInstrument.creditCardHolder}</h2>
