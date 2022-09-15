@@ -532,7 +532,7 @@ header .navbar-header {
   .suggestions-wrapper {
     width: 100%; }
   .favItem span {
-    margin-left: 15px; }
+    margin-left: 20px; }
   #customMenuResponsive .minicart {
     display: flex;
     margin-bottom: 12px !important;
@@ -547,7 +547,7 @@ header .navbar-header {
   #customMenuResponsive .minicart-quantityCustom {
     margin-right: 6px; }
   #customMenuResponsive #actions-icons img {
-    margin-right: 18px !important; }
+    margin-right: 22px !important; }
   #customMenuResponsive .nav-link.parent {
     font-family: "AvenirLTStd-Heavy" !important;
     text-transform: uppercase; }
@@ -962,7 +962,7 @@ footer .socialMedia-paymentMethods {
   border: 1px solid #000000 !important;
   border-radius: 0 !important;
   width: 308px;
-  height: 23px !important; }
+  height: 30px !important; }
 
 .site-search .reset-button {
   top: auto;
@@ -1046,7 +1046,7 @@ footer .socialMedia-paymentMethods {
     line-height: 0px !important;
     height: auto; }
   .site-search .reset-button {
-    padding-bottom: 3px; }
+    padding-bottom: 7px; }
   .suggestions-responsive {
     display: block;
     border: none; }
@@ -1991,7 +1991,7 @@ ul {
   display: flex; }
   .summary__swatches .swatch-circle {
     height: 15px;
-    margin: 5px;
+    margin: 10px 5px;
     width: 15px; }
   .summary__swatches .color-swatches {
     min-height: 0 !important; }
@@ -2130,12 +2130,12 @@ ul {
   top: 47% !important; }
 
 .promo-carousel .carousel-control-prev {
-  left: -12px !important;
-  top: -50px !important; }
+  left: -20px !important;
+  top: -150px !important; }
 
 .promo-carousel .carousel-control-next {
-  right: -12px !important;
-  top: -50px !important; }
+  right: -20px !important;
+  top: -150px !important; }
 
 .promo-carousel__wrapper-countdown {
   padding-right: 155px; }
@@ -2656,12 +2656,12 @@ ul {
   top: 47% !important; }
 
 .promo-carousel .carousel-control-prev {
-  left: -12px !important;
-  top: -50px !important; }
+  left: -20px !important;
+  top: -150px !important; }
 
 .promo-carousel .carousel-control-next {
-  right: -12px !important;
-  top: -50px !important; }
+  right: -20px !important;
+  top: -150px !important; }
 
 .promo-carousel__wrapper-countdown {
   padding-right: 155px; }

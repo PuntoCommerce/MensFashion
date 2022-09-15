@@ -2357,7 +2357,19 @@ pre code {
   #checkout-main {
     margin-top: 0 !important;
   }
+  
+  #actions-icons .minicart-total{
+    width: 40px;
+  }
+  .carousel-control-prev {
+    left: 5% !important;
+  }
+  
+  .carousel-control-next {
+    right: 5% !important;
+  }
 }
+
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     display: block;
@@ -19500,11 +19512,6 @@ button.close:focus {
   color: #ffffff !important;
 }
 
-.confirmation-top .checkout__stepper{
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
 .confirmation-banner{
   width: 100%;
 }
@@ -20177,3 +20184,8 @@ button.close:focus {
 .login-checkout{
   padding: 0 40px;
 }
+
+.embeddedServiceHelpButton .helpButton .uiButton{
+  background-color: #000 !important;
+}
+
