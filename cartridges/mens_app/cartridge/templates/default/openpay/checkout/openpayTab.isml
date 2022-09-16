@@ -10,7 +10,7 @@
                 <span>${paymentOption.name}</span>
             </div>
         </div>
-        <img class="credit-card-option" src="${URLUtils.staticURL('/images/openpay-color.png')}" height="40"
+        <img class="credit-card-option" src="${URLUtils.staticURL('/images/openpay-color.png')}" height="20"
             alt="${paymentOption.name}" title="${paymentOption.name}" />
     </a>
 </li>

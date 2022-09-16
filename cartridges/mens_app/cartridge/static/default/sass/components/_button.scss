@@ -12,7 +12,6 @@
   font-size: $font-size-h5;
 
   font-weight: $font-weight-bolder;
-  color: $text-color-black !important;
   background-color: $white-color;
 
   &:hover {
@@ -42,6 +41,7 @@
   &__small {
     font-size: $font-size-minimal;
     padding: $spacing-x-small;
+    font-weight: 900;
   }
 
   &__small-b {

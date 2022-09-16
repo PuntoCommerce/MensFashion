@@ -13,6 +13,7 @@
 .customTextBox-component-container h4,
 .customTextBox-component-container strong {
   font-family: "AvenirLTStd-Heavy";
+  margin: 0;
 }
 
 .customTextBox-component-container s {

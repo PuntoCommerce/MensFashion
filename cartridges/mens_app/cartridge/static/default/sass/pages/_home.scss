@@ -76,10 +76,11 @@
   bottom: 300px;
 }
 
-.ITBC-content .btn-ITBC{
-  height: 71px;  
-  font-family: nth($text-font-stack,$avenir-Next)!important ; 
+.ITBC-content .btn-ITBC{ 
+  font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
   font-weight: 600;
+  white-space: nowrap;
+  padding: 15px 5px;
 }
 
 .ITBC-markup img{
@@ -96,8 +97,12 @@
 }
 
 .customTextBox-component-container a u{
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 14px;
+}
+
+.customTextBox-component-container a u:hov{
+  color: red;
 }
 
 .experience-commerce_layouts-navTabs{
@@ -139,23 +144,22 @@
 .promo-carousel{
 
   & .carousel-control-prev{
-    left: -12px !important;
-    top: -50px !important;
+    left: -20px !important;
+    top: -150px !important;
   }
 
-
   & .carousel-control-next {
-    right: -12px !important;
-    top: -50px !important;
+    right: -20px !important;
+    top: -150px !important;
   }
 }
 
 .promo-carousel__wrapper-countdown{
-  padding-right: 200px;
+  padding-right: 155px;
 }
 
 .promo-carousel__title{
-  padding: 0 0 10px 85px ;
+  padding: 0 0 10px 70px ;
   margin-bottom: 31px;
 }
 
@@ -182,7 +186,6 @@
   }
 
   .ITBC-content .btn-ITBC{
-    height: 51px;
     min-width: 190px;
     font-size: 20px;
     padding: 10px 0px;
@@ -216,6 +219,7 @@
 
   .customTextBox-component-container h1{
     margin: 5px 0;
+    line-height: 65px !important;
   }
   
   .mobile-navTabs{
@@ -224,6 +228,7 @@
 
   .customTextBox-component-container .item{
     padding-top: 28px !important;
+    padding-bottom: 20px !important;
   }
 
   .customTextBox-component-container strong{

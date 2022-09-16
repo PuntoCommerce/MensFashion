@@ -9,6 +9,7 @@
     <li class="nav-item" role="menuitem">
         <a href="${URLUtils.https('Account-Show')}" >
             <img src="${URLUtils.staticURL('/images/user_icon.svg')}" alt="store locator"/>
+ 
             <span class="user-message">${pdict.name}</span>
         </a>
         <iscomment> <ul class="dropdown-menu" role="menu" aria-hidden="true">

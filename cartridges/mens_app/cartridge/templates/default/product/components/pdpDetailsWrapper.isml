@@ -111,15 +111,15 @@
                     <isinclude template="product/components/buyNowProduct" />
                 </div>
 
-                <isset name="loopState" value="{count: 1}" scope="page" />
-                <isinclude template="product/components/descriptionAndDetails" />
-
                 <!-- Store Locator Link -->
                 <div class="row">
                     <div class="col-12 mt-4">
                         <isinclude template="product/components/storeLocatorLink" />
                     </div>
                 </div>
+
+                <isset name="loopState" value="{count: 1}" scope="page" />
+                <isinclude template="product/components/descriptionAndDetails" />
 
                 <!-- Applicable Promotions -->
                 <div class="row">

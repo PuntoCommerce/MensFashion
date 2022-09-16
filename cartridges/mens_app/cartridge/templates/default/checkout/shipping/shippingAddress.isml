@@ -61,6 +61,9 @@
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine1">
                 <isprint value="${addressFields.address1.error}">
             </div>
+            <div class="mt-2">
+                <span class="exampleText">${Resource.msg('example.address1', 'forms', null)}</span>
+            </div>
         </div>
     </div>
 </div>
@@ -83,13 +86,16 @@
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine2">
                 <isprint value="${addressFields.address2.error}">
             </div>
+            <div class="mt-2">
+                <span class="exampleText">${Resource.msg('example.address2', 'forms', null)}</span>
+            </div>
         </div>
     </div>
 </div>
 
 <!--- make drop down--->
 <div class="row  hidde-pickup">
-    <div class="col-sm-6 col-lg-5">
+    <div class="col-6 col-lg-5">
         <div class="form-group
             ${addressFields.states.stateCode.mandatory === true ? 'required' : ''}
             ${addressFields.states.stateCode.htmlName}">
@@ -110,7 +116,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-lg-5">
+    <div class="col-6 col-lg-5">
         <div class="form-group
             ${addressFields.postalCode.mandatory === true ? 'required' : ''}
             ${addressFields.postalCode.htmlName}">
@@ -131,7 +137,7 @@
 </div>
 
 <div class="row  hidde-pickup">
-    <div class="col-sm-6 col-lg-5">
+    <div class="col-sm-12 col-lg-10">
         <div class="form-group
             ${addressFields.city.mandatory === true ? 'required' : ''}
             ${addressFields.city.htmlName}">
@@ -190,9 +196,11 @@
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber">
                 <isprint value="${addressFields.phone.error}">
             </div>
-            <span>${Resource.msg('example.phone', 'forms', null)}</span>
+            <div class="mt-2">
+                <span class="exampleText">${Resource.msg('example.phone', 'forms', null)}</span>
+            </div>
             <div class="tel-description-container d-flex flex-column">
-                <span class="checkout-summary-title-1 mb-3 mt-5">${Resource.msg('check.shipping.tel.heading', 'checkout', null)}</span>
+                <span class="checkout-summary-title-1 mb-2 mt-4">${Resource.msg('check.shipping.tel.heading', 'checkout', null)}</span>
                 <span class="tel-description">${Resource.msg('check.shipping.tel.text', 'checkout', null)}</span>
             </div>
         </div>
@@ -210,6 +218,9 @@
                     value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
                     aria-describedby="guestEmailInvalidMessage" >
             <div class="invalid-feedback" id="guestEmailInvalidMessage"></div>
+            <div class="checkout-mail-cont">
+                <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
+            </div>
         </div>
     </div>
 </div>

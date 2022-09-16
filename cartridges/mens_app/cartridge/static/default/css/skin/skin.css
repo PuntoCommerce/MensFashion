@@ -50,7 +50,7 @@ header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
 .navbar .nav-item.dropdown,
 .navbar .nav-item.dropdown a,
 .navbar .nav-item a {
-  color: var(--skin-menu-color-1);
+  color: #000;
 }
 @media (min-width: 769px) {
   .dropdown-menu,

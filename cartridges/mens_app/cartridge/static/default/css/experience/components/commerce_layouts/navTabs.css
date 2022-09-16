@@ -28,6 +28,11 @@
   border: 1px solid #000;
   border-radius: 0px;
   color: #000;
+  font-weight: 900;
+}
+
+#mobile-select-navTabs option {
+  font-weight: 900;
 }
 
 @media (max-width: 991px) {

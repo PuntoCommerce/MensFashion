@@ -1,0 +1,13 @@
+<div class="card-header-body">
+    <div class="pull-left">
+        <!--- product name--->
+        <span class="card--title">${item.name}</span>
+    </div>
+    <div class="pull-right">
+        <!---hide medium, sm, xs--->
+        <button type="button" class=" remove-from-wishlist"
+            data-url="${URLUtils.url('Wishlist-RemoveProduct', 'pid', item.pid)}">
+            <img src="${URLUtils.staticURL('/images/trash-black.svg')}" alt="delete" />
+        </button>
+    </div>
+</div>

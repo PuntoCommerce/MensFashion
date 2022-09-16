@@ -1,0 +1,17 @@
+<footer class="footerCheck">
+    <div class="footerCheckText">
+        <p>Pagos seguros</p>
+    </div>
+    <div class="footerCheckImg">
+        <img src="${URLUtils.staticURL('/images/visa.svg')}" alt="lock"/>
+        <img src="${URLUtils.staticURL('/images/mastercard.svg')}" alt="lock"/>
+        <img src="${URLUtils.staticURL('/images/paypal.svg')}" alt="lock"/>
+        <img src="${URLUtils.staticURL('/images/mercadopago.svg')}" alt="lock"/>
+    </div>
+    <div class="footerCheckCopy">
+        <p>(C) 2022 Men´s Fashion / Todos los derechos reservados</p>
+    </div>
+    
+</footer>
+
+           

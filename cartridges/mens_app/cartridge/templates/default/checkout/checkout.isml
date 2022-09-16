@@ -19,6 +19,14 @@
         </h1>
     </iscomment>
 
+    <div class="checkout_top">
+        <div>
+            <p class="checkout_top_text"><img class="mr-3 checkout_top_img" src="${URLUtils.staticURL('/images/segura.svg')}" alt="lock"/>Compra segura</p>
+        </div>
+        <div>
+            <p class="ml-4">Resumen del pedido</p>
+        </div>
+    </div>
     <ul class="checkout__stepper">
         <li class="checkout__stepper--item">
             <h3 id="checkoutStep1" class="checkout__stepper--item-circle checkout__stepper--item-circle-current">1</h3>
@@ -145,7 +153,7 @@
                     <!-- Order Totals, Details and Summary -->
                     <!----------------------------------------------------------------------------------->
                     <div class="col-12 col-lg-5">
-                        <div class="card checkout__order d-none d-lg-block mt-lg-4">
+                        <div class="card checkout__order d-none d-lg-block mt-lg-4 mb-5">
                             <div class="card-header d-flex justify-content-center align-items-center">
                                 <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}
                                 </h2>
@@ -165,28 +173,35 @@
                                     <div class="checkout__order--divider"></div>
                                 </div>
                                 <isinclude template="checkout/orderTotalSummary" />
+                                <div class="checkout__order--divider"></div>
+                                              
+                                <isinclude template="cart/cartPromoCode" />
+                                <div class="coupons-and-promos">
+                                    <isinclude template="cart/cartCouponDisplay" />
+                                </div>
                             </div>
                         </div>
 
                         <isinclude template="checkout/orderProductSummary" />
 
-                        <div class="d-flex justify-content-center align-items-center flex-column">
-                            <div class="need-help justify-content-center align-items-center mb-3">
+                        <div class="need-help-cont d-flex justify-content-center align-items-center flex-column">
+                            <div class="need-help justify-content-center align-items-center mb-4">
                                 <span
-                                    class="checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help', 'checkout', null)}</span>
+                                    class="checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help2', 'checkout', null)}</span>
                             </div>
                             <div
-                                class="need-help-description text-center d-fex justify-content-center align-items-center mb-3">
-                                <span class="checkout__text ">${Resource.msg('label.need.help.description', 'checkout', null)}</span>
+                                class="need-help-description text-center d-fex justify-content-center align-items-center mb-4">
+                                <p class="checkout__text ">${Resource.msg('label.need.help.description', 'checkout', null)}</p>
+                                <p class="checkout__text ">${Resource.msg('label.need.help.description2', 'checkout', null)}</p>
                             </div>
                             <div
-                                class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-3">
+                                class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-4">
                                 <span
-                                    class="checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
+                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
                                 <span class="checkout__text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
                             </div>
-                            <div class="need-help-email d-flex justify-content-center align-items-center mb-3">
-                                <span class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</span>
+                            <div class="need-help-email d-flex justify-content-center align-items-center mb-4">
+                                <a href="mailto:${Resource.msg('label.need.help.email', 'checkout', null)}" class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</a>
                             </div>
                         </div>
 

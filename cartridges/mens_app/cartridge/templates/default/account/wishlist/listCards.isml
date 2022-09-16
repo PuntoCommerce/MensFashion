@@ -2,8 +2,8 @@
     <div class="card-header clearfix">
         <h2 class="pull-left">${Resource.msg('label.wishlist', 'account', null)}</h2>
         <isif condition="${pdict.account.wishlist && pdict.account.wishlist.length > 0}">
-            <a href="${URLUtils.url('Wishlist-Show')}" class="pull-right"><img class="mb-2" src="${URLUtils.staticURL('/images/myAccount/edit-icon.svg')}"
-                            alt="Envío a domicilio" /></a>
+            <a href="${URLUtils.url('Wishlist-Show')}" class="pull-right"><img class="mb-2" src="${URLUtils.staticURL('/images/myAccount/view-icon.svg')}"
+                            alt="Lista de Deseos" /></a>
         </isif>
     </div>
     <div class="card-body card-info-group">

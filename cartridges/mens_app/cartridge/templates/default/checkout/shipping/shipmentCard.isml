@@ -20,7 +20,12 @@
             <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
             <div class="row">
                 <div class="col-12 col-lg-6 mb-3">
-                    <button id="selectShipping" class="shipping-check-card h-100">
+                    <button id="selectShipping" class="shipping-check-card h-100 <isloop items="
+                    ${shippingModel.applicableShippingMethods}" var="shippingMethod">
+                    <isif condition="${shippingMethod.ID == "MEX001" && shippingMethod.selected}">
+                        active
+                    </isif>
+                    </isloop>">
                         <div class="check-decorator">
                             <div id="outer-circle">
                                 <div id="inner-circle">
@@ -33,13 +38,18 @@
                         <div class="shipping-card-header mb-2">
                             ${Resource.msg('check.shipping.method.card.header', 'checkout', null)}
                         </div>
-                        <div>
+                        <div class="shipping-description">
                             ${Resource.msg('check.shipping.method.card', 'checkout', null)}
                         </div>
                     </button>
                 </div>
                 <div class="col-12 col-lg-6 mb-3">
-                    <button id="selectPickup" class="shipping-check-card h-100">
+                    <button id="selectPickup" class="shipping-check-card h-100 <isloop items="
+                    ${shippingModel.applicableShippingMethods}" var="shippingMethod">
+                    <isif condition="${shippingMethod.ID == "pickup" && shippingMethod.selected}">
+                        active
+                    </isif>
+                    </isloop>">
                         <div class="check-decorator">
                             <div id="outer-circle">
                                 <div id="inner-circle">
@@ -52,7 +62,7 @@
                         <div class="shipping-card-header mb-2">
                             ${Resource.msg('check.pickup.method.card.header', 'checkout', null)}
                         </div>
-                        <div>
+                        <div class="shipping-description">
                             ${Resource.msg('check.pickup.method.card', 'checkout', null)}
                         </div>
                     </button>

@@ -1,4 +1,4 @@
-<div class="line-item-availability availability-${item.UUID}">
+<div class="line-item-availability card-product-info__body--attributes availability-${item.UUID}">
     <isloop items="${item.availability.messages}" var="message">
         <p class="line-item-attributes">${message}</p>
     </isloop>

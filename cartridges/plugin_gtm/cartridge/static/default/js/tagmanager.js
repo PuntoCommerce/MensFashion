@@ -270,6 +270,16 @@ if (prodTileGtmData) {
 // Buttons Click event
 let trackButtons = document.querySelectorAll('button');
 trackButtons.forEach(function (button) {
+    if (button.classList.contains('remove-product')) {
+        button.addEventListener('click', function (e) {
+            let buttonGtmData = {
+                'event': 'gtm.removeProduct',
+                'buttonText': e.target.innerText
+            };
+            window.dataLayer.push(buttonGtmData);
+        }
+        );
+    }
     button.addEventListener('click', function (e) {
         let buttonGtmData = {
             'event': 'gtm.click',

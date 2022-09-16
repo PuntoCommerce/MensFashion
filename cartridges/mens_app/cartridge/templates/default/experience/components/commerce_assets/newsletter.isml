@@ -1,20 +1,41 @@
 <isscript>
     let assets = require('*/cartridge/scripts/assets.js');
     assets.addCss("/css/experience/components/commerceAssets/newsletter.css");
+    assets.addJs("/js/experience/components/commerceAssets/customNewsletter.js");
 </isscript>
 
 <div class="newsletter row">
   <p class="text-top">${pdict.textTop}</p>
-  <div class="container col-12" style="background-image: url('${pdict.image.src.desktop}'); background-position: ${pdict.image.focalPointX} ${pdict.image.focalPointY} ">
+  <div class="container col-12"
+    style="background-image: url('${pdict.image.src.desktop}'); background-position: ${pdict.image.focalPointX} ${pdict.image.focalPointY} ">
     <div class="markup d-none d-xl-flex col-xl-8">
       <isprint value="${pdict.contentText}" encoding="off" />
     </div>
-    <div class="form col-xl-4">
-      <p class="text-top">${pdict.textTop}</p>
-      <div class="row">
-        <input type="text" class="col-7" name="hpEmailSignUp" placeholder="EMAIL: " aria-label="EMAIL: ">
-        <button type="submit" class="col-5" data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">${Resource.msg('button.form.emailsignup', 'homePage', null)} </button>
+    <iscomment>
+      <div class="form col-xl-4">
+        <p class="text-top">${pdict.textTop}</p>
+        <div class="row">
+          <input type="text" class="col-7" name="hpEmailSignUpCustom" placeholder="EMAIL: " aria-label="EMAIL: ">
+          <button type="submit" class="col-5 subscribe-email-custom"
+            data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">${Resource.msg('button.form.emailsignup', 'homePage', null)} </button>
+        </div>
       </div>
-    </div>
+    </iscomment>
+    <form role="form">
+      <div class="row">
+        <div class="input-group">
+          <div class="d-flex justify-content-start align-items-center input-button">
+            <input type="text" class="form-control newsletter-banner" name="hpEmailSignUpCustom"
+              placeholder="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}"
+              aria-label="${Resource.msg('placeholdertext.form.emailsignup', 'homePage', null)}">
+            <span class="input-group-append">
+              <button type="submit" class="subscribe-email-custom"
+                data-href="${URLUtils.url('EmailSubscribe-Subscribe')}">
+                ${Resource.msg('button.form.emailsignup', 'homePage', null)}</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

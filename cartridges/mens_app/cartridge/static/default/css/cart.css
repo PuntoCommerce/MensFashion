@@ -663,9 +663,6 @@ div.availability {
 .edit {
   margin-right: 0.625em;
 }
-.product-edit.product-move {
-  margin-bottom: 20%;
-}
 .product-edit {
   margin-top: auto;
 }
@@ -776,10 +773,11 @@ div.availability {
 .product-info .remove-btn-lg {
   border: none;
   border-radius: 0;
-  font-size: 1.625em;
+  font-size: 0.625em;
   padding-left: 0.3125rem;
   padding-right: 0.3125rem;
   z-index: 1;
+  padding: 0;
 }
 .bonus-product {
   display: block;

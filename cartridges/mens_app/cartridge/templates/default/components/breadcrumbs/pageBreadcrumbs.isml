@@ -1,4 +1,4 @@
-<div class="row hidden-xs-down order-top">
+<div class="row  order-top">
     <div class="col" role="navigation" aria-label="Breadcrumb">
         <ol class="breadcrumb">
             <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" status="loopState">

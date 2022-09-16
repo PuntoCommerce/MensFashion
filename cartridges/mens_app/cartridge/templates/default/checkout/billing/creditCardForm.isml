@@ -26,28 +26,6 @@
 <div class="row">
     <div class="col-6">
         <div class="form-group
-            <isif condition=${creditFields.expirationMonth.mandatory === true}>required</isif>
-            ${creditFields.expirationMonth.htmlName}">
-            <label class="form-control-label" for="expirationMonth">${Resource.msg('field.credit.card.expiration.month', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
-            <select class="form-control expirationMonth custom-select" id="expirationMonth" <isprint
-                value=${creditFields.expirationMonth.attributes} encoding="off" />
-            autocomplete="cc-exp-month"
-            aria-describedby="expirationMonthInvalidMessage">
-            <isloop items=${creditFields.expirationMonth.options} var="month">
-                <option id="${month.id}" value="${month.htmlValue}" <isif
-                    condition="${pdict.order.billing.payment.selectedPaymentInstruments && pdict.order.billing.payment.selectedPaymentInstruments
-                               .length > 0 && month.id == pdict.order.billing.payment.selectedPaymentInstruments[0].expirationMonth}">
-                    selected
-                    </isif> >
-                    ${month.label}
-                </option>
-            </isloop>
-            </select>
-            <div class="invalid-feedback" id="expirationMonthInvalidMessage"></div>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="form-group
             <isif condition=${creditFields.expirationYear.mandatory === true}>required</isif>
             ${creditFields.expirationYear.htmlName}">
             <label class="form-control-label" for="expirationYear">${Resource.msg('field.credit.card.expiration.year', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
@@ -70,10 +48,32 @@
             <div class="invalid-feedback" id="expirationYearInvalidMessage"></div>
         </div>
     </div>
+    <div class="col-6">
+        <div class="form-group
+            <isif condition=${creditFields.expirationMonth.mandatory === true}>required</isif>
+            ${creditFields.expirationMonth.htmlName}">
+            <label class="form-control-label" for="expirationMonth">${Resource.msg('field.credit.card.expiration.month', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
+            <select class="form-control expirationMonth custom-select" id="expirationMonth" <isprint
+                value=${creditFields.expirationMonth.attributes} encoding="off" />
+            autocomplete="cc-exp-month"
+            aria-describedby="expirationMonthInvalidMessage">
+            <isloop items=${creditFields.expirationMonth.options} var="month">
+                <option id="${month.id}" value="${month.htmlValue}" <isif
+                    condition="${pdict.order.billing.payment.selectedPaymentInstruments && pdict.order.billing.payment.selectedPaymentInstruments
+                               .length > 0 && month.id == pdict.order.billing.payment.selectedPaymentInstruments[0].expirationMonth}">
+                    selected
+                    </isif> >
+                    ${month.label}
+                </option>
+            </isloop>
+            </select>
+            <div class="invalid-feedback" id="expirationMonthInvalidMessage"></div>
+        </div>
+    </div>
 </div>
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-12">
         <div class="form-group
             <isif condition=${creditFields.securityCode.mandatory === true}>required</isif>
             ${creditFields.securityCode.htmlName}">
@@ -83,6 +83,20 @@
                 value=${creditFields.securityCode.attributes} encoding="off" />
             aria-describedby="securityCodeInvalidMessage" >
             <div class="invalid-feedback" id="securityCodeInvalidMessage"></div>
+        </div>
+        <div class="cart_cvc_cont">
+            <div class="row">
+                <div class="col-12">
+                    <p class="cart_cvc_title">¿Qué es un Número de Verificación de Tarjeta (CVV)?</p>
+                </div>
+                <div class="col-1">
+                    <img class="mr-2 cart_cvc_img" src="${URLUtils.staticURL('/images/credit-card-2.svg')}" alt="lock"/>
+                    <img class="mr-2 cart_cvc_img" src="${URLUtils.staticURL('/images/credit-card.svg')}" alt="lock"/>
+                </div>
+                <div class="col-11">
+                    <p class="cart_cvc">Para MasterCard y Visa, ingrese los últimos tres dígitos en la tira de firma. Para American Express, ingrese los cuatro dígitos en letra pequeña en el frente de la tarjeta.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

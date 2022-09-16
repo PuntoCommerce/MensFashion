@@ -4,22 +4,22 @@
             <span class="checkout__text--bold">
                 ${Resource.msg('label.input.login.email', 'login', null)}
             </span>
-            <span class="checkout__text--space">
+            <iscomment> <span class="checkout__text--space">
                 ${Resource.msg('label.input.login.required', 'login', null)}
-            </span>
+            </span> </iscomment>
         </label>
         <input type="email" id="login-form-email" required aria-required="true"
             class="checkout__form form-control required" aria-describedby="form-email-error" name="loginEmail">
         <div class="invalid-feedback" id="form-email-error"></div>
     </div>
 
-    <div class="form-group required">
+    <div class="form-group required passwordLabel">
         <span class="checkout__text--bold">
             ${Resource.msg('label.input.login.password', 'login', null)}
         </span>
-        <span class="checkout__text--space">
+        <iscomment> <span class="checkout__text--space">
             ${Resource.msg('label.input.login.required', 'login', null)}
-        </span>
+        </span> </iscomment>
         <input type="password" id="login-form-password" required aria-required="true"
             class="checkout__form form-control required" aria-describedby="form-password-error" name="loginPassword">
         <div class="invalid-feedback" id="form-password-error"></div>
@@ -28,8 +28,6 @@
 
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
-
-    <button type="submit" class="mb-4 btn btn--gray btn__small text-uppercase">${Resource.msg('button.text.loginform', 'login', null)}</button>
 
     <div class="clearfix">
         <div class="pull-left forgot-password text-right">
@@ -53,5 +51,7 @@
             </label>
         </div>
     </div>
+    
+    <button type="submit" class="mb-4 btn btn--gray btn__small text-uppercase">${Resource.msg('button.text.loginform', 'login', null)}</button>
 
 </form>

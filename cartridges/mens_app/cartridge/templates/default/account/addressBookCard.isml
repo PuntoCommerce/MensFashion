@@ -19,6 +19,7 @@
         </div>
     </isif>
     <div class="card-footer card-footer-border text-center">
-        <a href="${URLUtils.url('Address-AddAddress')}" class="card-link" aria-label="${Resource.msg('label.addressbook.addnewaddress','account',null)}">${Resource.msg('link.addnew','account',null)}</a>
+        <img class="mb-1 mr-2" src="${URLUtils.staticURL('/images/myAccount/plus.svg')}" alt="Agregar nuevo" />
+        <a href="${URLUtils.url('Address-AddAddress')}" class="card-link" aria-label="${Resource.msg('label.addressbook.addnewaddress','account',null)}">${Resource.msg('label.addressbook.addnewaddress','account',null)}</a>
     </div>
 </div>

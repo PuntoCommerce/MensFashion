@@ -4,8 +4,7 @@
         <isif condition="${!pdict.account.isExternallyAuthenticated}">
             <a href="${URLUtils.url('Account-EditProfile')}" class="pull-right" aria-label="${Resource.msg('label.profile.edit','account',null)}"><img class="mb-2" src="${URLUtils.staticURL('/images/myAccount/edit-icon.svg')}"
                             alt="Envío a domicilio" /></a>
-            
-
+        
         </isif>
     </div>
     <div class="card-body">

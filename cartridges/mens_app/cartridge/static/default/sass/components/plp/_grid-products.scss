@@ -7,13 +7,10 @@
         flex: 1;
     }
 }
-.summary__pricing .strike-through span{
-    color: #444444 !important;
-    opacity: 80%;
-}
+
 @media (max-width: 768.98px) {
     .summary__pricing .strike-through span{
-        color: #ffffff !important;
+        color: #444444 !important;
         font-size: 12px !important;
     }
 
@@ -23,5 +20,18 @@
 
     .promo-carousel .value{
         font-size: 16px !important;
+    }
+}
+@media only screen and (max-width: 395px) {
+    .promo-carousel .value {
+      font-size: 12px !important;
+    }
+
+    .summary__pricing .strike-through span{
+        color: #444444 !important;
+        font-size: 10px !important;
+    }
+    .product-tile .tile-body .price{
+        font-size: 12PX;
     }
 }
