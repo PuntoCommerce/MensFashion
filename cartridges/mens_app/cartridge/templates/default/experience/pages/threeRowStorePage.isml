@@ -3,13 +3,13 @@
 <isdecorate template="common/layout/pdStorePage">
     <div class="storepage" id="${pdict.page.ID}" data-gtmpageview="${pdict.page.ID}">
         <div class="row">
-            <isprint value="${pdict.regions.top.setClassName(" col-12").render()}" encoding="off" />
+            <isprint value="${pdict.regions.top.setClassName("col-12").render()}" encoding="off" />
         </div>
         <div class="row">
-            <isprint value="${pdict.regions.main.setClassName(" col-12").render()}" encoding="off" />
+            <isprint value="${pdict.regions.main.setClassName("col-12").render()}" encoding="off" />
         </div>
         <div class="row">
-            <isprint value="${pdict.regions.bottom.setClassName(" col-12").render()}" encoding="off" />
+            <isprint value="${pdict.regions.bottom.setClassName("col-12").render()}" encoding="off" />
         </div>
     </div>
 </isdecorate>

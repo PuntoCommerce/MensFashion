@@ -217,11 +217,11 @@ function changeRange(e, type) {
   const rangePrice = document.getElementById("range-price-button");
   const pmin = document.getElementById("price-range-min");
   const pmax = document.getElementById("price-range-max");
-
+  
+  
   let url = new URL(location.origin + rangePrice.getAttribute("data-href"));
   url.searchParams.set(type, e.value);
   rangePrice.setAttribute("data-href", url.pathname + url.search);
-  // console.log(url);
   if (type == "pmin") {
     pmin.value = e.value;
   } else {

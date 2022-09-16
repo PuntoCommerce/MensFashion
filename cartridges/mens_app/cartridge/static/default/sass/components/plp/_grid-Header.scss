@@ -16,6 +16,10 @@
    padding-left: $spacing-30;
    justify-content: flex-end;
 
+   @media (max-width: 390px) {
+    padding-left: 10px;
+   }
+
    @include respond(phone) {
     flex: auto;
     padding: 0;
@@ -23,7 +27,7 @@
 
    &__text {
     margin: 0;
-    width: 100%;
+    width: 188px;
     padding: $spacing-small 0;
     background-color: $text-color-black;
     color: $white-color;

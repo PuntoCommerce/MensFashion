@@ -1041,7 +1041,9 @@ footer .socialMedia-paymentMethods {
   .suggestions-desk {
     display: none; }
   .actionIcons {
-    padding-top: 10px; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   header .navbar-toggler {
     line-height: 0px !important;
     height: auto; }
@@ -1058,7 +1060,11 @@ footer .socialMedia-paymentMethods {
     min-width: 120px; }
   .brand {
     width: 200px !important;
-    left: 15%; } }
+    left: 15%; }
+  .navbar-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; } }
 
 /* Menu */
 .dropdown-menu {
@@ -1106,7 +1112,7 @@ ul {
   #menuResponsive {
     display: block; }
   .brand {
-    padding-top: 18px; }
+    padding-top: 0; }
   #customMenuResponsive {
     position: fixed;
     right: 0;
@@ -1205,6 +1211,10 @@ ul {
   padding: 0;
   margin: 0; }
 
+@media (max-width: 390px) {
+  .plp-tools__item {
+    padding-right: 0; } }
+
 .plp-tools__item--breadcrums {
   padding: 0;
   display: flex;
@@ -1227,6 +1237,9 @@ ul {
 
 .container-custom-plp .breadcrumb {
   margin-right: 26px; }
+  @media (max-width: 390px) {
+    .container-custom-plp .breadcrumb {
+      margin-right: 0; } }
 
 .filters {
   margin: 0;
@@ -1303,13 +1316,16 @@ ul {
     flex: 1;
     padding-left: 30px;
     justify-content: flex-end; }
+    @media (max-width: 390px) {
+      .grid-header.row .filters {
+        padding-left: 10px; } }
     @media only screen and (min-width: 37.5em) {
       .grid-header.row .filters {
         flex: auto;
         padding: 0; } }
     .grid-header.row .filters__text {
       margin: 0;
-      width: 100%;
+      width: 188px;
       padding: 12px 0;
       background-color: #000000;
       color: #ffffff; }
@@ -1434,6 +1450,15 @@ ul {
     width: 100%;
     margin: auto;
     text-align: center; }
+
+@-moz-document url-prefix() {
+  .r-price .range-slider::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #000;
+    display: block;
+    position: relative; } }
   .r-price .range-slider input[type="range"] {
     position: absolute;
     left: 0;
@@ -1444,14 +1469,6 @@ ul {
     width: 100%; }
   .r-price input[type="range"]:focus {
     outline: none; }
-  .r-price .rangeslider::before {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #003D7C;
-    display: block;
-    position: relative;
-    top: 16px; }
   .r-price input[type="range"]:nth-child(1) {
     position: absolute;
     overflow: visible !important;
@@ -1464,23 +1481,21 @@ ul {
     position: relative;
     height: 15px;
     width: 15px;
-    background: #fff;
-    border: 1px solid #003d7c;
     border-radius: 25px;
     z-index: 1; }
+  .r-price input[type="range"],
+  .r-price input[type="range"]::-webkit-slider-runnable-track,
+  .r-price input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: none; }
+  .r-price input[type="range"]::-webkit-slider-runnable-track {
+    width: 200px;
+    height: 1px;
+    background: #000; }
   .r-price input[type="range"]:focus::-ms-fill-lower {
     background: #000; }
   .r-price input[type="range"]:focus::-ms-fill-upper {
     background: #000; }
-  .r-price input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 2px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: #000;
-    border-radius: 1px;
-    box-shadow: none;
-    border: 0; }
   .r-price input[type="range"]::-webkit-slider-thumb {
     z-index: 2;
     position: relative;
@@ -1493,15 +1508,6 @@ ul {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -7px; }
-  .r-price input[type="range"]::-moz-range-track {
-    width: 100%;
-    height: 2px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: #000;
-    border-radius: 1px;
-    box-shadow: none;
-    border: 0; }
   .r-price input[type="range"]::-moz-range-thumb {
     z-index: 2;
     position: relative;
@@ -1510,7 +1516,7 @@ ul {
     height: 18px;
     width: 18px;
     border-radius: 25px;
-    background: red;
+    background: #fff;
     cursor: pointer; }
   .r-price input[type="range"]::-ms-track {
     width: 100%;
@@ -2269,7 +2275,7 @@ ul {
 
 @media only screen and (max-width: 420px) {
   .btn__small {
-    font-size: 12px; } }
+    font-size: 10px; } }
 
 @media only screen and (max-width: 768px) {
   .summary__name {
@@ -2795,7 +2801,7 @@ ul {
 
 @media only screen and (max-width: 420px) {
   .btn__small {
-    font-size: 12px; } }
+    font-size: 10px; } }
 
 @media only screen and (max-width: 768px) {
   .summary__name {

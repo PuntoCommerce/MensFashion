@@ -203,7 +203,9 @@
   }
 
   .actionIcons {
-    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   header .navbar-toggler {
@@ -235,6 +237,12 @@
   .brand {
     width: 200px !important;
     left: 15%;
+  }
+
+  .navbar-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -301,7 +309,7 @@ ul {
   }
 
   .brand {
-    padding-top: 18px;
+    padding-top: 0;
   }
 
   #customMenuResponsive {
