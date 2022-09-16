@@ -17,7 +17,7 @@
 
   header .nav-item a {
     font-weight: 700;
-    color: #fff !important;
+    color: #000 !important;
   }
 
   header:hover .last_category_item a,

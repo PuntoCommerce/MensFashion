@@ -63,23 +63,6 @@
     background-color: transparent;
   }
 
-  .experience-commerce_layouts-productGrid .carousel-control-prev::after {
-    content: url(../../../../images/carrucel-arrow.svg);
-  }
-
-  .experience-commerce_layouts-productGrid .carousel-control-next::after {
-    content: url(../../../../images/carrucel-arrow.svg);
-    transform: rotate(180deg);
-  }
-
-  .experience-commerce_layouts-productGrid .carousel-control-prev {
-    left: 3%;
-  }
-
-  .experience-commerce_layouts-productGrid .carousel-control-next {
-    right: 3%;
-  }
-
   .experience-commerce_layouts-productGrid .tile-body,
   .experience-commerce_layouts-productGrid .image-container {
     width: 80%;
