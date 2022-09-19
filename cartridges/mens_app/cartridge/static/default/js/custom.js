@@ -234,11 +234,9 @@ function changeRange(e, type) {
       localValues();
     }, 1000);
   })
-   
 }
 
 function localValues() {
-  const rangePrice = document.getElementById("range-price-button");
   const pmin = document.getElementById("price-range-min");
   const rangeMin = document.getElementById("range-min");
   const pmax = document.getElementById("price-range-max");
@@ -258,3 +256,5 @@ function localValues() {
   pmax.value = sessionStorage.getItem('max');
   rangeMax.value = sessionStorage.getItem('max');
 }
+
+localValues()
