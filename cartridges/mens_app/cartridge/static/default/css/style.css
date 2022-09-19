@@ -518,7 +518,7 @@ header .navbar-header {
     width: 100% !important; }
   .search {
     margin: 0 0 0 0 !important;
-    padding-top: 9px; }
+    padding-top: 5px; }
   #searchContainer form {
     width: 100%; }
   .search-field-responsive,
@@ -1316,9 +1316,6 @@ ul {
     flex: 1;
     padding-left: 30px;
     justify-content: flex-end; }
-    @media (max-width: 390px) {
-      .grid-header.row .filters {
-        padding-left: 10px; } }
     @media only screen and (min-width: 37.5em) {
       .grid-header.row .filters {
         flex: auto;
@@ -1329,6 +1326,14 @@ ul {
       padding: 12px 0;
       background-color: #000000;
       color: #ffffff; }
+      .grid-header.row .filters__text--length {
+        margin: 0 24px 0 0; }
+        @media (max-width: 543px) {
+          .grid-header.row .filters__text--length {
+            padding: 12px 0;
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff; } }
       @media only screen and (min-width: 37.5em) {
         .grid-header.row .filters__text {
           margin: 0 24px 0 0;
@@ -1362,6 +1367,17 @@ ul {
     .grid-header__column--2 .sort {
       display: flex !important; } }
 
+.grid-header__column-reverse {
+  margin-right: 150px; }
+  @media (max-width: 543px) {
+    .grid-header__column-reverse {
+      margin-right: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center; } }
+
 .grid-header__column-item--right {
   margin: 0; }
   @media only screen and (min-width: 37.5em) {
@@ -1371,13 +1387,20 @@ ul {
 .grid-header__column-item:last-child {
   margin: 0; }
 
+@media (max-width: 543px) {
+  .grid-header__column-button {
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 30px; } }
+
 .grid-header .page-title-mobile {
   font-weight: 800;
   font-size: 30px;
-  line-height: 34px; }
+  line-height: 34px;
+  font-family: "AvenirLTStd-Heavy"; }
   @media (max-width: 490px) {
     .grid-header .page-title-mobile {
-      font-size: 19px; } }
+      font-size: 22px; } }
 
 .search-nav {
   margin: 0; }
@@ -1974,7 +1997,8 @@ ul {
     cursor: pointer; }
   .btn-primary, .btn--gray {
     background-color: #d8d8d8;
-    color: #000000 !important; }
+    color: #000000 !important;
+    font-family: "AvenirLTStd-Heavy"; }
     .btn-primary:hover, .btn--gray:hover {
       background-color: #000000;
       color: #ffffff !important; }

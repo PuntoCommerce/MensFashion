@@ -22,6 +22,8 @@
   &--gray {
     background-color: $light-grey;
     color: $text-color-black !important;
+    font-family: $font-family-bold;
+
     &:hover {
       background-color: $text-color-black;
       color: $white-color !important;
