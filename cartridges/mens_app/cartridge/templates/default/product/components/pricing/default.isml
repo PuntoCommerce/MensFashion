@@ -1,6 +1,7 @@
 <span class="prices-container">
     <isset name="finalOrigPrice" value="${price}" scope="page" />
 
+    <div class="stikePriceCont">
     <isif condition="${finalOrigPrice.list}">
         <div class="strike-price">
             <isif condition="${finalOrigPrice.list !== null}">
@@ -17,6 +18,7 @@
     <iselse/>
         
     </isif>
+    </div>
     <div class="sales-price">
         <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
         <span class="sales">
