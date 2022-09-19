@@ -2327,6 +2327,7 @@ pre code {
   .quantity,
   .checkout__totals {
     font-weight: 900;
+    font-family: 'Avenir-Next';
   }
 
   .need-help-phonenumber .checkout-tel {
@@ -2346,10 +2347,6 @@ pre code {
     margin-bottom: 0;
   }
 
-  .footerCheckImg {
-    margin: 0 35px 15px 35px !important;
-  }
-
   .checkout-mail-text {
     font-size: 14px !important;
   }
@@ -2367,6 +2364,14 @@ pre code {
   
   .carousel-control-next {
     right: 5% !important;
+  }
+
+  .promo-carousel .summary__pricing .strike-through span{
+    color: #ffffff !important; 
+  }
+
+  .cart-header .checkout__text{
+    line-height: 2;
   }
 }
 
@@ -20082,6 +20087,12 @@ button.close:focus {
 .checkout__cart .prices-container .sales-price .sales .value,
 .checkout__item .line-item-total-price .price .pricing {
   font-size: 14px;
+  font-family: 'Avenir-Next';
+}
+
+.cart-page .line-item-name{
+  font-family: 'Avenir-Next';
+  font-weight: 900;
 }
 
 .checkout__cart .price .prices-container .strike-price {
@@ -20120,9 +20131,13 @@ button.close:focus {
 }
 
 .footerCheckImg {
-  justify-content: space-evenly;
+  justify-content: center;
   display: flex;
-  margin: 0 650px 15px 650px;
+  margin-bottom: 15px;
+}
+
+.footerCheckImg img{
+  margin: 0 15px;
 }
 
 .checkout-mail-cont {
@@ -20189,3 +20204,10 @@ button.close:focus {
   background-color: #000 !important;
 }
 
+.stikePriceCont{
+  height: 30px;
+}
+
+.cart-page .stikePriceCont{
+  height: 0;
+}

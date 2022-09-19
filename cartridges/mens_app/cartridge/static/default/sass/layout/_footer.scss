@@ -291,7 +291,7 @@ footer .socialMedia-paymentMethods {
     }
 
     .items-colum-direction .customTextBox-component-container .item {
-        padding: 0 5px 1rem 2px !important;
+        padding: 1rem 5px 1rem 2px !important;
         margin: 10px;
     }
 
@@ -303,6 +303,14 @@ footer .socialMedia-paymentMethods {
 @media (max-width: 769px) {
     footer .newsletter {
         width: 150px !important;
+    }
+    
+    #footercontent .content-asset{
+        padding-left: 0;
+    }
+
+    .suscribe-label {
+        margin-bottom: 0;
     }
 }
 
