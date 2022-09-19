@@ -537,8 +537,6 @@ header .navbar-header {
     display: flex;
     margin-bottom: 12px !important;
     padding-top: 12px; }
-  #customMenuResponsive .locatorCont {
-    padding-top: 12px !important; }
   #customMenuResponsive .cartLabel {
     margin-top: 4px;
     color: #000000 !important; }
@@ -788,14 +786,18 @@ footer .socialMedia-paymentMethods {
     margin-bottom: 0;
     font-size: 25px; }
   .items-colum-direction .customTextBox-component-container .item {
-    padding: 0 5px 1rem 2px !important;
+    padding: 1rem 5px 1rem 2px !important;
     margin: 10px; }
   .newsletter p {
     font-size: 18px; } }
 
 @media (max-width: 769px) {
   footer .newsletter {
-    width: 150px !important; } }
+    width: 150px !important; }
+  #footercontent .content-asset {
+    padding-left: 0; }
+  .suscribe-label {
+    margin-bottom: 0; } }
 
 @media (max-width: 991px) {
   .footer-item li,
@@ -1668,11 +1670,6 @@ ul {
   padding: 0; }
 
 .carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-  display: block; }
-
-.carousel-item-next,
 .carousel-item-prev {
   position: absolute;
   top: 0; }
@@ -2056,7 +2053,7 @@ ul {
   display: flex; }
   .summary__swatches .swatch-circle {
     height: 15px;
-    margin: 10px 5px;
+    margin: 12px 5px;
     width: 15px; }
   .summary__swatches .color-swatches {
     min-height: 0 !important; }
@@ -2248,9 +2245,6 @@ ul {
     line-height: 65px !important; }
   .mobile-navTabs {
     margin: 20px 0; }
-  .customTextBox-component-container .item {
-    padding-top: 28px !important;
-    padding-bottom: 20px !important; }
   .customTextBox-component-container strong {
     font-family: "AvenirLTStd-Heavy" !important; }
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
@@ -2774,9 +2768,6 @@ ul {
     line-height: 65px !important; }
   .mobile-navTabs {
     margin: 20px 0; }
-  .customTextBox-component-container .item {
-    padding-top: 28px !important;
-    padding-bottom: 20px !important; }
   .customTextBox-component-container strong {
     font-family: "AvenirLTStd-Heavy" !important; }
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
