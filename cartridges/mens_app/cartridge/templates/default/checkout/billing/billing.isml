@@ -26,10 +26,10 @@
 
                     <isinclude template="checkout/billing/addressSelector" />
                     <div class="invalid-feedback"></div>
-                    <div class="row">
-                        <button class="col-6 text-center btn-show-details btn"
+                    <div class="row justify-content-center">
+                        <button class="col-5 m-3 btn--gray btn__small text-uppercase btn-show-details btn"
                             type="button">${Resource.msg('action.update.address', 'checkout', null)}</button>
-                        <button class="col-6 text-center btn-add-new btn" type="button">${Resource.msg('action.add.new', 'checkout', null)}</button>
+                        <button class="col-5 m-3 btn--gray btn__small text-uppercase btn-add-new btn" type="button">${Resource.msg('action.add.new', 'checkout', null)}</button>
                     </div>
                 </div>
             </fieldset>

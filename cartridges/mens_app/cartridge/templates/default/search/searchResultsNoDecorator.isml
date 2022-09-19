@@ -9,10 +9,15 @@
         <isif condition="${pdict.productSearch.bannerImageUrl}">
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
         </isif>
+<<<<<<< HEAD
+    >   
+        <iscomment> <h1 class="header page-title">
+=======
         >
         <h1 class="header page-title">
+>>>>>>> e40ecbba2ad6e3990e1fe17576dff59acdb0d205
             ${pdict.productSearch.category.name}
-        </h1>
+        </h1> </iscomment>
     </div>
     <iselse>
         <isslot id="search-result-banner-m" description="Banner for search results" context="global" />
