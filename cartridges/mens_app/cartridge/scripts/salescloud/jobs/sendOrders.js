@@ -14,6 +14,23 @@ const handleShipment = (shipment) => {
     shippingCity: shipment.shippingAddress.city,
     shippingState: shipment.shippingAddress.stateCode,
     shippingCountry: "Mexico",
+    shippingCost: shipment.shippingTotalNetPrice.value,
+  };
+};
+
+const parseDate = (date) => {
+  let month = date.getMonth() + 1;
+  if (month < 10) {
+    month = "0" + month;
+  }
+  return date.getDate() + "/" + month + "/" + date.getFullYear();
+};
+
+const handlePayment = (payment) => {
+  return {
+    type: payment.paymentInstrument.paymentMethod,
+    authorizationNumber: payment.transactionID,
+    authorizationDate: parseDate(payment.lastModified),
   };
 };
 
@@ -30,6 +47,7 @@ exports.execute = () => {
   );
 
   let order;
+  let body;
   while (orders.hasNext()) {
     order = orders.next();
     order = OrderMgr.getOrder(order.orderNo);
@@ -40,7 +58,7 @@ exports.execute = () => {
     productLineItems.forEach((p) => {
       products.push({ ProductCode: p.productID, Quantity: p.quantityValue });
     });
-    let paymentInstruments = order.paymentInstruments[0];
+    // let paymentInstruments = order.paymentInstruments[0];
 
     let firstName = "";
     let lastName = "";
@@ -53,8 +71,9 @@ exports.execute = () => {
     }
 
     let defaultShipment = order.defaultShipment;
+    let paymentTransaction = order.paymentTransaction;
 
-    let body = {
+    body = {
       account: {
         FirstName: firstName || "",
         LastName: lastName,
@@ -62,7 +81,7 @@ exports.execute = () => {
         Phone: defaultShipment.shippingAddress.phone,
       },
       shippingInfo: handleShipment(defaultShipment),
-      paymentType: paymentInstruments.paymentMethod,
+      paymentInfo: handlePayment(paymentTransaction),
       oppName: order.orderNo,
       cadena: "Men's Fashion",
       products: products,
