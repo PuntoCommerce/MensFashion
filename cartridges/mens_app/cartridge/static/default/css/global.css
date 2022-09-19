@@ -2223,7 +2223,6 @@ pre code {
 
   .accountBtns .btn {
     margin-bottom: 15px;
-    width: 300px;
     height: 37px;
   }
 
@@ -2309,7 +2308,7 @@ pre code {
   }
 
   .checkout__cart .product-card-footer {
-    margin-top: 32px;
+    margin-top: 60px;
   }
 
   .checkout__cart .product-card-footer .line-item-total-price {
@@ -2370,6 +2369,18 @@ pre code {
 
   .cart-header .checkout__text {
     line-height: 2;
+  }
+
+  .login-checkout{
+    margin: 0 30px !important;
+  }
+
+  .checkoutRightCheck{
+    padding-left: 3rem !important;
+  }
+
+  .experience-commerce_layouts-bannerCarousel .carousel-control-prev, .experience-commerce_layouts-bannerCarousel .carousel-control-next{
+    display: none !important;
   }
 }
 
@@ -19430,6 +19441,7 @@ button.close:focus {
 .login-oauth .form-group a {
   font-size: 14px;
   padding: 5px 0 0 0;
+  color: #000000;
 }
 
 .login-oauth .form-group:nth-last-child() {
@@ -19940,7 +19952,7 @@ button.close:focus {
 
 .paypal-account-button {
   margin: 10px auto 5px auto;
-  padding: 0;
+  padding: 0 !important;
 }
 
 .payCheckbox .custom-control-input:checked ~ .custom-control-label:before {
@@ -20232,8 +20244,7 @@ button.close:focus {
 .login-checkout {
   padding: 0 40px;
 }
-
-.embeddedServiceHelpButton .helpButton .uiButton {
+.embeddedServiceHelpButton .helpButton .uiButton{
   background-color: #000 !important;
 }
 
@@ -20251,4 +20262,15 @@ button.close:focus {
   object-fit: contain;
   object-position: center;
   margin: auto;
+}
+.login-checkout{
+  margin: 0 100px;
+}
+
+.checkoutRightCheck{
+  padding-left: 7rem;
+}
+
+.checkoutLeftCheck{
+  padding-left: 3rem;
 }

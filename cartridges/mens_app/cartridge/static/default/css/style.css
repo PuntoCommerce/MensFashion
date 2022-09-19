@@ -643,8 +643,8 @@ footer .content,
   z-index: -1 !important; }
 
 .goToUp img {
-  height: 17px;
-  width: 24px;
+  height: 51px;
+  width: 51px;
   vertical-align: initial !important; }
 
 .copyright {
@@ -818,7 +818,8 @@ footer .socialMedia-paymentMethods {
 @media (max-width: 991px) {
   .container div.collapsible-xs button.title {
     font-family: "Avenir-LT-Std" !important;
-    color: #ffffff !important; }
+    color: #ffffff !important;
+    font-weight: 400 !important; }
   footer .input-button {
     width: 100%;
     display: block !important; }
@@ -2261,7 +2262,9 @@ ul {
   .promo-carousel .carousel-title {
     margin-top: 43px; }
   .promo-carousel .btn__small {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .customTextBox-component-container a u {
+    text-decoration: none; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
@@ -2784,7 +2787,9 @@ ul {
   .promo-carousel .carousel-title {
     margin-top: 43px; }
   .promo-carousel .btn__small {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .customTextBox-component-container a u {
+    text-decoration: none; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
