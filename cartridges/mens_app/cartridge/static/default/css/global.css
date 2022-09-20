@@ -2144,9 +2144,26 @@ pre code {
   }
 
   .container.account-sections .row {
-    padding: 27px 35px 0 34px !important;
+    padding: 27px 35px 0 34px;
   }
 
+  @media (max-width: 768px) {
+    .container.account-sections .row {
+      padding: 5px 22px !important;
+    }
+
+    .wl-social-sharing {
+      padding: 0;
+    }
+
+    .order-top {
+      margin-top: 14px;
+    }
+
+    .card-wishlist {
+      margin-top: 10px;
+    }
+  }
 
   .container.account-sections .row.addressBottom {
     padding: 0 35px 0 34px !important;
@@ -2231,7 +2248,6 @@ pre code {
     padding: 28px 35px 34px 34px !important;
   }
 
-
   .myAccount .orderCol {
     background-color: #ffffff !important;
     padding-top: 0 !important;
@@ -2282,7 +2298,7 @@ pre code {
   .dashboardAccount .profile-header,
   .dashboardAccount h2 {
     line-height: 40px;
-    font-family: 'Avenir-Next' !important;
+    font-family: "Avenir-Next" !important;
   }
 
   .dashboardAccount .card-header>a {
@@ -2326,11 +2342,11 @@ pre code {
   .quantity,
   .checkout__totals {
     font-weight: 900;
-    font-family: 'Avenir-Next';
+    font-family: "Avenir-Next";
   }
 
   .need-help-phonenumber .checkout-tel {
-    color: #0F41F3 !important;
+    color: #0f41f3 !important;
   }
 
   .need-help-cont {
@@ -2353,35 +2369,42 @@ pre code {
   #checkout-main {
     margin-top: 0 !important;
   }
-  
-  #actions-icons .minicart-total{
+
+  #actions-icons .minicart-total {
     width: 40px;
   }
+
   .carousel-control-prev {
     left: 5% !important;
   }
-  
+
   .carousel-control-next {
     right: 5% !important;
   }
 
-  .promo-carousel .summary__pricing .strike-through span{
-    color: #ffffff !important; 
+  .promo-carousel .summary__pricing .strike-through span {
+    color: #ffffff !important;
   }
 
-  .cart-header .checkout__text{
+  .cart-header .checkout__text {
     line-height: 2;
   }
 
-  .login-checkout{
+  .login-checkout {
     margin: 0 30px !important;
   }
 
+<<<<<<< HEAD
   .checkoutRightCheck{
     padding-left:2rem !important;
+=======
+  .checkoutRightCheck {
+    padding-left: 3rem !important;
+>>>>>>> 6fa0be5d33fb4da8b1fe299b1e5f0337694c8535
   }
 
-  .experience-commerce_layouts-bannerCarousel .carousel-control-prev, .experience-commerce_layouts-bannerCarousel .carousel-control-next{
+  .experience-commerce_layouts-bannerCarousel .carousel-control-prev,
+  .experience-commerce_layouts-bannerCarousel .carousel-control-next {
     display: none !important;
   }
 }
@@ -18301,7 +18324,6 @@ div.availability {
   font-weight: bolder;
 }
 
-
 .non-adjusted-price {
   display: none;
 }
@@ -19204,7 +19226,6 @@ div.availability {
   .trackorder {
     margin: 13px 10px 0 10px !important;
   }
-
 }
 
 .add-to-cart-global.btn.btn-primary {
@@ -19245,14 +19266,14 @@ button.close:focus {
 
 .myAccount-title {
   color: #fff;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 36px;
   font-weight: 700;
 }
 
 .page-title {
   color: #fff !important;
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
   font-size: 36px !important;
   font-weight: 700 !important;
   padding: 0 !important;
@@ -19264,12 +19285,12 @@ button.close:focus {
 }
 
 .login-page .nav-tabs {
-  border: 0.3px solid #64656A;
+  border: 0.3px solid #64656a;
   border-radius: 3px;
 }
 
 .login-page .tab-content {
-  border: 0.3px solid #64656A;
+  border: 0.3px solid #64656a;
   border-radius: 3px;
   padding: 0 31px 0 22px;
 }
@@ -19287,12 +19308,12 @@ button.close:focus {
 }
 
 .login-page .nav-tabs {
-  background-color: #64656A;
+  background-color: #64656a;
   border-bottom: none;
 }
 
 .login-page .nav-tabs .nav-link {
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -19308,7 +19329,7 @@ button.close:focus {
 .login-page .nav-tabs .nav-link:hover,
 .login-page .nav-tabs .nav-link.active:hover,
 .login-page .nav-tabs .nav-link.active:focus {
-  background-color: #64656A;
+  background-color: #64656a;
 }
 
 .login-page .nav-item .nav-link:focus,
@@ -19346,7 +19367,7 @@ button.close:focus {
 
 .login-form-nav .checkout__text--bold,
 .login-form-nav .checkout__text--space {
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
   font-weight: 800;
   font-size: 16px;
   line-height: 22px;
@@ -19374,7 +19395,7 @@ button.close:focus {
   display: block;
   height: 44px;
   width: 100%;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -19388,7 +19409,7 @@ button.close:focus {
 }
 
 .login-form-nav .custom-checkbox .custom-control-label {
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-weight: 400;
   font-size: 14px;
 }
@@ -19422,7 +19443,7 @@ button.close:focus {
 
 #register label {
   margin-bottom: 9px;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-size: 16px;
   font-weight: 800;
 }
@@ -19432,22 +19453,21 @@ button.close:focus {
   width: 100%;
 }
 
-
 #register button {
   margin: 35px auto 9px auto;
   width: 100%;
   height: 34px;
   padding: 0;
-  background: #D9D9D9;
+  background: #d9d9d9;
   color: #000000 !important;
   border: none;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 14px;
 }
 
 #register .privacy-policy {
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 400;
   font-size: 14px;
   margin: 35px 0 9px 0;
@@ -19455,7 +19475,7 @@ button.close:focus {
 }
 
 #register .privacy-policy a {
-  color: #0280C8;
+  color: #0280c8;
   text-decoration: underline;
 }
 
@@ -19465,11 +19485,11 @@ button.close:focus {
 
 .card-header.track-order-header {
   padding: 12px 23px;
-  background-color: #64656A !important;
+  background-color: #64656a !important;
   color: #fff !important;
   font-size: 16px !important;
   font-weight: 900 !important;
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
 }
 
 .track-order-header {
@@ -19485,12 +19505,12 @@ button.close:focus {
 }
 
 .track-order-header-text {
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 14px;
 }
 
 .trackorder .form-group label {
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 16px;
   font-weight: 800;
 }
@@ -19504,7 +19524,7 @@ button.close:focus {
   border-radius: 3px;
   color: #000000 !important;
   padding: 0;
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
@@ -19529,7 +19549,7 @@ button.close:focus {
   color: #ffffff !important;
 }
 
-.confirmation-banner{
+.confirmation-banner {
   width: 100%;
 }
 
@@ -19544,7 +19564,7 @@ button.close:focus {
   font-style: normal;
   font-weight: 800;
   font-size: 30px;
-  color: #64656A;
+  color: #64656a;
   font-family: "Avenir-LT-Std";
 }
 
@@ -19567,7 +19587,7 @@ button.close:focus {
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
-  background-color: #64656A;
+  background-color: #64656a;
   border-radius: 3px;
   margin-top: 40px;
   width: 100%;
@@ -19602,15 +19622,15 @@ button.close:focus {
 .myAccount .card {
   border: 1px solid #000;
   border-radius: 3px;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
 .myAccount .orderCol {
-  background-color: #C2C3C6;
+  background-color: #c2c3c6;
 }
 
 .myAccount .card-header {
-  background-color: #64656A;
+  background-color: #64656a;
   font-family: "Avenir-Next" !important;
   font-weight: 700;
   font-size: 16px;
@@ -19626,7 +19646,6 @@ button.close:focus {
 
 .myAccount .clearfix::after {
   background-image: url(../images/edit.png) !important;
-
 }
 
 .card-body dt {
@@ -19640,7 +19659,7 @@ button.close:focus {
 
 .myAccount .card-link {
   color: #000;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 14px;
 }
 
@@ -19652,7 +19671,7 @@ button.close:focus {
   display: block;
   text-align: center;
   position: inherit;
-  background-color: #E8E8E8 !important;
+  background-color: #e8e8e8 !important;
   color: #000 !important;
   font-size: 40px;
 }
@@ -19664,13 +19683,13 @@ button.close:focus {
 
 .account-sections .card-header h2 {
   font-weight: 900;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 18px;
 }
 
 .account-sections .card-header h4 {
   font-weight: 900;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
 .account-sections .card-body {
@@ -19684,7 +19703,7 @@ button.close:focus {
 }
 
 .account-sections .btn {
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 100;
   text-transform: uppercase;
   border: 1px solid #000;
@@ -19700,7 +19719,7 @@ button.close:focus {
 }
 
 .account-sections .btn-save {
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 100;
   text-transform: uppercase;
   background-color: #e8e8e8;
@@ -19710,7 +19729,7 @@ button.close:focus {
 }
 
 .account-sections .btn-save-address {
-  font-family: 'Avenir-LT-Std';
+  font-family: "Avenir-LT-Std";
   font-weight: 100;
   text-transform: uppercase;
   background-color: #e8e8e8 !important;
@@ -19730,7 +19749,7 @@ button.close:focus {
 }
 
 .profile-back-to-account-link {
-  color: #2D64FC !important;
+  color: #2d64fc !important;
   text-decoration: underline;
 }
 
@@ -19744,7 +19763,7 @@ button.close:focus {
   color: #fff !important;
   padding: 5px 0;
   border: none;
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
   font-weight: 100 !important;
 }
 
@@ -19753,7 +19772,6 @@ button.close:focus {
   color: #000 !important;
   border: 1px solid #000;
 }
-
 
 .order-top .form-group {
   position: relative;
@@ -19767,7 +19785,7 @@ button.close:focus {
 
 .order-list-container .card-header h3,
 .orderDetail .card-header h2 {
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 16px;
   font-weight: 600;
 }
@@ -19798,7 +19816,7 @@ button.close:focus {
 }
 
 .my-account a {
-  color: #2D64FC;
+  color: #2d64fc;
 }
 
 .paymentsListBtns {
@@ -19828,7 +19846,7 @@ button.close:focus {
   font-weight: 900;
   color: #000000;
   font-weight: 900;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   margin-top: 0 !important;
 }
 
@@ -19967,7 +19985,7 @@ button.close:focus {
 }
 
 .promo-carousel .value {
-  font-family: 'Avenir-Next' !important;
+  font-family: "Avenir-Next" !important;
 }
 
 .experience-commerce_layouts-promoContainer .price .strike-through {
@@ -20037,7 +20055,7 @@ button.close:focus {
 
 #storeDetailModal button {
   font-size: 14px !important;
-  font-family: 'Avenir-LT-Std' !important;
+  font-family: "Avenir-LT-Std" !important;
   font-weight: 900;
 }
 
@@ -20069,11 +20087,11 @@ button.close:focus {
 }
 
 .checkout .btn {
-  font-family: 'AvenirLTStd-Heavy';
+  font-family: "AvenirLTStd-Heavy";
 }
 
 .checkout #password-reset {
-  color: #0280C8;
+  color: #0280c8;
   font-size: 14px;
   text-align: left !important;
 }
@@ -20099,11 +20117,11 @@ button.close:focus {
 .checkout__cart .prices-container .sales-price .sales .value,
 .checkout__item .line-item-total-price .price .pricing {
   font-size: 14px;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
-.cart-page .line-item-name{
-  font-family: 'Avenir-Next';
+.cart-page .line-item-name {
+  font-family: "Avenir-Next";
   font-weight: 900;
 }
 
@@ -20148,7 +20166,7 @@ button.close:focus {
   margin-bottom: 15px;
 }
 
-.footerCheckImg img{
+.footerCheckImg img {
   margin: 0 15px;
 }
 
@@ -20159,18 +20177,18 @@ button.close:focus {
 .card-header-custom-title {
   font-size: 32px;
   text-align: start;
-  font-family: 'Avenir-Bold';
+  font-family: "Avenir-Bold";
 }
 
 .card-header-custom {
   font-size: 32px;
   text-align: start;
-  font-family: 'Avenir-Bold';
+  font-family: "Avenir-Bold";
 }
 
 .submit-payment,
 .add-payment {
-  font-family: 'AvenirLTStd-Heavy' !important;
+  font-family: "AvenirLTStd-Heavy" !important;
 }
 
 .payment-options li {
@@ -20182,52 +20200,69 @@ button.close:focus {
   margin-top: 90px;
 }
 
-.cart_bottom_text{
-  font-family: 'Avenir-Next';
+.cart_bottom_text {
+  font-family: "Avenir-Next";
   font-weight: 900;
   font-size: 12px;
 }
- 
-.cart_bottom_img{
+
+.cart_bottom_img {
   width: 20px;
 }
 
-.cart-cvc{
+.cart-cvc {
   font-size: 12px;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
 }
 
-.cart_cvc_cont{
+.cart_cvc_cont {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #000;
 }
 
-.cart_cvc{
+.cart_cvc {
   margin-right: 47%;
   margin-left: 10px;
 }
 
-.embeddedServiceHelpButton .helpButton .uiButton{
+.login-checkout {
+  padding: 0 40px;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton {
   background-color: #000 !important;
 }
 
-.stikePriceCont{
+.stikePriceCont {
   height: 30px;
 }
 
-.cart-page .stikePriceCont{
+.cart-page .stikePriceCont {
   height: 0;
 }
 
-.login-checkout{
+#guiaDeTallas img {
+  max-width: 100%;
+  height: 60vh;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+}
+
+.login-checkout {
   margin: 0 100px;
 }
 
-.checkoutRightCheck{
+.checkoutRightCheck {
   padding-left: 7rem;
 }
 
+<<<<<<< HEAD
 .checkoutLeftCheck{
   padding-left: 2rem;
+=======
+.checkoutLeftCheck {
+  padding-left: 3rem;
+>>>>>>> 6fa0be5d33fb4da8b1fe299b1e5f0337694c8535
 }
