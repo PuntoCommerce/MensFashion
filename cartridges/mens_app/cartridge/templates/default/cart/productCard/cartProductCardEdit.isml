@@ -6,7 +6,7 @@
             title="${Resource.msg('link.edit.item', 'cart', null)}">${Resource.msg('link.edit.item', 'cart', null)}
         </a> </iscomment>
     <a href="${URLUtils.url('Wishlist-AddProduct')}" class="move" data-pid="${lineItem.id}"
-        data-name="${lineItem.productName}" data-action="${URLUtils.url('Cart-RemoveProductLineItem')}"
+        data-name="${lineItem.productName}" data-action="${URLUtils.url('Wishlist-AddProduct')}"
         data-uuid="${lineItem.UUID}"
         title="${Resource.msg('link.move.to.wishlist', 'cart', null)}">${Resource.msg('link.move.to.wishlist', 'cart', null)}</a>
 </div>
