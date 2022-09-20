@@ -891,6 +891,12 @@ div.availability {
 .cart-label {
   margin-top: 3%;
 }
-.product-edit.product-move a {
+.product-edit.product-move-custom a {
   color: #000 !important;
+}
+.cart-page .strike-through span {
+  color: #979797;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-color: #979797;
 }
