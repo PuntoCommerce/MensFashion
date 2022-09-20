@@ -2605,232 +2605,6 @@ ul {
     background: #000;
     color: #fff; }
 
-/* **************************** HOME **************************** */
-#maincontent .container {
-  max-width: 100vw;
-  padding-left: 0px;
-  padding-right: 0px;
-  overflow-x: hidden; }
-
-#maincontent .experience-commerce_assets-topBar {
-  padding-bottom: 1rem !important; }
-
-.editorialRichText-component-container .text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.editorialRichText-component-container .text-center p,
-.editorialRichText-component-container .text-center a,
-.editorialRichText-component-container .text-center h1,
-.editorialRichText-component-container .text-center h2,
-.editorialRichText-component-container .text-center h3,
-.editorialRichText-component-container .text-center h4 {
-  font-family: "Avenir-LT-Std";
-  color: #000000 !important;
-  text-decoration: none; }
-
-.mobile-2r-2c .region:not(:first-child) {
-  border-left: 1px solid #000000; }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: none; }
-
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: transparent !important;
-  opacity: 1; }
-
-.carousel-control-prev::after {
-  content: url(../images/pdp/arrow_left_38.svg); }
-
-.carousel-control-next::after {
-  content: url(../images/pdp/arrow_right_38.svg); }
-
-#customBannerCarousel .carousel-control-prev {
-  left: 3% !important; }
-
-#customBannerCarousel .carousel-control-next {
-  right: 3% !important; }
-
-.carousel-control-prev {
-  left: 2% !important; }
-
-.carousel-control-next {
-  right: 2% !important; }
-
-#customBannerCarousel .ITBC-buttons {
-  position: absolute;
-  bottom: 300px; }
-
-.ITBC-content .btn-ITBC {
-  font-family: "AvenirLTStd-Heavy" !important;
-  font-weight: 600;
-  white-space: nowrap;
-  padding: 15px 5px; }
-
-.ITBC-markup img {
-  object-fit: scale-down; }
-
-.experience-commerce_layouts-mobileGrid2r1c .markup-wrapper {
-  justify-content: flex-end; }
-
-.ITBC-content .btn-ITBC:hover {
-  background-color: #000000;
-  color: #ffffff !important; }
-
-.customTextBox-component-container a u {
-  text-decoration: underline;
-  font-size: 14px; }
-
-.customTextBox-component-container a u:hov {
-  color: red; }
-
-.experience-commerce_layouts-navTabs {
-  box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
-  -moz-box-shadow: 2px -4px 9px 3px rgba(0, 0, 0, 0.12);
-  margin-bottom: 15px; }
-
-.promo-carousel__countdown {
-  margin-right: 12px;
-  justify-content: flex-end; }
-
-.promo-carousel__countdown__item .item .number {
-  font-family: "AvenirLTStd-Heavy" !important; }
-
-.promo-carousel__countdown__item .item .type {
-  font-family: "AvenirLTStd-Heavy" !important; }
-
-.experience-component.experience-commerce_layouts-mobileGrid2r1c {
-  margin-bottom: 15px; }
-
-.product-tile.summary {
-  position: relative; }
-
-.isFullWidth .carousel-control-prev {
-  left: 0% !important;
-  top: 47% !important; }
-
-.isFullWidth .carousel-control-next {
-  right: 0% !important;
-  top: 47% !important; }
-
-.promo-carousel .carousel-control-prev {
-  left: -20px !important;
-  top: -150px !important; }
-
-.promo-carousel .carousel-control-next {
-  right: -20px !important;
-  top: -150px !important; }
-
-.promo-carousel__wrapper-countdown {
-  padding-right: 155px; }
-
-.promo-carousel__title {
-  padding: 0 0 10px 70px;
-  margin-bottom: 31px; }
-
-.newsletter .container .markup h4 img {
-  margin: 10px 325px; }
-
-.newsletter .container .markup h4 {
-  margin: 0; }
-
-.newsletter .container .markup {
-  align-items: flex-start !important; }
-
-@media (max-width: 544px) {
-  .mobile-2r-2c .region:is(:nth-last-child(2)),
-  .mobile-2r-2c .region:is(:last-child) {
-    border-top: 1px solid #000000; }
-  .mobile-2r-2c .region {
-    margin-bottom: 0px; }
-  .ITBC-content .btn-ITBC {
-    min-width: 190px;
-    font-size: 20px;
-    padding: 10px 0px; }
-  #customBannerCarousel .ITBC-buttons {
-    position: initial;
-    margin-top: 25px; }
-  .ITBC-content h1, .ITBC-content p, .ITBC-content a {
-    margin: 0;
-    line-height: 45px; }
-  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
-    margin: 0;
-    line-height: initial; }
-  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
-    justify-content: flex-end !important; }
-  .ITBC-content h1 {
-    font-size: 40px; } }
-
-@media (max-width: 991px) {
-  .customTextBox-component-container h1 {
-    margin: 5px 0;
-    line-height: 65px !important; }
-  .mobile-navTabs {
-    margin: 20px 0; }
-  .customTextBox-component-container strong {
-    font-family: "AvenirLTStd-Heavy" !important; }
-  .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
-    margin-bottom: 0 !important; }
-  .promo-carousel__wrapper-countdown {
-    padding-right: 0;
-    align-items: center; }
-  .promo-carousel__countdown {
-    margin-right: 0; }
-  .promo-carousel__title {
-    padding: 0 0 16px 0; }
-  .promo-carousel .row {
-    justify-content: center; }
-  .promo-carousel .carousel-title {
-    margin-top: 43px; }
-  .promo-carousel .btn__small {
-    font-size: 12px; }
-  .customTextBox-component-container a u {
-    text-decoration: none; } }
-
-.refinements h2 {
-  font-family: "Avenir-LT-Std" !important; }
-
-.hero.slant-down::after {
-  border-width: 0; }
-
-.hero.slant-down .header.page-title,
-.hero.slant-down .page-title::before {
-  background-color: transparent;
-  font-size: 30px;
-  line-height: 34px; }
-
-.show-more {
-  visibility: hidden; }
-
-.swatches {
-  display: flex; }
-
-@media only screen and (min-width: 37.5em) {
-  .grid-header__column-item--right {
-    margin-right: 150px; } }
-
-.summary__name {
-  height: 50px; }
-
-.container-custom-plp .highlight {
-  left: 5px; }
-
-@media only screen and (max-width: 420px) {
-  .btn__small {
-    font-size: 10px; } }
-
-@media only screen and (max-width: 768px) {
-  .summary__name {
-    height: 40px; }
-  .strike-price,
-  .sales-price {
-    height: 22px;
-    margin-bottom: 12px; } }
-
 .checkout {
   font-family: "Avenir-LT-Std";
   font-size: 16px; }
@@ -3060,28 +2834,53 @@ ul {
     display: flex;
     margin: 0 auto 64px auto; }
   @media (max-width: 768px) {
-    .card-myaccount .wishlist-container .container.account-sections .row {
-      padding: 5px 20px !important; }
-    .card-myaccount .wl-social-sharing {
-      padding: 0; }
-    .card-myaccount .order-top {
-      margin-top: 14px; }
-    .card-myaccount .card-wishlist {
-      margin-top: 10px; }
-    .card-myaccount .card-product-info__body--price-container .quantity-form-wishlist {
-      display: grid; }
-    .card-myaccount .card-product-info__footer--btn-add-cart {
-      width: 100%;
-      margin-right: 0;
-      margin-top: 19px; }
-    .card-myaccount .product-card-price {
-      margin-top: 17px;
-      display: flex;
-      justify-content: center; }
-    .card-myaccount .line-dotted {
-      display: none; } }
-  @media (max-width: 768px) {
     .card-myaccount {
       flex: 100%; }
       .card-myaccount--buttons-container {
-        width: 100%; } }
+        width: 100%; }
+      .card-myaccount .container.account-sections .row {
+        border: 1px solid red; }
+      .card-myaccount .wl-social-sharing {
+        padding: 0; }
+      .card-myaccount .order-top {
+        margin-top: 14px; }
+      .card-myaccount .card-wishlist {
+        margin-top: 10px; }
+      .card-myaccount .card-product-info__body--price-container .quantity-form-wishlist {
+        display: grid; }
+      .card-myaccount .card-product-info__footer {
+        display: flex;
+        justify-content: flex-end; }
+        .card-myaccount .card-product-info__footer--btn-add-cart {
+          width: 100%;
+          margin-right: 0;
+          margin-top: 19px; }
+      .card-myaccount .product-card-price {
+        margin-top: 17px;
+        display: flex;
+        justify-content: center; }
+      .card-myaccount .line-dotted {
+        display: none; } }
+
+a:hover {
+  text-decoration: none; }
+
+a .oauth-google--button,
+a .oauth-facebook--button {
+  border: 1px solid #000;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 18px;
+  width: 100%;
+  background: none; }
+  a .oauth-google--button:hover,
+  a .oauth-facebook--button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all ease .2s; }
+
+a .oauth-google--button {
+  margin-bottom: 16px; }
+
+a .oauth-facebook--button {
+  margin-bottom: 30px; }

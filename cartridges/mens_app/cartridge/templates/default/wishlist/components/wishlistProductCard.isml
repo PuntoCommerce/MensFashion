@@ -51,11 +51,10 @@
         <div class="col-12"><hr class="wishlist-line-item-divider line-dotted"></div>
         <iscomment> <isinclude template="wishlist/components/makePublicCheckbox"> </iscomment>
 
-        <div class="col-md-8 col-sm-12">
+        <iscomment> <div class="col-md-8 col-sm-12">
             <isinclude template="wishlist/components/socialsharing" />
-            
-        </div>
-       <div class="col-md-4 col-sm-12">
+        </div> </iscomment>
+       <div class="col-md-4 col-sm-12 card-product-info__footer--button">
          <isif condition="${!!item.master}">
             <isinclude template="wishlist/components/selectAttributesButton">
         <iselse>

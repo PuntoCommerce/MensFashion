@@ -13,11 +13,12 @@
         <div class="container account-sections ${pdict.loggedIn ? '' : 'login-page'}">
             <!---Breadcrumbs--->
             <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
-            <isif condition="${pdict.loggedIn}">
-                <isinclude template="wishlist/components/wishlist" />
-                <iselse>
+            <isif condition="${pdict.loggedIn === null}">
                     <isinclude template="wishlist/components/login" />
+                <iselse>
+                <isinclude template="wishlist/components/wishlist" />
             </isif>
+
         </div>
     </div>
 </isdecorate>
