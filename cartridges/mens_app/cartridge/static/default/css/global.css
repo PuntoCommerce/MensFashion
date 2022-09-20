@@ -2394,13 +2394,8 @@ pre code {
     margin: 0 30px !important;
   }
 
-<<<<<<< HEAD
   .checkoutRightCheck{
     padding-left:2rem !important;
-=======
-  .checkoutRightCheck {
-    padding-left: 3rem !important;
->>>>>>> 6fa0be5d33fb4da8b1fe299b1e5f0337694c8535
   }
 
   .experience-commerce_layouts-bannerCarousel .carousel-control-prev,
@@ -20258,11 +20253,6 @@ button.close:focus {
   padding-left: 7rem;
 }
 
-<<<<<<< HEAD
 .checkoutLeftCheck{
   padding-left: 2rem;
-=======
-.checkoutLeftCheck {
-  padding-left: 3rem;
->>>>>>> 6fa0be5d33fb4da8b1fe299b1e5f0337694c8535
 }
