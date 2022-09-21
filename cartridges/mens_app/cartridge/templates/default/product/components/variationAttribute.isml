@@ -10,7 +10,7 @@
 </iscomment>
 
 <isif condition="${attr.swatchable}">
-    <div class="attribute row col">
+    <div class="attribute row col-12">
         <div class="col d-flex">
             <div class="mr-2">
                 <div class="attribute-label">

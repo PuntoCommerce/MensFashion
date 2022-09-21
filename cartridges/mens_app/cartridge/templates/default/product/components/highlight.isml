@@ -9,7 +9,7 @@
   <isif condition="${product.customAttributes.proximamente}">
     <div class="highlight highlight--black d-flex justify-content-center align-items-center p-1">
     <div  class="highlight--container" >
-      <span >Proximamente</span>
+      <span >${Resource.msg('highlight.text', 'common', null)}</span>
     </div>
     </div>
   </isif>

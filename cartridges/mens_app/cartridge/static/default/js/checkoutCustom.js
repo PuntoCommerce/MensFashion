@@ -60,7 +60,7 @@ function initAutocomplete() {
 const stateSelector = document.querySelector(
   "select.form-control.shippingState"
 );
-stateSelector.replaceWith(stateSelector.cloneNode(true));
+stateSelector ? stateSelector.replaceWith(stateSelector.cloneNode(true)) : null;
 
 const zipCodeField = document.querySelector(
   "input.form-control.shippingZipCode"
@@ -70,33 +70,34 @@ const checkedShippingMethod = document.querySelector(
 );
 
 const submitButton = document.querySelector("button.submit-shipping");
-const postalCodes = document
-  .getElementById(`shippingMethod-${checkedShippingMethod.value}`)
-  .getAttribute("data-logistic");
-const arrPostalCode = postalCodes.split(",");
-
-zipCodeField.addEventListener("change", (e) => {
-  e.preventDefault();
-  const exist = arrPostalCode.includes(zipCodeField.value);
-  if (!exist) {
-    submitButton.disabled = true;
-    zipCodeField.classList.add("is-invalid");
-  } else {
-    zipCodeField.classList.remove("is-invalid");
-    submitButton.disabled = false;
-  }
-});
+if (checkedShippingMethod) {
+  const postalCodes = document.getElementById(`shippingMethod-${checkedShippingMethod.value}`).getAttribute("data-logistic");
+  const arrPostalCode = postalCodes.split(",");
+  zipCodeField.addEventListener("change", (e) => {
+    e.preventDefault();
+    const exist = arrPostalCode.includes(zipCodeField.value);
+    if (!exist) {
+      submitButton.disabled = true;
+      zipCodeField.classList.add("is-invalid");
+    } else {
+      zipCodeField.classList.remove("is-invalid");
+      submitButton.disabled = false;
+    }
+  });
+}
 
 function pickCountry() {
   setTimeout(() => {
     let countrySelect = document.querySelector(
       ".form-control.shippingCountry.custom-select"
     );
-    countrySelect.value = "MX";
-    if (countrySelect.value === "MX") {
-      document.querySelector(
-        ".dwfrm_shipping_shippingAddress_addressFields_country"
-      ).style.display = "none";
+    if (countrySelect) {
+      countrySelect.value = "MX";
+      if (countrySelect.value === "MX") {
+        document.querySelector(
+          ".dwfrm_shipping_shippingAddress_addressFields_country"
+        ).style.display = "none";
+      }
     }
   }, 1000);
 }
@@ -153,24 +154,28 @@ const togglePickupForm = (selectPickupBtn) => {
 
 let selectShippingBtn = document.querySelector("#selectShipping");
 let selectPickupBtn = document.querySelector("#selectPickup");
-selectShippingBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  selectShippingBtn.classList.add("active");
-  selectPickupBtn.classList.remove("active");
-  selectShipping("shipped");
-  updateSelectedShippingMethod();
-  pickCountry();
-  togglePickupForm(selectPickupBtn);
-});
-selectPickupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  selectPickupBtn.classList.add("active");
-  selectShippingBtn.classList.remove("active");
-  selectShipping("pickup");
-  updateSelectedShippingMethod();
-  pickCountry();
-  togglePickupForm(selectPickupBtn);
-});
+if (selectShippingBtn) {
+  selectShippingBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    selectShippingBtn.classList.add("active");
+    selectPickupBtn.classList.remove("active");
+    selectShipping("shipped");
+    updateSelectedShippingMethod();
+    pickCountry();
+    togglePickupForm(selectPickupBtn);
+  });
+}
+if (selectPickupBtn) {
+  selectPickupBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    selectPickupBtn.classList.add("active");
+    selectShippingBtn.classList.remove("active");
+    selectShipping("pickup");
+    updateSelectedShippingMethod();
+    pickCountry();
+    togglePickupForm(selectPickupBtn);
+  });
+}
 
 const step1Btn = document.querySelector("button.submit-shipping");
 const step2Btn = document.querySelector("button.submit-payment");
@@ -183,7 +188,11 @@ function updateProgressBar() {
   const checkoutDivider1 = document.querySelector("#checkoutStepDivider1");
   const checkoutDivider2 = document.querySelector("#checkoutStepDivider2");
 
-  let stage = stepShipping.dataset.checkoutStage;
+  let stage;
+  if (stepShipping) {
+    stage = stepShipping.dataset.checkoutStage;
+  };
+
 
   if (stage === "shipping") {
     checkoutDivider1.classList.remove("active");
@@ -203,16 +212,21 @@ function updateProgressBar() {
   }
 }
 updateProgressBar();
-step1Btn.addEventListener("click", (e) => {
-  setTimeout(() => {
-    updateProgressBar();
-  }, 1000);
-});
-step2Btn.addEventListener("click", (e) => {
-  setTimeout(() => {
-    updateProgressBar();
-  }, 1000);
-});
+if (step1Btn) {
+  step1Btn.addEventListener("click", (e) => {
+    setTimeout(() => {
+      updateProgressBar();
+    }, 1000);
+  });
+}
+if (step2Btn) {
+  step2Btn.addEventListener("click", (e) => {
+    setTimeout(() => {
+      updateProgressBar();
+    }, 1000);
+  });
+}
+
 
 // Instore pickup selector trigger
 window.addEventListener("load", function () {
@@ -231,7 +245,63 @@ window.addEventListener("load", function () {
     }, 1000);
   }
   listenerPickStore();
-  changeStoreBtn.addEventListener("click", function () {
-    listenerPickStore();
+  if (changeStoreBtn) {
+    changeStoreBtn.addEventListener("click", function () {
+      listenerPickStore();
+    });
+  }
+});
+
+function displayMessageAndRemoveFromCart(data) {
+  $.spinner().stop();
+  var status = data.success ? 'alert-success' : 'alert-danger';
+
+  if ($('.add-to-wishlist-messages').length === 0) {
+    $('body').append('<div class="add-to-wishlist-messages "></div>');
+  }
+  $('.add-to-wishlist-messages')
+    .append('<div class="add-to-wishlist-alert text-center ' + status + '">' + data.msg + '</div>');
+
+  setTimeout(function () {
+    $('.add-to-wishlist-messages').remove();
+  }, 3000);
+  var $targetElement = $('a[data-pid="' + data.pid + '"]').closest('.product-info').find('.remove-product');
+  var itemToMove = {
+    actionUrl: $targetElement.data('action'),
+    productID: $targetElement.data('pid'),
+    productName: $targetElement.data('name'),
+    uuid: $targetElement.data('uuid')
+  };
+  $('body').trigger('afterRemoveFromCart', itemToMove);
+}
+
+$('body').on('click', '.product-move-custom .move', function (e) {
+  e.preventDefault();
+  var url = $(this).attr('href');
+  var pid = $(this).data('pid');
+  var optionId = $(this).closest('.product-info').find('.lineItem-options-values').data('option-id');
+  var optionVal = $(this).closest('.product-info').find('.lineItem-options-values').data('value-id');
+  optionId = optionId || null;
+  optionVal = optionVal || null;
+  if (!url || !pid) {
+    return;
+  }
+
+  $.spinner().start();
+  $.ajax({
+    url: url,
+    type: 'post',
+    dataType: 'json',
+    data: {
+      pid: pid,
+      optionId: optionId,
+      optionVal: optionVal
+    },
+    success: function (data) {
+      displayMessageAndRemoveFromCart(data);
+    },
+    error: function (err) {
+      displayMessageAndRemoveFromCart(err);
+    }
   });
 });

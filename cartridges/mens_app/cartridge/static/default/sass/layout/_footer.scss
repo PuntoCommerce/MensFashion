@@ -94,8 +94,8 @@ footer .content,
 }
 
 .goToUp img {
-    height: 17px;
-    width: 24px;
+    height: 51px;
+    width: 51px;
     vertical-align: initial !important;
 }
 
@@ -217,6 +217,10 @@ footer .socialMedia-paymentMethods {
     padding-left: 20px;
 }
 
+.items-colum-direction .customTextBox-component-container .item {
+    padding: 0 !important;
+    margin: 0;
+}
 @media (min-width: 1200px) {
     footer .container {
         margin-top: 20px;
@@ -287,11 +291,10 @@ footer .socialMedia-paymentMethods {
 
     .customTextBox-component-container p{
         margin-bottom: 0;
-        font-size: 25px;
     }
 
     .items-colum-direction .customTextBox-component-container .item {
-        padding: 0 5px 1rem 2px !important;
+        padding: 1rem 5px 1rem 2px !important;
         margin: 10px;
     }
 
@@ -303,6 +306,14 @@ footer .socialMedia-paymentMethods {
 @media (max-width: 769px) {
     footer .newsletter {
         width: 150px !important;
+    }
+    
+    #footercontent .content-asset{
+        padding-left: 0;
+    }
+
+    .suscribe-label {
+        margin-bottom: 0;
     }
 }
 
@@ -337,6 +348,7 @@ footer .socialMedia-paymentMethods {
     .container div.collapsible-xs button.title {
         font-family: "Avenir-LT-Std" !important;
         color: #ffffff !important;
+        font-weight: 400 !important;
     }
 
     footer .input-button {
@@ -438,3 +450,4 @@ footer .socialMedia-paymentMethods {
         font-size: 16px;
     }
 }
+

@@ -60,8 +60,8 @@
                 <button class="back-to-top" title="${Resource.msg('button.back_to_top', 'common', null)}"
                     aria-label="${Resource.msg('button.back_to_top', 'common', null)}">
                     <span class="fa-stack fa-lg" aria-hidden="true">
-                        <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
-                        <img src="${URLUtils.staticURL('/images/toUp.svg')}" />
+                        <iscomment> <i class="fa fa-circle fa-inverse fa-stack-2x"></i> </iscomment>
+                        <img src="${URLUtils.staticURL('/images/goTop.svg')}" />
                         <iscomment> <i class="fa fa-arrow-up fa-stack-1x"></i> </iscomment>
                     </span>
                 </button>

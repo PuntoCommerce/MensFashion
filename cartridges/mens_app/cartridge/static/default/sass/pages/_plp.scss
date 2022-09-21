@@ -39,7 +39,7 @@
 
 @media only screen and (max-width: 420px) {
   .btn__small {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -47,11 +47,4 @@
   .summary__name{
     height: 40px;
   }
-
-  .strike-price,
-  .sales-price {
-    height: 22px;
-    margin-bottom: 12px;
-  }
-
 }

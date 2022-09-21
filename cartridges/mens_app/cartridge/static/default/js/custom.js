@@ -217,14 +217,44 @@ function changeRange(e, type) {
   const rangePrice = document.getElementById("range-price-button");
   const pmin = document.getElementById("price-range-min");
   const pmax = document.getElementById("price-range-max");
-
+  
   let url = new URL(location.origin + rangePrice.getAttribute("data-href"));
   url.searchParams.set(type, e.value);
   rangePrice.setAttribute("data-href", url.pathname + url.search);
-  // console.log(url);
+  
   if (type == "pmin") {
     pmin.value = e.value;
+    sessionStorage.setItem('min', pmin.value);
   } else {
     pmax.value = e.value;
+    sessionStorage.setItem('max', pmax.value);
   }
+  rangePrice.addEventListener('click', () =>{
+    setTimeout(() => {
+      localValues();
+    }, 1000);
+  })
 }
+
+function localValues() {
+  const pmin = document.getElementById("price-range-min");
+  const rangeMin = document.getElementById("range-min");
+  const pmax = document.getElementById("price-range-max");
+  const rangeMax = document.getElementById("range-max");
+  
+  let minValue = sessionStorage.getItem('min');
+  let maxValue = sessionStorage.getItem('max');
+
+  if (minValue === null) {
+    minValue = 0;
+  }
+  if (maxValue === null) {
+    maxValue = 5000;
+  }
+  pmin.value = sessionStorage.getItem('min');
+  rangeMin.value = sessionStorage.getItem('min');
+  pmax.value = sessionStorage.getItem('max');
+  rangeMax.value = sessionStorage.getItem('max');
+}
+
+localValues()

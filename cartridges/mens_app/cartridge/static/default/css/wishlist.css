@@ -15,13 +15,40 @@
 .remove-from-wishlist-alert.show {
  display: block;
 }
-.add-to-cart-wishList .add-to-cart {
+/* .add-to-cart-wishList .add-to-cart {
  float: right;
+} */
+
+.row.card-product-info__footer{
+  display: flex;
+  justify-content: flex-end;
 }
-@media (max-width: 543.98px) {
+
+.card-product-info__footer--button{
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .card.card-product-info{
+    margin: 20px 0;
+  }
+
  .add-to-cart-wishList .add-to-cart {
   float: none;
   width: 100%;
+ }
+
+ .card-product-info__footer--btn-add-cart{
+  margin-top: 24px;
+ }
+
+ .product-card-price{
+  margin-top: 17px;
+ }
+ 
+ .quantity-form-wishlist{
+  display: grid;
  }
 }
 .select-attributes-wishList .select-attributes-btn {

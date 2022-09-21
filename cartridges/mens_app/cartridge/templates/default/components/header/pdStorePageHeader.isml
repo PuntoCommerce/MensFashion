@@ -25,7 +25,7 @@
                                 alt="${Resource.msg('global.storename', 'common', null)}" />
                         </a>
                     </div>
-                    <div class="navbar-header">
+                    <div class="navbar-header icons">
                         <div class="pull-left">
                             <div class="search search-desk">
                                 <isinclude template="components/header/search" />
@@ -35,7 +35,7 @@
 
 
                         <div class="pull-right">
-                            <div class="d-flex justify-content-between align-items-center actionIcons">
+                            <div class="d-lg-flex justify-content-between align-items-center actionIcons">
 
                                 <div class="search search-responsive">
                                     <isinclude template="components/header/searchResponsiveButton" />

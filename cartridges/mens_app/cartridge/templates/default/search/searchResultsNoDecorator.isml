@@ -4,18 +4,23 @@
 
 <!--- Search Results Banner --->
 <isif condition="${pdict.productSearch.isCategorySearch}">
-    <div class="hero slant-down search-banner d-none d-sm-block"
-        <!--- If no image, default is specified in search.scss > .search-banner --->
+    <div class="hero slant-down search-banner d-none d-sm-block" <!--- If no image, default is specified in search.scss>
+        .search-banner --->
         <isif condition="${pdict.productSearch.bannerImageUrl}">
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
         </isif>
+<<<<<<< HEAD
     >   
+        <iscomment> <h1 class="header page-title">
+=======
+        >
         <h1 class="header page-title">
+>>>>>>> e40ecbba2ad6e3990e1fe17576dff59acdb0d205
             ${pdict.productSearch.category.name}
-        </h1>
+        </h1> </iscomment>
     </div>
-<iselse>
-    <isslot id="search-result-banner-m" description="Banner for search results" context="global" />
+    <iselse>
+        <isslot id="search-result-banner-m" description="Banner for search results" context="global" />
 </isif>
 
 <div class="container-custom-plp search-results">
@@ -25,12 +30,16 @@
                 <ul class="nav nav-tabs nav-fill" role="tablist">
 
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active product-search" href="#product-search-results" aria-controls="product-search-results" data-toggle="tab" role="tab" aria-selected="true" tabindex="0" id="product-tab">
+                        <a class="nav-link active product-search" href="#product-search-results"
+                            aria-controls="product-search-results" data-toggle="tab" role="tab" aria-selected="true"
+                            tabindex="0" id="product-tab">
                             ${Resource.msg('tab.nav.search.productsresults', 'search', null)}
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link content-search" href="#content-search-results-pane" aria-controls="content-search-results-pane" data-toggle="tab" role="tab" aria-selected="false" tabindex="-1" id="articles-tab"
+                        <a class="nav-link content-search" href="#content-search-results-pane"
+                            aria-controls="content-search-results-pane" data-toggle="tab" role="tab"
+                            aria-selected="false" tabindex="-1" id="articles-tab"
                             data-url="${URLUtils.url('Search-Content', 'q', pdict.productSearch.searchKeywords, 'startingPage', 0)}">
                             ${Resource.msg('tab.nav.search.artclesresults', 'search', null)}
                         </a>
@@ -41,81 +50,123 @@
     </div>
     <div class="row">
         <div class="tab-content col-12">
-            <div class="tab-pane container active" id="product-search-results" role="tabpanel" aria-labelledby="product-tab">
+            <div class="tab-pane container active" id="product-search-results" role="tabpanel"
+                aria-labelledby="product-tab">
 
-                    <isif condition="${pdict.productSearch.productIds.length > 0}">
-                        <div class="row grid-header">
-                           <div class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
-                                <isinclude url="${URLUtils.url("Search-Breadcrums", "cgid", pdict.productSearch.category.id)}"/>
-                            </div>
-                            <div class='grid-header__column grid-header__column--1'>
-                                <button class='filters grid-header__column-item grid-header__column-item--right' onclick="toggleFilters()">
+                <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="row grid-header">
+                        <div
+                            class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
+                            <isinclude url="${URLUtils.url(" Search-Breadcrums", "cgid", pdict.productSearch.category.id)}" />
+                        </div>
+                        <div class='grid-header__column grid-header__column--1 grid-header__column--mobile'>
+                            <isif condition="${pdict.productSearch.category.name.length == 25 || pdict.productSearch.category.name.length == 17 || pdict.productSearch.category.name.length == 18}">
+                                <div class="grid-header__column-reverse">
+                                    <h1 class="page-title-mobile d-block d-sm-none">
+                                        ${pdict.productSearch.category.name}
+                                    </h1>
+                                    <button
+                                        class='filters grid-header__column-item grid-header__column-item--right grid-header__column-button'
+                                        onclick="toggleFilters()">
+                                        <p class='filters__text--length'>
+                                            FILTROS
+                                        </p>
+                                        <svg class="filters__icon d-none d-sm-block" id="filter" viewBox="0 0 22 22"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12 15C12 15.2652 11.8946 15.5196 11.7071 15.7071C11.5196 15.8946 11.2652 16 11 16C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V12H7C6.73478 12 6.48043 11.8946 6.29289 11.7071C6.10536 11.5196 6 11.2652 6 11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H10V7C10 6.73478 10.1054 6.48043 10.2929 6.29289C10.4804 6.10536 10.7348 6 11 6C11.2652 6 11.5196 6.10536 11.7071 6.29289C11.8946 6.48043 12 6.73478 12 7V10H15C15.2652 10 15.5196 10.1054 15.7071 10.2929C15.8946 10.4804 16 10.7348 16 11C16 11.2652 15.8946 11.5196 15.7071 11.7071C15.5196 11.8946 15.2652 12 15 12H12V15Z"
+                                                fill="black" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            <iselse/>
+                                <button class='filters grid-header__column-item grid-header__column-item--right'
+                                    onclick="toggleFilters()">
                                     <p class='filters__text'>
                                         FILTROS
                                     </p>
-                                    <svg class="filters__icon d-none d-sm-block" id="filter"  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12 15C12 15.2652 11.8946 15.5196 11.7071 15.7071C11.5196 15.8946 11.2652 16 11 16C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V12H7C6.73478 12 6.48043 11.8946 6.29289 11.7071C6.10536 11.5196 6 11.2652 6 11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H10V7C10 6.73478 10.1054 6.48043 10.2929 6.29289C10.4804 6.10536 10.7348 6 11 6C11.2652 6 11.5196 6.10536 11.7071 6.29289C11.8946 6.48043 12 6.73478 12 7V10H15C15.2652 10 15.5196 10.1054 15.7071 10.2929C15.8946 10.4804 16 10.7348 16 11C16 11.2652 15.8946 11.5196 15.7071 11.7071C15.5196 11.8946 15.2652 12 15 12H12V15Z" fill="black"/>
+                                    <svg class="filters__icon d-none d-sm-block" id="filter" viewBox="0 0 22 22"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12 15C12 15.2652 11.8946 15.5196 11.7071 15.7071C11.5196 15.8946 11.2652 16 11 16C10.7348 16 10.4804 15.8946 10.2929 15.7071C10.1054 15.5196 10 15.2652 10 15V12H7C6.73478 12 6.48043 11.8946 6.29289 11.7071C6.10536 11.5196 6 11.2652 6 11C6 10.7348 6.10536 10.4804 6.29289 10.2929C6.48043 10.1054 6.73478 10 7 10H10V7C10 6.73478 10.1054 6.48043 10.2929 6.29289C10.4804 6.10536 10.7348 6 11 6C11.2652 6 11.5196 6.10536 11.7071 6.29289C11.8946 6.48043 12 6.73478 12 7V10H15C15.2652 10 15.5196 10.1054 15.7071 10.2929C15.8946 10.4804 16 10.7348 16 11C16 11.2652 15.8946 11.5196 15.7071 11.7071C15.5196 11.8946 15.2652 12 15 12H12V15Z"
+                                            fill="black" />
                                     </svg>
                                 </button>
-                                <h1 class="page-title-mobile d-block d-sm-none"><isprint value="${pdict.apiProductSearch.category ? pdict.apiProductSearch.category.displayName : pdict.apiProductSearch.searchPhrase}" encoding="off"/>
-                                </h1>  
-                                <div class='breadcrumb grid-header__column-item grid-header__column-item--right d-none d-sm-block'>
-                                    <isinclude url="${URLUtils.url("Search-Breadcrums", "cgid", pdict.productSearch.category.id)}"/>
-                                </div>
-                                <div class="result-count text-center grid-header__column-item grid-header__column-item--right d-none d-sm-block">
-                                    <iselse>
-                                        <div class="row grid-header justify-content-center">
-                                            <div class="result-count col">
-                                    </isif>
-                                    <isinclude template="search/resultsCount" />
-                                </div>
+                                <iscomment>
+                                    <h1 class="page-title-mobile d-block d-sm-none">
+                                        <isprint
+                                            value="${pdict.apiProductSearch.category ? pdict.apiProductSearch.category.displayName : pdict.apiProductSearch.searchPhrase}" />
+                                    </h1>
+                                </iscomment>
+                                <h1 class="page-title-mobile d-block d-sm-none">
+                                    ${pdict.productSearch.category.name}
+                                </h1>
+                            </isif>
+                            <div
+                                class='breadcrumb grid-header__column-item grid-header__column-item--right d-none d-sm-block'>
+                                <isinclude
+                                    url="${URLUtils.url('Search-Breadcrums', 'cgid', pdict.productSearch.category.id)}" />
                             </div>
-                            
-                            <div class='grid-header__column grid-header__column--2'>
-                                <isif condition="${pdict.productSearch.productIds.length > 0}">
-                                    <div class="sort d-none d-sm-block">
-                                    <p class='sort__text'>
-                                        Ordenar por:
-                                    </p>
-                                        <isinclude template="search/sortOrderMenu" />
-                                    </div>
-
-                                    <iscomment> <div class="text-right d-md-none">
-                                        <button type="button" class="btn btn-primary filter-results col-12">
-                                            ${Resource.msg('button.filter', 'search', null)}
-                                        </button>
-                                    </div> </iscomment>
-                                </isif>
-                            </div>
-
-                        </div>
-
-                <isif condition="${pdict.productSearch.productIds.length > 0}">
-                    <!--- Refinement bar --->
-                    <div class="row row-no-margin">
-                        <div class="refinement-bar col-md-4" id="refinement-bar">
-                            <isinclude url="${pdict.refineurl}"/>
-                        </div>
-
-                        <div class="col-sm-12 col-md-9 product-grid--full-width">
-                             <!--- Selected filters bar --->
-                             <iscomment> <div class="row filter-bar d-md-none ">
-                                 <isinclude template="search/filterBar" />
-                             </div> </iscomment>
-
-                             <!--- Product Grid --->
-                             <div class="row row-no-margin product-grid product-grid--full-width" itemtype="http://schema.org/SomeProducts" itemid="#product">
-                                 <isinclude template="search/productGrid" />
-                             </div>
-                        </div>
-                    </div>
+                            <div
+                                class="result-count text-center grid-header__column-item grid-header__column-item--right d-none d-sm-block">
+                                <iselse>
+                                    <div class="row grid-header justify-content-center">
+                                        <div class="result-count col">
                 </isif>
+                <isinclude template="search/resultsCount" />
             </div>
-            <!--- Content Grid --->
-            <div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-labelledby="articles-tab">
-                <div id="content-search-results" class="content-grid-header"></div>
+        </div>
+
+        <div class='grid-header__column grid-header__column--2'>
+            <isif condition="${pdict.productSearch.productIds.length > 0}">
+                <div class="sort d-none d-sm-block">
+                    <p class='sort__text'>
+                        Ordenar por:
+                    </p>
+                    <isinclude template="search/sortOrderMenu" />
+                </div>
+
+                <iscomment>
+                    <div class="text-right d-md-none">
+                        <button type="button" class="btn btn-primary filter-results col-12">
+                            ${Resource.msg('button.filter', 'search', null)}
+                        </button>
+                    </div>
+                </iscomment>
+            </isif>
+        </div>
+
+    </div>
+
+    <isif condition="${pdict.productSearch.productIds.length > 0}">
+        <!--- Refinement bar --->
+        <div class="row row-no-margin">
+            <div class="refinement-bar col-md-4" id="refinement-bar">
+                <isinclude url="${pdict.refineurl}" />
             </div>
 
+            <div class="col-sm-12 col-md-9 product-grid--full-width">
+                <!--- Selected filters bar --->
+                <iscomment>
+                    <div class="row filter-bar d-md-none ">
+                        <isinclude template="search/filterBar" />
+                    </div>
+                </iscomment>
+
+                <!--- Product Grid --->
+                <div class="row row-no-margin product-grid product-grid--full-width"
+                    itemtype="http://schema.org/SomeProducts" itemid="#product">
+                    <isinclude template="search/productGrid" />
+                </div>
+            </div>
         </div>
-    </div>
+    </isif>
+</div>
+<!--- Content Grid --->
+<div class="tab-pane container" id="content-search-results-pane" role="tabpanel" aria-labelledby="articles-tab">
+    <div id="content-search-results" class="content-grid-header"></div>
+</div>
+
+</div>
+</div>
 </div>

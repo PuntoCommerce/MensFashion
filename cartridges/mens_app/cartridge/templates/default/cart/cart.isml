@@ -24,7 +24,7 @@
         <span>${Resource.msg('title.cart','checkout',null)}</span>
     </div>
 
-    <div class="row d-flex justify-content-center aling-items-center checkout__cart pt-5 pb-5">
+    <div class="row d-flex justify-content-center aling-items-center checkout__cart pt-4 pb-5">
         <div class="col-10">
             <div class="container checkout__bottomBorder checkout__bottomBorder--noResponsive">
                 <div class="row cart-header">

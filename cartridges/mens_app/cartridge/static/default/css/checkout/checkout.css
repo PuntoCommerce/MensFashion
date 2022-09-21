@@ -853,3 +853,8 @@ span.ship-to-phone {
 .form-check.start-lines:has(input:checked) + .shipping-method-pricing {
   display: block;
 }
+.checkout__order--product .strike-through span {
+  color: #3c3c3c;
+  text-decoration: line-through;
+  text-decoration-color: #3c3c3c;
+}
