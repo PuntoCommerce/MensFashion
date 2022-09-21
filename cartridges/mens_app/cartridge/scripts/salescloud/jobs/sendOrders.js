@@ -1,12 +1,23 @@
 // const collections = require("*/cartridge/scripts/util/collections");
 const OrderMgr = require("dw/order/OrderMgr");
+const StoreMgr = require("dw/catalog/StoreMgr");
 const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
 
 const handleShipment = (shipment) => {
   if (shipment.shippingMethodID == "pickup") {
-    return { pickUpStoreId: shipment.shippingAddress.lastName };
+    let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
+
+    return {
+      pickUpStoreId: store.ID,
+      storeShippingStreet: store.address1,
+      storeShippingPostalCode: store.postalCode,
+      storeShippingCity: store.city,
+      storeShippingState: store.stateCode,
+
+      shippingCost: shipment.shippingTotalNetPrice.value,
+    };
   }
   return {
     shippingStreet: shipment.shippingAddress.address1,
@@ -39,15 +50,16 @@ exports.execute = () => {
   currentDate.setDate(currentDate.getDate() - 15);
 
   let orders = OrderMgr.searchOrders(
-    "creationDate > {0} AND custom.SalesCloudOrderId != {1} AND paymentStatus = {2}",
+    "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND paymentStatus = {2}",
     "creationDate desc",
     currentDate,
-    undefined,
+    null,
     Order.PAYMENT_STATUS_PAID
   );
 
   let order;
   let body;
+  let salesOrderId;
   while (orders.hasNext()) {
     order = orders.next();
     order = OrderMgr.getOrder(order.orderNo);
@@ -67,15 +79,18 @@ exports.execute = () => {
       firstName = order.customer.firstName;
       lastName = order.customer.lastName;
     } else {
-      lastName = order.customerName;
+      firstName = order.customerName;
+      lastName = "No last name";
     }
 
     let defaultShipment = order.defaultShipment;
     let paymentTransaction = order.paymentTransaction;
+    let pricebook =
+      order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
 
     body = {
       account: {
-        FirstName: firstName || "",
+        FirstName: firstName,
         LastName: lastName,
         PersonEmail: order.customerEmail,
         Phone: defaultShipment.shippingAddress.phone,
@@ -85,9 +100,10 @@ exports.execute = () => {
       oppName: order.orderNo,
       cadena: "Men's Fashion",
       products: products,
+      pricebookId: pricebook,
     };
 
-    let salesOrderId = sendOrder(body);
+    salesOrderId = sendOrder(body);
 
     if (!salesOrderId.error) {
       Transaction.wrap(() => {
