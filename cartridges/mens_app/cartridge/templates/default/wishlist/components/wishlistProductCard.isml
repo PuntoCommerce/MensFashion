@@ -54,7 +54,7 @@
         <iscomment> <div class="col-md-8 col-sm-12">
             <isinclude template="wishlist/components/socialsharing" />
         </div> </iscomment>
-       <div class="col-md-4 col-sm-12 card-product-info__footer--button">
+       <div class="card-product-info__footer--button">
          <isif condition="${!!item.master}">
             <isinclude template="wishlist/components/selectAttributesButton">
         <iselse>

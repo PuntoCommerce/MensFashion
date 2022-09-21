@@ -155,7 +155,7 @@
 }
 
 .promo-carousel__wrapper-countdown{
-  padding-right: 155px;
+  padding-right: 130px;
 }
 
 .promo-carousel__title{
@@ -186,9 +186,10 @@
   }
 
   .ITBC-content .btn-ITBC{
-    min-width: 190px;
-    font-size: 20px;
-    padding: 10px 0px;
+    min-width: 180px;
+    font-size: 17px;
+    padding: 1px 0px;
+    letter-spacing: 0
   }
   
   #customBannerCarousel .ITBC-buttons{
@@ -215,6 +216,7 @@
   }
 }
 
+
 @media (max-width: 991px){
 
   .customTextBox-component-container h1{
@@ -235,7 +237,7 @@
   }
 
   .promo-carousel__wrapper-countdown{
-    padding-right: 0;
+    padding-right: 0 !important;
     align-items: center;
   }
 
@@ -252,14 +254,71 @@
 
   .promo-carousel .carousel-title{
     margin-top: 43px;
-  }
-
-  .promo-carousel .btn__small{
-    font-size: 12px;
+    margin-bottom: 0;
   }
 
   .customTextBox-component-container a u{
     text-decoration: none;
   }
 
+  .experience-commerce_layouts-navTabs{
+    margin-top: 35px;
+  }
+
+  .newsletter .container .row{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+
+@media (max-width: 480px){
+  .promo-carousel .btn__small{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 453px){
+  .promo-carousel .btn__small{
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 399px){
+  .promo-carousel .btn__small{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 399px){
+  .promo-carousel .btn__small{
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 345px){
+  .promo-carousel .btn__small{
+    font-size: 8px;
+  }
+}
+
+
+@media (max-width: 332px){
+  .summary__pricing .strike-through span{
+    font-size: 9px !important;
+  }
+}
+
+
+@media (max-width: 1324px){
+  .promo-carousel__wrapper-countdown{
+    padding-right: 95px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1314px){
+  .promo-carousel__wrapper-countdown{
+    padding-right: 80px;
+    align-items: center;
+  }
 }

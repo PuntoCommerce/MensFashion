@@ -64,10 +64,16 @@
   color: #000000;
 }
 
-#menuDesk .dropdown-menu .category-item.item a,
-#menuDesk .nav-item a {
+#menuDesk .dropdown-menu .category-item.item a, #menuDesk .dropdown-menu .sub-category-item.item a{
   color: #000000;
-  font-family: "Avenir-LT-Std";
+  font-family: 'Avenir-Next' !important;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+#menuDesk .nav-item a{
+  color: #000000;
+  font-family: "Avenir-Bold" !important;
   font-size: 14px;
   font-weight: 900;
 }

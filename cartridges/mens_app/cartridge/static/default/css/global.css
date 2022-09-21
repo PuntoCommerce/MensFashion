@@ -2118,6 +2118,23 @@ pre code {
   }
 }
 
+@media (max-width: 400px) {
+  .checkoutRightCheck {
+    padding-left: 1rem !important;
+  }
+
+  .checkoutLeftCheck {
+    padding-left: 1rem !important;
+  }
+
+  .login-checkout {
+    padding: 0px 20px !important;
+  }
+
+  .form-checkout .checkout--topBorder h3{
+    font-size: 22px;
+  }
+}
 @media (max-width: 768.98px) {
   .table-responsive-md {
     display: block;
@@ -2147,6 +2164,11 @@ pre code {
     padding: 27px 35px 0 34px;
   }
 
+  .promo-container {
+    margin-bottom: 0 !important;
+  }
+
+  }
   @media (max-width: 768px) {
     .container.account-sections .row {
       padding: 5px 22px !important;
@@ -2163,7 +2185,7 @@ pre code {
     .card-wishlist {
       margin-top: 10px;
     }
-  }
+  
 
   .container.account-sections .row.addressBottom {
     padding: 0 35px 0 34px !important;
@@ -2395,12 +2417,20 @@ pre code {
   }
 
   .checkoutRightCheck {
-    padding-left: 2rem !important;
+    padding-left: 2rem ;
   }
 
   .experience-commerce_layouts-bannerCarousel .carousel-control-prev,
-  .experience-commerce_layouts-bannerCarousel .carousel-control-next {
+  .experience-commerce_layouts-bannerCarousel .carousel-control-next,
+  .experience-commerce_layouts-carousel .carousel-control-prev,
+  .experience-commerce_layouts-carousel .carousel-control-next,
+  .promo-carousel .carousel-control-prev,
+  .promo-carousel .carousel-control-next {
     display: none !important;
+  }
+
+  .wishlist-container .login-page .wishlistItemCards{
+    margin: 0 !important;
   }
 }
 
@@ -4393,6 +4423,10 @@ input[type="submit"].btn-block {
   content: "";
 }
 
+.checkout_login .custom-control-label:before{
+  top: 0.15rem;
+}
+
 .custom-checkbox .custom-control-label:before {
   border-radius: 0.1875rem;
 }
@@ -5927,9 +5961,9 @@ a.badge-dark:focus {
 }
 
 .alert-success {
-  color: #004714;
-  background-color: #cce7d4;
-  border-color: #b8dec3;
+  color: #299106;
+  background-color: #d4d4d4;
+  border-color: none;
 }
 
 .alert-success hr {
@@ -5937,13 +5971,13 @@ a.badge-dark:focus {
 }
 
 .alert-success .alert-link {
-  color: #001406;
+  color: #299106;
 }
 
 .alert-info {
   color: #0c5460;
-  background-color: #d1ecf1;
-  border-color: #bee5eb;
+  background-color: #d4d4d4;
+  border-color: none;
 }
 
 .alert-info hr {
@@ -5956,8 +5990,8 @@ a.badge-dark:focus {
 
 .alert-warning {
   color: #856404;
-  background-color: #fff3cd;
-  border-color: #ffeeba;
+  background-color: #d4d4d4;
+  border-color: none;
 }
 
 .alert-warning hr {
@@ -5969,9 +6003,9 @@ a.badge-dark:focus {
 }
 
 .alert-danger {
-  color: #6a0000;
-  background-color: #f5cccc;
-  border-color: #f1b8b8;
+  color: #ff0000;
+  background-color: #d4d4d4;
+  border-color: none;
 }
 
 .alert-danger hr {
@@ -5984,7 +6018,7 @@ a.badge-dark:focus {
 
 .alert-light {
   color: #818182;
-  background-color: #fefefe;
+  background-color: #d4d4d4;
   border-color: #fdfdfe;
 }
 
@@ -5998,7 +6032,7 @@ a.badge-dark:focus {
 
 .alert-dark {
   color: #1b1e21;
-  background-color: #d6d8d9;
+  background-color: #C2C3C6;
   border-color: #c6c8ca;
 }
 
@@ -20091,7 +20125,7 @@ button.close:focus {
 }
 
 .product-detail .product-id {
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .collapsible-xl.active .card-body,
@@ -20117,7 +20151,7 @@ button.close:focus {
   font-family: "AvenirLTStd-Heavy";
 }
 
-.checkout #password-reset {
+.checkout #password-reset, .forgot-password  a {
   color: #0280c8;
   font-size: 14px;
   text-align: left !important;
@@ -20151,7 +20185,7 @@ button.close:focus {
 }
 
 .cart-page .line-item-name {
-  font-family: "Avenir-Next";
+  font-family: "Avenir-Bold";
   font-weight: 900;
 }
 
@@ -20289,14 +20323,18 @@ button.close:focus {
 }
 @media (max-width: 1200px) {
   .carousel-inner .product-tile .tile-image {
-    height: 326px;
+    height: auto !important;
   }
 }
 .carousel-inner .product-tile .tile-image {
   height: 640px;
 }
-.promo-carousel .btn.btn--gray.btn__small {
+
+.promo-carousel .btn.btn--gray.btn__small:hover {
   background-color: #fff;
+}
+.promo-carousel .btn.btn--gray.btn__small:hover {
+  color: #000;
 }
 .product-container .product-tile .strike-through span {
   font-size: 18px;
@@ -20309,3 +20347,14 @@ button.close:focus {
   font-size: 20px;
   font-weight: 900;
 }
+.wishlist-container .login-page .wishlistItemCards{
+  margin: 13px 20px 0 40px;
+}
+.wishlist-container .login-page .login-form-nav{
+  margin: 13px 40px 0 20px;
+}
+.wishlistLoginText{
+  margin: 33px 50px 0 50px;
+  font-family: 'AvenirLTStd-Heavy';
+}
+

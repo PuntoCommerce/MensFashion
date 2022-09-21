@@ -217,6 +217,10 @@ footer .socialMedia-paymentMethods {
     padding-left: 20px;
 }
 
+.items-colum-direction .customTextBox-component-container .item {
+    padding: 0 !important;
+    margin: 0;
+}
 @media (min-width: 1200px) {
     footer .container {
         margin-top: 20px;
@@ -287,7 +291,6 @@ footer .socialMedia-paymentMethods {
 
     .customTextBox-component-container p{
         margin-bottom: 0;
-        font-size: 25px;
     }
 
     .items-colum-direction .customTextBox-component-container .item {
@@ -447,3 +450,4 @@ footer .socialMedia-paymentMethods {
         font-size: 16px;
     }
 }
+

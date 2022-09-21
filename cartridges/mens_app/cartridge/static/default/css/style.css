@@ -739,6 +739,10 @@ footer .socialMedia-paymentMethods {
 #footercontent .content-asset {
   padding-left: 20px; }
 
+.items-colum-direction .customTextBox-component-container .item {
+  padding: 0 !important;
+  margin: 0; }
+
 @media (min-width: 1200px) {
   footer .container {
     margin-top: 20px;
@@ -783,8 +787,7 @@ footer .socialMedia-paymentMethods {
   .socialMedia-paymentMethods-mobile {
     display: block; }
   .customTextBox-component-container p {
-    margin-bottom: 0;
-    font-size: 25px; }
+    margin-bottom: 0; }
   .items-colum-direction .customTextBox-component-container .item {
     padding: 1rem 5px 1rem 2px !important;
     margin: 10px; }
@@ -931,10 +934,15 @@ footer .socialMedia-paymentMethods {
 #menuDesk .nav-item.last_category_item .sub-category-item a {
   color: #000000; }
 
-#menuDesk .dropdown-menu .category-item.item a,
+#menuDesk .dropdown-menu .category-item.item a, #menuDesk .dropdown-menu .sub-category-item.item a {
+  color: #000000;
+  font-family: 'Avenir-Next' !important;
+  font-size: 14px;
+  font-weight: 900; }
+
 #menuDesk .nav-item a {
   color: #000000;
-  font-family: "Avenir-LT-Std";
+  font-family: "Avenir-Bold" !important;
   font-size: 14px;
   font-weight: 900; }
 
@@ -1816,7 +1824,7 @@ ul {
 
 .promo-container {
   background-color: #D81E1F;
-  margin: 0; }
+  margin-bottom: 30px; }
 
 .promo-carousel {
   margin: 0 auto;
@@ -2201,7 +2209,7 @@ ul {
   top: -150px !important; }
 
 .promo-carousel__wrapper-countdown {
-  padding-right: 155px; }
+  padding-right: 130px; }
 
 .promo-carousel__title {
   padding: 0 0 10px 70px;
@@ -2223,9 +2231,10 @@ ul {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
-    min-width: 190px;
-    font-size: 20px;
-    padding: 10px 0px; }
+    min-width: 180px;
+    font-size: 17px;
+    padding: 1px 0px;
+    letter-spacing: 0; }
   #customBannerCarousel .ITBC-buttons {
     position: initial;
     margin-top: 25px; }
@@ -2251,7 +2260,7 @@ ul {
   .experience-commerce_layouts-mobileGrid2r1c:nth-of-type(2n) .region {
     margin-bottom: 0 !important; }
   .promo-carousel__wrapper-countdown {
-    padding-right: 0;
+    padding-right: 0 !important;
     align-items: center; }
   .promo-carousel__countdown {
     margin-right: 0; }
@@ -2260,11 +2269,49 @@ ul {
   .promo-carousel .row {
     justify-content: center; }
   .promo-carousel .carousel-title {
-    margin-top: 43px; }
-  .promo-carousel .btn__small {
-    font-size: 12px; }
+    margin-top: 43px;
+    margin-bottom: 0; }
   .customTextBox-component-container a u {
-    text-decoration: none; } }
+    text-decoration: none; }
+  .experience-commerce_layouts-navTabs {
+    margin-top: 35px; }
+  .newsletter .container .row {
+    margin-left: 10px !important;
+    margin-right: 10px !important; } }
+
+@media (max-width: 480px) {
+  .promo-carousel .btn__small {
+    font-size: 13px; } }
+
+@media (max-width: 453px) {
+  .promo-carousel .btn__small {
+    font-size: 11px; } }
+
+@media (max-width: 399px) {
+  .promo-carousel .btn__small {
+    font-size: 10px; } }
+
+@media (max-width: 399px) {
+  .promo-carousel .btn__small {
+    font-size: 9px; } }
+
+@media (max-width: 345px) {
+  .promo-carousel .btn__small {
+    font-size: 8px; } }
+
+@media (max-width: 332px) {
+  .summary__pricing .strike-through span {
+    font-size: 9px !important; } }
+
+@media (max-width: 1324px) {
+  .promo-carousel__wrapper-countdown {
+    padding-right: 95px;
+    align-items: center; } }
+
+@media (max-width: 1314px) {
+  .promo-carousel__wrapper-countdown {
+    padding-right: 80px;
+    align-items: center; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
