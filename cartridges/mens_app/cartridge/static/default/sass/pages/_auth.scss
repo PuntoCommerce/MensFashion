@@ -12,6 +12,7 @@ a {
    font-size: 18px;
    width: 100%;
    background: none;
+   white-space: nowrap;
 
    &:hover {
     background-color: #000;
@@ -31,4 +32,24 @@ a {
     margin-bottom: 30px;
   }
  }
+}
+
+
+.oauth-google .fa.fa-google,  .oauth-google--button span, 
+.oauth-facebook .fa.fa-facebook-official, .oauth-facebook--button{
+  color: #000000;
+}
+
+@media (max-width: 376px){
+  .oauth-google--button span,
+  .oauth-facebook--button span{
+      font-size: 12px;
+    }
+}
+
+@media (max-width: 356px){
+  .oauth-google--button span,
+  .oauth-facebook--button span{
+      font-size: 10px;
+    }
 }

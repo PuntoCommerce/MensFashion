@@ -22,6 +22,9 @@
       </div>
     </iscomment>
     <form role="form">
+      <div class="newsletterMobCont">
+        <p class="newsletterMobText">Suscríbete a Nuestro Newsletter<p>
+      </div>  
       <div class="row">
         <div class="input-group">
           <div class="d-flex justify-content-start align-items-center input-button">

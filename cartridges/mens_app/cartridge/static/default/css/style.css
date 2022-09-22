@@ -583,7 +583,7 @@ footer .newsletter {
   background-color: #231f20;
   border: 1px solid #ffffff;
   border-radius: 0px;
-  height: 32px;
+  height: 42px;
   width: 268px;
   color: #ffffff; }
 
@@ -847,7 +847,7 @@ footer .socialMedia-paymentMethods {
   .navbar-header {
     padding-right: 0px !important; }
   .newsletter {
-    padding: 20px !important; }
+    padding: 12px !important; }
   .newsletter .form {
     padding: 0 65px; } }
 
@@ -1439,7 +1439,7 @@ ul {
     color: #444444 !important;
     font-size: 10px !important; }
   .product-tile .tile-body .price {
-    font-size: 12PX; } }
+    font-size: 12px; } }
 
 .refinement-bar {
   display: none !important;
@@ -1828,7 +1828,7 @@ ul {
 
 .promo-carousel {
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
   width: 95%; }
   @media only screen and (min-width: 37.5em) {
     .promo-carousel {
@@ -1955,11 +1955,11 @@ ul {
 
 .campaign-banner {
   background-color: #231f20 !important;
-  height: 50px;
+  height: 40px;
   display: flex; }
 
 .campaign-banner .campaign-banner-container {
-  height: 50px !important;
+  height: 40px !important;
   justify-content: center !important;
   align-items: center !important; }
 
@@ -2061,9 +2061,10 @@ ul {
   align-items: flex-end;
   display: flex; }
   .summary__swatches .swatch-circle {
-    height: 15px;
+    height: 20px;
     margin: 0 5px;
-    width: 15px; }
+    width: 20px;
+    border: 1px solid #000000; }
   .summary__swatches .color-swatches {
     min-height: 0 !important; }
 
@@ -2087,6 +2088,11 @@ ul {
     display: none; }
     .wishlist__Unselected--show, .wishlist__Selected--show {
       display: block; }
+
+@media (max-width: 543px) {
+  .summary__swatches .swatch-circle {
+    height: 18px;
+    width: 18px; } }
 
 /* **************************** HOME **************************** */
 #maincontent .container {
@@ -2186,9 +2192,6 @@ ul {
 .promo-carousel__countdown__item .item .type {
   font-family: "AvenirLTStd-Heavy" !important; }
 
-.experience-component.experience-commerce_layouts-mobileGrid2r1c {
-  margin-bottom: 15px; }
-
 .product-tile.summary {
   position: relative; }
 
@@ -2199,6 +2202,9 @@ ul {
 .isFullWidth .carousel-control-next {
   right: 0% !important;
   top: 47% !important; }
+
+.summary__footer .btn__small {
+  white-space: nowrap; }
 
 .promo-carousel .carousel-control-prev {
   left: -20px !important;
@@ -2224,6 +2230,9 @@ ul {
 .newsletter .container .markup {
   align-items: flex-start !important; }
 
+.experience-component.experience-commerce_layouts-mobileGrid2r1c {
+  margin-bottom: 14px; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
@@ -2231,7 +2240,7 @@ ul {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
   .ITBC-content .btn-ITBC {
-    min-width: 180px;
+    min-width: 165px;
     font-size: 17px;
     padding: 1px 0px;
     letter-spacing: 0; }
@@ -2247,7 +2256,13 @@ ul {
   .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
     justify-content: flex-end !important; }
   .ITBC-content h1 {
-    font-size: 40px; } }
+    font-size: 40px; }
+  .experience-commerce_layouts-navTabs .summary__name .pdp-link .link {
+    font-size: 20px !important; }
+  .experience-commerce_layouts-navTabs .strike-through .value, .experience-commerce_layouts-navTabs .sales .value {
+    font-size: 20px !important; }
+  .experience-commerce_layouts-navTabs .summary__footer .btn__small {
+    font-size: 20px; } }
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
@@ -2265,11 +2280,11 @@ ul {
   .promo-carousel__countdown {
     margin-right: 0; }
   .promo-carousel__title {
-    padding: 0 0 16px 0; }
+    padding: 0 0 7px 0; }
   .promo-carousel .row {
     justify-content: center; }
   .promo-carousel .carousel-title {
-    margin-top: 43px;
+    margin-top: 30px;
     margin-bottom: 0; }
   .customTextBox-component-container a u {
     text-decoration: none; }
@@ -2277,7 +2292,11 @@ ul {
     margin-top: 35px; }
   .newsletter .container .row {
     margin-left: 10px !important;
-    margin-right: 10px !important; } }
+    margin-right: 10px !important; }
+  .promo-carousel .carousel.indicators-xs {
+    padding-bottom: 2rem; }
+  .experience-component.experience-commerce_layouts-mobileGrid2r1c {
+    margin-bottom: 0; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
@@ -2285,23 +2304,19 @@ ul {
 
 @media (max-width: 453px) {
   .promo-carousel .btn__small {
-    font-size: 11px; } }
+    font-size: 12px; } }
 
-@media (max-width: 399px) {
-  .promo-carousel .btn__small {
-    font-size: 10px; } }
-
-@media (max-width: 399px) {
-  .promo-carousel .btn__small {
-    font-size: 9px; } }
+@media (max-width: 370px) {
+  .summary__footer .btn__small {
+    font-size: 12px; } }
 
 @media (max-width: 345px) {
   .promo-carousel .btn__small {
-    font-size: 8px; } }
+    font-size: 10px; } }
 
-@media (max-width: 332px) {
-  .summary__pricing .strike-through span {
-    font-size: 9px !important; } }
+@media (max-width: 330px) {
+  .promo-carousel .btn__small {
+    font-size: 8px; } }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -2331,23 +2346,34 @@ ul {
 .swatches {
   display: flex; }
 
+.summary__footer .btn__small {
+  white-space: nowrap; }
+
 @media only screen and (min-width: 37.5em) {
   .grid-header__column-item--right {
     margin-right: 150px; } }
 
 .summary__name {
-  height: 50px; }
+  height: 32px; }
 
 .container-custom-plp .highlight {
   left: 5px; }
 
-@media only screen and (max-width: 420px) {
-  .btn__small {
-    font-size: 10px; } }
-
 @media only screen and (max-width: 768px) {
   .summary__name {
-    height: 40px; } }
+    height: 29px; } }
+
+@media (max-width: 420px) {
+  .summary__footer .btn__small {
+    font-size: 12px; } }
+
+@media (max-width: 380px) {
+  .summary__footer .btn__small {
+    font-size: 11px; } }
+
+@media (max-width: 360px) {
+  .summary__footer .btn__small {
+    font-size: 10px; } }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
@@ -2915,7 +2941,8 @@ a .oauth-facebook--button {
   height: 40px;
   font-size: 18px;
   width: 100%;
-  background: none; }
+  background: none;
+  white-space: nowrap; }
   a .oauth-google--button:hover,
   a .oauth-facebook--button:hover {
     background-color: #000;
@@ -2927,3 +2954,17 @@ a .oauth-google--button {
 
 a .oauth-facebook--button {
   margin-bottom: 30px; }
+
+.oauth-google .fa.fa-google, .oauth-google--button span,
+.oauth-facebook .fa.fa-facebook-official, .oauth-facebook--button {
+  color: #000000; }
+
+@media (max-width: 376px) {
+  .oauth-google--button span,
+  .oauth-facebook--button span {
+    font-size: 12px; } }
+
+@media (max-width: 356px) {
+  .oauth-google--button span,
+  .oauth-facebook--button span {
+    font-size: 10px; } }

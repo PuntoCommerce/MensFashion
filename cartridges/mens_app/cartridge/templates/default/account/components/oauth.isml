@@ -10,7 +10,7 @@
         class="oauth-facebook" role="button" aria-pressed="true">
         <button class="oauth-facebook--button" type="button">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
-            ${Resource.msg('button.text.oauth.facebook', 'login', null)}
+            <span>${Resource.msg('button.text.oauth.facebook', 'login', null)}</span>
         </button>
     </a>
 </form>

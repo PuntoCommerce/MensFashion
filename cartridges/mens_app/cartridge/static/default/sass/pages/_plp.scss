@@ -23,13 +23,17 @@
   display: flex;
 }
 
+.summary__footer .btn__small{
+  white-space: nowrap;
+}
+
 @media only screen and (min-width: 37.5em) {
     .grid-header__column-item--right {
       margin-right: 150px; } 
   }
 
   .summary__name{
-    height: 50px;
+    height: 32px;
   }
 
 
@@ -37,14 +41,27 @@
       left: 5px;
   }  
 
-@media only screen and (max-width: 420px) {
-  .btn__small {
-    font-size: 10px;
-  }
-}
 
 @media only screen and (max-width: 768px) {
   .summary__name{
-    height: 40px;
+    height: 29px;
+  }
+}
+
+@media (max-width: 420px){
+  .summary__footer .btn__small{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px){
+  .summary__footer .btn__small{
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px){
+  .summary__footer .btn__small{
+    font-size: 10px;
   }
 }

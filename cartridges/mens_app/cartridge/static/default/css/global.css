@@ -20321,20 +20321,27 @@ button.close:focus {
   transform: translate(-50%, -50%);
   padding: 1rem;
 }
+.carousel-inner .product-tile .tile-image {
+  height: 520px;
+  object-fit: contain;
+}
+
 @media (max-width: 1200px) {
   .carousel-inner .product-tile .tile-image {
-    height: auto !important;
+    height: 245px;
+    object-fit: contain;
   }
-}
-.carousel-inner .product-tile .tile-image {
-  height: 640px;
+  .experience-commerce_layouts-navTabs .carousel-inner .product-tile .tile-image{
+    height:auto;
+    object-fit: contain;
+  }
 }
 
 .promo-carousel .btn.btn--gray.btn__small:hover {
-  background-color: #fff;
+  background-color: #000;
 }
 .promo-carousel .btn.btn--gray.btn__small:hover {
-  color: #000;
+  color: #fff;
 }
 .product-container .product-tile .strike-through span {
   font-size: 18px;

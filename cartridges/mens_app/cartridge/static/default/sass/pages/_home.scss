@@ -123,9 +123,6 @@
 .promo-carousel__countdown__item .item .type {
   font-family: nth($text-font-stack,$avenir-LT-Heavy)!important ; 
 }
-.experience-component.experience-commerce_layouts-mobileGrid2r1c {
-  margin-bottom: 15px;
-}
 .product-tile.summary {
   position: relative;
 }
@@ -140,6 +137,9 @@
   }
 }
 
+.summary__footer .btn__small{
+  white-space: nowrap;
+}
 
 .promo-carousel{
 
@@ -175,6 +175,10 @@
   align-items: flex-start !important;
 }
 
+.experience-component.experience-commerce_layouts-mobileGrid2r1c{
+  margin-bottom: 14px;
+}
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
@@ -186,7 +190,7 @@
   }
 
   .ITBC-content .btn-ITBC{
-    min-width: 180px;
+    min-width: 165px;
     font-size: 17px;
     padding: 1px 0px;
     letter-spacing: 0
@@ -213,6 +217,18 @@
 
   .ITBC-content h1{
     font-size: 40px;
+  }
+
+  .experience-commerce_layouts-navTabs .summary__name .pdp-link .link{
+    font-size: 20px !important;
+  }
+  
+  .experience-commerce_layouts-navTabs .strike-through .value, .experience-commerce_layouts-navTabs .sales .value{
+    font-size: 20px !important;
+  }
+
+  .experience-commerce_layouts-navTabs .summary__footer .btn__small{
+    font-size: 20px;
   }
 }
 
@@ -245,7 +261,7 @@
     margin-right: 0;
   }
   .promo-carousel__title{
-    padding: 0 0 16px 0;
+    padding: 0 0 7px 0;
   }
 
   .promo-carousel .row{
@@ -253,7 +269,7 @@
   }
 
   .promo-carousel .carousel-title{
-    margin-top: 43px;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -269,6 +285,14 @@
     margin-left: 10px !important;
     margin-right: 10px !important;
   }
+
+  .promo-carousel .carousel.indicators-xs{
+    padding-bottom: 2rem;
+  }
+
+  .experience-component.experience-commerce_layouts-mobileGrid2r1c{
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 480px){
@@ -279,35 +303,27 @@
 
 @media (max-width: 453px){
   .promo-carousel .btn__small{
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
-@media (max-width: 399px){
-  .promo-carousel .btn__small{
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 399px){
-  .promo-carousel .btn__small{
-    font-size: 9px;
+@media (max-width: 370px){
+  .summary__footer .btn__small{
+    font-size: 12px;
   }
 }
 
 @media (max-width: 345px){
   .promo-carousel .btn__small{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 330px){
+  .promo-carousel .btn__small{
     font-size: 8px;
   }
 }
-
-
-@media (max-width: 332px){
-  .summary__pricing .strike-through span{
-    font-size: 9px !important;
-  }
-}
-
 
 @media (max-width: 1324px){
   .promo-carousel__wrapper-countdown{

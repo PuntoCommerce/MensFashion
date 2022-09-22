@@ -95,11 +95,31 @@
   display: none;
 }
 
+.newsletterMobCont{
+  display: none;
+}
+
+.newsletterMobCont .newsletterMobText{
+  font-family: 'AVENIR-NEXT';
+  font-weight: 700;
+  color: #fff;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0 15px;
+}
+
 @media (max-width: 1200px) {
   .newsletter .text-top {
     display: none;
   }
   .newsletter .container .form .text-top {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .newsletterMobCont{
     display: block;
   }
 }
