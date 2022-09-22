@@ -1834,11 +1834,11 @@ ul {
     .promo-carousel {
       width: 100%; } }
   .promo-carousel__headings {
-    width: 100%;
-    padding: 0; }
+    width: 90%;
+    margin: 0 auto; }
     @media only screen and (min-width: 37.5em) {
       .promo-carousel__headings {
-        padding: 30px 24px 0 24px; } }
+        padding-top: 30px; } }
   .promo-carousel .carousel-inner.row {
     width: auto; }
   .promo-carousel__title {
@@ -2214,11 +2214,7 @@ ul {
   right: -20px !important;
   top: -150px !important; }
 
-.promo-carousel__wrapper-countdown {
-  padding-right: 130px; }
-
 .promo-carousel__title {
-  padding: 0 0 10px 70px;
   margin-bottom: 31px; }
 
 .newsletter .container .markup h4 img {
@@ -2279,12 +2275,9 @@ ul {
     align-items: center; }
   .promo-carousel__countdown {
     margin-right: 0; }
-  .promo-carousel__title {
-    padding: 0 0 7px 0; }
   .promo-carousel .row {
     justify-content: center; }
   .promo-carousel .carousel-title {
-    margin-top: 30px;
     margin-bottom: 0; }
   .customTextBox-component-container a u {
     text-decoration: none; }

@@ -20365,3 +20365,8 @@ button.close:focus {
   font-family: 'AvenirLTStd-Heavy';
 }
 
+.newsBtn{
+  padding: 0;
+}
+
+

@@ -11,10 +11,10 @@
     }
 
     &__headings {
-        width: 100%;
-        padding: 0;
+        width: 90%;
+        margin: 0 auto;
         @include respond(phone) {
-            padding:$spacing-30 $spacing-medium 0 $spacing-medium;
+            padding-top: 30px;
         }
     }
     
