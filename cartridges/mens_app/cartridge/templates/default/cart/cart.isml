@@ -34,7 +34,7 @@
                         </a>
                     </div>  
                     <div class="col-sm-3 text-center">
-                        <h2 class="checkout__text checkout__text--bold ">${Resource.msgf('label.number.items.in.cart','checkout', null, pdict.numItems)}</h2>
+                        <h2 class="checkout__text checkout__text--bold number-of-items">${Resource.msgf('label.number.items.in.cart','checkout', null, pdict.numItems)}</h2>
                     </div>
                     <div class="col-sm-5 text-right hidden-xs-down d-flex justify-content-end align-items-center">
                         <div>

@@ -419,8 +419,8 @@
   transform: rotate(-35deg);
 }
 .product-detail .attributes .swatch-circle {
-  width: 2.5em;
-  height: 2.5em;
+  width: 28px;
+  height: 28px;
   background: #fff;
   border-radius: 1.25em;
   border: 0.063em solid rgba(0, 0, 0, 0.3);
@@ -435,7 +435,7 @@
   content: "\F058";
   display: table-caption;
   font-family: FontAwesome;
-  font-size: 1.625em;
+  font-size: 1.2em;
   left: 0.295em;
   position: absolute;
 }
@@ -444,14 +444,14 @@
   content: "\F058";
   display: table-caption;
   font-family: FontAwesome;
-  font-size: 1.625em;
-  left: 0.31em;
+  font-size: 1.2em;
+  left: 4px;
   position: absolute;
-  top: 0.35em;
+  top: 6px;
 }
 .product-detail .attributes .swatch-circle.color-value.selected:after,
 .product-detail .attributes .swatch-circle i.fa-times-circle {
-  background: #fff;
+  background: transparent;
   border-radius: 50%;
   height: 0.75em;
   line-height: 0.8em;

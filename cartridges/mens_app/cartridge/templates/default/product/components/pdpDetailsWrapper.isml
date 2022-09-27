@@ -101,7 +101,7 @@
                     </div>
                 </isif>
 
-                <div class="add-to-cart-actions mb-3">
+                <div class="add-to-cart-actions mt-3 mb-3">
                     <!-- Cart and [Optionally] Apple Pay -->
                     <isinclude template="product/components/addToCartProduct" />
                 </div>
