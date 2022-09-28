@@ -2432,6 +2432,10 @@ pre code {
   .wishlist-container .login-page .wishlistItemCards{
     margin: 0 !important;
   }
+
+  .product-details-wrapper .attributes{
+    margin-top: 24px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -17116,18 +17120,18 @@ a.skip:hover {
 }
 
 .minicart .minicart-quantity {
-  background-color: var(--skin-primary-color-1);
+  background-color: transparent;
   border-radius: 50%;
-  width: 1.25em;
-  height: 1.25em;
+  width: 1em;
+  height: 1em;
   line-height: normal;
   display: inline-block;
   text-align: center;
-  font-size: 0.8125em;
+  font-size: 1em;
   position: relative;
-  top: -0.9375em;
-  left: -0.9375em;
-  color: #fff;
+  top: 0.05em;
+  left: 0;
+  color: #000;
 }
 
 a.normal {
@@ -17742,7 +17746,7 @@ h6 {
 
 .prices {
   padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding-top: 0;
 }
 
 .cart-and-ipay {
@@ -17880,8 +17884,8 @@ div.availability {
 
 .choose-bonus-product-dialog .swatch-circle,
 .quick-view-dialog .swatch-circle {
-  width: 2.5em;
-  height: 2.5em;
+  width: 18px;
+  height: 18px;
   background: #fff;
   border-radius: 1.25em;
   border: 0.063em solid rgba(0, 0, 0, 0.3);
@@ -17894,12 +17898,10 @@ div.availability {
   .swatch-circle.color-value[data-selected="true"]:after,
 .quick-view-dialog .swatch-circle.color-value[data-selected="true"]:after {
   color: #000;
-  content: "\F058";
-  display: table-caption;
-  font-family: FontAwesome;
-  font-size: 1.625em;
-  left: 0.295em;
-  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
 }
 
 .choose-bonus-product-dialog .swatch-circle.color-value.selected:after,
@@ -17907,16 +17909,10 @@ div.availability {
   background: #fff;
   border-radius: 50%;
   color: #000;
-  content: "\F058";
-  display: table-caption;
-  font-family: FontAwesome;
-  font-size: 1.625em;
-  height: 0.75em;
-  left: 0.31em;
-  line-height: 0.8em;
-  position: absolute;
-  top: 0.35em;
-  width: 0.8em;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
 }
 
 .choose-bonus-product-dialog .swatch-circle i.fa-times-circle,
@@ -18265,7 +18261,7 @@ div.availability {
 .container.product-detail .breadcrumb {
   border-radius: 0;
   border-bottom: 1px solid #ccc;
-  margin: 35px 0 12px 0;
+  margin: 0 0 18px 0;
 }
 
 .container.product-detail .product-breadcrumb {
@@ -19440,7 +19436,7 @@ button.close:focus {
 
 #login-form-email,
 #login-form-password {
-  margin: 9px auto 14px auto;
+  margin: 14px auto;
   border-radius: 3px;
   width: 100%;
 }
@@ -20121,7 +20117,7 @@ button.close:focus {
 }
 
 .product-detail .prices {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .product-detail .product-id {
@@ -20195,8 +20191,7 @@ button.close:focus {
 }
 
 .qty-card-quantity-count,
-.line-item-total-price-amount,
-.value {
+.line-item-total-price-amount {
   font-weight: 700;
 }
 
@@ -20369,4 +20364,31 @@ button.close:focus {
   padding: 0;
 }
 
+.product-options {
+  margin-top: 0 !important;
+}
+
+.promo-code-form .form-group label{
+  margin-bottom: 0;
+}
+
+.coupons-and-promos{
+  margin-bottom: 0 !important;
+}
+
+.checkout__totals .form-group, .checkout__totals .form-group label{
+  margin-bottom: 0 !important ;
+}
+
+.checkout_login .form-group .form-control-label{
+  margin-bottom: 0 !important;
+}
+
+#productdetailpage .prices-container .stikePriceCont{
+  margin-bottom: 12px;
+}
+
+.product-details-wrapper .attributes .attribute{
+  margin-top: 0;
+}
 

@@ -6,12 +6,10 @@
         <iscomment> <span class="minicart-quantity">
                 <isprint value="${pdict.quantityTotal}" formatter="##" />
             </span> </iscomment>
-        <isif condition="${pdict.quantityTotal != 0}">
-            <span class="minicart-quantityCustom">
+     
+            <span class="minicart-quantity">
                 <isprint value="${pdict.quantityTotal}" formatter="##" />
             </span>
-        <iselse/>
-        
-        </isif>
+    
     </a>
 </div>

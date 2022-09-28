@@ -80,7 +80,8 @@
   align-items: flex-start;
   & del {
    margin-bottom: 10px;
-   font-size: 25px;
+   font-size: 18px;
+   font-weight: 400;
   }
  }
  .prices,
@@ -96,7 +97,8 @@
   & .price {
    text-align: left;
    & .strike-through {
-    color: #000;
+    color: #393939;
+    font-weight: 400;
    }
    & .sales {
     font-size: 30px;
@@ -172,7 +174,9 @@
  }
  & .price {
   & .sales .value {
-   font-size: 30px;
+    font-size: 28px;
+    font-family: 'Avenir-Next';
+    font-weight: 500;
   }
  }
  & .product-number-rating {
@@ -374,6 +378,8 @@
  .product-detail {
   & .product-number {
    font-family: "Avenir-Bold";
+   margin-top: 20px;
+   margin-bottom: 26px;
   }
  }
  .modal-dialog.size-guide-modal {

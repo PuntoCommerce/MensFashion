@@ -1651,9 +1651,6 @@ ul {
   color: #000;
   letter-spacing: 1px; }
 
-.product-breadcrumb .breadcrumb li:last-of-type a {
-  font-family: 'Avenir-Bold'; }
-
 .carousel {
   position: relative; }
 
@@ -1669,9 +1666,9 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  transition: -webkit-transform .6s ease;
-  transition: transform .6s ease;
-  transition: transform .6s ease, -webkit-transform .6s ease;
+  transition: -webkit-transform .1s ease;
+  transition: transform .1s ease;
+  transition: transform .1s ease, -webkit-transform .1s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -2433,7 +2430,8 @@ ul {
     align-items: flex-start; }
     .product-detail .prices-container del {
       margin-bottom: 10px;
-      font-size: 25px; }
+      font-size: 18px;
+      font-weight: 400; }
   .product-detail .prices,
   .product-detail .sizes-guide {
     width: fit-content; }
@@ -2445,7 +2443,8 @@ ul {
     .product-detail .prices .price {
       text-align: left; }
       .product-detail .prices .price .strike-through {
-        color: #000; }
+        color: #393939;
+        font-weight: 400; }
       .product-detail .prices .price .sales {
         font-size: 30px; }
     .product-detail .prices .range {
@@ -2501,7 +2500,9 @@ ul {
     color: #393939;
     font-size: 30px; }
   .product-detail .price .sales .value {
-    font-size: 30px; }
+    font-size: 28px;
+    font-family: 'Avenir-Next';
+    font-weight: 500; }
   .product-detail .product-number-rating {
     border: 0; }
     .product-detail .product-number-rating div {
@@ -2638,7 +2639,9 @@ ul {
   .sizes-guide img {
     width: 25px; }
   .product-detail .product-number {
-    font-family: "Avenir-Bold"; }
+    font-family: "Avenir-Bold";
+    margin-top: 20px;
+    margin-bottom: 26px; }
   .modal-dialog.size-guide-modal .modal-content {
     width: 50vw; } }
 
