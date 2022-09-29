@@ -129,14 +129,20 @@ function getList(customer, config) {
     var productListMgr = require('dw/customer/ProductListMgr');
     var type = config.type;
     var list;
-    if (type === 10) {
-        var productLists = productListMgr.getProductLists(customer, type);
-        list = productLists.length > 0
+    if(customer){
+
+        if (type === 10) {
+            var productLists = productListMgr.getProductLists(customer, type);
+            list = productLists.length > 0
             ? productLists[0]
             : null;
-    } else if (type === 11) {
-        list = productListMgr.getProductList(config.id);
-    } else {
+        } else if (type === 11) {
+            list = productListMgr.getProductList(config.id);
+        } else {
+            list = null;
+        }
+    }
+    else {
         list = null;
     }
     return list;
