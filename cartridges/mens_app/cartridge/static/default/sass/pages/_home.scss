@@ -64,16 +64,15 @@
 }
 
 .carousel-control-prev {
-  left: 2% !important;
+  left: -4% !important;
 }
 
 .carousel-control-next {
-  right: 2% !important;
+  right: -4% !important;
 }
 
 #customBannerCarousel .ITBC-buttons{
   position: absolute;
-  bottom: 300px;
 }
 
 .ITBC-content .btn-ITBC{ 
@@ -89,11 +88,6 @@
 
 .experience-commerce_layouts-mobileGrid2r1c .markup-wrapper{
   justify-content: flex-end;
-}
-
-.ITBC-content .btn-ITBC:hover{
-  background-color: #000000;
-  color: #ffffff !important;
 }
 
 .customTextBox-component-container a u{
@@ -270,7 +264,20 @@
   }
 
   .experience-commerce_layouts-navTabs{
-    margin-top: 35px;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .experience-commerce_layouts-navTabs .image-container{
+    width: 90%;
+  }
+
+  .experience-commerce_layouts-navTabs .carousel-control-prev{
+    left: 7% !important;
+  }
+
+  .experience-commerce_layouts-navTabs .carousel-control-next{
+    right: 7% !important;
   }
 
   .newsletter .container .row{

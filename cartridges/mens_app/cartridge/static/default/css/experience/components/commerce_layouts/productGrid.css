@@ -36,6 +36,11 @@
   object-fit: cover;
   height: 100%;
   object-position: 50% 50%;
+  border: 1px solid #e5e2e3;
+}
+
+.product-container .experience-region .experience-component .summary .image-container img{
+  height: 390px;
 }
 
 .mobile-product-carousel {

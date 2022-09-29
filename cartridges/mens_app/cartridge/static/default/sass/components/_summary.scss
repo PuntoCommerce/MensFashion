@@ -17,20 +17,14 @@
     padding-top: $spacing-medium;
   }
   &__name {
-    font-family: nth($text-font-stack, $avenir-LT-Std);
+    font-family: nth($text-font-stack, $avenir-Next);
 
     a {
       color: $text-color-black !important;
     }
   }
   &__pricing {
-    .strike-through {
-      span {
-        color: $light-grey;
-        text-decoration: line-through;
-        font-weight: 300;
-      }
-    }
+
     .price {
       .range {
         display: flex;
@@ -46,9 +40,8 @@
 
     .swatch-circle {
       height: 20px;
-      margin: 0 5px;
+      margin: 5px 0;
       width: 20px;
-      border: 1px solid #000000;
     }
     
     .color-swatches {

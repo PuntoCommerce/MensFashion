@@ -17906,13 +17906,15 @@ div.availability {
 
 .choose-bonus-product-dialog .swatch-circle.color-value.selected:after,
 .quick-view-dialog .swatch-circle.color-value.selected:after {
-  background: #fff;
   border-radius: 50%;
-  color: #000;
   content: "";
-  width: 20px;
-  height: 20px;
+  padding: 10px;
+  background-clip: content-box;
+  background-color: transparent;
   border: 1px solid #000;
+  position: absolute;
+  left: -3px;
+  top: -3px;
 }
 
 .choose-bonus-product-dialog .swatch-circle i.fa-times-circle,
@@ -18102,20 +18104,23 @@ div.availability {
 }
 
 .product-tile .tile-body .pdp-link a {
-  font-size: 1em;
-  text-decoration: none;
+  width: 329px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
-@media (max-width: 991.98px) {
-  .product-tile .tile-body .pdp-link a {
-    font-size: 0.9375em;
-  }
+.experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a{
+  width: 259px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
 }
 
-@media (max-width: 768.98px) {
-  .product-tile .tile-body .pdp-link a {
-    font-size: 0.8125em;
-  }
+.summary .tile-body{
+  height: 100px;
 }
 
 .product-tile .tile-body .ratings {
@@ -18152,6 +18157,7 @@ div.availability {
 
 .product-tile .swatches a {
   text-decoration: none;
+  margin-right: 6px;
 }
 
 .product-tile .swatch-circle {
@@ -19249,40 +19255,32 @@ div.availability {
   background-color: #d8d8d8 !important;
 }
 
-.summary_price {
-  height: 50px;
-}
-
 .summary__pricing .price {
   display: flex;
   align-items: flex-end;
   height: 100%;
 }
 
-.summary__pricing .price span {
+.summary__pricing .price .prices-container .sales-price .sales{
   display: flex;
   flex-direction: row;
+  color: #231F20;
+  font-size: 20px;
+  font-family: 'Avenir-Next';
+}
+
+.summary__pricing .prices-container .strike-price del{
+  color: rgba(68, 68, 68, 0.5)
 }
 
 .summary__pricing .price .prices-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .summary_price {
   display: flex;
   flex-direction: row;
-}
-
-@media (max-width: 768px) {
-  .summary_price {
-    padding: 0 15px;
-  }
-
-  .login-form-nav,
-  .trackorder {
-    margin: 13px 10px 0 10px !important;
-  }
 }
 
 .add-to-cart-global.btn.btn-primary {
@@ -20317,8 +20315,9 @@ button.close:focus {
   padding: 1rem;
 }
 .carousel-inner .product-tile .tile-image {
-  height: 520px;
+  height: 485px;
   object-fit: contain;
+  border: 1px solid #e5e2e3;
 }
 
 @media (max-width: 1200px) {
@@ -20392,3 +20391,57 @@ button.close:focus {
   margin-top: 0;
 }
 
+.summary__pricing .strike-through span{
+  color: rgba(68, 68, 68, 0.5);
+  font-weight: 400;
+  font-family: 'Avenir-Next';
+  font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .product-tile .tile-body .pdp-link a {
+    font-size: 0.9375em;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .product-tile .tile-body .pdp-link a {
+    font-size:16px;
+    width: 186px;
+  }
+
+  .summary__pricing .strike-through span{
+    font-size: 16px;
+  }
+  
+  .summary__pricing .price .prices-container .sales-price .sales{
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 395px) {
+  .product-tile .tile-body .pdp-link a {
+    font-size: 13px;
+    width: 163px;
+  }
+
+  .summary__pricing .price .prices-container .sales-price .sales{
+    font-size: 12px;
+  }
+
+  .summary__pricing .strike-through span{
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 350px) {
+    .product-tile .tile-body .pdp-link a {
+      width: 150px;
+    }
+}
+
+
+
+
+    

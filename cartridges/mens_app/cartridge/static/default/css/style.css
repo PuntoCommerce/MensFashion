@@ -1424,9 +1424,6 @@ ul {
     flex: 1; }
 
 @media (max-width: 768.98px) {
-  .summary__pricing .strike-through span {
-    color: #444444 !important;
-    font-size: 12px !important; }
   .summary__pricing {
     padding: 0 !important; }
   .promo-carousel .value {
@@ -1434,12 +1431,7 @@ ul {
 
 @media only screen and (max-width: 395px) {
   .promo-carousel .value {
-    font-size: 12px !important; }
-  .summary__pricing .strike-through span {
-    color: #444444 !important;
-    font-size: 10px !important; }
-  .product-tile .tile-body .price {
-    font-size: 12px; } }
+    font-size: 12px !important; } }
 
 .refinement-bar {
   display: none !important;
@@ -2039,14 +2031,9 @@ ul {
   padding-top: 24px; }
 
 .summary__name {
-  font-family: "Avenir-LT-Std"; }
+  font-family: "Avenir-Next"; }
   .summary__name a {
     color: #000000 !important; }
-
-.summary__pricing .strike-through span {
-  color: #d8d8d8;
-  text-decoration: line-through;
-  font-weight: 300; }
 
 .summary__pricing .price .range {
   display: flex;
@@ -2059,9 +2046,8 @@ ul {
   display: flex; }
   .summary__swatches .swatch-circle {
     height: 20px;
-    margin: 0 5px;
-    width: 20px;
-    border: 1px solid #000000; }
+    margin: 5px 0;
+    width: 20px; }
   .summary__swatches .color-swatches {
     min-height: 0 !important; }
 
@@ -2141,14 +2127,13 @@ ul {
   right: 3% !important; }
 
 .carousel-control-prev {
-  left: 2% !important; }
+  left: -4% !important; }
 
 .carousel-control-next {
-  right: 2% !important; }
+  right: -4% !important; }
 
 #customBannerCarousel .ITBC-buttons {
-  position: absolute;
-  bottom: 300px; }
+  position: absolute; }
 
 .ITBC-content .btn-ITBC {
   font-family: "AvenirLTStd-Heavy" !important;
@@ -2161,10 +2146,6 @@ ul {
 
 .experience-commerce_layouts-mobileGrid2r1c .markup-wrapper {
   justify-content: flex-end; }
-
-.ITBC-content .btn-ITBC:hover {
-  background-color: #000000;
-  color: #ffffff !important; }
 
 .customTextBox-component-container a u {
   text-decoration: underline;
@@ -2279,7 +2260,14 @@ ul {
   .customTextBox-component-container a u {
     text-decoration: none; }
   .experience-commerce_layouts-navTabs {
-    margin-top: 35px; }
+    box-shadow: none;
+    margin-top: 10px; }
+  .experience-commerce_layouts-navTabs .image-container {
+    width: 90%; }
+  .experience-commerce_layouts-navTabs .carousel-control-prev {
+    left: 7% !important; }
+  .experience-commerce_layouts-navTabs .carousel-control-next {
+    right: 7% !important; }
   .newsletter .container .row {
     margin-left: 10px !important;
     margin-right: 10px !important; }
@@ -2343,15 +2331,8 @@ ul {
   .grid-header__column-item--right {
     margin-right: 150px; } }
 
-.summary__name {
-  height: 32px; }
-
 .container-custom-plp .highlight {
   left: 5px; }
-
-@media only screen and (max-width: 768px) {
-  .summary__name {
-    height: 29px; } }
 
 @media (max-width: 420px) {
   .summary__footer .btn__small {

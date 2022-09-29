@@ -10,8 +10,8 @@
             <isinclude template="product/components/productTileName" />
         </div>
 
-        <div class="summary_price row">
-            <div class="summary__pricing col-7">
+        <div class="summary_price">
+            <div class="summary__pricing">
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />
@@ -19,15 +19,17 @@
                     <isinclude template="product/components/pricing/main" />
                 </isif>
             </div>
-            <div class="summary__swatches col-5">
+        </div>
+        <div class="summary_swatch">
+            <div class="summary__swatches">
                 <isif condition="${pdict.display.swatches !== false}">
                     <isinclude template="product/components/productTileSwatch" />
                 </isif>
             </div>
-        </div>
-        <div class="summary__footer">
+        </div>    
+        <iscomment> <div class="summary__footer">
             <a class="btn btn--gray btn__small" href="${pdict.urls.product}">${Resource.msg('productTile.button.buy', 'pdComponents', null)}</a>
-        </div>
+        </div> </iscomment>
     </div>
     <!-- END_dwmarker -->
 </div>

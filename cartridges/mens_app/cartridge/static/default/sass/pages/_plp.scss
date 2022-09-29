@@ -32,21 +32,10 @@
       margin-right: 150px; } 
   }
 
-  .summary__name{
-    height: 32px;
-  }
-
-
   .container-custom-plp  .highlight {
       left: 5px;
   }  
 
-
-@media only screen and (max-width: 768px) {
-  .summary__name{
-    height: 29px;
-  }
-}
 
 @media (max-width: 420px){
   .summary__footer .btn__small{
