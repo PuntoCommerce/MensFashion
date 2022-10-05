@@ -32,10 +32,6 @@
   text-decoration: none;
 }
 
-.mobile-2r-2c .region:not(:first-child) {
-  border-left: 1px solid #000000;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none;
@@ -165,14 +161,13 @@
 }
 
 .experience-component.experience-commerce_layouts-mobileGrid2r1c{
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  margin-top: 14px;
+  margin-right: 1px;
+  margin-left: 2px;
 }
 
 @media (max-width: 544px) {
-  .mobile-2r-2c .region:is(:nth-last-child(2)),
-  .mobile-2r-2c .region:is(:last-child) {
-    border-top: 1px solid #000000;
-  }
 
   .mobile-2r-2c .region {
     margin-bottom: 0px;

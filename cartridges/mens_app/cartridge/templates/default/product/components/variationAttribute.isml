@@ -54,7 +54,7 @@
         </div>
     </div>
 <iselse/>
-    <div class="attribute col-5 col-lg-6">
+    <div class="attribute col-12">
         <!-- Select <Attribute> Label -->
         <label class="d-none d-lg-block ${attr.id}"
             for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">

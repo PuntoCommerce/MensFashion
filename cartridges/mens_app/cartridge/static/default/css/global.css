@@ -19247,12 +19247,7 @@ div.availability {
   text-transform: uppercase;
   transition: 0.3s ease all;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 5px 20px;
-}
-
-.btn.btn-primary.add-to-wish-list:hover {
-  border: 1px solid #000 !important;
-  background-color: #d8d8d8 !important;
+  padding: 9px 20px;
 }
 
 .summary__pricing .price {
@@ -20396,6 +20391,59 @@ button.close:focus {
   font-weight: 400;
   font-family: 'Avenir-Next';
   font-size: 20px;
+}
+
+.quickviewInfo{
+  padding: 75px 10px 0 25px;
+}
+
+.modal-body .product-quickview .product-name{
+  font-family: 'Avenir-Next';
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.modal-body .product-quickview .prices .sales .value{
+  font-family: 'Avenir-Next';
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal-body .product-quickview .prices .price .strike-through{
+  font-family: 'Avenir-Next';
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal-body .product-quickview .prices-container{
+  flex-direction: row;
+}
+
+.quickviewInfo .attribute{
+  margin-top: 0;
+  padding: 0;
+}
+
+.quickviewInfo .attribute{
+  margin-top: 0;
+  padding: 0;
+}
+
+.quickviewInfo .quantityCont{
+  padding: 0;
+}
+
+.quickviewInfo .favCont{
+  margin-top: 21px;
+}
+
+.modal-body .product-quickview .prices .price .prices-container .stikePriceCont .strike-price{
+  margin-top: 4px;
+}
+
+.product-quickview .carousel-item img{
+  height: 390px;
+  margin: 0 auto;
 }
 
 @media (max-width: 991.98px) {

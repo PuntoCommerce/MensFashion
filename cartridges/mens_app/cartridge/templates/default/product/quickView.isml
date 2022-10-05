@@ -10,7 +10,7 @@
         <isinclude template="product/components/imageCarousel" />
 
         <!-- Product Name and Number -->
-        <div class="col-sm-6">
+        <div class="col-sm-6 quickviewInfo">
             <div class="row">
                 <div class="col">
                     <section>
@@ -19,6 +19,25 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col">
+                    <!-- Prices -->
+                    <div class="prices">
+                        <isset name="price" value="${product.price}" scope="page" />
+                        <isinclude template="product/components/pricing/main" />
+                    </div>
+                </div>
+            </div>
+             <!-- Trigger Modal Sizes Guide -->
+            <div class="row sizes-guide-cont">                
+                <div class="col sizes-guide d-flex">
+                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
+                    <!-- Button trigger modal -->
+                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
+                        ${Resource.msg('size.guide', 'common', null)}
+                    </button>
+                </div>
+            </div>    
             <div class="detail-panel">
                 <!-- Attributes -->
                 <section class="attributes">
@@ -27,8 +46,15 @@
 
                         <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
                             <div data-attr="${attr.id}" class="swatch row">
-                                <div class="col-8">
+                                <div class="col-5">
                                     <isinclude template="product/components/variationAttribute" />
+                                </div>
+                
+                                <!-- Quantity -->
+                                <div class="hidden-xs-down col-5 quantityCont">
+                                    <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
+                                        <isinclude template="product/components/quantity" />
+                                    </isif>
                                 </div>
 
                                 <isif condition="${attributeStatus.last}">
@@ -39,14 +65,18 @@
                                         </isif>
                                     </div>
                                 </isif>
-                            </div>
+
+                                <!-- Favs-->
+                                <div class="col-1 favCont">
+                                    <isinclude template="wishlist/components/addToWishListButton" />
+                                </div>
                         </isloop>
 
                         <div class="d-sm-none row availability align-self-end " data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
                             <isinclude template="product/components/availability" />
                         </div>
 
-                    <hr>
+                
 
                     <!-- Applicable Promotions -->
                     <div class="row">
@@ -97,26 +127,14 @@
     <isset name="loopState" value="${{count: 1}}" scope="page" />
 
     <div class="hidden-xs-down col availability align-self-end global-availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
-        <div class="row">
+        <iscomment> <div class="row">
             <isinclude template="product/components/availability" />
-        </div>
+        </div> </iscomment>
     </div>
 
     <div class="col">
-        <div class="row align-items-end">
-            <!-- Quantity -->
-            <div class="hidden-xs-down col-4">
-                <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
-                    <isinclude template="product/components/quantity" />
-                </isif>
-            </div>
 
             <div class="col-8 mx-auto">
-                <!-- Prices -->
-                <div class="prices">
-                    <isset name="price" value="${product.price}" scope="page" />
-                    <isinclude template="product/components/pricing/main" />
-                </div>
 
                 <!-- Cart and [Optionally] Apple Pay -->
                 <isif condition="${pdict.addToCartUrl}">
