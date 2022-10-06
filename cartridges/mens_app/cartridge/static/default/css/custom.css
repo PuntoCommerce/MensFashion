@@ -814,9 +814,9 @@ footer .socialMedia-paymentMethods {
   text-decoration: none;
 }
 
-.mobile-2r-2c .region:not(:first-child) {
+/* .mobile-2r-2c .region:not(:first-child) {
   border-left: 1px solid #000000;
-}
+} */
 
 /* @media (max-width: 991px) {
   .mobile-2r-1c .row {
@@ -825,10 +825,10 @@ footer .socialMedia-paymentMethods {
 } */
 
 @media (max-width: 544px) {
-  .mobile-2r-2c .region:is(:nth-last-child(2)),
+  /* .mobile-2r-2c .region:is(:nth-last-child(2)),
   .mobile-2r-2c .region:is(:last-child) {
     border-top: 1px solid #000000;
-  }
+  } */
 
   .mobile-2r-2c .region {
     margin-bottom: 0px;

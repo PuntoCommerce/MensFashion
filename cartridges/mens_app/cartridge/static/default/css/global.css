@@ -595,6 +595,10 @@ mark {
   border-radius: 0.1875rem;
 }
 
+.photo-tile-container .figure{
+  margin: 0 0 0.6rem; 
+}
+
 .figure {
   display: inline-block;
 }
@@ -658,6 +662,18 @@ pre code {
   margin-left: auto;
 }
 
+.page .search-banner{
+  background-size: cover;
+  height: 320px;
+}
+
+.menuCont{
+  justify-content: space-evenly;
+}
+
+#menuDesk .nav-item a:hover header{
+  background-color: #000 !important;
+}
 @media (min-width: 769px) {
   .container {
     max-width: 720px;

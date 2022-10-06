@@ -2202,7 +2202,10 @@ ul {
   align-items: flex-start !important; }
 
 .experience-component.experience-commerce_layouts-mobileGrid2r1c {
-  margin-bottom: 14px; }
+  margin-bottom: 18px;
+  margin-top: 14px;
+  margin-right: 1px;
+  margin-left: 2px; }
 
 @media (max-width: 544px) {
   .mobile-2r-2c .region {
