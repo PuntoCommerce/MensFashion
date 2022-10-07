@@ -4980,6 +4980,7 @@ input[type="submit"].btn-block {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
+  border-top: 1.5px solid rgb(68, 68, 68, 0.5);
 }
 
 .navbar-text {
@@ -17087,9 +17088,9 @@ a.skip:hover {
   }
 }
 
-.main-menu {
+/* .main-menu {
   background-color: #444;
-}
+} */
 
 .main-menu .navbar .close-button button,
 .main-menu .navbar .close-menu button {

@@ -1,18 +1,24 @@
 @media (min-width: 992px) {
   header {
-    background-color: #fff;
     position: absolute;
     z-index: 10;
     width: 100%;
   }
 
-  #menu-desk header:hover {
-    background-color: red;
+  #navCont{
+    background-color: transparent;
   }
 
-  header .navbar-nav,
-  header .main-menu {
-    background-color: transparent ;
+  #navCont:hover {
+    background-color: #fff;
+  }
+
+  #customMenu{
+    border-top: 0.3px solid rgba(68, 68, 68, 0);
+  }
+
+  #navCont:hover ~ #customMenu{
+    border-bottom: 0.3px solid rgba(68, 68, 68, 0.5);
   }
 
   /* header:hover {

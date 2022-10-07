@@ -4,7 +4,7 @@
         <!-- Campaign Banner Component renders here -->
         <isprint value="${pdict.regions.headerbanner.render()}" encoding="off" />
     </isif>
-    <nav role="navigation" class="navCont">
+    <nav role="navigation" id="navCont">
         <div class="header container">
             <div class="row">
                 <div class="col-12 hidden" id="searchContainer">

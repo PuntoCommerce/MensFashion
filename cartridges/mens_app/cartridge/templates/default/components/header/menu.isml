@@ -5,7 +5,7 @@
             <isif condition="${pdict.categories}">
                 <isloop items="${pdict.categories}" var="category" status="status_item">
                     <isif condition="${category.subCategories}">
-                        <li class="nav-item dropdown ${status_item.last ? 'last_category_item' : ''}"
+                        <li class="nav-item dropdown id="navItemDrop" ${status_item.last ? 'last_category_item' : ''}"
                             role="presentation">
                             <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />"
                             id="${category.id}" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"

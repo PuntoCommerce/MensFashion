@@ -9,8 +9,7 @@ body {
 .hero {
   border-bottom-color: var(--skin-background-color-1);
 }
-.banner-color,
-.main-menu {
+.banner-color {
   background-color: var(--skin-banner-background-color-1);
 }
 .header-banner {

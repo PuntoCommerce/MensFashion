@@ -902,7 +902,6 @@ footer .socialMedia-paymentMethods {
 } */
 .main-menu,
 .navbar-nav {
-  background-color: #ffffff !important;
   display: flex;
   justify-content: center; }
 
