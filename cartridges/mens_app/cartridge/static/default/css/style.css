@@ -1241,8 +1241,8 @@ ul {
       color: #000000 !important; }
 
 .container-custom-plp {
-  width: 95%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto; }
 
 .container-custom-plp .breadcrumb {
@@ -1433,18 +1433,9 @@ ul {
     font-size: 12px !important; } }
 
 .refinement-bar {
-  display: none !important;
-  position: absolute;
-  top: 74px;
-  left: 0;
   background-color: #ffffff;
   z-index: 5;
   box-shadow: none; }
-  @media only screen and (min-width: 37.5em) {
-    .refinement-bar {
-      top: 56px; } }
-  .refinement-bar--show {
-    display: block !important; }
   .refinement-bar .refinement-color .values.content {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
@@ -1617,9 +1608,6 @@ ul {
 
 .modal-content {
   font-family: "Avenir-Next"; }
-
-.modal-header .full-pdp-link {
-  color: #000000 !important; }
 
 .quick-view-dialog .modal-header {
   background-color: #ffffff !important;

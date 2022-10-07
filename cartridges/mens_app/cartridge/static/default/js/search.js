@@ -432,7 +432,7 @@
                 $("body").on("click", ".quickview", (function (t) {
                     t.preventDefault();
                     var e = $(this).closest("a.quickview").attr("href");
-                    $(t.target).trigger("quickview:show"), 0 !== $("#quickViewModal").length && $("#quickViewModal").remove(), $("body").append('\x3c!-- Modal --\x3e<div class="modal fade" id="quickViewModal" role="dialog"><span class="enter-message sr-only" ></span><div class="modal-dialog quick-view-dialog">\x3c!-- Modal content--\x3e<div class="modal-content"><div class="modal-header">    <a class="full-pdp-link" href=""></a>    <button type="button" class="close pull-right" data-dismiss="modal">        <span aria-hidden="true">&times;</span>        <span class="sr-only"> </span>    </button></div><div class="modal-body"></div><div class="modal-footer"></div></div></div></div>'), r(e)
+                    $(t.target).trigger("quickview:show"), 0 !== $("#quickViewModal").length && $("#quickViewModal").remove(), $("body").append('\x3c!-- Modal --\x3e<div class="modal fade" id="quickViewModal" role="dialog"><span class="enter-message sr-only" ></span><div class="modal-dialog quick-view-dialog">\x3c!-- Modal content--\x3e<div class="modal-content"><div class="modal-header"> <span class="quickViewTitle">Vista rápida</span>   <a class="full-pdp-link" href=""></a>    <button type="button" class="close pull-right" data-dismiss="modal">        <span aria-hidden="true">&times;</span>        <span class="sr-only"> </span>    </button></div><div class="modal-body"></div><div class="modal-footer"></div></div></div></div>'), r(e)
                 }))
             },
             focusQuickview: function () {

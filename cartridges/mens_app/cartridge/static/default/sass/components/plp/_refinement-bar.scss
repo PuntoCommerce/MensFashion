@@ -1,18 +1,17 @@
 .refinement-bar {
- display: none !important;
- position: absolute;
- top: 74px;
- left: 0;
+//  position: absolute;
+//  top: 74px;
+//  left: 0;
  background-color: $white-color;
  z-index: 5;
  box-shadow: none;
- @include respond(phone) {
-  top: 56px;
- }
+//  @include respond(phone) {
+//   top: 56px;
+//  }
 
- &--show {
-  display: block !important;
- }
+//  &--show {
+//   display: block !important;
+//  }
 
  .refinement-color {
   .values.content {
