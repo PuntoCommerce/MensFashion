@@ -92,7 +92,7 @@ header .navbar-header {
 } */
 
 .navbar-nav {
-  background-color: #ffffff !important;
+  background-color: red !important;
   display: flex;
   justify-content: center;
 }

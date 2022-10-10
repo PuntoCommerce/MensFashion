@@ -69,14 +69,12 @@
   color: #000000;
   font-family: 'Avenir-Next' !important;
   font-size: 14px;
-  font-weight: 900;
 }
 
 #menuDesk .nav-item a{
   color: #000000;
   font-family: "Avenir-Bold" !important;
   font-size: 14px;
-  font-weight: 900;
 }
 
 .nav.navbar-nav {
@@ -272,6 +270,11 @@ ul {
 
 .dropdown-menu .category-item {
   font-weight: bold;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.5);
+}
+
+#customMenu:hover{
+  border-top: 0.3px solid rgba(68, 68, 68, 0.5);
 }
 
 .dropdown-menu .subcategories {

@@ -936,14 +936,12 @@ footer .socialMedia-paymentMethods {
 #menuDesk .dropdown-menu .category-item.item a, #menuDesk .dropdown-menu .sub-category-item.item a {
   color: #000000;
   font-family: 'Avenir-Next' !important;
-  font-size: 14px;
-  font-weight: 900; }
+  font-size: 14px; }
 
 #menuDesk .nav-item a {
   color: #000000;
   font-family: "Avenir-Bold" !important;
-  font-size: 14px;
-  font-weight: 900; }
+  font-size: 14px; }
 
 .nav.navbar-nav {
   display: flex;
@@ -1090,7 +1088,11 @@ ul {
   list-style-type: none; }
 
 .dropdown-menu .category-item {
-  font-weight: bold; }
+  font-weight: bold;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.5); }
+
+#customMenu:hover {
+  border-top: 0.3px solid rgba(68, 68, 68, 0.5); }
 
 .dropdown-menu .subcategories {
   padding-inline-start: 0px; }
@@ -1618,7 +1620,12 @@ ul {
   line-height: 1.5 !important; }
 
 .modal-footer .add-to-cart-global {
-  background-color: #000000;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000; }
+
+.modal-footer .add-to-cart-globa:hover {
+  background-color: #000000 !important;
   color: #ffffff; }
 
 .product-breadcrumb a {

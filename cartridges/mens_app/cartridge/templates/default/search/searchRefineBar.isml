@@ -46,7 +46,7 @@
                     </svg>
 
                 </div>
-                <div class="card-body content value collapse refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}" id="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
+                <div class="card-body content value collapse show refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}" id="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
                     <!--- CATEGORY REFINEMENTS --->
                     <isif condition="${refinement.isCategoryRefinement}">
                         <isset name="categories" value="${refinement.values}" scope="page" />

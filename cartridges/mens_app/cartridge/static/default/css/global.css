@@ -668,9 +668,12 @@ pre code {
 }
 
 .menuCont{
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
+.menuColCont{
+  padding: 0 5.5rem;
+}
 #menuDesk .nav-item a:hover header{
   background-color: #000 !important;
 }
@@ -688,6 +691,9 @@ pre code {
   text-decoration: underline;
 }
 
+.containerDropdown{
+  padding: 0 8.5rem;
+}
 @media (min-width: 769px) {
   .container {
     max-width: 720px;
@@ -3837,7 +3843,7 @@ input[type="submit"].btn-block {
   display: none;
   float: left;
   min-width: 10rem;
-  padding: 0.5rem 0;
+  padding: 2rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
   color: #212529;
