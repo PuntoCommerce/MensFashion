@@ -28,4 +28,11 @@
 }
 .container-custom-size .region {
   margin-bottom: 0;
+  padding: 0 1.2rem;
+}
+
+@media (max-width: 543px) {
+ .container-custom-size .region {
+    padding: 0 1.1rem;
+  }
 }

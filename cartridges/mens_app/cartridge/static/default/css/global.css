@@ -691,9 +691,6 @@ pre code {
   text-decoration: underline;
 }
 
-.containerDropdown{
-  padding: 0 8.5rem;
-}
 @media (min-width: 769px) {
   .container {
     max-width: 720px;
@@ -2121,6 +2118,17 @@ pre code {
   background-color: hsla(0, 0%, 100%, 0.075);
 }
 
+#product-search-results .header.page-title.titleCat{
+  color: #000 !important;
+  background: transparent;
+  text-align: center;
+  position: inherit;
+  font-size: 28px !important;
+  font-family: 'Avenir-Next' !important;
+  text-transform: uppercase;
+  display: block;
+}
+
 @media (max-width: 543.98px) {
   .table-responsive-sm {
     display: block;
@@ -2137,6 +2145,10 @@ pre code {
     background: #000;
     padding: 0 40px !important;
     height: 40px;
+  }
+
+  #product-search-results .header.page-title.titleCat{
+    display: none;
   }
 }
 
@@ -20519,12 +20531,64 @@ button.close:focus {
   }
 }
 
-
 @media (max-width: 350px) {
     .product-tile .tile-body .pdp-link a {
       width: 150px;
     }
 }
+
+@media (max-width: 2560px) {
+  .containerDropdown{
+    padding: 0 25rem;
+  }
+}
+
+.containerDropdown{
+  padding: 0 4rem;
+}
+
+@media (max-width: 2300px) {
+  .containerDropdown{
+    padding: 0 20rem;
+  }
+}
+
+@media (max-width: 2000px) {
+  .containerDropdown{
+    padding: 0 17rem;
+  }
+}
+
+@media (max-width: 1750px) {
+  .containerDropdown{
+    padding: 0 14rem;
+  }
+}
+
+@media (max-width: 1590px) {
+  .containerDropdown{
+    padding: 0 11rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .containerDropdown{
+    padding: 0 9.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .containerDropdown{
+    padding: 0 6rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .containerDropdown{
+    padding: 0 4rem;
+  }
+}
+
 
 
 

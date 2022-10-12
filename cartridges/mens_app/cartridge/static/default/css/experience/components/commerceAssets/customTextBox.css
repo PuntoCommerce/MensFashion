@@ -31,3 +31,9 @@
   margin-top: 15px;
   font-weight: 900;
 }
+
+@media (max-width: 543px) {
+  .experience-component.experience-commerce_assets-customTextBox{
+    margin-bottom: 10px;
+  }
+}

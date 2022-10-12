@@ -49,34 +49,33 @@
                                 <div class="col-5">
                                     <isinclude template="product/components/variationAttribute" />
                                 </div>
-                
-                                <!-- Quantity -->
-                                <div class="hidden-xs-down col-5 quantityCont">
-                                    <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
-                                        <isinclude template="product/components/quantity" />
-                                    </isif>
-                                </div>
-
-                                <isif condition="${attributeStatus.last}">
-                                    <!-- Quantity Drop Down Menu -->
-                                    <div class="attribute quantity col-4 d-sm-none">
-                                        <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
-                                            <isinclude template="product/components/quantity" />
-                                        </isif>
-                                    </div>
-                                </isif>
-
-                                <!-- Favs-->
-                                <div class="col-1 favCont">
-                                    <isinclude template="wishlist/components/addToWishListButton" />
-                                </div>
                         </isloop>
 
                         <div class="d-sm-none row availability align-self-end " data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
                             <isinclude template="product/components/availability" />
                         </div>
 
-                
+                          
+                        <!-- Quantity -->
+                        <div class="hidden-xs-down col-5 quantityCont">
+                            <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
+                                <isinclude template="product/components/quantity" />
+                            </isif>
+                        </div>
+
+                        <isif condition="${attributeStatus.last}">
+                            <!-- Quantity Drop Down Menu -->
+                            <div class="attribute quantity col-4 d-sm-none">
+                                <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
+                                    <isinclude template="product/components/quantity" />
+                                </isif>
+                            </div>
+                        </isif>
+
+                        <!-- Favs-->
+                        <div class="col-1 favCont">
+                            <isinclude template="wishlist/components/addToWishListButton" />
+                        </div>
 
                     <!-- Applicable Promotions -->
                     <div class="row">

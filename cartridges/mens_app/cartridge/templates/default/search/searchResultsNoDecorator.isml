@@ -10,9 +10,7 @@
             style="background-image: url(${pdict.productSearch.bannerImageUrl})"
         </isif>
     >   
-        <iscomment> <h1 class="header page-title">
-            ${pdict.productSearch.category.name}
-        </h1> </iscomment>
+
     </div>
     <iselse>
         <isslot id="search-result-banner-m" description="Banner for search results" context="global" />
@@ -49,6 +47,9 @@
                 aria-labelledby="product-tab">
 
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
+                    <div class="titleCatCont">
+                        <h1 class="header page-title titleCat">${pdict.productSearch.category.name}</h1>
+                    </div>
                     <div class="row grid-header">
                         <div
                             class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
