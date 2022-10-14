@@ -18059,6 +18059,31 @@ div.availability {
   color: #c00;
 }
 
+.attributesCont.row{
+  display: grid;
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.col-talla{
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.col-color{
+  grid-row: 1;
+}
+
+.quantityCont{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.favCont{
+  grid-row: 2;
+  grid-column: 3;
+}
+
 @media (max-width: 768.98px) {
   .choose-bonus-product-dialog .bonus-summary,
   .quick-view-dialog .bonus-summary {
