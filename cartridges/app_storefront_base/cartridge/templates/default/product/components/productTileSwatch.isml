@@ -4,7 +4,7 @@
             <isloop items="${product.variationAttributes[0].values}" var="swatch" status="loopState">
                 <isif condition="${loopState.count < 4}">
                     <a href="${swatch.url}" aria-label="${product.productName}, ${swatch.displayValue}">
-                        <span class="swatch swatch-circle" style="background-color: ${swatch.value.startsWith('hex') ? swatch.value.replace('hex', '#') : swatch.value}">
+                        <span class="swatch swatch-circle swatch-circle-${swatch.value.toLowerCase().replace(/ /g, '-')}" style="background-color: ${swatch.value.startsWith('hex') ? swatch.value.replace('hex', '#') : swatch.value.toLowerCase().replace(/ /g, '-')}">
                         </span>
                     </a>
                 <iselse/>

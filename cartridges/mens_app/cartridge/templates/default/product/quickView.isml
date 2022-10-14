@@ -42,20 +42,20 @@
                 <!-- Attributes -->
                 <section class="attributes">
 
-                    <isinclude template="product/components/mainAttributes" />
+                    <iscomment> <isinclude template="product/components/mainAttributes" /> </iscomment>
 
+                    <div class="attributesCont row">
                         <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
-                            <div data-attr="${attr.id}" class="swatch row">
-                                <div class="col-5">
-                                    <isinclude template="product/components/variationAttribute" />
-                                </div>
+                            <div data-attr="${attr.id}" class="col-5 col-${attr.id}">
+                                <isinclude template="product/components/variationAttribute" />
+                            </div>
                         </isloop>
 
                         <div class="d-sm-none row availability align-self-end " data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
                             <isinclude template="product/components/availability" />
                         </div>
 
-                          
+                        
                         <!-- Quantity -->
                         <div class="hidden-xs-down col-5 quantityCont">
                             <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
@@ -77,14 +77,15 @@
                             <isinclude template="wishlist/components/addToWishListButton" />
                         </div>
 
-                    <!-- Applicable Promotions -->
-                    <div class="row">
-                        <div class="col-12 promotions">
-                            <div class="align-self-center">
-                                <isinclude template="product/components/promotions" />
+                        <!-- Applicable Promotions -->
+                        <div class="row">
+                            <div class="col-12 promotions">
+                                <div class="align-self-center">
+                                    <isinclude template="product/components/promotions" />
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>    
                 </section>
 
                 <isif condition="${product.productType !== 'bundle'}">
@@ -94,6 +95,28 @@
                     </isif>
                 </isif>
             </div>
+            <div class="btmModal">
+                <isset name="loopState" value="${{count: 1}}" scope="page" />
+
+                <div class="hidden-xs-down col availability align-self-end global-availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+                    <iscomment> <div class="row">
+                        <isinclude template="product/components/availability" />
+                    </div> </iscomment>
+                </div>
+
+                <div class="col">
+
+                    <div class="col-8 mx-auto">
+
+                        <!-- Cart and [Optionally] Apple Pay -->
+                        <isif condition="${pdict.addToCartUrl}">
+                            <isinclude template="product/components/addToCartGlobal" />
+                        <iselse>
+                            <isinclude template="product/components/updateProduct" />
+                        </isif>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 
@@ -122,13 +145,14 @@
 
     <isset name="product" value="${productCopy}" scope="page"/>
 </div>
-<div class="modal-footer row align-items-end">
+
+<iscomment> <div class="modal-footer row align-items-end">
     <isset name="loopState" value="${{count: 1}}" scope="page" />
 
     <div class="hidden-xs-down col availability align-self-end global-availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
-        <iscomment> <div class="row">
+        <div class="row">
             <isinclude template="product/components/availability" />
-        </div> </iscomment>
+        </div> 
     </div>
 
     <div class="col">
@@ -143,5 +167,4 @@
                 </isif>
             </div>
         </div>
-    </div>
-</div>
+</div> </iscomment>

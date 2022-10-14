@@ -1,8 +1,8 @@
 <div class="row cart-and-ipay">
     <div class="col-sm-12">
         <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
-        <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart" data-toggle="modal"
-            data-target="#chooseBonusProductModal" data-pid="${product.id}" ${!product.readyToOrder || !product.available ? "disabled" : ""} data-gtmdata="${JSON.stringify(product.gtmData)}"
+        <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart ${!product.readyToOrder || !product.available ? "d-none" : "d-block"}" data-toggle="modal"
+            data-target="#chooseBonusProductModal" data-pid="${product.id}"  data-gtmdata="${JSON.stringify(product.gtmData)}"
             data-gtmga4data="${JSON.stringify(product.gtmGA4Data)}">
             ${Resource.msg('button.addtocart', 'common', null)}
             <span class="tooltiptext">${Resource.msg('tooltip.addtocart.disabled.button', 'pdp', null)}</span>

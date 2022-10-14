@@ -60,7 +60,7 @@
                 <isset name="isBundle" value="${false}" scope="page" />
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
-                    <div class="row selector-wrapper" data-attr="${attr.id}">
+                    <div class="row selector-wrapper row-${attr.id}" data-attr="${attr.id}">
                         <isinclude template="product/components/variationAttribute" />
 
                         <isif condition="${attributeStatus.last && !isBundle}">
@@ -101,16 +101,22 @@
                     </div>
                 </isif>
 
-                <div class="add-to-cart-actions mt-3 mb-3">
-                    <!-- Cart and [Optionally] Apple Pay -->
-                    <isinclude template="product/components/addToCartProduct" />
-                </div>
 
-                <div class="add-to-cart-and-checkout mb-3">
-                    <!-- Cart and Checkout -->
-                    <isinclude template="product/components/buyNowProduct" />
-                </div>
+                    <button class="tooltipAddToCart mt-4">
+                        ${Resource.msg('tooltip.addtocart.disabled.button', 'pdp', null)}
+                    </button>
+            
+                    <div class="add-to-cart-actions mt-3 mb-3">
+                        <!-- Cart and [Optionally] Apple Pay -->
+                        <isinclude template="product/components/addToCartProduct" />
+                    </div>
 
+                    <div class="add-to-cart-and-checkout mb-3">
+                        <!-- Cart and Checkout -->
+                        <isinclude template="product/components/buyNowProduct" />
+                    </div>
+           
+          
                 <!-- Store Locator Link -->
                 <div class="row">
                     <div class="col-12 mt-4">

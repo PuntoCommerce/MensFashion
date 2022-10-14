@@ -418,7 +418,7 @@
 .swatch-circle-miscellaneous.selected:after {
   transform: rotate(-35deg);
 }
-.product-detail .attributes .swatch-circle {
+/* .product-detail .attributes .swatch-circle {
   width: 18px;
   height: 18px;
   background: #fff;
@@ -427,7 +427,7 @@
   display: inline-block;
   margin-right: 0.313em;
   position: relative;
-}
+} */
 /* .product-detail
   .attributes
   .swatch-circle.color-value[data-selected="true"]:after {

@@ -10,13 +10,13 @@
 </iscomment>
 
 <isif condition="${attr.swatchable}">
-    <div class="attribute row col-12">
+    <div class="attribute col-12">
         <div class="col d-flex">
             <div class="mr-2">
                 <div class="attribute-label">
                     <!-- Select <Attribute> Label -->
                     <span class="${attr.id} non-input-label">
-                        ${attr.displayName}
+                       Selecciona un ${attr.displayName.toLowerCase().replace(/ /g, '-')}
                     </span>
                 </div>
                 <div class="d-flex">
@@ -29,7 +29,7 @@
                                 ${product.productType === "variant" && isBundle ? "disabled" : ""}>
                                 <span data-attr-value="${attrValue.value}" class="
                               ${attr.id}-value
-                              swatch-circle
+                              swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')}
                               swatch-value
                               ${attrValue.selected ? 'selected' : ''}
                               ${attrValue.selectable ? 'selectable' : 'unselectable'}" 
@@ -46,8 +46,8 @@
 
             <div class="ml-2">
                 <!-- Label Space -->
-                <label class="${attr.id} non-input-label">
-                </label>
+                <iscomment> <label class="${attr.id} non-input-label">
+                </label> </iscomment>
                 <!-- Product Availability -->
                 <isinclude template="product/components/productAvailability" />
             </div>
