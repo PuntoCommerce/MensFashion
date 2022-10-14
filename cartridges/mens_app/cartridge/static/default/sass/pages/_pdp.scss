@@ -124,7 +124,7 @@
   font-size: 16px;
   min-height: 22px;
  }
- 
+
  & .color-attribute {
   border: 0;
   height: auto;
@@ -144,7 +144,7 @@
    cursor: pointer;
   }
  }
- 
+
  /* Show the tooltip text when you mouse over the tooltip container */
  & .tooltipAddToCart:hover:disabled .tooltiptext,
  .tooltipAddToCart:hover[disabled] {
@@ -165,8 +165,20 @@
  & .cart-and-ipay {
   padding: 0;
   & button:disabled {
-   opacity: 0.5 !important;
+   &:nth-child(1){
+    display: block;
+    pointer-events: none;
+    opacity: .2;
   }
+    display: none;
+  }
+
+  & button{
+    &:nth-child(1){
+      display: none;
+    }
+  }
+
  }
  & .prices-add-to-cart-actions.bundle-footer .price span {
   color: #393939;
@@ -174,9 +186,9 @@
  }
  & .price {
   & .sales .value {
-    font-size: 28px;
-    font-family: 'Avenir-Next';
-    font-weight: 500;
+   font-size: 28px;
+   font-family: "Avenir-Next";
+   font-weight: 500;
   }
  }
  & .product-number-rating {
@@ -389,31 +401,30 @@
  }
 }
 
-
 .btn-add-cart,
-.add-to-cart-global{
-  background: white;
-  border: 1px solid #000;
-  color: #000;
-  height: 49px;
+.add-to-cart-global {
+ background: white;
+ border: 1px solid #000;
+ color: #000;
+ height: 49px;
 }
 
-.buy-now{
-  background: #d9d9d9;
-  border: none;
-  color: #000;
+.buy-now {
+ background: #d9d9d9;
+ border: none;
+ color: #000;
 }
 
 .btn-add-cart,
 .add-to-cart-global,
-.buy-now{
-  height: 49px;
-  padding: 5px 20px;
-  font-size: 16px;
-  text-transform: uppercase;
+.buy-now {
+ height: 49px;
+ padding: 5px 20px;
+ font-size: 16px;
+ text-transform: uppercase;
 
-  &:hover{
-    background: #000;
-    color: #fff;
-  }
+ &:hover {
+  background: #000;
+  color: #fff;
+ }
 }
