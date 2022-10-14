@@ -2465,13 +2465,19 @@ ul {
   .product-detail .cart-and-ipay {
     padding: 0; }
     .product-detail .cart-and-ipay button:disabled {
-      opacity: 0.5 !important; }
+      display: none; }
+      .product-detail .cart-and-ipay button:disabled:nth-child(1) {
+        display: block;
+        pointer-events: none;
+        opacity: .2; }
+    .product-detail .cart-and-ipay button:nth-child(1) {
+      display: none; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }
   .product-detail .price .sales .value {
     font-size: 28px;
-    font-family: 'Avenir-Next';
+    font-family: "Avenir-Next";
     font-weight: 500; }
   .product-detail .product-number-rating {
     border: 0; }

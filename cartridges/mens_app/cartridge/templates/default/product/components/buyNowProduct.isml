@@ -4,7 +4,8 @@
         <input type="hidden" id="buy-now-url" class="buy-now-url"
             value="${URLUtils.url('Checkout-oAuth').toString()}" />
         <button id="buy-now-btn" class="add-to-cart buy-now btn tooltipAddToCart" data-toggle="modal"
-            data-target="#chooseBonusProductModal" data-pid="${product.id}">
+            data-target="#chooseBonusProductModal" data-pid="${product.id}"
+            ${!product.readyToOrder || !product.available ? "disabled" : ""}>
             ${Resource.msg('button.buynow', 'common', null)}
             <span class="tooltiptext">${Resource.msg('tooltip.addtocart.disabled.button', 'pdp', null)}</span>
         </button>
