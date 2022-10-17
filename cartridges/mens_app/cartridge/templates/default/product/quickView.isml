@@ -12,7 +12,7 @@
         <!-- Product Name and Number -->
         <div class="col-sm-6 quickviewInfo">
             <div class="row">
-                <div class="col">
+                <div>
                     <section>
                         <h1 class="product-name">${product.productName}</h1>
                     </section>
@@ -20,24 +20,14 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div>
                     <!-- Prices -->
                     <div class="prices">
                         <isset name="price" value="${product.price}" scope="page" />
                         <isinclude template="product/components/pricing/main" />
                     </div>
                 </div>
-            </div>
-             <!-- Trigger Modal Sizes Guide -->
-            <div class="row sizes-guide-cont">                
-                <div class="col sizes-guide d-flex">
-                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
-                    <!-- Button trigger modal -->
-                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
-                        ${Resource.msg('size.guide', 'common', null)}
-                    </button>
-                </div>
-            </div>    
+            </div>  
             <div class="detail-panel">
                 <!-- Attributes -->
                 <section class="attributes">

@@ -1219,7 +1219,6 @@ ul {
   animation-timing-function: ease-out; }
 
 .breadcrumb {
-  border-bottom: 0 !important;
   padding: 0;
   margin: 0; }
 
@@ -1634,7 +1633,7 @@ ul {
   text-transform: initial; }
 
 .product-breadcrumb .breadcrumb li a {
-  color: #000;
+  color: #979797;
   letter-spacing: 1px; }
 
 .carousel {
@@ -2372,24 +2371,26 @@ ul {
     border: 0;
     color: #393939;
     display: inline-block;
-    font-family: "Avenir-Bold";
-    font-size: 30px;
-    font-weight: 700;
+    font-family: 'Avenir-Next';
+    font-size: 20px;
+    font-weight: 900;
     margin: 34px 0 12px 0;
     line-height: normal; }
   .product-detail .color-attribute:focus {
     border: none;
     outline: none; }
   .product-detail .sizes-guide {
-    padding-bottom: 0.5em;
-    padding-top: 0.5em; }
+    padding: 0;
+    margin-left: 80px;
+    margin-bottom: 5px; }
     .product-detail .sizes-guide button {
       text-decoration: underline;
       border: 0;
       background: none;
       padding: 0;
       display: flex;
-      align-items: end; }
+      align-items: center;
+      font-size: 12px; }
       .product-detail .sizes-guide button:focus {
         border: none;
         outline: none; }
@@ -2476,7 +2477,7 @@ ul {
     color: #393939;
     font-size: 30px; }
   .product-detail .price .sales .value {
-    font-size: 28px;
+    font-size: 20px;
     font-family: "Avenir-Next";
     font-weight: 500; }
   .product-detail .product-number-rating {
@@ -2613,7 +2614,7 @@ ul {
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
-    width: 25px; }
+    width: 15px; }
   .product-detail .product-number {
     font-family: "Avenir-Bold";
     margin-top: 20px;
@@ -2639,7 +2640,15 @@ ul {
   height: 49px;
   padding: 5px 20px;
   font-size: 16px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  height: 49px;
+  padding: 5px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: #3E403D;
+  border-radius: 3px;
+  color: #ffffff;
+  height: 49px; }
   .btn-add-cart:hover,
   .add-to-cart-global:hover,
   .buy-now:hover {
