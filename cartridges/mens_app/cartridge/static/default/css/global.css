@@ -18233,11 +18233,23 @@ div.availability {
 }
 
 .product-tile .tile-body .pdp-link a {
-  width: 329px;
+  width: 240px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
+}
+
+@media (max-width: 1350px) {
+  .product-tile .tile-body .pdp-link a {
+    width: 210px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .product-tile .tile-body .pdp-link a {
+    width: 160px;
+  }
 }
 
 .experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a{
