@@ -3,7 +3,7 @@ var FileWriter = require("dw/io/FileWriter");
 var FileReader = require("dw/io/FileReader");
 
 module.exports.execute = () => {
-  let dir = new File(File.IMPEX + "/src/catalog/catalogMens/products");
+  let dir = new File(File.IMPEX + "/src/catalogMens/products");
   let final = new File(File.IMPEX + "/src/catalog/finalProducts.xml");
   let finalWritter = new FileWriter(final);
   let startFile =
