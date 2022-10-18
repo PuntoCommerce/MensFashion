@@ -113,6 +113,58 @@
             }
           ]
         }
+      },
+      {
+        "@type-id": "custom.merge.Pricebooks",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud",
+        "module": "mens_app/cartridge/scripts/jobs/mergePricebooks.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
+        "@type-id": "custom.merge.Products",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud",
+        "module": "mens_app/cartridge/scripts/jobs/mergeProducts.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
       }
     ]
   }
