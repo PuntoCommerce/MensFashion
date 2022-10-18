@@ -20746,6 +20746,10 @@ button.close:focus {
   font-size: 20px !important;
 }
 
+.experience-commerce_layouts-isFullWidth .isFullWidth .col{
+  padding: 0 !important;
+}
+
 .hero.slant-down .header.page-title {
   text-transform: uppercase;
 }
