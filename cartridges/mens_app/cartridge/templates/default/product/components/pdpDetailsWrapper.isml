@@ -14,7 +14,14 @@
             </div>
 
 
-
+         <div class="row d-xs-block d-md-none">
+                <div class="col">
+                    <!-- Product Number -->
+                    <div class="product-number">
+                        <isinclude template="product/components/productNumber" />
+                    </div>
+                </div>
+            </div>
             <div class="row prices-size-guide-container">
                 <!-- Prices -->
                 <div class="prices col-lg-8">
