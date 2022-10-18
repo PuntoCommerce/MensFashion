@@ -18059,6 +18059,66 @@ div.availability {
   color: #c00;
 }
 
+.attributesCont.row{
+  display: grid;
+  gap: 10px;
+}
+
+.col-talla{
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.col-color{
+  grid-row: 1;
+  grid-column-start: 1; 
+  grid-column-end: 2;
+}
+
+
+.quantityCont{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.favCont{
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.attributesPdp{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.attributesPdp .row-color{
+  grid-row: 1;
+  margin-bottom: 20px;
+}
+
+.attributesPdp .row-talla{
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.quantityPDP{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.favPDP{
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.product-options{
+  grid-row: 3;
+}
+.attributeDetailTalla{
+  display: flex;
+}
+
 @media (max-width: 768.98px) {
   .choose-bonus-product-dialog .bonus-summary,
   .quick-view-dialog .bonus-summary {
@@ -18335,8 +18395,9 @@ div.availability {
 
 .container.product-detail .breadcrumb {
   border-radius: 0;
-  border-bottom: 1px solid #ccc;
-  margin: 0 0 18px 0;
+  border-bottom: 1px solid #000;
+  margin: 0 60px 36px 60px;
+  padding-bottom: 6px;
 }
 
 .container.product-detail .product-breadcrumb {
@@ -19879,7 +19940,21 @@ div.availability {
   text-transform: uppercase;
   transition: 0.3s ease all;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 9px 20px;
+  padding: 9px;
+}
+
+.btn.btn-primary.add-to-wish-list:hover 
+.favIconGrey {
+  display: none;
+}
+
+.favIconRed{
+  display: none;
+}
+
+.btn.btn-primary.add-to-wish-list:hover 
+.favIconRed {
+  display: block;
 }
 
 .summary__pricing .price {
@@ -20297,10 +20372,6 @@ button.close:focus {
   padding: 85px 115px;
 }
 
-.breadcrumb-item a {
-  text-decoration: underline;
-}
-
 .myAccount .card {
   border: 1px solid #000;
   border-radius: 3px;
@@ -20675,6 +20746,10 @@ button.close:focus {
   font-size: 20px !important;
 }
 
+.experience-commerce_layouts-isFullWidth .isFullWidth .col{
+  padding: 0 !important;
+}
+
 .hero.slant-down .header.page-title {
   text-transform: uppercase;
 }
@@ -20742,7 +20817,7 @@ button.close:focus {
 }
 
 .product-detail .prices {
-  margin-top: 24px;
+  margin: 24px 0;
 }
 
 .product-detail .product-id {

@@ -14,7 +14,11 @@
 <isobject object="${product.raw}" view="detail">
 
     <div class="container product-detail product-wrapper" data-pid="${product.id}">
-
+        <!--Breadcrumbs-->
+        <div class="product-breadcrumb col d-none d-md-block">
+            <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+        </div>
+        
         <div class="row p-image-and-wrapper">
             <!-- Product Images Scroll -->
             <isinclude template="product/components/imageScroll" />
