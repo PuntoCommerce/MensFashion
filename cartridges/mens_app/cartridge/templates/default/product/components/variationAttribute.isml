@@ -11,8 +11,8 @@
 
 <isif condition="${attr.swatchable}">
     <div class="attribute col-12">
-        <div class="col d-flex">
-            <div class="mr-2">
+        <div class="d-flex">
+            <div class="mr-2 swatchCont">
                 <div class="attribute-label">
                     <!-- Select <Attribute> Label -->
                     <span class="${attr.id} non-input-label">
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="ml-2">
+            <div class="ml-2 availabilityCont">
                 <!-- Label Space -->
                 <iscomment> <label class="${attr.id} non-input-label">
                 </label> </iscomment>
@@ -55,12 +55,24 @@
     </div>
 <iselse/>
     <div class="attribute col-12">
-        <!-- Select <Attribute> Label -->
-        <label class="d-none d-lg-block ${attr.id}"
-            for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
-            ${attr.displayName}
-        </label>
-
+        <div class="attributeDetailTalla">
+            <!-- Select <Attribute> Label -->
+            <label class="d-none d-lg-block ${attr.id}"
+                for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
+                ${attr.displayName}
+            </label>
+            
+            <!-- Trigger Modal Sizes Guide -->
+            <div class="row sizes-guide-cont">                
+                <div class="col sizes-guide d-flex">
+                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
+                    <!-- Button trigger modal -->
+                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
+                        ${Resource.msg('size.guide', 'common', null)}
+                    </button>
+                </div>
+            </div>  
+        </div>
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom-select form-control select-${attr.id}"
             id="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}" ${product.productType === "variant" && isBundle ? "disabled" : ""}>

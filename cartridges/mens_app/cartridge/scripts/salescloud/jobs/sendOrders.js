@@ -68,7 +68,12 @@ exports.execute = () => {
     let productLineItems = order.productLineItems.toArray();
     let p;
     productLineItems.forEach((p) => {
-      products.push({ ProductCode: p.productID, Quantity: p.quantityValue });
+      products.push({
+        ProductCode: p.productID,
+        Quantity: p.quantityValue,
+        DiscName: "",
+        DiscountP: 0.0,
+      });
     });
     // let paymentInstruments = order.paymentInstruments[0];
 
@@ -85,8 +90,17 @@ exports.execute = () => {
 
     let defaultShipment = order.defaultShipment;
     let paymentTransaction = order.paymentTransaction;
-    let pricebook =
-      order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
+
+    let discounts = 0;
+    let pAdjustment;
+    let priceAdjustments = order.priceAdjustments.iterator();
+    while (priceAdjustments.hasNext()) {
+      pAdjustment = priceAdjustments.next();
+      discounts += pAdjustment.price.value;
+    }
+
+    // let pricebook =
+    // order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
 
     body = {
       account: {
@@ -99,8 +113,10 @@ exports.execute = () => {
       paymentInfo: handlePayment(paymentTransaction),
       oppName: order.orderNo,
       cadena: "Men's Fashion",
+      OrderDiscountDetailsTotal: discounts,
+
       products: products,
-      pricebookId: pricebook,
+      pricebookId: "pricebook",
     };
 
     salesOrderId = sendOrder(body);
