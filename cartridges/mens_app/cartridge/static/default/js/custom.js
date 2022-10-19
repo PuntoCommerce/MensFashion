@@ -236,6 +236,18 @@ function changeRange(e, type) {
   })
 }
 
+function showPassword(){
+  const inputPassword = document.querySelectorAll('.show-password');
+
+  inputPassword.forEach((e) => {
+    if (e.type === "password") {
+        e.type = "text";
+    } else {
+        e.type = "password";
+    }
+});
+}
+
 function localValues() {
   const pmin = document.getElementById("price-range-min");
   const rangeMin = document.getElementById("range-min");
