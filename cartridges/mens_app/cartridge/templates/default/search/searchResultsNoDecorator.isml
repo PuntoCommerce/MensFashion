@@ -47,12 +47,6 @@
                 aria-labelledby="product-tab">
 
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
-<<<<<<< HEAD
-=======
-                    <iscomment> <div class="titleCatCont">
-                        <h1 class="header page-title titleCat">${pdict.productSearch.category.name}</h1>
-                    </div> </iscomment>
->>>>>>> ef2341c8b33efc03a4f6858043aaffe924b41b24
                     <div class="row grid-header">
                         <div
                             class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
