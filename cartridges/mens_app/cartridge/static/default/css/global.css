@@ -18235,7 +18235,7 @@ div.availability {
 }
 
 .product-tile .tile-body .pdp-link a {
-  width: 240px;
+  width: 320px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -18250,7 +18250,7 @@ div.availability {
 
 @media (max-width: 1100px) {
   .product-tile .tile-body .pdp-link a {
-    width: 160px;
+    width: 225px;
   }
 
   .search-results .product-tile .tile-body .pdp-link a {
