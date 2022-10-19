@@ -17736,12 +17736,6 @@ h6 {
   margin-right: 0.938rem;
 }
 
-.price .range,
-.price .sales,
-.price .starting {
-  font-weight: 700;
-}
-
 .price .tiered {
   color: #222;
 }
@@ -18232,6 +18226,14 @@ div.availability {
   line-height: 1.2;
 }
 
+.search-results .product-tile .tile-body .pdp-link a {
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
 .product-tile .tile-body .pdp-link a {
   width: 240px;
   white-space: nowrap;
@@ -18250,8 +18252,20 @@ div.availability {
   .product-tile .tile-body .pdp-link a {
     width: 160px;
   }
+
+  .search-results .product-tile .tile-body .pdp-link a {
+    width: 190px;
+  }
+  
 }
 
+@media (max-width: 768px) {
+
+  .search-results .product-tile .tile-body .pdp-link a {
+    width: 160px;
+  }
+  
+}
 .experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a{
   width: 259px;
   white-space: nowrap;
@@ -19981,6 +19995,7 @@ div.availability {
   color: #231F20;
   font-size: 20px;
   font-family: 'Avenir-Next';
+  font-weight: 500;
 }
 
 .summary__pricing .prices-container .strike-price del{
@@ -21168,6 +21183,14 @@ button.close:focus {
 @media (max-width: 991.98px) {
   .product-tile .tile-body .pdp-link a {
     font-size: 0.9375em;
+  }
+
+  .login-form-nav {
+    margin: 13px 20px 0 20px;
+  }
+
+  .trackorder {
+    margin: 13px 20px 0 20px;
   }
 }
 
