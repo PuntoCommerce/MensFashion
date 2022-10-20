@@ -2380,7 +2380,6 @@ ul {
     border: none;
     outline: none; }
   .product-detail .sizes-guide {
-    padding: 0;
     margin-left: 80px;
     margin-bottom: 5px; }
     .product-detail .sizes-guide button {
@@ -2655,6 +2654,18 @@ ul {
     background: #000;
     color: #fff; }
 
+.attributeDetailTalla {
+  display: flex !important;
+  justify-content: space-between !important; }
+
+.availability-msg {
+  margin-bottom: 0;
+  margin-top: 3vh;
+  color: #23AC00; }
+
+.fa.fa-whatsapp {
+  font-size: 24px; }
+
 .checkout {
   font-family: "Avenir-LT-Std";
   font-size: 16px; }
@@ -2911,6 +2922,15 @@ ul {
         justify-content: center; }
       .card-myaccount .line-dotted {
         display: none; } }
+
+.show-password-button {
+  background: none;
+  border: none;
+  float: right;
+  font-size: 18px; }
+
+.show-password-button:focus {
+  outline: 0; }
 
 a:hover {
   text-decoration: none; }
