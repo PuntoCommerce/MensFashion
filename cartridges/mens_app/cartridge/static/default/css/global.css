@@ -2890,9 +2890,11 @@ textarea.form-control.is-valid {
 .invalid-feedback {
   display: none;
   width: 100%;
-  margin-top: 0.25rem;
-  font-size: 80%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
   color: #c00;
+  font-weight: 500;
 }
 
 .invalid-tooltip {
@@ -17733,13 +17735,6 @@ h6 {
 
 .price .strike-through {
   text-decoration: line-through;
-  margin-right: 0.938rem;
-}
-
-.price .range,
-.price .sales,
-.price .starting {
-  font-weight: 700;
 }
 
 .price .tiered {
@@ -18232,8 +18227,16 @@ div.availability {
   line-height: 1.2;
 }
 
+.search-results .product-tile .tile-body .pdp-link a {
+  width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
 .product-tile .tile-body .pdp-link a {
-  width: 240px;
+  width: 320px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -18248,10 +18251,22 @@ div.availability {
 
 @media (max-width: 1100px) {
   .product-tile .tile-body .pdp-link a {
-    width: 160px;
+    width: 225px;
   }
+
+  .search-results .product-tile .tile-body .pdp-link a {
+    width: 190px;
+  }
+  
 }
 
+@media (max-width: 768px) {
+
+  .search-results .product-tile .tile-body .pdp-link a {
+    width: 160px;
+  }
+  
+}
 .experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a{
   width: 259px;
   white-space: nowrap;
@@ -19981,6 +19996,7 @@ div.availability {
   color: #231F20;
   font-size: 20px;
   font-family: 'Avenir-Next';
+  font-weight: 500;
 }
 
 .summary__pricing .prices-container .strike-price del{
@@ -20070,6 +20086,7 @@ button.close:focus {
 
 .login-page .breadcrumb {
   margin: 0 115px;
+  font-family: 'Avenir-Next';
 }
 
 .login-page .card-body {
@@ -20157,6 +20174,7 @@ button.close:focus {
   margin-right: 27px;
   color: #ff0000;
   font-size: 14px;
+  font-family: 'Avenir-Next';
 }
 
 .login-form-nav .btn__small {
@@ -20293,7 +20311,7 @@ button.close:focus {
   border-radius: 3px;
   color: #000000 !important;
   padding: 0;
-  font-family: "Avenir-LT-Std";
+  font-family: "Avenir-Next";
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
@@ -20893,7 +20911,7 @@ button.close:focus {
 }
 
 .cart-page .line-item-name {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir-Next";
   font-weight: 900;
 }
 
@@ -21165,9 +21183,32 @@ button.close:focus {
   margin: 0 auto;
 }
 
+.cartContainer{
+  padding: 0 45px;
+}
+
+.line-item-promo{
+  position: absolute;
+  bottom: -20px;
+}
+@media (max-width: 1200px) {
+  .checkout__cart {
+    background: #ffffff !important; 
+  } 
+
+}  
+
 @media (max-width: 991.98px) {
   .product-tile .tile-body .pdp-link a {
     font-size: 0.9375em;
+  }
+
+  .login-form-nav {
+    margin: 13px 20px 0 20px;
+  }
+
+  .trackorder {
+    margin: 13px 20px 0 20px;
   }
 }
 

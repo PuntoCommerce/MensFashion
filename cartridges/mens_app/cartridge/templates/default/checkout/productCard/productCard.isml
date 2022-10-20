@@ -25,7 +25,7 @@
                 </div>
                 <div class="d-flex checkout__text">
                     <isloop items="${lineItem.variationAttributes}" var="attribute" status="status">
-                        <p class="line-item-attributes mt-2">${attribute.displayValue}</p>
+                        <p class="line-item-attributes">${attribute.displayValue}</p>
                         <isif condition="${!status.last}">
                             <span>&nbsp;/&nbsp;</span>
                         </isif>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="row checkout__text">
                     <!--- item price --->
-                    <div class="col-4">
+                    <div class="col-3">
                         <isif condition="${lineItem.price}">
                             <p class="line-item-pricing-info">
                                 <span class="line-item-total-text unit-price-label">
@@ -47,7 +47,7 @@
                         </isif>
                     </div>
                     <!--- quantity --->
-                    <div class="col-4">
+                    <div class="col-9">
                         <isif condition=${miniCart}>
                             <isinclude template="checkout/productCard/productCardQuantitySelector" />
                             <iselse>

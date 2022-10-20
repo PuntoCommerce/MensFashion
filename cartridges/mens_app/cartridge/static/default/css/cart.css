@@ -676,6 +676,7 @@ div.availability {
 .item-attributes {
   display: inline-block;
   vertical-align: top;
+  font-family: 'Avenir-Next';
 }
 .line-item-divider {
   margin: 0.625em -0.625rem;
@@ -698,6 +699,7 @@ div.availability {
   font-size: 12px;
   margin-bottom: 0.5rem;
   line-height: 16px;
+  font-family: 'Avenir-Next';
 }
 .no-margin-top {
   margin-top: 0;

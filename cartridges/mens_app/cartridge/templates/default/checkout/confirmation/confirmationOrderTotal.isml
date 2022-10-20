@@ -21,9 +21,6 @@ ${pdict.order.totals.totalShippingCost}
     <br/>
 </isif>
 
-<!--- Sales Tax --->
-${Resource.msg('label.order.sales.tax','confirmation', null)}:
-${pdict.order.totals.totalTax}
 <br/>
 
 <!--- Grand Total --->
