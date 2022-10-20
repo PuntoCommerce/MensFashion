@@ -5,6 +5,10 @@ const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
 
+const getPorcentage = (cant, total) => {
+  return (cant / total) * 100;
+};
+
 const handleShipment = (shipment) => {
   if (shipment.shippingMethodID == "pickup") {
     let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
@@ -64,15 +68,34 @@ exports.execute = () => {
     order = orders.next();
     order = OrderMgr.getOrder(order.orderNo);
 
+    let discounts = 0;
+    let pAdjustment;
+    let priceAdjustments = order.priceAdjustments.iterator();
+    while (priceAdjustments.hasNext()) {
+      pAdjustment = priceAdjustments.next();
+      discounts += pAdjustment.price.value * -1;
+    }
+
     let products = [];
     let productLineItems = order.productLineItems.toArray();
     let p;
+
     productLineItems.forEach((p) => {
+      let promotionIds = [];
+      let pDiscount = 0;
+      let productPAdjusments = p.priceAdjustments.iterator();
+      let ppAdjustment;
+      while (productPAdjusments.hasNext()) {
+        ppAdjustment = productPAdjusments.next();
+        discounts += ppAdjustment.price.value * -1;
+        pDiscount += ppAdjustment.price.value * -1;
+      }
+
       products.push({
         ProductCode: p.productID,
         Quantity: p.quantityValue,
-        DiscName: "",
-        DiscountP: 0.0,
+        DiscName: promotionIds.toString(),
+        DiscountP: getPorcentage(pDiscount, p.price.value),
       });
     });
     // let paymentInstruments = order.paymentInstruments[0];
@@ -90,14 +113,6 @@ exports.execute = () => {
 
     let defaultShipment = order.defaultShipment;
     let paymentTransaction = order.paymentTransaction;
-
-    let discounts = 0;
-    let pAdjustment;
-    let priceAdjustments = order.priceAdjustments.iterator();
-    while (priceAdjustments.hasNext()) {
-      pAdjustment = priceAdjustments.next();
-      discounts += pAdjustment.price.value;
-    }
 
     // let pricebook =
     // order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
