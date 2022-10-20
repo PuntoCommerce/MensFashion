@@ -70,13 +70,13 @@ module.exports = (function () {
       try {
         result = restService.setThrowOnError().call(data);
       } catch (error) {
-        return error;
+        return {error: true, detail: error};
         throw new Error();
       }
       if (result.isOk()) {
         return restService.response;
       } else {
-        return result;
+        return {error: true, detail: result};
       }
     },
   };
