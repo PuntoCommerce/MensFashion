@@ -11,7 +11,6 @@ module.exports.execute = () => {
 
   let endFile = "</catalog>";
   let dirList = dir.listFiles().iterator();
-  let dirList2 = dir.listFiles();
 
   let file;
   let finalString = "";
