@@ -1,5 +1,5 @@
 .checkout {
-  font-family: nth($text-font-stack, $avenir-LT-Std);
+  font-family: nth($text-font-stack, $avenir-Next) !important;
   font-size: $font-size-h5-and-paragraph;
 
   &--rightBorder {
@@ -98,12 +98,10 @@
     color: $text-color-black !important;
     font-family: nth($text-font-stack, $avenir-Next) !important;
     font-size: $font-size-minimal;
+    font-weight: 700;
 
     &--space {
       margin-left: 5px;
-    }
-    &--bold {
-      font-family: nth($text-font-stack, $avenir-LT-Heavy) !important;
     }
 
     &--h3 {
@@ -113,7 +111,7 @@
 
   &__item {
     background-color: $white-color !important;
-    padding: 50px 25px;
+    padding: 50px 15px;
     border: 1px solid $text-color-black;
 
     height: fit-content;

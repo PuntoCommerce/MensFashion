@@ -40,6 +40,11 @@ a {
   color: #000000;
 }
 
+.oauth-google--button span,
+.oauth-facebook--button span{
+  font-family: nth($text-font-stack, $avenir-Next) !important;
+}
+
 @media (max-width: 376px){
   .oauth-google--button span,
   .oauth-facebook--button span{
