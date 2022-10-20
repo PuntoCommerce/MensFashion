@@ -562,7 +562,7 @@ header .main-menu {
   height: 2em; }
 
 .checkout.header {
-  padding: 2em 4em; }
+  padding: 2em 0.5em; }
   @media only screen and (max-width: 37.5em) {
     .checkout.header {
       justify-content: center !important; } }
@@ -1102,7 +1102,7 @@ ul {
 
 .nav-link.dropdown-toggle,
 .nav-link {
-  font-family: "Avenir-LT-Std" !important; }
+  font-family: "Avenir-Next" !important; }
 
 #openCustomMenu {
   background-color: transparent;
@@ -2667,7 +2667,7 @@ ul {
   font-size: 24px; }
 
 .checkout {
-  font-family: "Avenir-LT-Std";
+  font-family: "Avenir-Next" !important;
   font-size: 16px; }
   @media only screen and (min-width: 56.25em) {
     .checkout--rightBorder {
@@ -2729,16 +2729,15 @@ ul {
   .checkout__text {
     color: #000000 !important;
     font-family: "Avenir-Next" !important;
-    font-size: 14px; }
+    font-size: 14px;
+    font-weight: 700; }
     .checkout__text--space {
       margin-left: 5px; }
-    .checkout__text--bold {
-      font-family: "AvenirLTStd-Heavy" !important; }
     .checkout__text--h3 {
       font-size: 32px; }
   .checkout__item {
     background-color: #ffffff !important;
-    padding: 50px 25px;
+    padding: 50px 15px;
     border: 1px solid #000000;
     height: fit-content; }
   .checkout__totals {
@@ -2959,6 +2958,10 @@ a .oauth-facebook--button {
 .oauth-google .fa.fa-google, .oauth-google--button span,
 .oauth-facebook .fa.fa-facebook-official, .oauth-facebook--button {
   color: #000000; }
+
+.oauth-google--button span,
+.oauth-facebook--button span {
+  font-family: "Avenir-Next" !important; }
 
 @media (max-width: 376px) {
   .oauth-google--button span,

@@ -60,16 +60,6 @@
     </div>
 </div>
 
-<!--- Sales Tax --->
-<div class="row leading-lines sales-tax-item">
-    <div class="col-6">
-        <p class="order-receipt-label"><span>${Resource.msg('label.order.sales.tax', 'confirmation', null)}</span></p>
-    </div>
-    <div class="col-6">
-        <p class="text-right"><span class="tax-total">${pdict.order.totals.totalTax}</span></p>
-    </div>
-</div>
-
 <!--- Grand Total --->
 <div class="row grand-total leading-lines">
     <div class="col-6">
