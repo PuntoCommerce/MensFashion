@@ -58,7 +58,6 @@
   outline: none;
  }
  & .sizes-guide {
-  padding: 0;
   margin-left: 80px;
   margin-bottom: 5px;
 
@@ -438,4 +437,19 @@
   background: #000;
   color: #fff;
  }
+}
+
+.attributeDetailTalla{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.availability-msg{
+  margin-bottom: 0;
+  margin-top: 3vh;
+  color: #23AC00;
+}
+
+.fa.fa-whatsapp{
+  font-size: 24px;
 }

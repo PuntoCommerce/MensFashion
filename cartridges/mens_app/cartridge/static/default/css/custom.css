@@ -834,14 +834,3 @@ footer .socialMedia-paymentMethods {
     margin-bottom: 0px;
   }
 }
-
-.show-password-button{
-  background: none;
-  border: none;
-  float: right;
-  font-size: 18px;
-}
-
-.show-password-button:focus{
-  outline: 0;
-}
