@@ -19984,6 +19984,16 @@ div.availability {
   display: block;
 }
 
+.wishlistTile:hover
+.favIconGrey {
+  display: none;
+}
+
+.wishlistTile:hover
+.favIconRed {
+  display: block;
+}
+
 .summary__pricing .price {
   display: flex;
   align-items: flex-end;
@@ -20011,6 +20021,7 @@ div.availability {
 .summary_price {
   display: flex;
   flex-direction: row;
+  margin: 12px 0;
 }
 
 .add-to-cart-global.btn.btn-primary {
@@ -21191,6 +21202,15 @@ button.close:focus {
   position: absolute;
   bottom: -20px;
 }
+
+.account-sections{
+  padding-top: 20px;
+}
+
+.colorName{
+  text-transform: capitalize;
+}
+
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important; 

@@ -562,7 +562,7 @@ header .main-menu {
   height: 2em; }
 
 .checkout.header {
-  padding: 2em 4em; }
+  padding: 2em 0.5em; }
   @media only screen and (max-width: 37.5em) {
     .checkout.header {
       justify-content: center !important; } }
@@ -2162,7 +2162,8 @@ ul {
   font-family: "AvenirLTStd-Heavy" !important; }
 
 .product-tile.summary {
-  position: relative; }
+  position: relative;
+  height: 510px; }
 
 .isFullWidth .carousel-control-prev {
   left: 0% !important;
@@ -2785,7 +2786,7 @@ ul {
       font-size: 32px; }
   .checkout__item {
     background-color: #ffffff !important;
-    padding: 50px 15px;
+    padding: 10px 15px 50px 15px;
     border: 1px solid #000000;
     height: fit-content; }
   .checkout__totals {
@@ -2892,7 +2893,7 @@ ul {
     margin-right: 16px; }
 
 .card-product-info__body--attributes p {
-  line-height: 44px;
+  line-height: 22px;
   font-size: 16px; }
 
 .card-product-info__body--edit span {
