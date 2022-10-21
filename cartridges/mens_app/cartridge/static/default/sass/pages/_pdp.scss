@@ -47,7 +47,7 @@
   border: 0;
   color: $dark-grey;
   display: inline-block;
-  font-family: 'Avenir-Next';
+  font-family: "Avenir-Next";
   font-size: 20px;
   font-weight: 900;
   margin: 34px 0 12px 0;
@@ -76,12 +76,12 @@
   }
  }
  .prices-container {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-start; */
   & del {
-   margin-bottom: 10px;
+   /* margin-bottom: 10px; */
    font-size: 18px;
    font-weight: 400;
   }
@@ -167,20 +167,19 @@
  & .cart-and-ipay {
   padding: 0;
   & button:disabled {
-   &:nth-child(1){
+   &:nth-child(1) {
     display: block;
     pointer-events: none;
-    opacity: .2;
+    opacity: 0.2;
+   }
+   display: none;
   }
+
+  & button {
+   &:nth-child(1) {
     display: none;
+   }
   }
-
-  & button{
-    &:nth-child(1){
-      display: none;
-    }
-  }
-
  }
  & .prices-add-to-cart-actions.bundle-footer .price span {
   color: #393939;
@@ -428,7 +427,7 @@
  padding: 5px 20px;
  font-size: 16px;
  text-transform: uppercase;
- background: #3E403D;
+ background: #3e403d;
  border-radius: 3px;
  color: #ffffff;
  height: 49px;
@@ -439,17 +438,87 @@
  }
 }
 
-.attributeDetailTalla{
-  display: flex !important;
-  justify-content: space-between !important;
+.attributeDetailTalla {
+ display: flex !important;
+ justify-content: space-between !important;
 }
 
-.availability-msg{
-  margin-bottom: 0;
-  margin-top: 3vh;
-  color: #23AC00;
+.availability-msg {
+ margin-bottom: 0;
+ margin-top: 3vh;
+ color: #23ac00;
 }
 
-.fa.fa-whatsapp{
-  font-size: 24px;
+.fa.fa-whatsapp {
+ font-size: 24px;
+}
+
+.devolutions-container__store {
+ display: flex;
+ flex-direction: column;
+
+ .devolutions-container__store--title {
+  font-size: 16px;
+  text-transform: uppercase;
+ }
+
+ .devolutions-container__store--text {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #64656a;
+ }
+}
+
+.storeLinkPDP{
+  &__offer{
+    font-size: 16px;
+
+    i{
+      margin-right: 12px;
+      font-size: 16px;
+      color: #64656A;
+    }
+
+    span{
+      color: red;
+      font-size: 16px;
+    }
+  }
+
+  &__payment{
+    i{
+      font-size: 16px;
+      margin-right: 12px;
+      color: #64656A;
+    }
+    span{
+      color: #64656A;
+      font-size: 16px;
+    }
+  }
+}
+
+.prices{
+  .price{
+    .prices-container{
+      display: flex;
+      align-items: center;
+
+      .stikePriceCont{
+        margin-bottom: 0 !important;
+        margin-right: 18px;
+        span{
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+  .promotion-item{
+    background: #FD4237;
+    color: white;
+    padding: 3px 14px 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 24px;
+  }
 }

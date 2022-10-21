@@ -1,6 +1,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addJs('/js/pdpAddToCartUX.js');
+    assets.addJs('/js/custom.js');
 </isscript>
 <div class="custom-padding product-details-container h-100">
     <div class="row justify-content-center h-100">
@@ -10,11 +11,17 @@
             <div class="row">
                 <div class="col">
                     <span class="product-name">${product.productName}</span>
+
+                    <!-- Applicable Promotions -->
+                    <iscomment> <div class="row">
+                        <div class="col-12 promotions">
+                        </div>
+                    </div> </iscomment>
                 </div>
             </div>
 
 
-         <div class="row d-xs-block d-md-none">
+            <div class="row d-xs-block d-md-none">
                 <div class="col">
                     <!-- Product Number -->
                     <div class="product-number">
@@ -27,23 +34,29 @@
                 <div class="prices col-lg-8">
                     <isset name="price" value="${product.price}" scope="page" />
                     <isinclude template="product/components/pricing/main" />
+                    <isinclude template="product/components/promotionsPdp" />
                 </div>
-                <iscomment> <!-- Trigger Modal Sizes Guide -->
-                <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
-                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
-                    <!-- Button trigger modal -->
-                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
-                        ${Resource.msg('size.guide', 'common', null)}
-                    </button>
-                </div> </iscomment>
+                <iscomment>
+                    <!-- Trigger Modal Sizes Guide -->
+                    <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
+                        <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
+                            alt="Guia de tallas" />
+                        <!-- Button trigger modal -->
+                        <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
+                            ${Resource.msg('size.guide', 'common', null)}
+                        </button>
+                    </div>
+                </iscomment>
             </div>
 
             <div class="row d-none d-md-block">
                 <div class="col-12">
                     <!-- Product Number -->
-                    <iscomment> <div class="product-number fu ">
-                        <isinclude template="product/components/productNumber" />
-                    </div> </iscomment>
+                    <iscomment>
+                        <div class="product-number fu ">
+                            <isinclude template="product/components/productNumber" />
+                        </div>
+                    </iscomment>
                 </div>
             </div>
 
@@ -79,18 +92,18 @@
                     </isif>
                 </div>
 
-             
-                    <!-- Quantity Drop Down Menu -->
-                    <div class="attribute quantityPDP">
-                        <isinclude template="product/components/quantity" />
-                    </div>
-                    <!-- Add to wishlist -->
-                    <div class="attribute favPDP">
-                        <isinclude template="wishlist/components/addToWishListButton" />
-                    </div>
+
+                <!-- Quantity Drop Down Menu -->
+                <div class="attribute quantityPDP">
+                    <isinclude template="product/components/quantity" />
+                </div>
+                <!-- Add to wishlist -->
+                <div class="attribute favPDP">
+                    <isinclude template="wishlist/components/addToWishListButton" />
+                </div>
             </div>
 
-            <div class="pdpBottom">    
+            <div class="pdpBottom">
                 <!-- Size Chart -->
                 <isif condition="${product.variationAttributes && product.sizeChartId}">
                     <div class="row">
@@ -99,34 +112,38 @@
                         </div>
                     </div>
                 </isif>
-            
-                    <div class="add-to-cart-actions mt-3 mb-3">
-                        <!-- Cart and [Optionally] Apple Pay -->
-                        <isinclude template="product/components/addToCartProduct" />
-                    </div>
 
-                    <div class="add-to-cart-and-checkout mb-3">
-                        <!-- Cart and Checkout -->
-                        <isinclude template="product/components/buyNowProduct" />
-                    </div>
-           
-          
+                <div class="add-to-cart-actions mt-3 mb-3">
+                    <!-- Cart and [Optionally] Apple Pay -->
+                    <isinclude template="product/components/addToCartProduct" />
+                </div>
+
+                <div class="add-to-cart-and-checkout mb-3">
+                    <!-- Cart and Checkout -->
+                    <isinclude template="product/components/buyNowProduct" />
+                </div>
+
+
                 <!-- Store Locator Link -->
                 <div class="row storeLinkPDP">
                     <div class="col-12 mt-4">
                         <isinclude template="product/components/storeLocatorLink" />
+
+                        <div class="mt-3 d-flex storeLinkPDP__offer">
+                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                            <span>Llévate 3 piezas x $1,499</span>
+                        </div>
+                        <div class="mt-3 d-flex storeLinkPDP__payment">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>6 MSI y hasta 9 MSI con Citibanamex</span>
+                        </div>
                     </div>
                 </div>
 
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isinclude template="product/components/descriptionAndDetails" />
 
-                <!-- Applicable Promotions -->
-                <div class="row">
-                    <div class="col-12 promotions">
-                        <isinclude template="product/components/promotionsPdp" />
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

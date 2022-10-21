@@ -1,5 +1,4 @@
 <div class="description-and-detail">
-
     <hr />
 
     <div class="row description collapsible-xl <isif condition=" ${!product.shortDescription}">hidden-xl-down</isif>">
@@ -30,5 +29,37 @@
     <isif condition="${product.attributes && product.attributes.length}">
         <hr />
     </isif>
+
+    <div class="row devolutions-container collapsible-xl <isif condition=" ${!product.longDescription}">hidden-xl-down
+        </isif>">
+        <button class="title btn text-left btn-block" aria-expanded="false"
+            aria-controls="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
+            Envios y Devoluciones
+        </button>
+        <div class="col-12 value content mt-3"
+            id="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
+            <div class="devolutions-container__store">
+                <span class="devolutions-container__store--title">Devolución en tienda gratuita</span>
+                <span class="devolutions-container__store--text">Puede devolver sus artículos en cualquier
+                    tienda Lmental, siempre que sea
+                    del mismo mercado en que ha hecho la
+                    compra.</span>
+                <span class="devolutions-container__store--text">Tiene 30 días para devolver a partir de la
+                    fecha en que hizo la compra.</span>
+            </div>
+            <div class="devolutions-container__store mt-4">
+                <span class="devolutions-container__store--title">Devolución a domicilio gratuita</span>
+                <span class="devolutions-container__store--text">Puede solicitar la devolución a domicilio
+                    desde la sección MI CUENTA. En el caso
+                    de pedido sin registro, puede solicitar
+                    devolución haciendo clic en seguimiento/detalle del pedido que
+                    encontrará en el email de expedición.</span>
+                <span class="devolutions-container__store--text">Tiene 30 días para devolver a partir de la
+                    fecha en que hizo la compra.</span>
+                <span class="devolutions-container__store--text">*Adjuntando un justificante de aduanas si
+                    reside en zona fronteriza.</span>
+            </div>
+        </div>
+    </div>
 
 </div>

@@ -76,7 +76,7 @@
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom-select form-control select-${attr.id}"
             id="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}" ${product.productType === "variant" && isBundle ? "disabled" : ""}>
-            <option value="${attr.resetUrl}">
+            <option value="${attr.resetUrl}" selected disabled>
                 ${attr.displayName}
             </option>
             <isloop items="${attr.values}" var="attrValue">
