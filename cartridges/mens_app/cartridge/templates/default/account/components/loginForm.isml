@@ -20,8 +20,11 @@
         <iscomment> <span class="checkout__text--space">
             ${Resource.msg('label.input.login.required', 'login', null)}
         </span> </iscomment>
+        <button onclick="showPassword()" class="show-password-button" type="button">
+            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+        </button>
         <input type="password" id="login-form-password" required aria-required="true"
-            class="checkout__form form-control required" aria-describedby="form-password-error" name="loginPassword">
+            class="checkout__form form-control show-password required" aria-describedby="form-password-error" name="loginPassword">
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
 

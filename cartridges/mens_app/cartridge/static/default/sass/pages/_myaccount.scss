@@ -171,7 +171,7 @@
    &__footer {
     display: flex;
     justify-content: flex-end;
-    
+
     &--btn-add-cart {
      width: 100%;
      margin-right: 0;
@@ -192,13 +192,31 @@
  }
 }
 
-.show-password-button{
-  background: none;
-  border: none;
-  float: right;
-  font-size: 18px;
+.show-password-button {
+ background: none;
+ border: none;
+ float: right;
+ font-size: 18px;
 }
 
-.show-password-button:focus{
-  outline: 0;
+.show-password-button:focus {
+ outline: 0;
+}
+
+.register-btn {
+ margin: 35px auto 9px auto;
+ width: 100%;
+ height: 34px;
+ padding: 0;
+ background: #d9d9d9;
+ color: #000000 !important;
+ border: none;
+ font-family: "Avenir-LT-Std";
+ font-weight: 400;
+ font-size: 14px;
+
+ &:hover {
+  background-color: #000000;
+  color: #ffffff !important;
+ }
 }

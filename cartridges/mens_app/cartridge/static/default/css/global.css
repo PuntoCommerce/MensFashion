@@ -20240,19 +20240,6 @@ button.close:focus {
   width: 100%;
 }
 
-#register button {
-  margin: 35px auto 9px auto;
-  width: 100%;
-  height: 34px;
-  padding: 0;
-  background: #d9d9d9;
-  color: #000000 !important;
-  border: none;
-  font-family: "Avenir-LT-Std";
-  font-weight: 400;
-  font-size: 14px;
-}
-
 #register .privacy-policy {
   font-family: "Avenir-LT-Std";
   font-weight: 400;
@@ -20331,10 +20318,6 @@ button.close:focus {
   color: #ffffff !important;
 }
 
-#register button:hover {
-  background-color: #000000;
-  color: #ffffff !important;
-}
 
 .confirmation-banner {
   width: 100%;
