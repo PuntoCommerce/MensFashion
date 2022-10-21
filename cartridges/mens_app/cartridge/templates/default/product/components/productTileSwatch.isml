@@ -4,13 +4,24 @@
             <isloop items="${product.variationAttributes[0].values}" var="swatch" status="loopState">
                 <isif condition="${loopState.count < 4}">
                     <a href="${swatch.url}" aria-label="${product.productName}, ${swatch.displayValue}">
-                        <span class="swatch swatch-circle swatch-circle-${swatch.value.toLowerCase().replace(/ /g, '-')}" 
-                        style="background-color: ${swatch.value.startsWith('hex') ? swatch.value.replace('hex', '#') : swatch.value.toLowerCase().replace(/ /g, '-')}">
-                        </span>
+                        <isif condition="${loopState.count === 1}">
+                            <span class="swatch-border-circle">
+                                <span
+                                    class="swatch swatch-circle swatch-circle-${swatch.value.toLowerCase().replace(/ /g, '-')}"
+                                    style="background-color: ${swatch.value.startsWith('hex') ? swatch.value.replace('hex', '#') : swatch.value.toLowerCase().replace(/ /g, '-')}">
+                                </span>
+                            </span>
+                        <iselse/>
+                            <span
+                                class="swatch swatch-circle swatch-circle-${swatch.value.toLowerCase().replace(/ /g, '-')}"
+                                style="background-color: ${swatch.value.startsWith('hex') ? swatch.value.replace('hex', '#') : swatch.value.toLowerCase().replace(/ /g, '-')}">
+                            </span>
+                        </isif>
                     </a>
                 <iselse/>
                     <span>
-                        <a href="${pdict.urls.product}"  aria-label="${Resource.msgf('label.tile.swatch.more', 'product', null, product.productName)}">...</a>
+                        <a href="${pdict.urls.product}"
+                            aria-label="${Resource.msgf('label.tile.swatch.more', 'product', null, product.productName)}">...</a>
                     </span>
                     <isbreak>
                 </isif>
