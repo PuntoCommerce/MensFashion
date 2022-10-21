@@ -1,25 +1,44 @@
-<li class="col-sm-4 col-md-12 ${!refinementValue.selectable ? 'disabled' : ''}">
-    <button data-href="${refinementValue.url}" class="${!refinementValue.selectable ? 'disabled' : ''}" <isif
-        condition="${!refinementValue.selectable}">disabled</isif>>
-        <iscomment>Checkbox</iscomment>
-        <isif condition="${refinementValue.selected && refinementValue.selectable}">
-            <img class="checkBox" src="${URLUtils.staticURL('/images/check.svg')}"/>
-                <iselse>
-                    <svg class="checkBox" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="black"/>
-                    </svg>
-        </isif>
+<isif condition="${refinement.displayName.toLowerCase() === 'talla'}">
+    <li class="col-sm-4 col-md-10 check-custom ${!refinementValue.selectable ? 'disabled' : ''}">
+        <button data-href="${refinementValue.url}" class="w-100 ${!refinementValue.selectable ? 'disabled' : ''}" <isif
+            condition="${!refinementValue.selectable}">disabled</isif>>
+            <iscomment>Label</iscomment>
+            <span class=" <isif condition=" ${refinementValue.selected && refinementValue.selectable}">selected</isif>"
+                aria-hidden="true">
+                ${refinementValue.displayValue}
+            </span>
 
-        <iscomment>Label</iscomment>
-        <span class="<isif condition=" ${refinementValue.selected && refinementValue.selectable}">selected</isif>"
-            aria-hidden="true">
-            ${refinementValue.displayValue}
-        </span>
+            <span class="sr-only selected-assistive-text">
+                ${refinementValue.selected && refinementValue.selectable ? Resource.msg('msg.assistive.selected.text', 'common', null) :
+                ''}
+                ${refinementValue.title}
+            </span>
+        </button>
+    </li>
+<iselse/>
+    <li class="col-sm-4 col-md-12 ${!refinementValue.selectable ? 'disabled' : ''}">
+        <button data-href="${refinementValue.url}" class="${!refinementValue.selectable ? 'disabled' : ''}" <isif
+            condition="${!refinementValue.selectable}">disabled</isif>>
+            <iscomment>Checkbox</iscomment>
+            <isif condition="${refinementValue.selected && refinementValue.selectable}">
+                <img class="checkBox" src="${URLUtils.staticURL('/images/check.svg')}"/>
+                    <iselse>
+                        <svg class="checkBox" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="black"/>
+                        </svg>
+            </isif>
 
-        <span class="sr-only selected-assistive-text">
-            ${refinementValue.selected && refinementValue.selectable ? Resource.msg('msg.assistive.selected.text', 'common', null) :
-            ''}
-            ${refinementValue.title}
-        </span>
-    </button>
-</li>
+            <iscomment>Label</iscomment>
+            <span class="<isif condition=" ${refinementValue.selected && refinementValue.selectable}">selected</isif>"
+                aria-hidden="true">
+                ${refinementValue.displayValue}
+            </span>
+
+            <span class="sr-only selected-assistive-text">
+                ${refinementValue.selected && refinementValue.selectable ? Resource.msg('msg.assistive.selected.text', 'common', null) :
+                ''}
+                ${refinementValue.title}
+            </span>
+        </button>
+    </li>
+</isif>

@@ -1,4 +1,8 @@
-<ul class="values content">
+<isif condition="${refinement.displayName.toLowerCase() === 'talla'}">
+    <ul class="values content check-custom-container">
+<iselse/>
+    <ul class="values content">
+</isif>
     <isloop items="${refinement.values}" var="refinementValue">
         <isif condition="${refinementValue.type === 'color'}">
             <isinclude template="search/refinements/attributes/color"/>
