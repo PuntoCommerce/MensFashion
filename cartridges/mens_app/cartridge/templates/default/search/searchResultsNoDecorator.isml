@@ -85,15 +85,7 @@
                                             fill="black" />
                                     </svg>
                                 </button> </iscomment>
-                                <iscomment>
-                                    <h1 class="page-title-mobile d-block d-sm-none">
-                                        <isprint
-                                            value="${pdict.apiProductSearch.category ? pdict.apiProductSearch.category.displayName : pdict.apiProductSearch.searchPhrase}" />
-                                    </h1>
-                                </iscomment>
-                                <h1 class="page-title-mobile d-block d-sm-none">
-                                    ${pdict.productSearch.category.name}
-                                </h1>
+                      
                             </isif>
                             <div
                                 class='breadcrumb grid-header__column-item grid-header__column-item--right d-none d-sm-block'>
