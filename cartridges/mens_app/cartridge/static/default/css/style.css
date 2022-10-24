@@ -2210,6 +2210,21 @@ ul {
   margin-right: 1px;
   margin-left: 2px; }
 
+.experience-component.experience-commerce_layouts-carousel .carousel-control-prev {
+  margin-left: 4%; }
+
+.experience-component.experience-commerce_layouts-carousel .carousel-control-next {
+  margin-right: 4%; }
+
+.experience-component.experience-commerce_layouts-isFullWidth {
+  margin-top: 40px; }
+
+.display-Yes {
+  display: block !important; }
+
+.display-No {
+  display: none !important; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
@@ -2221,7 +2236,9 @@ ul {
   #customBannerCarousel .ITBC-buttons {
     position: initial;
     margin-top: 25px; }
-  .ITBC-content h1, .ITBC-content p, .ITBC-content a {
+  .ITBC-content h1,
+  .ITBC-content p,
+  .ITBC-content a {
     margin: 0;
     line-height: 45px; }
   .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
@@ -2233,7 +2250,8 @@ ul {
     font-size: 40px; }
   .experience-commerce_layouts-navTabs .summary__name .pdp-link .link {
     font-size: 20px !important; }
-  .experience-commerce_layouts-navTabs .strike-through .value, .experience-commerce_layouts-navTabs .sales .value {
+  .experience-commerce_layouts-navTabs .strike-through .value,
+  .experience-commerce_layouts-navTabs .sales .value {
     font-size: 20px !important; }
   .experience-commerce_layouts-navTabs .summary__footer .btn__small {
     font-size: 20px; } }
@@ -2749,6 +2767,12 @@ ul {
   font-size: 18px;
   font-weight: bold;
   margin-left: 24px; }
+
+.favIconGrey,
+.favIconRed {
+  border: 1px solid #CED4DA;
+  padding: 5px;
+  border-radius: 5px; }
 
 .checkout {
   font-family: "Avenir-Next" !important;

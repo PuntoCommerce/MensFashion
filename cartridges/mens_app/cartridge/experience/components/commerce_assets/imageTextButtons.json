@@ -85,6 +85,13 @@
           "description": "Text for the third button",
           "type": "string",
           "required": false
+        },
+        {
+          "id":"display_button",
+          "name": "Display Button",
+          "description": "Show or Hide Button in Banner",
+          "type": "enum",
+          "values": ["Yes", "No"]
         }
       ]
     },

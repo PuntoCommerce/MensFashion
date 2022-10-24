@@ -59,7 +59,11 @@
             <!-- Select <Attribute> Label -->
             <label class="d-none d-lg-block ${attr.id}"
                 for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
-                ${attr.displayName}
+                <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
+                    ${Resource.msg('label.select.size', 'checkout', null)} ${attr.displayName.toLowerCase()}
+                <iselse/>
+                    ${attr.displayName}
+                </isif>
             </label>
             
             <!-- Trigger Modal Sizes Guide -->
