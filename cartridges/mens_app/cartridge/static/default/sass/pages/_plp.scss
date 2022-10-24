@@ -78,15 +78,93 @@
  }
 }
 .summary__pricing {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
  .highlight-promotion {
-  background: #FD4237;
+  background: #fd4237;
   color: white;
   font-weight: bold;
   font-size: 18px;
   padding: 0 10px;
+ }
+}
+
+.add-to-wishlist-messages {
+  .add-to-wishlist-alert{
+    z-index: 5;
+  }
+ .alert-success {
+  color: #64656A !important;
+  border-radius: 5px;
+  
+  &::before {
+   content: "\f08a";
+   font-family: "FontAwesome";
+   color: red;
+   font-size: 18px;
+   font-weight: bold;
+   margin-right: 15px;
+  }
+
+  &::after{
+    content: '';
+    background: #d4d4d4;
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: 45%;
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: 991px) {
+    width: 73vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      content: "\f08a";
+      margin-right: 0;
+      margin-bottom: 3px;
+     }
+  }
+ }
+
+ .add-to-wishlist-alert.alert-danger {
+  &::before {
+   content: "\f12a";
+   font-family: "FontAwesome";
+   border: 2px solid red;
+   padding: 1.2px 7px;
+   border-radius: 20px;
+   margin-right: 15px;
+  }
+
+  &::after{
+    content: '';
+    background: #d4d4d4;
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: 45%;
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: 991px) {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      padding: 0 8px;
+      margin-right: 0;
+      margin-bottom: 3px;
+     }
+  }
  }
 }

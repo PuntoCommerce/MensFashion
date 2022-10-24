@@ -642,7 +642,7 @@
             var o;
             $.spinner().stop(), t.success ? (o = "alert-success", e.hasClass("fa-heart-o") && e.removeClass("fa-heart-o").addClass("fa-heart")) : o = "alert-danger", 0 === $(".add-to-wishlist-messages").length && $("body").append('<div class="add-to-wishlist-messages "></div>'), $(".add-to-wishlist-messages").append('<div class="add-to-wishlist-alert text-center ' + o + '">' + t.msg + "</div>"), setTimeout((function () {
                 $(".add-to-wishlist-messages").remove()
-            }), 5e3)
+            }), 4000)
         }
         t.exports = {
             addToWishlist: function () {
