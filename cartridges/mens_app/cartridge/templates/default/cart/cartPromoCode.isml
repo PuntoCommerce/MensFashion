@@ -20,7 +20,7 @@
                     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
 
                     <div class="col-6 promo-code-submit">
-                        <button type="submit" class="btn btn--dark btn__small promo-code-btn">
+                        <button type="submit" class="btn btn__small promo-code-btn">
                             ${Resource.msg('button.submit.promo.code','cart',null)}
                         </button>
                     </div>

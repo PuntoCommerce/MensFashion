@@ -2476,6 +2476,11 @@ ul {
       margin-right: 0;
       margin-bottom: 3px; } }
 
+.colorName {
+  text-transform: capitalize;
+  font-family: 'Avenir-Next';
+  font-size: 15px; }
+
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
   object-fit: contain; }
@@ -2855,12 +2860,14 @@ ul {
   font-weight: bold;
   margin-left: 24px; }
 
+/* 
 .favIconGrey,
 .favIconRed {
   border: 1px solid #CED4DA;
   padding: 5px;
-  border-radius: 5px; }
-
+  border-radius: 5px;
+}
+ */
 del {
   text-decoration: none !important; }
 
@@ -2995,6 +3002,31 @@ del {
 
 .attributes-collapse-container {
   margin-left: 15px; }
+
+.promo-code-btn {
+  background: #D9D9D9;
+  color: black;
+  font-family: 'Avenir-Next';
+  font-size: 16px;
+  font-weight: bold; }
+  .promo-code-btn:hover {
+    background: #000;
+    color: #fff; }
+
+.checkout-promotion {
+  background: #FD4237;
+  color: #fff;
+  padding: 0 5px;
+  font-weight: bold; }
+
+@media (max-width: 991px) {
+  .checkout-promotion {
+    left: 28vw; } }
+
+@media (max-width: 768px) {
+  .checkout-promotion {
+    left: 60vw;
+    bottom: -33px; } }
 
 .accountBtns {
   display: flex;

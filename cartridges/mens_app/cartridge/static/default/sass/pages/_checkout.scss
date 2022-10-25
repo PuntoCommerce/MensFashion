@@ -204,3 +204,36 @@
 .attributes-collapse-container{
   margin-left: 15px;
 }
+
+.promo-code-btn{
+  background: #D9D9D9;
+  color: black;
+  font-family: 'Avenir-Next';
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover{
+    background: #000;
+    color: #fff;
+  }
+}
+
+.checkout-promotion{
+  background: #FD4237;
+  color: #fff;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+  .checkout-promotion{
+    left: 28vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-promotion{
+    left: 60vw;
+    bottom: -33px;
+  }
+}

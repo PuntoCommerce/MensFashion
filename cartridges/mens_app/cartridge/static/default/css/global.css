@@ -20567,6 +20567,7 @@ button.close:focus {
   color: #000000;
   font-weight: 900;
   font-family: "Avenir-Next";
+  line-height: inherit;
   margin-top: 0 !important;
   font-size: 16px !important;
 }
@@ -21141,9 +21142,6 @@ button.close:focus {
   padding-top: 20px;
 }
 
-.colorName {
-  text-transform: capitalize;
-}
 
 @media (max-width: 1200px) {
   .checkout__cart {

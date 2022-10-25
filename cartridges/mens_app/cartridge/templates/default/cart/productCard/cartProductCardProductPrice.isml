@@ -27,11 +27,11 @@
 
         <!--- extra slot for spacing reasons due to large remove button --->
         <div class="col-lg-1 hidden-md-down remove-line-item-lg"></div>
+        <!--- promotions --->
+        <div class="line-item-promo checkout-promotion item-${lineItem.UUID}">
+            <isinclude template="checkout/productCard/productCardProductPromotions" />
+        </div>
     </div>
 
-    <!--- promotions --->
-    <div class="line-item-promo item-${lineItem.UUID}">
-        <isinclude template="checkout/productCard/productCardProductPromotions" />
-    </div>
     </isif>
 </div>
