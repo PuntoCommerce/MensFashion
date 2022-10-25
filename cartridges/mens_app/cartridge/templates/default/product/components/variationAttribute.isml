@@ -16,25 +16,34 @@
                 <div class="attribute-label">
                     <!-- Select <Attribute> Label -->
                     <span class="${attr.id} non-input-label">
-                       Selecciona un ${attr.displayName.toLowerCase().replace(/ /g, '-')}
+                        Selecciona un ${attr.displayName.toLowerCase().replace(/ /g, '-')}
                     </span>
                 </div>
                 <div class="d-flex">
                     <!-- Circular Swatch Image Attribute Values -->
-                    <isloop items="${attr.values}" var="attrValue">
+                    <isloop items="${attr.values}" var="attrValue" status="loopState">
                         <isif condition="${!(isBundle && product.productType === 'variant' && !attrValue.selected)}">
-                            <button class="color-attribute"
+                            <button class="color-attribute d-flex align-items-center"
                                 aria-label="${Resource.msg('label.select', 'common', null)} ${attr.displayName} ${attrValue.displayValue}"
                                 aria-describedby="${attrValue.id}" data-url="${attrValue.url}"
                                 ${product.productType === "variant" && isBundle ? "disabled" : ""}>
-                                <span data-attr-value="${attrValue.value}" class="
-                              ${attr.id}-value
-                              swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')}
-                              swatch-value
-                              ${attrValue.selected ? 'selected' : ''}
-                              ${attrValue.selectable ? 'selectable' : 'unselectable'}" 
-                              style="background-color: ${attrValue.value.startsWith('hex') ? attrValue.value.replace('hex', '#') : attrValue.value}">
-                                </span>
+
+                                <isif condition="${loopState.count === 1}">
+                                    <span class="swatch-border-circle">
+                                        <span data-attr-value="${attrValue.value}" class="${attr.id}-value swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')} swatch-value 
+                                            ${attrValue.selected ? 'selected' : ''}
+                                            ${attrValue.selectable ? 'selectable' : 'unselectable'}"
+                                            style="background-color: ${attrValue.value.startsWith('hex') ? attrValue.value.replace('hex', '#') : attrValue.value}">
+                                        </span>
+                                    </span>
+                                <iselse/>
+                                    <span data-attr-value="${attrValue.value}" class="${attr.id}-value swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')} swatch-value
+                                        ${attrValue.selected ? 'selected' : ''}
+                                        ${attrValue.selectable ? 'selectable' : 'unselectable'}"
+                                        style="background-color: ${attrValue.value.startsWith('hex') ? attrValue.value.replace('hex', '#') : attrValue.value}">
+                                    </span>
+                                </isif>
+
                                 <span id="${attrValue.id}" class="sr-only selected-assistive-text">
                                     ${attrValue.selected ? Resource.msg('msg.assistive.selected.text', 'common', null) : ''}
                                 </span>
@@ -47,7 +56,7 @@
             <div class="ml-2 availabilityCont">
                 <!-- Label Space -->
                 <iscomment> <label class="${attr.id} non-input-label">
-                </label> </iscomment>
+                    </label> </iscomment>
                 <!-- Product Availability -->
                 <isinclude template="product/components/productAvailability" />
             </div>
@@ -65,9 +74,9 @@
                     ${attr.displayName}
                 </isif>
             </label>
-            
+
             <!-- Trigger Modal Sizes Guide -->
-            <div class="row sizes-guide-cont">                
+            <div class="row sizes-guide-cont">
                 <div class="col sizes-guide d-flex">
                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->
@@ -75,7 +84,7 @@
                         ${Resource.msg('size.guide', 'common', null)}
                     </button>
                 </div>
-            </div>  
+            </div>
         </div>
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom-select form-control select-${attr.id}"

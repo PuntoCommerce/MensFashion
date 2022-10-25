@@ -142,7 +142,7 @@
                                                 type="submit" name="submit"
                                                 value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
                                             </button>
-                                            <button class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button>
+                                            <iscomment> <button class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button> </iscomment>
                                         </div>
                                     </div>
                                 </div>

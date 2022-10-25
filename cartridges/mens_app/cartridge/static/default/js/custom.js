@@ -232,7 +232,6 @@ function changeRange(e, type) {
    localValues();
   }, 1000);
  });
-
 }
 
 function showPassword() {
@@ -246,7 +245,6 @@ function showPassword() {
   }
  });
 }
-
 
 function localValues() {
  const pmin = document.getElementById("price-range-min");
@@ -269,13 +267,17 @@ function localValues() {
   rangeMin.value = sessionStorage.getItem("min");
  }
  if (pmax) {
-   pmax.value = sessionStorage.getItem("max");
-   rangeMax.value = sessionStorage.getItem("max");
+  pmax.value = sessionStorage.getItem("max");
+  rangeMax.value = sessionStorage.getItem("max");
  }
 }
 
-const highligt = document.getElementById('highlight-price');
-const highligtPromotion = highligt.innerText.replace('de descuento', '')
-highligt.innerText = highligtPromotion
+const highligt = document.getElementById("highlight-price");
+if (highligt) {
+ const highligtPromotion = highligt.innerText.replace("de descuento", "");
+ highligt.innerText = highligtPromotion;
+}
+
+
 
 localValues();

@@ -71,8 +71,6 @@
                 <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
                     <div class="row selector-wrapper row-${attr.id}" data-attr="${attr.id}">
                         <isinclude template="product/components/variationAttribute" />
-
-
                     </div>
                 </isloop>
 

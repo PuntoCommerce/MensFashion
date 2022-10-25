@@ -2038,6 +2038,9 @@ ul {
 .summary__swatches {
   align-items: flex-end;
   display: flex; }
+  .summary__swatches .swatches {
+    display: flex;
+    align-items: center; }
   .summary__swatches .swatch-border-circle {
     border: 1px solid #000;
     border-radius: 28px;
@@ -2063,6 +2066,25 @@ ul {
   .summary:hover .summary__footer {
     visibility: visible; } }
 
+.swatch-border-circle {
+  border: 1px solid #000;
+  border-radius: 28px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .swatch-border-circle .swatch-value {
+    height: 22px !important;
+    width: 22px !important;
+    margin-right: 0 !important;
+    margin-left: 0; }
+
+.swatch-value {
+  height: 22px !important;
+  width: 22px !important;
+  margin-left: 10px; }
+
 .wishlist {
   position: absolute;
   top: 1rem;
@@ -2080,6 +2102,9 @@ ul {
     width: 18px; } }
 
 /* **************************** HOME **************************** */
+*, body {
+  font-size: 'Avenir-Next' !important; }
+
 #maincontent .container {
   max-width: 100vw;
   padding-left: 0px;
@@ -2530,7 +2555,7 @@ ul {
     .product-detail .prices .price {
       text-align: left; }
       .product-detail .prices .price .strike-through {
-        color: #393939;
+        color: rgba(68, 68, 68, 0.5);
         font-weight: 400; }
       .product-detail .prices .price .sales {
         font-size: 30px; }
@@ -2836,6 +2861,9 @@ ul {
   padding: 5px;
   border-radius: 5px; }
 
+del {
+  text-decoration: none !important; }
+
 .checkout {
   font-family: "Avenir-Next" !important;
   font-size: 16px; }
@@ -3132,7 +3160,7 @@ a .oauth-facebook--button {
   a .oauth-facebook--button:hover {
     background-color: #000;
     color: #fff;
-    transition: all ease .2s; }
+    transition: all ease 0.2s; }
 
 a .oauth-google--button {
   margin-bottom: 16px; }
@@ -3140,13 +3168,57 @@ a .oauth-google--button {
 a .oauth-facebook--button {
   margin-bottom: 30px; }
 
-.oauth-google .fa.fa-google, .oauth-google--button span,
-.oauth-facebook .fa.fa-facebook-official, .oauth-facebook--button {
+.oauth-google .fa.fa-google,
+.oauth-google--button span,
+.oauth-facebook .fa.fa-facebook-official,
+.oauth-facebook--button {
   color: #000000; }
 
 .oauth-google--button span,
 .oauth-facebook--button span {
   font-family: "Avenir-Next" !important; }
+
+.login-form-nav {
+  margin: auto;
+  margin-top: 13px;
+  width: 508px; }
+
+.trackorder {
+  margin: auto;
+  margin-top: 13px;
+  width: 508px; }
+
+.reset-password-form {
+  margin: auto; }
+  .reset-password-form .request-password-body p {
+    font-size: 14px !important; }
+  .reset-password-form .send-email-btn .btn-email {
+    background-color: #d9d9d9;
+    color: #000 !important;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: all ease 0.2s; }
+    .reset-password-form .send-email-btn .btn-email:hover {
+      color: #fff !important;
+      background: #000; }
+
+@media (max-width: 991px) {
+  .login-form-nav,
+  .trackorder {
+    width: auto;
+    padding: 10px; } }
+
+@media (max-width: 543px) {
+  .login-page .breadcrumb {
+    margin: 0;
+    margin-left: 13px; } }
 
 @media (max-width: 376px) {
   .oauth-google--button span,

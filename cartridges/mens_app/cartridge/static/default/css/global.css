@@ -2217,10 +2217,6 @@ pre code {
     border: 0;
   }
 
-  .login-page .card {
-    margin: 20px 32px 40px 37px;
-  }
-
   .myAccount .col-sm-6 {
     padding: 30px 32px 16px 37px !important;
   }
@@ -20043,9 +20039,6 @@ button.close:focus {
   margin: 0 !important;
 }
 
-.login-form-nav {
-  margin: 13px 115px 0 115px;
-}
 
 .login-page .nav-tabs {
   border: 0.3px solid #64656a;
@@ -20151,7 +20144,7 @@ button.close:focus {
 #password-reset {
   margin-right: 27px;
   color: #ff0000;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Avenir-Next';
 }
 
@@ -20229,10 +20222,6 @@ button.close:focus {
 #register .privacy-policy a {
   color: #0280c8;
   text-decoration: underline;
-}
-
-.trackorder {
-  margin: 13px 115px 0 115px;
 }
 
 .card-header.track-order-header {
@@ -20323,14 +20312,6 @@ button.close:focus {
   font-family: "Avenir-LT-Std";
 }
 
-#submitEmailButton {
-  background-color: #000;
-  color: #fff !important;
-  margin-top: 20px;
-  border: none;
-  border-radius: 3px;
-}
-
 .request-password-title {
   font-weight: 700;
   font-size: 16px;
@@ -20342,12 +20323,6 @@ button.close:focus {
   padding: 12px;
 }
 
-.reset-password-form {
-  margin-bottom: 40px;
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding: 24px 30px;
-}
 
 .request-password-title {
   margin-bottom: 0;
@@ -20585,13 +20560,15 @@ button.close:focus {
 }
 
 .request-password-title {
-  background: #e8e8e8;
-  padding: 0 0 0 16px;
+  /* background: #e8e8e8; */
+  background: white;
+  padding: 0;
   font-weight: 900;
   color: #000000;
   font-weight: 900;
   font-family: "Avenir-Next";
   margin-top: 0 !important;
+  font-size: 16px !important;
 }
 
 .item-image {

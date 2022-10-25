@@ -99,7 +99,7 @@
   & .price {
    text-align: left;
    & .strike-through {
-    color: #393939;
+    color: rgba(68, 68, 68, 0.5);
     font-weight: 400;
    }
    & .sales {
@@ -528,4 +528,8 @@
   border: 1px solid #CED4DA;
   padding: 5px;
   border-radius: 5px;
+}
+
+del{
+  text-decoration: none !important;
 }
