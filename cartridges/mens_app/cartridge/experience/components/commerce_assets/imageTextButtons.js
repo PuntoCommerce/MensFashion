@@ -82,6 +82,7 @@ module.exports.render = function (context, modelIn) {
   };
   model.markupLayout = content.markupLayout || "center";
   model.display_button = content.display_button ? content.display_button : 'Yes';
+  model.marginT = content.marginT ? content.marginT : ''
 
   model.buttons = [
     {
