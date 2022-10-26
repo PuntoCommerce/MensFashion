@@ -58,7 +58,7 @@
   outline: none;
  }
  & .sizes-guide {
-  margin-left: 80px;
+  /* margin-left: 80px; */
   margin-bottom: 5px;
 
   & button {
@@ -207,7 +207,6 @@
    margin: 15px 0;
   }
   & .title.btn {
-   font-size: 16px;
    line-height: normal;
    padding-left: 0;
   }
@@ -469,67 +468,78 @@
  }
 }
 
-.storeLinkPDP{
-  &__offer{
-    font-size: 16px;
+.storeLinkPDP {
+ &__offer {
+  font-size: 16px;
 
-    i{
-      margin-right: 12px;
-      font-size: 16px;
-      color: #64656A;
-    }
-
-    span{
-      color: red;
-      font-size: 16px;
-    }
+  i {
+   margin-right: 12px;
+   font-size: 16px;
+   color: #64656a;
   }
 
-  &__payment{
-    i{
-      font-size: 16px;
-      margin-right: 12px;
-      color: #64656A;
-    }
-    span{
-      color: #64656A;
-      font-size: 16px;
-    }
+  span {
+   color: red;
+   font-size: 16px;
   }
+ }
+
+ &__payment {
+  i {
+   font-size: 16px;
+   margin-right: 12px;
+   color: #64656a;
+  }
+  span {
+   color: #64656a;
+   font-size: 16px;
+  }
+ }
 }
 
-.prices{
-  .price{
-    .prices-container{
-      display: flex;
-      align-items: center;
+.prices {
+ .price {
+  .prices-container {
+   display: flex;
+   align-items: center;
 
-      .stikePriceCont{
-        margin-bottom: 0 !important;
-        margin-right: 18px;
-        span{
-          font-size: 20px !important;
-        }
-      }
+   .stikePriceCont {
+    margin-bottom: 0 !important;
+    margin-right: 18px;
+    span {
+     font-size: 20px !important;
     }
+   }
   }
-  .promotion-item{
-    background: #FD4237;
-    color: white;
-    padding: 3px 14px 0;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 24px;
+ }
+ .promotion-item {
+  background: #fd4237;
+  color: white;
+  padding: 3px 14px 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 24px;
+  font-family: "Avenir-Next";
+ }
+}
+
+del {
+ text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+ .product-detail .prices {
+  margin: 18px 0 24px 0;
+ }
+
+ .product-details-wrapper .attributes {
+  margin-top: 0 !important;
+ }
+
+ .description-and-detail{
+  .title{
+    font-family: $font-family-normal !important;
+    font-size: 16px !important;
   }
-}
-/* 
-.favIconGrey,
-.favIconRed {
-  border: 1px solid #CED4DA;
-  padding: 5px;
-  border-radius: 5px;
-}
- */
-del{
-  text-decoration: none !important;
+ }
 }

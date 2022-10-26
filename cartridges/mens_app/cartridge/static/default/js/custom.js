@@ -278,6 +278,20 @@ if (highligt) {
  highligt.innerText = highligtPromotion;
 }
 
+function showFilter() {
+ const filterContainer = document.querySelector("#refinement-bar");
 
+ if (filterContainer) {
+  filterContainer.style.display = "block";
+ }
+}
+
+function hideFilter() {
+ const filterContainer = document.querySelector("#refinement-bar");
+
+ if (filterContainer) {
+  filterContainer.style.display = "none";
+ }
+}
 
 localValues();

@@ -2201,7 +2201,7 @@ pre code {
   }
 
   .form-checkout .checkout--topBorder h3 {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
 
@@ -2459,10 +2459,10 @@ pre code {
     margin-top: 0 !important;
   }
 
-  #actions-icons .minicart-total {
-    width: 40px;
+  /* #actions-icons .minicart-total {
+    width: 36px;
   }
-
+ */
   .carousel-control-prev {
     left: 5% !important;
   }
@@ -17699,6 +17699,8 @@ h6 {
 
 .price .strike-through {
   text-decoration: line-through;
+  display: flex;
+  align-items: center;
 }
 
 .price .tiered {
@@ -19979,6 +19981,7 @@ div.availability {
 .summary__pricing .price .prices-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .summary_price {

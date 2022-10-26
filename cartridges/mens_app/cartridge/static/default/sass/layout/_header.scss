@@ -100,7 +100,10 @@ header .navbar-header {
   #customMenuResponsive .minicart{
     display: flex;
     margin-bottom: 12px !important;
-    padding-top: 12px;
+
+    .minicart-quantity{
+      display: none;
+    }
   }
 
   #customMenuResponsive .cartLabel{
@@ -109,7 +112,7 @@ header .navbar-header {
   }
 
   #customMenuResponsive #actions-icons img.minicart-img{
-    margin-right: 0 !important;
+    margin-right: 16px !important;
   }
 
   #customMenuResponsive .minicart-quantityCustom{

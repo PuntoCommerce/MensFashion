@@ -87,18 +87,19 @@
   color: white;
   font-weight: bold;
   font-size: 18px;
-  padding: 0 10px;
+  padding: 4px 10px 0 10px;
+  font-family: "Avenir-Next";
  }
 }
 
 .add-to-wishlist-messages {
-  .add-to-wishlist-alert{
-    z-index: 5;
-  }
+ .add-to-wishlist-alert {
+  z-index: 5;
+ }
  .alert-success {
-  color: #64656A !important;
+  color: #64656a !important;
   border-radius: 5px;
-  
+
   &::before {
    content: "\f08a";
    font-family: "FontAwesome";
@@ -108,28 +109,28 @@
    margin-right: 15px;
   }
 
-  &::after{
-    content: '';
-    background: #d4d4d4;
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    bottom: -10px;
-    right: 45%;
-    transform: rotate(45deg);
+  &::after {
+   content: "";
+   background: #d4d4d4;
+   position: fixed;
+   width: 24px;
+   height: 24px;
+   bottom: -10px;
+   right: 45%;
+   transform: rotate(45deg);
   }
 
   @media (max-width: 991px) {
-    width: 73vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   width: 73vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 
-    &::before {
-      content: "\f08a";
-      margin-right: 0;
-      margin-bottom: 3px;
-     }
+   &::before {
+    content: "\f08a";
+    margin-right: 0;
+    margin-bottom: 3px;
+   }
   }
  }
 
@@ -143,35 +144,64 @@
    margin-right: 15px;
   }
 
-  &::after{
-    content: '';
-    background: #d4d4d4;
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    bottom: -10px;
-    right: 45%;
-    transform: rotate(45deg);
+  &::after {
+   content: "";
+   background: #d4d4d4;
+   position: fixed;
+   width: 24px;
+   height: 24px;
+   bottom: -10px;
+   right: 45%;
+   transform: rotate(45deg);
   }
 
   @media (max-width: 991px) {
-    width: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   width: 75vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 
-    &::before {
-      padding: 0 8px;
-      margin-right: 0;
-      margin-bottom: 3px;
-     }
+   &::before {
+    padding: 0 8px;
+    margin-right: 0;
+    margin-bottom: 3px;
+   }
   }
  }
 }
 
-
 .colorName {
-  text-transform: capitalize;
-  font-family: 'Avenir-Next';
-  font-size: 15px;
+ text-transform: capitalize;
+ font-family: "Avenir-Next";
+ font-size: 15px;
+}
+
+@media (max-width: 991px) {
+ a.nav-link.parent {
+  padding: 0 !important;
+  font-family: $font-family-normal;
+  font-size: 20px !important;
+ }
+
+ .menu-item-container {
+  margin-bottom: 23px;
+ }
+
+ #actions-icons{
+  .nav-item{
+    a{
+      display: flex;
+      align-items: baseline;
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      margin-bottom: 10px;
+    }
+  }
+ }
+}
+
+@media (max-width: 543px) {
+ .product-tile.summary {
+  height: auto;
+ }
 }

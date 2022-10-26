@@ -166,12 +166,12 @@
             <isloop items="${pdict.suggestions.product.phrases}" var="phrase" status="listindex">
                 <isif condition="${!phrase.exactMatch}">
                     <div class="borderTopHeader"></div>
-                    <li class="row d-flex justify-content-end header">
+                    <li class="row d-flex justify-content-start ml-3 header">
                         <div class="item do-you-mean">${Resource.msg('label.suggest.doyoumean', 'search', null)}</div>
                     </li>
                     <li class="row d-flex flex-column items" id="phrase-1-${listindex.index}" role="option">
                         <div class="term">
-                            <div class="d-flex justify-content-end children">
+                            <div class="d-flex justify-content-start ml-3 children">
                                 <div class="item">
                                     <a href="${URLUtils.url('Search-Show', 'q', phrase.value)}">
                                         ${phrase.value}
@@ -185,12 +185,12 @@
         </isif>
         <isif condition="${pdict.suggestions.product && pdict.suggestions.product.available}">
             <div class="borderTopHeader"></div>
-            <li class="row d-flex justify-content-end header">
+            <li class="row d-flex justify-content-start ml-3 header">
                 <div class="item">${Resource.msg('label.suggest.products', 'search', null)}</div>
             </li>
             <li class="row d-flex flex-column items">
                 <isloop items="${pdict.suggestions.product.products}" var="product" status="listindex">
-                    <span class="d-flex justify-content-end children" id="product-${listindex.index}" role="option">
+                    <span class="d-flex justify-content-start ml-3 children" id="product-${listindex.index}" role="option">
                         <div class="item">
                             <a href="${product.url}" aria-label="${product.name}">
                                 <span class="name">${product.name}</span>
@@ -202,7 +202,7 @@
         </isif>
         <isif condition="${pdict.suggestions.category && pdict.suggestions.category.available}">
             <div class="borderTopHeader"></div>
-            <li class="row justify-content-end header">
+            <li class="row justify-content-start ml-3 header">
                 <div class="item">
                     ${Resource.msg('label.suggest.categories', 'search', null)}
                 </div>
@@ -210,7 +210,7 @@
             <li class="row d-flex flex-column items">
                 <isloop items="${pdict.suggestions.category.categories}" var="category" status="listindex">
                     <div id="category-${listindex.index}" role="option">
-                        <div class="d-flex justify-content-end children">
+                        <div class="d-flex justify-content-start ml-3 children">
                             <div class="item">
                                 <iscomment> <isif condition="${category.imageUrl != ''}"> </iscomment>
                                     <a href="${category.url}">
@@ -231,7 +231,7 @@
         </isif>
         <isif condition="${pdict.suggestions.recent && pdict.suggestions.recent.available}">
             <div class="borderTopHeader"></div>
-            <li class="row justify-content-end header">
+            <li class="row justify-content-start ml-3 header">
                 <div class="item">
                     ${Resource.msg('label.suggest.recent', 'search', null)}
                 </div>
@@ -239,7 +239,7 @@
             <li class="row d-flex flex-column items">
                 <isloop items="${pdict.suggestions.recent.phrases}" var="phrase" status="listindex">
                     <div class="" id="phrase-2-${listindex.index}" role="option">
-                        <div class="d-flex justify-content-end children">
+                        <div class="d-flex justify-content-start ml-3 children">
                             <div class="item name">
                                 <a href="${phrase.url}">${phrase.value}</a>
                             </div>
@@ -250,7 +250,7 @@
         </isif>
         <isif condition="${pdict.suggestions.popular && pdict.suggestions.popular.available}">
             <div class="borderTopHeader"></div>
-            <li class="row justify-content-end header">
+            <li class="row justify-content-start ml-3 header">
                 <div class="col-xs-12 col-sm-10">
                     ${Resource.msg('label.suggest.popular', 'search', null)}
                 </div>
@@ -269,7 +269,7 @@
         </isif>
         <isif condition="${pdict.suggestions.brand && pdict.suggestions.brand.available}">
             <div class="borderTopHeader"></div>
-            <li class="row justify-content-end header">
+            <li class="row justify-content-start ml-3 header">
                 <div class="col-xs-12 col-sm-10">
                     ${Resource.msg('label.suggest.brand', 'search', null)}
                 </div>
@@ -288,7 +288,7 @@
         </isif>
         <isif condition="${pdict.suggestions.content && pdict.suggestions.content.available}">
             <div class="borderTopHeader"></div>
-            <li class="row justify-content-end header">
+            <li class="row justify-content-start ml-3 header">
                 <div class="col-xs-12 col-sm-10">
                     ${Resource.msg('label.suggest.content', 'search', null)}
                 </div>

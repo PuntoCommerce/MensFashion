@@ -66,7 +66,7 @@
     <div class="attribute col-12">
         <div class="attributeDetailTalla">
             <!-- Select <Attribute> Label -->
-            <label class="d-none d-lg-block ${attr.id}"
+            <label class="d-lg-block ${attr.id}"
                 for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
                 <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
                     ${Resource.msg('label.select.size', 'checkout', null)} ${attr.displayName.toLowerCase()}
@@ -76,7 +76,7 @@
             </label>
 
             <!-- Trigger Modal Sizes Guide -->
-            <div class="row sizes-guide-cont">
+            <div class="row sizes-guide-cont w-50">
                 <div class="col sizes-guide d-flex">
                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->
