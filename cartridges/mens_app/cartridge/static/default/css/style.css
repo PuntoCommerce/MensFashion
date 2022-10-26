@@ -585,7 +585,7 @@ footer .newsletter {
   background-color: #231f20;
   border: 1px solid #ffffff;
   border-radius: 0px;
-  height: 42px;
+  height: 32px;
   width: 268px;
   color: #ffffff; }
 
@@ -611,8 +611,10 @@ footer .subscribe-email {
   border-radius: 0px;
   border: 1px solid #ffffff;
   color: #000000 !important;
-  height: 42px !important;
+  height: 32px !important;
   width: 80px !important; }
+  footer .subscribe-email:focus {
+    outline: 0; }
 
 footer .subscribe-email {
   align-items: center; }
@@ -2317,7 +2319,15 @@ ul {
   .promo-carousel .carousel.indicators-xs {
     padding-bottom: 2rem; }
   .experience-component.experience-commerce_layouts-mobileGrid2r1c {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .margin-top-30px {
+    margin-top: 30px !important; }
+  .margin-top-40px {
+    margin-top: 40px !important; }
+  .margin-top-50px {
+    margin-top: 50px !important; }
+  .customTextBox-component-container br {
+    display: none; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
@@ -2491,12 +2501,27 @@ ul {
     font-size: 20px !important; }
   .menu-item-container {
     margin-bottom: 23px; }
+  .sub-items-parent {
+    margin-bottom: 13px; }
   #actions-icons .nav-item a {
     display: flex;
     align-items: baseline;
     padding-bottom: 0 !important;
     padding-top: 0 !important;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .filter-mobile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px; }
+    .filter-mobile-container--text-small {
+      font-size: 18px;
+      font-family: "AvenirLTStd-Heavy";
+      margin-left: 5px; }
+    .filter-mobile-container--text-large {
+      font-size: 28px;
+      font-family: "AvenirLTStd-Heavy";
+      margin-left: 5px; } }
 
 @media (max-width: 543px) {
   .product-tile.summary {
@@ -3049,10 +3074,7 @@ del {
   height: 38px;
   width: 109px;
   font-family: "Avenir-Next";
-  position: absolute;
-  right: 0;
-  margin-right: 25px;
-  margin-top: 5px; }
+  margin-right: 5px; }
 
 .btn-close-filter {
   background: none;

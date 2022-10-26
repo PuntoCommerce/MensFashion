@@ -23,7 +23,7 @@ footer .newsletter {
     background-color: #231f20;
     border: 1px solid #ffffff;
     border-radius: 0px;
-    height: 42px;
+    height: 32px;
     width: 268px;
     color: #ffffff;
 }
@@ -54,8 +54,12 @@ footer .subscribe-email {
     border-radius: 0px;
     border: 1px solid #ffffff;
     color: #000000 !important;
-    height: 42px !important;
+    height: 32px !important;
     width: 80px !important;
+
+    &:focus{
+        outline: 0;
+    }
 }
 
 footer .subscribe-email {
