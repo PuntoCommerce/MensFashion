@@ -21,7 +21,7 @@
     <div class="ITBC-buttons col-lg-2" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
       <isloop items="${pdict.buttons}" var="button" status="loopstatus">
         <isif condition="${button.active}">
-          <a class="btn-ITBC with display-${pdict.display_button}" href="${button.url}">${button.text}</a>
+          <a class="btn-ITBC with display-${pdict.display_button} margin-top-${pdict.marginT}" href="${button.url}">${button.text}</a>
         </isif>
       </isloop>
     </div>
