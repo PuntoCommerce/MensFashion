@@ -12,9 +12,6 @@
     <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
 
     <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
-        <fieldset class="shipping d-none">
-            <isinclude template="checkout/shipping/shippingMethodCards" />
-        </fieldset>
 
         <fieldset class="shipment-selector-btns">
             <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
@@ -70,11 +67,30 @@
             </div>
         </fieldset>
 
-        <fieldset
-            class="shipment-selector-block ${(pdict.order.usingMultiShipping || shipmentLoopState) || (pdict.customer.addresses && pdict.customer.addresses.length >
-                                           0) && !shippingModel.selectedShippingMethod.storePickupEnabled ? '' : 'd-none'} ">
+        <iscomment> <fieldset
+            class="shipment-selector-block ${(pdict.order.usingMultiShipping || shipmentLoopState) || (pdict.customer.addresses && pdict.customer.addresses.length > 0) && !shippingModel.selectedShippingMethod.storePickupEnabled ? '' : 'd-none'} ">
             <isinclude template="checkout/shipping/shipmentSelector" />
-        </fieldset>
+        </fieldset> </iscomment>
+
+        <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
+            <fieldset class="shipment-selector-block ${(pdict.order.usingMultiShipping || shipmentLoopState) || (pdict.customer.addresses && pdict.customer.addresses.length > 0) ? '' : 'd-none'} ">
+                <isinclude template="checkout/shipping/shipmentSelector" />
+            </fieldset>
+
+            <fieldset class="shipping-address-block">
+                <isinclude template="checkout/shipping/shippingAddress" />
+            </fieldset>
+
+            <fieldset class="shipping-method-block">
+                <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
+
+                <isinclude template="checkout/shipping/shippingMethod" />
+            </fieldset>
+
+            <fieldset class="gift-message-block">
+                <isinclude template="checkout/shipping/isGift" />
+            </fieldset>
+        </div>
 
         <fieldset class="pickup-in-store" data-url="${shippingModel.pickupInstoreUrl}">
             <isif condition="${shippingModel.productLineItems.items[0].fromStoreId}">
@@ -83,17 +99,21 @@
             </isif>
         </fieldset>
 
+        <fieldset class="shipping d-none">
+            <isinclude template="checkout/shipping/shippingMethodCards" />
+        </fieldset>
+
         <button class="btn btn-block btn-outline-primary btn-margin change-store ${shippingModel.selectedShippingMethod.storePickupEnabled && shippingModel.productLineItems.items[0].fromStoreId ? '' :
                                                                                  'd-none'}" name="changeStore"
             value="changeStore">
             ${Resource.msg('button.change.store', 'instorePickup', null)}
         </button>
 
-        <fieldset
+       <iscomment>  <fieldset
             class="shipping-address-block ${shippingModel.selectedShippingMethod.storePickupEnabled ? 'd-none' : ''}">
             <span class="checkout-summary-title-1 d-block mb-3">${Resource.msg('shipping.summary.title', 'checkout', null)}</span>
             <isinclude template="checkout/shipping/shippingAddress" />
-        </fieldset>
+        </fieldset> </iscomment>
 
         <iscomment>
             <fieldset
