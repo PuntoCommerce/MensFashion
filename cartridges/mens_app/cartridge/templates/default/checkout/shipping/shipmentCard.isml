@@ -80,16 +80,16 @@
             <fieldset class="shipping-address-block">
                 <isinclude template="checkout/shipping/shippingAddress" />
             </fieldset>
-
+<iscomment> 
             <fieldset class="shipping-method-block">
                 <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
 
                 <isinclude template="checkout/shipping/shippingMethod" />
-            </fieldset>
+            </fieldset> </iscomment>
 
-            <fieldset class="gift-message-block">
+            <iscomment> <fieldset class="gift-message-block">
                 <isinclude template="checkout/shipping/isGift" />
-            </fieldset>
+            </fieldset> </iscomment>
         </div>
 
         <fieldset class="pickup-in-store" data-url="${shippingModel.pickupInstoreUrl}">
