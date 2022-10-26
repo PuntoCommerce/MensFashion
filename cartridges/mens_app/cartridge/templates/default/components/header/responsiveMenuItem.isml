@@ -6,7 +6,7 @@
     </button>
     <h3 class="category-title">${parent}</h3>
     <isloop items="${menuItem.subCategories}" var="category">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between sub-items-${category.subCategories ? 'parent' : 'child'}">
             <a href="<isprint value="${category.url}" encoding="htmldoublequote"/>" class="nav-link ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>
             <isif condition="${category.subCategories}">
                 <iscomment> <button item-target="${category.id}" role="button" class="toggle-subcategories"> </iscomment>
