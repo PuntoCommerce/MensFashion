@@ -504,7 +504,7 @@ span.ship-to-phone {
   }
 }
 .shipping.only-visible {
-  pointer-events: none;
+  /* pointer-events: none; */
   border-top: 1px solid #000;
   padding-top: 23px;
 }

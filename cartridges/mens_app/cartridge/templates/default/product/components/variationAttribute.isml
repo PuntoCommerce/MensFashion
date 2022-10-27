@@ -76,7 +76,7 @@
             </label>
 
             <!-- Trigger Modal Sizes Guide -->
-            <div class="row sizes-guide-cont w-50">
+            <div class="row sizes-guide-cont">
                 <div class="col sizes-guide d-flex">
                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->

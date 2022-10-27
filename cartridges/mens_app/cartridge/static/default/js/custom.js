@@ -294,4 +294,20 @@ function hideFilter() {
  }
 }
 
+function showAlertOnce() {
+ localStorage.setItem("showAlertOnce", true);
+}
+
+const showAlert = localStorage.getItem("showAlertOnce");
+showAlert ? '' : $("#alert-scroll-images").append(`
+<div class="alert alert-warning alert-dismissible fade show"  role="alert">
+<span>Hola</span>
+
+<button type="button" onclick="showAlertOnce()" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+`);;
+
+
 localValues();

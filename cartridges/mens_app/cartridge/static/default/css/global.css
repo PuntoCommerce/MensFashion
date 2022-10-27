@@ -19023,10 +19023,10 @@ div.availability {
 
 .swatch-circle-rosa-claro{
   border: 0.063em solid rgba(0, 0, 0, 0.3);
-  width: 1.38em;
-  height: 1.38em;
+  width: 2.5em;
+  height: 2.5em;
   background: #ea899a;
-  border-radius: 0.69em;
+  border-radius: 1.25em;
   background-color: #ea899a;
   display: block;
   position: relative;
@@ -19039,7 +19039,7 @@ div.availability {
 .product-detail .attributes .swatch-circle-rosa-claro {
   width: 18px;
   height: 18px;
-  background: #0000ff;
+  background: #ea899a;
   border-radius: 1.25em;
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   display: inline-block;
@@ -21103,6 +21103,7 @@ button.close:focus {
   font-weight: 400;
   font-family: 'Avenir-Next';
   font-size: 20px;
+  margin-right: 10px !important;
 }
 
 .quickviewInfo {

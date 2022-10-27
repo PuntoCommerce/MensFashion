@@ -79,9 +79,9 @@
                                 <div class="coupons-and-promos">
                                     <isinclude template="cart/cartCouponDisplay" />
                                 </div>
-                                <div class="row">
+                                <iscomment> <div class="row">
                                     <isinclude template="cart/cartShippingMethodSelection" />
-                                </div>
+                                </div> </iscomment>
                                 <isinclude template="cart/cartTotals" />
                                 <div class="row d-none d-sm-block">
                                     <div class="col-12 ">

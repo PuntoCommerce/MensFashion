@@ -174,7 +174,7 @@
                                     <div class="checkout__order--divider"></div>
                                 </div>
                                 <isinclude template="checkout/orderTotalSummary" />
-                                <div class="checkout__order--divider"></div>
+                                <div class="checkout__order--divider mb-4"></div>
                                               
                                 <isinclude template="cart/cartPromoCode" />
                                 <div class="coupons-and-promos">

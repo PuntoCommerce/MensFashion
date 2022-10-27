@@ -32,7 +32,11 @@
             </a>
         </isif>
     </div>
-    <div class="d-block d-md-none mobile-fixed-details-wrapper">
+    <div class="d-sm-block d-md-none mobile-fixed-details-wrapper mt-2">
+    <div id="alert-scroll-images">
+        
+    </div>
+        
         <!-- Product Description and Details Desktop -->
         <isinclude template="product/components/pdpDetailsWrapper" />
     </div>

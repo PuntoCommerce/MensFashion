@@ -527,9 +527,14 @@ del {
  text-decoration: none !important;
 }
 
+.sizes-guide-cont{
+  width: 50% !important;
+}
+
 @media (max-width: 768px) {
  .product-detail .prices {
-  margin: 18px 0 24px 0;
+  margin: 18px 0 0 0;
+  padding-bottom: 0;
  }
 
  .product-details-wrapper .attributes {
@@ -542,4 +547,14 @@ del {
     font-size: 16px !important;
   }
  }
+}
+
+@media (max-width: 537px) {
+  .sizes-guide-cont{
+    width: 60% !important;
+    
+    .sizes-guide{
+      margin-bottom: 0 !important;
+    }
+  }
 }
