@@ -18046,7 +18046,7 @@ div.availability {
 
 .attributesPdp {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(2, auto);
   gap: 10px;
 }
 
@@ -21161,11 +21161,6 @@ button.close:focus {
 
 .cartContainer {
   padding: 0 45px;
-}
-
-.line-item-promo {
-  position: absolute;
-  bottom: -20px;
 }
 
 .account-sections {

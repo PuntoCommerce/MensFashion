@@ -294,20 +294,57 @@ function hideFilter() {
  }
 }
 
+/* Inidcation to slide  */
+
 function showAlertOnce() {
  localStorage.setItem("showAlertOnce", true);
 }
 
 const showAlert = localStorage.getItem("showAlertOnce");
-showAlert ? '' : $("#alert-scroll-images").append(`
+showAlert
+ ? ""
+ : $("#alert-scroll-images").append(`
 <div class="alert alert-warning alert-dismissible fade show"  role="alert">
-<span>Hola</span>
+<span>Desliza para ver el resto de las imagenes</span>
 
 <button type="button" onclick="showAlertOnce()" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
 </button>
 </div>
-`);;
+`);
 
+/* PLP Change Carrousel or Slide Acording Width */
+
+const imagesCarrouselContainer = document.querySelector(
+ "#carrousel-slide-images-container"
+);
+const imagesCarrousel = document.querySelector(".carrousel-slide-images");
+
+if (imagesCarrouselContainer) {
+ const widthScreen = window.innerWidth;
+
+ imagesCarrouselContainer.addEventListener("click", () => {
+  document
+   .querySelector(".carousel.slide.events")
+   .classList.add("pointer-event");
+ });
+
+ addEventListener("resize", () => {
+  const widthScreen = window.innerWidth;
+
+  if (widthScreen < 769) {
+   imagesCarrouselContainer.classList.remove("image-details-container");
+   imagesCarrousel.setAttribute("data-ride", "carousel");
+  } else {
+   imagesCarrouselContainer.classList.add("image-details-container");
+   imagesCarrousel.setAttribute("data-ride", "");
+  }
+ });
+
+ if (widthScreen < 769) {
+  imagesCarrouselContainer.classList.remove("image-details-container");
+  imagesCarrousel.setAttribute("data-ride", "carousel");
+ }
+}
 
 localValues();

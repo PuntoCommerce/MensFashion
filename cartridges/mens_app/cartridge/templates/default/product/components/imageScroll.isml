@@ -1,5 +1,9 @@
-<div class="col-md-6 image-details-container scroll-images">
-    <div id="pdpCarousel-${product.id}" class="carousel slide" data-interval="0"
+<!-- Add to wishlist -->
+<div class="attribute favPDP mobile-favorite-button d-sm-block d-md-none">
+    <isinclude template="wishlist/components/addToWishListButton" />
+</div>
+<div class="col-md-6 image-details-container scroll-images" id="carrousel-slide-images-container">
+    <div id="pdpCarousel-${product.id}" class="carousel slide carrousel-slide-images pointer-event" data-interval="0"
         data-prev="${Resource.msg('button.previous', 'common', null)}"
         data-next="${Resource.msg('button.next', 'common', null)}">
         <isif condition="${product.images['large'].length > 1}">
@@ -33,10 +37,10 @@
         </isif>
     </div>
     <div class="d-sm-block d-md-none mobile-fixed-details-wrapper mt-2">
-    <div id="alert-scroll-images">
-        
-    </div>
-        
+        <div id="alert-scroll-images">
+
+        </div>
+
         <!-- Product Description and Details Desktop -->
         <isinclude template="product/components/pdpDetailsWrapper" />
     </div>

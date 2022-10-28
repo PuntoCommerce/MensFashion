@@ -11,9 +11,9 @@
             <div class="row">
                 <div class="col">
                     <span class="product-name">${product.productName}</span>
-                    <p>${product.id}</p>
                     <!-- Applicable Promotions -->
                     <iscomment> <div class="row">
+                    <p>${product.id}</p>
                         <div class="col-12 promotions">
                         </div>
                     </div> </iscomment>
@@ -96,7 +96,7 @@
                     <isinclude template="product/components/quantity" />
                 </div>
                 <!-- Add to wishlist -->
-                <div class="attribute favPDP">
+                <div class="attribute favPDP d-md-block d-none">
                     <isinclude template="wishlist/components/addToWishListButton" />
                 </div>
             </div>
