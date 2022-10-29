@@ -295,7 +295,7 @@ function hideFilter() {
 }
 
 /* Inidcation to slide  */
-
+/* 
 function showAlertOnce() {
  localStorage.setItem("showAlertOnce", true);
 }
@@ -311,7 +311,7 @@ showAlert
     <span aria-hidden="true">&times;</span>
 </button>
 </div>
-`);
+`); */
 
 /* PLP Change Carrousel or Slide Acording Width */
 
