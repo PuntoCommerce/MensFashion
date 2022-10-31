@@ -101,6 +101,14 @@
           "type": "enum",
           "values": ["30px", "40px", "50px"],
           "required": false
+        },
+        {
+          "id": "align_button",
+          "name": "Align Button",
+          "description": "",
+          "type": "enum",
+          "values": ["left"],
+          "required": false
         }
       ]
     },

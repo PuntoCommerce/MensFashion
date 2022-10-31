@@ -476,12 +476,15 @@ h5, html, body {
 .responsive {
   display: none !important; }
 
-.campaign-banner .campaign-banner-container .campaign-banner .campaign-banner-message .responsive p {
+.campaign-banner
+.campaign-banner-container
+.campaign-banner
+.campaign-banner-message
+.responsive
+p {
   text-align: center; }
 
 @media (max-width: 768px) {
-  .desk {
-    display: none !important; }
   .responsive {
     display: block !important; }
   header .main-menu {
@@ -507,6 +510,26 @@ header .container {
 
 header .navbar-header {
   height: 65px; }
+
+.campaign-banner-message img {
+  width: 80px !important;
+  margin-right: 3px; }
+
+header .main-menu {
+  margin-top: 24px; }
+
+.checkout.logo img {
+  height: 2em; }
+
+.checkout.header {
+  padding: 2em 0.5em; }
+  @media only screen and (max-width: 37.5em) {
+    .checkout.header {
+      justify-content: center !important; } }
+
+.align-button-left {
+  right: 66% !important;
+  bottom: 30% !important; }
 
 @media (min-width: 992px) {
   .brand {
@@ -554,19 +577,22 @@ header .navbar-header {
     font-family: "Avenir-LT-Std" !important;
     font-size: 14px; }
   .nav-link {
-    padding: 0 0 10px 0 !important; } }
+    padding: 0 0 10px 0 !important; }
+  .align-button-left {
+    right: 25% !important; } }
 
-header .main-menu {
-  margin-top: 24px; }
-
-.checkout.logo img {
-  height: 2em; }
-
-.checkout.header {
-  padding: 2em 0.5em; }
-  @media only screen and (max-width: 37.5em) {
-    .checkout.header {
-      justify-content: center !important; } }
+@media (max-width: 543px) {
+  .desk {
+    display: none !important; }
+  .campaign-banner {
+    height: 50px !important; }
+    .campaign-banner .campaign-banner-message {
+      margin-top: 10px; }
+      .campaign-banner .campaign-banner-message img {
+        margin-right: 0; }
+  .align-button-left {
+    right: 0 !important;
+    bottom: 5% !important; } }
 
 /* **************************** FOOTER **************************** */
 footer {

@@ -12,21 +12,21 @@
     <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
 
     <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
+        
 
         <fieldset class="shipment-selector-btns">
             <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
             <div class="row">
                 <div class="col-12 col-lg-6 mb-3">
                     <button id="selectShipping" class="shipping-check-card h-100 <isloop items="
-                        ${shippingModel.applicableShippingMethods}" var="shippingMethod">
-                        <isif condition="${shippingMethod.ID == " MEX001" && shippingMethod.selected}">
-                            active
-                        </isif>
-                        </isloop>">
+                    ${shippingModel.applicableShippingMethods}" var="shippingMethod">
+                    <isif condition="${shippingMethod.ID == "MEX001" && shippingMethod.selected}">
+                        active
+                    </isif>
+                    </isloop>">
                         <div class="check-decorator">
                             <div id="outer-circle">
                                 <div id="inner-circle">
-
                                 </div>
                             </div>
                         </div>
@@ -42,15 +42,14 @@
                 </div>
                 <div class="col-12 col-lg-6 mb-3">
                     <button id="selectPickup" class="shipping-check-card h-100 <isloop items="
-                        ${shippingModel.applicableShippingMethods}" var="shippingMethod">
-                        <isif condition="${shippingMethod.ID == " pickup" && shippingMethod.selected}">
-                            active
-                        </isif>
-                        </isloop>">
+                    ${shippingModel.applicableShippingMethods}" var="shippingMethod">
+                    <isif condition="${shippingMethod.ID == "pickup" && shippingMethod.selected}">
+                        active
+                    </isif>
+                    </isloop>">
                         <div class="check-decorator">
                             <div id="outer-circle">
                                 <div id="inner-circle">
-
                                 </div>
                             </div>
                         </div>
