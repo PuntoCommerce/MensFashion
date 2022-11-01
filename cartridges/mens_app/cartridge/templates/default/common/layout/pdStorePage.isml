@@ -60,6 +60,8 @@
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
 
     <isinclude template="/components/chatSales" />
+    <script src="https://534006487.recs.igodigital.com/a/v2/534006487/cart/recommend.js?cart=skus" type="text/javascript"> </script>
+
 </body>
 
 </html>

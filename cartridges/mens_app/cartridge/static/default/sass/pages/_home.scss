@@ -4,8 +4,9 @@
 
 /* **************************** HOME **************************** */
 
-*, body{
-  font-size: 'Avenir-Next' !important;
+*,
+body {
+ font-size: "Avenir-Next" !important;
 }
 
 #maincontent .container {
@@ -121,6 +122,11 @@
  position: relative;
  height: 510px;
 }
+
+.product-tile.summary.home {
+ position: relative;
+ height: auto !important;
+}
 .isFullWidth {
  & .carousel-control-prev {
   left: 0% !important;
@@ -184,12 +190,12 @@
  margin-top: 40px;
 }
 
-.display-Yes{
-  display: block !important;
+.display-Yes {
+ display: block !important;
 }
 
-.display-No{
-  display: none !important;
+.display-No {
+ display: none !important;
 }
 
 @media (max-width: 544px) {
@@ -307,22 +313,22 @@
  .experience-component.experience-commerce_layouts-mobileGrid2r1c {
   margin-bottom: 0;
  }
- 
- .margin-top-30px{
+
+ .margin-top-30px {
   margin-top: 30px !important;
  }
- 
- .margin-top-40px{
+
+ .margin-top-40px {
   margin-top: 40px !important;
  }
 
- .margin-top-50px{
+ .margin-top-50px {
   margin-top: 50px !important;
  }
 
- .customTextBox-component-container{
-  br{
-    display: none;
+ .customTextBox-component-container {
+  br {
+   display: none;
   }
  }
 }

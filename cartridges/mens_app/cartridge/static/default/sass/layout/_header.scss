@@ -194,5 +194,10 @@ header .main-menu {
  .align-button-left {
   right: 0 !important;
   bottom: 5% !important;
+  position: absolute !important;
+
+  a{
+    border: 1px solid #aaa !important;
+  }
  }
 }
