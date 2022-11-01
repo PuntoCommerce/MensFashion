@@ -1,9 +1,5 @@
 <isset name="product" value="${pdict.product}" scope="page" />
-<isif condition="${pdict.action === null}">
-    <div class="product-tile summary home" data-gtmdatatile="${JSON.stringify(product)}">
-<iselse/>
     <div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
-</isif>
 
     <isinclude template="product/components/highlight" />
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->

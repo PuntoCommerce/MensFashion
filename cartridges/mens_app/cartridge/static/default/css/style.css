@@ -2230,11 +2230,10 @@ body {
 
 .product-tile.summary {
   position: relative;
-  height: 510px; }
+  height: auto; }
 
 .product-tile.summary.home {
-  position: relative;
-  height: auto; }
+  position: relative; }
 
 .isFullWidth .carousel-control-prev {
   left: 0% !important;
