@@ -35,10 +35,16 @@ const handleShipment = (shipment) => {
 
 const parseDate = (date) => {
   let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  if (day < 10) {
+    day = "0" + day;
+  }
+
   if (month < 10) {
     month = "0" + month;
   }
-  return date.getDate() + "/" + month + "/" + date.getFullYear();
+  return day + "/" + month + "/" + date.getFullYear();
 };
 
 const handlePayment = (payment) => {
@@ -49,12 +55,12 @@ const handlePayment = (payment) => {
   };
 };
 
-exports.execute = () => {
+module.exports.execute = () => {
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
 
   let orders = OrderMgr.searchOrders(
-    "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND paymentStatus = {2}",
+    "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND (paymentStatus = {2} OR custom.paypalPaymentMethod != {1})",
     "creationDate desc",
     currentDate,
     null,
@@ -107,15 +113,18 @@ exports.execute = () => {
       firstName = order.customer.firstName;
       lastName = order.customer.lastName;
     } else {
-      firstName = order.customerName;
-      lastName = "No last name";
+      let customerName = order.customerName.split(" ");
+      firstName = customerName.slice(0, customerName.length / 2).join(" ");
+      lastName = customerName
+        .slice(customerName.length / 2, customerName.length)
+        .join(" ");
     }
 
     let defaultShipment = order.defaultShipment;
     let paymentTransaction = order.paymentTransaction;
 
-    // let pricebook =
-    // order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
+    let pricebook =
+      order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
 
     body = {
       account: {
@@ -131,8 +140,10 @@ exports.execute = () => {
       OrderDiscountDetailsTotal: discounts,
 
       products: products,
-      pricebookId: "pricebook",
+      pricebookId: pricebook,
     };
+
+    let a = body.account;
 
     salesOrderId = sendOrder(body);
 
