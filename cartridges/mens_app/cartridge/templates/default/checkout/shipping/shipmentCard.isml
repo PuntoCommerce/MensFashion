@@ -145,8 +145,8 @@
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
     </form>
     <fieldset class="shipping only-visible col-12 col-lg-7 d-sm-block d-lg-none">
-        <span class="checkout-summary-title-2 d-block mb-3">${Resource.msg('check.shipping.summary.title', 'checkout', null)}</span>
         <iscomment>
+        <span class="checkout-summary-title-2 d-block mb-3">${Resource.msg('check.shipping.summary.title', 'checkout', null)}</span>
             <isinclude template="checkout/shipping/shippingMethod" />
         </iscomment>
         <div class="card checkout__order mt-4">

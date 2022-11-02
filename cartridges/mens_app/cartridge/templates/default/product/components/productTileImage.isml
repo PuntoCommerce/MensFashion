@@ -27,8 +27,8 @@
         <div class='wishlist__wrapper'>
             <a class="wishlistTile" href="${URLUtils.url('Wishlist-AddProduct')}"
                 title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
-    <img class="favIconGrey" src="${URLUtils.staticURL('/images/pdp/favIcon.svg')}" alt="Favoritos" />
-    <img class="favIconRed" src="${URLUtils.staticURL('/images/pdp/favRed.svg')}" alt="Favoritos" />
+                    <img class="favIconGrey" src="${URLUtils.staticURL('/images/plp-icons/addWishlistIcon.svg')}" alt="Favoritos" />
+                    <img class="favIconRed" src="${URLUtils.staticURL('/images/plp-icons/addWishlistIconRed.svg')}" alt="Favoritos" />
             </a>
         </div>
     </div>

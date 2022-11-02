@@ -531,6 +531,15 @@ del {
  width: 50% !important;
 }
 
+#productdetailpage{
+  .experience-component.experience-commerce_layouts-carousel{
+    .carousel-title{
+      font-size: 18px !important;
+      font-family: $font-family-normal;
+    }
+  }
+}
+
 @media (max-width: 768px) {
  .product-detail .prices {
   margin: 18px 0 0 0;

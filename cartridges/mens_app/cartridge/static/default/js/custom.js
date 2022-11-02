@@ -318,6 +318,7 @@ showAlert
 const imagesCarrouselContainer = document.querySelector(
  "#carrousel-slide-images-container"
 );
+
 const imagesCarrousel = document.querySelector(".carrousel-slide-images");
 
 if (imagesCarrouselContainer) {
@@ -345,6 +346,33 @@ if (imagesCarrouselContainer) {
   imagesCarrouselContainer.classList.remove("image-details-container");
   imagesCarrousel.setAttribute("data-ride", "carousel");
  }
+}
+
+/*  */
+
+const filterCollapse = document.querySelector(".filter-collapse");
+if (filterCollapse) {
+ const widthScreen = window.innerWidth;
+
+ addEventListener("resize", () => {
+  const widthScreen = window.innerWidth;
+
+  if (widthScreen < 769) {
+   filterCollapse.classList.remove("show");
+  } else {
+   filterCollapse.classList.add("show");
+  }
+ });
+
+ if (widthScreen < 769) {
+  filterCollapse.classList.remove("show");
+ }else{
+  filterCollapse.classList.add("show");
+ }
+}
+
+function hideAlert() {
+  $('.add-to-wishlist-messages').remove()
 }
 
 localValues();

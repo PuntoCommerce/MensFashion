@@ -94,78 +94,41 @@
 
 .add-to-wishlist-messages {
  .add-to-wishlist-alert {
-  z-index: 5;
+  z-index: 1000;
+  bottom: 40px;
+  margin-left: 63px;
  }
  .alert-success {
-  color: #64656a !important;
-  border-radius: 5px;
+  color: #fff !important;
+  background: #000 !important;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-family: $font-family-normal;
+  text-align: left !important;
+  width: 428px;
+  padding-right: 3vw;
 
-  &::before {
-   content: "\f08a";
-   font-family: "FontAwesome";
-   color: red;
-   font-size: 18px;
-   font-weight: bold;
-   margin-right: 15px;
-  }
-
-  &::after {
-   content: "";
-   background: #d4d4d4;
-   position: fixed;
-   width: 24px;
-   height: 24px;
-   bottom: -10px;
-   right: 45%;
-   transform: rotate(45deg);
+  button{
+    color: #fff;
   }
 
   @media (max-width: 991px) {
-   width: 73vw;
+   width: 100vw;
    display: flex;
-   flex-direction: column;
-   align-items: center;
-
-   &::before {
-    content: "\f08a";
-    margin-right: 0;
-    margin-bottom: 3px;
-   }
+   padding-right: 15vw;
   }
  }
 
  .add-to-wishlist-alert.alert-danger {
-  &::before {
-   content: "\f12a";
-   font-family: "FontAwesome";
-   border: 2px solid red;
-   padding: 1.2px 7px;
-   border-radius: 20px;
-   margin-right: 15px;
-  }
+  background-color: #000;
+  color: #fff;
 
-  &::after {
-   content: "";
-   background: #d4d4d4;
-   position: fixed;
-   width: 24px;
-   height: 24px;
-   bottom: -10px;
-   right: 45%;
-   transform: rotate(45deg);
+  button{
+    color: #fff;
   }
 
   @media (max-width: 991px) {
-   width: 75vw;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-
-   &::before {
-    padding: 0 8px;
-    margin-right: 0;
-    margin-bottom: 3px;
-   }
+   width: 100vw;
   }
  }
 }
@@ -187,7 +150,7 @@
   margin-bottom: 23px;
  }
 
- .sub-items-parent{
+ .sub-items-parent {
   margin-bottom: 13px;
  }
 
@@ -209,17 +172,48 @@
   justify-content: space-between;
   margin-top: 12px;
 
-  &--text-small{
-    font-size: 18px;
-    font-family: $font-family-bold;
-    margin-left: 5px;
+  &--text-small {
+   font-size: 18px;
+   font-family: $font-family-bold;
+   margin-left: 5px;
   }
 
-  &--text-large{
-    font-size: 28px;
-    font-family: $font-family-bold;
-    margin-left: 5px;
+  &--text-large {
+   font-size: 28px;
+   font-family: $font-family-bold;
+   margin-left: 5px;
   }
+ }
+
+ .add-to-wishlist-alert{
+  bottom: 0 !important;
+  margin-left: 0 !important;
+ }
+}
+
+@media (max-width: 768px) {
+ .filter-collapse-button {
+  padding-left: 0;
+ }
+
+ .header-bar {
+  padding-right: 0;
+  padding-left: 0;
+ }
+
+ .refinement-bar {
+  margin-top: 87px;
+  height: 88vh;
+ }
+
+ .filters {
+  font-size: 15px;
+  font-family: $font-family-normal;
+ }
+
+ .container div.collapsible-sm button.title {
+  font-size: 16px;
+  font-family: $font-family-normal;
  }
 }
 

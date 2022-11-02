@@ -640,7 +640,7 @@
 
         function a(t, e) {
             var o;
-            $.spinner().stop(), t.success ? (o = "alert-success", e.hasClass("fa-heart-o") && e.removeClass("fa-heart-o").addClass("fa-heart")) : o = "alert-danger", 0 === $(".add-to-wishlist-messages").length && $("body").append('<div class="add-to-wishlist-messages "></div>'), $(".add-to-wishlist-messages").append('<div class="add-to-wishlist-alert text-center ' + o + '">' + t.msg + "</div>"), setTimeout((function () {
+            $.spinner().stop(), t.success ? (o = "alert-success alert-dismissible fade show", e.hasClass("fa-heart-o") && e.removeClass("fa-heart-o").addClass("fa-heart")) : o = "alert-danger", 0 === $(".add-to-wishlist-messages").length && $("body").append('<div class="add-to-wishlist-messages "></div>'), $(".add-to-wishlist-messages").append("<div role='alert' class='add-to-wishlist-alert text-center "+ o + "'>" + t.msg + "<button onClick='hideAlert()' type='button' class='close' data-dismiss='alert' aria-label='close'>" + "<span aria-hidden='true'>" + '&times;' +"</button>" + "</div>"), setTimeout((function () {
                 $(".add-to-wishlist-messages").remove()
             }), 4000)
         }

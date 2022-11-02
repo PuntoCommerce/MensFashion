@@ -1336,7 +1336,8 @@ ul {
   padding: 12px; }
   .card-header .d-none.d-md-block.pull-left {
     font-size: 16px;
-    line-height: 21.86px; }
+    line-height: 21.86px;
+    font-family: "Avenir-Next"; }
 
 .card-body {
   padding: 0 12px;
@@ -2461,66 +2462,35 @@ body {
     font-family: "Avenir-Next"; }
 
 .add-to-wishlist-messages .add-to-wishlist-alert {
-  z-index: 5; }
+  z-index: 1000;
+  bottom: 40px;
+  margin-left: 63px; }
 
 .add-to-wishlist-messages .alert-success {
-  color: #64656a !important;
-  border-radius: 5px; }
-  .add-to-wishlist-messages .alert-success::before {
-    content: "\f08a";
-    font-family: "FontAwesome";
-    color: red;
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 15px; }
-  .add-to-wishlist-messages .alert-success::after {
-    content: "";
-    background: #d4d4d4;
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    bottom: -10px;
-    right: 45%;
-    transform: rotate(45deg); }
+  color: #fff !important;
+  background: #000 !important;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-family: "Avenir-Next";
+  text-align: left !important;
+  width: 428px;
+  padding-right: 3vw; }
+  .add-to-wishlist-messages .alert-success button {
+    color: #fff; }
   @media (max-width: 991px) {
     .add-to-wishlist-messages .alert-success {
-      width: 73vw;
+      width: 100vw;
       display: flex;
-      flex-direction: column;
-      align-items: center; }
-      .add-to-wishlist-messages .alert-success::before {
-        content: "\f08a";
-        margin-right: 0;
-        margin-bottom: 3px; } }
+      padding-right: 15vw; } }
 
-.add-to-wishlist-messages .add-to-wishlist-alert.alert-danger::before {
-  content: "\f12a";
-  font-family: "FontAwesome";
-  border: 2px solid red;
-  padding: 1.2px 7px;
-  border-radius: 20px;
-  margin-right: 15px; }
-
-.add-to-wishlist-messages .add-to-wishlist-alert.alert-danger::after {
-  content: "";
-  background: #d4d4d4;
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  bottom: -10px;
-  right: 45%;
-  transform: rotate(45deg); }
-
-@media (max-width: 991px) {
-  .add-to-wishlist-messages .add-to-wishlist-alert.alert-danger {
-    width: 75vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .add-to-wishlist-messages .add-to-wishlist-alert.alert-danger::before {
-      padding: 0 8px;
-      margin-right: 0;
-      margin-bottom: 3px; } }
+.add-to-wishlist-messages .add-to-wishlist-alert.alert-danger {
+  background-color: #000;
+  color: #fff; }
+  .add-to-wishlist-messages .add-to-wishlist-alert.alert-danger button {
+    color: #fff; }
+  @media (max-width: 991px) {
+    .add-to-wishlist-messages .add-to-wishlist-alert.alert-danger {
+      width: 100vw; } }
 
 .colorName {
   text-transform: capitalize;
@@ -2554,7 +2524,26 @@ body {
     .filter-mobile-container--text-large {
       font-size: 28px;
       font-family: "AvenirLTStd-Heavy";
-      margin-left: 5px; } }
+      margin-left: 5px; }
+  .add-to-wishlist-alert {
+    bottom: 0 !important;
+    margin-left: 0 !important; } }
+
+@media (max-width: 768px) {
+  .filter-collapse-button {
+    padding-left: 0; }
+  .header-bar {
+    padding-right: 0;
+    padding-left: 0; }
+  .refinement-bar {
+    margin-top: 87px;
+    height: 88vh; }
+  .filters {
+    font-size: 15px;
+    font-family: "Avenir-Next"; }
+  .container div.collapsible-sm button.title {
+    font-size: 16px;
+    font-family: "Avenir-Next"; } }
 
 @media (max-width: 543px) {
   .product-tile.summary {
@@ -2945,6 +2934,10 @@ del {
 .sizes-guide-cont {
   width: 50% !important; }
 
+#productdetailpage .experience-component.experience-commerce_layouts-carousel .carousel-title {
+  font-size: 18px !important;
+  font-family: "Avenir-Next"; }
+
 @media (max-width: 768px) {
   .product-detail .prices {
     margin: 18px 0 0 0;
@@ -3146,26 +3139,21 @@ del {
   font-size: 30px;
   font-family: "Avenir-Next" !important; }
 
-.add-to-cart-messages .alert-success {
-  color: #fff;
-  border-radius: 5px;
-  background: #1acd94; }
-  .add-to-cart-messages .alert-success::before {
-    content: "\f05d";
-    font-family: "FontAwesome";
+.add-to-cart-messages {
+  bottom: 40px !important;
+  margin-left: 63px !important;
+  z-index: 1000; }
+  .add-to-cart-messages .alert-success {
     color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 15px; }
-  .add-to-cart-messages .alert-success::after {
-    content: "";
+    border-radius: 0 !important;
+    font-size: 16px;
+    font-family: "Avenir-Next";
+    text-align: left !important;
     background: #1acd94;
-    position: fixed;
-    width: 24px;
-    height: 24px;
-    bottom: 5px;
-    right: 45%;
-    transform: rotate(45deg); }
+    width: 428px; }
+
+.alert {
+  margin-bottom: 0 !important; }
 
 .non-adjusted-price {
   display: none !important; }
@@ -3184,8 +3172,12 @@ del {
   .checkout_top p {
     font-size: 14px;
     font-family: "Avenir-Next"; }
-  .add-to-cart-messages .alert-success {
-    width: 73vw; }
+  .add-to-cart-messages {
+    z-index: 1000;
+    bottom: 0 !important;
+    margin-left: 0 !important; }
+    .add-to-cart-messages .alert-success {
+      width: 100vw; }
   .promo-code-btn {
     margin-top: 10px; } }
 
