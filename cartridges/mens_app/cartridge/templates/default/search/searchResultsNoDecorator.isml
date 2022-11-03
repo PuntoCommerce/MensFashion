@@ -20,7 +20,7 @@
     <div class="row search-nav">
         <isif condition="${!pdict.productSearch.isCategorySearch}">
             <div class="nav-tabs-wrapper">
-                <ul class="nav nav-tabs nav-fill" role="tablist">
+                <ul class="nav nav-tabs nav-fill d-none" role="tablist">
 
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active product-search" href="#product-search-results"
@@ -48,10 +48,12 @@
 
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
                     <div class="row grid-header">
-                        <div
-                            class='breadcrumb grid-header__column-item grid-header__column-item--right d-block d-sm-none'>
-                            <isinclude url="${URLUtils.url(" Search-Breadcrums", "cgid", pdict.productSearch.category.id)}" />
+
+                        <div class='breadcrumb grid-header__column-item grid-header__column-item--right'>
+                            <isinclude
+                                url="${URLUtils.url('Search-Breadcrums', 'cgid', pdict.productSearch.category.id)}" />
                         </div>
+
                         <div class='grid-header__column grid-header__column--1 grid-header__column--mobile'>
                             <iscomment>
                                 <isif condition="${pdict.productSearch.category.name.length == 25 || pdict.productSearch.category.name.length == 17 || pdict.productSearch
@@ -91,10 +93,6 @@
                                 </isif>
                             </iscomment>
                             <!--Breadcum-->
-                            <div class='breadcrumb grid-header__column-item grid-header__column-item--right d-none'>
-                                <isinclude
-                                    url="${URLUtils.url('Search-Breadcrums', 'cgid', pdict.productSearch.category.id)}" />
-                            </div>
                             <div
                                 class="result-count text-center grid-header__column-item grid-header__column-item--right d-none d-sm-block">
                                 <iselse>
@@ -127,10 +125,32 @@
     </div>
 
     <div class="filter-mobile-container">
-        <isif condition="${pdict.productSearch.category.name.length > 15}">
-            <span class="filter-mobile-container--text-small">${pdict.productSearch.category.name}</span>
+        <iscomment>
+            <isif condition="${pdict.productSearch.category.name == 'null'}">
+                <div class="d-sm-block d-md-none">
+                    <isinclude template="search/resultsCount" />
+                </div>
+            <iselse/>
+                <isif condition="${pdict.productSearch.category.name.length > 15}">
+                    <span
+                        class="filter-mobile-container--text-small d-sm-block d-md-none">${pdict.productSearch.category.name}</span>
+                <iselse/>
+                    <span
+                        class="filter-mobile-container--text-large d-sm-block d-md-none">${pdict.productSearch.category.name}</span>
+                </isif>
+            </isif>
+        </iscomment>
+
+        <isif condition="${pdict.productSearch.category.name.contains('null')}">
+        <iselseif condition="${pdict.productSearch.category.name.length > 15}" />
+            <span
+                class="filter-mobile-container--text-small d-sm-block d-md-none">${pdict.productSearch.category.name}</span>
+        <iselseif condition="${pdict.productSearch.searchKeywords}" />
+            <span
+                class="filter-mobile-container--text-large d-sm-block d-md-none">${pdict.productSearch.searchKeywords}</span>
         <iselse/>
-            <span class="filter-mobile-container--text-large">${pdict.productSearch.category.name}</span>
+            <span
+                class="filter-mobile-container--text-large d-sm-block d-md-none">${pdict.productSearch.category.name}</span>
         </isif>
 
         <button class="btn-filter d-md-none d-sm-block" onclick="showFilter()" type="button">
@@ -139,10 +159,23 @@
         </button>
     </div>
 
+    <div class="sort-by-mobile">
+        <div class="sort d-sm-none d-xs-block">
+            <p class='sort__text'>
+                Ordenar por:
+            </p>
+            <isinclude template="search/sortOrderMenu" />
+        </div>
+
+        <div class="d-sm-none d-xs-block">
+            <span class="range-price-products">${pdict.productSearch.count} Productos</span>
+        </div>
+    </div>
+
     <isif condition="${pdict.productSearch.productIds.length > 0}">
         <!--- Refinement bar --->
         <div class="row row-no-margin refinement-items-container">
-            <div class="refinement-bar col-md-4" id="refinement-bar">
+            <div class="refinement-bar col-md-5 col-lg-4" id="refinement-bar">
                 <isinclude url="${pdict.refineurl}" />
             </div>
 

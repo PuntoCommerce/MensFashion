@@ -193,7 +193,6 @@
                     <span class="d-flex justify-content-start ml-3 children" id="product-${listindex.index}" role="option">
                         <div class="item">
                             <a href="${product.url}" aria-label="${product.name}">
-                                <img class="swatch-circle hidden-xs-down" alt="${product.name}" src="${product.imageUrl}" />
                                 <span class="name">${product.name}</span>
                             </a>
                         </div>

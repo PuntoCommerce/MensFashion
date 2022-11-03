@@ -350,7 +350,10 @@ if (imagesCarrouselContainer) {
 
 /*  */
 
-const filterCollapse = document.querySelector(".filter-collapse");
+const filterCollapse = document.querySelectorAll(".filter-collapse");
+const arrowFilter = document.querySelectorAll("#filter_open_close");
+const plpFilterContainer = document.querySelector("#refinement-bar");
+
 if (filterCollapse) {
  const widthScreen = window.innerWidth;
 
@@ -358,21 +361,48 @@ if (filterCollapse) {
   const widthScreen = window.innerWidth;
 
   if (widthScreen < 769) {
-   filterCollapse.classList.remove("show");
+   filterCollapse.forEach((i) => {
+    i.classList.remove("show");
+   });
   } else {
-   filterCollapse.classList.add("show");
+   filterCollapse.forEach((i) => {
+    i.classList.add("show");
+   });
   }
  });
 
  if (widthScreen < 769) {
-  filterCollapse.classList.remove("show");
- }else{
-  filterCollapse.classList.add("show");
+  filterCollapse.forEach((i) => {
+   i.classList.remove("show");
+  });
+ } else {
+  filterCollapse.forEach((i) => {
+   i.classList.add("show");
+  });
+
+  arrowFilter.forEach((i) => {
+   i.classList.add("rotate-arrow");
+  });
  }
+
+ plpFilterContainer.addEventListener("click", (element) => {
+  const arrow = element.target.children.filter_open_close;
+  const button = element.target.lastElementChild;
+
+  if (arrow) {
+   arrow.classList.contains("rotate-arrow")
+    ? arrow.classList.remove("rotate-arrow")
+    : arrow.classList.add("rotate-arrow");
+  }else{
+    button.classList.contains("rotate-arrow")
+     ? button.classList.remove("rotate-arrow")
+     : button.classList.add("rotate-arrow");
+  }
+ });
 }
 
 function hideAlert() {
-  $('.add-to-wishlist-messages').remove()
+ $(".add-to-wishlist-messages").remove();
 }
 
 localValues();

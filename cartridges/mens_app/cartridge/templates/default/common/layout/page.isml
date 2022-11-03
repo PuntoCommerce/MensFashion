@@ -29,7 +29,11 @@
 </head>
 
 <body>
-    <iscontentasset aid="top-banner-promo" />
+    <isif condition="${pdict.action === 'Checkout-oAuth'}">
+    <iselse/>
+        <iscontentasset aid="top-banner-promo" />
+    </isif>
+
     ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
     <isinclude template="/components/header/pdStorePageHeader" />
@@ -40,7 +44,12 @@
         <div role="main" id="maincontent">
             <isreplace/>
         </div>
-        <isinclude template="/components/footer/pageFooter" />
+
+        <isif condition="${pdict.action === 'Checkout-oAuth'}">
+            <isinclude template="/components/footer/pageFooterCheck" />
+        <iselse/>
+            <isinclude template="/components/footer/pageFooter" />
+        </isif>
     </div>
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
@@ -58,7 +67,8 @@
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
     <isinclude template="/components/chatSales" />
 
-    <script src="https://534006487.recs.igodigital.com/a/v2/534006487/cart/recommend.js?cart=skus" type="text/javascript"> </script>
+    <script src="https://534006487.recs.igodigital.com/a/v2/534006487/cart/recommend.js?cart=skus"
+        type="text/javascript"> </script>
 </body>
 
 </html>

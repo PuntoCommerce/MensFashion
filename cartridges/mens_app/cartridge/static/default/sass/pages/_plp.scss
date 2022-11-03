@@ -57,7 +57,7 @@
 
 .check-custom-container {
  display: grid;
- grid-template-columns: repeat(4, 1fr);
+ grid-template-columns: repeat(3, 1fr);
  text-align: center;
  grid-row-gap: 22px;
 
@@ -108,8 +108,8 @@
   width: 428px;
   padding-right: 3vw;
 
-  button{
-    color: #fff;
+  button {
+   color: #fff;
   }
 
   @media (max-width: 991px) {
@@ -122,9 +122,11 @@
  .add-to-wishlist-alert.alert-danger {
   background-color: #000;
   color: #fff;
+  padding: 28px;
+  width: 428px;
 
-  button{
-    color: #fff;
+  button {
+   color: #fff;
   }
 
   @media (max-width: 991px) {
@@ -137,6 +139,33 @@
  text-transform: capitalize;
  font-family: "Avenir-Next";
  font-size: 15px;
+}
+
+.row.grid-header {
+ max-width: 95vw;
+ margin: auto;
+}
+
+.range-price-products{
+  font-size: 14px;
+  font-family: $font-family-normal;
+  color: #444444;
+}
+
+#range-price-button{
+  border: 2px solid #CED4DA !important;
+  border-radius: 3px;
+  padding: 6px 19px;
+}
+
+.title-filter{
+  pointer-events: none;
+  transition: all .3s ease;
+}
+
+.rotate-arrow{
+  transform: rotate(180deg);
+  transition: all .3s ease;
 }
 
 @media (max-width: 991px) {
@@ -171,6 +200,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 12px;
+  padding: 0 5px;
 
   &--text-small {
    font-size: 18px;
@@ -185,9 +215,13 @@
   }
  }
 
- .add-to-wishlist-alert{
+ .add-to-wishlist-alert {
   bottom: 0 !important;
   margin-left: 0 !important;
+ }
+
+ .brand {
+  left: 5vw !important;
  }
 }
 
@@ -220,5 +254,22 @@
 @media (max-width: 543px) {
  .product-tile.summary {
   height: auto;
+  padding: 0 7px !important;
+ }
+
+ .grid-header.row {
+  display: none !important;
+ }
+
+ .brand {
+  left: 9vw !important;
+ }
+
+ .sort-by-mobile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 14px 10px 0 10px;
  }
 }

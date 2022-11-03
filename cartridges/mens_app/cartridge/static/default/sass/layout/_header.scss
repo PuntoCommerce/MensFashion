@@ -23,10 +23,6 @@
  .responsive {
   display: block !important;
  }
-
- header .main-menu {
-  margin-top: 0 !important;
- }
  .checkout.logo img {
   height: 1.5em !important;
  }
@@ -171,6 +167,10 @@ header .main-menu {
 
  .align-button-left {
   right: 25% !important;
+ }
+
+ header .main-menu {
+  margin-top: 0 !important;
  }
 }
 

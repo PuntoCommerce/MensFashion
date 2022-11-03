@@ -187,8 +187,7 @@
 
                         <div class="need-help-cont d-flex justify-content-center align-items-center flex-column">
                             <div class="need-help justify-content-center align-items-center mb-4">
-                                <span
-                                    class="checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help2', 'checkout', null)}</span>
+                                <span class="checkout__text checkout__text--need-help">${Resource.msg('label.need.help2', 'checkout', null)}</span>
                             </div>
                             <div
                                 class="need-help-description text-center d-fex justify-content-center align-items-center mb-4">

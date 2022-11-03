@@ -81,6 +81,7 @@ body {
  font-weight: 600;
  white-space: nowrap;
  padding: 15px 5px;
+ border: none !important;
 }
 
 .ITBC-markup img {
@@ -197,6 +198,10 @@ body {
  display: none !important;
 }
 
+.text-banner-button {
+ height: 17px !important;
+}
+
 @media (max-width: 544px) {
  .mobile-2r-2c .region {
   margin-bottom: 0px;
@@ -207,6 +212,8 @@ body {
   font-size: 17px;
   padding: 1px 0px;
   letter-spacing: 0;
+  padding: 15px 5px !important;
+  border: none !important;
  }
 
  #customBannerCarousel .ITBC-buttons {
@@ -245,6 +252,18 @@ body {
 
  .experience-commerce_layouts-navTabs .summary__footer .btn__small {
   font-size: 20px;
+ }
+}
+
+.btn-ITBC{
+  border: none !important;
+}
+
+@media (max-width: 467px) {
+ .container-custom-size.container-custom-width-95 {
+  .region {
+    padding: 7px !important;
+  }
  }
 }
 

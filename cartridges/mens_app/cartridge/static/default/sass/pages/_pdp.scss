@@ -171,6 +171,8 @@
     display: block;
     pointer-events: none;
     opacity: 0.2;
+    background: none;
+    color: #000;
    }
    display: none;
   }
@@ -253,12 +255,12 @@
    content: url("../images/pdp/less.svg");
   }
  }
- .collapsible-xl .title:after {
+ /* .collapsible-xl .title:after {
   content: url("../images/pdp/plus.svg");
  }
  .collapsible-xl.active .title:after {
   content: url("../images/pdp/less.svg");
- }
+ } */
  & .promotions {
   & .collapsible-xl {
    & .title:after {
@@ -528,16 +530,34 @@ del {
 }
 
 .sizes-guide-cont {
- width: 50% !important;
+ width: 60% !important;
+
+ .sizes-guide {
+  justify-content: flex-end;
+
+  img {
+   width: 15px;
+  }
+ }
 }
 
-#productdetailpage{
-  .experience-component.experience-commerce_layouts-carousel{
-    .carousel-title{
-      font-size: 18px !important;
-      font-family: $font-family-normal;
-    }
+#productdetailpage {
+ .experience-component.experience-commerce_layouts-carousel {
+  padding: 0 10px;
+
+  .carousel-title {
+   font-size: 18px !important;
+   font-family: $font-family-normal;
   }
+ }
+}
+
+.description-and-detail {
+ .title {
+  font-family: $font-family-normal !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+ }
 }
 
 @media (max-width: 768px) {
@@ -575,13 +595,13 @@ del {
   }
  }
 
- .mobile-favorite-button{
+ .mobile-favorite-button {
   position: absolute;
   z-index: 5;
   right: 30px;
 
-  button{
-    border: none !important;
+  button {
+   border: none !important;
   }
  }
 }
@@ -589,9 +609,5 @@ del {
 @media (max-width: 537px) {
  .sizes-guide-cont {
   width: 65% !important;
-
-  .sizes-guide {
-   margin-bottom: 0 !important;
-  }
  }
 }

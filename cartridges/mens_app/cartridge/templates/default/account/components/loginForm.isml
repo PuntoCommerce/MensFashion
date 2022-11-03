@@ -1,30 +1,31 @@
 <form action="${pdict.actionUrl}" class="login" method="POST" name="login-form">
     <div class="form-group required">
         <label class="form-control-label" for="login-form-email">
-            <span class="checkout__text--bold">
-                ${Resource.msg('label.input.login.email', 'login', null)}
+            <span class="checkout__text--auth">
+                ${Resource.msg('label.input.login.email', 'login', null)} <span class="checkout__text--auth-required">Requerido</span>
             </span>
             <iscomment> <span class="checkout__text--space">
-                ${Resource.msg('label.input.login.required', 'login', null)}
-            </span> </iscomment>
+                    ${Resource.msg('label.input.login.required', 'login', null)}
+                </span> </iscomment>
         </label>
         <input type="email" id="login-form-email" required aria-required="true"
             class="checkout__form form-control required" aria-describedby="form-email-error" name="loginEmail">
         <div class="invalid-feedback" id="form-email-error"></div>
     </div>
 
-    <div class="form-group required passwordLabel">
-        <span class="checkout__text--bold">
-            ${Resource.msg('label.input.login.password', 'login', null)}
+    <div class="form-group required passwordLabel checkout">
+        <span class="checkout__text--auth">
+            ${Resource.msg('label.input.login.password', 'login', null)} <span class="checkout__text--auth-required">Requerido</span>
         </span>
         <iscomment> <span class="checkout__text--space">
-            ${Resource.msg('label.input.login.required', 'login', null)}
-        </span> </iscomment>
+                ${Resource.msg('label.input.login.required', 'login', null)}
+            </span> </iscomment>
         <button onclick="showPassword()" class="show-password-button" type="button">
             <i class="fa fa-eye-slash" aria-hidden="true"></i>
         </button>
         <input type="password" id="login-form-password" required aria-required="true"
-            class="checkout__form form-control show-password required" aria-describedby="form-password-error" name="loginPassword">
+            class="checkout__form form-control show-password required" aria-describedby="form-password-error"
+            name="loginPassword">
         <div class="invalid-feedback" id="form-password-error"></div>
     </div>
 
@@ -45,16 +46,16 @@
                 ${Resource.msg('link.login.forgotpassword', 'login', null)}
             </a>
         </div>
-        <div class="form-group custom-control custom-checkbox pull-right remember-me">
-            <input type="checkbox" class="custom-control-input" id="rememberMe" name="loginRememberMe" value="true"
-                <isif condition="${pdict.rememberMe}">checked</isif>
+        <div class="custom-control custom-radio custom-control-inline pull-right remember-me">
+            <input type="radio" class="form-check-input remember-check-input" id="rememberMe" name="loginRememberMe" value="true" <isif
+                condition="${pdict.rememberMe}">checked</isif>
             >
-            <label class="custom-control-label" for="rememberMe">
+            <label class="form-check-label" for="rememberMe">
                 ${Resource.msg('label.checkbox.login.rememberme', 'login', null)}
             </label>
         </div>
     </div>
-    
+
     <button type="submit" class="mb-4 btn btn--gray btn__small text-uppercase">${Resource.msg('button.text.loginform', 'login', null)}</button>
 
 </form>

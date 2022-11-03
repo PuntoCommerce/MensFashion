@@ -243,9 +243,20 @@
  color: #0280c8 !important;
 }
 
-.checkout__text--bold {
+.checkout__text--auth-title {
  font-size: 30px;
- font-family: $font-family-normal !important;
+ font-family: $font-family-bold !important;
+}
+
+.checkout__text--auth{
+  font-family: $font-family-bold;
+  font-size: 14px;
+}
+
+.checkout__text--auth-required{
+  font-family: $font-family-normal !important;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .add-to-cart-messages {
@@ -275,6 +286,12 @@
 .line-item-promo {
  position: absolute !important;
  margin-left: 50%;
+}
+
+.checkout-shipping-method{
+  font-family: $font-family-bold;
+  font-size: 28px;
+  line-height: 26px;
 }
 
 @media (max-width: 991px) {
@@ -308,6 +325,10 @@
  .promo-code-btn {
   margin-top: 10px;
  }
+
+ .checkout-shipping-method{
+  font-size: 19px;
+}
 }
 
 @media (max-width: 768px) {

@@ -49,7 +49,7 @@
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center ">
         <div class="pt-5 d-flex flex-column col-9 checkout--topBorder">
-          <h3 class="checkout__text--bold">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
+          <h3 class="checkout__text--auth-title">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
           <p>${Resource.msg('msg.registered.client', 'checkout', null)}</p>
           <div class="checkout_login d-flex justify-content-center flex-column">
             <isinclude template="account/components/loginForm" />

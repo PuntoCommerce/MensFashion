@@ -10,7 +10,8 @@
         </div>
     </div>
 
-    <li class="col-sm-4 col-md-12 d-flex justify-content-end">
+    <li class="col-sm-4 col-md-12 d-flex justify-content-between pt-4 align-items-center">
+        <span class="range-price-products">${pdict.productSearch.count} Productos</span>
         <button id="range-price-button" data-href="${refinement.values[0].url}">
         <iscomment> <button data-href="${URLUtils.url("Search-ShowAjax", ${pdict.productSearch.isCategorySearch} )}"> </iscomment>
             Aceptar

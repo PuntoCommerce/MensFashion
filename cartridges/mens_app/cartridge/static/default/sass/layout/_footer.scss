@@ -227,6 +227,11 @@ footer .socialMedia-paymentMethods {
     padding: 0 !important;
     margin: 0;
 }
+
+.footerCheck{
+    background: #000;
+}
+
 @media (min-width: 1200px) {
     footer .container {
         margin-top: 20px;
@@ -405,6 +410,25 @@ footer .socialMedia-paymentMethods {
     .newsletter .form{
         padding: 0 65px;
     }
+
+    .footer-item:not(:first-child) {
+        border-left: none !important;
+    }
+
+    .footer-item.collapsible-md{
+        padding: 25px 10px !important;
+        border-bottom: 1px solid #fff !important;
+
+        .title{
+            color: #fff !important;
+
+            &::after{
+                position: absolute !important;
+                right: 25px !important;
+                display: initial !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 769px) {
@@ -444,6 +468,11 @@ footer .socialMedia-paymentMethods {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .footer-item.collapsible-md{
+        padding: 0 !important;
+        border-bottom: 1px solid #fff !important;
     }
 }
 

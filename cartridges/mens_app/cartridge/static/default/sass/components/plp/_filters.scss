@@ -71,6 +71,7 @@
 .card-header {
     border: none;
     padding: $spacing-small;
+    transition: all .3s ease;
 
     .d-none.d-md-block.pull-left {
         font-size: $font-size-h5-and-paragraph;
