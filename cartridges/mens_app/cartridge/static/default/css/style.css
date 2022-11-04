@@ -1076,9 +1076,11 @@ footer .socialMedia-paymentMethods {
 .suggestions-responsive {
   display: none; }
 
-.suggestions-responsive .item {
-  padding-right: 10%; }
+/* 
 
+.suggestions-responsive .item {
+  padding-right: 10%;
+} */
 .suggestions {
   font-size: 13px; }
 
@@ -3257,6 +3259,39 @@ del {
   font-family: "AvenirLTStd-Heavy";
   font-size: 28px;
   line-height: 26px; }
+
+.checkout__text--promotion {
+  font-size: 16px;
+  font-family: "AvenirLTStd-Heavy"; }
+
+.checkout__text--need-help {
+  font-size: 20px;
+  font-family: "Avenir-bold" !important; }
+
+.checkout__text--help-text {
+  font-size: 16px;
+  font-weight: 400 !important;
+  font-family: "Avenir-Next"; }
+
+.checkout__text--need-help-tel {
+  font-family: "Avenir-Next";
+  font-weight: 400 !important;
+  font-size: 14px !important; }
+
+.help-phone-number {
+  font-size: 14px !important;
+  font-family: "Avenir-bold"; }
+  .help-phone-number a {
+    color: #000 !important; }
+
+.number-of-items {
+  font-size: 14px !important;
+  font-family: "Avenir-Next" !important; }
+
+.continue-shopping-link {
+  font-size: 14px !important;
+  font-family: "Avenir-Next" !important;
+  text-decoration: underline; }
 
 @media (max-width: 991px) {
   .checkout-promotion {

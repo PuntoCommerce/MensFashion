@@ -248,21 +248,21 @@
  font-family: $font-family-bold !important;
 }
 
-.checkout__text--auth{
-  font-family: $font-family-bold;
-  font-size: 14px;
+.checkout__text--auth {
+ font-family: $font-family-bold;
+ font-size: 14px;
 }
 
-.checkout__text--auth-required{
-  font-family: $font-family-normal !important;
-  font-weight: 400;
-  font-size: 14px;
+.checkout__text--auth-required {
+ font-family: $font-family-normal !important;
+ font-weight: 400;
+ font-size: 14px;
 }
 
 .add-to-cart-messages {
-  bottom: 40px !important;
-  margin-left: 63px !important;
-  z-index: 1000;
+ bottom: 40px !important;
+ margin-left: 63px !important;
+ z-index: 1000;
 
  .alert-success {
   color: #fff;
@@ -275,8 +275,8 @@
  }
 }
 
-.alert{
-  margin-bottom: 0 !important;
+.alert {
+ margin-bottom: 0 !important;
 }
 
 .non-adjusted-price {
@@ -288,10 +288,51 @@
  margin-left: 50%;
 }
 
-.checkout-shipping-method{
-  font-family: $font-family-bold;
-  font-size: 28px;
-  line-height: 26px;
+.checkout-shipping-method {
+ font-family: $font-family-bold;
+ font-size: 28px;
+ line-height: 26px;
+}
+
+.checkout__text--promotion {
+ font-size: 16px;
+ font-family: $font-family-bold;
+}
+
+.checkout__text--need-help {
+ font-size: 20px;
+ font-family: $font-family-bold-2 !important;
+}
+
+.checkout__text--help-text {
+ font-size: 16px;
+ font-weight: 400 !important;
+ font-family: $font-family-normal;
+}
+
+.checkout__text--need-help-tel {
+ font-family: $font-family-normal;
+ font-weight: 400 !important;
+ font-size: 14px !important;
+}
+
+.help-phone-number {
+ font-size: 14px !important;
+ font-family: $font-family-bold-2;
+ a {
+  color: #000 !important;
+ }
+}
+
+.number-of-items{
+  font-size: 14px !important;
+  font-family: $font-family-normal !important;
+}
+
+.continue-shopping-link{
+  font-size: 14px !important;
+  font-family: $font-family-normal !important;
+  text-decoration: underline;
 }
 
 @media (max-width: 991px) {
@@ -313,9 +354,9 @@
  }
 
  .add-to-cart-messages {
-   z-index: 1000;
-   bottom: 0 !important;
-   margin-left: 0 !important;
+  z-index: 1000;
+  bottom: 0 !important;
+  margin-left: 0 !important;
 
   .alert-success {
    width: 100vw;
@@ -326,9 +367,9 @@
   margin-top: 10px;
  }
 
- .checkout-shipping-method{
+ .checkout-shipping-method {
   font-size: 19px;
-}
+ }
 }
 
 @media (max-width: 768px) {

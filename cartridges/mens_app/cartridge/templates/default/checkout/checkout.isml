@@ -191,14 +191,15 @@
                             </div>
                             <div
                                 class="need-help-description text-center d-fex justify-content-center align-items-center mb-4">
-                                <p class="checkout__text ">${Resource.msg('label.need.help.description', 'checkout', null)}</p>
-                                <p class="checkout__text ">${Resource.msg('label.need.help.description2', 'checkout', null)}</p>
+                                <p class="checkout__text--help-text ">${Resource.msg('label.need.help.description', 'checkout', null)}</p>
+                                <p class="checkout__text--help-text">${Resource.msg('label.need.help.description2', 'checkout', null)}</p>
                             </div>
                             <div
                                 class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-4">
                                 <span
-                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
-                                <span class="checkout__text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
+                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
+                                <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
+                                <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule2', 'checkout', null)}</span>
                             </div>
                             <div class="need-help-email d-flex justify-content-center align-items-center mb-4">
                                 <a href="mailto:${Resource.msg('label.need.help.email', 'checkout', null)}" class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</a>
