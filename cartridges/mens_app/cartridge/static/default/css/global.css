@@ -19963,25 +19963,6 @@ div.availability {
   padding: 9px;
 }
 
-.btn.btn-primary.add-to-wish-list:hover .favIconGrey {
-  display: none;
-}
-
-.favIconRed {
-  display: none;
-}
-
-.btn.btn-primary.add-to-wish-list:hover .favIconRed {
-  display: block;
-}
-
-.wishlistTile:hover .favIconGrey {
-  display: none;
-}
-
-.wishlistTile:hover .favIconRed {
-  display: block;
-}
 
 .summary__pricing .price {
   display: flex;

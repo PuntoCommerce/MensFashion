@@ -2554,6 +2554,16 @@ body {
   transform: rotate(180deg);
   transition: all .3s ease; }
 
+.wishlist_unselected {
+  font-size: 24px;
+  color: #64656A; }
+
+.wishlist_selected {
+  font-size: 24px;
+  color: #FD4237 !important; }
+  .wishlist_selected::before {
+    content: "\F08A" !important; }
+
 @media (max-width: 991px) {
   a.nav-link.parent {
     padding: 0 !important;

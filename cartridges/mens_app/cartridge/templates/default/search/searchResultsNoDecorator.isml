@@ -179,7 +179,7 @@
                 <isinclude url="${pdict.refineurl}" />
             </div>
 
-            <div class="col-sm-12 col-md-9 product-grid--full-width">
+            <div class="col-sm-12 col-md-9 product-grid--full-width" id="plp-products">
                 <!--- Selected filters bar --->
 
                 <iscomment>

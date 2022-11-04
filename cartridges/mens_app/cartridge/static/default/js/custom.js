@@ -385,24 +385,53 @@ if (filterCollapse) {
   });
  }
 
- plpFilterContainer.addEventListener("click", (element) => {
-  const arrow = element.target.children.filter_open_close;
-  const button = element.target.lastElementChild;
+ if (plpFilterContainer) {
+  plpFilterContainer.addEventListener("click", (element) => {
+   const arrow = element.target.children.filter_open_close;
+   const button = element.target.lastElementChild;
 
-  if (arrow) {
-   arrow.classList.contains("rotate-arrow")
-    ? arrow.classList.remove("rotate-arrow")
-    : arrow.classList.add("rotate-arrow");
-  }else{
+   if (arrow) {
+    arrow.classList.contains("rotate-arrow")
+     ? arrow.classList.remove("rotate-arrow")
+     : arrow.classList.add("rotate-arrow");
+   } else {
     button.classList.contains("rotate-arrow")
      ? button.classList.remove("rotate-arrow")
      : button.classList.add("rotate-arrow");
-  }
- });
+   }
+  });
+ }
 }
 
 function hideAlert() {
  $(".add-to-wishlist-messages").remove();
+}
+
+const plpItemContainer = document.getElementById("plp-products");
+
+if (plpItemContainer) {
+ plpItemContainer.addEventListener("click", (e) => {
+  e.target.classList.contains("wishlist_unselected")
+   ? e.target.classList.add("wishlist_selected")
+   : "";
+ });
+}
+
+const pdpContainerItems = document.getElementById("pdp-items-container");
+
+if (pdpContainerItems) {
+ pdpContainerItems.addEventListener("click", (e) => {
+  if (e.target.classList.contains("wishlist_unselected_button")) {
+   e.target.children[0].classList.add("wishlist_selected");
+   e.target.children[0].classList.remove("wishlist_unselected");
+   return;
+  }
+  if (e.target.classList.contains("wishlist_unselected")) {
+   e.target.classList.add("wishlist_selected");
+   e.target.classList.remove("wishlist_unselected");
+   return;
+  }
+ });
 }
 
 localValues();
