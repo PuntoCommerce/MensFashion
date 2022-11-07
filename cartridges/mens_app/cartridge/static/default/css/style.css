@@ -1282,7 +1282,8 @@ ul {
 .plp-tools__item--breadcrums {
   padding: 0;
   display: flex;
-  margin: 0; }
+  margin: 0;
+  font-family: "Avenir-Next" !important; }
   .plp-tools__item--breadcrums li {
     list-style: none; }
     .plp-tools__item--breadcrums li .item, .plp-tools__item--breadcrums li .last-item {
@@ -2312,6 +2313,9 @@ body {
 .text-banner-button {
   height: 17px !important; }
 
+.scroll-none {
+  overflow-y: hidden !important; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }
@@ -2520,7 +2524,11 @@ body {
   background-color: #000;
   color: #fff;
   padding: 28px;
-  width: 428px; }
+  width: 428px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
   .add-to-wishlist-messages .add-to-wishlist-alert.alert-danger button {
     color: #fff; }
   @media (max-width: 991px) {
@@ -2564,6 +2572,9 @@ body {
   .wishlist_selected::before {
     content: "\F08A" !important; }
 
+#quickViewModal .primary-images {
+  max-width: 43% !important; }
+
 @media (max-width: 991px) {
   a.nav-link.parent {
     padding: 0 !important;
@@ -2603,8 +2614,8 @@ body {
   .filter-collapse-button {
     padding-left: 0; }
   .header-bar {
-    padding-right: 0;
-    padding-left: 0; }
+    padding-right: 12px;
+    padding-left: 6px; }
   .refinement-bar {
     margin-top: 87px;
     height: 88vh; }
@@ -3303,6 +3314,9 @@ del {
   font-family: "Avenir-Next" !important;
   text-decoration: underline; }
 
+.steps-container {
+  padding: 0 1em 0 0.75em; }
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%; }
@@ -3322,7 +3336,9 @@ del {
   .promo-code-btn {
     margin-top: 10px; }
   .checkout-shipping-method {
-    font-size: 19px; } }
+    font-size: 19px; }
+  .steps-container {
+    padding: 0 0.75em 0 0.75em; } }
 
 @media (max-width: 768px) {
   .checkout-promotion {
@@ -3336,7 +3352,15 @@ del {
   .checkout-promotion {
     margin-left: 50%; }
   .cart-label.col-5.col-md-4.line-item-total-price.h-100 {
-    max-width: 55% !important; } }
+    max-width: 55% !important; }
+  .card.checkout__order {
+    padding: 0 3px; }
+  .checkout-auth-form {
+    padding-left: 0;
+    padding-right: 0; }
+    .checkout-auth-form .checkout--topBorder {
+      padding-left: 6px;
+      padding-right: 6px; } }
 
 .accountBtns {
   display: flex;

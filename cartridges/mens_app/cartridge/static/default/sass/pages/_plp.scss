@@ -124,6 +124,10 @@
   color: #fff;
   padding: 28px;
   width: 428px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   button {
    color: #fff;
@@ -179,6 +183,12 @@
 
   &::before{
     content: "\F08A" !important;
+  }
+}
+
+#quickViewModal{
+  .primary-images{
+    max-width: 43% !important;
   }
 }
 
@@ -245,8 +255,8 @@
  }
 
  .header-bar {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 12px;
+  padding-left: 6px;
  }
 
  .refinement-bar {

@@ -324,15 +324,19 @@
  }
 }
 
-.number-of-items{
-  font-size: 14px !important;
-  font-family: $font-family-normal !important;
+.number-of-items {
+ font-size: 14px !important;
+ font-family: $font-family-normal !important;
 }
 
-.continue-shopping-link{
-  font-size: 14px !important;
-  font-family: $font-family-normal !important;
-  text-decoration: underline;
+.continue-shopping-link {
+ font-size: 14px !important;
+ font-family: $font-family-normal !important;
+ text-decoration: underline;
+}
+
+.steps-container {
+ padding: 0 1em 0 0.75em;
 }
 
 @media (max-width: 991px) {
@@ -370,6 +374,10 @@
  .checkout-shipping-method {
   font-size: 19px;
  }
+
+ .steps-container {
+  padding: 0 0.75em 0 0.75em;
+ }
 }
 
 @media (max-width: 768px) {
@@ -393,5 +401,19 @@
 
  .cart-label.col-5.col-md-4.line-item-total-price.h-100 {
   max-width: 55% !important;
+ }
+
+ .card.checkout__order {
+  padding: 0 3px;
+ }
+
+ .checkout-auth-form{
+  padding-left: 0;
+  padding-right: 0;
+
+  .checkout--topBorder{
+    padding-left: 6px;
+    padding-right: 6px;
+  }
  }
 }

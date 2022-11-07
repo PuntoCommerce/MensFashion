@@ -2197,7 +2197,7 @@ pre code {
   }
 
   .login-checkout {
-    padding: 0px 20px !important;
+    padding: 0px 0px !important;
   }
 
   .form-checkout .checkout--topBorder h3 {
@@ -21087,7 +21087,8 @@ button.close:focus {
 }
 
 .quickviewInfo {
-  padding: 36px 10px 0 25px;
+  padding: 36px 30px 0 30px;
+  margin: auto;
 }
 
 .modal-body .product-quickview .product-name {

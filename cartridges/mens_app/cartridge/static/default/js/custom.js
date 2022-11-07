@@ -280,17 +280,21 @@ if (highligt) {
 
 function showFilter() {
  const filterContainer = document.querySelector("#refinement-bar");
+ const body = document.querySelector('#body-scroll');
 
  if (filterContainer) {
   filterContainer.style.display = "block";
+  body.classList.add('scroll-none')
  }
 }
 
 function hideFilter() {
  const filterContainer = document.querySelector("#refinement-bar");
+ const body = document.querySelector('#body-scroll');
 
  if (filterContainer) {
   filterContainer.style.display = "none";
+  body.classList.remove('scroll-none')
  }
 }
 
@@ -411,16 +415,17 @@ const plpItemContainer = document.getElementById("plp-products");
 
 if (plpItemContainer) {
  plpItemContainer.addEventListener("click", (e) => {
-  e.target.classList.contains("wishlist_unselected")
+   e.target.classList.contains("wishlist_unselected")
    ? e.target.classList.add("wishlist_selected")
    : "";
- });
+   e.target.classList.contains('reload-plp') ? sessionStorage.setItem("plpLocation", windowLocation) : ''
+  });
 }
 
 const pdpContainerItems = document.getElementById("pdp-items-container");
 
 if (pdpContainerItems) {
- pdpContainerItems.addEventListener("click", (e) => {
+  pdpContainerItems.addEventListener("click", (e) => {
   if (e.target.classList.contains("wishlist_unselected_button")) {
    e.target.children[0].classList.add("wishlist_selected");
    e.target.children[0].classList.remove("wishlist_unselected");

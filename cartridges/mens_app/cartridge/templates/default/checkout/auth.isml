@@ -18,16 +18,16 @@
     </div>
 
     <div class="row d-flex justify-content-center form-checkout">
-      <div class="col-12 col-md-6 row pt-3 pb-3 pl-3 pr-3 d-flex justify-content-center checkout--rightBorder">
+      <div class="col-10 col-md-6 row pt-3 pb-3 pl-3 pr-3 d-flex justify-content-center checkout--rightBorder">
         <div class="row d-flex justify-content-center">
-          <div class="checkout__bottomBorder pb-5 d-flex justify-content-center flex-column col-9">
+          <div class="checkout__bottomBorder pb-5 d-flex justify-content-center flex-column col-12 col-md-9">
             <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
             <p>${Resource.msg('msg.pay.without.auth', 'checkout', null)}</p>
           </div>
         </div>
 
         <div class="row d-flex justify-content-center">
-          <div class="checkout_create pt-5 d-flex justify-content-center flex-column col-9">
+          <div class="checkout_create pt-5 d-flex justify-content-center flex-column col-12 col-md-9">
             <a href="${URLUtils.url('Login-Show')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
             <p>${Resource.msg('msg.create.account', 'checkout', null)}</p>
             <div class="checks">
@@ -47,8 +47,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center ">
-        <div class="pt-5 d-flex flex-column col-9 checkout--topBorder">
+      <div class="col-10 col-md-6 d-flex justify-content-center checkout-auth-form">
+        <div class="pt-5 d-flex flex-column col-sm-12 col-md-9 checkout--topBorder">
           <h3 class="checkout__text--auth-title">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
           <p>${Resource.msg('msg.registered.client', 'checkout', null)}</p>
           <div class="checkout_login d-flex justify-content-center flex-column">

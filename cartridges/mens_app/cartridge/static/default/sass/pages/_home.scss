@@ -202,6 +202,10 @@ body {
  height: 17px !important;
 }
 
+.scroll-none{
+  overflow-y: hidden !important;
+}
+
 @media (max-width: 544px) {
  .mobile-2r-2c .region {
   margin-bottom: 0px;
