@@ -28,7 +28,11 @@
             <a class="wishlistTile wishlist_unselected d-flex align-items-center" href="${URLUtils.url('Wishlist-AddProduct')}"
                 title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
                 <i class="fa fa-heart-o wishlist_unselected" aria-hidden="true"></i>
-            </a>
+            </a><iscomment> 
+            <a class="remove-from-wishlist wishlist_unselected d-flex align-items-center reload-plp" href="${URLUtils.url('Wishlist-RemovePlpProduct', 'pid', product.id)}"
+                title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
+                <i class="fa fa-heart-o wishlist_unselected reload-plp" aria-hidden="true"></i>
+            </a> </iscomment>
         </div>
     </div>
 </div>

@@ -78,8 +78,8 @@ header .main-menu {
 }
 
 .align-button-left {
- right: 66% !important;
- bottom: 30% !important;
+ left: 17% !important;
+ bottom: 25% !important;
 }
 
 @media (min-width: 992px) {
@@ -166,12 +166,24 @@ header .main-menu {
  }
 
  .align-button-left {
-  right: 25% !important;
+  left: 10% !important;
  }
 
  header .main-menu {
   margin-top: 0 !important;
  }
+}
+
+@media (max-width: 768px) {
+  .align-button-left {
+    left: auto !important;
+    bottom: 5% !important;
+    position: absolute !important;
+  
+    a{
+      border: 1px solid #aaa !important;
+    }
+   }
 }
 
 @media (max-width: 543px) {
@@ -188,16 +200,6 @@ header .main-menu {
    img {
     margin-right: 0;
    }
-  }
- }
-
- .align-button-left {
-  right: 0 !important;
-  bottom: 5% !important;
-  position: absolute !important;
-
-  a{
-    border: 1px solid #aaa !important;
   }
  }
 }

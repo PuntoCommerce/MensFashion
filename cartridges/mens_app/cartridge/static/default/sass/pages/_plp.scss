@@ -192,6 +192,23 @@
   }
 }
 
+.sort-filter-select{
+  select{
+    background: url('../../images/plp-icons/arrow-icon.svg') no-repeat center/8px 10px;
+    background-size: 10px;
+    background-position-y: 9px;
+    border: 1px solid #000;
+    width: 10px;
+    height: 26px;
+    border-radius: 40px;
+    padding: 0 12px;
+
+    &:focus{
+      outline: 0 !important;
+    }
+  }
+}
+
 @media (max-width: 991px) {
  a.nav-link.parent {
   padding: 0 !important;

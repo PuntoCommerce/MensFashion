@@ -25,6 +25,7 @@
                     <div class="prices">
                         <isset name="price" value="${product.price}" scope="page" />
                         <isinclude template="product/components/pricing/main" />
+                        <isinclude template="product/components/promotions" />
                     </div>
                 </div>
             </div>  
@@ -64,19 +65,6 @@
                                 <isinclude template="wishlist/components/addToWishListButton" />
                             </div>
                         </isloop>
-
-
-
-             
-
-                        <!-- Applicable Promotions -->
-                        <div class="row">
-                            <div class="col-12 promotions">
-                                <div class="align-self-center">
-                                    <isinclude template="product/components/promotions" />
-                                </div>
-                            </div>
-                        </div>
                     </div>    
                 </section>
 
@@ -96,9 +84,9 @@
                     </div> </iscomment>
                 </div>
 
-                <div class="col">
+                <div class="col pl-0">
 
-                    <div class="col-8 mx-auto">
+                    <div class="col mx-auto p-0">
 
                         <!-- Cart and [Optionally] Apple Pay -->
                         <isif condition="${pdict.addToCartUrl}">

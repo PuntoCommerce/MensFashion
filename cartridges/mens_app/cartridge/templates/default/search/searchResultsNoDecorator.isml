@@ -109,6 +109,8 @@
                     <p class='sort__text'>
                         Ordenar por:
                     </p>
+                </div>
+                <div class="sort-filter-select">
                     <isinclude template="search/sortOrderMenu" />
                 </div>
 
@@ -160,11 +162,13 @@
     </div>
 
     <div class="sort-by-mobile">
-        <div class="sort d-sm-none d-xs-block">
+        <div class="d-sm-none d-xs-block d-flex">
             <p class='sort__text'>
                 Ordenar por:
             </p>
-            <isinclude template="search/sortOrderMenu" />
+            <div class="sort-filter-select">
+                <isinclude template="search/sortOrderMenu" />
+            </div>
         </div>
 
         <div class="d-sm-none d-xs-block">

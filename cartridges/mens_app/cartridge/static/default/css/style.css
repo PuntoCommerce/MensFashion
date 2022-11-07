@@ -526,8 +526,8 @@ header .main-menu {
       justify-content: center !important; } }
 
 .align-button-left {
-  right: 66% !important;
-  bottom: 30% !important; }
+  left: 17% !important;
+  bottom: 25% !important; }
 
 @media (min-width: 992px) {
   .brand {
@@ -577,9 +577,17 @@ header .main-menu {
   .nav-link {
     padding: 0 0 10px 0 !important; }
   .align-button-left {
-    right: 25% !important; }
+    left: 10% !important; }
   header .main-menu {
     margin-top: 0 !important; } }
+
+@media (max-width: 768px) {
+  .align-button-left {
+    left: auto !important;
+    bottom: 5% !important;
+    position: absolute !important; }
+    .align-button-left a {
+      border: 1px solid #aaa !important; } }
 
 @media (max-width: 543px) {
   .desk {
@@ -589,13 +597,7 @@ header .main-menu {
     .campaign-banner .campaign-banner-message {
       margin-top: 10px; }
       .campaign-banner .campaign-banner-message img {
-        margin-right: 0; }
-  .align-button-left {
-    right: 0 !important;
-    bottom: 5% !important;
-    position: absolute !important; }
-    .align-button-left a {
-      border: 1px solid #aaa !important; } }
+        margin-right: 0; } }
 
 /* **************************** FOOTER **************************** */
 footer {
@@ -641,7 +643,7 @@ footer .subscribe-email {
   border: 1px solid #ffffff;
   color: #000000 !important;
   height: 32px !important;
-  width: 80px !important; }
+  width: 92px !important; }
   footer .subscribe-email:focus {
     outline: 0; }
 
@@ -2574,6 +2576,18 @@ body {
 
 #quickViewModal .primary-images {
   max-width: 43% !important; }
+
+.sort-filter-select select {
+  background: url("../../images/plp-icons/arrow-icon.svg") no-repeat center/8px 10px;
+  background-size: 10px;
+  background-position-y: 9px;
+  border: 1px solid #000;
+  width: 10px;
+  height: 26px;
+  border-radius: 40px;
+  padding: 0 12px; }
+  .sort-filter-select select:focus {
+    outline: 0 !important; }
 
 @media (max-width: 991px) {
   a.nav-link.parent {

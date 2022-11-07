@@ -28,7 +28,7 @@
     <isinclude template="/components/schema" />
 </head>
 
-<body>
+<body id="body-scroll">
     <isif condition="${pdict.action === 'Checkout-oAuth'}">
     <iselse/>
         <iscontentasset aid="top-banner-promo" />

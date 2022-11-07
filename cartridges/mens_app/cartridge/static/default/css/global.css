@@ -4543,9 +4543,6 @@ input[type="submit"].btn-block {
   transform: translateX(0.75rem);
 }
 
-.custom-switch .custom-control-input:disabled:checked~.custom-control-label:before {
-  background-color: rgba(0, 161, 224, 0.5);
-}
 
 .custom-select {
   display: inline-block;
@@ -4563,12 +4560,6 @@ input[type="submit"].btn-block {
   border-radius: 0.1875rem;
   -webkit-appearance: none;
   appearance: none;
-}
-
-.custom-select:focus {
-  border-color: #61d2ff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 161, 224, 0.25);
 }
 
 .custom-select:focus::-ms-value {
