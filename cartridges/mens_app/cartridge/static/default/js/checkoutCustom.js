@@ -318,16 +318,25 @@ function showPassword() {
   });
 }
 
-if ($('.store-hours')) {
-  $('.store-hours').addClass('d-none');
-}
-
 function showHoursInStore() {
-  const storeHours = document.querySelector('.store-hours');
-  storeHours.classList.remove('d-none')
+  const storeHours = document.querySelectorAll('.store-hours');
+  storeHours.forEach(i =>{
+    i.classList.remove('d-none')
+  })
 }
 
 function hideHoursInStore() {
-  const storeHours = document.querySelector('.store-hours');
-  storeHours.classList.add('d-none')
+  const storeHours = document.querySelectorAll('.store-hours');
+  storeHours.forEach(i =>{
+    i.classList.add('d-none')
+  })
+}
+
+const csvPaypal = document.querySelector('.css-gokeqi');
+const paypalButtonCreditCard = document.querySelector('.paypal-button-number-1')
+
+if (paypalButtonCreditCard) {
+  paypalButtonCreditCard.addEventListener('click', () =>{
+    console.log(csvPaypal);
+  })
 }
