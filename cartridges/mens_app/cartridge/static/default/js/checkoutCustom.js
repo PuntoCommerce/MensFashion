@@ -308,12 +308,22 @@ $('body').on('click', '.product-move-custom .move', function (e) {
 
 function showPassword() {
   const inputPassword = document.querySelectorAll(".show-password");
- 
+
   inputPassword.forEach((e) => {
-   if (e.type === "password") {
-    e.type = "text";
-   } else {
-    e.type = "password";
-   }
+    if (e.type === "password") {
+      e.type = "text";
+    } else {
+      e.type = "password";
+    }
   });
- }
+}
+
+function showHoursInStore() {
+  const storeHours = document.querySelector('.store-hours');
+  storeHours.classList.remove('d-none')
+}
+
+function hideHoursInStore() {
+  const storeHours = document.querySelector('.store-hours');
+  storeHours.classList.add('d-none')
+}

@@ -110,10 +110,10 @@
             <isinclude template="checkout/shipping/shippingMethodCards" />
         </fieldset>
 
-        <button class="btn btn-block btn-outline-primary btn-margin change-store ${shippingModel.selectedShippingMethod.storePickupEnabled && shippingModel.productLineItems.items[0].fromStoreId ? '' :
+        <button onclick="hideHoursInStore()" class="btn btn--gray btn__small text-uppercase btn-block submit-shipping col-sm-12 col-lg-10 change-store ${shippingModel.selectedShippingMethod.storePickupEnabled && shippingModel.productLineItems.items[0].fromStoreId ? '' :
                                                                                  'd-none'}" name="changeStore"
             value="changeStore">
-            ${Resource.msg('button.change.store', 'instorePickup', null)}
+            ${Resource.msg('button.change.store', 'checkout', null)}
         </button>
 
         <iscomment>
