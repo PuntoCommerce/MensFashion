@@ -7,7 +7,7 @@
         </button>
 
         <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
-        <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart" data-toggle="modal"
+        <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart" onclick="showQuantityCart()" data-toggle="modal"
             data-target="#chooseBonusProductModal" data-pid="${product.id}" ${!product.readyToOrder || !product.available ? "disabled" : ""} data-gtmdata="${JSON.stringify(product.gtmData)}"
             data-gtmga4data="${JSON.stringify(product.gtmGA4Data)}">
             ${Resource.msg('button.addtocart', 'common', null)}
