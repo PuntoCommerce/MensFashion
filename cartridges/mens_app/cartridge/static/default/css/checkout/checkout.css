@@ -619,6 +619,7 @@ span.ship-to-phone {
   font-size: 16px;
   line-height: 22px;
   color: #555555;
+  text-align: left;
 }
 .card.payment-summary .summary-section-label {
   font-family: "Avenir-Bold";

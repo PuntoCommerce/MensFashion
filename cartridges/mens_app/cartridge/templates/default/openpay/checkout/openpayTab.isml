@@ -7,10 +7,17 @@
                 </div>
             </div>
             <div class="label-payment">
-                <span>${paymentOption.name}</span>
+                <iscomment> <span>${paymentOption.name}</span> </iscomment>
+                <span>Pago con tarjeta de crédito/débito</span>
             </div>
         </div>
-        <img class="credit-card-option" src="${URLUtils.staticURL('/images/openpay-color.png')}" height="20"
-            alt="${paymentOption.name}" title="${paymentOption.name}" />
+        <div class="images-paymentCards-container">
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/visa.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/mastercard.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/americanexpress.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
     </a>
 </li>
