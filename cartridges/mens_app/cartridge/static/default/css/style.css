@@ -3331,6 +3331,18 @@ del {
 .images-paymentCards-container img {
   margin: 0 6px; }
 
+.show-password-checkout {
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  background: none;
+  border: none;
+  height: calc(1.5em + 0.75rem + 2px);
+  display: flex;
+  align-items: center; }
+  .show-password-checkout:focus {
+    outline: 0; }
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%; }

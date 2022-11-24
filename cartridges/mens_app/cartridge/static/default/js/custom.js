@@ -12,27 +12,31 @@ const searchContainer = $C("#searchContainer");
 const header = $C("#headerContainer");
 
 //Open the search field when the search button is clicked. Then the search button is used to submit the search.
-searchButton.addEventListener("click", () => {
- if (searchButton.type == "button") {
-  searchFieldDesk.classList.remove("hidden");
-  // searchClose.classList.remove("hidden");
-  searchFieldDesk.focus();
-
-  setTimeout(() => {
-   //Wait to make the change and not submit the search before the animation is done.
-   searchButton.type = "submit";
-  }, 100);
- }
-});
+if (searchButton) {
+  searchButton.addEventListener("click", () => {
+    if (searchButton.type == "button") {
+     searchFieldDesk.classList.remove("hidden");
+     // searchClose.classList.remove("hidden");
+     searchFieldDesk.focus();
+   
+     setTimeout(() => {
+      //Wait to make the change and not submit the search before the animation is done.
+      searchButton.type = "submit";
+     }, 100);
+    }
+   });
+}
 
 //Close the search field when the user clicks out of the input and there is not a search words written.
-searchFieldDesk.addEventListener("focusout", () => {
- if (!searchFieldDesk.value) {
-  searchFieldDesk.classList.add("hidden");
-  // searchClose.classList.add("hidden");
-  searchButton.type = "button";
- }
-});
+if (searchFieldDesk) {
+  searchFieldDesk.addEventListener("focusout", () => {
+    if (!searchFieldDesk.value) {
+     searchFieldDesk.classList.add("hidden");
+     // searchClose.classList.add("hidden");
+     searchButton.type = "button";
+    }
+   });
+}
 
 //Open the search field when the search button is clicked. Then the search button is used to submit the search.
 searchButtonResponsive.addEventListener("click", () => {

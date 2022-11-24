@@ -305,3 +305,15 @@ $('body').on('click', '.product-move-custom .move', function (e) {
     }
   });
 });
+
+function showPassword() {
+  const inputPassword = document.querySelectorAll(".show-password");
+ 
+  inputPassword.forEach((e) => {
+   if (e.type === "password") {
+    e.type = "text";
+   } else {
+    e.type = "password";
+   }
+  });
+ }
