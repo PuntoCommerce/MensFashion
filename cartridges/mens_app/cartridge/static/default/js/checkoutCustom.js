@@ -318,6 +318,10 @@ function showPassword() {
   });
 }
 
+if ($('.store-hours')) {
+  $('.store-hours').addClass('d-none');
+}
+
 function showHoursInStore() {
   const storeHours = document.querySelector('.store-hours');
   storeHours.classList.remove('d-none')

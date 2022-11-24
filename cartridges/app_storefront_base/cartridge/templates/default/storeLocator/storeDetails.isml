@@ -14,7 +14,7 @@
             </isif>
             ${store.postalCode}
         </a>
-        <div class="store-hours d-none">
+        <div class="store-hours">
             <isif condition="${store.storeHours}">
                 <isprint value="${store.storeHours}" encoding="off"/>
             </isif>
