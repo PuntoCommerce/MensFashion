@@ -41,7 +41,7 @@
         <button type="button" id="clear-search-store">&times;</button>
     </div>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdyD0q2YY6ln6M5KUbubfXmiqNSUcscFU&libraries=places&callback=initAutocomplete&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?key=${pdict.apikey}&libraries=places&callback=initAutocomplete&v=weekly"
         defer></script>
 
 </div>
