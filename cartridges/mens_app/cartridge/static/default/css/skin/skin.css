@@ -32,7 +32,7 @@ h1.header.page-title:before {
   color: var(--skin-primary-color-1);
 }
 .custom-select {
-  background-color: var(--skin-selectbox-background-color-1);
+  background-color: #F5F5F5;
   color: var(--skin-selectbox-text-color-1);
 }
 a,
