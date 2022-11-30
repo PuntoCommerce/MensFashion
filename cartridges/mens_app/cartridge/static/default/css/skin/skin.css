@@ -78,18 +78,6 @@ header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
 .nav-item.show .nav-link {
   color: var(--skin-menu-color-1) !important;
 }
-.btn-primary {
-  background-color: var(--skin-primary-color-1);
-  color: var(--skin-primary-color-invert-1);
-}
-.btn-primary,
-.btn-primary:hover {
-  border-color: var(--skin-primary-color-1);
-}
-.btn-primary:hover {
-  color: var(--skin-primary-color-1);
-  background-color: var(--skin-primary-color-invert-1);
-}
 .btn-primary.disabled,
 .btn-primary:disabled {
   background-color: var(--skin-primary-color-1);

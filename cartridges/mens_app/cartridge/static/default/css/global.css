@@ -19943,7 +19943,7 @@ div.availability {
   right: 3% !important;
 }
 
-.btn.btn-primary.add-to-wish-list {
+.btn.btn-primary.wishlist_unselected_button {
   background: none !important;
   border: 1px solid #CED4DA;
   color: #000;
@@ -19955,6 +19955,9 @@ div.availability {
   padding: 9px;
 }
 
+.btn.btn-primary.wishlist_unselected_button i {
+  pointer-events: none;
+}
 
 .summary__pricing .price {
   display: flex;

@@ -460,15 +460,35 @@ const pdpContainerItems = document.getElementById("pdp-items-container");
 
 if (pdpContainerItems) {
   pdpContainerItems.addEventListener("click", (e) => {
-    if (e.target.children[0].classList.contains("wishlist_selected")) {
-      console.log(e.target);
+    console.log(e);
+
+    if (e.target.children[0].classList.contains("wishlist_unselected")) {
+      var url = e.target.dataset.href;
+      const itemID = e.target.id;
+
+      fetch(url).then(res => console.log(res))
+        .catch(error => console.log(error))
+
       e.target.children[0].classList.add("wishlist_selected");
       e.target.children[0].classList.remove("wishlist_unselected");
+      
+      e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProductAccount?pid=' + itemID);
+      e.target.classList.remove('add-to-wish-list')
+      e.target.classList.add('remove-btn')
       return;
     }
     if (e.target.children[0].classList.contains("wishlist_selected")) {
+      var url = e.target.dataset.href;
+
+      fetch(url).then(res => console.log(res))
+        .catch(error => console.log(error))
+
       e.target.children[0].classList.remove("wishlist_selected");
       e.target.children[0].classList.add("wishlist_unselected");
+
+      e.target.setAttribute('data-href', '/Wishlist-AddProduct')
+      e.target.classList.add('add-to-wish-list')
+      e.target.classList.remove('remove-btn')
       return;
     }
   });
@@ -488,37 +508,78 @@ function showQuantityCart() {
   minicartQuantityContainer.classList.remove('d-none');
 }
 
-function addWishlistQuickView(params) {
+// ============================= Add item in wishlist QuickView =============================
+
+function addWishlistQuickView() {
   setTimeout(() => {
     const addWishlistQuick = document.querySelector('.favCont');
     if (addWishlistQuick) {
       addWishlistQuick.addEventListener('click', (e) => {
         var url = e.target.dataset.href
         var pid = e.target.id
+        const textSucccess = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
+        const textDeleted = 'Producto eliminado de mis favoritos'
 
-        const text = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
+        if (e.target.children[0].classList.contains("wishlist_unselected")) {
+          var url = e.target.dataset.href;
+          const itemID = e.target.id;
 
+          $.ajax({
+            url: url,
+            type: 'post',
+            dataType: 'json',
+            data: {
+              pid: pid
+            }
+          });
+  
+          $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
+            +
+            textSucccess
+            +
+            `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+            +
+            '</div>');
+  
+          setTimeout(() => {
+            $('.add-to-wishlist-messages .alert-success').remove();
+          }, 3000);
+    
+          e.target.children[0].classList.add("wishlist_selected");
+          e.target.children[0].classList.remove("wishlist_unselected");
+          
+          e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProductAccount?pid=' + itemID);
+          e.target.classList.remove('add-to-wish-list')
+          e.target.classList.add('remove-btn')
+          
+          return;
+        }
+        if (e.target.children[0].classList.contains("wishlist_selected")) {
+          var url = e.target.dataset.href;
+    
+          fetch(url).then(res => console.log(res))
+            .catch(error => console.log(error))
+    
+          e.target.children[0].classList.remove("wishlist_selected");
+          e.target.children[0].classList.add("wishlist_unselected");
+    
+          e.target.setAttribute('data-href', '/Wishlist-AddProduct')
+          e.target.classList.add('add-to-wish-list')
+          e.target.classList.remove('remove-btn')
 
-        $.ajax({
-          url: url,
-          type: 'post',
-          dataType: 'json',
-          data: {
-            pid: pid
-          }
-        });
-
-        $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
-          +
-          text
-          + 
-          `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-          +
-          '</div>');
-
-        setTimeout(() => {
-          $('.add-to-wishlist-messages .alert-success').remove();
-        }, 3000);
+          $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
+            +
+            textDeleted
+            +
+            `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+            +
+            '</div>');
+  
+          setTimeout(() => {
+            $('.add-to-wishlist-messages .alert-success').remove();
+          }, 3000);
+          return;
+        }
       })
     }
   }, 1000);
