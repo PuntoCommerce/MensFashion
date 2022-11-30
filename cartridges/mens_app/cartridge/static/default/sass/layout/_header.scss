@@ -82,6 +82,30 @@ header .main-menu {
  bottom: 25% !important;
 }
 
+#navCont .minicart-quantity-container {
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  background: #FD4237;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#customMenuResponsive .minicart-quantity-container {
+  right: 43px;
+  top: 6px;
+
+  span{
+    width: 15px;
+    width: 6px;
+    height: 19px;
+  }
+}
+
 @media (min-width: 992px) {
  .brand {
   width: 20.125em;
@@ -128,10 +152,6 @@ header .main-menu {
  #customMenuResponsive .minicart {
   display: flex;
   margin-bottom: 12px !important;
-
-  .minicart-quantity {
-   display: none;
-  }
  }
 
  #customMenuResponsive .cartLabel {

@@ -496,17 +496,17 @@ if (pdpContainerItems) {
 
 // ============================= Show Quantity Items in Cart =============================
 
-const quantityCart = document.querySelector('.minicart-quantity');
-const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
+// const quantityCart = document.querySelector('.minicart-quantity');
+// const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
 
-if (quantityCart.innerText === '0') {
-  minicartQuantityContainer.classList.add('d-none')
-}
+// if (quantityCart.innerText === '0') {
+//   minicartQuantityContainer.classList.add('d-none')
+// }
 
-function showQuantityCart() {
-  const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
-  minicartQuantityContainer.classList.remove('d-none');
-}
+// function showQuantityCart() {
+//   const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
+//   minicartQuantityContainer.classList.remove('d-none');
+// }
 
 // ============================= Add item in wishlist QuickView =============================
 
