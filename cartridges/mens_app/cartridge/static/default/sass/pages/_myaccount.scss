@@ -234,3 +234,13 @@
         font-family: $font-family-normal;
     }
 }
+
+#myaccount{
+    display: flex;
+    align-items: center;
+    
+    p{
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+}

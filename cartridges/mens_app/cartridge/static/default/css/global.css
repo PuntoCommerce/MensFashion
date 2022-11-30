@@ -17148,19 +17148,6 @@ a.skip:hover {
   color: #fff;
 }
 
-.minicart-quantity-container {
-  position: absolute;
-  top: -2px;
-  right: -8px;
-  background: #FD4237;
-  border-radius: 20px;
-  width: 15px;
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 a.normal {
   color: var(--skin-primary-color-1);
   text-decoration: underline;
@@ -17976,6 +17963,7 @@ div.availability {
 .quick-view-dialog .modal-body {
   max-height: 28.125em;
   overflow-y: auto;
+  background: #F5F5F5;
 }
 
 .choose-bonus-product-dialog button.close,
@@ -17985,7 +17973,7 @@ div.availability {
 
 .choose-bonus-product-dialog .modal-footer,
 .quick-view-dialog .modal-footer {
-  background-color: #fff;
+  background-color: #F5F5F5;
   border: none;
   border-bottom-right-radius: 0.1875rem;
   border-bottom-left-radius: 0.1875rem;

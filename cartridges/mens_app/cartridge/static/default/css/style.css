@@ -529,6 +529,26 @@ header .main-menu {
   left: 17% !important;
   bottom: 25% !important; }
 
+#navCont .minicart-quantity-container {
+  position: absolute;
+  top: -2px;
+  right: -8px;
+  background: #FD4237;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#customMenuResponsive .minicart-quantity-container {
+  right: 43px;
+  top: 6px; }
+  #customMenuResponsive .minicart-quantity-container span {
+    width: 15px;
+    width: 6px;
+    height: 19px; }
+
 @media (min-width: 992px) {
   .brand {
     width: 20.125em;
@@ -557,8 +577,6 @@ header .main-menu {
   #customMenuResponsive .minicart {
     display: flex;
     margin-bottom: 12px !important; }
-    #customMenuResponsive .minicart .minicart-quantity {
-      display: none; }
   #customMenuResponsive .cartLabel {
     margin-top: 4px;
     color: #000000 !important; }
@@ -1670,7 +1688,7 @@ ul {
   font-family: "Avenir-Next"; }
 
 .quick-view-dialog .modal-header {
-  background-color: #ffffff !important;
+  background-color: #f5f5f5 !important;
   border: none !important; }
 
 .modal-body .product-name {
@@ -1678,7 +1696,7 @@ ul {
   line-height: 1.5 !important; }
 
 .modal-footer .add-to-cart-global {
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   color: #000000;
   border: 1px solid #000000; }
 
@@ -3579,6 +3597,13 @@ del {
 .backBtn a {
   color: #2D64FC;
   font-family: "Avenir-Next"; }
+
+#myaccount {
+  display: flex;
+  align-items: center; }
+  #myaccount p {
+    margin-bottom: 0;
+    margin-left: 10px; }
 
 a:hover {
   text-decoration: none; }
