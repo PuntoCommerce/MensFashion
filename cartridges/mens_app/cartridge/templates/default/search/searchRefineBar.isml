@@ -40,7 +40,7 @@
         <isloop items="${pdict.productSearch.refinements}" var="refinement">
             <div
                 class="card collapsible-sm refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}-divider">
-                <div class="card-header col-sm-12 d-flex justify-content-between align-items-center"
+                <div class="card-header col-sm-12 d-flex justify-content-between align-items-center collapse-filter-plp"
                     data-toggle="collapse"
                     data-target=".refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
                     aria-expanded="true">
@@ -49,21 +49,10 @@
                         aria-expanded="false">
                         <span>${refinement.displayName}</span>
                         
-                        <svg class="pull-right title-filter d-md-none d-xs-block" id="filter_open_close" width="16" height="10"
-                            viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.840615 0.954385C1.05158 0.74348 1.33768 0.625 1.63599 0.625C1.9343 0.625 2.22039 0.74348 2.43136 0.954385L8.0001 6.52313L13.5688 0.954385C13.781 0.749457 14.0652 0.636063 14.3602 0.638626C14.6551 0.641189 14.9373 0.759505 15.1459 0.968089C15.3545 1.17667 15.4728 1.45884 15.4753 1.75381C15.4779 2.04878 15.3645 2.33296 15.1596 2.54513L8.79548 8.90926C8.58451 9.12016 8.29841 9.23864 8.0001 9.23864C7.70179 9.23864 7.4157 9.12016 7.20473 8.90926L0.840615 2.54513C0.62971 2.33417 0.51123 2.04807 0.51123 1.74976C0.51123 1.45145 0.62971 1.16535 0.840615 0.954385Z"
-                                fill="black" />
-                        </svg>
                     </button>
                     <h2 aria-label="${refinement.displayName}" class="d-none d-md-block pull-left title-filter">
                         ${refinement.displayName}</h2>
-                    <svg class="pull-right title-filter d-md-block d-none rotate-arrow" id="filter_open_close" width="16" height="10"
-                        viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.840615 0.954385C1.05158 0.74348 1.33768 0.625 1.63599 0.625C1.9343 0.625 2.22039 0.74348 2.43136 0.954385L8.0001 6.52313L13.5688 0.954385C13.781 0.749457 14.0652 0.636063 14.3602 0.638626C14.6551 0.641189 14.9373 0.759505 15.1459 0.968089C15.3545 1.17667 15.4728 1.45884 15.4753 1.75381C15.4779 2.04878 15.3645 2.33296 15.1596 2.54513L8.79548 8.90926C8.58451 9.12016 8.29841 9.23864 8.0001 9.23864C7.70179 9.23864 7.4157 9.12016 7.20473 8.90926L0.840615 2.54513C0.62971 2.33417 0.51123 2.04807 0.51123 1.74976C0.51123 1.45145 0.62971 1.16535 0.840615 0.954385Z"
-                            fill="black" />
-                    </svg>
+                    
                 </div>
                 <div class="card-body content value collapse filter-collapse refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
                     id="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
