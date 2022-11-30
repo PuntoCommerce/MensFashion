@@ -1,3 +1,5 @@
+<isif condition="${refinementValue.swatchId === 'swatch-circle-null'}">
+<iselse/>
 <li class="color-attribute ${!refinementValue.selectable ? 'disabled' : ''}">
     <button data-href="${refinementValue.url}" <isif condition="${!refinementValue.selectable}">disabled</isif> >
         <span class="${refinementValue.swatchId.toLowerCase().replace(/ /g, '-')} swatch-circle color-value swatch-mark
@@ -12,3 +14,4 @@
     </button>
      <p class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</p>
 </li>
+</isif>

@@ -1,4 +1,4 @@
 <label for="addToWishlist" class="d-none d-md-block wishlist-btn-label"></label>
-<button type="submit" class="btn btn-primary add-to-wish-list btn-add-wishlist wishlist_unselected_button d-flex align-items-center" data-href="${URLUtils.url('Wishlist-AddProduct')}">
+<button type="submit" id="${product.id}" class="btn btn-primary add-to-wish-list btn-add-wishlist wishlist_unselected_button d-flex align-items-center" data-href="${URLUtils.url('Wishlist-AddProduct')}">
     <i class="fa fa-heart-o wishlist_unselected" aria-hidden="true"></i>
 </button>
