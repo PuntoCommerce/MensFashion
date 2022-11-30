@@ -220,3 +220,17 @@
   color: #ffffff !important;
  }
 }
+
+
+//Padding in back to my account btn
+.back-to-my-account {
+    padding: 38px;
+    @include respond(phone) {
+        padding: 43px;
+    }
+}
+
+////
+.order-top .order-history-form-group {
+    position: static;
+}

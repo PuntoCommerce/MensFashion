@@ -3083,7 +3083,12 @@ del {
   padding: 0 10px; }
   #productdetailpage .experience-component.experience-commerce_layouts-carousel .carousel-title {
     font-size: 18px !important;
+    line-height: 25px;
     font-family: "Avenir-Next"; }
+    @media only screen and (min-width: 37.5em) {
+      #productdetailpage .experience-component.experience-commerce_layouts-carousel .carousel-title {
+        font-size: 32px !important;
+        line-height: 20px; } }
 
 .description-and-detail .title {
   font-family: "Avenir-Next" !important;
@@ -3568,6 +3573,15 @@ del {
   .register-btn:hover {
     background-color: #000000;
     color: #ffffff !important; }
+
+.back-to-my-account {
+  padding: 38px; }
+  @media only screen and (min-width: 37.5em) {
+    .back-to-my-account {
+      padding: 43px; } }
+
+.order-top .order-history-form-group {
+  position: static; }
 
 a:hover {
   text-decoration: none; }
