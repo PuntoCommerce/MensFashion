@@ -141,7 +141,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #f9f9f9;
+  background-color: #F5F5F5;
 }
 
 [tabindex="-1"]:focus {
@@ -2561,7 +2561,7 @@ pre code {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background: none;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.1875rem;
@@ -2580,11 +2580,8 @@ pre code {
 }
 
 .form-control:focus {
-  color: #495057;
   background-color: #fff;
-  border-color: #61d2ff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 161, 224, 0.25);
 }
 
 .form-control:-ms-input-placeholder {
@@ -11735,6 +11732,7 @@ dt {
 .fa-stack-2x {
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
   text-align: center;
 }
@@ -21119,7 +21117,8 @@ button.close:focus {
 }
 
 .quickviewInfo .favCont {
-  margin-top: 21px;
+  margin-top: 22px;
+  padding-left: 0;
 }
 
 .modal-body .product-quickview .prices .price .prices-container .stikePriceCont .strike-price {

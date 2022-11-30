@@ -51,7 +51,7 @@
 
   &__cart {
     min-height: 50vh;
-    background-color: $white-color;
+    background-color: #F5F5F5;
     // @include respond(phone) {
     //  background: linear-gradient(
     //   to left,
@@ -226,7 +226,7 @@
 }
 
 .btn-filter {
-  background: #fff;
+  background: #F5F5F5;
   color: #000;
   border: 1px solid #64656a;
   font-size: 16px;
@@ -239,6 +239,10 @@
 .btn-close-filter {
   background: none;
   border: none;
+
+  i{
+    color: #000 !important;
+  }
 }
 
 .optional-promo {
