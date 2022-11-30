@@ -206,6 +206,11 @@ body {
   overflow-y: hidden !important;
 }
 
+.carousel-item .wishlist,
+.product-grid-component .wishlist{
+  display: none;
+}
+
 @media (max-width: 544px) {
  .mobile-2r-2c .region {
   margin-bottom: 0px;
@@ -243,10 +248,6 @@ body {
 
  .ITBC-content h1 {
   font-size: 40px;
- }
-
- .experience-commerce_layouts-navTabs .summary__name .pdp-link .link {
-  font-size: 20px !important;
  }
 
  .experience-commerce_layouts-navTabs .strike-through .value,

@@ -233,4 +233,16 @@
 ////
 .order-top .order-history-form-group {
     position: static;
+    .card-make-default-link{
+        a{
+            color: #2D64FC;
+            font-family: $font-family-normal;
+        }
+    }
+}
+.backBtn{
+    a{
+        color: #2D64FC;
+        font-family: $font-family-normal;
+    }
 }

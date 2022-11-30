@@ -18197,6 +18197,7 @@ div.availability {
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
+  font-size: 16px;
 }
 
 @media (max-width: 1350px) {
@@ -18224,6 +18225,7 @@ div.availability {
 
   .experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a {
     width: 310px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -19943,7 +19945,7 @@ div.availability {
   right: 3% !important;
 }
 
-.btn.btn-primary.add-to-wish-list {
+.btn.btn-primary.wishlist_unselected_button {
   background: none !important;
   border: 1px solid #CED4DA;
   color: #000;
@@ -19955,6 +19957,9 @@ div.availability {
   padding: 9px;
 }
 
+.btn.btn-primary.wishlist_unselected_button i {
+  pointer-events: none;
+}
 
 .summary__pricing .price {
   display: flex;
