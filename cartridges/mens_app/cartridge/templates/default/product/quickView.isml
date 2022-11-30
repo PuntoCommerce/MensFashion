@@ -1,13 +1,20 @@
-<isset name="productCopy" value="${pdict.product}" scope="page"/>
-<isset name="product" value="${pdict.product}" scope="page"/>
-<isset name="isBundle" value="${false}" scope="page"/>
-<isset name="isQuickView" value="${true}" scope="page"/>
+<isset name="productCopy" value="${pdict.product}" scope="page" />
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="isBundle" value="${false}" scope="page" />
+<isset name="isQuickView" value="${true}" scope="page" />
 <isset name="isProductSet" value="${false}" scope="page" />
-<isset name="loopState" value="${{count: 1}}" scope="page" />
-<div class="product-quickview product-${product.productType} col product-wrapper product-detail" data-pid="${product.id}">
+<isset name="loopState" value="${{
+                               count: 1}}" scope="page" />
+
+<div class="product-quickview product-${product.productType} col product-wrapper product-detail"
+    data-pid="${product.id}">
+    <div class="add-to-wishlist-messages"></div>
+
     <div class="row">
         <!-- Product Images Carousel -->
         <isinclude template="product/components/imageCarousel" />
+
+
 
         <!-- Product Name and Number -->
         <div class="col-sm-6 quickviewInfo">
@@ -28,22 +35,25 @@
                         <isinclude template="product/components/promotions" />
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="detail-panel">
                 <!-- Attributes -->
                 <section class="attributes">
 
-                    <iscomment> <isinclude template="product/components/mainAttributes" /> </iscomment>
+                    <iscomment>
+                        <isinclude template="product/components/mainAttributes" />
+                    </iscomment>
 
                     <div class="attributesCont row">
                         <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
                             <div data-attr="${attr.id}" class="col-${attr.id}">
                                 <isinclude template="product/components/variationAttribute" />
                             </div>
-                            <div class="d-sm-none row availability align-self-end " data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+                            <div class="d-sm-none row availability align-self-end "
+                                data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
                                 <isinclude template="product/components/availability" />
                             </div>
-                        
+
                             <!-- Quantity -->
                             <div class="hidden-xs-down quantityCont">
                                 <isif condition="${pdict.addToCartUrl || pdict.updateCartUrl}">
@@ -65,23 +75,27 @@
                                 <isinclude template="wishlist/components/addToWishListButton" />
                             </div>
                         </isloop>
-                    </div>    
+                    </div>
                 </section>
 
                 <isif condition="${product.productType !== 'bundle'}">
                     <!-- Options -->
                     <isif condition="${product.options && product.options.length > 0}">
-                            <isinclude template="product/components/options" />
+                        <isinclude template="product/components/options" />
                     </isif>
                 </isif>
             </div>
             <div class="btmModal">
-                <isset name="loopState" value="${{count: 1}}" scope="page" />
+                <isset name="loopState" value="${{
+                                               count: 1}}" scope="page" />
 
-                <div class="hidden-xs-down col availability align-self-end global-availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
-                    <iscomment> <div class="row">
-                        <isinclude template="product/components/availability" />
-                    </div> </iscomment>
+                <div class="hidden-xs-down col availability align-self-end global-availability"
+                    data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+                    <iscomment>
+                        <div class="row">
+                            <isinclude template="product/components/availability" />
+                        </div>
+                    </iscomment>
                 </div>
 
                 <div class="col pl-0">
@@ -91,12 +105,12 @@
                         <!-- Cart and [Optionally] Apple Pay -->
                         <isif condition="${pdict.addToCartUrl}">
                             <isinclude template="product/components/addToCartGlobal" />
-                        <iselse>
-                            <isinclude template="product/components/updateProduct" />
+                            <iselse>
+                                <isinclude template="product/components/updateProduct" />
                         </isif>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </div>
 
@@ -117,34 +131,39 @@
 
         <!-- Availability -->
         <div class="row d-sm-none">
-            <div class="col-11 mx-auto availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+            <div class="col-11 mx-auto availability" data-ready-to-order="${product.readyToOrder}"
+                data-available="${product.available}">
                 <isinclude template="product/components/availability" />
             </div>
         </div>
     </isif>
 
-    <isset name="product" value="${productCopy}" scope="page"/>
+    <isset name="product" value="${productCopy}" scope="page" />
 </div>
 
-<iscomment> <div class="modal-footer row align-items-end">
-    <isset name="loopState" value="${{count: 1}}" scope="page" />
+<iscomment>
+    <div class="modal-footer row align-items-end">
+        <isset name="loopState" value="${{
+                                       count: 1}}" scope="page" />
 
-    <div class="hidden-xs-down col availability align-self-end global-availability" data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
-        <div class="row">
-            <isinclude template="product/components/availability" />
-        </div> 
-    </div>
+        <div class="hidden-xs-down col availability align-self-end global-availability"
+            data-ready-to-order="${product.readyToOrder}" data-available="${product.available}">
+            <div class="row">
+                <isinclude template="product/components/availability" />
+            </div>
+        </div>
 
-    <div class="col">
+        <div class="col">
 
             <div class="col-8 mx-auto">
 
                 <!-- Cart and [Optionally] Apple Pay -->
                 <isif condition="${pdict.addToCartUrl}">
                     <isinclude template="product/components/addToCartGlobal" />
-                <iselse>
-                    <isinclude template="product/components/updateProduct" />
+                    <iselse>
+                        <isinclude template="product/components/updateProduct" />
                 </isif>
             </div>
         </div>
-</div> </iscomment>
+    </div>
+</iscomment>
