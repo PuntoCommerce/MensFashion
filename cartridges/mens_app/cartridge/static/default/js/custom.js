@@ -82,19 +82,25 @@ const customMenuResponsive = $C("#customMenuResponsive");
 const page = $C(".page");
 
 const openCustomMenu = () => {
+  const body = document.getElementById('body-scroll');
+
   customMenuResponsive.classList.remove("closeMenu");
   customMenuResponsive.classList.remove("hidden");
   customMenuResponsive.classList.add("viewMenu");
   page.classList.add("filter-blur");
+  body.classList.add('scroll-none')
 };
 
 const closeCustomMenu = () => {
+  const body = document.getElementById('body-scroll');
+
   customMenuResponsive.classList.add("closeMenu");
   setTimeout(() => {
     customMenuResponsive.classList.add("hidden");
   }, 180);
   customMenuResponsive.classList.remove("viewMenu");
   page.classList.remove("filter-blur");
+  body.classList.remove('scroll-none')
 };
 
 const toggleSubMenu = (category, back = false) => {
@@ -219,6 +225,8 @@ function changeRange(e, type) {
   const rangePrice = document.getElementById("range-price-button");
   const pmin = document.getElementById("price-range-min");
   const pmax = document.getElementById("price-range-max");
+  const rangeInputs = document.querySelectorAll('.range-input')
+
 
   let url = new URL(location.origin + rangePrice.getAttribute("data-href"));
   url.searchParams.set(type, e.value);
@@ -238,18 +246,6 @@ function changeRange(e, type) {
   });
 }
 
-function showPassword() {
-  const inputPassword = document.querySelectorAll(".show-password");
-
-  inputPassword.forEach((e) => {
-    if (e.type === "password") {
-      e.type = "text";
-    } else {
-      e.type = "password";
-    }
-  });
-}
-
 function localValues() {
   const pmin = document.getElementById("price-range-min");
   const rangeMin = document.getElementById("range-min");
@@ -261,6 +257,7 @@ function localValues() {
 
   if (minValue === null) {
     sessionStorage.setItem("min", 0);
+    minValue = 0;
   }
   if (maxValue === null) {
     sessionStorage.setItem("max", 5000);
@@ -275,6 +272,48 @@ function localValues() {
     rangeMax.value = sessionStorage.getItem("max");
   }
 }
+
+const rangeInputs = document.querySelectorAll('.range-input')
+let priceGap = 500
+
+rangeInputs.forEach(input => {
+  input.addEventListener('input', (e) => {
+    let minVal = parseInt(rangeInputs[0].value),
+      maxVal = parseInt(rangeInputs[1].value);
+
+    var coin = new Intl.NumberFormat('es-MX', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2
+    })
+
+    console.log(coin.format(minVal));
+
+    if (maxVal - minVal < priceGap) {
+      if (e.target.classList[0] === 'min') {
+        rangeInputs[0].value = maxVal - priceGap;
+      } else {
+        rangeInputs[1].value = minVal + priceGap;
+      }
+    }
+  })
+})
+
+// =================================== Show and hide password ===================================
+
+function showPassword() {
+  const inputPassword = document.querySelectorAll(".show-password");
+
+  inputPassword.forEach((e) => {
+    if (e.type === "password") {
+      e.type = "text";
+    } else {
+      e.type = "password";
+    }
+  });
+}
+
+// =================================== Promotion Text ===================================
 
 const highligt = document.getElementById("highlight-price");
 if (highligt) {
@@ -291,6 +330,8 @@ function showFilter() {
     body.classList.add('scroll-none')
   }
 }
+
+// =================================== Filter ===================================
 
 function hideFilter() {
   const filterContainer = document.querySelector("#refinement-bar");
@@ -356,11 +397,12 @@ if (imagesCarrouselContainer) {
   }
 }
 
-/*  */
+// ============================= Filter Collapse PLP =============================
 
 const filterCollapse = document.querySelectorAll(".filter-collapse");
 const arrowFilter = document.querySelectorAll("#filter_open_close");
 const plpFilterContainer = document.querySelector("#refinement-bar");
+const collapseFilterPLP = document.querySelectorAll('.collapse-filter-plp');
 
 if (filterCollapse) {
   const widthScreen = window.innerWidth;
@@ -372,6 +414,10 @@ if (filterCollapse) {
       filterCollapse.forEach((i) => {
         i.classList.remove("show");
       });
+
+      collapseFilterPLP.forEach((i) => {
+        i.classList.add('collapsed');
+      })
     } else {
       filterCollapse.forEach((i) => {
         i.classList.add("show");
@@ -383,33 +429,17 @@ if (filterCollapse) {
     filterCollapse.forEach((i) => {
       i.classList.remove("show");
     });
+    collapseFilterPLP.forEach((i) => {
+      i.classList.add('collapsed');
+    })
   } else {
     filterCollapse.forEach((i) => {
       i.classList.add("show");
     });
-
-    arrowFilter.forEach((i) => {
-      i.classList.add("rotate-arrow");
-    });
-  }
-
-  if (plpFilterContainer) {
-    plpFilterContainer.addEventListener("click", (element) => {
-      const arrow = element.target.children.filter_open_close;
-      const button = element.target.lastElementChild;
-
-      if (arrow) {
-        arrow.classList.contains("rotate-arrow")
-          ? arrow.classList.remove("rotate-arrow")
-          : arrow.classList.add("rotate-arrow");
-      } else {
-        button.classList.contains("rotate-arrow")
-          ? button.classList.remove("rotate-arrow")
-          : button.classList.add("rotate-arrow");
-      }
-    });
   }
 }
+
+// ================================= Wishlist =================================
 
 function hideAlert() {
   $(".add-to-wishlist-messages").remove();
@@ -430,18 +460,21 @@ const pdpContainerItems = document.getElementById("pdp-items-container");
 
 if (pdpContainerItems) {
   pdpContainerItems.addEventListener("click", (e) => {
-    if (e.target.classList.contains("wishlist_unselected_button")) {
+    if (e.target.children[0].classList.contains("wishlist_selected")) {
+      console.log(e.target);
       e.target.children[0].classList.add("wishlist_selected");
       e.target.children[0].classList.remove("wishlist_unselected");
       return;
     }
-    if (e.target.classList.contains("wishlist_unselected")) {
-      e.target.classList.add("wishlist_selected");
-      e.target.classList.remove("wishlist_unselected");
+    if (e.target.children[0].classList.contains("wishlist_selected")) {
+      e.target.children[0].classList.remove("wishlist_selected");
+      e.target.children[0].classList.add("wishlist_unselected");
       return;
     }
   });
 }
+
+// ============================= Show Quantity Items in Cart =============================
 
 const quantityCart = document.querySelector('.minicart-quantity');
 const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
@@ -453,6 +486,42 @@ if (quantityCart.innerText === '0') {
 function showQuantityCart() {
   const minicartQuantityContainer = document.querySelector('.minicart-quantity-container');
   minicartQuantityContainer.classList.remove('d-none');
+}
+
+function addWishlistQuickView(params) {
+  setTimeout(() => {
+    const addWishlistQuick = document.querySelector('.favCont');
+    if (addWishlistQuick) {
+      addWishlistQuick.addEventListener('click', (e) => {
+        var url = e.target.dataset.href
+        var pid = e.target.id
+
+        const text = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
+
+
+        $.ajax({
+          url: url,
+          type: 'post',
+          dataType: 'json',
+          data: {
+            pid: pid
+          }
+        });
+
+        $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
+          +
+          text
+          + 
+          `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+          +
+          '</div>');
+
+        setTimeout(() => {
+          $('.add-to-wishlist-messages .alert-success').remove();
+        }, 3000);
+      })
+    }
+  }, 1000);
 }
 
 localValues();
