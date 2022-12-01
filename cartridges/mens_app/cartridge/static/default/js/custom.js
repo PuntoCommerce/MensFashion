@@ -460,19 +460,18 @@ const pdpContainerItems = document.getElementById("pdp-items-container");
 
 if (pdpContainerItems) {
   pdpContainerItems.addEventListener("click", (e) => {
-    console.log(e);
 
     if (e.target.children[0].classList.contains("wishlist_unselected")) {
       var url = e.target.dataset.href;
       const itemID = e.target.id;
 
-      fetch(url).then(res => console.log(res))
+      fetch(url).then(res => res)
         .catch(error => console.log(error))
 
       e.target.children[0].classList.add("wishlist_selected");
       e.target.children[0].classList.remove("wishlist_unselected");
-      
-      e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProductAccount?pid=' + itemID);
+
+      e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProduct?pid=' + itemID);
       e.target.classList.remove('add-to-wish-list')
       e.target.classList.add('remove-btn')
       return;
@@ -480,7 +479,7 @@ if (pdpContainerItems) {
     if (e.target.children[0].classList.contains("wishlist_selected")) {
       var url = e.target.dataset.href;
 
-      fetch(url).then(res => console.log(res))
+      fetch(url).then(res => res)
         .catch(error => console.log(error))
 
       e.target.children[0].classList.remove("wishlist_selected");
@@ -532,7 +531,7 @@ function addWishlistQuickView() {
               pid: pid
             }
           });
-  
+
           $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
             +
             textSucccess
@@ -540,29 +539,29 @@ function addWishlistQuickView() {
             `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
             +
             '</div>');
-  
+
           setTimeout(() => {
             $('.add-to-wishlist-messages .alert-success').remove();
           }, 3000);
-    
+
           e.target.children[0].classList.add("wishlist_selected");
           e.target.children[0].classList.remove("wishlist_unselected");
-          
-          e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProductAccount?pid=' + itemID);
+
+          e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProduct?pid=' + itemID);
           e.target.classList.remove('add-to-wish-list')
           e.target.classList.add('remove-btn')
-          
+
           return;
         }
         if (e.target.children[0].classList.contains("wishlist_selected")) {
           var url = e.target.dataset.href;
-    
+
           fetch(url).then(res => console.log(res))
             .catch(error => console.log(error))
-    
+
           e.target.children[0].classList.remove("wishlist_selected");
           e.target.children[0].classList.add("wishlist_unselected");
-    
+
           e.target.setAttribute('data-href', '/Wishlist-AddProduct')
           e.target.classList.add('add-to-wish-list')
           e.target.classList.remove('remove-btn')
@@ -574,7 +573,7 @@ function addWishlistQuickView() {
             `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
             +
             '</div>');
-  
+
           setTimeout(() => {
             $('.add-to-wishlist-messages .alert-success').remove();
           }, 3000);
@@ -584,5 +583,6 @@ function addWishlistQuickView() {
     }
   }, 1000);
 }
+
 
 localValues();

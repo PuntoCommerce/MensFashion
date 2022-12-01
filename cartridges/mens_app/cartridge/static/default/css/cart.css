@@ -663,9 +663,6 @@ div.availability {
 .edit {
   margin-right: 0.625em;
 }
-.product-edit {
-  margin-top: auto;
-}
 .product-edit a {
   font-size: 0.813em;
 }
@@ -748,9 +745,6 @@ div.availability {
   .promo-code-form {
     display: block;
   }
-}
-.promo-code-submit {
-  padding-left: 0;
 }
 .quantity-form {
   margin-bottom: 0;

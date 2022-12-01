@@ -2686,7 +2686,7 @@ body {
   .filter-collapse-button {
     padding-left: 0; }
   .header-bar {
-    padding-right: 3px;
+    padding-right: 0px !important;
     padding-left: 6px; }
   .refinement-bar {
     margin-top: 87px;
@@ -2957,6 +2957,9 @@ body {
   .product-bundle .set-item .carousel-control-next:after {
     content: url(../images/pdp/arrow_right_38.svg);
     transform: rotate(0); }
+
+.carousel-item .highlight {
+  left: initial !important; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
@@ -3314,7 +3317,8 @@ del {
 
 .btn-close-filter {
   background: none;
-  border: none; }
+  border: none;
+  padding-right: 7px; }
   .btn-close-filter i {
     color: #000 !important; }
 
@@ -3355,7 +3359,7 @@ del {
 
 .line-item-promo {
   position: absolute !important;
-  margin-left: 50%; }
+  margin-left: 56%; }
 
 .checkout-shipping-method {
   font-family: "AvenirLTStd-Heavy";
@@ -3414,6 +3418,16 @@ del {
   .show-password-checkout:focus {
     outline: 0; }
 
+.product-edit {
+  position: absolute;
+  bottom: -50%; }
+
+.skip-step-checkout {
+  font-family: "AvenirLTStd-Heavy"; }
+
+.promo-code-submit button {
+  margin-top: 0 !important; }
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%; }
@@ -3435,7 +3449,9 @@ del {
   .checkout-shipping-method {
     font-size: 19px; }
   .steps-container {
-    padding: 0 0.75em 0 0.75em; } }
+    padding: 0 0.75em 0 0.75em; }
+  .product-edit {
+    position: initial; } }
 
 @media (max-width: 768px) {
   .checkout-promotion {
@@ -3458,6 +3474,10 @@ del {
     .checkout-auth-form .checkout--topBorder {
       padding-left: 6px;
       padding-right: 6px; } }
+
+@media (max-width: 364px) {
+  .grand-total-container {
+    padding-left: 0; } }
 
 .accountBtns {
   display: flex;
@@ -3488,7 +3508,7 @@ del {
 .card-header.wishlist-owner {
   background: #64656a;
   color: #fff;
-  height: 43px;
+  height: auto;
   font-family: "AvenirLTStd-Heavy";
   border-radius: 3px; }
 

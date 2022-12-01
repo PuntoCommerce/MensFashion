@@ -620,6 +620,7 @@ label.availability {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
+  background: #f5f5f5;
 }
 #guiaDeTallas .modal-content .carousel.slide {
   height: 70vh;

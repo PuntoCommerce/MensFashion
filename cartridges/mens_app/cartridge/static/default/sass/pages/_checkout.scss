@@ -239,6 +239,7 @@
 .btn-close-filter {
   background: none;
   border: none;
+  padding-right: 7px;
 
   i{
     color: #000 !important;
@@ -291,7 +292,7 @@
 
 .line-item-promo {
   position: absolute !important;
-  margin-left: 50%;
+  margin-left: 56%;
 }
 
 .checkout-shipping-method {
@@ -368,6 +369,19 @@
   }
 }
 
+.product-edit {
+  position: absolute;
+  bottom: -50%;
+}
+
+.skip-step-checkout{
+  font-family: $font-family-bold;
+}
+
+.promo-code-submit button{
+  margin-top: 0 !important;
+}
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%;
@@ -407,6 +421,10 @@
   .steps-container {
     padding: 0 0.75em 0 0.75em;
   }
+
+  .product-edit {
+    position: initial;
+  }
 }
 
 @media (max-width: 768px) {
@@ -444,5 +462,11 @@
       padding-left: 6px;
       padding-right: 6px;
     }
+  }
+}
+
+@media (max-width: 364px) {
+  .grand-total-container{
+    padding-left: 0;
   }
 }

@@ -20921,10 +20921,6 @@ button.close:focus {
   font-size: 12px;
 }
 
-.cart_bottom_img {
-  width: 20px;
-}
-
 .cart-cvc {
   font-size: 12px;
   font-family: "Avenir-Next";
@@ -21045,6 +21041,8 @@ button.close:focus {
 .checkout__totals .form-group,
 .checkout__totals .form-group label {
   margin-bottom: 0 !important;
+  font-size: 14px;
+  font-family: 'Avenir-Bold' !important;
 }
 
 .checkout_login .form-group .form-control-label {

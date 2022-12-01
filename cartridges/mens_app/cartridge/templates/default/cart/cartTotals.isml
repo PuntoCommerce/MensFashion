@@ -31,7 +31,7 @@
     <div class="col-8">
         <strong>${Resource.msg('label.estimatedtotal','cart',null)}</strong>
     </div>
-    <div class="col-4">
+    <div class="col-4 grand-total-container">
         <p class="text-right grand-total">${pdict.totals.grandTotal}</p>
     </div>
 </div>

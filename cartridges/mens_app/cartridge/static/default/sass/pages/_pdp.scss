@@ -397,6 +397,12 @@
     }
 }
 
+.carousel-item{
+    .highlight{
+        left: initial !important;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .product-detail {
         & .image-details-container {
