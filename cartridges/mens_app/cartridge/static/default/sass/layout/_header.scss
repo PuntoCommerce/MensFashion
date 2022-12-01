@@ -106,6 +106,25 @@ header .main-menu {
   }
 }
 
+// Firefox Styles
+
+@-moz-document url-prefix() {
+  #menuDesk .nav-item a{
+    font-weight: initial;
+  }
+
+  select .custom-select {
+    font-family: $font-family-bold !important;
+
+    option{
+      color: green !important;
+      font-family: $font-family-bold !important;
+    }
+  }
+}
+
+// 
+
 @media (min-width: 992px) {
  .brand {
   width: 20.125em;

@@ -152,8 +152,6 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
@@ -548,6 +546,15 @@ header .main-menu {
     width: 15px;
     width: 6px;
     height: 19px; }
+
+@-moz-document url-prefix() {
+  #menuDesk .nav-item a {
+    font-weight: initial; }
+  select .custom-select {
+    font-family: "AvenirLTStd-Heavy" !important; }
+    select .custom-select option {
+      color: green !important;
+      font-family: "AvenirLTStd-Heavy" !important; } }
 
 @media (min-width: 992px) {
   .brand {
@@ -1245,7 +1252,7 @@ ul {
       top: 0;
       right: 0;
       z-index: 2;
-      background: #fff; }
+      background: #f5f5f5; }
     #customMenuResponsive .toggle-category-button {
       background-color: transparent;
       border: none;
@@ -1257,6 +1264,8 @@ ul {
     #customMenuResponsive .toggle-category-button.back img {
       transform: rotate(90deg);
       margin-right: 10px; }
+    #customMenuResponsive .toggle-category-button.back span {
+      color: #000000; }
     #customMenuResponsive .toggle-category-button.back {
       margin-bottom: 20px; }
     #customMenuResponsive .nav-link.parent {
@@ -2056,7 +2065,6 @@ ul {
   padding: 12px;
   font-family: "Avenir-LT-Std";
   font-size: 20px;
-  font-weight: 900;
   background-color: #ffffff; }
   .btn:hover {
     cursor: pointer; }
@@ -2076,8 +2084,7 @@ ul {
       border: 1px solid #000000; }
   .btn__small {
     font-size: 14px;
-    padding: 6px;
-    font-weight: 900; }
+    padding: 6px; }
   .btn__small-b {
     font-size: 14px;
     padding: 8px; }
@@ -3361,7 +3368,8 @@ del {
 
 .checkout__text--need-help {
   font-size: 20px;
-  font-family: "Avenir-bold" !important; }
+  font-family: "Avenir-bold" !important;
+  color: #000 !important; }
 
 .checkout__text--help-text {
   font-size: 16px;

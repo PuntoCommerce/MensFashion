@@ -331,7 +331,6 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -20807,7 +20806,7 @@ button.close:focus {
 }
 
 .checkout .btn {
-  font-family: "AvenirLTStd-Heavy";
+  font-family: "Avenir-Bold";
 }
 
 .checkout #password-reset,

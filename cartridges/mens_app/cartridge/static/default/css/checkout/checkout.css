@@ -482,6 +482,7 @@ span.ship-to-phone {
   font-size: 20px;
   line-height: 27px;
   border-radius: 0;
+  color: #000;
 }
 
 @media (min-width: 768px) {
@@ -825,6 +826,7 @@ span.ship-to-phone {
 .shipping-description {
   font-family: "Avenir-Next";
   font-size: 16px;
+  color: #000;
 }
 @media (min-width: 1200px) {
   .results.striped {
