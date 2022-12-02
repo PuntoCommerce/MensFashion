@@ -17,9 +17,6 @@
                     <isinclude template="storeLocator/storeLocatorRadius" />
                 </div>
                 <div class="card-body">
-                    <p class="text-center store-locator-no-results">
-                        ${Resource.msg('error.no.results', 'storeLocator', null)}
-                    </p>
 
                     <div class="results striped" data-search-key="${JSON.stringify(pdict.stores.searchKey)}"
                         data-radius="${pdict.stores.radius}" data-has-results="${pdict.stores.stores.length > 0}">
