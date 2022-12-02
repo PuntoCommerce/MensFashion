@@ -42,7 +42,8 @@ header .container {
  width: 100%;
  max-width: 100%;
  margin: 0 auto;
- padding: 0;
+ padding-left: 15px;
+ padding-right: 15px;
 }
 
 header .navbar-header {
@@ -69,7 +70,7 @@ header .main-menu {
   }
  }
  &.header {
-  padding: 2em 30px;
+  padding: 2em 15px;
   @include respond(phone-max) {
    justify-content: center !important;
   }

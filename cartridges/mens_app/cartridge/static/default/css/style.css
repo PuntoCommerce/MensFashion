@@ -501,7 +501,8 @@ header .container {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 header .navbar-header {
   height: 65px; }
@@ -517,7 +518,7 @@ header .main-menu {
   height: 2em; }
 
 .checkout.header {
-  padding: 2em 30px; }
+  padding: 2em 15px; }
   @media only screen and (max-width: 37.5em) {
     .checkout.header {
       justify-content: center !important; } }
