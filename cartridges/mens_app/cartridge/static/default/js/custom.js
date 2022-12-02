@@ -509,80 +509,71 @@ if (pdpContainerItems) {
 
 // ============================= Add item in wishlist QuickView =============================
 
-function addWishlistQuickView() {
-  setTimeout(() => {
-    const addWishlistQuick = document.querySelector('.favCont');
-    if (addWishlistQuick) {
-      addWishlistQuick.addEventListener('click', (e) => {
-        var url = e.target.dataset.href
-        var pid = e.target.id
-        const textSucccess = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
-        const textDeleted = 'Producto eliminado de mis favoritos'
+function addToWishlistButton(e, type) {
+  var url = e.dataset.href
+  var pid = e.id
+  const textSucccess = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
+  const textDeleted = 'Producto eliminado de mis favoritos'
 
-        if (e.target.children[0].classList.contains("wishlist_unselected")) {
-          var url = e.target.dataset.href;
-          const itemID = e.target.id;
+  if (e.children[0].classList.contains('wishlist_unselected')) {
+    $.ajax({
+      url: url,
+      type: 'post',
+      dataType: 'json',
+      data: {
+        pid: pid
+      }
+    });
 
-          $.ajax({
-            url: url,
-            type: 'post',
-            dataType: 'json',
-            data: {
-              pid: pid
-            }
-          });
+    $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
+      +
+      textSucccess
+      +
+      `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+      +
+      '</div>');
 
-          $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
-            +
-            textSucccess
-            +
-            `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-            +
-            '</div>');
+    setTimeout(() => {
+      $('.add-to-wishlist-messages .alert-success').remove();
+    }, 3000);
 
-          setTimeout(() => {
-            $('.add-to-wishlist-messages .alert-success').remove();
-          }, 3000);
 
-          e.target.children[0].classList.add("wishlist_selected");
-          e.target.children[0].classList.remove("wishlist_unselected");
+    e.children[0].classList.add("wishlist_selected");
+    e.children[0].classList.remove("wishlist_unselected");
+    e.classList.remove('add-to-wish-list')
+    e.classList.add('remove-btn')
 
-          e.target.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProduct?pid=' + itemID);
-          e.target.classList.remove('add-to-wish-list')
-          e.target.classList.add('remove-btn')
+    e.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProduct?pid=' + pid);
 
-          return;
-        }
-        if (e.target.children[0].classList.contains("wishlist_selected")) {
-          var url = e.target.dataset.href;
+    return;
+  }
 
-          fetch(url).then(res => console.log(res))
-            .catch(error => console.log(error))
+  if (e.children[0].classList.contains("wishlist_selected")) {
+    var url = e.dataset.href;
 
-          e.target.children[0].classList.remove("wishlist_selected");
-          e.target.children[0].classList.add("wishlist_unselected");
+    fetch(url).then(res => console.log(res))
+      .catch(error => console.log(error))
 
-          e.target.setAttribute('data-href', '/Wishlist-AddProduct')
-          e.target.classList.add('add-to-wish-list')
-          e.target.classList.remove('remove-btn')
+    e.children[0].classList.remove("wishlist_selected");
+    e.children[0].classList.add("wishlist_unselected");
 
-          $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
-            +
-            textDeleted
-            +
-            `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-            +
-            '</div>');
+    e.setAttribute('data-href', '/Wishlist-AddProduct')
+    e.classList.add('add-to-wish-list')
+    e.classList.remove('remove-btn')
 
-          setTimeout(() => {
-            $('.add-to-wishlist-messages .alert-success').remove();
-          }, 3000);
-          return;
-        }
-      })
-    }
-  }, 1000);
+    $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
+      +
+      textDeleted
+      +
+      `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+      +
+      '</div>');
+
+    setTimeout(() => {
+      $('.add-to-wishlist-messages .alert-success').remove();
+    }, 3000);
+    return;
+  }
 }
-
 
 localValues();
