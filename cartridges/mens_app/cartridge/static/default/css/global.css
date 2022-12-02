@@ -20938,10 +20938,6 @@ button.close:focus {
   margin-left: 10px;
 }
 
-.login-checkout {
-  padding: 0 40px;
-}
-
 .embeddedServiceHelpButton .helpButton .uiButton {
   background-color: #000 !important;
 }
@@ -20955,15 +20951,11 @@ button.close:focus {
 }
 
 .login-checkout {
-  margin: 0 100px;
+  margin: 0 70px;
 }
 
 .checkoutRightCheck {
   padding-left: 7rem;
-}
-
-.checkoutLeftCheck {
-  padding-left: 2rem;
 }
 
 .add-to-wishlist-alert {

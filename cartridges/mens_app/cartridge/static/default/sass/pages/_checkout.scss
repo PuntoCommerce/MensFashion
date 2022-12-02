@@ -76,10 +76,6 @@
     padding: 30px;
     background-color: $text-color-black;
 
-    span {
-      margin-left: 10%;
-    }
-
     @include respond(phone-max) {
       font-size: $font-size-h5;
       background-color: $light-grey;
@@ -400,6 +396,10 @@
 
 .store-locator-no-results{
   grid-column: 1/-1;
+}
+
+.checkoutRightCheck{
+  padding-left: 15vh;
 }
 
 @media (max-width: 991px) {

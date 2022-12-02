@@ -3210,8 +3210,6 @@ del {
     color: #fff;
     padding: 30px;
     background-color: #000000; }
-    .checkout__cartTitle span {
-      margin-left: 10%; }
     @media only screen and (max-width: 37.5em) {
       .checkout__cartTitle {
         font-size: 20px;
@@ -3446,6 +3444,9 @@ del {
 
 .store-locator-no-results {
   grid-column: 1/-1; }
+
+.checkoutRightCheck {
+  padding-left: 15vh; }
 
 @media (max-width: 991px) {
   .checkout-promotion {
