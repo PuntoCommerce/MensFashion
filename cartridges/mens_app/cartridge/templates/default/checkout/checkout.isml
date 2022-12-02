@@ -43,7 +43,7 @@
             <p class="checkout__stepper--item-title">Realizar Pedido</p>
         </li>
     </ul>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center checkout-container">
         <div class="col-sm-12 col-lg-10">
             <div id="checkout-main" class="container data-checkout-stage <isif condition="
                 ${pdict.order.usingMultiShipping && pdict.order.shipping.length > 1}">multi-ship</isif>"

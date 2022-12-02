@@ -20179,7 +20179,8 @@ button.close:focus {
 .login-oauth .form-group a {
   font-size: 14px;
   padding: 5px 0 0 0;
-  color: #000000;
+  color: #000000 !important;
+  background: #F5F5F5 !important;
 }
 
 .login-oauth .form-group:nth-last-child() {

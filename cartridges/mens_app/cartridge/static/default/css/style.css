@@ -2596,11 +2596,11 @@ body {
   transition: all .3s ease; }
 
 .wishlist_unselected {
-  font-size: 24px;
+  font-size: 22px;
   color: #64656A; }
 
 .wishlist_selected {
-  font-size: 24px;
+  font-size: 22px;
   color: #FD4237 !important; }
   .wishlist_selected::before {
     content: "\F08A" !important; }
@@ -2712,6 +2712,11 @@ body {
     align-items: center;
     flex-direction: row-reverse;
     padding: 14px 10px 0 10px; } }
+
+@media (max-width: 450px) {
+  .wishlist_unselected,
+  .wishlist_selected {
+    font-size: 18px; } }
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
@@ -3171,7 +3176,7 @@ del {
     .checkout--topBorder {
       border-top: 1px solid #000000; } }
   .checkout__bottomBorder {
-    border-bottom: 1px solid #000000; }
+    border-bottom: 1px solid #c4c4c4; }
     .checkout__bottomBorder--noResponsive {
       margin-bottom: 10px; }
       @media only screen and (max-width: 37.5em) {
@@ -3230,12 +3235,12 @@ del {
   .checkout__item {
     background-color: #ffffff !important;
     padding: 10px 15px 50px 15px;
-    border: 1px solid #000000;
+    border: 1px solid #c4c4c4;
     height: fit-content; }
   .checkout__totals {
     background-color: #ffffff !important;
     padding: 20px;
-    border: 1px solid #000000; }
+    border: 1px solid #c4c4c4; }
   .checkout__stepper {
     display: flex;
     justify-content: center;
@@ -3428,6 +3433,20 @@ del {
 .promo-code-submit button {
   margin-top: 0 !important; }
 
+.remove-product img {
+  width: 15px; }
+
+.js-login-customer {
+  color: #000 !important;
+  text-decoration: none !important;
+  background: #F5F5F5 !important; }
+
+.checkout-container {
+  background: #F5F5F5; }
+
+.store-locator-no-results {
+  grid-column: 1/-1; }
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%; }
@@ -3473,7 +3492,9 @@ del {
     padding-right: 0; }
     .checkout-auth-form .checkout--topBorder {
       padding-left: 6px;
-      padding-right: 6px; } }
+      padding-right: 6px; }
+  .refinement-items-container {
+    padding-top: 9px; } }
 
 @media (max-width: 364px) {
   .grand-total-container {
