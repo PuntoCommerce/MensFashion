@@ -61,6 +61,14 @@
     margin: 0 0.5rem 0 0;
   }
 
+  //Btn form
+
+  .btn {
+    &__small {
+  margin: 26px 0;
+    }
+  }
+
 
   ///Old
   font-family: nth($text-font-stack, $avenir-Next) !important;

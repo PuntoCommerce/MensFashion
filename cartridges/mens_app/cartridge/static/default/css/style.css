@@ -3210,6 +3210,8 @@ del {
         margin: 0; } }
   .checkout__check-img {
     margin: 0 0.5rem 0 0; }
+  .checkout .btn__small {
+    margin: 26px 0; }
   @media only screen and (min-width: 56.25em) {
     .checkout--rightBorder {
       border-right: 1px solid #000000; } }
