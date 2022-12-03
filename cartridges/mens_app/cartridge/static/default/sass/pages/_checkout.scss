@@ -69,7 +69,9 @@
     }
   }
 
-
+  .login-oauth .btn-block:hover {
+    color: black;
+  }
   ///Old
   font-family: nth($text-font-stack, $avenir-Next) !important;
   font-size: $font-size-h5-and-paragraph;
