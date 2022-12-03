@@ -469,6 +469,15 @@ h5, html, body {
 .row-no-margin {
   margin: 0 !important; }
 
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.full-width {
+  width: 100%; }
+
 /*  */
 /* **************************** HEADER **************************** */
 .responsive {
@@ -3169,14 +3178,52 @@ del {
 .checkout {
   font-family: "Avenir-Next" !important;
   font-size: 16px; }
+  .checkout.container-custom {
+    margin: 38px auto 0 auto !important;
+    max-width: 85%; }
+    @media only screen and (min-width: 37.5em) {
+      .checkout.container-custom {
+        max-width: 95%;
+        height: calc(100vh - 330px); } }
+  .checkout__login-checkout {
+    margin: 0 0 46px 0 !important;
+    padding: 0 !important; }
+  .checkout__container-col {
+    width: 100%; }
+    @media only screen and (min-width: 37.5em) {
+      .checkout__container-col {
+        max-width: 65%; } }
+    @media only screen and (min-width: 37.5em) {
+      .checkout__container-col--left-side {
+        margin: 0 10% 0 auto; } }
+    @media only screen and (min-width: 37.5em) {
+      .checkout__container-col--right-side {
+        margin: 0 auto 0 10%; } }
+  .checkout .item.mb-3 {
+    margin: 0 0 20.8px 0 !important; }
+    .checkout .item.mb-3 img {
+      margin: 5px 0 0 0; }
+  .checkout__paragraph--margin {
+    margin: 0 0 22px 0; }
+    @media only screen and (min-width: 37.5em) {
+      .checkout__paragraph--margin {
+        margin: 0; } }
+  .checkout__check-img {
+    margin: 0 0.5rem 0 0; }
   @media only screen and (min-width: 56.25em) {
     .checkout--rightBorder {
       border-right: 1px solid #000000; } }
-  @media only screen and (max-width: 56.25em) {
-    .checkout--topBorder {
-      border-top: 1px solid #000000; } }
+  .checkout--topBorder {
+    padding: 32px 0 0 0; }
+    @media only screen and (min-width: 37.5em) {
+      .checkout--topBorder {
+        padding: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .checkout--topBorder {
+        border-top: 1px solid #000000; } }
   .checkout__bottomBorder {
-    border-bottom: 1px solid #c4c4c4; }
+    border-bottom: 1px solid #c4c4c4;
+    margin: 0 0 24px 0; }
     .checkout__bottomBorder--noResponsive {
       margin-bottom: 10px; }
       @media only screen and (max-width: 37.5em) {

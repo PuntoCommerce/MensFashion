@@ -1,4 +1,68 @@
 .checkout {
+
+
+  ///Fix
+  &.container-custom {
+    margin: 38px auto 0 auto!important;
+    max-width: 85%;
+    @include respond(phone) {
+      max-width: 95%;
+      height: calc(100vh - 330px);
+    }
+  }
+
+  // paragraph Checkout step 1
+  &__login-checkout {
+    margin: 0 0 46px 0!important;
+    padding: 0!important;
+  }
+
+  //Container row
+  &__container-col {
+    width: 100%;
+    @include respond(phone) {
+      max-width: 65%;
+    }
+    
+    &--left-side {
+      @include respond(phone) {
+        margin: 0 10% 0 auto;
+      }
+    }
+
+    &--right-side {
+      @include respond(phone) {
+        margin: 0 auto 0 10%;
+      }
+    }
+  }
+
+  //Items
+  .item.mb-3 {
+    margin: 0 0 20.8px 0!important;
+
+    img {
+      margin: 5px 0 0 0;
+    }
+  }
+
+  //Mobile paragraph margin
+  &__paragraph {
+    &--margin {
+      margin: 0 0 22px 0;
+      @include respond(phone) {
+        margin: 0;
+      }
+    }
+  }
+
+  //Check top bar
+  &__check-img {
+    margin: 0 0.5rem 0 0;
+  }
+
+
+  ///Old
   font-family: nth($text-font-stack, $avenir-Next) !important;
   font-size: $font-size-h5-and-paragraph;
 
@@ -9,6 +73,10 @@
   }
 
   &--topBorder {
+    padding: 32px 0 0 0;
+    @include respond(phone) {
+      padding: 0;
+    }
     @include respond(tab-port-max) {
       border-top: 1px solid $text-color-black;
     }
@@ -16,6 +84,7 @@
 
   &__bottomBorder {
     border-bottom: 1px solid #c4c4c4;
+    margin: 0 0 24px 0;
 
     &--noResponsive {
       margin-bottom: 10px;
