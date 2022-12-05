@@ -770,7 +770,9 @@ footer .content,
   align-items: center; }
 
 .hecho-con {
-  margin-left: 80px; }
+  margin-left: 80px;
+  text-align: center;
+  padding: 4px 5px 8px 5px; }
 
 footer .space {
   margin-top: 20px; }
