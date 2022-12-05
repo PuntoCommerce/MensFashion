@@ -3188,8 +3188,7 @@ del {
     max-width: 85%; }
     @media only screen and (min-width: 37.5em) {
       .checkout.container-custom {
-        max-width: 95%;
-        height: calc(100vh - 330px); } }
+        max-width: 95%; } }
   .checkout__login-checkout {
     margin: 0 0 46px 0 !important;
     padding: 0 !important; }

@@ -7,7 +7,6 @@
     max-width: 85%;
     @include respond(phone) {
       max-width: 95%;
-      height: calc(100vh - 330px);
     }
   }
 

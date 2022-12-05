@@ -808,6 +808,7 @@ span.ship-to-phone {
 #user-location-search-store {
   border: 0;
   background: none;
+  color: #000;
 }
 #user-location-search-store:hover {
   text-decoration: underline;
