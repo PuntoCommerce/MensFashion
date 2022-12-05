@@ -602,9 +602,47 @@ header .main-menu {
     margin-right: 6px; }
   #customMenuResponsive #actions-icons img {
     margin-right: 22px !important; }
-  #customMenuResponsive .nav-link.parent {
+  #customMenuResponsive .toggle-category-button.back {
+    font-size: 18px;
+    line-height: 25px; }
+  #customMenuResponsive h3.category-title {
     font-family: "AvenirLTStd-Heavy" !important;
-    text-transform: uppercase; }
+    margin: 0 0 18px 0; }
+  #customMenuResponsive .sub-items--lvl-one .nav-link.parent,
+  #customMenuResponsive .sub-items--lvl-one .nav-link {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 22px !important;
+    line-height: 30px; }
+  #customMenuResponsive .sub-items--lvl-two .nav-link.parent,
+  #customMenuResponsive .sub-items--lvl-two .nav-link {
+    font-size: 22px !important;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding: 0 !important; }
+  #customMenuResponsive .sub-items--lvl-two .sub-items-parent,
+  #customMenuResponsive .sub-items--lvl-two .sub-items-child {
+    margin: 0 0 12px 0; }
+  #actions-icons .nav-item .favItem {
+    display: flex;
+    align-items: center; }
+  #actions-icons .nav-link {
+    display: flex;
+    align-items: center !important; }
+  #actions-icons .nav-item a,
+  #actions-icons .nav-item a span,
+  #actions-icons .minicart span.cartLabel {
+    font-size: 16px;
+    line-height: 22px; }
+    #actions-icons .nav-item a .minicart-quantity,
+    #actions-icons .nav-item a span .minicart-quantity,
+    #actions-icons .minicart span.cartLabel .minicart-quantity {
+      font-size: 10px; }
+  #actions-icons .minicart .minicart-total {
+    display: flex;
+    align-items: center; }
+  #actions-icons .minicart .minicart-link {
+    margin: 0; }
   #customMenuResponsive .cartLabel {
     font-family: "Avenir-LT-Std" !important;
     font-size: 14px; }
@@ -1277,14 +1315,11 @@ ul {
       color: #000000; }
     #customMenuResponsive .toggle-category-button.back {
       margin-bottom: 20px; }
-    #customMenuResponsive .nav-link.parent {
-      font-weight: 800; }
     #customMenuResponsive #actions-icons {
       margin-top: 30px; }
     #customMenuResponsive #actions-icons img {
       margin-right: 10px; }
     #customMenuResponsive .category-title {
-      font-family: "Avenir-LT-Std-BlackOblique";
       font-size: 20px;
       line-height: 27px;
       text-transform: uppercase;

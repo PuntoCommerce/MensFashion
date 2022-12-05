@@ -45,7 +45,7 @@
         <div id="menu-container" class="d-flex flex-column justify-content-between col-12">
             <div>
                 <isloop items="${pdict.categories}" var="category" status="itemStatus">
-                    <div style="height: 100%;width: 100%;" class="d-flex justify-content-between menu-item-container">
+                    <div style="height: 100%;width: 100%;" class="d-flex justify-content-between menu-item-container sub-items--lvl-one">
                         <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />" class="nav-link
                         ${category.subCategories ? 'parent' : ''}" role="link" tabindex="0">${category.name}</a>
                         <isif condition="${category.subCategories}">
