@@ -2348,6 +2348,11 @@ body {
 .product-grid-component .wishlist {
   display: none; }
 
+.commerce-link {
+  color: #fff; }
+  .commerce-link:hover {
+    color: #fff; }
+
 @media (max-width: 544px) {
   .mobile-2r-2c .region {
     margin-bottom: 0px; }

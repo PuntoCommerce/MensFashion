@@ -211,6 +211,14 @@ body {
   display: none;
 }
 
+.commerce-link{
+  color: #fff;
+
+  &:hover{
+    color: #fff;
+  }
+}
+
 @media (max-width: 544px) {
  .mobile-2r-2c .region {
   margin-bottom: 0px;
