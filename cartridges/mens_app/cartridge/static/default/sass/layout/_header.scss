@@ -70,7 +70,7 @@ header .main-menu {
   }
  }
  &.header {
-  padding: 2em 0.5em;
+  padding: 2em 15px;
   @include respond(phone-max) {
    justify-content: center !important;
   }
