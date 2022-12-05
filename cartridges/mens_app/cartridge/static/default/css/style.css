@@ -3064,8 +3064,7 @@ body {
   justify-content: space-between !important; }
 
 .availability-msg {
-  margin-bottom: 0;
-  margin-top: 3vh;
+  margin: 0 0 0 28px;
   color: #23ac00; }
 
 .fa.fa-whatsapp {
