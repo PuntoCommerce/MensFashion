@@ -717,9 +717,11 @@ server.post('PlaceOrder', server.middleware.https, function (req, res, next) {
         });
     }
 
-    if (order.getCustomerEmail()) {
-        COHelpers.sendConfirmationEmail(order, req.locale.id);
-    }
+    // ===================== Confirmation Email =====================
+
+    // if (order.getCustomerEmail()) {
+    //     COHelpers.sendConfirmationEmail(order, req.locale.id);
+    // }
 
     // Reset usingMultiShip after successful Order placement
     req.session.privacyCache.set('usingMultiShipping', false);

@@ -167,7 +167,7 @@ server.replace(
 
                 if (registrationForm.validForm) {
                     // send a registration email
-                    accountHelpers.sendCreateAccountEmail(authenticatedCustomer.profile);
+                    // accountHelpers.sendCreateAccountEmail(authenticatedCustomer.profile);
 
                     res.setViewData({ authenticatedCustomer: authenticatedCustomer });
                     res.json({
