@@ -1,6 +1,6 @@
 {
-  "name": "Image Text and Buttons Banner",
-  "description": "Image Text and Buttons to redirect to other pages",
+  "name": "Image Text and Buttons Cards",
+  "description": "Image Text and Buttons to redirect to other pages whit cards",
   "group": "commerce_assets",
   "attribute_definition_groups": [
     {
@@ -109,6 +109,14 @@
           "type": "enum",
           "values": ["left"],
           "required": false
+        },
+        {
+          "id": "button_design",
+          "name": "Button Design",
+          "description": "ITBC - background white button or ITBC outline - Only white borders",
+          "type": "enum",
+          "values": ["ITBC", "ITBC-outline"],
+          "required": true
         }
       ]
     },
@@ -149,14 +157,22 @@
       ]
     },
     {
-      "id": "text_banner",
-      "name": "text banner",
-      "description": "Info text",
+      "id": "tiles_container",
+      "name": "display title container",
+      "description": "Select if you wanna show all title and highligt container",
       "attribute_definitions": [
         {
-          "id": "text_info",
-          "name": "Text Info",
-          "description": "write promotions or info",
+          "id": "display_titles",
+          "name": "display title",
+          "description": "display titles",
+          "type": "enum",
+          "values": ["Yes", "No"],
+          "required": true
+        },
+        {
+          "id": "primary_title",
+          "name": "Title card info ",
+          "description": "write the first title",
           "type": "string",
           "required": false
         }
