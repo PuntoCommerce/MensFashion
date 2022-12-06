@@ -80,7 +80,7 @@
             </label>
 
             <!-- Trigger Modal Sizes Guide -->
-            <iscomment> <div class="row sizes-guide-cont">
+            <div class="row sizes-guide-cont">
                 <div class="col sizes-guide d-flex">
                     <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->
@@ -88,7 +88,7 @@
                         ${Resource.msg('size.guide', 'common', null)}
                     </button>
                 </div>
-            </div> </iscomment>
+            </div>
         </div>
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom-select form-control select-${attr.id}"
