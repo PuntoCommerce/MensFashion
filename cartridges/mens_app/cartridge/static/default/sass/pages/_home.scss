@@ -277,42 +277,54 @@ body {
   border: none !important;
 }
 
-.titles-container {
-  display: flex !important;
-  flex-direction: column;
-  color: #fff;
+.ITBC-Cards-container {
+  .titles-container {
+    display: flex !important;
+    flex-direction: column;
+    color: #fff;
 
-  .highlight-card {
-    background: #b71011;
-    width: fit-content;
-    padding: 3px 7px;
-    font-family: 'Avenir-Next';
-    font-size: 14px;
+    .highlight-card {
+      background: #b71011;
+      width: fit-content;
+      padding: 3px 7px;
+      font-family: 'Avenir-Next';
+      font-size: 14px;
+    }
+
+    .primary-title-card {
+      font-size: 45px;
+      font-family: $font-family-bold;
+      line-height: initial;
+    }
+
+    .secondary-title-card {
+      font-size: 14px;
+      font-family: 'Avenir-Next';
+      margin-top: -10px;
+    }
   }
 
-  .primary-title-card {
-    font-size: 45px;
-    font-family: $font-family-bold;
-    margin-top: 12px;
+  .btn-ITBC-outline {
+    background: no-repeat;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 10px;
+    font-family: 'Avenir-Next';
   }
 
-  .secondary-title-card {
-    font-size: 14px;
-    font-family: 'Avenir-Next';
-    margin-top: 3px;
+  .ITBC-buttons {
+    justify-content: start !important;
   }
 }
 
-.btn-ITBC-outline {
-  background: no-repeat;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  font-size: 10px;
-  font-family: 'Avenir-Next';
+.container-custom-size{
+  .col-12{
+    padding: 0;
+  }
 }
 
 @media (max-width: 467px) {

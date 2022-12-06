@@ -1,0 +1,212 @@
+{
+  "name": "Image Text and Buttons Cards",
+  "description": "Image Text and Buttons to redirect to other pages whit cards",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "imagetext",
+      "name": "Image Tile No Margins Desktop",
+      "description": "This is a simple Image Tile component where you drag and drop it into any layout component ",
+      "attribute_definitions": [
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "description": "Background Image for the component",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "backgroundImageMobile",
+          "name": "Background Image Mobile",
+          "description": "Background Image Mobile for the component",
+          "type": "image",
+          "required": true
+        },
+        {
+            "id": "imageBrightness",
+            "name": "Image Brightness",
+            "description": "Select a value to change the image brightness",
+            "type": "enum",
+            "values": ["100%", "90%", "80%", "70%", "60%", "50%"],
+            "required": false
+        },
+        {
+          "id": "text",
+          "name": "Text",
+          "description": "Text for the component",
+          "type": "markup",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "buttons",
+      "name": "Buttons",
+      "description": "Buttons to be displayed in the component",
+      "attribute_definitions": [
+        {
+          "id": "url1",
+          "name": "URL 1",
+          "description": "URL for the first button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text1",
+          "name": "Text 1",
+          "description": "Text for the first button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "url2",
+          "name": "URL 2",
+          "description": "URL for the second button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text2",
+          "name": "Text 2",
+          "description": "Text for the second button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "url3",
+          "name": "URL 3",
+          "description": "URL for the third button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "text3",
+          "name": "Text 3",
+          "description": "Text for the third button",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"display_button",
+          "name": "Display Button",
+          "description": "Show or Hide Button in Banner",
+          "type": "enum",
+          "values": ["Yes", "No"],
+          "required": false
+        },
+        {
+          "id":"marginT",
+          "name": "Margin Top Button",
+          "description": "Select the quantity of top margin in mobile",
+          "type": "enum",
+          "values": ["30px", "40px", "50px"],
+          "required": false
+        },
+        {
+          "id": "align_button",
+          "name": "Align Button",
+          "description": "",
+          "type": "enum",
+          "values": ["left"],
+          "required": false
+        },
+        {
+          "id": "button_design",
+          "name": "Button Design",
+          "description": "ITBC - background white button or ITBC outline - Only white borders",
+          "type": "enum",
+          "values": ["ITBC", "ITBC-outline"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "name": "Layout and Size",
+      "description": "Layout and Size of the components",
+      "attribute_definitions": [
+        {
+          "id": "componentSize",
+          "name": "Component Size",
+          "description": "Size of the full component",
+          "type": "enum",
+          "values": ["Large", "Medium", "Small"],
+          "required": false
+        },
+        {
+          "id": "itemsLayout",
+          "name": "Items Layout",
+          "description": "Items layout to be displayed (Text and Buttons)",
+          "type": "enum",
+          "values": [
+            "Text-Left-Buttons-Right",
+            "Text-Right-Buttons-Left",
+            "Center-Text-Down-Buttons-Up",
+            "Center-Text-Up-Buttons-Down"
+          ],
+          "required": false
+        },
+        {
+          "id": "markupLayout",
+          "name": "Markup Layout",
+          "description": "Markup layout",
+          "type": "enum",
+          "values": ["left", "center", "right"],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "higlights",
+      "name": "highlight attributes",
+      "description": "write text in the highlight and select if it will be displayed",
+      "attribute_definitions": [
+        {
+          "id": "display",
+          "name": "display highlight",
+          "description": "display the highlight",
+          "type": "enum",
+          "values": ["Yes", "No"],
+          "required": true
+        },
+        {
+          "id": "highlight_text",
+          "name": "higlight text",
+          "description": "write text in the highlight",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "tiles_container",
+      "name": "display title container",
+      "description": "Select if you wanna show all title and highligt container",
+      "attribute_definitions": [
+        {
+          "id": "display_titles",
+          "name": "display titles",
+          "description": "display titles",
+          "type": "enum",
+          "values": ["Yes", "No"],
+          "required": true
+        },
+        {
+          "id": "primary_title",
+          "name": "primary tilte",
+          "description": "write the first title",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "secondary_title",
+          "name": "secondary_title",
+          "description": "write the second title",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

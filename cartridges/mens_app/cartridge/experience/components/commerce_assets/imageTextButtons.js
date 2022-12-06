@@ -82,27 +82,9 @@ module.exports.render = function (context, modelIn) {
   };
   model.markupLayout = content.markupLayout || "center";
   model.display_button = content.display_button ? content.display_button : 'Yes';
-  model.button_design = content.button_design ? content.button_design : 'ITBC';
-  model.display_titles = content.display_titles ? content.display_titles : 'Yes';
   model.marginT = content.marginT ? content.marginT : ''
   model.align_button = content.align_button ? content.align_button : ''
-  model.display_titles = content.display_titles ? content.display_titles : ''
   
-
-  model.highlights = [
-    {
-      display : content.display,
-      highlight_text: content.highlight_text
-    }
-  ]
-
-  model.tiles_container = [
-    {
-      primary_title: content.primary_title,
-      secondary_title: content.secondary_title 
-    }
-  ]
-
   model.buttons = [
     {
       active: content.text1 && content.url1 ? true : false,

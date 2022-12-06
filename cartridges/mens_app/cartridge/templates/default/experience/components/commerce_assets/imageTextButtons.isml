@@ -18,20 +18,11 @@
         <isprint value="${pdict.text}" encoding="off" />
       </div>
     </div>
-    <div class="titles-container display-${pdict.display_titles}">
-        <isloop items="${pdict.highlights}" var="highlight" status="loopstatus">
-            <span class="highlight-card display-${highlight.display}">${highlight.highlight_text}</span>
-        </isloop>
-        <isloop items="${pdict.tiles_container}" var="title" status="loopstatus">
-            <span class="primary-title-card">${title.primary_title}</span>
-            <span class="secondary-title-card">${title.secondary_title}</span>
-        </isloop>
-    </div>
     <div class="ITBC-buttons align-button-${pdict.align_button}" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
       <isloop items="${pdict.buttons}" var="button" status="loopstatus">
         <isif condition="${button.active}">
           <a class="with display-${pdict.display_button} margin-top-${pdict.marginT}" href="${button.url}">
-            <button class="btn-${pdict.button_design}" type="button">
+            <button class="btn-ITBC" type="button">
               <span class="text-banner-button">${button.text}</span>
             </button>
           </a>

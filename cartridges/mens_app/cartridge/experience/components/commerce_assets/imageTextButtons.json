@@ -109,14 +109,6 @@
           "type": "enum",
           "values": ["left"],
           "required": false
-        },
-        {
-          "id": "button_design",
-          "name": "Button Design",
-          "description": "ITBC - background white button or ITBC outline - Only white borders",
-          "type": "enum",
-          "values": ["ITBC", "ITBC-outline"],
-          "required": true
         }
       ]
     },
@@ -152,57 +144,6 @@
           "description": "Markup layout",
           "type": "enum",
           "values": ["left", "center", "right"],
-          "required": false
-        }
-      ]
-    },
-    {
-      "id": "higlights",
-      "name": "highlight attributes",
-      "description": "write text in the highlight and select if it will be displayed",
-      "attribute_definitions": [
-        {
-          "id": "display",
-          "name": "display highlight",
-          "description": "display the highlight",
-          "type": "enum",
-          "values": ["Yes", "No"],
-          "required": true
-        },
-        {
-          "id": "highlight_text",
-          "name": "higlight text",
-          "description": "write text in the highlight",
-          "type": "string",
-          "required": false
-        }
-      ]
-    },
-    {
-      "id": "tiles_container",
-      "name": "display title container",
-      "description": "Select if you wanna show all title and highligt container",
-      "attribute_definitions": [
-        {
-          "id": "display_titles",
-          "name": "display titles",
-          "description": "display titles",
-          "type": "enum",
-          "values": ["Yes", "No"],
-          "required": true
-        },
-        {
-          "id": "primary_title",
-          "name": "primary tilte",
-          "description": "write the first title",
-          "type": "string",
-          "required": false
-        },
-        {
-          "id": "secondary_title",
-          "name": "secondary_title",
-          "description": "write the second title",
-          "type": "string",
           "required": false
         }
       ]
