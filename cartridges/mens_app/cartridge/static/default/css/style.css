@@ -2242,6 +2242,15 @@ body {
   padding-right: 0px;
   overflow-x: hidden; }
 
+#homepage header {
+  position: absolute;
+  z-index: 10;
+  width: 100%; }
+  #homepage header #navCont {
+    background: rgba(255, 255, 255, 0.7); }
+    #homepage header #navCont:hover {
+      background: #f5f5f5; }
+
 #maincontent .experience-commerce_assets-topBar {
   padding-bottom: 1rem !important; }
 
@@ -2431,38 +2440,43 @@ body {
 .btn-ITBC {
   border: none !important; }
 
-.ITBC-Cards-container .titles-container {
-  display: flex !important;
-  flex-direction: column;
-  color: #fff; }
-  .ITBC-Cards-container .titles-container .highlight-card {
-    background: #b71011;
-    width: fit-content;
-    padding: 3px 7px;
-    font-family: 'Avenir-Next';
-    font-size: 14px; }
-  .ITBC-Cards-container .titles-container .primary-title-card {
-    font-size: 45px;
-    font-family: "AvenirLTStd-Heavy";
-    line-height: initial; }
-  .ITBC-Cards-container .titles-container .secondary-title-card {
-    font-size: 14px;
-    font-family: 'Avenir-Next';
-    margin-top: -10px; }
-
-.ITBC-Cards-container .btn-ITBC-outline {
-  background: no-repeat;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  font-size: 10px;
-  font-family: 'Avenir-Next'; }
-
-.ITBC-Cards-container .ITBC-buttons {
-  justify-content: start !important; }
+.ITBC-Cards-container {
+  padding: 2px; }
+  .ITBC-Cards-container .titles-container {
+    display: flex !important;
+    flex-direction: column;
+    color: #fff; }
+    .ITBC-Cards-container .titles-container .highlight-card {
+      background: #b71011;
+      width: fit-content;
+      padding: 3px 7px;
+      font-family: 'Avenir-Next';
+      font-size: 14px; }
+    .ITBC-Cards-container .titles-container .highlight-card-empty {
+      margin-bottom: 4vh; }
+    .ITBC-Cards-container .titles-container .primary-title-card {
+      font-size: 45px;
+      font-family: "AvenirLTStd-Heavy";
+      line-height: initial; }
+    .ITBC-Cards-container .titles-container .secondary-title-card {
+      font-size: 14px;
+      font-family: 'Avenir-Next';
+      margin-top: -10px; }
+    .ITBC-Cards-container .titles-container .secondary-title-card-empty {
+      content: '';
+      height: 17px; }
+  .ITBC-Cards-container .btn-ITBC-outline {
+    background: no-repeat;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 10px;
+    font-family: 'Avenir-Next'; }
+  .ITBC-Cards-container .ITBC-buttons {
+    justify-content: start !important; }
 
 @media (max-width: 467px) {
   .container-custom-size.container-custom-width-95 .region {

@@ -16,6 +16,23 @@ body {
   overflow-x: hidden;
 }
 
+#homepage{
+  header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+  
+    #navCont{
+      background: rgba(255, 255, 255, 0.7);
+  
+      &:hover{
+        background: #f5f5f5;
+      }
+    }
+  }
+}
+
+
 #maincontent .experience-commerce_assets-topBar {
   padding-bottom: 1rem !important;
 }
@@ -278,6 +295,8 @@ body {
 }
 
 .ITBC-Cards-container {
+  padding: 2px;
+
   .titles-container {
     display: flex !important;
     flex-direction: column;
@@ -291,6 +310,10 @@ body {
       font-size: 14px;
     }
 
+    .highlight-card-empty{
+      margin-bottom: 4vh;
+    }
+
     .primary-title-card {
       font-size: 45px;
       font-family: $font-family-bold;
@@ -301,6 +324,11 @@ body {
       font-size: 14px;
       font-family: 'Avenir-Next';
       margin-top: -10px;
+    }
+
+    .secondary-title-card-empty{
+      content: '';
+      height: 17px;
     }
   }
 
