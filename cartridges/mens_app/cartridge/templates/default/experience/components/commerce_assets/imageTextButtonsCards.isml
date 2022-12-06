@@ -20,12 +20,22 @@
     </div>
     <div class="titles-container display-${pdict.display_titles}">
         <isloop items="${pdict.highlights}" var="highlight" status="loopstatus">
-            <span class="highlight-card display-${highlight.display}">${highlight.highlight_text}</span>
+            <isif condition="${highlight.highlight_text === null}">
+                <div class="highlight-card-empty"></div>
+            <iselse/>
+                <span class="highlight-card display-${highlight.display}">${highlight.highlight_text}</span>
+            </isif>
         </isloop>
+
         <isloop items="${pdict.tiles_container}" var="title" status="loopstatus">
             <span class="primary-title-card">${title.primary_title}</span>
-            <span class="secondary-title-card">${title.secondary_title}</span>
+            <isif condition="${title.secondary_title === null}">
+                <div class="secondary-title-card-empty"></div>
+            <iselse/>
+                <span class="secondary-title-card">${title.secondary_title}</span>
+            </isif>
         </isloop>
+
     </div>
     <div class="ITBC-buttons align-button-${pdict.align_button}" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
       <isloop items="${pdict.buttons}" var="button" status="loopstatus">
