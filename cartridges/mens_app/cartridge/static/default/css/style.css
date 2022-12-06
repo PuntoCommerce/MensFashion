@@ -2385,9 +2385,6 @@ body {
 .display-No {
   display: none !important; }
 
-.text-banner-button {
-  height: 17px !important; }
-
 .scroll-none {
   overflow-y: hidden !important; }
 
@@ -2433,6 +2430,36 @@ body {
 
 .btn-ITBC {
   border: none !important; }
+
+.titles-container {
+  display: flex !important;
+  flex-direction: column;
+  color: #fff; }
+  .titles-container .highlight-card {
+    background: #b71011;
+    width: fit-content;
+    padding: 3px 7px;
+    font-family: 'Avenir-Next';
+    font-size: 14px; }
+  .titles-container .primary-title-card {
+    font-size: 45px;
+    font-family: "AvenirLTStd-Heavy";
+    margin-top: 12px; }
+  .titles-container .secondary-title-card {
+    font-size: 14px;
+    font-family: 'Avenir-Next';
+    margin-top: 3px; }
+
+.btn-ITBC-outline {
+  background: no-repeat;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 10px;
+  font-family: 'Avenir-Next'; }
 
 @media (max-width: 467px) {
   .container-custom-size.container-custom-width-95 .region {
