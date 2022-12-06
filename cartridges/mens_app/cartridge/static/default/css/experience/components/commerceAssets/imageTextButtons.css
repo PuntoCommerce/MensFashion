@@ -56,12 +56,11 @@
 
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 .ITBC-content .ITBC-buttons {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   grid-gap: 30px;
 }

@@ -20,7 +20,7 @@
     </div>
     <div class="titles-container display-${pdict.display_titles}">
         <isloop items="${pdict.highlights}" var="highlight" status="loopstatus">
-            <span class="display-${highlight.display}">${highlight.highlight_text}</span>
+            <span class="highlight-card display-${highlight.display}">${highlight.highlight_text}</span>
         </isloop>
         <isloop items="${pdict.tiles_container}" var="title" status="loopstatus">
             <span class="primary-title-card">${title.primary_title}</span>
