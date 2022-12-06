@@ -2431,26 +2431,26 @@ body {
 .btn-ITBC {
   border: none !important; }
 
-.titles-container {
+.ITBC-Cards-container .titles-container {
   display: flex !important;
   flex-direction: column;
   color: #fff; }
-  .titles-container .highlight-card {
+  .ITBC-Cards-container .titles-container .highlight-card {
     background: #b71011;
     width: fit-content;
     padding: 3px 7px;
     font-family: 'Avenir-Next';
     font-size: 14px; }
-  .titles-container .primary-title-card {
+  .ITBC-Cards-container .titles-container .primary-title-card {
     font-size: 45px;
     font-family: "AvenirLTStd-Heavy";
-    margin-top: 12px; }
-  .titles-container .secondary-title-card {
+    line-height: initial; }
+  .ITBC-Cards-container .titles-container .secondary-title-card {
     font-size: 14px;
     font-family: 'Avenir-Next';
-    margin-top: 3px; }
+    margin-top: -10px; }
 
-.btn-ITBC-outline {
+.ITBC-Cards-container .btn-ITBC-outline {
   background: no-repeat;
   border: 2px solid #fff;
   border-radius: 4px;
@@ -2460,6 +2460,9 @@ body {
   padding: 12px 20px;
   font-size: 10px;
   font-family: 'Avenir-Next'; }
+
+.ITBC-Cards-container .ITBC-buttons {
+  justify-content: start !important; }
 
 @media (max-width: 467px) {
   .container-custom-size.container-custom-width-95 .region {
