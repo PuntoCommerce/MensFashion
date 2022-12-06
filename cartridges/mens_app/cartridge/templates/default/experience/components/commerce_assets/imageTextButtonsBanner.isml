@@ -12,19 +12,11 @@
   <img class="d-sm-block d-md-none" style="object-position:${pdict.backgroundImageMobile.focalPointX} ${pdict.backgroundImageMobile.focalPointY};filter: brightness(${pdict.imageBrightness});"
     src="${pdict.backgroundImageMobile.src.desktop}" alt="backgroud image Mobile" />
   <div class="ITBC-content cust-row" style="${pdict.layoutSize.itemsLayout.content}">
-    <div class="titles-container display-${pdict.display_titles}">
-
+    
+    <div class="ITBC-buttons align-button-${pdict.align_button}" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
         <isloop items="${pdict.tiles_container}" var="title" status="loopstatus">
             <span class="primary-title-card">${title.primary_title}</span>
-            <isif condition="${title.secondary_title === null}">
-                <div class="secondary-title-card-empty"></div>
-            <iselse/>
-                <span class="secondary-title-card">${title.secondary_title}</span>
-            </isif>
         </isloop>
-
-    </div>
-    <div class="ITBC-buttons align-button-${pdict.align_button}" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
       <isloop items="${pdict.buttons}" var="button" status="loopstatus">
         <isif condition="${button.active}">
           <a class="with display-${pdict.display_button} margin-top-${pdict.marginT}" href="${button.url}">

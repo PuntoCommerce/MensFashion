@@ -88,8 +88,7 @@ module.exports.render = function (context, modelIn) {
 
   model.tiles_container = [
     {
-      primary_title: content.primary_title,
-      secondary_title: content.secondary_title 
+      primary_title: content.primary_title
     }
   ]
 
@@ -112,6 +111,6 @@ module.exports.render = function (context, modelIn) {
   ];
 
   return new Template(
-    "experience/components/commerce_assets/imageTextButtonsCards"
+    "experience/components/commerce_assets/imageTextButtonsBanner"
   ).render(model).text;
 };

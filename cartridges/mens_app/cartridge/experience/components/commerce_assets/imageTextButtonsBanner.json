@@ -1,5 +1,5 @@
 {
-  "name": "Image Text and Buttons Cards",
+  "name": "Image Text and Buttons Banner",
   "description": "Image Text and Buttons to redirect to other pages whit cards",
   "group": "commerce_assets",
   "attribute_definition_groups": [
@@ -171,7 +171,7 @@
         },
         {
           "id": "primary_title",
-          "name": "Title card info ",
+          "name": "Title card info",
           "description": "write the first title",
           "type": "string",
           "required": false
