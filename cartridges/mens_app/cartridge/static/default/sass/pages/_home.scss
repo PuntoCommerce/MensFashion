@@ -16,18 +16,16 @@ body {
   overflow-x: hidden;
 }
 
-#homepage{
-  header {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-  
-    #navCont{
-      background: rgba(255, 255, 255, 0.7);
-  
-      &:hover{
-        background: #f5f5f5;
-      }
+header#homepage {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+
+  #navCont {
+    background: rgba(255, 255, 255, 0.7);
+
+    &:hover {
+      background: #f5f5f5;
     }
   }
 }
@@ -310,7 +308,7 @@ body {
       font-size: 14px;
     }
 
-    .highlight-card-empty{
+    .highlight-card-empty {
       margin-bottom: 4vh;
     }
 
@@ -326,7 +324,7 @@ body {
       margin-top: -10px;
     }
 
-    .secondary-title-card-empty{
+    .secondary-title-card-empty {
       content: '';
       height: 17px;
     }
@@ -346,6 +344,95 @@ body {
 
   .ITBC-buttons {
     justify-content: start !important;
+  }
+}
+
+.video-hero-container {
+  display: flex;
+  align-items: center;
+
+  .video-hero-desktop {
+    width: 100%;
+
+    &__texts {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -30vh);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 45px;
+
+      &--primary{
+        color: #fff;
+        font-family: $font-family-normal;
+        font-size: 24px;
+      }
+
+      &--secondary{
+        color: #fff;
+        font-family: $font-family-bold-2;
+        font-size: 40px;
+      }
+
+      &--terciary{
+        color: #fff;
+        font-family: $font-family-bold-2;
+        font-size: 64px;
+      }
+    }
+
+    &__buttons {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        &--white {
+          width: 158px;
+          padding: 14px 17px;
+          background: #f2f2f2;
+          border: 1px solid #cdcdcd;
+          border-radius: 3px;
+          font-family: $font-family-bold;
+          font-size: 18px;
+
+          &:hover {
+            background: #e2e2e2;
+          }
+        }
+
+        &--black {
+          width: 158px;
+          padding: 14px 17px;
+          background: #292929;
+          border: 1px solid #292929;
+          border-radius: 3px;
+          color: #fff;
+          font-family: $font-family-bold;
+          font-size: 18px;
+
+          &:hover {
+            background: #f77b28;
+          }
+        }
+      }
+    }
+
+    &__date{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 54vh);
+
+      span{
+        font-size: 12px;
+        font-family: $font-family-normal;
+      }
+    }
   }
 }
 

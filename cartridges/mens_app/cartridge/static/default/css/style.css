@@ -2242,13 +2242,13 @@ body {
   padding-right: 0px;
   overflow-x: hidden; }
 
-#homepage header {
+header#homepage {
   position: absolute;
   z-index: 10;
   width: 100%; }
-  #homepage header #navCont {
+  header#homepage #navCont {
     background: rgba(255, 255, 255, 0.7); }
-    #homepage header #navCont:hover {
+    header#homepage #navCont:hover {
       background: #f5f5f5; }
 
 #maincontent .experience-commerce_assets-topBar {
@@ -2477,6 +2477,68 @@ body {
     font-family: 'Avenir-Next'; }
   .ITBC-Cards-container .ITBC-buttons {
     justify-content: start !important; }
+
+.video-hero-container {
+  display: flex;
+  align-items: center; }
+  .video-hero-container .video-hero-desktop {
+    width: 100%; }
+    .video-hero-container .video-hero-desktop__texts {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -30vh);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 45px; }
+      .video-hero-container .video-hero-desktop__texts--primary {
+        color: #fff;
+        font-family: "Avenir-Next";
+        font-size: 24px; }
+      .video-hero-container .video-hero-desktop__texts--secondary {
+        color: #fff;
+        font-family: "Avenir-bold";
+        font-size: 40px; }
+      .video-hero-container .video-hero-desktop__texts--terciary {
+        color: #fff;
+        font-family: "Avenir-bold";
+        font-size: 64px; }
+    .video-hero-container .video-hero-desktop__buttons {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0); }
+      .video-hero-container .video-hero-desktop__buttons__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px; }
+        .video-hero-container .video-hero-desktop__buttons__container--white {
+          width: 158px;
+          padding: 14px 17px;
+          background: #f2f2f2;
+          border: 1px solid #cdcdcd;
+          border-radius: 3px;
+          font-family: "AvenirLTStd-Heavy";
+          font-size: 18px; }
+          .video-hero-container .video-hero-desktop__buttons__container--white:hover {
+            background: #e2e2e2; }
+        .video-hero-container .video-hero-desktop__buttons__container--black {
+          width: 158px;
+          padding: 14px 17px;
+          background: #292929;
+          border: 1px solid #292929;
+          border-radius: 3px;
+          color: #fff;
+          font-family: "AvenirLTStd-Heavy";
+          font-size: 18px; }
+          .video-hero-container .video-hero-desktop__buttons__container--black:hover {
+            background: #f77b28; }
+    .video-hero-container .video-hero-desktop__date {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 54vh); }
+      .video-hero-container .video-hero-desktop__date span {
+        font-size: 12px;
+        font-family: "Avenir-Next"; }
 
 @media (max-width: 467px) {
   .container-custom-size.container-custom-width-95 .region {
