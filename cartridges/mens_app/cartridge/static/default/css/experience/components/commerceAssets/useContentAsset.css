@@ -12,9 +12,6 @@
 }
 
 @media (max-width: 772px) {
-  .useContentAsset .video-hero-desktop {
-    display: none;
-  }
 
   .useContentAsset .video-hero-mobile {
     display: block;
