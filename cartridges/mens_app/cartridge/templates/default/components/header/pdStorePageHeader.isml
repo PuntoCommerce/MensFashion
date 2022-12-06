@@ -1,4 +1,4 @@
-<header>
+<header id="${pdict.page.ID}">
     <iscomment> <isinclude template="/components/header/skipNav" /> </iscomment>
     <isif condition="${pdict.regions.headerbanner}">
         <!-- Campaign Banner Component renders here -->
