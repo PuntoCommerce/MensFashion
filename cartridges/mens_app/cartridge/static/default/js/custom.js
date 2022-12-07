@@ -514,7 +514,7 @@ function addToWishlistButton(e, type) {
   var pid = e.id
   const textSucccess = 'Producto agregado a Mis Favoritos, ahora pudes localizar este producto iniciando sesión en tu cuenta.'
   const textDeleted = 'Producto eliminado de mis favoritos'
-
+  
   if (e.children[0].classList.contains('wishlist_unselected')) {
     $.ajax({
       url: url,
@@ -524,51 +524,51 @@ function addToWishlistButton(e, type) {
         pid: pid
       }
     });
-
+    
     $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
-      +
-      textSucccess
-      +
-      `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-      +
-      '</div>');
-
+    +
+    textSucccess
+    +
+    `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+    +
+    '</div>');
+    
     setTimeout(() => {
       $('.add-to-wishlist-messages .alert-success').remove();
     }, 3000);
-
-
+    
+    
     e.children[0].classList.add("wishlist_selected");
     e.children[0].classList.remove("wishlist_unselected");
     e.classList.remove('add-to-wish-list')
     e.classList.add('remove-btn')
-
+    
     e.setAttribute('data-href', '/on/demandware.store/Sites-MensFashion-Site/es/Wishlist-RemoveProduct?pid=' + pid);
-
+    
     return;
   }
-
+  
   if (e.children[0].classList.contains("wishlist_selected")) {
     var url = e.dataset.href;
-
+    
     fetch(url).then(res => console.log(res))
-      .catch(error => console.log(error))
-
+    .catch(error => console.log(error))
+    
     e.children[0].classList.remove("wishlist_selected");
     e.children[0].classList.add("wishlist_unselected");
-
+    
     e.setAttribute('data-href', '/Wishlist-AddProduct')
     e.classList.add('add-to-wish-list')
     e.classList.remove('remove-btn')
-
+    
     $('.add-to-wishlist-messages').append('<div class="add-to-wishlist-alert text-center alert-success alert-dismissible fade show" role="alert">'
-      +
-      textDeleted
-      +
-      `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
-      +
-      '</div>');
-
+    +
+    textDeleted
+    +
+    `<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>`
+    +
+    '</div>');
+    
     setTimeout(() => {
       $('.add-to-wishlist-messages .alert-success').remove();
     }, 3000);

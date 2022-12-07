@@ -3461,7 +3461,7 @@ del {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #64656a;
+        background-color: black;
         height: 50px;
         width: 50px;
         border-radius: 50%; }
@@ -3475,7 +3475,7 @@ del {
       width: 7%;
       height: 2px;
       margin: 0 10px 0 10px;
-      background-color: #64656a; }
+      background-color: black; }
       .checkout__stepper--divider-done, .checkout__stepper--divider.active {
         background-color: #000000; }
   .checkout__order {
