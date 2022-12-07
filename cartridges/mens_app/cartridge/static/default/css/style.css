@@ -2232,10 +2232,6 @@ ul {
     width: 18px; } }
 
 /* **************************** HOME **************************** */
-*,
-body {
-  font-size: "Avenir-Next" !important; }
-
 #maincontent .container {
   max-width: 100vw;
   padding-left: 0px;
@@ -2509,7 +2505,8 @@ body {
           border: 1px solid #cdcdcd;
           border-radius: 3px;
           font-family: "AvenirLTStd-Heavy";
-          font-size: 18px; }
+          font-size: 18px;
+          color: #000000; }
           .video-hero-container .video-hero-desktop__buttons__container--white:hover {
             background: #e2e2e2; }
         .video-hero-container .video-hero-desktop__buttons__container--black {
@@ -2550,6 +2547,32 @@ header#homepage {
   position: relative;
   z-index: -1;
   height: 45vh; }
+
+.carousel-9512e1c0a8e4670211309bfb9b {
+  background-image: url("../../images/home/fondo_mundial.png"); }
+  .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner {
+    padding: 50px 30px; }
+    .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons {
+      flex-direction: row;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: max-content;
+      color: #fff; }
+      .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons span {
+        font-family: "Avenir-Next";
+        font-weight: 700; }
+      .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons .btn-ITBC-outline {
+        background: no-repeat;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        font-size: 10px;
+        font-family: 'Avenir-Next'; }
 
 @media (max-width: 467px) {
   .container-custom-size.container-custom-width-95 .region {
