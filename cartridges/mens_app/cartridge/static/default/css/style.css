@@ -2393,37 +2393,6 @@ ul {
   .commerce-link:hover {
     color: #fff; }
 
-@media (max-width: 544px) {
-  .mobile-2r-2c .region {
-    margin-bottom: 0px; }
-  .ITBC-content .btn-ITBC {
-    min-width: 165px;
-    font-size: 17px;
-    padding: 1px 0px;
-    letter-spacing: 0;
-    padding: 15px 5px !important;
-    border: none !important; }
-  #customBannerCarousel .ITBC-buttons {
-    position: initial;
-    margin-top: 25px; }
-  .ITBC-content h1,
-  .ITBC-content p,
-  .ITBC-content a {
-    margin: 0;
-    line-height: 45px; }
-  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
-    margin: 0;
-    line-height: initial; }
-  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
-    justify-content: flex-end !important; }
-  .ITBC-content h1 {
-    font-size: 40px; }
-  .experience-commerce_layouts-navTabs .strike-through .value,
-  .experience-commerce_layouts-navTabs .sales .value {
-    font-size: 20px !important; }
-  .experience-commerce_layouts-navTabs .summary__footer .btn__small {
-    font-size: 20px; } }
-
 .btn-ITBC {
   border: none !important; }
 
@@ -2473,11 +2442,12 @@ ul {
     .video-hero-container .video-hero-desktop__texts {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, -27vh);
+      transform: translate(-50%, -15vh);
       display: flex;
       flex-direction: column;
       align-items: center;
-      line-height: 45px; }
+      line-height: 45px;
+      width: max-content; }
       .video-hero-container .video-hero-desktop__texts--primary {
         color: #fff;
         font-family: "Avenir-Next";
@@ -2493,7 +2463,7 @@ ul {
     .video-hero-container .video-hero-desktop__buttons {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 0); }
+      transform: translate(-50%, 15vh); }
       .video-hero-container .video-hero-desktop__buttons__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -2528,42 +2498,43 @@ ul {
         font-size: 12px;
         font-family: "Avenir-Next"; }
 
-header#homepage {
+header nav.homepage {
   position: absolute;
   z-index: 10;
-  width: 100%; }
-  header#homepage #navCont {
-    background: rgba(255, 255, 255, 0.7); }
-    header#homepage #navCont:hover {
-      background: #f5f5f5; }
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7); }
+  header nav.homepage:hover {
+    background: #f5f5f5; }
 
 .experience-component.experience-commerce_layouts-carousel,
 .experience-component.experience-commerce_assets-imageTextButtonsCards,
-#carousel-9512e1c0a8e4670211309bfb9b,
 .experience-component.experience-commerce_layouts-containerCustomSize {
   background: #f5f5f5; }
 
 .photo-tile-figure {
   position: relative;
   z-index: -1;
-  height: 45vh; }
+  height: 45vh;
+  bottom: -60vh; }
 
-.carousel-9512e1c0a8e4670211309bfb9b {
+#carousel-9512e1c0a8e4670211309bfb9b {
   background-image: url("../../images/home/fondo_mundial.png"); }
-  .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner {
+  #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner {
     padding: 50px 30px; }
-    .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons {
-      flex-direction: row;
+    #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons {
+      flex-direction: row !important;
       position: absolute;
       bottom: 10%;
       left: 50%;
       transform: translate(-50%, 50%);
-      width: max-content;
-      color: #fff; }
-      .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons span {
+      width: inherit;
+      color: #fff;
+      padding: 0 7px; }
+      #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons span {
         font-family: "Avenir-Next";
-        font-weight: 700; }
-      .carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons .btn-ITBC-outline {
+        font-weight: 700;
+        width: max-content; }
+      #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons .btn-ITBC-outline {
         background: no-repeat;
         border: 2px solid #fff;
         border-radius: 4px;
@@ -2574,9 +2545,15 @@ header#homepage {
         font-size: 10px;
         font-family: 'Avenir-Next'; }
 
-@media (max-width: 467px) {
-  .container-custom-size.container-custom-width-95 .region {
-    padding: 7px !important; } }
+@media (max-width: 1324px) {
+  .promo-carousel__wrapper-countdown {
+    padding-right: 95px;
+    align-items: center; } }
+
+@media (max-width: 1314px) {
+  .promo-carousel__wrapper-countdown {
+    padding-right: 80px;
+    align-items: center; } }
 
 @media (max-width: 991px) {
   .customTextBox-component-container h1 {
@@ -2622,9 +2599,55 @@ header#homepage {
   .customTextBox-component-container br {
     display: none; } }
 
+@media (max-width: 543px) {
+  .mobile-2r-2c .region {
+    margin-bottom: 0px; }
+  .ITBC-content .btn-ITBC {
+    min-width: 165px;
+    font-size: 17px;
+    padding: 1px 0px;
+    letter-spacing: 0;
+    padding: 15px 5px !important;
+    border: none !important; }
+  #customBannerCarousel .ITBC-buttons {
+    position: initial;
+    margin-top: 25px; }
+  .ITBC-content h1,
+  .ITBC-content p,
+  .ITBC-content a {
+    margin: 0;
+    line-height: 45px; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content p {
+    margin: 0;
+    line-height: initial; }
+  .experience-commerce_layouts-mobileGrid2r1c .ITBC-content {
+    justify-content: flex-end !important; }
+  .ITBC-content h1 {
+    font-size: 40px; }
+  .experience-commerce_layouts-navTabs .strike-through .value,
+  .experience-commerce_layouts-navTabs .sales .value {
+    font-size: 20px !important; }
+  .experience-commerce_layouts-navTabs .summary__footer .btn__small {
+    font-size: 20px; }
+  .photo-tile-figure {
+    bottom: -70vh; }
+  .video-hero-container {
+    display: flex;
+    align-items: center; }
+    .video-hero-container .video-hero-desktop {
+      width: 100%; }
+      .video-hero-container .video-hero-desktop__buttons__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px; } }
+
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
     font-size: 13px; } }
+
+@media (max-width: 467px) {
+  .container-custom-size.container-custom-width-95 .region {
+    padding: 7px !important; } }
 
 @media (max-width: 453px) {
   .promo-carousel .btn__small {
@@ -2641,16 +2664,6 @@ header#homepage {
 @media (max-width: 330px) {
   .promo-carousel .btn__small {
     font-size: 8px; } }
-
-@media (max-width: 1324px) {
-  .promo-carousel__wrapper-countdown {
-    padding-right: 95px;
-    align-items: center; } }
-
-@media (max-width: 1314px) {
-  .promo-carousel__wrapper-countdown {
-    padding-right: 80px;
-    align-items: center; } }
 
 .refinements h2 {
   font-family: "Avenir-LT-Std" !important; }
