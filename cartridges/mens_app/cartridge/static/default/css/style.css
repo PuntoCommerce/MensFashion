@@ -2493,7 +2493,8 @@ ul {
     .video-hero-container .video-hero-desktop__date {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 54vh); }
+      transform: translate(-50%, 54vh);
+      width: max-content; }
       .video-hero-container .video-hero-desktop__date span {
         font-size: 12px;
         font-family: "Avenir-Next"; }
@@ -2608,7 +2609,35 @@ header nav.homepage {
   .margin-top-50px {
     margin-top: 50px !important; }
   .customTextBox-component-container br {
-    display: none; } }
+    display: none; }
+  .video-hero-container .video-hero-desktop__date {
+    transform: translate(-50%, 32vh); } }
+
+@media (max-width: 743px) {
+  .video-hero-container {
+    display: flex;
+    align-items: center; }
+    .video-hero-container .video-hero-desktop {
+      width: 250vw; }
+      .video-hero-container .video-hero-desktop__buttons__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px; }
+      .video-hero-container .video-hero-desktop__texts {
+        transform: translate(-50%, -15vh); }
+        .video-hero-container .video-hero-desktop__texts--primary {
+          font-size: 14px; }
+        .video-hero-container .video-hero-desktop__texts--secondary {
+          font-size: 22px; }
+        .video-hero-container .video-hero-desktop__texts--terciary {
+          font-size: 32px; }
+      .video-hero-container .video-hero-desktop__date {
+        transform: translate(-50%, 42vh);
+        width: 90%;
+        text-align: center; }
+        .video-hero-container .video-hero-desktop__date span {
+          font-size: 12px;
+          font-family: "Avenir-Next"; } }
 
 @media (max-width: 543px) {
   .mobile-2r-2c .region {
@@ -2642,33 +2671,8 @@ header nav.homepage {
     font-size: 20px; }
   .photo-tile-figure {
     bottom: -90vh; }
-  .video-hero-container {
-    display: flex;
-    align-items: center; }
-    .video-hero-container .video-hero-desktop {
-      width: 250vw; }
-      .video-hero-container .video-hero-desktop__buttons__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px; }
-      .video-hero-container .video-hero-desktop__texts {
-        transform: translate(-50%, -15vh); }
-        .video-hero-container .video-hero-desktop__texts--primary {
-          font-size: 14px; }
-        .video-hero-container .video-hero-desktop__texts--secondary {
-          font-size: 22px; }
-        .video-hero-container .video-hero-desktop__texts--terciary {
-          font-size: 32px; }
-      .video-hero-container .video-hero-desktop__date {
-        transform: translate(-50%, 42vh);
-        width: 90%;
-        text-align: center; }
-        .video-hero-container .video-hero-desktop__date span {
-          font-size: 12px;
-          font-family: "Avenir-Next"; }
-  #carousel-90931919792f25f303f3259d58 .indicators-xs {
-    padding: 1.1rem !important; }
-  #carousel-316c8bfb97dcd2cf92829eb636 .indicators-xs {
+  #carousel-90931919792f25f303f3259d58,
+  #carousel-316c8bfb97dcd2cf92829eb636 {
     padding: 1.1rem !important; } }
 
 @media (max-width: 480px) {

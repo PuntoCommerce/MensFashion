@@ -361,6 +361,7 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, 54vh);
+      width: max-content;
 
       span {
         font-size: 12px;
@@ -445,13 +446,13 @@ header {
     font-size: 24px;
   }
 
-  P{
+  P {
     font-size: 16px;
   }
 }
 
-#carousel-f9664ca64fe3972d4aa66eb5ec{
-  .ITC-container{
+#carousel-f9664ca64fe3972d4aa66eb5ec {
+  .ITC-container {
     padding: 0 2px;
   }
 }
@@ -552,6 +553,61 @@ header {
       display: none;
     }
   }
+
+  .video-hero-container {
+    .video-hero-desktop {
+      &__date {
+        transform: translate(-50%, 32vh);
+      }
+    }
+  }
+}
+
+@media (max-width: 743px) {
+  .video-hero-container {
+    display: flex;
+    align-items: center;
+
+    .video-hero-desktop {
+      width: 250vw;
+
+      &__buttons {
+
+        &__container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+      }
+
+      &__texts {
+        transform: translate(-50%, -15vh);
+
+        &--primary {
+          font-size: 14px;
+        }
+
+        &--secondary {
+          font-size: 22px;
+        }
+
+        &--terciary {
+          font-size: 32px;
+        }
+      }
+
+      &__date {
+        transform: translate(-50%, 42vh);
+        width: 90%;
+        text-align: center;
+
+        span {
+          font-size: 12px;
+          font-family: $font-family-normal;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 543px) {
@@ -606,61 +662,9 @@ header {
     bottom: -90vh;
   }
 
-  .video-hero-container {
-    display: flex;
-    align-items: center;
-
-    .video-hero-desktop {
-      width: 250vw;
-
-      &__buttons {
-
-        &__container {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-gap: 10px;
-        }
-      }
-
-      &__texts {
-        transform: translate(-50%, -15vh);
-
-        &--primary {
-          font-size: 14px;
-        }
-
-        &--secondary {
-          font-size: 22px;
-        }
-
-        &--terciary {
-          font-size: 32px;
-        }
-      }
-
-      &__date {
-        transform: translate(-50%, 42vh);
-        width: 90%;
-        text-align: center;
-
-        span {
-          font-size: 12px;
-          font-family: $font-family-normal;
-        }
-      }
-    }
-  }
-
-  #carousel-90931919792f25f303f3259d58 {
-    .indicators-xs {
-      padding: 1.1rem !important;
-    }
-  }
-
+  #carousel-90931919792f25f303f3259d58,
   #carousel-316c8bfb97dcd2cf92829eb636 {
-    .indicators-xs {
-      padding: 1.1rem !important;
-    }
+    padding: 1.1rem !important;
   }
 }
 
