@@ -4059,3 +4059,8 @@ a .oauth-facebook--button {
   .oauth-google--button span,
   .oauth-facebook--button span {
     font-size: 10px; } }
+
+#paquetes3x1699 .container-custom-size {
+  overflow: hidden; }
+  #paquetes3x1699 .container-custom-size .editorialRichText-component-container .editorialRichText-component-container h4 {
+    font-size: 20px; }
