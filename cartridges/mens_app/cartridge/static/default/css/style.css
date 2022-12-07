@@ -2545,6 +2545,17 @@ header nav.homepage {
         font-size: 10px;
         font-family: 'Avenir-Next'; }
 
+.editorialRichText-component-container {
+  margin: 50px 0; }
+  .editorialRichText-component-container strong:nth-child(1) {
+    display: flex;
+    font-size: 24px; }
+  .editorialRichText-component-container P {
+    font-size: 16px; }
+
+#carousel-f9664ca64fe3972d4aa66eb5ec .ITC-container {
+  padding: 0 2px; }
+
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
     padding-right: 95px;
@@ -2630,16 +2641,35 @@ header nav.homepage {
   .experience-commerce_layouts-navTabs .summary__footer .btn__small {
     font-size: 20px; }
   .photo-tile-figure {
-    bottom: -70vh; }
+    bottom: -90vh; }
   .video-hero-container {
     display: flex;
     align-items: center; }
     .video-hero-container .video-hero-desktop {
-      width: 100%; }
+      width: 250vw; }
       .video-hero-container .video-hero-desktop__buttons__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px; } }
+        grid-gap: 10px; }
+      .video-hero-container .video-hero-desktop__texts {
+        transform: translate(-50%, -15vh); }
+        .video-hero-container .video-hero-desktop__texts--primary {
+          font-size: 14px; }
+        .video-hero-container .video-hero-desktop__texts--secondary {
+          font-size: 22px; }
+        .video-hero-container .video-hero-desktop__texts--terciary {
+          font-size: 32px; }
+      .video-hero-container .video-hero-desktop__date {
+        transform: translate(-50%, 42vh);
+        width: 90%;
+        text-align: center; }
+        .video-hero-container .video-hero-desktop__date span {
+          font-size: 12px;
+          font-family: "Avenir-Next"; }
+  #carousel-90931919792f25f303f3259d58 .indicators-xs {
+    padding: 1.1rem !important; }
+  #carousel-316c8bfb97dcd2cf92829eb636 .indicators-xs {
+    padding: 1.1rem !important; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
@@ -2655,7 +2685,14 @@ header nav.homepage {
 
 @media (max-width: 370px) {
   .summary__footer .btn__small {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .video-hero-container {
+    display: flex;
+    align-items: center; }
+    .video-hero-container .video-hero-desktop {
+      width: 250vw; }
+      .video-hero-container .video-hero-desktop__date {
+        transform: translate(-50%, 36vh); } }
 
 @media (max-width: 345px) {
   .promo-carousel .btn__small {

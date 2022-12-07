@@ -20,7 +20,7 @@
     </div>
     <div class="titles-container display-${pdict.display_titles}">
         <isloop items="${pdict.highlights}" var="highlight" status="loopstatus">
-            <isif condition="${highlight.highlight_text === null}">
+            <isif condition="${highlight.highlight_text === 'null'}">
                 <div class="highlight-card-empty"></div>
             <iselse/>
                 <span class="highlight-card display-${highlight.display}">${highlight.highlight_text}</span>
