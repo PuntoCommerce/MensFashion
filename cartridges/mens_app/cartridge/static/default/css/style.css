@@ -2757,7 +2757,7 @@ header nav.homepage {
     font-size: 16px;
     margin: auto; }
     .check-custom-container .check-custom button {
-      font-size: 16px;
+      font-size: 12px;
       padding: 7px 0; }
       .check-custom-container .check-custom button:focus {
         outline: 0; }
