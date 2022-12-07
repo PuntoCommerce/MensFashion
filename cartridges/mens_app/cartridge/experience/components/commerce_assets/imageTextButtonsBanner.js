@@ -75,17 +75,23 @@ module.exports.render = function (context, modelIn) {
     content.backgroundImageMobile
   );
   model.imageBrightness = content.imageBrightness ? content.imageBrightness : "100%";
-  model.text = content.text ? context.text : "";
   model.layoutSize = {
     componentSize: getComponentSize(content.componentSize),
     itemsLayout: getItemsLayout(content.itemsLayout),
   };
-  model.markupLayout = content.markupLayout || "center";
   model.display_button = content.display_button ? content.display_button : 'Yes';
+  model.button_design = content.button_design ? content.button_design : 'ITBC';
+  model.display_titles = content.display_titles ? content.display_titles : 'Yes';
   model.marginT = content.marginT ? content.marginT : ''
   model.align_button = content.align_button ? content.align_button : ''
-  model.text_info = content.text_info ? content.text_info : ''
-  
+  model.display_titles = content.display_titles ? content.display_titles : ''
+
+  model.tiles_container = [
+    {
+      primary_title: content.primary_title
+    }
+  ]
+
   model.buttons = [
     {
       active: content.text1 && content.url1 ? true : false,
@@ -105,6 +111,6 @@ module.exports.render = function (context, modelIn) {
   ];
 
   return new Template(
-    "experience/components/commerce_assets/imageTextButtons"
+    "experience/components/commerce_assets/imageTextButtonsBanner"
   ).render(model).text;
 };

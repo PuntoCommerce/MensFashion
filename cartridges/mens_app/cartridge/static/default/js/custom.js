@@ -576,4 +576,11 @@ function addToWishlistButton(e, type) {
   }
 }
 
+window.addEventListener('scroll', () =>{
+  const valueScroll = 4*window.scrollY/-12;
+  if($('.photo-tile-image')){
+      $('.photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
+  }    
+});
+
 localValues();
