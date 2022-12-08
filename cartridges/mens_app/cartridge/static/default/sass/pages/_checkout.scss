@@ -608,3 +608,22 @@
 .shipment-selector-block {
   padding: 0!important;
 }
+
+//////Cart
+.row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+  padding: 0!important;
+  @include respond(phone) {
+    padding: 0 0 3rem 0;
+  }
+}
+.cart {
+  &_bottom {
+    margin: 32px 0!important;
+  }
+}
+
+.row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+  @include respond(phone) {
+    height: calc(100vh - (82px + 96px + 149px));
+  }
+}
