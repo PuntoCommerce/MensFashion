@@ -583,5 +583,18 @@
 
 ///Button shipping
 .btn.btn--gray.btn__small.text-uppercase.btn-block.submit-shipping.col-sm-12.col-lg-10 {
-  margin: 0 auto;
+  flex: 1;
+  max-width: 100%;
+}
+
+.card-body.shipping-content {
+  padding: 0;
+}
+
+.shipping-address {
+  padding: 0 25px;
+}
+
+.select-store__wrapper {
+  padding: 0 2px 0 0!important;
 }

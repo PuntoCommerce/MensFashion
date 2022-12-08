@@ -14,7 +14,7 @@
     <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
         
 
-        <fieldset class="shipment-selector-btns">
+        <fieldset class="shipment-selector-btns no-padding">
             <h3 class="checkout-shipping-method">${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
             <div class="row">
                 <div class="col-12 col-lg-6 mb-3">
@@ -99,7 +99,7 @@
             </iscomment>
         </div>
 
-        <fieldset class="pickup-in-store" data-url="${shippingModel.pickupInstoreUrl}">
+        <fieldset class="pickup-in-store no-padding" data-url="${shippingModel.pickupInstoreUrl}">
             <isif condition="${shippingModel.productLineItems.items[0].fromStoreId}">
                 <isinclude
                     url="${URLUtils.url('Stores-GetStoreById', 'storeId', shippingModel.productLineItems.items[0].fromStoreId)}" />
