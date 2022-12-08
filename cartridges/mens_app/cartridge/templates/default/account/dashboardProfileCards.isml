@@ -19,11 +19,11 @@
             <isinclude template="account/order/orderHistoryCard" />
         </isif>
         <!---Payment--->
-        <isinclude template="account/paymentCard" />
+        <iscomment> <isinclude template="account/paymentCard" /> </iscomment>
         <!---Paypal payment block--->
-        <isif condition="${pdict.paypal && (!empty(pdict.paypal.savedBA) || pdict.paypal.billingAgreementEnabled)}">
+        <iscomment> <isif condition="${pdict.paypal && (!empty(pdict.paypal.savedBA) || pdict.paypal.billingAgreementEnabled)}">
             <isinclude template="account/paypal/paymentPaypal" />
-        </isif>
+        </isif> </iscomment>
         <isif condition="${pdict.account.wishlist}">
             <!---Wishlist--->
             <div class="wishlist-account-card"
