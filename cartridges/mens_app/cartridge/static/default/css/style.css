@@ -3832,6 +3832,9 @@ del {
   .row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
     height: calc(100vh - (82px + 96px + 149px)); } }
 
+.mt-5.mb-5.checkout.container-custom {
+  min-height: calc(100vh - 325px); }
+
 .accountBtns {
   display: flex;
   font-size: 16px;
