@@ -2772,7 +2772,8 @@ header nav.homepage {
     font-weight: bold;
     font-size: 18px;
     padding: 4px 10px 0 10px;
-    font-family: "Avenir-Next"; }
+    font-family: "Avenir-Next";
+    display: none; }
 
 .add-to-wishlist-messages .add-to-wishlist-alert {
   z-index: 1000;
