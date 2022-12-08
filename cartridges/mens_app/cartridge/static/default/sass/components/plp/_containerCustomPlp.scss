@@ -5,9 +5,10 @@
 }
 
 .container-custom-plp .breadcrumb{
-    margin-right: 26px;
-
-    @media (max-width: 390px) {
-        margin-right: 0;
+    margin-right: 0;
+    
+    
+    @include respond(phone) {
+        margin-right: 96px;
     }
 }

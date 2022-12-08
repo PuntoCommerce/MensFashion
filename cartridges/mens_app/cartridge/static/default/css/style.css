@@ -1378,10 +1378,10 @@ ul {
   margin: 0 auto; }
 
 .container-custom-plp .breadcrumb {
-  margin-right: 26px; }
-  @media (max-width: 390px) {
+  margin-right: 0; }
+  @media only screen and (min-width: 37.5em) {
     .container-custom-plp .breadcrumb {
-      margin-right: 0; } }
+      margin-right: 96px; } }
 
 .filters {
   margin: 0;
