@@ -3418,6 +3418,9 @@ del {
   .sizes-guide-cont {
     width: 65% !important; } }
 
+.carousel-inner .product-tile .tile-image {
+  border: none; }
+
 .checkout {
   font-family: "Avenir-Next" !important;
   font-size: 16px; }
