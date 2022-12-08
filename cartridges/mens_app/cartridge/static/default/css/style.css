@@ -422,7 +422,7 @@ h5, html, body {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container-boilerplate {
-  max-width: 1200px;
+  max-width: 1444px;
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -461,6 +461,26 @@ h5, html, body {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+.container-custom {
+  max-width: 1444px;
+  margin: 0 auto;
+  width: 93%; }
+  @media only screen and (min-width: 75em) {
+    .container-custom {
+      width: 90%; } }
+  .container-custom--navigation {
+    width: 100%; }
+    @media only screen and (min-width: 37.5em) {
+      .container-custom--navigation {
+        width: 90%; } }
+  .container-custom--smaller {
+    width: 100%;
+    padding: 0 5% 0 3.5rem; }
+    @media only screen and (min-width: 37.5em) {
+      .container-custom--smaller {
+        width: 95%;
+        padding: 0; } }
 
 /* Filter blur in all the element */
 .filter-blur {
@@ -4008,6 +4028,11 @@ del {
   #myaccount p {
     margin-bottom: 0;
     margin-left: 10px; }
+
+.order-list-container .card-header.clearfix,
+.order-list-container .card-body,
+.order-list-container .card-footer {
+  width: 100%; }
 
 a:hover {
   text-decoration: none; }
