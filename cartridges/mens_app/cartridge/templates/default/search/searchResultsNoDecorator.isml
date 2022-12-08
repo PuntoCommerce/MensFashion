@@ -49,6 +49,8 @@
                 <isif condition="${pdict.productSearch.productIds.length > 0}">
                     <div class="row grid-header">
 
+                    <div class='d-flex'>
+
                         <div class='breadcrumb grid-header__column-item grid-header__column-item--right'>
                             <isinclude
                                 url="${URLUtils.url('Search-Breadcrums', 'cgid', pdict.productSearch.category.id)}" />
@@ -100,6 +102,7 @@
                                         <div class="result-count col">
                 </isif>
                 <isinclude template="search/resultsCount" />
+                </div>
             </div>
         </div>
 

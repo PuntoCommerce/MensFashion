@@ -16,7 +16,6 @@ const stepBar = (step) => {
             stepBarCircles[0].style.opacity = '1';
             stepBarCircles[1].style.opacity = '.75';
             stepBarCircles[2].style.opacity = '.75';
-            console.log('Step customer or Step shipping');
             break;
         case 2:
             stepBarLines[0].style.opacity = '1';
@@ -24,7 +23,6 @@ const stepBar = (step) => {
             stepBarCircles[0].style.opacity = '1';
             stepBarCircles[1].style.opacity = '1';
             stepBarCircles[2].style.opacity = '.75';
-            console.log('Step payment');
             break;
         case 2:
             stepBarLines[0].style.opacity = '1';
@@ -32,7 +30,6 @@ const stepBar = (step) => {
             stepBarCircles[0].style.opacity = '1';
             stepBarCircles[1].style.opacity = '1';
             stepBarCircles[2].style.opacity = '1';
-            console.log('Step placeOrder');
             break;
     }
 }

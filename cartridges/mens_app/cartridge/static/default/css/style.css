@@ -1378,10 +1378,10 @@ ul {
   margin: 0 auto; }
 
 .container-custom-plp .breadcrumb {
-  margin-right: 26px; }
-  @media (max-width: 390px) {
+  margin-right: 0; }
+  @media only screen and (min-width: 37.5em) {
     .container-custom-plp .breadcrumb {
-      margin-right: 0; } }
+      margin-right: 96px; } }
 
 .filters {
   margin: 0;
@@ -2793,7 +2793,7 @@ header nav.homepage {
     font-size: 16px;
     margin: auto; }
     .check-custom-container .check-custom button {
-      font-size: 16px;
+      font-size: 12px;
       padding: 7px 0; }
       .check-custom-container .check-custom button:focus {
         outline: 0; }
@@ -2808,7 +2808,8 @@ header nav.homepage {
     font-weight: bold;
     font-size: 18px;
     padding: 4px 10px 0 10px;
-    font-family: "Avenir-Next"; }
+    font-family: "Avenir-Next";
+    display: none; }
 
 .add-to-wishlist-messages .add-to-wishlist-alert {
   z-index: 1000;
@@ -3453,6 +3454,9 @@ del {
   .sizes-guide-cont {
     width: 65% !important; } }
 
+.carousel-inner .product-tile .tile-image {
+  border: none; }
+
 .checkout {
   font-family: "Avenir-Next" !important;
   font-size: 16px; }
@@ -3828,6 +3832,47 @@ del {
 @media (max-width: 364px) {
   .grand-total-container {
     padding-left: 0; } }
+
+.total-price-wrapper {
+  text-align: right !important; }
+
+.order-product-summary .item-attributes {
+  padding: 0 15px; }
+
+.btn.btn--gray.btn__small.text-uppercase.btn-block.submit-shipping.col-sm-12.col-lg-10 {
+  flex: 1;
+  max-width: 100%; }
+
+.card-body.shipping-content {
+  padding: 0; }
+
+.shipping-address {
+  padding: 0 25px; }
+
+.select-store__wrapper {
+  padding: 0 2px 0 0 !important; }
+
+.shipping-address--user-address-saved {
+  padding: 0; }
+
+.shipment-selector-block {
+  padding: 0 !important; }
+
+.row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+  padding: 0 !important; }
+  @media only screen and (min-width: 37.5em) {
+    .row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+      padding: 0 0 3rem 0; } }
+
+.cart_bottom {
+  margin: 32px 0 !important; }
+
+@media only screen and (min-width: 37.5em) {
+  .row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+    height: calc(100vh - (82px + 96px + 149px)); } }
+
+.mt-5.mb-5.checkout.container-custom {
+  min-height: calc(100vh - 325px); }
 
 .accountBtns {
   display: flex;

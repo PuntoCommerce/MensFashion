@@ -68,7 +68,7 @@
     margin: auto;
 
     button {
-      font-size: 16px;
+      font-size: 12px;
       padding: 7px 0;
 
       &:focus {
@@ -90,6 +90,7 @@
     font-size: 18px;
     padding: 4px 10px 0 10px;
     font-family: "Avenir-Next";
+    display: none;
   }
 }
 
