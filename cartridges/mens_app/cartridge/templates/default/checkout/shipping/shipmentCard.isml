@@ -74,7 +74,7 @@
             </fieldset>
         </iscomment>
 
-        <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
+        <div class="shipping-address shipping-address--user-address-saved ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
             <fieldset
                 class="shipment-selector-block ${(pdict.order.usingMultiShipping || shipmentLoopState) || (pdict.customer.addresses && pdict.customer.addresses.length >
                                                0) ? '' : 'd-none'} ">
