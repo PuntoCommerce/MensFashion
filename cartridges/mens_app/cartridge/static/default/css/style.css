@@ -3793,6 +3793,12 @@ del {
   .grand-total-container {
     padding-left: 0; } }
 
+.total-price-wrapper {
+  text-align: right !important; }
+
+.order-product-summary .item-attributes {
+  padding: 0 15px; }
+
 .accountBtns {
   display: flex;
   font-size: 16px;
