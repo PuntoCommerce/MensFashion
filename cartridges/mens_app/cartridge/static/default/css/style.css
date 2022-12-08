@@ -4034,6 +4034,12 @@ del {
 .order-list-container .card-footer {
   width: 100%; }
 
+a.see-order-btn {
+  color: black !important;
+  text-decoration: underline !important; }
+  a.see-order-btn:hover {
+    text-decoration: none !important; }
+
 a:hover {
   text-decoration: none; }
 
