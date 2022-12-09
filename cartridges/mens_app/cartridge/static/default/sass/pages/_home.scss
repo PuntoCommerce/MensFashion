@@ -612,7 +612,7 @@ header {
     .ITBC-content {
 
       width: 100%;
-      height: 14%;
+      height: 30%;
 
       .btn-ITBC-outline {
         border: 2px solid #34406C;
@@ -723,11 +723,9 @@ header {
     bottom: -90vh;
   }
 
-  #carousel-90931919792f25f303f3259d58,
-  #carousel-316c8bfb97dcd2cf92829eb636 {
-    .carousel-inner{
+  #carousel-90931919792f25f303f3259d58.indicators-xs,
+  #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs {
       padding: 1.1rem !important;
-    }
   }
   
   .experience-component.experience-commerce_assets-imageButton{
