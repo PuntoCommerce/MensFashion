@@ -256,3 +256,20 @@
         margin-left: 10px;
     }
 }
+
+
+.order-list-container .card-header.clearfix,
+.order-list-container .card-body, 
+.order-list-container .card-footer {
+    width: 100%;
+}
+
+
+a.see-order-btn {
+    color: black!important;
+    text-decoration: underline!important;
+
+    &:hover {
+        text-decoration: none!important;
+    }
+}

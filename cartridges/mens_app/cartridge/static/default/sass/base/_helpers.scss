@@ -54,7 +54,34 @@
   width: 1px;
 }
 
+///Container custom
+.container-custom {
+  max-width: $max-width;
+  margin: 0 auto;
+  width: 93%;
 
+  @include respond(tab-land) {
+      width: 90%;
+  }
+
+  &--navigation {
+      width: 100%;
+      @include respond(phone) {
+          width: 90%;
+      }
+  }
+
+  &--smaller {
+      width: 100%;
+      padding: 0 5% 0 3.5rem;
+
+      @include respond(phone) {
+          width: 95%;
+          padding: 0;
+
+      }
+  }
+}
 
 /* Filter blur in all the element */
 .filter-blur {
