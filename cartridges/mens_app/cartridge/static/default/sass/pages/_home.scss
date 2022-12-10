@@ -468,7 +468,7 @@ header {
     left: auto;
     padding: 0;
     width: 43%;
-    height: 30%;
+    height: 55% !important;
 
     .btn-ITBC-outline {
       background: none;
@@ -610,9 +610,8 @@ header {
 @media (max-width: 768px) {
   .ITBC-onlyButton-container {
     .ITBC-content {
-
       width: 100%;
-      height: 30%;
+      height: 30% !important;
 
       .btn-ITBC-outline {
         border: 2px solid #34406C;
@@ -730,6 +729,12 @@ header {
   
   .experience-component.experience-commerce_assets-imageButton{
     background: #fff;
+  }
+
+  #carousel-316c8bfb97dcd2cf92829eb636 {
+    .carousel-inner {
+      padding-bottom: 0px !important;
+    }
   }
 }
 
