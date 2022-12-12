@@ -1,4 +1,4 @@
-<div class="strike-through justify-content-end
+<div class="strike-through
 <isif condition=${!lineItem.priceTotal.nonAdjustedPrice}>non-adjusted-price</isif>"
 >
     ${lineItem.priceTotal.nonAdjustedPrice}

@@ -328,10 +328,9 @@ function getResources() {
     var Resource = require('dw/web/Resource');
 
     return {
-        /* info_selectforstock: Resource.msg('info.selectforstock', 'product',
-            'Select Styles for Availability') */
-        info_selectforstock: '',
-        assistiveSelectedText: Resource.msg('', 'common', null)
+        info_selectforstock: Resource.msg('info.selectforstock', 'product',
+            'Select Styles for Availability'),
+        assistiveSelectedText: Resource.msg('msg.assistive.selected.text', 'common', null)
     };
 }
 
