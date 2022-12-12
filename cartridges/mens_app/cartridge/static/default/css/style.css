@@ -2760,7 +2760,7 @@ header nav.homepage {
     .video-hero-container .video-hero-desktop {
       width: 250vw; }
       .video-hero-container .video-hero-desktop__date {
-        transform: translate(-50%, 36vh); } }
+        transform: translate(-50%, 25vh); } }
 
 @media (max-width: 345px) {
   .promo-carousel .btn__small {

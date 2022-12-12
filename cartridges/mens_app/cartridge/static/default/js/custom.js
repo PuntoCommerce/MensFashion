@@ -576,11 +576,29 @@ function addToWishlistButton(e, type) {
   }
 }
 
-window.addEventListener('scroll', () =>{
-  const valueScroll = 4*window.scrollY/-12;
-  if($('.photo-tile-image')){
-      $('#homepage .photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
-  }    
-});
+var widthScreen = window.innerWidth;
+
+if (widthScreen > 543) {
+  window.addEventListener('scroll', () =>{
+    const valueScroll = 4*window.scrollY/-12;
+    if($('.photo-tile-image')){
+        $('#homepage .photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
+    }
+  });
+
+  return;
+}
+
+if(widthScreen < 544){
+  window.addEventListener('scroll', () =>{
+    const valueScroll = 4*window.scrollY/-20;
+    if($('.photo-tile-image')){
+        $('#homepage .photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
+    }
+  });
+
+  return;
+}
+
 
 localValues();
