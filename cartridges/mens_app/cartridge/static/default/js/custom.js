@@ -585,20 +585,13 @@ if (widthScreen > 543) {
         $('#homepage .photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
     }
   });
-
-  return;
-}
-
-if(widthScreen < 544){
+}else{
   window.addEventListener('scroll', () =>{
     const valueScroll = 4*window.scrollY/-20;
     if($('.photo-tile-image')){
         $('#homepage .photo-tile-image').css({"transform": "translate3d(0px,"+ valueScroll+"px, 0px)"});
     }
-  });
-
-  return;
-}
+  });}
 
 
 localValues();
