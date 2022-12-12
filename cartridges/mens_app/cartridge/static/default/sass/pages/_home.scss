@@ -617,6 +617,26 @@ header {
       }
     }
   }
+
+  .title-carousel-9512e1c0a8e4670211309bfb9b {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, 5px);
+    font-size: 20px;
+    font-family: 'AvenirLTStd-Heavy';
+    margin: 0;
+    line-height: 25px;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  #carousel-9512e1c0a8e4670211309bfb9b{
+    .carousel-inner{
+
+    }
+  }
 }
 
 @media (max-width: 768px) {
