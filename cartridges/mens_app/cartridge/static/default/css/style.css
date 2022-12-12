@@ -2572,7 +2572,8 @@ header nav.homepage {
     display: flex;
     font-size: 24px; }
   .editorialRichText-component-container P {
-    font-size: 16px; }
+    font-size: 16px;
+    margin: 0; }
 
 #carousel-f9664ca64fe3972d4aa66eb5ec .ITC-container {
   padding: 0 2px; }
@@ -2606,6 +2607,16 @@ header nav.homepage {
 
 .experience-component.experience-commerce_assets-imageButton {
   background: #fff !important; }
+
+.title-carousel-9512e1c0a8e4670211309bfb9b {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  font-size: 20px;
+  font-family: 'AvenirLTStd-Heavy';
+  margin: 0; }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -2730,9 +2741,11 @@ header nav.homepage {
   .experience-commerce_layouts-navTabs .summary__footer .btn__small {
     font-size: 20px; }
   .photo-tile-figure {
-    bottom: -90vh; }
+    bottom: -45vh;
+    height: 45vh; }
   #carousel-90931919792f25f303f3259d58.indicators-xs,
-  #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs {
+  #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs,
+  #carousel-9512e1c0a8e4670211309bfb9b.indicators-xs {
     padding: 1.1rem !important; }
   .experience-component.experience-commerce_assets-imageButton {
     background: #fff; }
@@ -2749,22 +2762,22 @@ header nav.homepage {
 
 @media (max-width: 453px) {
   .promo-carousel .btn__small {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .video-hero-container .video-hero-desktop__buttons {
+    transform: translate(-50%, 10vh); }
+  .video-hero-container .video-hero-desktop__date {
+    transform: translate(-50%, 28vh); } }
 
 @media (max-width: 370px) {
   .summary__footer .btn__small {
-    font-size: 12px; }
-  .video-hero-container {
-    display: flex;
-    align-items: center; }
-    .video-hero-container .video-hero-desktop {
-      width: 250vw; }
-      .video-hero-container .video-hero-desktop__date {
-        transform: translate(-50%, 25vh); } }
+    font-size: 12px; } }
 
 @media (max-width: 345px) {
   .promo-carousel .btn__small {
-    font-size: 10px; } }
+    font-size: 10px; }
+  .photo-tile-figure {
+    bottom: -37vh;
+    height: 35vh; } }
 
 @media (max-width: 330px) {
   .promo-carousel .btn__small {

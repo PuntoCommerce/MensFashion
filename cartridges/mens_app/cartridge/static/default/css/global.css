@@ -20971,7 +20971,7 @@ button.close:focus {
 
 @media (max-width: 1200px) {
   .carousel-inner .product-tile .tile-image {
-    height: 245px;
+    /* height: 245px; */
     object-fit: contain;
   }
 

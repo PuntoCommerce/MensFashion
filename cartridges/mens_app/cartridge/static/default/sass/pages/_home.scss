@@ -502,6 +502,17 @@ header {
   background: #fff !important;
 }
 
+.title-carousel-9512e1c0a8e4670211309bfb9b {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  font-size: 20px;
+  font-family: 'AvenirLTStd-Heavy';
+  margin: 0;
+}
+
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
     padding-right: 95px;
@@ -720,12 +731,13 @@ header {
   }
 
   .photo-tile-figure {
-    bottom: -38vh;
-    height: 35vh;
+    bottom: -45vh;
+    height: 45vh;
   }
 
   #carousel-90931919792f25f303f3259d58.indicators-xs,
-  #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs {
+  #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs,
+  #carousel-9512e1c0a8e4670211309bfb9b.indicators-xs {
     padding: 1.1rem !important;
   }
 
@@ -761,7 +773,7 @@ header {
 
   .video-hero-container {
     .video-hero-desktop {
-      &__buttons{
+      &__buttons {
         transform: translate(-50%, 10vh);
       }
 
@@ -781,6 +793,11 @@ header {
 @media (max-width: 345px) {
   .promo-carousel .btn__small {
     font-size: 10px;
+  }
+
+  .photo-tile-figure {
+    bottom: -37vh;
+    height: 35vh;
   }
 }
 
