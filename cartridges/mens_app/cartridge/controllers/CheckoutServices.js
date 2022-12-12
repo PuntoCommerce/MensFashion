@@ -20,7 +20,7 @@ var csrfProtection = require('*/cartridge/scripts/middleware/csrf');
  * @param {returns} - json
  * @param {serverfunction} - post
  */
-server.append('PlaceOrder', server.middleware.https, function (req, res, next) {
+server.replace('PlaceOrder', server.middleware.https, function (req, res, next) {
     var BasketMgr = require('dw/order/BasketMgr');
     var OrderMgr = require('dw/order/OrderMgr');
     var Resource = require('dw/web/Resource');
