@@ -10,5 +10,5 @@
             ${refinementValue.title}
         </span>
     </button>
-     <p class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</p>
+     <bp class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</bp>
 </li>

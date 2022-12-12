@@ -19610,6 +19610,1354 @@ div.availability {
   position: relative;
 }
 
+.swatch-circle-azul-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #252850;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-azul-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-azul-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #252850;
+  border-radius: 0.69em;
+  background-color: #252850;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-azul-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-azul-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #252850;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+.swatch-circle-gris-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #7c7c7c;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-gris-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-gris-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #7c7c7c;
+  border-radius: 0.69em;
+  background-color: #7c7c7c;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-gris-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-gris-medio{
+  width: 18px;
+  height: 18px;
+  background: #7c7c7c;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+.swatch-circle-vino-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #722f37;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-vino-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-vino-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #722f37;
+  border-radius: 0.69em;
+  background-color: #722f37;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-vino-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-vino-medio{
+  width: 18px;
+  height: 18px;
+  background: #722f37;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+.swatch-circle-cafe-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #a18262;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-cafe-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-cafe-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #a18262;
+  border-radius: 0.69em;
+  background-color: #a18262;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-cafe-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-cafe-claro{
+  width: 18px;
+  height: 18px;
+  background: #a18262;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-azul-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #0000CD;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-azul-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-azul-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #0000CD;
+  border-radius: 0.69em;
+  background-color: #0000CD;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-azul-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-azul-medio{
+  width: 18px;
+  height: 18px;
+  background: #0000CD;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rojo-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #a12312;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rojo-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rojo-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #a12312;
+  border-radius: 0.69em;
+  background-color: #a12312;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rojo-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rojo-medio{
+  width: 18px;
+  height: 18px;
+  background: #a12312;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-beige-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #f5f5dc;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-beige-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-beige-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #f5f5dc;
+  border-radius: 0.69em;
+  background-color: #f5f5dc;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-beige-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-beige-claro{
+  width: 18px;
+  height: 18px;
+  background: #f5f5dc;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rojo-cereza {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #c51d34;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rojo-cereza.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rojo-cereza {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #c51d34;
+  border-radius: 0.69em;
+  background-color: #c51d34;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rojo-cereza.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rojo-cereza{
+  width: 18px;
+  height: 18px;
+  background: #c51d34;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-naranja-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #ffa420;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-naranja-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-naranja-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #ffa420;
+  border-radius: 0.69em;
+  background-color: #ffa420;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-naranja-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-naranja-claro{
+  width: 18px;
+  height: 18px;
+  background: #ffa420;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-gris-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #4B4B4B;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-gris-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-gris-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #4B4B4B;
+  border-radius: 0.69em;
+  background-color: #4B4B4B;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-gris-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-gris-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #4B4B4B;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+.swatch-circle-gris-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #4B4B4B;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-gris-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-gris-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #4B4B4B;
+  border-radius: 0.69em;
+  background-color: #4B4B4B;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-gris-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-gris-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #4B4B4B;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-verde-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #3CB371;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-verde-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-verde-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #3CB371;
+  border-radius: 0.69em;
+  background-color: #3CB371;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-verde-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-verde-medio{
+  width: 18px;
+  height: 18px;
+  background: #3CB371;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-amarillo-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #FFFFE0 ;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-amarillo-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-amarillo-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #FFFFE0 ;
+  border-radius: 0.69em;
+  background-color: #FFFFE0 ;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-amarillo-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-amarillo-claro{
+  width: 18px;
+  height: 18px;
+  background: #FFFFE0 ;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rosa-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #cd4b87;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rosa-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rosa-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #cd4b87;
+  border-radius: 0.69em;
+  background-color: #cd4b87;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rosa-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rosa-medio{
+  width: 18px;
+  height: 18px;
+  background: #cd4b87;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-verde-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #bdecb6;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-verde-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-verde-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #bdecb6;
+  border-radius: 0.69em;
+  background-color: #bdecb6;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-verde-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-verde-claro{
+  width: 18px;
+  height: 18px;
+  background: #bdecb6;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-beige-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #ffe5b4;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-beige-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-beige-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #ffe5b4;
+  border-radius: 0.69em;
+  background-color: #ffe5b4;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-beige-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-beige-medio{
+  width: 18px;
+  height: 18px;
+  background: #ffe5b4;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-cafe-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #3f2817;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-cafe-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-cafe-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #3f2817;
+  border-radius: 0.69em;
+  background-color: #3f2817;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-cafe-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-cafe-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #3f2817;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-lila-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #6c4675;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-lila-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-lila-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #6c4675;
+  border-radius: 0.69em;
+  background-color: #6c4675;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-lila-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-lila-medio{
+  width: 18px;
+  height: 18px;
+  background: #6c4675;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-lila-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #d29bfd;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-lila-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-lila-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #d29bfd;
+  border-radius: 0.69em;
+  background-color: #d29bfd;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-lila-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-lila-claro{
+  width: 18px;
+  height: 18px;
+  background: #d29bfd;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-naranja-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #ff8000;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-naranja-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-naranja-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #ff8000;
+  border-radius: 0.69em;
+  background-color: #ff8000;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-naranja-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-naranja-medio{
+  width: 18px;
+  height: 18px;
+  background: #ff8000;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-morado-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #572364;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-morado-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-morado-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #572364;
+  border-radius: 0.69em;
+  background-color: #572364;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-morado-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-morado-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #572364;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-cafe-medio{
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #804000;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-cafe-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-cafe-medio{
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #804000;
+  border-radius: 0.69em;
+  background-color: #804000;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-cafe-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-cafe-medio{
+  width: 18px;
+  height: 18px;
+  background: #804000;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-gris-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #EEEDED;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-gris-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-gris-claro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #EEEDED;
+  border-radius: 0.69em;
+  background-color: #EEEDED;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-gris-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-gris-claro{
+  width: 18px;
+  height: 18px;
+  background: #EEEDED;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-shedron {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #d94f00;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-shedron.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-shedron {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #d94f00;
+  border-radius: 0.69em;
+  background-color: #d94f00;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-shedron.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-shedron{
+  width: 18px;
+  height: 18px;
+  background: #d94f00;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-amarillo-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #f8f32b;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-amarillo-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-amarillo-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #f8f32b;
+  border-radius: 0.69em;
+  background-color: #f8f32b;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-amarillo-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-amarillo-medio{
+  width: 18px;
+  height: 18px;
+  background: #f8f32b;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-morado-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #8c004b;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-morado-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-morado-medio {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #8c004b;
+  border-radius: 0.69em;
+  background-color: #8c004b;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-morado-medio.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-morado-medio{
+  width: 18px;
+  height: 18px;
+  background: #8c004b;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-amarillo-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #9B870C;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-amarillo-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-amarillo-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #9B870C;
+  border-radius: 0.69em;
+  background-color: #9B870C;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-amarillo-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-amarillo-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #9B870C;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rosa-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #E75480;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rosa-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rosa-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #E75480;
+  border-radius: 0.69em;
+  background-color: #E75480;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rosa-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rosa-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #E75480;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rojo-quemado {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #a23530;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rojo-quemado.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rojo-quemado {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #a23530;
+  border-radius: 0.69em;
+  background-color: #a23530;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rojo-quemado.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rojo-quemado{
+  width: 18px;
+  height: 18px;
+  background: #a23530;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-beige-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #c3a98b;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-beige-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-beige-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #c3a98b;
+  border-radius: 0.69em;
+  background-color: #c3a98b;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-beige-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-beige-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #c3a98b;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-vino-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #5e2129;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-vino-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-vino-obscuro {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #5e2129;
+  border-radius: 0.69em;
+  background-color: #5e2129;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-vino-obscuro.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-vino-obscuro{
+  width: 18px;
+  height: 18px;
+  background: #5e2129;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-rojo-carmesi {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #ba3631;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-rojo-carmesi.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-rojo-carmesi {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #ba3631;
+  border-radius: 0.69em;
+  background-color: #ba3631;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-rojo-carmesi.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-rojo-carmesi{
+  width: 18px;
+  height: 18px;
+  background: #ba3631;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
+
+.swatch-circle-color-rojo-caramelo {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #FF0800;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-color-rojo-caramelo.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-filter-color-rojo-caramelo {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 1.38em;
+  height: 1.38em;
+  background: #FF0800;
+  border-radius: 0.69em;
+  background-color: #FF0800;
+  display: block;
+  position: relative;
+}
+
+.swatch-filter-color-rojo-caramelo.disabled {
+  opacity: 0.5 !important;
+}
+
+.product-detail .attributes .swatch-circle-color-rojo-caramelo{
+  width: 18px;
+  height: 18px;
+  background: #FF0800;
+  border-radius: 1.25em;
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin-right: 0.313em;
+  position: relative;
+}
+
 /* Colores español ok */
 
 
