@@ -3615,6 +3615,9 @@ del {
       margin-left: 5px; }
     .checkout__text--h3 {
       font-size: 32px; }
+  .grand-total .checkout__text{
+    font-family: 'Avenir-Bold' !important;
+  }
   .checkout__item {
     background-color: #ffffff !important;
     padding: 10px 15px 50px 15px;
@@ -3920,9 +3923,9 @@ del {
 .cart_bottom {
   margin: 32px 0 !important; }
 
-@media only screen and (min-width: 37.5em) {
+/* @media only screen and (min-width: 37.5em) {
   .row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
-    height: calc(100vh - (82px + 96px + 149px)); } }
+    height: calc(100vh - (82px + 96px + 149px)); } } */
 
 .mt-5.mb-5.checkout.container-custom {
   min-height: calc(100vh - 325px); }
@@ -4124,7 +4127,7 @@ a .oauth-facebook--button {
   a .oauth-google--button:hover,
   a .oauth-facebook--button:hover {
     background-color: #000;
-    color: #fff;
+    color: #ffffff !important;
     transition: all ease 0.2s; }
 
 a .oauth-google--button {
@@ -4142,6 +4145,12 @@ a .oauth-facebook--button {
 .oauth-google--button span,
 .oauth-facebook--button span {
   font-family: "Avenir-Next" !important; }
+
+.oauth-google:hover .oauth-google--button span,
+.oauth-google:hover .oauth-google--button .fa.fa-google,
+a .oauth-facebook--button:hover .oauth-facebook--button span,
+a .oauth-facebook--button:hover .fa.fa-facebook-official {
+  color: #ffffff  !important}
 
 .login-form-nav {
   margin: auto;

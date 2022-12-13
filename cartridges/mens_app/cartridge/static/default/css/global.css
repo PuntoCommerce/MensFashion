@@ -21874,6 +21874,11 @@ button.close:focus {
 
 .my-account a {
   color: #2d64fc;
+  text-decoration: underline;
+}
+
+.leading-lines {
+  margin-top: 1rem !important;
 }
 
 .paymentsListBtns {
