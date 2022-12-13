@@ -23,7 +23,7 @@ footer .newsletter {
     background-color: #231f20;
     border: 1px solid #ffffff;
     border-radius: 0px;
-    height: 42px;
+    height: 32px;
     width: 268px;
     color: #ffffff;
 }
@@ -54,8 +54,12 @@ footer .subscribe-email {
     border-radius: 0px;
     border: 1px solid #ffffff;
     color: #000000 !important;
-    height: 42px !important;
-    width: 80px !important;
+    height: 32px !important;
+    width: 92px !important;
+
+    &:focus{
+        outline: 0;
+    }
 }
 
 footer .subscribe-email {
@@ -119,6 +123,8 @@ footer .content,
 
 .hecho-con {
     margin-left: 80px;
+    text-align: center;
+    padding: 4px 5px 8px 5px;
 }
 
 footer .space {
@@ -223,6 +229,11 @@ footer .socialMedia-paymentMethods {
     padding: 0 !important;
     margin: 0;
 }
+
+.footerCheck{
+    background: #000;
+}
+
 @media (min-width: 1200px) {
     footer .container {
         margin-top: 20px;
@@ -351,6 +362,7 @@ footer .socialMedia-paymentMethods {
         font-family: "Avenir-LT-Std" !important;
         color: #ffffff !important;
         font-weight: 400 !important;
+        font-size: 14px !important;
     }
 
     footer .input-button {
@@ -365,7 +377,7 @@ footer .socialMedia-paymentMethods {
     footer .input-button input,
     footer .input-button button {
         width: 100% !important;
-        height: 26px !important;
+        height: 36px !important;
         margin-top: 3px;
         margin-bottom: 0px;
     }
@@ -399,6 +411,25 @@ footer .socialMedia-paymentMethods {
     }
     .newsletter .form{
         padding: 0 65px;
+    }
+
+    .footer-item:not(:first-child) {
+        border-left: none !important;
+    }
+
+    .footer-item.collapsible-md{
+        padding: 25px 10px !important;
+        border-bottom: 1px solid #fff !important;
+
+        .title{
+            color: #fff !important;
+
+            &::after{
+                position: absolute !important;
+                right: 25px !important;
+                display: initial !important;
+            }
+        }
     }
 }
 
@@ -439,6 +470,11 @@ footer .socialMedia-paymentMethods {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .footer-item.collapsible-md{
+        padding: 0 !important;
+        border-bottom: 1px solid #fff !important;
     }
 }
 

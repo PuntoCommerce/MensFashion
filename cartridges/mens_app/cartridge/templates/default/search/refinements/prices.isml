@@ -1,18 +1,31 @@
 <ul class="values content">
-    <div class="range-inputs d-flex justify-content-between align-items-center">
-        <input class="form-control" id="price-range-min" type="number" value="0" min="0" max="5000" onchange="changeRange(this, 'pmin')"/>
-        <input class="form-control" id="price-range-max" type="number" value="5000" min="0" max="5000" onchange="changeRange(this, 'pmax')"/>
-    </div> 
+    <div class="range-inputs d-flex justify-content-around align-items-center">
+        <div class="input-price-container">
+            <span class="coin-format">$</span>
+            <input class="form-control input-price" id="price-range-min" type="number" value="0" min="0" max="5000"
+                onchange="changeRange(this, 'pmin')">
+        </div>
+        <div class="input-price-container">
+            <span class="coin-format">$</span>
+            <input class="form-control input-price" id="price-range-max" type="number" value="5000" min="0" max="5000"
+                onchange="changeRange(this, 'pmax')" />
+        </div>
+    </div>
     <div class="r-price mt-3 mb-2">
         <div class="range-slider">
-            <input class="min" id="range-min" value="0" min="0" max="5000" step="10" type="range" onchange="changeRange(this, 'pmin')"/>
-            <input class="max" id="range-max" value="5000" min="0" max="5000" step="10" type="range" onchange="changeRange(this, 'pmax')"/>
+            <input class="min range-input" id="range-min" value="0" min="0" max="5000" step="10" type="range"
+                onchange="changeRange(this, 'pmin')" />
+            <input class="max range-input" id="range-max" value="5000" min="0" max="5000" step="10" type="range"
+                onchange="changeRange(this, 'pmax')" />
         </div>
     </div>
 
-    <li class="col-sm-4 col-md-12 d-flex justify-content-end">
+    <li class="col-sm-4 col-md-12 d-flex justify-content-between pt-4 align-items-center">
+        <span class="range-price-products">${pdict.productSearch.count} Productos</span>
         <button id="range-price-button" data-href="${refinement.values[0].url}">
-        <iscomment> <button data-href="${URLUtils.url("Search-ShowAjax", ${pdict.productSearch.isCategorySearch} )}"> </iscomment>
+            <iscomment> <button data-href="${URLUtils.url(" Search-ShowAjax", $ {
+                                                   pdict.productSearch.isCategorySearch}
+                    )}"> </iscomment>
             Aceptar
         </button>
     </li>

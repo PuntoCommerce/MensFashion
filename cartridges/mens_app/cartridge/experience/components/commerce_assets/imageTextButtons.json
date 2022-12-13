@@ -85,6 +85,30 @@
           "description": "Text for the third button",
           "type": "string",
           "required": false
+        },
+        {
+          "id":"display_button",
+          "name": "Display Button",
+          "description": "Show or Hide Button in Banner",
+          "type": "enum",
+          "values": ["Yes", "No"],
+          "required": false
+        },
+        {
+          "id":"marginT",
+          "name": "Margin Top Button",
+          "description": "Select the quantity of top margin in mobile",
+          "type": "enum",
+          "values": ["30px", "40px", "50px"],
+          "required": false
+        },
+        {
+          "id": "align_button",
+          "name": "Align Button",
+          "description": "",
+          "type": "enum",
+          "values": ["left"],
+          "required": false
         }
       ]
     },

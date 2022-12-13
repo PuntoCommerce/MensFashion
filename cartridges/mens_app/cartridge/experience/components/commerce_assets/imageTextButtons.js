@@ -81,7 +81,10 @@ module.exports.render = function (context, modelIn) {
     itemsLayout: getItemsLayout(content.itemsLayout),
   };
   model.markupLayout = content.markupLayout || "center";
-
+  model.display_button = content.display_button ? content.display_button : 'Yes';
+  model.marginT = content.marginT ? content.marginT : ''
+  model.align_button = content.align_button ? content.align_button : ''
+  
   model.buttons = [
     {
       active: content.text1 && content.url1 ? true : false,

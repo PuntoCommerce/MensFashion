@@ -40,7 +40,7 @@
 .card-header.wishlist-owner {
  background: #64656a;
  color: #fff;
- height: 43px;
+ height: auto;
  font-family: $font-family-bold;
  border-radius: 3px;
 }
@@ -219,4 +219,57 @@
   background-color: #000000;
   color: #ffffff !important;
  }
+}
+
+
+//Padding in back to my account btn
+.back-to-my-account {
+    padding: 38px;
+    @include respond(phone) {
+        padding: 43px;
+    }
+}
+
+////
+.order-top .order-history-form-group {
+    position: static;
+    .card-make-default-link{
+        a{
+            color: #2D64FC;
+            font-family: $font-family-normal;
+        }
+    }
+}
+.backBtn{
+    a{
+        color: #2D64FC;
+        font-family: $font-family-normal;
+    }
+}
+
+#myaccount{
+    display: flex;
+    align-items: center;
+    
+    p{
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+}
+
+
+.order-list-container .card-header.clearfix,
+.order-list-container .card-body, 
+.order-list-container .card-footer {
+    width: 100%;
+}
+
+
+a.see-order-btn {
+    color: black!important;
+    text-decoration: underline!important;
+
+    &:hover {
+        text-decoration: none!important;
+    }
 }

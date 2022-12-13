@@ -16,20 +16,25 @@
             data-target="#quickViewModal"
             title="${Resource.msgf('button.quickview', 'common', null, product.productName)}"
             aria-label="${Resource.msgf('button.quickview', 'common', null, product.productName)}">
-            <span class="fa-stack fa-lg">
+            <button onclick="addWishlistQuickView()" class="fa-stack fa-lg quickview-button">
                 <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
                 <i class="fa fa-expand fa-stack-1x"></i>
-            </span>
+            </button>
         </a>
     </isif>
 
     <div class='wishlist'>
         <div class='wishlist__wrapper'>
-            <a class="wishlistTile" href="${URLUtils.url('Wishlist-AddProduct')}"
+            <a class="wishlistTile wishlist_unselected d-flex align-items-center"
+                href="${URLUtils.url('Wishlist-AddProduct')}"
                 title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
-    <img class="favIconGrey" src="${URLUtils.staticURL('/images/pdp/favIcon.svg')}" alt="Favoritos" />
-    <img class="favIconRed" src="${URLUtils.staticURL('/images/pdp/favRed.svg')}" alt="Favoritos" />
+                <i class="fa fa-heart-o wishlist_unselected" aria-hidden="true"></i>
             </a>
+            <iscomment> <a class="remove-from-wishlist wishlist_unselected d-flex align-items-center reload-plp"
+                href="${URLUtils.url('Wishlist-RemoveProductPLP', 'pid', product.id)}"
+                title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
+                <i class="fa fa-heart-o wishlist_unselected reload-plp" aria-hidden="true"></i>
+            </a> </iscomment>
         </div>
     </div>
 </div>

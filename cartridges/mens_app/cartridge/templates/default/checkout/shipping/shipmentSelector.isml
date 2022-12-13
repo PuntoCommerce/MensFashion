@@ -12,8 +12,8 @@
     </select>
 
     <div class="invalid-feedback"></div>
-    <div class="row justify-content-center">
-        <button class="col-5 m-3 btn--gray btn__small text-uppercase btn-show-details btn" type="button">${Resource.msg('action.update.address', 'checkout', null)}</button>
-        <button class="col-5 m-3 btn--gray btn__small text-uppercase btn-add-new btn" type="button">${Resource.msg('action.add.new', 'checkout', null)}</button>
+    <div class="row justify-content-center no-margin">
+        <button class="col-12 col-md-5 m-3 btn--gray btn__small text-uppercase btn-show-details btn" type="button">${Resource.msg('action.update.address', 'checkout', null)}</button>
+        <button class="col-12 col-md-5 m-3 btn--gray btn__small text-uppercase btn-add-new btn" type="button">${Resource.msg('action.add.new', 'checkout', null)}</button>
     </div>
 </div>

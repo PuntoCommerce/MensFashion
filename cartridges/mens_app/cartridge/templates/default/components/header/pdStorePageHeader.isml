@@ -1,10 +1,10 @@
 <header>
-    <isinclude template="/components/header/skipNav" />
+    <iscomment> <isinclude template="/components/header/skipNav" /> </iscomment>
     <isif condition="${pdict.regions.headerbanner}">
         <!-- Campaign Banner Component renders here -->
         <isprint value="${pdict.regions.headerbanner.render()}" encoding="off" />
     </isif>
-    <nav role="navigation" id="navCont">
+    <nav role="navigation" class="${pdict.page.ID}" id="navCont">
         <div class="header container">
             <div class="row">
                 <div class="col-12 hidden" id="searchContainer">

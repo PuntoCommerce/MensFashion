@@ -43,7 +43,7 @@
             <p class="checkout__stepper--item-title">Realizar Pedido</p>
         </li>
     </ul>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center checkout-container">
         <div class="col-sm-12 col-lg-10">
             <div id="checkout-main" class="container data-checkout-stage <isif condition="
                 ${pdict.order.usingMultiShipping && pdict.order.shipping.length > 1}">multi-ship</isif>"
@@ -119,7 +119,7 @@
                         <!----------------------------------------------------------------------------------->
                         <div class="card col">
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row steps-container">
                                     <div class="next-step-button col-12">
                                         <div class="mb-sm-5">
                                             <button
@@ -142,7 +142,7 @@
                                                 type="submit" name="submit"
                                                 value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
                                             </button>
-                                            <button class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button>
+                                            <iscomment> <button class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button> </iscomment>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@
                                     <div class="checkout__order--divider"></div>
                                 </div>
                                 <isinclude template="checkout/orderTotalSummary" />
-                                <div class="checkout__order--divider"></div>
+                                <div class="checkout__order--divider mb-4"></div>
                                               
                                 <isinclude template="cart/cartPromoCode" />
                                 <div class="coupons-and-promos">
@@ -187,19 +187,19 @@
 
                         <div class="need-help-cont d-flex justify-content-center align-items-center flex-column">
                             <div class="need-help justify-content-center align-items-center mb-4">
-                                <span
-                                    class="checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help2', 'checkout', null)}</span>
+                                <span class="checkout__text checkout__text--need-help">${Resource.msg('label.need.help2', 'checkout', null)}</span>
                             </div>
                             <div
                                 class="need-help-description text-center d-fex justify-content-center align-items-center mb-4">
-                                <p class="checkout__text ">${Resource.msg('label.need.help.description', 'checkout', null)}</p>
-                                <p class="checkout__text ">${Resource.msg('label.need.help.description2', 'checkout', null)}</p>
+                                <p class="checkout__text--help-text ">${Resource.msg('label.need.help.description', 'checkout', null)}</p>
+                                <p class="checkout__text--help-text">${Resource.msg('label.need.help.description2', 'checkout', null)}</p>
                             </div>
                             <div
                                 class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-4">
                                 <span
-                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--h3">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
-                                <span class="checkout__text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
+                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
+                                <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
+                                <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule2', 'checkout', null)}</span>
                             </div>
                             <div class="need-help-email d-flex justify-content-center align-items-center mb-4">
                                 <a href="mailto:${Resource.msg('label.need.help.email', 'checkout', null)}" class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</a>

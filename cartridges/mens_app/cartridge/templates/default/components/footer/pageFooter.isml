@@ -1,18 +1,16 @@
 <footer id="footercontent">
     <div class="container">
         <div class="footer-container row">
-            <div class="footer-item col-sm-2 collapsible-xs">
+            <div class="footer-item col-lg-2 col-sm-12 collapsible-md">
                 <iscontentasset aid="about-us-mens" />
             </div>
-            <div class="footer-item col-sm-2 collapsible-xs">
+            <div class="footer-item col-lg-2 col-sm-12 collapsible-md">
                 <iscontentasset aid="terms-and-conditions-mens" />
             </div>
-            <div class="footer-item col-sm-4 collapsible-xs">
+            <div class="footer-item col-lg-4 col-sm-12 collapsible-md">
                 <iscontentasset aid="customer-service-mens" />
-
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </div>
-            <div class="footer-item col-sm-4">
+            <div class="footer-item col-lg-4 col-sm-12">
                 <div class="footer-email-signup">
                     <form role="form">
                         <div class="row">

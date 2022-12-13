@@ -5,56 +5,66 @@
       assets.addJs('/js/login.js');
   </isscript>
 
-  <div class="mt-5 mb-5 checkout">
-    <div class="row mb-2 d-flex form-checkout justify-content-center login-checkout">
-      <div class="col-12 mt-2 col-md-6 d-flex checkoutLeftCheck">
-        <img class="mr-2 mt-1" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-        ${Resource.msg('check.shipping', 'checkout', null)}
+  <div class="mt-5 mb-5 checkout container-custom">
+    <div class="row mb-2 d-flex form-checkout justify-content-center login-checkout checkout__login-checkout">
+        <div class="col-12 col-md-6 d-flex checkoutLeftCheck no-margin no-padding">
+        <div class='checkout__container-col checkout__container-col--left-side'>
+          <p class='checkout__paragraph checkout__paragraph--margin d-flex align-items-center'>
+            <img class="checkout__check-img" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+            ${Resource.msg('check.shipping', 'checkout', null)}
+          </p>
+        </div>
       </div>
-      <div class="col-12 mt-2 col-md-6 d-flex checkoutRightCheck">
-        <img class="mr-2 mt-1" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-        ${Resource.msg('check.interest.free', 'checkout', null)}
+      <div class="col-12 col-md-6 d-flex checkoutRightCheck no-margin no-padding">
+        <div class='checkout__container-col checkout__container-col--right-side d-flex align-items-center'>
+          <img class="checkout__check-img d-none d-md-block" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+          ${Resource.msg('check.interest.free', 'checkout', null)}
+        </div>
       </div>
     </div>
 
-    <div class="row d-flex justify-content-center form-checkout">
-      <div class="col-12 col-md-6 row pt-3 pb-3 pl-3 pr-3 d-flex justify-content-center checkout--rightBorder">
-        <div class="row d-flex justify-content-center">
-          <div class="checkout__bottomBorder pb-5 d-flex justify-content-center flex-column col-9">
-            <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
-            <p>${Resource.msg('msg.pay.without.auth', 'checkout', null)}</p>
+    <div class="row d-flex justify-content-center form-checkout no-margin no-padding">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center checkout--rightBorder no-margin no-padding">
+        <div class='checkout__container-col checkout__container-col--left-side'>
+          <div class="d-flex justify-content-center">
+            <div class="checkout__bottomBorder d-flex justify-content-center flex-column full-width">
+              <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
+              <p>${Resource.msg('msg.pay.without.auth', 'checkout', null)}</p>
+            </div>
           </div>
-        </div>
 
-        <div class="row d-flex justify-content-center">
-          <div class="checkout_create pt-5 d-flex justify-content-center flex-column col-9">
-            <a href="${URLUtils.url('Login-Show')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
-            <p>${Resource.msg('msg.create.account', 'checkout', null)}</p>
-            <div class="checks">
-              <div class="item mb-3">
-                <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                ${Resource.msg('check.save.payment', 'checkout', null)}
-              </div>
-              <div class="item mb-3">
-                <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                ${Resource.msg('check.order.record', 'checkout', null)}
-              </div>
-              <div class="item mb-3">
-                <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
-                ${Resource.msg('check.wishlist.create', 'checkout', null)}
+          <div class="d-flex justify-content-center">
+            <div class="checkout_create d-flex justify-content-center flex-column full-width">
+              <a href="${URLUtils.url('Login-Show')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
+              <p>${Resource.msg('msg.create.account', 'checkout', null)}</p>
+              <div class="checks">
+                <div class="item mb-3 d-flex">
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  ${Resource.msg('check.save.payment', 'checkout', null)}
+                </div>
+                <div class="item mb-3 d-flex">
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  ${Resource.msg('check.order.record', 'checkout', null)}
+                </div>
+                <div class="item mb-3 d-flex">
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  ${Resource.msg('check.wishlist.create', 'checkout', null)}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center ">
-        <div class="pt-5 d-flex flex-column col-9 checkout--topBorder">
-          <h3 class="checkout__text--bold">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
-          <p>${Resource.msg('msg.registered.client', 'checkout', null)}</p>
-          <div class="checkout_login d-flex justify-content-center flex-column">
-            <isinclude template="account/components/loginForm" />
+      <div class="col-12 col-md-6 d-flex justify-content-center checkout-auth-form no-margin no-padding">
+        <div class="d-flex flex-column checkout--topBorder full-width">
+          <div class='checkout__container-col checkout__container-col--right-side'>
+            <h3 class="checkout__text--auth-title">${Resource.msg('title.registered.client', 'checkout', null)}</h3>
+            <p>${Resource.msg('msg.registered.client', 'checkout', null)}</p>
+            <div class="checkout_login d-flex justify-content-center flex-column">
+              <isinclude template="account/components/loginForm" />
+            </div>
+            
           </div>
-          
         </div>
       </div>
     </div>

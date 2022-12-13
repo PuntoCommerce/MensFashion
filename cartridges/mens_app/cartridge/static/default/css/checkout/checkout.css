@@ -475,27 +475,17 @@ span.ship-to-phone {
   text-align: center;
   color: #000000;
 }
-.shipment-selector-btns h3 {
-  font-family: "Avenir-Bold";
-  font-weight: 800;
-  font-size: 19px;
-  line-height: 26px;
-}
+
 .shipping-card-header {
   font-family: "Avenir-Bold";
   font-weight: 900;
   font-size: 20px;
   line-height: 27px;
   border-radius: 0;
+  color: #000;
 }
 
 @media (min-width: 768px) {
-  .shipment-selector-btns h3 {
-    font-family: "Avenir-Next";
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 38px;
-  }
   .shipping-card-header {
     font-family: "Avenir-Next";
     font-weight: 400;
@@ -504,7 +494,7 @@ span.ship-to-phone {
   }
 }
 .shipping.only-visible {
-  pointer-events: none;
+  /* pointer-events: none; */
   border-top: 1px solid #000;
   padding-top: 23px;
 }
@@ -542,7 +532,7 @@ span.ship-to-phone {
 .checkout-summary-title-1 {
   font-family: "Avenir-Bold";
   font-weight: 800;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 38px;
   color: #000000;
 }
@@ -630,6 +620,7 @@ span.ship-to-phone {
   font-size: 16px;
   line-height: 22px;
   color: #555555;
+  text-align: left;
 }
 .card.payment-summary .summary-section-label {
   font-family: "Avenir-Bold";
@@ -817,6 +808,7 @@ span.ship-to-phone {
 #user-location-search-store {
   border: 0;
   background: none;
+  color: #000;
 }
 #user-location-search-store:hover {
   text-decoration: underline;
@@ -835,6 +827,7 @@ span.ship-to-phone {
 .shipping-description {
   font-family: "Avenir-Next";
   font-size: 16px;
+  color: #000;
 }
 @media (min-width: 1200px) {
   .results.striped {

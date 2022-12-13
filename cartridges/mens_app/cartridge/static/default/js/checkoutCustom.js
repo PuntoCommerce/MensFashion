@@ -305,3 +305,38 @@ $('body').on('click', '.product-move-custom .move', function (e) {
     }
   });
 });
+
+function showPassword() {
+  const inputPassword = document.querySelectorAll(".show-password");
+
+  inputPassword.forEach((e) => {
+    if (e.type === "password") {
+      e.type = "text";
+    } else {
+      e.type = "password";
+    }
+  });
+}
+
+function showHoursInStore() {
+  const storeHours = document.querySelectorAll('.store-hours');
+  storeHours.forEach(i =>{
+    i.classList.remove('d-none')
+  })
+}
+
+function hideHoursInStore() {
+  const storeHours = document.querySelectorAll('.store-hours');
+  storeHours.forEach(i =>{
+    i.classList.add('d-none')
+  })
+}
+
+const csvPaypal = document.querySelector('.css-gokeqi');
+const paypalButtonCreditCard = document.querySelector('.paypal-button-number-1')
+
+if (paypalButtonCreditCard) {
+  paypalButtonCreditCard.addEventListener('click', () =>{
+    console.log(csvPaypal);
+  })
+}

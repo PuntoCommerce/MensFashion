@@ -7,9 +7,9 @@
     <div class="col-12">
         <form action="${pdict.actionUrls.submitCouponCodeUrl}" class="promo-code-form" method="GET" name="promo-code-form">
             <div class="form-group">
-                <label class="checkout__text checkout__text--bold" for="couponCode">${Resource.msg('label.promo.code','cart',null)}</label>
+                <label class="checkout__text checkout__text--promotion" for="couponCode">${Resource.msg('label.promo.code','cart',null)}</label>
                 <div class="row mt-3 mb-3">
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control coupon-code-field checkout__form" id="couponCode" name="couponCode" placeholder="${Resource.msg('placholder.text.promo.code.input','cart',null)}">
                         <div class="coupon-error">
                             <span class="coupon-missing-error" id="missingCouponCode" role="alert">${Resource.msg('error.missing.coupon.code', 'cart', null)}</span>
@@ -19,8 +19,8 @@
 
                     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
 
-                    <div class="col-6 promo-code-submit">
-                        <button type="submit" class="btn btn--dark btn__small promo-code-btn">
+                    <div class="col-sm-6 promo-code-submit">
+                        <button type="submit" class="btn btn__small promo-code-btn">
                             ${Resource.msg('button.submit.promo.code','cart',null)}
                         </button>
                     </div>

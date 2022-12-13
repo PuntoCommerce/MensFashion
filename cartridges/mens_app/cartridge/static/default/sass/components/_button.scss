@@ -11,7 +11,6 @@
   font-family: nth($text-font-stack, $avenir-LT-Std);
   font-size: $font-size-h5;
 
-  font-weight: $font-weight-bolder;
   background-color: $white-color;
 
   &:hover {
@@ -43,7 +42,6 @@
   &__small {
     font-size: $font-size-minimal;
     padding: $spacing-x-small;
-    font-weight: 900;
   }
 
   &__small-b {

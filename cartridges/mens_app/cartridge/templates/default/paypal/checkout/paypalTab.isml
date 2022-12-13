@@ -7,10 +7,11 @@
                 </div>
             </div>
             <div class="label-payment">
-                <span>${paymentOption.name}</span>
+                <iscomment> <span>${paymentOption.name}</span> </iscomment>
+                <span>Pago con PayPal</span>
             </div>
         </div>
-        <img class="credit-card-option" src="${URLUtils.staticURL('/images/paypal_mark_logo.png')}" height="32"
+        <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/paypal.svg')}"
             alt="${paymentOption.name}" title="${paymentOption.name}" />
     </a>
 </li>

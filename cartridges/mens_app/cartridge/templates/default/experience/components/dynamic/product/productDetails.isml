@@ -1,6 +1,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets');
     assets.addJs('/js/productDetail.js');
+    assets.addJs('/js/custom.js');
     assets.addCss('/css/product/detail.css');
 </isscript>
 
@@ -13,7 +14,7 @@
 
 <isobject object="${product.raw}" view="detail">
 
-    <div class="container product-detail product-wrapper" data-pid="${product.id}">
+    <div class="container product-detail product-wrapper" id="pdp-items-container" data-pid="${product.id}">
         <!--Breadcrumbs-->
         <div class="product-breadcrumb col d-none d-md-block">
             <isinclude template="components/breadcrumbs/pageBreadcrumbs" />

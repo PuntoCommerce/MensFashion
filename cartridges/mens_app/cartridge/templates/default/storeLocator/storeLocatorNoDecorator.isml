@@ -5,21 +5,18 @@
         </span>
     </div>
     <div class="row">
-        <div class="${pdict.horizontalView === 'true' ? 'col-sm-6 d-flex align-items-start flex-column' : 'col-sm-12'}">
+        <div class="${pdict.horizontalView === 'true' ? 'col-sm-6 d-flex align-items-start flex-column' : 'col-sm-12 col-lg-10'}">
             <div class="card search-form">
                 <isinclude template="storeLocator/storeLocatorFields" />
             </div>
         </div>
 
-        <div class="${pdict.horizontalView === 'true' ? 'col-sm-6' : 'col-sm-12'}">
+        <div class="${pdict.horizontalView === 'true' ? 'col-sm-6' : 'col-sm-12 col-lg-10'}">
             <div class="card results-card">
                 <div class="card-header">
                     <isinclude template="storeLocator/storeLocatorRadius" />
                 </div>
                 <div class="card-body">
-                    <p class="text-center store-locator-no-results">
-                        ${Resource.msg('error.no.results', 'storeLocator', null)}
-                    </p>
 
                     <div class="results striped" data-search-key="${JSON.stringify(pdict.stores.searchKey)}"
                         data-radius="${pdict.stores.radius}" data-has-results="${pdict.stores.stores.length > 0}">
@@ -30,9 +27,9 @@
         </div>
     </div>
     <isif condition="${pdict.showMap === false || pdict.showMap === 'false'}">
-        <div class="row">
-            <div class="${pdict.horizontalView === 'true' ? 'col-sm-6' : 'col-sm-12'}">
-                <button class="btn btn--gray btn__small text-uppercase select-store"
+        <div class="rowa no-margin">
+            <div class="${pdict.horizontalView === 'true' ? 'col-sm-6' : 'col-12'} select-store__wrapper">
+                <button onclick="showHoursInStore()" class="btn btn--gray btn__small text-uppercase select-store"
                     disabled>${Resource.msg('button.select.store', 'storeLocator', null)}</button>
             </div>
         </div>

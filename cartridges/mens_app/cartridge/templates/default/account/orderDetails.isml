@@ -11,7 +11,7 @@
     </div>
     <div class="container receipt <isif condition="${pdict.order.shipping.length > 1}">multi-ship</isif>">
         <!---Breadcrumbs--->
-        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <iscomment> <isinclude template="components/breadcrumbs/pageBreadcrumbs"/> </iscomment>
         <div class="row justify-content-center orderDetail">
             <div class="col-sm-8 col-md-12">
                 <isinclude template="checkout/confirmation/confirmationDetails" />

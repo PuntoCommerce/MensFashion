@@ -1,11 +1,11 @@
-<div class="row">
+<iscomment> <div class="row">
     <div class="col-8">
         <p>${Resource.msg('label.shipping.cost','cart',null)}</p>
     </div>
     <div class="col-4">
         <p class="text-right shipping-cost">${pdict.totals.totalShippingCost}</p>
     </div>
-</div>
+</div> </iscomment>
 
 <!--- Shipping Discount --->
 <div class="row shipping-discount <isif condition="${pdict.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">
@@ -31,7 +31,7 @@
     <div class="col-8">
         <strong>${Resource.msg('label.estimatedtotal','cart',null)}</strong>
     </div>
-    <div class="col-4">
+    <div class="col-4 grand-total-container">
         <p class="text-right grand-total">${pdict.totals.grandTotal}</p>
     </div>
 </div>

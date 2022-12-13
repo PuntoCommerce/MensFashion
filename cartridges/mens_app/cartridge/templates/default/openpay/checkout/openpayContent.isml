@@ -46,7 +46,10 @@
                <div class="row form-group">
                   <div class="d-flex flex-column col-12">
                      <label class="form-control-label">${Resource.msg('field.credit.card.security.code', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
-                     <input class="form-control"
+                     <button onclick="showPassword()" class="show-password-checkout" type="button">
+                        <img src="${URLUtils.staticURL('images/checkout/show_password.svg')}" alt="show password">
+                     </button>
+                     <input type="password" class="form-control show-password"
                         placeholder="${Resource.msg('placeholder.input.openpay.cvv', 'openpay', null)}" <isprint
                         value=${openpay.cvv_openpay.attributes} encoding="off" />
                      >

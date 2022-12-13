@@ -38,8 +38,8 @@
                     </div>
                     <div class="col-sm-5 text-right hidden-xs-down d-flex justify-content-end align-items-center">
                         <div>
-                            <span class="checkout__text">${Resource.msg('info.need.help','cart',null)}</span>
-                            <span><a class="help-phone-number checkout__text checkout__text--bold" href="   tel:${Resource.msg('info.phone.number','common',null)}">${Resource.msg('info.phone.number','common',null)}</a></span>
+                            <span class="checkout__text--need-help-tel">${Resource.msg('info.need.help','cart',null)}</span>
+                            <span class="help-phone-number"><a href="tel:${Resource.msg('info.phone.number','common',null)}">${Resource.msg('info.phone.number','common',null)}</a></span>
                         </div>
                     </div>
                 </div>
@@ -79,9 +79,9 @@
                                 <div class="coupons-and-promos">
                                     <isinclude template="cart/cartCouponDisplay" />
                                 </div>
-                                <div class="row">
+                                <iscomment> <div class="row">
                                     <isinclude template="cart/cartShippingMethodSelection" />
-                                </div>
+                                </div> </iscomment>
                                 <isinclude template="cart/cartTotals" />
                                 <div class="row d-none d-sm-block">
                                     <div class="col-12 ">
@@ -96,9 +96,9 @@
                             </div>
                             <div class="cart_bottom">
                                 <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/click.svg')}" alt="lock"/>Click and collect</p>
-                                <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/envio.svg')}" alt="lock"/>Envío gratutio a partir de $600</p>
+                                <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/envio.svg')}" alt="lock"/>Envío gratutio a partir de $699</p>
                                 <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/meses.svg')}" alt="lock"/>Meses sin intereses</p>
-                                <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/sastre.svg')}" alt="lock"/>Sastrería gratuita</p>
+                                <p class="cart_bottom_text"><img class="mr-4 cart_bottom_img" src="${URLUtils.staticURL('/images/checkout/sastreria-icon.svg')}" alt="lock"/>Sastrería gratuita</p>
                             </div>
                         </div>
                     </div>
@@ -113,5 +113,5 @@
         </div>
     </div>
 
-
+    <div id="igdrec_1"></div><div id="igdrec_2"></div>
 </isdecorate>

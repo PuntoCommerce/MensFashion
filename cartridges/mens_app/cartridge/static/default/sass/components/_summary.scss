@@ -36,6 +36,11 @@
  &__swatches {
   align-items: flex-end;
   display: flex;
+  
+  .swatches{
+    display: flex;
+    align-items: center;
+  }
 
   .swatch-border-circle {
    border: 1px solid #000;
@@ -76,6 +81,29 @@
   }
  }
 }
+
+.swatch-border-circle {
+ border: 1px solid #000;
+ border-radius: 28px;
+ width: 28px;
+ height: 28px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ .swatch-value {
+  height: 22px !important;
+  width: 22px !important;
+  margin-right: 0 !important;
+  margin-left: 0;
+ }
+}
+
+.swatch-value {
+  height: 22px !important;
+  width: 22px !important;
+  margin-left: 10px;
+ }
 
 /// productTileImage
 .wishlist {

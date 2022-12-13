@@ -11,9 +11,9 @@
             <div class="row">
                 <div class="col">
                     <span class="product-name">${product.productName}</span>
-
                     <!-- Applicable Promotions -->
                     <iscomment> <div class="row">
+                    <p>${product.id}</p>
                         <div class="col-12 promotions">
                         </div>
                     </div> </iscomment>
@@ -71,8 +71,6 @@
                 <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
                     <div class="row selector-wrapper row-${attr.id}" data-attr="${attr.id}">
                         <isinclude template="product/components/variationAttribute" />
-
-
                     </div>
                 </isloop>
 
@@ -98,7 +96,7 @@
                     <isinclude template="product/components/quantity" />
                 </div>
                 <!-- Add to wishlist -->
-                <div class="attribute favPDP">
+                <div class="attribute favPDP d-md-block d-none">
                     <isinclude template="wishlist/components/addToWishListButton" />
                 </div>
             </div>
@@ -125,7 +123,7 @@
 
 
                 <!-- Store Locator Link -->
-                <div class="row storeLinkPDP">
+                <iscomment> <div class="row storeLinkPDP">
                     <div class="col-12 mt-4">
                         <isinclude template="product/components/storeLocatorLink" />
 
@@ -138,7 +136,7 @@
                             <span>6 MSI y hasta 9 MSI con Citibanamex</span>
                         </div>
                     </div>
-                </div>
+                </div> </iscomment>
 
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isinclude template="product/components/descriptionAndDetails" />

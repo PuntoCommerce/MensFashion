@@ -1,52 +1,61 @@
 <!--- Close button --->
 <div class="filter-header">
-    <div class="header-bar d-flex align-items-center justify-content-between">
-        <div class="result-count d-flex align-items-center">
-            <iscomment> <isinclude template="search/resultsCount" /> </iscomment>
+    <div class="header-bar">
+        <div class="result-count d-flex align-items-center justify-content-between">
+            <iscomment>
+                <isinclude template="search/resultsCount" />
+            </iscomment>
             <p class='filters'>
                 FILTROS
             </p>
+            <button class="d-md-none d-sm-block btn-close-filter" onclick="hideFilter()" type="button">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
         </div>
         <iscomment> <button class="close" onclick="toggleFilters()">
-            <svg id="close-refinement-bar" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.40994 7.00019L12.7099 2.71019C12.8982 2.52188 13.004 2.26649 13.004 2.00019C13.004 1.73388 12.8982 1.47849 12.7099 1.29019C12.5216 1.10188 12.2662 0.996094 11.9999 0.996094C11.7336 0.996094 11.4782 1.10188 11.2899 1.29019L6.99994 5.59019L2.70994 1.29019C2.52164 1.10188 2.26624 0.996094 1.99994 0.996094C1.73364 0.996094 1.47824 1.10188 1.28994 1.29019C1.10164 1.47849 0.995847 1.73388 0.995847 2.00019C0.995847 2.26649 1.10164 2.52188 1.28994 2.71019L5.58994 7.00019L1.28994 11.2902C1.19621 11.3831 1.12182 11.4937 1.07105 11.6156C1.02028 11.7375 0.994141 11.8682 0.994141 12.0002C0.994141 12.1322 1.02028 12.2629 1.07105 12.3848C1.12182 12.5066 1.19621 12.6172 1.28994 12.7102C1.3829 12.8039 1.4935 12.8783 1.61536 12.9291C1.73722 12.9798 1.86793 13.006 1.99994 13.006C2.13195 13.006 2.26266 12.9798 2.38452 12.9291C2.50638 12.8783 2.61698 12.8039 2.70994 12.7102L6.99994 8.41019L11.2899 12.7102C11.3829 12.8039 11.4935 12.8783 11.6154 12.9291C11.7372 12.9798 11.8679 13.006 11.9999 13.006C12.132 13.006 12.2627 12.9798 12.3845 12.9291C12.5064 12.8783 12.617 12.8039 12.7099 12.7102C12.8037 12.6172 12.8781 12.5066 12.9288 12.3848C12.9796 12.2629 13.0057 12.1322 13.0057 12.0002C13.0057 11.8682 12.9796 11.7375 12.9288 11.6156C12.8781 11.4937 12.8037 11.3831 12.7099 11.2902L8.40994 7.00019Z" fill="black"/>
-            </svg>
-        </button> </iscomment>
+                <svg id="close-refinement-bar" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8.40994 7.00019L12.7099 2.71019C12.8982 2.52188 13.004 2.26649 13.004 2.00019C13.004 1.73388 12.8982 1.47849 12.7099 1.29019C12.5216 1.10188 12.2662 0.996094 11.9999 0.996094C11.7336 0.996094 11.4782 1.10188 11.2899 1.29019L6.99994 5.59019L2.70994 1.29019C2.52164 1.10188 2.26624 0.996094 1.99994 0.996094C1.73364 0.996094 1.47824 1.10188 1.28994 1.29019C1.10164 1.47849 0.995847 1.73388 0.995847 2.00019C0.995847 2.26649 1.10164 2.52188 1.28994 2.71019L5.58994 7.00019L1.28994 11.2902C1.19621 11.3831 1.12182 11.4937 1.07105 11.6156C1.02028 11.7375 0.994141 11.8682 0.994141 12.0002C0.994141 12.1322 1.02028 12.2629 1.07105 12.3848C1.12182 12.5066 1.19621 12.6172 1.28994 12.7102C1.3829 12.8039 1.4935 12.8783 1.61536 12.9291C1.73722 12.9798 1.86793 13.006 1.99994 13.006C2.13195 13.006 2.26266 12.9798 2.38452 12.9291C2.50638 12.8783 2.61698 12.8039 2.70994 12.7102L6.99994 8.41019L11.2899 12.7102C11.3829 12.8039 11.4935 12.8783 11.6154 12.9291C11.7372 12.9798 11.8679 13.006 11.9999 13.006C12.132 13.006 12.2627 12.9798 12.3845 12.9291C12.5064 12.8783 12.617 12.8039 12.7099 12.7102C12.8037 12.6172 12.8781 12.5066 12.9288 12.3848C12.9796 12.2629 13.0057 12.1322 13.0057 12.0002C13.0057 11.8682 12.9796 11.7375 12.9288 11.6156C12.8781 11.4937 12.8037 11.3831 12.7099 11.2902L8.40994 7.00019Z"
+                        fill="black" />
+                </svg>
+            </button> </iscomment>
     </div>
 </div>
 
 <!--- Results count and Reset button --->
-<iscomment> <isif condition="${pdict.productSearch.productIds.length > 0}">
-    <div>
-        <div class="secondary-bar col-12 offset-sm-4 offset-md-0 col-sm-4 col-md-12">
-            <button class="reset btn btn-block btn-outline-primary" data-href="${pdict.productSearch.resetLink}">
-                ${Resource.msg('link.reset', 'search', null)}
-            </button>
+<iscomment>
+    <isif condition="${pdict.productSearch.productIds.length > 0}">
+        <div>
+            <div class="secondary-bar col-12 offset-sm-4 offset-md-0 col-sm-4 col-md-12">
+                <button class="reset btn btn-block btn-outline-primary" data-href="${pdict.productSearch.resetLink}">
+                    ${Resource.msg('link.reset', 'search', null)}
+                </button>
+            </div>
         </div>
-    </div>
-</isif> </iscomment>
-
+    </isif>
+</iscomment>
 <div>
-    <div class="refinements">
+    <div class="refinements" id="filter-container">
         <isloop items="${pdict.productSearch.refinements}" var="refinement">
-            <div class="card collapsible-sm refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}-divider">
-                <div class="card-header col-sm-12 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target=".refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}" aria-expanded="true">
-                    <button class="title btn text-left btn-block d-md-none"
-                       aria-controls="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
-                       aria-expanded="false"
-                    >
+            <div
+                class="card collapsible-sm refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}-divider">
+                <div class="card-header col-sm-12 d-flex justify-content-between align-items-center collapse-filter-plp"
+                    data-toggle="collapse"
+                    data-target=".refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
+                    aria-expanded="true">
+                    <button class="title btn text-left btn-block d-md-none filter-collapse-button"
+                        aria-controls="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
+                        aria-expanded="false">
                         <span>${refinement.displayName}</span>
-                        <svg class="pull-right" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.840615 0.954385C1.05158 0.74348 1.33768 0.625 1.63599 0.625C1.9343 0.625 2.22039 0.74348 2.43136 0.954385L8.0001 6.52313L13.5688 0.954385C13.781 0.749457 14.0652 0.636063 14.3602 0.638626C14.6551 0.641189 14.9373 0.759505 15.1459 0.968089C15.3545 1.17667 15.4728 1.45884 15.4753 1.75381C15.4779 2.04878 15.3645 2.33296 15.1596 2.54513L8.79548 8.90926C8.58451 9.12016 8.29841 9.23864 8.0001 9.23864C7.70179 9.23864 7.4157 9.12016 7.20473 8.90926L0.840615 2.54513C0.62971 2.33417 0.51123 2.04807 0.51123 1.74976C0.51123 1.45145 0.62971 1.16535 0.840615 0.954385Z" fill="black"/>
-                        </svg>
+                        
                     </button>
-                    <h2 aria-label="${refinement.displayName}" class="d-none d-md-block pull-left">${refinement.displayName}</h2>
-                    <svg class="pull-righta d-none d-sm-block" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.840615 0.954385C1.05158 0.74348 1.33768 0.625 1.63599 0.625C1.9343 0.625 2.22039 0.74348 2.43136 0.954385L8.0001 6.52313L13.5688 0.954385C13.781 0.749457 14.0652 0.636063 14.3602 0.638626C14.6551 0.641189 14.9373 0.759505 15.1459 0.968089C15.3545 1.17667 15.4728 1.45884 15.4753 1.75381C15.4779 2.04878 15.3645 2.33296 15.1596 2.54513L8.79548 8.90926C8.58451 9.12016 8.29841 9.23864 8.0001 9.23864C7.70179 9.23864 7.4157 9.12016 7.20473 8.90926L0.840615 2.54513C0.62971 2.33417 0.51123 2.04807 0.51123 1.74976C0.51123 1.45145 0.62971 1.16535 0.840615 0.954385Z" fill="black"/>
-                    </svg>
-
+                    <h2 aria-label="${refinement.displayName}" class="d-none d-md-block pull-left title-filter">
+                        ${refinement.displayName}</h2>
+                    
                 </div>
-                <div class="card-body content value collapse show refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}" id="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
+                <div class="card-body content value collapse filter-collapse refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}"
+                    id="refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
                     <!--- CATEGORY REFINEMENTS --->
                     <isif condition="${refinement.isCategoryRefinement}">
                         <isset name="categories" value="${refinement.values}" scope="page" />

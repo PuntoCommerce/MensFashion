@@ -2,6 +2,9 @@
   margin: 0 auto;
   width: 100%;
 }
+.container-custom-width-100 {
+  width: 100%;
+}
 .container-custom-width-95 {
   width: 95%;
 }
@@ -28,11 +31,10 @@
 }
 .container-custom-size .region {
   margin-bottom: 0;
-  padding: 0 1.2rem;
 }
 
 @media (max-width: 543px) {
  .container-custom-size .region {
-    padding: 0 1.1rem;
+    padding: 0;
   }
 }

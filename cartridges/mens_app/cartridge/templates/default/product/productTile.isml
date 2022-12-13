@@ -1,5 +1,5 @@
 <isset name="product" value="${pdict.product}" scope="page" />
-<div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
+    <div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
 
     <isinclude template="product/components/highlight" />
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->

@@ -8,12 +8,12 @@
     <div class="title-container-account">
         <h1 class="page-title">${Resource.msg('label.orderhistory','account',null)}</h1>
     </div>
-    <div class="container ">
+    <div class="container-custom">
         <!---Breadcrumbs--->
-        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        <iscomment> <isinclude template="components/breadcrumbs/pageBreadcrumbs"/> </iscomment>
         <div class="row justify-content-end order-top">
             <div class="col-12 col-sm-4 col-md-3">
-                <div class="form-group">
+                <div class="form-group order-history-form-group">
                     <select class="form-control custom-select order-history-select" aria-label="${Resource.msg('label.filter.order.history','account',null)}">
                         <isloop items="${pdict.filterValues}" var="filterValue">
                             <option
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-6 text-center">
+            <div class="col-sm-8 col-md-6 text-center back-to-my-account">
                 <a href="${URLUtils.url('Account-Show')}" class="normal">
                     ${Resource.msg('link.profile.backtomyaccount','account',null)}
                 </a>

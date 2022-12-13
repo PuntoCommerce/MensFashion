@@ -1,4 +1,4 @@
-<label class="d-none d-lg-block"
+<label class="d-lg-block"
     for="quantity-${loopState && loopState.count ? loopState.count : '1'}">${Resource.msg('label.quantity', 'common', null)}</label>
 <select class="quantity-select custom-select form-control"
     id="quantity-${loopState && loopState.count ? loopState.count : '1'}">

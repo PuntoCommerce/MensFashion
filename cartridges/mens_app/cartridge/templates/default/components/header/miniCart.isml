@@ -6,10 +6,11 @@
         <iscomment> <span class="minicart-quantity">
                 <isprint value="${pdict.quantityTotal}" formatter="##" />
             </span> </iscomment>
-     
+
+        <div class="minicart-quantity-container">
             <span class="minicart-quantity">
                 <isprint value="${pdict.quantityTotal}" formatter="##" />
             </span>
-    
+        </div>
     </a>
 </div>
