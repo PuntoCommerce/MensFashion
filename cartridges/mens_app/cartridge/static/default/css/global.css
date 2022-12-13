@@ -21861,7 +21861,7 @@ button.close:focus {
 }
 
 .orderDetail {
-  margin: 0 200px;
+  margin: 50px 200px;
 }
 
 .orderDetail .card-body {
@@ -22508,6 +22508,9 @@ button.close:focus {
 
   .summary__pricing .price .prices-container .sales-price .sales {
     font-size: 16px;
+  }
+  .orderDetail{
+    margin: 0 20px;
   }
 }
 

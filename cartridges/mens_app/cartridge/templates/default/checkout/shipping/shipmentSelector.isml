@@ -5,7 +5,7 @@
 
     <select id="shipmentSelector-${lineItem ? lineItem.UUID : 'default'}"
             name="shipmentSelector"
-            class="addressSelector form-control custom-select"
+            class="addressSelector form-control custom-select mb-1"
             data-create-shipment-url="${URLUtils.https('CheckoutAddressServices-CreateNewAddress')}"
     >
         <isinclude template="checkout/shipping/shipmentSelectorOptions" />
@@ -13,7 +13,7 @@
 
     <div class="invalid-feedback"></div>
     <div class="row justify-content-center no-margin">
-        <button class="col-12 col-md-5 mt-3 mb-2 btn--gray btn__small text-uppercase btn-show-details btn" type="button">${Resource.msg('action.update.address', 'checkout', null)}</button>
+        <button class="col-12 col-md-5 m-2 btn--gray btn__small text-uppercase btn-show-details btn" type="button">${Resource.msg('action.update.address', 'checkout', null)}</button>
         <button class="col-12 col-md-5 m-2 btn--gray btn__small text-uppercase btn-add-new btn" type="button">${Resource.msg('action.add.new', 'checkout', null)}</button>
     </div>
 </div>
