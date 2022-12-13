@@ -12,5 +12,6 @@
             ${refinementValue.title}
         </span>
     </button>
-     <bp class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</bp>
+     <p class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</p>
 </li>
+</isif>

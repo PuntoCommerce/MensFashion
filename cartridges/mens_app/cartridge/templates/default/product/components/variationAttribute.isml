@@ -30,11 +30,13 @@
                                     ${product.productType === "variant" && isBundle ? "disabled" : ""}>
 
                                     <isif condition="${loopState.count === 1}">
+                                        <span class="swatch-border-circle">
                                             <span data-attr-value="${attrValue.value}" class="${attr.id}-value swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')} swatch-value 
                                                 ${attrValue.selected ? 'selected' : ''}
                                                 ${attrValue.selectable ? 'selectable' : 'unselectable'}"
                                                 style="background-color: ${attrValue.value.startsWith('hex') ? attrValue.value.replace('hex', '#') : attrValue.value}">
                                             </span>
+                                        </span>
                                     <iselse/>
                                         <span data-attr-value="${attrValue.value}" class="${attr.id}-value swatch-circle-${attrValue.value.toLowerCase().replace(/ /g, '-')} swatch-value
                                             ${attrValue.selected ? 'selected' : ''}

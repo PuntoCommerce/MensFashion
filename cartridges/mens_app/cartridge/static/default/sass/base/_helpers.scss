@@ -57,7 +57,7 @@
 ///Container custom
 .container-custom {
   max-width: $max-width;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 93%;
 
   @include respond(tab-land) {

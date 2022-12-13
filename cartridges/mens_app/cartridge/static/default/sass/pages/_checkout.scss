@@ -622,11 +622,11 @@
   }
 }
 
-.row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
-  @include respond(phone) {
-    height: calc(100vh - (82px + 96px + 149px));
-  }
-}
+// .row.d-flex.justify-content-center.aling-items-center.checkout__cart.pt-4.pb-5 {
+//   @include respond(phone) {
+//     height: calc(100vh - (82px + 96px + 149px));
+//   }
+// }
 
 .mt-5.mb-5.checkout.container-custom {
   min-height: calc(100vh - 325px);
