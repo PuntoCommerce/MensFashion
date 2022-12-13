@@ -18207,7 +18207,7 @@ div.availability {
 @media (max-width: 768px) {
 
   .search-results .product-tile .tile-body .pdp-link a {
-    width: 160px;
+    width: -webkit-fill-available;
   }
 
   .experience-commerce_layouts-navTabs .product-tile .tile-body .pdp-link a {

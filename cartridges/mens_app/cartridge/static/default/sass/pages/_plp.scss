@@ -349,7 +349,13 @@
 @media (max-width: 543px) {
   .product-tile.summary {
     height: auto;
-    padding: 0 7px !important;
+    padding: 0 !important;
+    margin-bottom: 10px;
+  }
+
+  .product-tile {
+    background-color: #F5F5F5;
+    border: 0px solid #F5F5F5 !important;
   }
 
   .grid-header.row {
