@@ -3330,6 +3330,9 @@ header nav.homepage {
   top: -4px;
   padding: 13px; }
 
+.swatch-value.unselectable {
+  opacity: 0.5; }
+
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
     max-height: 60vh !important;
