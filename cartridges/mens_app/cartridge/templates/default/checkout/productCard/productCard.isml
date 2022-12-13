@@ -19,7 +19,7 @@
                 <img class="product-image" src="${lineItem.images.small[0].url}" alt="${lineItem.images.small[0].alt}"
                     title="${lineItem.images.small[0].title}">
             </div>
-            <div class="item-attributes col-7 d-flex flex-column justify-content-between">
+            <div class="item-attributes col-7 d-flex flex-column justify-content-around">
                 <div class=''>
                     <div class="checkout__text">
                     <span>${lineItem.productName}</span>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row no-margin">
                     <!--- item price --->
-                    <div class="col-12 no-padding">
+                    <div class="col-4 no-padding">
                         <isif condition="${lineItem.price}">
                             <p class="line-item-pricing-info">
                                 <span class="line-item-total-text unit-price-label">
@@ -49,7 +49,7 @@
                         </isif>
                     </div>
                     <!--- quantity --->
-                    <div class="col-12 no-padding">
+                    <div class="col-4 no-padding">
                         <isif condition=${miniCart}>
                             <isinclude template="checkout/productCard/productCardQuantitySelector" />
                         <iselse>
@@ -57,7 +57,7 @@
                         </isif>
                     </div>
                     <!--- line item total price --->
-                    <div class="col-12 total-price-wrapper no-padding">
+                    <div class="col-4 total-price-wrapper no-padding d-flex">
                         <p class="line-item-pricing-info">
                             <span class="line-item-total-text line-item-total-price-label">
                                 ${Resource.msg('label.total.price', 'cart', null)}

@@ -4544,7 +4544,7 @@ input[type="submit"].btn-block {
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  padding: 0.375rem 3.75rem 0.375rem 3.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -21861,19 +21861,20 @@ button.close:focus {
 }
 
 .orderDetail {
-  margin: 0 200px;
+  margin: 50px 200px;
 }
 
 .orderDetail .card-body {
   border: 1px solid #000;
 }
 
-.orderDetail .checkout__order--product {
-  background: #fff;
-}
-
 .my-account a {
   color: #2d64fc;
+  text-decoration: underline;
+}
+
+.leading-lines {
+  margin-top: 1rem !important;
 }
 
 .paymentsListBtns {
@@ -22469,6 +22470,33 @@ button.close:focus {
   padding-top: 20px;
 }
 
+.checkout__order--product .price .strike-through {
+  font-size: 12px;
+}
+.checkout__order--product .sales .value {
+  font-size: 12px;
+}
+.checkout__order--product .strike-through span {
+  font-size: 12px
+}
+.checkout__order--product .line-item-total-price-amount {
+  font-size: 12px;
+}
+.checkout__order--product .qty-card-quantity-label {
+  margin: 0;
+}
+.checkout__order--product .qty-card-quantity-count {
+  font-size: 12px;
+}
+.checkout__order--product .total-price-wrapper{
+  display: block !important;
+  text-align: left !important;
+}
+
+.result-count {
+  font-size: 14px;
+  font-family: 'Avenir-Next';
+}
 
 @media (max-width: 1200px) {
   .checkout__cart {
@@ -22503,6 +22531,9 @@ button.close:focus {
 
   .summary__pricing .price .prices-container .sales-price .sales {
     font-size: 16px;
+  }
+  .orderDetail{
+    margin: 0 20px;
   }
 }
 

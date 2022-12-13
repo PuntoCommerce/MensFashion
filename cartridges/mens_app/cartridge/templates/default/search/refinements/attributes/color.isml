@@ -12,11 +12,5 @@
             ${refinementValue.title}
         </span>
     </button>
-<<<<<<< HEAD
      <bp class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</bp>
 </li>
-=======
-     <p class="colorName"> ${refinementValue.swatchId.slice(14).toLowerCase()}</p>
-</li>
-</isif>
->>>>>>> b99571317fd91af71e09eceba6fa0e9a6d0c3e25
