@@ -464,7 +464,7 @@ h5, html, body {
 
 .container-custom {
   max-width: 1444px;
-  margin: 0 auto;
+  margin:50px auto;
   width: 93%; }
   @media only screen and (min-width: 75em) {
     .container-custom {
@@ -3672,8 +3672,7 @@ del {
       width: 100%;
       background-color: #64656a; }
     .checkout__order--product {
-      padding: 20px;
-      background-color: #d8d8d8; }
+      padding: 20px;}
   .checkout__stepper--item-title {
     position: absolute;
     bottom: 0; }

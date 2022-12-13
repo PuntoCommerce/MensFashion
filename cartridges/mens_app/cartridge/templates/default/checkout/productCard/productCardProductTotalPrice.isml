@@ -1,6 +1,6 @@
-<div class="strike-through justify-content-end
+<div class="strike-through ml-1
 <isif condition=${!lineItem.priceTotal.nonAdjustedPrice}>non-adjusted-price</isif>"
 >
     ${lineItem.priceTotal.nonAdjustedPrice}
 </div>
-<div class="pricing line-item-total-price-amount item-total-${lineItem.UUID}">${lineItem.priceTotal.price}</div>
+<div class="ml-1 pricing line-item-total-price-amount item-total-${lineItem.UUID}">${lineItem.priceTotal.price}</div>
