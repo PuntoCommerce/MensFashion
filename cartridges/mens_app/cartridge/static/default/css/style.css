@@ -2754,8 +2754,8 @@ header nav.homepage {
   .experience-commerce_layouts-navTabs .summary__footer .btn__small {
     font-size: 20px; }
   .photo-tile-figure {
-    bottom: -45vh;
-    height: 45vh; }
+    bottom: -72vh;
+    height: 38vh; }
   #carousel-90931919792f25f303f3259d58.indicators-xs,
   #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs,
   #carousel-9512e1c0a8e4670211309bfb9b.indicators-xs {
@@ -2789,8 +2789,8 @@ header nav.homepage {
   .promo-carousel .btn__small {
     font-size: 10px; }
   .photo-tile-figure {
-    bottom: -37vh;
-    height: 35vh; } }
+    bottom: -70vh;
+    height: 30vh; } }
 
 @media (max-width: 330px) {
   .promo-carousel .btn__small {
@@ -3039,6 +3039,10 @@ header nav.homepage {
     font-family: "Avenir-Next"; } }
 
 @media (max-width: 543px) {
+  #homepage .product-tile.summary {
+    height: auto;
+    padding: 0 30px !important;
+    margin-bottom: 10px; }
   .product-tile.summary {
     height: auto;
     padding: 0 !important;

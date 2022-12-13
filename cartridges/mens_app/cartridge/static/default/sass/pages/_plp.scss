@@ -347,6 +347,14 @@
 }
 
 @media (max-width: 543px) {
+  #homepage{
+    .product-tile.summary {
+      height: auto;
+      padding: 0 30px !important;
+      margin-bottom: 10px;
+    }
+  }
+
   .product-tile.summary {
     height: auto;
     padding: 0 !important;
