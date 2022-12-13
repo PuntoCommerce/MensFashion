@@ -285,6 +285,7 @@
 
   .video-hero-desktop {
     width: 100%;
+    pointer-events: none;
 
     &__texts {
       position: absolute;

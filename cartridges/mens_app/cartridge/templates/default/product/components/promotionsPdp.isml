@@ -2,7 +2,7 @@
     scope="page" />
 <isif condition="${product.promotions}">
     <isloop items="${product.promotions}" var="promotion" status="promdet">
-        <span class="promotion-item">${promotion.name.replace('de descuento', '')}</span>
+        <iscomment> <span class="promotion-item">${promotion.name.replace('de descuento', '')}</span> </iscomment>
         <iscomment> <div class="row collapsible-xl">
             <div class="col-12">
                 <button class="title callout btn text-left btn-block" aria-expanded="false"
