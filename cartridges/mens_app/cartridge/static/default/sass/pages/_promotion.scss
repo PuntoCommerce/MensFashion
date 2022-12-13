@@ -5,9 +5,26 @@ $promotion-first-color: #555a7b;
     overflow: hidden;
 
     .editorialRichText-component-container {
+      margin: 0 !important;
+
+      .text-center {
+        flex-direction: column;
+      }
+
       h4 {
         font-size: 20px;
         color: $promotion-first-color;
+        margin-top: 20px;
+        padding: 0 25px;
+      }
+
+      h3 {
+        font-size: 16px;
+        padding: 0 10px;
+        
+        a{
+          color: $promotion-first-color !important;
+        }
       }
 
       p {
@@ -24,6 +41,13 @@ $promotion-first-color: #555a7b;
             text-decoration: underline;
           }
         }
+      }
+
+      strong:nth-child(1) {
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Avenir-Bold';
       }
     }
   }
@@ -49,8 +73,8 @@ $promotion-first-color: #555a7b;
       }
 
       &__pricing {
-        .sales-price{
-          .sales{
+        .sales-price {
+          .sales {
             font-weight: 600;
           }
         }

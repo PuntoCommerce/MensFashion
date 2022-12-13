@@ -2513,7 +2513,7 @@ ul {
     .video-hero-container .video-hero-desktop__date {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 54vh);
+      transform: translate(-50%, 45vh);
       width: max-content; }
       .video-hero-container .video-hero-desktop__date span {
         font-size: 12px;
@@ -4207,17 +4207,33 @@ a .oauth-facebook--button {
 
 #paquetes3x1699 .container-custom-size {
   overflow: hidden; }
-  #paquetes3x1699 .container-custom-size .editorialRichText-component-container h4 {
-    font-size: 20px;
-    color: #555a7b; }
-  #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a {
-    color: #555a7b !important;
-    font-size: 16px;
-    font-family: "Avenir-Next"; }
-    #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a u {
-      text-decoration: none; }
-    #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a:hover {
-      text-decoration: underline; }
+  #paquetes3x1699 .container-custom-size .editorialRichText-component-container {
+    margin: 0 !important; }
+    #paquetes3x1699 .container-custom-size .editorialRichText-component-container .text-center {
+      flex-direction: column; }
+    #paquetes3x1699 .container-custom-size .editorialRichText-component-container h4 {
+      font-size: 20px;
+      color: #555a7b;
+      margin-top: 20px;
+      padding: 0 25px; }
+    #paquetes3x1699 .container-custom-size .editorialRichText-component-container h3 {
+      font-size: 16px;
+      padding: 0 10px; }
+      #paquetes3x1699 .container-custom-size .editorialRichText-component-container h3 a {
+        color: #555a7b !important; }
+    #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a {
+      color: #555a7b !important;
+      font-size: 16px;
+      font-family: "Avenir-Next"; }
+      #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a u {
+        text-decoration: none; }
+      #paquetes3x1699 .container-custom-size .editorialRichText-component-container p a:hover {
+        text-decoration: underline; }
+    #paquetes3x1699 .container-custom-size .editorialRichText-component-container strong:nth-child(1) {
+      display: flex;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Avenir-Bold'; }
 
 #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
   color: #555a7b;
