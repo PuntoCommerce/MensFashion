@@ -14,8 +14,7 @@ base.getResources = function () {
     var Resource = require('dw/web/Resource');
 
     return {
-        // info_selectforstock: Resource.msg('info.selectforstock', 'product',
-        //     'Select Styles for Availability'),
+        info_selectforstock: Resource.msg('info.selectforstock', 'product',''),
         assistiveSelectedText: Resource.msg('msg.assistive.selected.text', 'common', null)
     };
 }
