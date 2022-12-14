@@ -82,7 +82,7 @@
             <!-- Trigger Modal Sizes Guide -->
             <div class="row sizes-guide-cont">
                 <div class="col sizes-guide d-flex align-items-center">
-                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}" alt="Guia de tallas" />
+                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.png')}" alt="Guia de tallas" />
                     <!-- Button trigger modal -->
                     <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
                         ${Resource.msg('size.guide', 'common', null)}

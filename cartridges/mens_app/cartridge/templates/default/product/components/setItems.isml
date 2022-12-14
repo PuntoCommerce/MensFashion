@@ -38,7 +38,7 @@
                             </div>
                             <!-- Trigger Modal Sizes Guide -->
                             <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
-                                <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.svg')}"
+                                <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.png')}"
                                     alt="Guia de tallas" />
                                 <!-- Button trigger modal -->
                                 <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
