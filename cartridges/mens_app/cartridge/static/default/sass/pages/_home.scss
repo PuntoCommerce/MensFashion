@@ -361,8 +361,9 @@
     &__date {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 45vh);
+      transform: translate(-50%, 0);
       width: max-content;
+      bottom: 0;
 
       span {
         font-size: 12px;
@@ -397,14 +398,22 @@ header {
   position: relative;
   z-index: -1;
   height: 45vh;
-  bottom: -60vh;
+  bottom: -44vh;
 }
 
 #carousel-9512e1c0a8e4670211309bfb9b {
   background-image: url('../../images/home/fondo_mundial.png');
 
+  .carousel-item:nth-child(1) {
+    padding-right: 10px;
+  }
+
+  .carousel-item:nth-child(2) {
+    padding-left: 10px;
+  }
+
   .carousel-inner {
-    padding: 50px 30px;
+    padding: 75px 30px;
 
     .ITBC-banner-container {
       .ITBC-buttons {
@@ -514,6 +523,97 @@ header {
   margin: 0;
 }
 
+#homepage {
+  .customTextBox-component-container {
+    position: absolute;
+    z-index: 1;
+    line-height: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    p:nth-child(1) {
+      color: #fff;
+      font-family: $font-family-bold;
+      font-size: 25px;
+      width: fit-content;
+    }
+
+    p:nth-child(2) {
+      color: #fff;
+      font-size: 16px;
+      width: fit-content;
+    }
+  }
+
+  .editorialRichText-component-container {
+    flex-direction: column;
+  }
+
+  .experience-commerce_assets-imageNoMargin {
+    .photo-tile-container {
+      width: 30%;
+      margin: auto;
+    }
+  }
+
+  .experience-commerce_assets-imageNoMargin~.experience-commerce_assets-editorialRichText {
+    .text-lg-left {
+      display: flex;
+      flex-direction: column;
+
+      p:nth-child(1) {
+        font-family: $font-family-bold;
+
+        strong {
+          font-size: 14px;
+        }
+      }
+
+      p:nth-child(1) {
+        strong {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .editorialRichText-component-container .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) {
+    padding: 0 10vh;
+
+    .carousel-title {
+      font-family: $font-family-bold;
+    }
+  }
+
+  .experience-commerce_assets-editorialRichText:nth-child(1) {
+    .editorialRichText-component-container {
+      .text-center {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p:nth-child(1) {
+          font-family: $font-family-bold;
+        }
+      }
+    }
+  }
+  
+  .ITC-text-underneath{
+    span{
+      font-size: 12px;
+    }
+  }
+}
+
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
     padding-right: 95px;
@@ -611,14 +711,6 @@ header {
     }
   }
 
-  .video-hero-container {
-    .video-hero-desktop {
-      &__date {
-        transform: translate(-50%, 32vh);
-      }
-    }
-  }
-
   .title-carousel-9512e1c0a8e4670211309bfb9b {
     position: absolute;
     z-index: 1;
@@ -632,12 +724,6 @@ header {
     width: 100%;
     padding: 0 5px;
   }
-
-  #carousel-9512e1c0a8e4670211309bfb9b{
-    .carousel-inner{
-
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -648,7 +734,7 @@ header {
 
       .btn-ITBC-outline {
         border: 2px solid #34406C;
-        padding: 28px 60px;
+        padding: 12px 20px;
         color: #34406C;
         border-radius: 5px
       }
@@ -690,7 +776,6 @@ header {
       }
 
       &__date {
-        transform: translate(-50%, 42vh);
         width: 90%;
         text-align: center;
 
@@ -700,6 +785,10 @@ header {
         }
       }
     }
+  }
+
+  .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) {
+    padding: 0;
   }
 }
 
@@ -752,14 +841,29 @@ header {
   }
 
   .photo-tile-figure {
-    bottom: -72vh;
-    height: 38vh;
+    bottom: -55vh;
+    height: 35vh;
   }
 
   #carousel-90931919792f25f303f3259d58.indicators-xs,
   #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs,
   #carousel-9512e1c0a8e4670211309bfb9b.indicators-xs {
     padding: 1.1rem !important;
+  }
+
+  .customTextBox-component-container {
+    transform: translate(-50%, 18px);
+  }
+
+  #carousel-9512e1c0a8e4670211309bfb9b {
+
+    .carousel-item:nth-child(1) {
+      padding-right: 0px;
+    }
+
+    .carousel-item:nth-child(2) {
+      padding-left: 0px;
+    }
   }
 
   .experience-component.experience-commerce_assets-imageButton {
@@ -797,10 +901,6 @@ header {
       &__buttons {
         transform: translate(-50%, 10vh);
       }
-
-      &__date {
-        transform: translate(-50%, 28vh);
-      }
     }
   }
 }
@@ -817,7 +917,7 @@ header {
   }
 
   .photo-tile-figure {
-    bottom: -70vh;
+    bottom: -51vh;
     height: 30vh;
   }
 }
