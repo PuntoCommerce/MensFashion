@@ -3,7 +3,7 @@
     assets.addCss('/css/experience/components/commerceAssets/customTextBox.css');
 </isscript>
 
-<div class="customTextBox-component-container">
+<div class="customTextBox-component-container ${pdict.id}">
     <div class="row">
         <div class="item col-12 pt-2 pb-2 d-flex align-items-center justify-content-${pdict.layout == 'left' ? 'start' : pdict.layout == 'center' ? 'center' : 'end' }">
           <div class="d-flex flex-column justify-content-center align-items-center">
