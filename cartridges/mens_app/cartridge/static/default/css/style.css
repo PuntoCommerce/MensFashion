@@ -4228,6 +4228,11 @@ a .oauth-facebook--button {
 .oauth-facebook--button {
   color: #000000; }
 
+.oauth-facebook--button:hover .fa.fa-facebook-official,
+.oauth-google--button:hover .fa.fa-google,
+.oauth-google--button span:hover {
+  color: #ffffff; }
+
 .oauth-google--button span,
 .oauth-facebook--button span {
   font-family: "Avenir-Next" !important; }
