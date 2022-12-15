@@ -589,6 +589,7 @@ header {
 
     .carousel-title {
       font-family: $font-family-bold;
+      font-size: 25px;
     }
   }
 
@@ -618,6 +619,13 @@ header {
   .ITC-text-underneath {
     span {
       font-size: 12px;
+    }
+  }
+
+  
+  .experience-commerce_layouts-mobileGrid3r1c:nth-child(3){
+    .editorialRichText-component-container{
+      margin: 0 !important;
     }
   }
 }
