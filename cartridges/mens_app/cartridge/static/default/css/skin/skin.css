@@ -25,8 +25,8 @@ h1.header.page-title:before {
   color: var(--skin-heading-color-1-invert);
 }
 .product-tile {
-  background-color: #F5F5F5;
-  border: 10px solid #F5F5F5;
+  background-color: #ffffff;
+  border: 10px solid #ffffff;
 }
 .refinements ul li button {
   color: var(--skin-primary-color-1);
