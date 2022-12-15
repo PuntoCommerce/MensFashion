@@ -2668,13 +2668,18 @@ header nav.homepage {
   #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) .carousel-title {
     font-family: "AvenirLTStd-Heavy"; }
 
-#homepage .experience-commerce_assets-editorialRichText:nth-child(1) .editorialRichText-component-container .text-center {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  #homepage .experience-commerce_assets-editorialRichText:nth-child(1) .editorialRichText-component-container .text-center p:nth-child(1) {
-    font-family: "AvenirLTStd-Heavy"; }
+#homepage .experience-commerce_assets-editorialRichText:nth-child(1) {
+  line-height: 40px; }
+  #homepage .experience-commerce_assets-editorialRichText:nth-child(1) .editorialRichText-component-container .text-center {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #homepage .experience-commerce_assets-editorialRichText:nth-child(1) .editorialRichText-component-container .text-center p:nth-child(1) {
+      font-family: "AvenirLTStd-Heavy"; }
+
+#homepage .experience-commerce_assets-editorialRichText:nth-child(2) .editorialRichText-component-container {
+  line-height: 30px; }
 
 #homepage .ITC-text-underneath span {
   font-size: 12px; }
@@ -2780,7 +2785,12 @@ header nav.homepage {
           font-size: 12px;
           font-family: "Avenir-Next"; }
   .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) {
-    padding: 0; } }
+    padding: 0 !important; }
+  .image-container a {
+    display: block; }
+    .image-container a .tile-image {
+      width: 100%;
+      height: 100%; } }
 
 @media (max-width: 543px) {
   .mobile-2r-2c .region {
@@ -2828,7 +2838,10 @@ header nav.homepage {
   .experience-component.experience-commerce_assets-imageButton {
     background: #fff; }
   #carousel-316c8bfb97dcd2cf92829eb636 .carousel-inner {
-    padding-bottom: 0px !important; } }
+    padding-bottom: 0px !important; }
+  #homepage .customTextBox-component-container {
+    transform: translate(-50%, 20px);
+    width: 100%; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
@@ -4294,7 +4307,7 @@ a .oauth-facebook--button {
     #paquetes3x1699 .container-custom-size .editorialRichText-component-container .text-center {
       flex-direction: column; }
     #paquetes3x1699 .container-custom-size .editorialRichText-component-container h4 {
-      font-size: 20px;
+      font-size: 22px;
       color: #555a7b;
       margin-top: 20px;
       padding: 0 25px; }
@@ -4319,7 +4332,8 @@ a .oauth-facebook--button {
 
 #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
   color: #555a7b;
-  font-size: 20px; }
+  font-size: 20px;
+  font-family: "Avenir-Next" !important; }
 
 #paquetes3x1699 #carousel-4a53e3a6c1b45dd5f928b55719,
 #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8,
@@ -4337,6 +4351,10 @@ a .oauth-facebook--button {
   #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 .summary__pricing .sales-price .sales {
     font-weight: 600; }
 
+#paquetes3x1699 .product-tile .image-container .tile-image {
+  height: 100%;
+  width: 100%; }
+
 @media (max-width: 991px) {
   #paquetes3x1699 #carousel-4a53e3a6c1b45dd5f928b55719,
   #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8,
@@ -4350,5 +4368,7 @@ a .oauth-facebook--button {
   #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9,
   #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 {
     padding: 0 4vh 4vh 4vh; }
+  #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item {
+    padding: 0 10px; }
   #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
     padding: 16px; } }
