@@ -12,7 +12,7 @@ $promotion-first-color: #555a7b;
       }
 
       h4 {
-        font-size: 20px;
+        font-size: 22px;
         color: $promotion-first-color;
         margin-top: 20px;
         padding: 0 25px;
@@ -56,6 +56,7 @@ $promotion-first-color: #555a7b;
     .carousel-title {
       color: $promotion-first-color;
       font-size: 20px;
+      font-family: $font-family-normal !important;
     }
   }
 
@@ -80,8 +81,15 @@ $promotion-first-color: #555a7b;
         }
       }
     }
+  }
 
-
+  .product-tile{
+    .image-container{
+      .tile-image{
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
   @media (max-width: 991px) {
@@ -101,6 +109,12 @@ $promotion-first-color: #555a7b;
     #carousel-d093a0c933cd397f9756c503a9,
     #carousel-4e244a80f0b45733d5ce2cb426 {
       padding: 0 4vh 4vh 4vh;
+    }
+
+    #carousel-a4f0ceeec72c81ab95604309f8{
+      .carousel-item{
+        padding: 0 10px;
+      }
     }
 
     .experience-component.experience-commerce_layouts-carousel {
