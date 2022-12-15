@@ -22502,6 +22502,10 @@ button.close:focus {
   font-family: 'Avenir-Next';
 }
 
+.refinements .card, #pdp-items-container, .product-detail .product-details-container{
+  background: #ffffff;
+}
+
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important;
