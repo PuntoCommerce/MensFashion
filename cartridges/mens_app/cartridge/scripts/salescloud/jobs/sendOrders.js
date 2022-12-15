@@ -72,6 +72,7 @@ module.exports.execute = () => {
 
   let order;
   let body;
+  let getToken;
   let salesOrderId;
   while (orders.hasNext()) {
     order = orders.next();
@@ -147,7 +148,7 @@ module.exports.execute = () => {
     };
 
     let a = body.account;
-    let getToken=getToken();
+     getToken=getToken();
 
     salesOrderId = sendOrder(body,getToken);
 
