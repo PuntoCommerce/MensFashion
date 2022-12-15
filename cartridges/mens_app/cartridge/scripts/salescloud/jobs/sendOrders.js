@@ -55,7 +55,9 @@ const handlePayment = (payment) => {
     authorizationDate: parseDate(payment.lastModified),
   };
 };
-
+const getToken = () => {
+  return token.call().access_token;
+};
 module.exports.execute = () => {
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
@@ -145,7 +147,7 @@ module.exports.execute = () => {
     };
 
     let a = body.account;
-    let getToken=token.call().access_token;
+    let getToken=getToken();
 
     salesOrderId = sendOrder(body,getToken);
 
