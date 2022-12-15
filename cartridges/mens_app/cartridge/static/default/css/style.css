@@ -1587,7 +1587,7 @@ ul {
     font-size: 12px !important; } }
 
 .refinement-bar {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   z-index: 5;
   box-shadow: none; }
   .refinement-bar .refinement-color .values.content {
@@ -2664,7 +2664,8 @@ header nav.homepage {
   flex-direction: column; }
 
 #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) {
-  padding: 0 10vh; }
+  padding: 0 10vh;
+  background-color: #ffffff; }
   #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) .carousel-title {
     font-family: "AvenirLTStd-Heavy";
     font-size: 25px; }
@@ -3179,7 +3180,7 @@ header nav.homepage {
   .product-detail .fa.icon-next {
     display: none; }
   .product-detail .product-details-container {
-    background-color: #f5f5f5; }
+    background-color: #ffffff; }
   .product-detail .custom-padding {
     padding: 0 15px; }
   .product-detail .mobile-fixed-details-wrapper {
