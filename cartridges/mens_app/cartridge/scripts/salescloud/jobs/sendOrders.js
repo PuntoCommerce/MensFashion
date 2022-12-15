@@ -4,6 +4,7 @@ const StoreMgr = require("dw/catalog/StoreMgr");
 const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
+const token = require("~/cartridge/scripts/salescloud/token");
 
 const getPorcentage = (cant, total) => {
   return (cant / total) * 100;
@@ -144,8 +145,9 @@ module.exports.execute = () => {
     };
 
     let a = body.account;
+    let getToken=token.call().access_token;
 
-    salesOrderId = sendOrder(body);
+    salesOrderId = sendOrder(body,getToken);
 
     if (!salesOrderId.error) {
       Transaction.wrap(() => {

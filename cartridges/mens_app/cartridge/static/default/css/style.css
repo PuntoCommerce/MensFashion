@@ -2644,7 +2644,7 @@ header nav.homepage {
   flex-direction: column; }
 
 #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
-  width: 30%;
+  width: 50%;
   margin: auto; }
 
 #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left {
@@ -2653,9 +2653,9 @@ header nav.homepage {
   #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) {
     font-family: "AvenirLTStd-Heavy"; }
     #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) strong {
-      font-size: 14px; }
-  #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) strong {
-    font-size: 14px; }
+      font-size: 12px; }
+  #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(2) {
+    font-size: 12px; }
 
 #homepage .editorialRichText-component-container .text-center {
   display: flex;
@@ -2667,7 +2667,8 @@ header nav.homepage {
   padding: 0 10vh;
   background-color: #ffffff; }
   #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) .carousel-title {
-    font-family: "AvenirLTStd-Heavy"; }
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 25px; }
 
 #homepage .experience-commerce_assets-editorialRichText:nth-child(1) {
   line-height: 40px; }
@@ -2681,9 +2682,20 @@ header nav.homepage {
 
 #homepage .experience-commerce_assets-editorialRichText:nth-child(2) .editorialRichText-component-container {
   line-height: 30px; }
+  #homepage .experience-commerce_assets-editorialRichText:nth-child(2) .editorialRichText-component-container strong:nth-child(1) {
+    font-family: "AvenirLTStd-Heavy"; }
 
 #homepage .ITC-text-underneath span {
   font-size: 12px; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .editorialRichText-component-container {
+  margin: 0 !important; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row {
+  display: flex;
+  justify-content: center; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+    max-width: 20%; }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -2842,7 +2854,12 @@ header nav.homepage {
     padding-bottom: 0px !important; }
   #homepage .customTextBox-component-container {
     transform: translate(-50%, 20px);
-    width: 100%; } }
+    width: 100%; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+    max-width: 100%; }
+  #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
+    width: 30%;
+    margin: auto; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
@@ -4323,7 +4340,8 @@ a .oauth-facebook--button {
       font-size: 22px;
       color: #555a7b;
       margin-top: 20px;
-      padding: 0 25px; }
+      padding: 0 25px;
+      font-family: "AvenirLTStd-Heavy"; }
     #paquetes3x1699 .container-custom-size .editorialRichText-component-container h3 {
       font-size: 16px;
       padding: 0 10px; }
@@ -4381,12 +4399,10 @@ a .oauth-facebook--button {
   #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9,
   #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 {
     padding: 0 4vh 4vh 4vh; }
-    #paquetes3x1699 #carousel-4a53e3a6c1b45dd5f928b55719 .carousel-item,
-    #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item,
-    #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9 .carousel-item,
-    #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 .carousel-item {
-      padding: 0 10px; }
-  #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item {
+  #paquetes3x1699 #carousel-4a53e3a6c1b45dd5f928b55719 .carousel-item,
+  #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item,
+  #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9 .carousel-item,
+  #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 .carousel-item {
     padding: 0 10px; }
   #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
     padding: 16px; } }
