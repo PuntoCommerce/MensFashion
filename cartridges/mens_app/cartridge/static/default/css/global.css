@@ -4539,12 +4539,15 @@ input[type="submit"].btn-block {
   transform: translateX(0.75rem);
 }
 
+.order-history-form-group{
+  padding: 0.375rem 3.75rem 0.375rem 3.75rem;
+}
 
 .custom-select {
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 3.75rem 0.375rem 3.75rem;
+  padding: 0.375rem 1.75rem 0.375rem 1.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -22487,6 +22490,7 @@ button.close:focus {
 }
 .checkout__order--product .qty-card-quantity-count {
   font-size: 12px;
+  margin-top: 3px;
 }
 .checkout__order--product .total-price-wrapper{
   display: block !important;
@@ -22555,6 +22559,10 @@ button.close:focus {
 @media (max-width: 350px) {
   .product-tile .tile-body .pdp-link a {
     width: 150px;
+  }
+
+  .checkout__item .line-item-total-price .price .pricing {
+    margin-top: 15px;
   }
 }
 
