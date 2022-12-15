@@ -22502,7 +22502,7 @@ button.close:focus {
   font-family: 'Avenir-Next';
 }
 
-.refinements .card, #pdp-items-container, .product-detail .product-details-container, .search-results, .filter-container .card-header{
+.refinements .card, #pdp-items-container, .product-detail .product-details-container, .search-results, #filter-container .card-header{
   background: #ffffff;
 }
 

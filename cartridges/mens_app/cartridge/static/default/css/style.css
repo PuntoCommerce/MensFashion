@@ -2644,7 +2644,7 @@ header nav.homepage {
   flex-direction: column; }
 
 #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
-  width: 30%;
+  width: 50%;
   margin: auto; }
 
 #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left {
@@ -2653,9 +2653,9 @@ header nav.homepage {
   #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) {
     font-family: "AvenirLTStd-Heavy"; }
     #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) strong {
-      font-size: 14px; }
-  #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(1) strong {
-    font-size: 14px; }
+      font-size: 12px; }
+  #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left p:nth-child(2) {
+    font-size: 12px; }
 
 #homepage .editorialRichText-component-container .text-center {
   display: flex;
@@ -2682,12 +2682,20 @@ header nav.homepage {
 
 #homepage .experience-commerce_assets-editorialRichText:nth-child(2) .editorialRichText-component-container {
   line-height: 30px; }
+  #homepage .experience-commerce_assets-editorialRichText:nth-child(2) .editorialRichText-component-container strong:nth-child(1) {
+    font-family: "AvenirLTStd-Heavy"; }
 
 #homepage .ITC-text-underneath span {
   font-size: 12px; }
 
 #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .editorialRichText-component-container {
   margin: 0 !important; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row {
+  display: flex;
+  justify-content: center; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+    max-width: 20%; }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -2846,7 +2854,12 @@ header nav.homepage {
     padding-bottom: 0px !important; }
   #homepage .customTextBox-component-container {
     transform: translate(-50%, 20px);
-    width: 100%; } }
+    width: 100%; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+    max-width: 100%; }
+  #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
+    width: 30%;
+    margin: auto; } }
 
 @media (max-width: 480px) {
   .promo-carousel .btn__small {
