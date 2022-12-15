@@ -2667,7 +2667,8 @@ header nav.homepage {
   padding: 0 10vh;
   background-color: #ffffff; }
   #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(10) .carousel-title {
-    font-family: "AvenirLTStd-Heavy"; }
+    font-family: "AvenirLTStd-Heavy";
+    font-size: 25px; }
 
 #homepage .experience-commerce_assets-editorialRichText:nth-child(1) {
   line-height: 40px; }
@@ -2684,6 +2685,9 @@ header nav.homepage {
 
 #homepage .ITC-text-underneath span {
   font-size: 12px; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .editorialRichText-component-container {
+  margin: 0 !important; }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -4323,7 +4327,8 @@ a .oauth-facebook--button {
       font-size: 22px;
       color: #555a7b;
       margin-top: 20px;
-      padding: 0 25px; }
+      padding: 0 25px;
+      font-family: "AvenirLTStd-Heavy"; }
     #paquetes3x1699 .container-custom-size .editorialRichText-component-container h3 {
       font-size: 16px;
       padding: 0 10px; }
@@ -4381,7 +4386,10 @@ a .oauth-facebook--button {
   #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9,
   #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 {
     padding: 0 4vh 4vh 4vh; }
-  #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item {
+  #paquetes3x1699 #carousel-4a53e3a6c1b45dd5f928b55719 .carousel-item,
+  #paquetes3x1699 #carousel-a4f0ceeec72c81ab95604309f8 .carousel-item,
+  #paquetes3x1699 #carousel-d093a0c933cd397f9756c503a9 .carousel-item,
+  #paquetes3x1699 #carousel-4e244a80f0b45733d5ce2cb426 .carousel-item {
     padding: 0 10px; }
   #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
     padding: 16px; } }
