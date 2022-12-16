@@ -1,10 +1,10 @@
 // const collections = require("*/cartridge/scripts/util/collections");
 const OrderMgr = require("dw/order/OrderMgr");
 const StoreMgr = require("dw/catalog/StoreMgr");
-const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
+const { sendOrder, getToken } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
-const token = require("~/cartridge/scripts/salescloud/token");
+const Logger = require("dw/system/Logger");
 
 const getPorcentage = (cant, total) => {
   return (cant / total) * 100;
@@ -57,6 +57,7 @@ const handlePayment = (payment) => {
 };
 
 module.exports.execute = () => {
+  const logger = Logger.getLogger("Sales", "Sales");
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
 
@@ -67,6 +68,8 @@ module.exports.execute = () => {
     null,
     Order.PAYMENT_STATUS_PAID
   );
+
+  const token = getToken();
 
   let order;
   let body;
@@ -83,6 +86,8 @@ module.exports.execute = () => {
       discounts += pAdjustment.price.value * -1;
     }
 
+    let orderDiscount = discounts;
+
     let products = [];
     let productLineItems = order.productLineItems.toArray();
     let p;
@@ -98,11 +103,22 @@ module.exports.execute = () => {
         pDiscount += ppAdjustment.price.value * -1;
       }
 
+      let porcToOrderDiscount =
+        (p.price.value * p.quantityValue) /
+        order.adjustedMerchandizeTotalPrice.value;
+
+      let aditionalDiscount = 0;
+      if (orderDiscount != 0) {
+        aditionalDiscount = porcToOrderDiscount * orderDiscount;
+        pDiscount += aditionalDiscount;
+      }
+
       products.push({
         ProductCode: p.productID,
         Quantity: p.quantityValue,
         DiscName: promotionIds.toString(),
         DiscountP: getPorcentage(pDiscount, p.price.value),
+        Discount: pDiscount,
       });
     });
     // let paymentInstruments = order.paymentInstruments[0];
@@ -139,20 +155,19 @@ module.exports.execute = () => {
       oppName: order.orderNo,
       cadena: "Men's Fashion",
       OrderDiscountDetailsTotal: discounts,
-
+      descuentoOrden: orderDiscount,
       products: products,
       pricebookId: pricebook,
     };
 
-    let a = body.account;
-    let getToken=token.call().access_token;
-
-    salesOrderId = sendOrder(body,getToken);
+    salesOrderId = sendOrder(body, token);
 
     if (!salesOrderId.error) {
       Transaction.wrap(() => {
         order.custom.SalesCloudOrderId = salesOrderId;
       });
+    } else {
+      logger.error("OrderError {0}", JSON.stringify(body));
     }
   }
 };
