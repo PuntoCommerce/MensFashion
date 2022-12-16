@@ -1,10 +1,9 @@
 // const collections = require("*/cartridge/scripts/util/collections");
 const OrderMgr = require("dw/order/OrderMgr");
 const StoreMgr = require("dw/catalog/StoreMgr");
-const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
+const { sendOrder, getToken } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
-const token = require("~/cartridge/scripts/salescloud/token");
 
 const getPorcentage = (cant, total) => {
   return (cant / total) * 100;
@@ -55,9 +54,7 @@ const handlePayment = (payment) => {
     authorizationDate: parseDate(payment.lastModified),
   };
 };
-const getToken = () => {
-  return token.call().access_token;
-};
+
 module.exports.execute = () => {
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
@@ -70,9 +67,10 @@ module.exports.execute = () => {
     Order.PAYMENT_STATUS_PAID
   );
 
+  const token = getToken();
+
   let order;
   let body;
-  let getToken;
   let salesOrderId;
   while (orders.hasNext()) {
     order = orders.next();
@@ -148,9 +146,8 @@ module.exports.execute = () => {
     };
 
     let a = body.account;
-     getToken=getToken();
 
-    salesOrderId = sendOrder(body,getToken);
+    salesOrderId = sendOrder(body, token);
 
     if (!salesOrderId.error) {
       Transaction.wrap(() => {
