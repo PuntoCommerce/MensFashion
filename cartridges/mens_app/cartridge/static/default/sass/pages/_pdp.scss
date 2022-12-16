@@ -425,6 +425,7 @@
 
 .swatch-value.unselectable{
     opacity: 0.5;
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {
