@@ -141,7 +141,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #F5F5F5;
+  background-color: #FFFFFF;
 }
 
 [tabindex="-1"]:focus {
@@ -18179,6 +18179,7 @@ div.availability {
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .product-tile .tile-body .pdp-link a {
@@ -21951,7 +21952,7 @@ button.close:focus {
 }
 
 .myAccount .card-body {
-  padding-top: 23px;
+  padding: 0 20px;
 }
 
 .card-footer-border {
@@ -22504,6 +22505,10 @@ button.close:focus {
 
 .refinements .card, #pdp-items-container, .product-detail .product-details-container, .search-results, #filter-container .card-header{
   background: #ffffff;
+}
+
+#productdetailpage .summary .tile-body{
+  margin: 0 17%;
 }
 
 @media (max-width: 1200px) {
