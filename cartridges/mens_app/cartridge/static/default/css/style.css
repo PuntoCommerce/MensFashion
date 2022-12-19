@@ -4075,6 +4075,9 @@ del {
 .cart_bottom {
   margin: 32px 0 !important; }
 
+#search-storelocator .title-container .title {
+  font-size: 18px !important; }
+
 .mt-5.mb-5.checkout.container-custom {
   min-height: calc(100vh - 325px); }
 
