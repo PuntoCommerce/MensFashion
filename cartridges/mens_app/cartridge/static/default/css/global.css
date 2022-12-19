@@ -6904,6 +6904,11 @@ a.close.disabled {
   border-radius: 0.1875rem;
 }
 
+.popover ul{
+  display: flex;
+  flex-direction: column !important;
+}
+
 .popover,
 .popover .arrow {
   position: absolute;
@@ -21378,6 +21383,9 @@ button.close:focus {
 .title-container {
   background: #000;
   padding: 20px 115px;
+  height: 89px;
+  display: flex;
+  align-items: center;
 }
 
 .title-container .page-title {
@@ -21720,6 +21728,26 @@ button.close:focus {
   padding: 0 20px;
 }
 
+.myAccount .card-header .profile-header{
+  height: 43px;
+  display: flex;
+  align-items: center;
+  font-family: 'Avenir-Next';
+  font-size: 16px
+}
+
+.myAccount .card-header .profile-header ~ a{
+  height: 43px;
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.myAccount .card-header .profile-header ~ a img{
+  margin-bottom: 0 !important;
+}
+
+
 .card-header>a {
   margin-top: 20px;
 }
@@ -21754,6 +21782,7 @@ button.close:focus {
   background-color: #e8e8e8 !important;
   color: #000 !important;
   font-size: 40px;
+
 }
 
 .account-sections .card-header {
@@ -21971,7 +22000,7 @@ button.close:focus {
 }
 
 .myAccount .card-body {
-  padding: 0 20px;
+  padding: 5px 20px 0;
 }
 
 .card-footer-border {
