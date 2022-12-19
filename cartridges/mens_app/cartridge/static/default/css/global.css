@@ -21728,7 +21728,7 @@ button.close:focus {
   padding: 0 20px;
 }
 
-.myAccount .card-header .profile-header{
+.myAccount .card-header h2{
   height: 43px;
   display: flex;
   align-items: center;
@@ -21736,14 +21736,14 @@ button.close:focus {
   font-size: 16px
 }
 
-.myAccount .card-header .profile-header ~ a{
+.myAccount .card-header h2 ~ a{
   height: 43px;
   display: flex;
   align-items: center;
   margin: 0 !important;
 }
 
-.myAccount .card-header .profile-header ~ a img{
+.myAccount .card-header h2 ~ a img{
   margin-bottom: 0 !important;
 }
 
