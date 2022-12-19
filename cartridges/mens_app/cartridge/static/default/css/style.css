@@ -3325,15 +3325,24 @@ header nav.homepage {
   .product-detail .cart-and-ipay {
     padding: 0; }
     .product-detail .cart-and-ipay button:disabled {
-      display: none; }
+      background: none;
+      color: #000 !important;
+      opacity: .5;
+      border: 1px solid #000 !important;
+      font-family: "Avenir-Next";
+      font-weight: bold;
+      pointer-events: none; }
       .product-detail .cart-and-ipay button:disabled:nth-child(1) {
         display: block;
         pointer-events: none;
         opacity: 0.2;
         background: none;
         color: #000; }
-    .product-detail .cart-and-ipay button:nth-child(1) {
-      display: none; }
+    .product-detail .cart-and-ipay button {
+      font-family: "Avenir-Next";
+      font-weight: bold; }
+      .product-detail .cart-and-ipay button:nth-child(1) {
+        display: none; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }
