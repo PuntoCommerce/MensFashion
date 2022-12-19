@@ -3454,11 +3454,18 @@ header nav.homepage {
   padding: 13px; }
 
 .swatch-value.unselectable {
-  opacity: 0.5;
+  opacity: 0.1;
   pointer-events: none; }
 
 .color-button-unselectable {
   pointer-events: none; }
+  .color-button-unselectable::before {
+    content: '\f00d';
+    font-family: 'FontAwesome';
+    position: absolute;
+    font-size: 22px;
+    transform: translate(70%, 0px);
+    opacity: 0.5; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
