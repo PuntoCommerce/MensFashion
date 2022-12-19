@@ -22566,7 +22566,19 @@ button.close:focus {
 #footer-miniLogo .item{
   position: absolute;
   right: 14%;
-  bottom: 45%;
+  bottom: 33%;
+}
+
+.refinements .values.content{
+  margin-bottom: 0 !important;
+}
+
+.refinement{
+  margin-bottom: 10px !important;
+}
+
+.refinement span{
+  font-size: 13px;
 }
 
 @media (max-width: 1200px) {
