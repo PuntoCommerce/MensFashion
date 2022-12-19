@@ -2695,10 +2695,11 @@ header nav.homepage {
 #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .editorialRichText-component-container {
   margin: 0 !important; }
 
-#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row {
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 {
   display: flex;
-  justify-content: center; }
-  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+  justify-content: center;
+  margin-bottom: 66px; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 .col-sm-4 {
     max-width: 20%; }
 
 #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(4) {
@@ -2715,7 +2716,8 @@ header nav.homepage {
     margin: 0; }
 
 #homepage .experience-component.experience-commerce_assets-imageButton {
-  background: #fff !important; }
+  background: #fff !important;
+  padding: 20px 8vw; }
   #homepage .experience-component.experience-commerce_assets-imageButton .ITBC-onlyButton-container {
     padding: 0 !important;
     height: max-content !important; }
@@ -2876,7 +2878,7 @@ header nav.homepage {
   #homepage .customTextBox-component-container {
     transform: translate(-50%, 8px);
     width: max-content; }
-  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 .col-sm-4 {
     max-width: 100%; }
   #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
     width: 30%;
@@ -2904,8 +2906,8 @@ header nav.homepage {
   .promo-carousel .btn__small {
     font-size: 10px; }
   .photo-tile-figure {
-    bottom: -51vh;
-    height: 30vh; } }
+    bottom: -106vh;
+    height: 27vh; } }
 
 @media (max-width: 330px) {
   .promo-carousel .btn__small {

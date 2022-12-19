@@ -640,9 +640,10 @@ header {
       margin: 0 !important;
     }
 
-    .row {
+    .mx-n2 {
       display: flex;
       justify-content: center;
+      margin-bottom: 66px;
 
       .col-sm-4 {
         max-width: 20%;
@@ -671,6 +672,7 @@ header {
 
   .experience-component.experience-commerce_assets-imageButton {
     background: #fff !important;
+    padding: 20px 8vw;
 
     .ITBC-onlyButton-container{
       padding: 0 !important;
@@ -957,7 +959,7 @@ header {
     }
 
     .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) {
-      .row {
+      .mx-n2 {
         .col-sm-4 {
           max-width: 100%;
         }
@@ -1013,8 +1015,8 @@ header {
   }
 
   .photo-tile-figure {
-    bottom: -51vh;
-    height: 30vh;
+    bottom: -106vh;
+    height: 27vh;
   }
 }
 
