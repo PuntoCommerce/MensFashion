@@ -17965,7 +17965,7 @@ div.availability {
 .quick-view-dialog .modal-body {
   max-height: 28.125em;
   overflow-y: auto;
-  background: #F5F5F5;
+  background: #ffffff;
 }
 
 .choose-bonus-product-dialog button.close,
@@ -17975,7 +17975,7 @@ div.availability {
 
 .choose-bonus-product-dialog .modal-footer,
 .quick-view-dialog .modal-footer {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   border: none;
   border-bottom-right-radius: 0.1875rem;
   border-bottom-left-radius: 0.1875rem;
@@ -18190,6 +18190,21 @@ div.availability {
   display: inline-block;
   font-size: 16px;
 }
+
+.footer-email-signup{
+  padding-left: 15px;
+}
+
+.lastItemFooter{
+  position: relative;
+}
+
+.footer-miniLogo{
+  position: absolute;
+  right: 13%;
+  bottom: 42%;
+}
+
 
 @media (max-width: 1350px) {
   .product-tile .tile-body .pdp-link a {
@@ -21532,7 +21547,7 @@ button.close:focus {
   font-size: 14px;
   padding: 5px 0 0 0;
   color: #000000 !important;
-  background: #F5F5F5 !important;
+  background: #ffffff !important;
 }
 
 .login-oauth .form-group:nth-last-child() {

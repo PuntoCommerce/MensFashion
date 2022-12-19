@@ -1281,7 +1281,7 @@ ul {
     top: 0;
     z-index: 2;
     flex-direction: column;
-    background-color: #f5f5f5 !important;
+    background-color: #ffffff !important;
     width: 80vw;
     overflow: auto; }
   #customMenuResponsive ul {
@@ -1322,7 +1322,7 @@ ul {
       top: 0;
       right: 0;
       z-index: 2;
-      background: #f5f5f5; }
+      background: #ffffff; }
     #customMenuResponsive .toggle-category-button {
       background-color: transparent;
       border: none;
@@ -1764,7 +1764,7 @@ ul {
   font-family: "Avenir-Next"; }
 
 .quick-view-dialog .modal-header {
-  background-color: #f5f5f5 !important;
+  background-color: #ffffff !important;
   border: none !important; }
 
 .modal-body .product-name {
@@ -1772,7 +1772,7 @@ ul {
   line-height: 1.5 !important; }
 
 .modal-footer .add-to-cart-global {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #000000;
   border: 1px solid #000000; }
 
@@ -3142,8 +3142,8 @@ header nav.homepage {
     padding: 0 !important;
     margin-bottom: 10px; }
   .product-tile {
-    background-color: #F5F5F5;
-    border: 0px solid #F5F5F5 !important; }
+    background-color: #ffffff;
+    border: 0px solid #ffffff !important; }
   .grid-header.row {
     display: none !important; }
   .brand {
