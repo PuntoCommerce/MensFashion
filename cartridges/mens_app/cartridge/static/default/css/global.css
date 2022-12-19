@@ -3860,7 +3860,11 @@ input[type="submit"].btn-block {
   background-color: #fff;
   background-clip: padding-box;
   border: none;
-  border-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+  border-bottom-left-radius:0.5rem;
+  -webkit-box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
+  -moz-box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
+  box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
 }
 
 .dropdown-menu-left {
@@ -22524,6 +22528,16 @@ button.close:focus {
 
 #productdetailpage .summary .tile-body{
   margin: 0 17%;
+}
+
+.lastItemFooter{
+  position: relative;
+}
+
+#footer-miniLogo .item{
+  position: absolute;
+  right: 14%;
+  bottom: 45%;
 }
 
 @media (max-width: 1200px) {

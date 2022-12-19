@@ -1227,9 +1227,7 @@ footer .socialMedia-paymentMethods {
 /* Menu */
 .dropdown-menu {
   position: fixed !important;
-  width: 100vw;
-  top: 135px;
-  box-shadow: none !important; }
+  width: 100vw; }
 
 .dropdown-menu-content {
   width: 65%; }
