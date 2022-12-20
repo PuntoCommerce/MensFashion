@@ -2488,7 +2488,7 @@ ul {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px; }
         .video-hero-container .video-hero-desktop__buttons__container--white {
-          width: 158px;
+          width: max-content;
           padding: 14px 17px;
           background: #f2f2f2;
           border: 1px solid #cdcdcd;
@@ -3507,7 +3507,7 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: 100vh;
+    height: 93vh;
     overflow: scroll; } }
 
 @media only screen and (min-width: 1200px) {
