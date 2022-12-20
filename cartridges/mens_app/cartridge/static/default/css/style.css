@@ -735,7 +735,7 @@ footer .subscribe-email {
   border-radius: 0px;
   border: 1px solid #ffffff;
   color: #000000 !important;
-  height: 32px !important;
+  height: 42px !important;
   width: 92px !important; }
   footer .subscribe-email:focus {
     outline: 0; }
@@ -1227,9 +1227,7 @@ footer .socialMedia-paymentMethods {
 /* Menu */
 .dropdown-menu {
   position: fixed !important;
-  width: 100vw;
-  top: 135px;
-  box-shadow: none !important; }
+  width: 100vw; }
 
 .dropdown-menu-content {
   width: 65%; }
@@ -1281,7 +1279,7 @@ ul {
     top: 0;
     z-index: 2;
     flex-direction: column;
-    background-color: #f5f5f5 !important;
+    background-color: #ffffff !important;
     width: 80vw;
     overflow: auto; }
   #customMenuResponsive ul {
@@ -1322,7 +1320,7 @@ ul {
       top: 0;
       right: 0;
       z-index: 2;
-      background: #f5f5f5; }
+      background: #ffffff; }
     #customMenuResponsive .toggle-category-button {
       background-color: transparent;
       border: none;
@@ -1434,7 +1432,7 @@ ul {
 .values.content {
   padding: 0; }
   .values.content li {
-    padding: 8px 0; }
+    padding: 5px 0; }
     .values.content li:first-child {
       padding-top: 18px; }
   .values.content button {
@@ -1764,7 +1762,7 @@ ul {
   font-family: "Avenir-Next"; }
 
 .quick-view-dialog .modal-header {
-  background-color: #f5f5f5 !important;
+  background-color: #ffffff !important;
   border: none !important; }
 
 .modal-body .product-name {
@@ -1772,7 +1770,7 @@ ul {
   line-height: 1.5 !important; }
 
 .modal-footer .add-to-cart-global {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #000000;
   border: 1px solid #000000; }
 
@@ -2490,7 +2488,7 @@ ul {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px; }
         .video-hero-container .video-hero-desktop__buttons__container--white {
-          width: 158px;
+          width: max-content;
           padding: 14px 17px;
           background: #f2f2f2;
           border: 1px solid #cdcdcd;
@@ -2547,7 +2545,7 @@ header nav.homepage {
   #carousel-9512e1c0a8e4670211309bfb9b .carousel-item:nth-child(2) {
     padding-left: 10px; }
   #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner {
-    padding: 75px 30px; }
+    padding: 82px 30px; }
     #carousel-9512e1c0a8e4670211309bfb9b .carousel-inner .ITBC-banner-container .ITBC-buttons {
       flex-direction: row !important;
       position: absolute;
@@ -2611,9 +2609,6 @@ header nav.homepage {
 #carousel-316c8bfb97dcd2cf92829eb636 .carousel-inner {
   padding-bottom: 50px !important; }
 
-.experience-component.experience-commerce_assets-imageButton {
-  background: #fff !important; }
-
 .title-carousel-9512e1c0a8e4670211309bfb9b {
   position: absolute;
   z-index: 1;
@@ -2627,24 +2622,26 @@ header nav.homepage {
 #homepage .customTextBox-component-container {
   position: absolute;
   z-index: 1;
-  line-height: 10px;
+  line-height: 30px;
   left: 50%;
-  transform: translate(-50%, 0); }
+  transform: translate(-50%, -11px); }
   #homepage .customTextBox-component-container p:nth-child(1) {
     color: #fff;
     font-family: "AvenirLTStd-Heavy";
     font-size: 25px;
-    width: fit-content; }
+    width: fit-content;
+    margin-bottom: 0; }
   #homepage .customTextBox-component-container p:nth-child(2) {
     color: #fff;
     font-size: 16px;
-    width: fit-content; }
+    width: fit-content;
+    margin-top: 0; }
 
 #homepage .editorialRichText-component-container {
   flex-direction: column; }
 
 #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
-  width: 50%;
+  width: 40%;
   margin: auto; }
 
 #homepage .experience-commerce_assets-imageNoMargin ~ .experience-commerce_assets-editorialRichText .text-lg-left {
@@ -2686,16 +2683,42 @@ header nav.homepage {
     font-family: "AvenirLTStd-Heavy"; }
 
 #homepage .ITC-text-underneath span {
-  font-size: 12px; }
+  font-size: 14px;
+  font-family: "Avenir-Next"; }
+  #homepage .ITC-text-underneath span p:nth-child(2) strong {
+    font-family: "AvenirLTStd-Heavy"; }
+  #homepage .ITC-text-underneath span p:nth-child(3) {
+    font-family: "AvenirLTStd-Heavy"; }
 
 #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .editorialRichText-component-container {
   margin: 0 !important; }
 
-#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row {
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 {
   display: flex;
-  justify-content: center; }
-  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+  justify-content: center;
+  margin-bottom: 66px; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 .col-sm-4 {
     max-width: 20%; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(4) {
+  background: #f5f5f5; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(4) .region {
+    padding: 0;
+    margin: 0; }
+
+#homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(5) {
+  background: #f5f5f5;
+  padding-bottom: 40px; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(5) .region {
+    padding: 0;
+    margin: 0; }
+
+#homepage .experience-component.experience-commerce_assets-imageButton {
+  background: #fff !important;
+  padding: 20px 8vw; }
+  #homepage .experience-component.experience-commerce_assets-imageButton .ITBC-onlyButton-container {
+    padding: 0 !important;
+    height: max-content !important; }
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -2836,7 +2859,7 @@ header nav.homepage {
   .experience-commerce_layouts-navTabs .summary__footer .btn__small {
     font-size: 20px; }
   .photo-tile-figure {
-    bottom: -55vh;
+    bottom: -98vh;
     height: 35vh; }
   #carousel-90931919792f25f303f3259d58.indicators-xs,
   #carousel-316c8bfb97dcd2cf92829eb636.indicators-xs,
@@ -2848,14 +2871,12 @@ header nav.homepage {
     padding-right: 0px; }
   #carousel-9512e1c0a8e4670211309bfb9b .carousel-item:nth-child(2) {
     padding-left: 0px; }
-  .experience-component.experience-commerce_assets-imageButton {
-    background: #fff; }
   #carousel-316c8bfb97dcd2cf92829eb636 .carousel-inner {
     padding-bottom: 0px !important; }
   #homepage .customTextBox-component-container {
-    transform: translate(-50%, 20px);
-    width: 100%; }
-  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .row .col-sm-4 {
+    transform: translate(-50%, 8px);
+    width: max-content; }
+  #homepage .experience-commerce_layouts-mobileGrid3r1c:nth-child(3) .mx-n2 .col-sm-4 {
     max-width: 100%; }
   #homepage .experience-commerce_assets-imageNoMargin .photo-tile-container {
     width: 30%;
@@ -2883,8 +2904,8 @@ header nav.homepage {
   .promo-carousel .btn__small {
     font-size: 10px; }
   .photo-tile-figure {
-    bottom: -51vh;
-    height: 30vh; } }
+    bottom: -106vh;
+    height: 27vh; } }
 
 @media (max-width: 330px) {
   .promo-carousel .btn__small {
@@ -3142,8 +3163,8 @@ header nav.homepage {
     padding: 0 !important;
     margin-bottom: 10px; }
   .product-tile {
-    background-color: #F5F5F5;
-    border: 0px solid #F5F5F5 !important; }
+    background-color: #ffffff;
+    border: 0px solid #ffffff !important; }
   .grid-header.row {
     display: none !important; }
   .brand {
@@ -3302,15 +3323,24 @@ header nav.homepage {
   .product-detail .cart-and-ipay {
     padding: 0; }
     .product-detail .cart-and-ipay button:disabled {
-      display: none; }
+      background: none;
+      color: #000 !important;
+      opacity: .5;
+      border: 1px solid #000 !important;
+      font-family: "Avenir-Next";
+      font-weight: bold;
+      pointer-events: none; }
       .product-detail .cart-and-ipay button:disabled:nth-child(1) {
         display: block;
         pointer-events: none;
         opacity: 0.2;
         background: none;
         color: #000; }
-    .product-detail .cart-and-ipay button:nth-child(1) {
-      display: none; }
+    .product-detail .cart-and-ipay button {
+      font-family: "Avenir-Next";
+      font-weight: bold; }
+      .product-detail .cart-and-ipay button:nth-child(1) {
+        display: none; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
     color: #393939;
     font-size: 30px; }
@@ -3424,7 +3454,18 @@ header nav.homepage {
   padding: 13px; }
 
 .swatch-value.unselectable {
-  opacity: 0.5; }
+  opacity: 0.1;
+  pointer-events: none; }
+
+.color-button-unselectable {
+  pointer-events: none; }
+  .color-button-unselectable::before {
+    content: '\f00d';
+    font-family: 'FontAwesome';
+    position: absolute;
+    font-size: 22px;
+    transform: translate(70%, 0px);
+    opacity: 0.2; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
@@ -3466,7 +3507,8 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: fit-content; } }
+    height: 93vh;
+    overflow: scroll; } }
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
@@ -4043,6 +4085,9 @@ del {
 
 .cart_bottom {
   margin: 32px 0 !important; }
+
+#search-storelocator .title-container .title {
+  font-size: 18px !important; }
 
 .mt-5.mb-5.checkout.container-custom {
   min-height: calc(100vh - 325px); }

@@ -2,7 +2,7 @@
 .card-header,
 .hero,
 body {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   font-family: var(--skin-body-font);
   color: var(--skin-main-text-color-1);
 }
@@ -32,7 +32,7 @@ h1.header.page-title:before {
   color: var(--skin-primary-color-1);
 }
 .custom-select {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
   color: var(--skin-selectbox-text-color-1);
 }
 a,
@@ -64,10 +64,10 @@ header ~ #maincontent .container a:not(.btn-primary, .btn-outline-primary) {
 }
 .navbar .nav-item.dropdown,
 .navbar .nav-item.dropdown .dropdown-menu.show {
-  color: #F5F5F5;
+  color: #ffffff;
 }
 .navbar .nav-item.dropdown .dropdown-menu.show {
-  background-color: #F5F5F5;
+  background-color: #ffffff;
 }
 .navbar .nav-item.dropdown .dropdown-menu.show .nav-item,
 .navbar .nav-item.dropdown .dropdown-menu.show a {

@@ -8,9 +8,14 @@
                 <iscontentasset aid="terms-and-conditions-mens" />
             </div>
             <div class="footer-item col-lg-4 col-sm-12 collapsible-md">
-                <iscontentasset aid="customer-service-mens" />
+                <div class="customer-service d-flex justify-content-start">
+                    <iscontentasset aid="customer-service-mens" />
+                </div>
+                <div class="socialMedia d-flex justify-content-start">
+                    <iscontentasset aid="social-media-mens" />
+                </div>
             </div>
-            <div class="footer-item col-lg-4 col-sm-12">
+            <div class="footer-item col-lg-4 col-sm-12 lastItemFooter">
                 <div class="footer-email-signup">
                     <form role="form">
                         <div class="row">
@@ -33,9 +38,6 @@
                     </form>
                 </div>
                 <div class="socialMedia-paymentMethods">
-                    <div class="socialMedia d-flex justify-content-start">
-                        <iscontentasset aid="social-media-mens" />
-                    </div>
                     <div class="paymentMethods">
                         <iscontentasset aid="payment-methods-mens" />
                     </div>

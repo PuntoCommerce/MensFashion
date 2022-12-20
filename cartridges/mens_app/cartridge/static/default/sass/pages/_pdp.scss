@@ -213,13 +213,22 @@
                 color: #000;
             }
 
-            display: none;
+            background: none;
+            color: #000 !important;
+            opacity: .5;
+            border: 1px solid #000 !important;
+            font-family: $font-family-normal;
+            font-weight: bold;
+            pointer-events: none;
         }
 
         & button {
             &:nth-child(1) {
                 display: none;
             }
+
+            font-family: $font-family-normal;
+            font-weight: bold;
         }
     }
 
@@ -403,14 +412,14 @@
     }
 }
 
-.carousel-item{
-    .highlight{
+.carousel-item {
+    .highlight {
         left: initial !important;
     }
 }
 
-.swatch-value.selected{
-    &::before{
+.swatch-value.selected {
+    &::before {
         content: '';
         border: 1px solid #000;
         border-radius: 100%;
@@ -423,8 +432,22 @@
     }
 }
 
-.swatch-value.unselectable{
-    opacity: 0.5;
+.swatch-value.unselectable {
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.color-button-unselectable {
+    pointer-events: none;
+
+    &::before {
+        content: '\f00d';
+        font-family: 'FontAwesome';
+        position: absolute;
+        font-size: 22px;
+        transform: translate(70%, 0px);
+        opacity: 0.2;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -462,12 +485,12 @@
         }
 
         & .sizes-guide {
-    
+
             & button {
                 font-size: 10px;
-            }    
+            }
         }
-    }    
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -501,7 +524,8 @@
         }
 
         & .product-details-wrapper {
-            height: fit-content;
+            height: 93vh;
+            overflow: scroll;
         }
     }
 }
@@ -672,21 +696,23 @@ del {
     .experience-component.experience-commerce_layouts-carousel {
         padding: 0 10px;
 
-  .carousel-title {
-    font-size: 18px!important;
-    line-height: 25px;
-    font-family: $font-family-normal;
-    @include respond(phone) {
-    font-size: 32px !important;
-    line-height: 20px;
-   }
-  }
- }
         .carousel-title {
             font-size: 18px !important;
+            line-height: 25px;
             font-family: $font-family-normal;
+
+            @include respond(phone) {
+                font-size: 32px !important;
+                line-height: 20px;
+            }
         }
     }
+
+    .carousel-title {
+        font-size: 18px !important;
+        font-family: $font-family-normal;
+    }
+}
 
 
 .description-and-detail {
@@ -749,7 +775,7 @@ del {
         width: 65% !important;
     }
 
-    #productdetailpage .carousel-inner  {
+    #productdetailpage .carousel-inner {
         margin: 15px 0;
     }
 }
