@@ -22588,7 +22588,9 @@ button.close:focus {
 
 .footer-item .title{
   font-family: 'Avenir-Bold' !important;
+  padding-bottom: 12px;
 }
+
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important;
