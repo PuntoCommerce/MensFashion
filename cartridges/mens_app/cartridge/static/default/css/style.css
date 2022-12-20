@@ -3228,7 +3228,8 @@ header nav.homepage {
     font-size: 20px;
     font-weight: 900;
     margin: 34px 0 12px 0;
-    line-height: normal; }
+    line-height: normal;
+    text-transform: capitalize; }
   .product-detail .color-attribute:focus {
     border: none;
     outline: none; }

@@ -10,7 +10,7 @@
             <!-- Product Name -->
             <div class="row">
                 <div class="col">
-                    <span class="product-name">${product.productName}</span>
+                    <span class="product-name">${product.productName.toLowerCase()}</span>
                     <!-- Applicable Promotions -->
                     <iscomment> <div class="row">
                     <p>${product.id}</p>
