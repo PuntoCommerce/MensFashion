@@ -3465,7 +3465,7 @@ header nav.homepage {
     position: absolute;
     font-size: 22px;
     transform: translate(70%, 0px);
-    opacity: 0.5; }
+    opacity: 0.2; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
@@ -3507,7 +3507,8 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: fit-content; } }
+    height: 100vh;
+    overflow: scroll; } }
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {

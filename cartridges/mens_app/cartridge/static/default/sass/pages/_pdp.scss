@@ -446,7 +446,7 @@
         position: absolute;
         font-size: 22px;
         transform: translate(70%, 0px);
-        opacity: 0.5;
+        opacity: 0.2;
     }
 }
 
@@ -524,7 +524,8 @@
         }
 
         & .product-details-wrapper {
-            height: fit-content;
+            height: 100vh;
+            overflow: scroll;
         }
     }
 }
