@@ -22579,8 +22579,16 @@ button.close:focus {
 
 .refinement span{
   font-size: 13px;
+  font-family: 'Avenir-Next';
 }
 
+.card.shipping-section,.card.shipping-section .card-header, .data-checkout-stage .card, .data-checkout-stage .card-header, .order-list-container .card-body {
+  background-color: #f5f5f5;
+}
+
+.footer-item .title{
+  font-family: 'Avenir-Bold' !important;
+}
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important;

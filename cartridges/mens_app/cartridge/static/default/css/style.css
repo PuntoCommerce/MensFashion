@@ -3739,7 +3739,8 @@ del {
     border-radius: 0;
     border: 1px solid #000000;
     font-family: "Avenir-LT-Std";
-    font-size: 14px; }
+    font-size: 14px; 
+    background-color: #ffffff;}
     .checkout__form::placeholder {
       font-family: "Avenir-LT-Std";
       font-size: 14px;
@@ -3782,12 +3783,12 @@ del {
     .checkout__text--h3 {
       font-size: 32px; }
   .checkout__item {
-    background-color: #ffffff !important;
+    background-color: #f5f5f5 !important;
     padding: 10px 15px 50px 15px;
     border: 1px solid #c4c4c4;
     height: fit-content; }
   .checkout__totals {
-    background-color: #ffffff !important;
+    background-color: #f5f5f5 !important;
     padding: 20px;
     border: 1px solid #c4c4c4; }
   .checkout__stepper {
