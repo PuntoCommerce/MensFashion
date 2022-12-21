@@ -44,7 +44,6 @@ footer .input-group {
     margin-left: auto;
     margin-right: auto;
     max-width: 93%;
-    padding-top: 10px;
     display: grid;
 }
 
@@ -54,7 +53,7 @@ footer .subscribe-email {
     border-radius: 0px;
     border: 1px solid #ffffff;
     color: #000000 !important;
-    height: 42px !important;
+    height: 32px !important;
     width: 92px !important;
 
     
@@ -65,6 +64,10 @@ footer .subscribe-email {
 
 footer .subscribe-email {
     align-items: center;
+}
+
+.suscribe-label span{
+    font-family: 'Avenir-Bold' !important;
 }
 
 .footer-item:not(:first-child) {
@@ -142,6 +145,10 @@ footer .space {
 
 #youtube {
     content: url(../images/youtube.svg);
+}
+
+#tiktok {
+    content: url(../images/tiktok.png);
 }
 
 #footer-miniLogo {
