@@ -104,8 +104,8 @@ module.exports.execute = () => {
       }
 
       let porcToOrderDiscount =
-        (p.price.value * p.quantityValue);
-
+        (p.price.value * p.quantityValue) / 50;
+       // order.adjustedMerchandizeTotalPrice.value;
       let aditionalDiscount = 0;
       if (orderDiscount != 0) {
         aditionalDiscount = porcToOrderDiscount * orderDiscount;
