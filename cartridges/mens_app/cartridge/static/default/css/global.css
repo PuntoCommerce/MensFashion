@@ -17548,12 +17548,14 @@ footer .back-to-top i.fa-circle {
   position: fixed;
   top: 15%;
   left: 50%;
+  z-index: 5;
 }
 
 .email-signup-alert {
   animation: fade 5s linear forwards;
   box-shadow: 1px 1px 5px grey;
   padding: 1em;
+  z-index: 5;
 }
 
 .email-signup-alert.show {

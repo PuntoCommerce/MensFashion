@@ -5,6 +5,7 @@
  */
 
 var server = require('server');
+server.extend(module.superModule)
 
 /**
  * Checks if the email value entered is correct format
@@ -26,17 +27,28 @@ function validateEmail(email) {
  * @param {returns} - json
  * @param {serverfunction} - post
  */
-server.post('Subscribe', function (req, res, next) {
+server.replace('Subscribe', function (req, res, next) {
     var Resource = require('dw/web/Resource');
     var hooksHelper = require('*/cartridge/scripts/helpers/hooks');
+    var Transaction = require('dw/system/Transaction');
+    var CustomObjectMgr = require('dw/object/CustomObjectMgr');
 
     var email = req.form.emailId;
     var isValidEmailid;
+    var rr;
+
     if (email) {
         isValidEmailid = validateEmail(email);
 
         if (isValidEmailid) {
-            hooksHelper('app.mailingList.subscribe', 'subscribe', [email], function () { });
+            try {
+                Transaction.wrap(function () {
+                    CustomObjectMgr.createCustomObject('newsletterSubscriptions', email);
+                });
+            } catch (error) {
+                rr = error;
+            }
+
             res.json({
                 success: true,
                 msg: Resource.msg('subscribe.email.success', 'homePage', null)
@@ -53,7 +65,6 @@ server.post('Subscribe', function (req, res, next) {
             msg: Resource.msg('subscribe.email.invalid', 'homePage', null)
         });
     }
-
     next();
 });
 
