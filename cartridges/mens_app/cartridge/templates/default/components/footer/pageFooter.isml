@@ -8,10 +8,10 @@
                 <iscontentasset aid="terms-and-conditions-mens" />
             </div>
             <div class="footer-item col-lg-4 col-sm-12 collapsible-md">
-                <div class="customer-service d-flex justify-content-start">
+                <div class="customer-service">
                     <iscontentasset aid="customer-service-mens" />
                 </div>
-                <div class="socialMedia d-flex justify-content-start">
+                <div class="socialMedia d-flex justify-content-start socialMediaDesk">
                     <iscontentasset aid="social-media-mens" />
                 </div>
             </div>
