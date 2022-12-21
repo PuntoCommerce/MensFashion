@@ -7,6 +7,56 @@ const { sendOrder } = require("~/cartridge/scripts/salescloud/api");
 const Transaction = require("dw/system/Transaction");
 const Order = require("dw/order/Order");
 
+const getPorcentage = (cant, total) => {
+  return (cant / total) * 100;
+};
+
+const handleShipment = (shipment) => {
+  if (shipment.shippingMethodID == "pickup") {
+    let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
+
+    return {
+      pickUpStoreId: store.ID,
+      storeShippingStreet: store.address1,
+      storeShippingPostalCode: store.postalCode,
+      storeShippingCity: store.city,
+      storeShippingState: store.stateCode,
+
+      shippingCost: shipment.shippingTotalNetPrice.value,
+    };
+  }
+  return {
+    shippingStreet: shipment.shippingAddress.address1,
+    shippingPostalCode: shipment.shippingAddress.postalCode,
+    shippingCity: shipment.shippingAddress.city,
+    shippingState: shipment.shippingAddress.stateCode,
+    shippingCountry: "Mexico",
+    shippingCost: shipment.shippingTotalNetPrice.value,
+  };
+};
+
+const parseDate = (date) => {
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  if (day < 10) {
+    day = "0" + day;
+  }
+
+  if (month < 10) {
+    month = "0" + month;
+  }
+  return day + "/" + month + "/" + date.getFullYear();
+};
+
+const handlePayment = (payment) => {
+  return {
+    type: payment.paymentInstrument.paymentMethod,
+    authorizationNumber: payment.transactionID,
+    authorizationDate: parseDate(payment.lastModified),
+  };
+};
+
 server.append("Confirm", (req, res, next) => {
   const viewData = res.getViewData();
   const order = OrderMgr.getOrder(viewData.order.orderNumber);
@@ -16,61 +66,90 @@ server.append("Confirm", (req, res, next) => {
 });
 
 server.get("CustomSendOrder", (req, res, next) => {
-  // let currentDate = new Date();
-  // currentDate.setDate(currentDate.getDate() - 15);
+  const order = OrderMgr.getOrder(req.querystring.orderId);
 
-  // let orders = OrderMgr.searchOrders(
-  //   "creationDate > {0} AND custom.SalesCloudOrderId != {1} AND paymentStatus = {2}",
-  //   "creationDate desc",
-  //   currentDate,
-  //   undefined,
-  //   Order.PAYMENT_STATUS_PAID
-  // );
+  let discounts = 0;
+  let pAdjustment;
+  let priceAdjustments = order.priceAdjustments.iterator();
+  while (priceAdjustments.hasNext()) {
+    pAdjustment = priceAdjustments.next();
+    discounts += pAdjustment.price.value * -1;
+  }
 
-  let order = OrderMgr.getOrder(req.querystring.orderId);
+  let orderDiscount = discounts;
 
-  // let order;
-  // while (orders.hasNext()) {
-  //   order = orders.next();
-  //   order = OrderMgr.getOrder(order.orderNo);
+  let products = [];
+  let productLineItems = order.productLineItems.toArray();
+  let p;
 
-  //   let firstName = "";
-  //   let lastName = "";
+  productLineItems.forEach((p) => {
+    let promotionIds = [];
+    let pDiscount = 0;
+    let productPAdjusments = p.priceAdjustments.iterator();
+    let ppAdjustment;
+    while (productPAdjusments.hasNext()) {
+      ppAdjustment = productPAdjusments.next();
+      discounts += ppAdjustment.price.value * -1;
+      pDiscount += ppAdjustment.price.value * -1;
+    }
 
-  //   if (order.customer.authenticated) {
-  //     firstName = order.customer.firstName;
-  //     lastName = order.customer.lastName;
-  //   } else {
-  //     lastName = order.customerName;
-  //   }
+    let porcToOrderDiscount =
+      (p.price.value * p.quantityValue) /
+      order.adjustedMerchandizeTotalPrice.value;
 
-  //   let products = [];
-  //   let productLineItems = order.productLineItems.toArray();
-  //   let p;
-  //   productLineItems.forEach((p) => {
-  //     products.push({ ProductCode: p.productID, Quantity: p.quantityValue });
-  //   });
+    let aditionalDiscount = 0;
+    if (orderDiscount != 0) {
+      aditionalDiscount = porcToOrderDiscount * orderDiscount;
+      pDiscount += aditionalDiscount;
+    }
 
-  //   let body = {
-  //     account: {
-  //       FirstName: firstName,
-  //       LastName: lastName,
-  //       PersonEmail: order.customerEmail,
-  //     },
-  //     oppName: order.orderNo,
-  //     cadena: "Men's Fashion",
-  //     products: products,
-  //   };
+    products.push({
+      ProductCode: p.productID,
+      Quantity: p.quantityValue,
+      DiscName: promotionIds.toString(),
+      DiscountP: getPorcentage(pDiscount, p.price.value),
+      Discount: pDiscount,
+    });
+  });
+  // let paymentInstruments = order.paymentInstruments[0];
 
-  //   let salesOrderId = sendOrder(body);
+  let firstName = "";
+  let lastName = "";
 
-  //   if (!salesOrderId.error) {
-  //     Transaction.wrap(() => {
-  //       order.custom.SalesCloudOrderId = salesOrderId;
-  //     });
-  //   }
-  // }
-  res.json({ salesOrderId: "orders" });
+  if (order.customer.authenticated) {
+    firstName = order.customer.firstName;
+    lastName = order.customer.lastName;
+  } else {
+    let customerName = order.customerName.split(" ");
+    firstName = customerName.slice(0, customerName.length / 2).join(" ");
+    lastName = customerName
+      .slice(customerName.length / 2, customerName.length)
+      .join(" ");
+  }
+
+  let defaultShipment = order.defaultShipment;
+  let paymentTransaction = order.paymentTransaction;
+
+  let pricebook =
+    order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
+
+  const body = {
+    account: {
+      FirstName: firstName,
+      LastName: lastName,
+      PersonEmail: order.customerEmail,
+      Phone: defaultShipment.shippingAddress.phone,
+    },
+    shippingInfo: handleShipment(defaultShipment),
+    paymentInfo: handlePayment(paymentTransaction),
+    oppName: order.orderNo,
+    cadena: "Men's Fashion",
+    OrderDiscountDetailsTotal: discounts,
+    descuentoOrden: orderDiscount,
+    products: products,
+    pricebookId: pricebook,
+  };
+  res.json({ order: body });
   next();
 });
 
