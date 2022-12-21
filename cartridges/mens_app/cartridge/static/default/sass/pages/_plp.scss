@@ -154,6 +154,11 @@
   text-transform: capitalize;
   font-family: "Avenir-Next";
   font-size: 15px;
+  visibility: hidden;
+}
+
+.color-attribute:hover .colorName{
+  visibility: visible;
 }
 
 .row.grid-header {
@@ -343,6 +348,11 @@
   .container div.collapsible-sm button.title {
     font-size: 16px;
     font-family: $font-family-normal;
+  }
+
+  .colorName{
+    visibility: visible;
+    font-size: 12px;
   }
 }
 

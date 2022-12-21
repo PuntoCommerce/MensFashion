@@ -18198,6 +18198,7 @@ div.availability {
   text-overflow: ellipsis;
   display: inline-block;
   font-size: 16px;
+  text-transform: capitalize;
 }
 
 .footer-email-signup{
