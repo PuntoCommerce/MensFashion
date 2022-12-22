@@ -34,7 +34,7 @@
         </isif>">
         <button class="title btn text-left btn-block" aria-expanded="false"
             aria-controls="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
-            Envios y Devoluciones
+            Envíos y Devoluciones
         </button>
         <div class="col-12 value content mt-3"
             id="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">

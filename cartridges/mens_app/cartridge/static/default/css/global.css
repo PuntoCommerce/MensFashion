@@ -4988,7 +4988,6 @@ input[type="submit"].btn-block {
 .navbar-nav .dropdown-menu {
   position: static;
   float: none;
-  border-top: 1.5px solid rgb(68, 68, 68, 0.5);
 }
 
 .navbar-text {
@@ -21346,6 +21345,10 @@ div.availability {
   font-weight: 500;
 }
 
+.container-custom-plp .summary__pricing .price .prices-container .sales-price .sales{
+  font-size: 16px;
+}
+
 .summary__pricing .prices-container .strike-price del {
   color: rgba(68, 68, 68, 0.5)
 }
@@ -22614,6 +22617,23 @@ button.close:focus {
 
 .orderDetail .grand-total .checkout__text{
  font-family: 'Avenir-Bold' !important; 
+}
+
+.dropdown .containerDropdown{ 
+  padding: 0 14.5;
+}
+
+.dropdown .containerDropdown .dropdown-menu-content{
+  width: 100%;
+}
+
+.dropdown .containerDropdown .dropdown-menu-content .menuCont{
+  flex-wrap: wrap;
+}
+
+.dropdown .containerDropdown .dropdown-menu-content .menuCont .menuColCont{
+  padding: 10px 2.5rem;
+  width: 30%;
 }
 
 @media (max-width: 1200px) {
