@@ -2,6 +2,7 @@
     & .product-tile .image-container a .tile-image {
         max-height: 513px;
         object-fit: contain;
+        height: auto;
     }
 }
 
@@ -771,7 +772,21 @@ del {
     }
 }
 
-@media (max-width: 537px) {
+@media (max-width: 425px) {
+    
+    .sizes-guide-cont {
+        width: 51% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    
+    .sizes-guide-cont {
+        width: 54% !important;
+    }
+}
+
+@media (max-width: 320px) {
     .sizes-guide-cont {
         width: 65% !important;
     }
