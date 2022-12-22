@@ -18288,7 +18288,7 @@ div.availability {
 }
 
 .container-custom-plp .product-tile .image-container{
-  height: 366px;
+  height: 368px;
 }
 
 .product-tile .image-container a .tile-image {
@@ -22572,8 +22572,8 @@ button.close:focus {
 
 #footer-miniLogo .item{
   position: absolute;
-  right: 14%;
-  bottom: 33%;
+  right: 10%;
+  bottom: 40%;
 }
 
 .refinements .values.content{
@@ -22589,7 +22589,7 @@ button.close:focus {
   font-family: 'Avenir-Next';
 }
 
-.card.shipping-section,.card.shipping-section .card-header, .data-checkout-stage .card, .data-checkout-stage .card-header, .order-list-container .card-body {
+.card.shipping-section,.card.shipping-section .card-header, .data-checkout-stage .card, .data-checkout-stage .card-header{
   background-color: #f5f5f5;
 }
 
@@ -22602,6 +22602,18 @@ button.close:focus {
   margin-bottom: 0;
   font-family: 'Avenir-Next' !important;
   font-size: 16px !important;
+}
+
+.card-header.clearfix.summary-edit-btn{
+  background-color: transparent;
+}
+
+.orderDetail .checkout__text{
+  padding: 0 15px;
+}
+
+.orderDetail .grand-total .checkout__text{
+ font-family: 'Avenir-Bold' !important; 
 }
 
 @media (max-width: 1200px) {
@@ -22731,5 +22743,33 @@ button.close:focus {
 @media (max-width: 1100px) {
   .containerDropdown {
     padding: 0 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container-custom-plp .product-tile .image-container{
+    height: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom-plp .product-tile .image-container{
+    height: 295px;
+  }
+
+  .container-custom-plp .product-tile.summary .tile-body{
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-custom-plp .product-tile .image-container{
+    height: 285px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container-custom-plp .product-tile .image-container{
+    height: 250px;
   }
 }

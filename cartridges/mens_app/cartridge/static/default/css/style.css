@@ -809,7 +809,7 @@ footer .space {
   content: url(../images/youtube.svg); }
 
 #tiktok {
-  content: url(../images/tiktok.png); }
+  content: url(../images/tiktok.svg); }
 
 #footer-miniLogo {
   display: flex;
@@ -3153,11 +3153,19 @@ header nav.homepage {
     padding-right: 0px !important;
     padding-left: 6px; }
   .refinement-bar {
-    margin-top: 87px;
+    margin-top: 100px;
     height: 88vh; }
+  .refinement {
+    margin-bottom: 0 !important; }
+  .refinements .card-header span {
+    font-size: 16px; }
+  .refinement span {
+    font-size: 15px; }
   .filters {
     font-size: 15px;
     font-family: "Avenir-Next"; }
+  .filter-collapse-button {
+    padding: 0 !important; }
   .container div.collapsible-sm button.title {
     font-size: 16px;
     font-family: "Avenir-Next"; }
@@ -3195,7 +3203,8 @@ header nav.homepage {
 
 #productdetailpage .product-tile .image-container a .tile-image {
   max-height: 513px;
-  object-fit: contain; }
+  object-fit: contain;
+  height: auto; }
 
 .product-detail {
   font-family: "Avenir-Next";
@@ -3680,7 +3689,15 @@ del {
     .mobile-favorite-button button {
       border: none !important; } }
 
-@media (max-width: 537px) {
+@media (max-width: 425px) {
+  .sizes-guide-cont {
+    width: 51% !important; } }
+
+@media (max-width: 375px) {
+  .sizes-guide-cont {
+    width: 54% !important; } }
+
+@media (max-width: 320px) {
   .sizes-guide-cont {
     width: 65% !important; }
   #productdetailpage .carousel-inner {
@@ -3849,7 +3866,7 @@ del {
       background-color: #64656a; }
     .checkout__order--product {
       padding: 20px;
-      background-color: #d8d8d8; }
+      background-color: #ffffff; }
   .checkout__stepper--item-title {
     position: absolute;
     bottom: 0; }

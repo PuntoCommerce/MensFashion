@@ -337,13 +337,29 @@
   }
 
   .refinement-bar {
-    margin-top: 87px;
+    margin-top: 100px;
     height: 88vh;
+  }
+
+  .refinement{
+    margin-bottom: 0 !important;
+  }
+
+  .refinements .card-header span{
+    font-size: 16px;
+  }
+
+  .refinement span{
+    font-size: 15px;
   }
 
   .filters {
     font-size: 15px;
     font-family: $font-family-normal;
+  }
+
+  .filter-collapse-button{
+    padding: 0 !important;
   }
 
   .container div.collapsible-sm button.title {
