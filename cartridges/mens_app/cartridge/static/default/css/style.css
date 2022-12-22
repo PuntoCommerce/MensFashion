@@ -4227,7 +4227,11 @@ del {
         display: flex;
         justify-content: center; }
       .card-myaccount .line-dotted {
-        display: none; } }
+        display: none; }
+      .card-myaccount__editAddress .card-header {
+        height: 35px;
+        display: flex;
+        align-items: center; } }
 
 .show-password-button {
   background: none;
@@ -4286,6 +4290,16 @@ a.see-order-btn {
   text-decoration: underline !important; }
   a.see-order-btn:hover {
     text-decoration: none !important; }
+
+.order-confirm-create-account {
+  background: none !important; }
+  .order-confirm-create-account .card-header {
+    background: none !important; }
+
+.container_confirmation {
+  background: none !important; }
+  .container_confirmation .card-header {
+    background: none !important; }
 
 a:hover {
   text-decoration: none; }

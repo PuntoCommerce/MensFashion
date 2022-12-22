@@ -11,7 +11,7 @@
         <!---Breadcrumbs--->
         <iscomment> <isinclude template="components/breadcrumbs/pageBreadcrumbs"/> </iscomment>
         <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-12 card-myaccount">
+            <div class="col-sm-8 col-md-12 card-myaccount card-myaccount__editAddress">
                 <div class="card">
                     <div class="card-header">
                     <isif condition="${pdict.addressId}">
