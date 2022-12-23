@@ -2814,7 +2814,7 @@ header nav.homepage {
     display: flex;
     align-items: center; }
     .video-hero-container .video-hero-desktop {
-      width: 250vw; }
+      display: none; }
       .video-hero-container .video-hero-desktop__buttons__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
