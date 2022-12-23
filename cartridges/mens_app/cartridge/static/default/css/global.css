@@ -2164,7 +2164,7 @@ pre code {
   .title-container {
     background: #000;
     padding: 0 40px !important;
-    height: 40px;
+    height: 40px !important;
   }
 
   #product-search-results .header.page-title.titleCat {
@@ -21845,6 +21845,7 @@ button.close:focus {
   border: none;
   margin: 15px auto;
   height: 37px;
+  color: #000;
 }
 
 .account-sections .btn-save-address {

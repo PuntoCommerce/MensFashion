@@ -15,6 +15,7 @@
     .btn-cancel,
     .btn-save {
         height: 40px;
+        color: #000;
 
         &:hover {
             background-color: #000;
@@ -110,6 +111,7 @@
             text-transform: uppercase;
             margin-bottom: 34px;
             margin-right: 8px;
+            color: #000;
         }
     }
 }
