@@ -816,7 +816,12 @@ footer .space {
   justify-content: end; }
 
 #footer-miniLogo .item::after {
-  content: url(../images/mens.png); }
+  background-image: url(../images/mensfoot.png);
+  background-size: 50px 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  content: ""; }
 
 #footer-visa {
   content: url(../images/visa.svg); }
@@ -1424,7 +1429,7 @@ ul {
   padding: 12px; }
 
 .refinement-bar {
-  padding: 60px; }
+  padding: 60px 30px; }
 
 .header-bar {
   background-color: transparent;
@@ -3560,18 +3565,16 @@ header nav.homepage {
 .btn-add-cart,
 .add-to-cart-global,
 .buy-now {
-  height: 49px;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: uppercase;
-  height: 49px;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: uppercase;
   background: #3e403d;
   border-radius: 3px;
   color: #ffffff;
-  height: 49px; }
+  height: 38px; }
   .btn-add-cart:hover,
   .add-to-cart-global:hover,
   .buy-now:hover {

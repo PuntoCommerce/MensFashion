@@ -182,11 +182,11 @@
     <isif condition="${pdict.productSearch.productIds.length > 0}">
         <!--- Refinement bar --->
         <div class="row row-no-margin refinement-items-container">
-            <div class="refinement-bar col-md-5 col-lg-4" id="refinement-bar">
+            <div class="refinement-bar col-sm-12 col-lg-3" id="refinement-bar">
                 <isinclude url="${pdict.refineurl}" />
             </div>
 
-            <div class="col-sm-12 col-md-9 product-grid--full-width" id="plp-products">
+            <div class="col-sm-12 col-lg-9 product-grid--full-width" id="plp-products">
                 <!--- Selected filters bar --->
 
                 <iscomment>
