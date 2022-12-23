@@ -7,7 +7,7 @@
                <div class="col-12 d-flex menuCont">
                   <isloop items="${menuItem.subCategories}" var="category">
                   <div class="menuColCont">
-                     <div class="category-item item">
+                     <div class="category-item item catTitle">
                            <a href="${category.url}">${category.name}</a>
                      </div>
                      <isif condition="${category.subCategories}">

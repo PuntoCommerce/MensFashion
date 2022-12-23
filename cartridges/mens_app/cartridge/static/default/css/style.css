@@ -816,7 +816,12 @@ footer .space {
   justify-content: end; }
 
 #footer-miniLogo .item::after {
-  content: url(../images/mens.png); }
+  background-image: url(../images/mensfoot.png);
+  background-size: 50px 50px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  content: ""; }
 
 #footer-visa {
   content: url(../images/visa.svg); }
@@ -1062,11 +1067,11 @@ footer .socialMedia-paymentMethods {
   height: 1px;
   width: 0%;
   background-color: #000000;
-  transition: width 0.5s; }
+  transition: width 0.1s; }
 
 #menuDesk .nav-item:hover .hover-underline,
 #menuDesk .nav-item a:hover .hover-underline {
-  width: 50%; }
+  width: 100%; }
 
 .customNav .nav-item .nav-link:hover .hover-underline, .customNav .nav-item .nav-link:focus .hover-underline {
   width: 50%; }
@@ -1088,13 +1093,17 @@ footer .socialMedia-paymentMethods {
 
 #menuDesk .dropdown-menu .category-item.item a, #menuDesk .dropdown-menu .sub-category-item.item a {
   color: #000000;
-  font-family: 'Avenir-Next' !important;
-  font-size: 14px; }
+  font-family: 'Avenir-Next';
+  font-size: 14px;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.5); }
 
-#menuDesk .nav-item a {
+#menuDesk .nav-item .nav-link.dropdown-toggle {
   color: #000000;
-  font-family: "Avenir-Bold" !important;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "Avenir-Bold" !important; }
+
+.catTitle a {
+  font-family: "Avenir-Bold" !important; }
 
 .nav.navbar-nav {
   display: flex;
@@ -1241,12 +1250,11 @@ ul {
   list-style-type: none; }
 
 .dropdown-menu .category-item {
-  font-weight: bold;
-  border-bottom: 1px solid rgba(68, 68, 68, 0.5); }
+  font-weight: bold; }
 
-#customMenu:hover {
-  border-top: 0.3px solid rgba(68, 68, 68, 0.5); }
-
+/*#customMenu:hover{
+  border-top: 0.3px solid rgba(68, 68, 68, 0.5);
+}*/
 .dropdown-menu .subcategories {
   padding-inline-start: 0px; }
 
@@ -1421,7 +1429,7 @@ ul {
   padding: 12px; }
 
 .refinement-bar {
-  padding: 60px; }
+  padding: 60px 30px; }
 
 .header-bar {
   background-color: transparent;
@@ -3557,18 +3565,16 @@ header nav.homepage {
 .btn-add-cart,
 .add-to-cart-global,
 .buy-now {
-  height: 49px;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: uppercase;
-  height: 49px;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: uppercase;
   background: #3e403d;
   border-radius: 3px;
   color: #ffffff;
-  height: 49px; }
+  height: 38px; }
   .btn-add-cart:hover,
   .add-to-cart-global:hover,
   .buy-now:hover {
