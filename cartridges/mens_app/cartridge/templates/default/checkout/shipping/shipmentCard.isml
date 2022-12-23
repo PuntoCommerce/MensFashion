@@ -21,7 +21,7 @@
                     <button id="selectShipping" class="shipping-check-card h-100 w-100 <isloop items="
                     ${shippingModel.applicableShippingMethods}" var="shippingMethod">
                     <isif condition="${shippingMethod.ID == "MEX001" && shippingMethod.selected}">
-                        active
+                        active checked
                     </isif>
                     </isloop>">
                         <div class="check-decorator">

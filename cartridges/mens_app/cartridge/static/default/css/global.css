@@ -22191,7 +22191,7 @@ button.close:focus {
 }
 
 .product-detail .prices {
-  margin: 24px 0;
+  margin: 5px 0;
 }
 
 .product-detail .product-id {
@@ -22763,12 +22763,6 @@ button.close:focus {
 @media (max-width: 1590px) {
   .containerDropdown {
     padding: 0 11rem;
-  }
-}
-
-@media (max-width: 1440px) {
-  .containerDropdown {
-    padding: 0 9.5rem;
   }
 }
 
