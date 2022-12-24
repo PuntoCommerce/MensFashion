@@ -4071,7 +4071,10 @@ del {
   .refinement-items-container {
     padding-top: 55px; }
   .checkout__text--bold {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .cart-empty h1 {
+    font-size: 30px;
+    font-family: "Avenir-Next"; } }
 
 @media (max-width: 543px) {
   .checkout-promotion {
@@ -4144,7 +4147,8 @@ del {
       border: 1px solid #000; }
   .accountBtns .btn-cancel,
   .accountBtns .btn-save {
-    height: 40px; }
+    height: 40px;
+    color: #000; }
     .accountBtns .btn-cancel:hover,
     .accountBtns .btn-save:hover {
       background-color: #000;
@@ -4209,7 +4213,8 @@ del {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 34px;
-  margin-right: 8px; }
+  margin-right: 8px;
+  color: #000; }
 
 .card-header-body {
   margin: 24px 34px 11px 34px; }
