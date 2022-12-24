@@ -809,7 +809,12 @@ footer .space {
   content: url(../images/youtube.svg); }
 
 #tiktok {
-  content: url(../images/tiktok.svg); }
+  background-image: url(../images/tiktok.svg);
+  background-size: 24px 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  content: ""; }
 
 #footer-miniLogo {
   display: flex;
