@@ -1,0 +1,19 @@
+<isif condition="${product.attributes && product.attributes.length}">
+    <div class="value content mt-3 attributes-collapse-container" id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
+        <isloop items="${product.attributes}" var="attrGroup">
+            <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                <ul>
+                    <isloop items="${attrGroup.attributes}" var="attr">
+                        <isif condition="${attr.label === 'Composición'}">
+                            <li class="attribute-values ${attr.label}">
+                                <isloop items="${attr.value}" var="value">
+                                    ${value}
+                                </isloop>
+                            </li>
+                        </isif>
+                    </isloop>
+                </ul>
+            </isif>
+        </isloop>
+    </div>
+</isif>

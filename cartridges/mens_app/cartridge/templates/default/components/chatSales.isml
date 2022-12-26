@@ -17,9 +17,9 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //O falso
-		embedded_svc.settings.language = ''; //Por ejemplo, introduzca 'en' o 'en-US'
+		embedded_svc.settings.language = 'es'; //Por ejemplo, introduzca 'en' o 'en-US'
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Toma como valor predeterminado Sesión de chat con un experto)
+		embedded_svc.settings.defaultMinimizedText = 'Iniciar chat'; //(Toma como valor predeterminado Sesión de chat con un experto)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Toma como valor predeterminado Agente sin conexión)
 
 		//embedded_svc.settings.loadingText = ''; //(Toma como valor predeterminado Cargando)
@@ -38,16 +38,16 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://hh2021--pcdev.sandbox.my.salesforce.com',
-			'https://hh2021--pcdev.sandbox.my.salesforce-sites.com/liveAgentSetupFlow',
+			'https://hh2021.my.salesforce.com',
+			'https://ar210622.secure.force.com/liveAgentSetupFlow',
 			gslbBaseURL,
-			'00D8I0000008iNm',
+			'00D5f000007FHCP',
 			'Chat_MensFashion',
 			{
-				baseLiveAgentContentURL: 'https://c.la4-c1cs-ia4.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la4-c1-ia4.salesforceliveagent.com/content',
 				deploymentId: '5725f000000tqZm',
 				buttonId: '5735f000000trKn',
-				baseLiveAgentURL: 'https://d.la4-c1cs-ia4.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la4-c1-ia4.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'Chat_MensFashion',
 				isOfflineSupportEnabled: false
 			}
@@ -56,7 +56,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://hh2021--pcdev.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://hh2021.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};

@@ -30,6 +30,16 @@
         <hr />
     </isif>
 
+    <div class="row composition collapsible-xl ${product.composicion}<isif condition=" ${!product.composicion}">hidden-xl-down</isif>">
+        <button class="title btn text-left btn-block" aria-expanded="false"
+            aria-controls="collapsible-composition-${loopState && loopState.count ? loopState.count : '1'}">
+            ${Resource.msg('label.composicion', 'product', null)}
+        </button>
+        <isinclude template="product/components/composition" />
+    </div>
+
+    <hr/>
+
     <div class="row devolutions-container collapsible-xl <isif condition=" ${!product.longDescription}">hidden-xl-down
         </isif>">
         <button class="title btn text-left btn-block" aria-expanded="false"
