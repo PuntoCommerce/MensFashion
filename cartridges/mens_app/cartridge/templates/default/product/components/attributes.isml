@@ -18,5 +18,6 @@
                 </ul>
             </isif>
         </isloop>
+        <div>${product.shortDescription}</div>
     </div>
 </isif>
