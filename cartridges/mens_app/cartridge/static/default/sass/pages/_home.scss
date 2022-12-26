@@ -326,34 +326,40 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
 
-        &--white {
-          width: max-content;
-          padding: 14px 17px;
-          background: #f2f2f2;
-          border: 1px solid #cdcdcd;
-          border-radius: 3px;
-          font-family: $font-family-bold;
-          font-size: 18px;
-          color: #000000;
+        &__link {
+          &--white {
+            width: 158px;
+            padding: 14px 17px;
+            background: #f2f2f2;
+            border: 1px solid #cdcdcd;
+            border-radius: 3px;
+            font-family: $font-family-bold;
+            font-size: 18px;
+            color: #000000;
 
-          &:hover {
-            background: #e2e2e2;
+            &:hover {
+              background: #e2e2e2;
+            }
+          }
+
+          &--black {
+            width: 100%;
+            padding: 14px 17px;
+            background: #292929;
+            border: 1px solid #292929;
+            border-radius: 3px;
+            color: #fff;
+            font-family: $font-family-bold;
+            font-size: 18px;
+
+            &:hover {
+              background: #f77b28;
+            }
           }
         }
 
-        &--black {
-          width: 158px;
-          padding: 14px 17px;
-          background: #292929;
-          border: 1px solid #292929;
-          border-radius: 3px;
-          color: #fff;
-          font-family: $font-family-bold;
-          font-size: 18px;
-
-          &:hover {
-            background: #f77b28;
-          }
+        a:nth-child(7) {
+          grid-column: -3/-2;
         }
       }
     }
@@ -622,13 +628,13 @@ header {
       font-size: 14px;
       font-family: $font-family-normal;
 
-      p:nth-child(2){
-        strong{
+      p:nth-child(2) {
+        strong {
           font-family: $font-family-bold;
         }
       }
 
-      p:nth-child(3){
+      p:nth-child(3) {
         font-family: $font-family-bold;
       }
     }
@@ -651,20 +657,20 @@ header {
     }
   }
 
-  .experience-commerce_layouts-mobileGrid3r1c:nth-child(4){
+  .experience-commerce_layouts-mobileGrid3r1c:nth-child(4) {
     background: #f5f5f5;
 
-    .region{
+    .region {
       padding: 0;
       margin: 0;
     }
   }
 
-  .experience-commerce_layouts-mobileGrid3r1c:nth-child(5){
+  .experience-commerce_layouts-mobileGrid3r1c:nth-child(5) {
     background: #f5f5f5;
     padding-bottom: 40px;
 
-    .region{
+    .region {
       padding: 0;
       margin: 0;
     }
@@ -674,7 +680,7 @@ header {
     background: #fff !important;
     padding: 20px 8vw;
 
-    .ITBC-onlyButton-container{
+    .ITBC-onlyButton-container {
       padding: 0 !important;
       height: max-content !important;
     }
@@ -818,11 +824,14 @@ header {
       display: none;
 
       &__buttons {
-
         &__container {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           grid-gap: 10px;
+
+          a:nth-child(7) {
+            grid-column: 1/-1;
+          }
         }
       }
 
