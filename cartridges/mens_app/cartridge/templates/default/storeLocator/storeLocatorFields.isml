@@ -36,7 +36,7 @@
                     d="M12 9.08397C12 10.7535 10.6569 12.1069 9 12.1069C7.34315 12.1069 6 10.7535 6 9.08397C6 7.41447 7.34315 6.06107 9 6.06107C10.6569 6.06107 12 7.41447 12 9.08397Z"
                     stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            Usar mi ubicaccion
+            ${Resource.msg('store.locator', 'cart', null)}
         </button>
         <button type="button" id="clear-search-store">&times;</button>
     </div>
