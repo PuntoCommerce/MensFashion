@@ -300,19 +300,25 @@
       &--primary {
         color: #fff;
         font-family: $font-family-normal;
-        font-size: 24px;
+        font-size: 20px;
       }
 
       &--secondary {
-        color: #fff;
+        color: #2b2b2b;
         font-family: $font-family-bold-2;
-        font-size: 40px;
+        font-size: 80px;
+        margin: 20px 0;
+
+        &--red{
+          color: #b71011;
+        }
       }
 
       &--terciary {
         color: #fff;
-        font-family: $font-family-bold-2;
-        font-size: 64px;
+        font-family: $font-family-normal;
+        font-size: 20px;
+        line-height: 30px;
       }
     }
 
@@ -847,15 +853,15 @@ header {
         transform: translate(-50%, -15vh);
 
         &--primary {
-          font-size: 14px;
+          font-size: 20px;
         }
 
         &--secondary {
-          font-size: 22px;
+          font-size: 50px;
         }
 
         &--terciary {
-          font-size: 32px;
+          font-size: 20px;
         }
       }
 
@@ -1014,7 +1020,7 @@ header {
   .video-hero-container {
     .video-hero-desktop {
       &__buttons {
-        transform: translate(-50%, 10vh);
+        transform: translate(-50%, 15vh);
       }
     }
   }

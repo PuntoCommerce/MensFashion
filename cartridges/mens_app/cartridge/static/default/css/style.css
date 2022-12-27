@@ -2488,15 +2488,19 @@ ul {
       .video-hero-container .video-hero-desktop__texts--primary {
         color: #fff;
         font-family: "Avenir-Next";
-        font-size: 24px; }
+        font-size: 20px; }
       .video-hero-container .video-hero-desktop__texts--secondary {
-        color: #fff;
+        color: #2b2b2b;
         font-family: "Avenir-bold";
-        font-size: 40px; }
+        font-size: 80px;
+        margin: 20px 0; }
+        .video-hero-container .video-hero-desktop__texts--secondary--red {
+          color: #b71011; }
       .video-hero-container .video-hero-desktop__texts--terciary {
         color: #fff;
-        font-family: "Avenir-bold";
-        font-size: 64px; }
+        font-family: "Avenir-Next";
+        font-size: 20px;
+        line-height: 30px; }
     .video-hero-container .video-hero-desktop__buttons {
       position: absolute;
       left: 50%;
@@ -2833,11 +2837,11 @@ header nav.homepage {
       .video-hero-container .video-hero-desktop__texts {
         transform: translate(-50%, -15vh); }
         .video-hero-container .video-hero-desktop__texts--primary {
-          font-size: 14px; }
+          font-size: 20px; }
         .video-hero-container .video-hero-desktop__texts--secondary {
-          font-size: 22px; }
+          font-size: 50px; }
         .video-hero-container .video-hero-desktop__texts--terciary {
-          font-size: 32px; }
+          font-size: 20px; }
       .video-hero-container .video-hero-desktop__date {
         width: 90%;
         text-align: center; }
@@ -2918,7 +2922,7 @@ header nav.homepage {
   .promo-carousel .btn__small {
     font-size: 12px; }
   .video-hero-container .video-hero-desktop__buttons {
-    transform: translate(-50%, 10vh); } }
+    transform: translate(-50%, 15vh); } }
 
 @media (max-width: 370px) {
   .summary__footer .btn__small {
