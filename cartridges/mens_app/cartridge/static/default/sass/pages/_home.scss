@@ -340,6 +340,10 @@
             &:hover {
               background: #e2e2e2;
             }
+
+            &:focus{
+              outline: 0;
+            }
           }
 
           &--black {
@@ -352,8 +356,12 @@
             font-family: $font-family-bold;
             font-size: 18px;
 
-            &:hover {
-              background: #f77b28;
+            // &:hover {
+            //   background: #f77b28;
+            // }
+
+            &:focus{
+              outline: 0;
             }
           }
         }

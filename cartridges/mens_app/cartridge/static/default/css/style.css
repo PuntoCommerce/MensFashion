@@ -2516,6 +2516,8 @@ ul {
           color: #000000; }
           .video-hero-container .video-hero-desktop__buttons__container__link--white:hover {
             background: #e2e2e2; }
+          .video-hero-container .video-hero-desktop__buttons__container__link--white:focus {
+            outline: 0; }
         .video-hero-container .video-hero-desktop__buttons__container__link--black {
           width: 100%;
           padding: 14px 17px;
@@ -2525,8 +2527,8 @@ ul {
           color: #fff;
           font-family: "AvenirLTStd-Heavy";
           font-size: 18px; }
-          .video-hero-container .video-hero-desktop__buttons__container__link--black:hover {
-            background: #f77b28; }
+          .video-hero-container .video-hero-desktop__buttons__container__link--black:focus {
+            outline: 0; }
         .video-hero-container .video-hero-desktop__buttons__container a:nth-child(7) {
           grid-column: -3/-2; }
     .video-hero-container .video-hero-desktop__date {
