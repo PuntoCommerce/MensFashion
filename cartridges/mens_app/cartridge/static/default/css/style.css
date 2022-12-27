@@ -2505,8 +2505,8 @@ ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px; }
-        .video-hero-container .video-hero-desktop__buttons__container--white {
-          width: max-content;
+        .video-hero-container .video-hero-desktop__buttons__container__link--white {
+          width: 158px;
           padding: 14px 17px;
           background: #f2f2f2;
           border: 1px solid #cdcdcd;
@@ -2514,10 +2514,10 @@ ul {
           font-family: "AvenirLTStd-Heavy";
           font-size: 18px;
           color: #000000; }
-          .video-hero-container .video-hero-desktop__buttons__container--white:hover {
+          .video-hero-container .video-hero-desktop__buttons__container__link--white:hover {
             background: #e2e2e2; }
-        .video-hero-container .video-hero-desktop__buttons__container--black {
-          width: 158px;
+        .video-hero-container .video-hero-desktop__buttons__container__link--black {
+          width: 100%;
           padding: 14px 17px;
           background: #292929;
           border: 1px solid #292929;
@@ -2525,8 +2525,10 @@ ul {
           color: #fff;
           font-family: "AvenirLTStd-Heavy";
           font-size: 18px; }
-          .video-hero-container .video-hero-desktop__buttons__container--black:hover {
+          .video-hero-container .video-hero-desktop__buttons__container__link--black:hover {
             background: #f77b28; }
+        .video-hero-container .video-hero-desktop__buttons__container a:nth-child(7) {
+          grid-column: -3/-2; }
     .video-hero-container .video-hero-desktop__date {
       position: absolute;
       left: 50%;
@@ -2824,6 +2826,8 @@ header nav.homepage {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px; }
+        .video-hero-container .video-hero-desktop__buttons__container a:nth-child(7) {
+          grid-column: 1/-1; }
       .video-hero-container .video-hero-desktop__texts {
         transform: translate(-50%, -15vh); }
         .video-hero-container .video-hero-desktop__texts--primary {
