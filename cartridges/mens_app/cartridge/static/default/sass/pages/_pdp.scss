@@ -541,9 +541,9 @@
 
     .product-detail {
         & .product-number {
-            font-family: "Avenir-Bold";
-            margin-top: 20px;
-            margin-bottom: 26px;
+            font-family: 'Avenir-Next';
+            border-bottom: 0.5px solid #000;
+            margin-bottom: 0.5rem;
         }
     }
 
@@ -553,6 +553,7 @@
         }
     }
 }
+
 
 .btn-add-cart,
 .add-to-cart-global {

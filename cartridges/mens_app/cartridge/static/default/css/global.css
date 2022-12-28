@@ -22195,10 +22195,6 @@ button.close:focus {
   margin: 5px 0;
 }
 
-.product-detail .product-id {
-  margin-left: 20px;
-}
-
 .collapsible-xl.active .card-body,
 .collapsible-xl.active .content {
   padding: 0 !important;
@@ -22767,6 +22763,11 @@ button.close:focus {
   }
 }
 
+@media (max-width: 1590px) {
+  .product-detail .cart-and-ipay button{
+    font-size: 14px;
+  }
+}
 @media (max-width: 1200px) {
   .containerDropdown {
     padding: 0 6rem;

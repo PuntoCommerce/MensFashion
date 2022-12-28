@@ -1,4 +1,4 @@
-${Resource.msg('label.brand', 'product', null)}
-<span class="product-brand">${product.brand}</span>
-${Resource.msg('label.item', 'product', null)}
-<span class="product-id">${product.id}</span>
+<div class="productSku">
+    <span>${Resource.msg('label.item', 'product', null)}</span>
+    <span class="product-id">${product.id}</span>
+</div>
