@@ -262,12 +262,12 @@
 
     & .description-and-detail {
         & .row {
-            margin: 15px 0;
+            margin:23px 0;
         }
 
         & .title.btn {
             line-height: normal;
-            padding-left: 0;
+            padding: 0;
         }
 
         & .product-attributes ul {
@@ -482,6 +482,7 @@
     }
 }
 
+
 @media only screen and (max-width: 768px) {
     .product-detail {
         & .image-details-container {
@@ -501,7 +502,7 @@
     }
 
     .quantityPDP{
-        width: 40%;
+        width: 100%;
 
         select{
             width: 100%;
@@ -566,7 +567,7 @@
         }
 
         & .custom-padding {
-            padding: 0 30px;
+            padding: 0 15px;
         }
 
         & .p-image-and-wrapper {

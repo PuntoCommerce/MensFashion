@@ -1238,7 +1238,8 @@ footer .socialMedia-paymentMethods {
   .navbar-header {
     display: flex;
     justify-content: flex-end;
-    align-items: center; } }
+    align-items: center;
+    height: 72px !important; } }
 
 /* Menu */
 .dropdown-menu {
@@ -3407,10 +3408,10 @@ header nav.homepage {
   .product-detail hr {
     border-top: 1px solid #f0f0f4; }
   .product-detail .description-and-detail .row {
-    margin: 15px 0; }
+    margin: 23px 0; }
   .product-detail .description-and-detail .title.btn {
     line-height: normal;
-    padding-left: 0; }
+    padding: 0; }
   .product-detail .description-and-detail .product-attributes ul {
     list-style-type: disc; }
   .product-detail .promotions {
@@ -3551,7 +3552,7 @@ header nav.homepage {
     .row-talla .select-talla {
       width: 100%; }
   .quantityPDP {
-    width: 40%; }
+    width: 100%; }
     .quantityPDP select {
       width: 100%; }
   .add-to-cart-grid {
@@ -3584,7 +3585,7 @@ header nav.homepage {
   .product-detail .product-name {
     margin: 0; }
   .product-detail .custom-padding {
-    padding: 0 30px; }
+    padding: 0 15px; }
   .product-detail .p-image-and-wrapper {
     max-height: 100vh;
     overflow: auto;
