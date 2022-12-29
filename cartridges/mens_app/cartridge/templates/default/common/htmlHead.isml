@@ -43,6 +43,14 @@
 <link rel="icon" type="image/png" href="${URLUtils.staticURL('/images/favicons/favicon-16x16.png')}" sizes="16x16" />
 <!--<link rel="icon" type="image/png" href="${URLUtils.staticURL('/images/favicons/favicon-128.png')}" sizes="128x128" />-->
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7R3G8Q');</script>
+<!-- End Google Tag Manager -->
+
 <link rel="stylesheet" href="${URLUtils.staticURL('/css/global.css')}" />
 <isloop items="${require('*/cartridge/scripts/assets.js').styles}" var="style">
     <link rel="stylesheet" href="${style.src}" <isif condition="${style.integrity != null}">
@@ -71,6 +79,7 @@ ${dw.system.HookMgr.callHook('app.template.htmlHead', 'htmlHead', pdict) || ''}
     This hook will be executed with encoding disabled. Please sanitize output in the hook.
 </iscomment>
 <isprint value="${require('*/cartridge/scripts/theming/skin.js').renderSkin()}" encoding="off">
+
     <link rel="stylesheet" href="${URLUtils.staticURL('/css/skin/skin.css')}" />
 
     <!-- Google Tag Manager -->
