@@ -22792,7 +22792,7 @@ button.close:focus {
 
 @media (max-width: 768px) {
   .container-custom-plp .product-tile .image-container{
-    height: 295px;
+    height: fit-content;
   }
 
   .container-custom-plp .product-tile.summary .tile-body{

@@ -1,5 +1,5 @@
 <isset name="product" value="${pdict.product}" scope="page" />
-    <div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
+<div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
 
     <isinclude template="product/components/highlight" />
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
@@ -10,8 +10,10 @@
             <isinclude template="product/components/productTileName" />
         </div>
 
-        <iscomment> <div class="summary_price"> </iscomment>
-        <div>    
+        <iscomment>
+            <div class="summary_price">
+        </iscomment>
+        <div>
             <div class="summary__pricing">
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
@@ -20,9 +22,11 @@
                     <isinclude template="product/components/pricing/main" />
                 </isif>
                 <isif condition="${product.promotions.length > 0}">
-                    <div class="highlight-promotion">
+                    <div class="highlight-container">
                         <isloop items="${product.promotions}" var="promotion" status="loopstatus">
-                            <span id="highlight-price">${promotion.calloutMsg}</span>
+                            <div class="highlight-promotion">
+                                <span id="highlight-price">${promotion.calloutMsg}</span>
+                            </div>
                         </isloop>
                     </div>
                 </isif>

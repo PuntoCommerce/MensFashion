@@ -2996,14 +2996,23 @@ header nav.homepage {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .summary__pricing .highlight-promotion {
-    background: #fd4237;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 4px 10px 0 10px;
-    font-family: "Avenir-Next";
-    display: none; }
+  .summary__pricing .highlight-container {
+    display: flex; }
+    .summary__pricing .highlight-container .highlight-promotion:nth-child(1) {
+      background: #fd4237;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 10px 0 10px;
+      font-family: "Avenir-Next"; }
+    .summary__pricing .highlight-container .highlight-promotion:nth-child(2) {
+      background: #000;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 10px 0 10px;
+      font-family: "Avenir-Next";
+      margin-left: 6px; }
 
 .add-to-wishlist-messages .add-to-wishlist-alert {
   z-index: 1000;
@@ -3936,7 +3945,8 @@ del {
 .checkout-promotion {
   background: #fd4237;
   color: #fff;
-  padding: 0 5px; }
+  padding: 0 5px;
+  display: none !important; }
 
 .btn-filter {
   background: #F5F5F5;
