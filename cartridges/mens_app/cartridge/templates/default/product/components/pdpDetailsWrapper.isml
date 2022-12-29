@@ -4,19 +4,21 @@
     assets.addJs('/js/custom.js');
 </isscript>
 <div class="custom-padding product-details-container h-100">
-    <div class="row justify-content-center h-100">
-        <div class="col-lg-9 product-details-wrapper sticky-details">
+    <div class="row justify-content-start h-100">
+        <div class="col-lg-10 product-details-wrapper sticky-details">
 
             <!-- Product Name -->
             <div class="row">
                 <div class="col">
                     <span class="product-name">${product.productName.toLowerCase()}</span>
                     <!-- Applicable Promotions -->
-                    <iscomment> <div class="row">
-                    <p>${product.id}</p>
-                        <div class="col-12 promotions">
+                    <iscomment>
+                        <div class="row">
+                            <p>${product.id}</p>
+                            <div class="col-12 promotions">
+                            </div>
                         </div>
-                    </div> </iscomment>
+                    </iscomment>
                 </div>
             </div>
 
@@ -119,32 +121,36 @@
                     </div>
                 </isif>
 
-                <div class="add-to-cart-actions mt-2 mb-2">
-                    <!-- Cart and [Optionally] Apple Pay -->
-                    <isinclude template="product/components/addToCartProduct" />
-                </div>
+                <div class="add-to-cart-grid">
+                    <div class="add-to-cart-actions mb-2">
+                        <!-- Cart and [Optionally] Apple Pay -->
+                        <isinclude template="product/components/addToCartProduct" />
+                    </div>
 
-                <div class="add-to-cart-and-checkout mt-2 mb-2">
-                    <!-- Cart and Checkout -->
-                    <isinclude template="product/components/buyNowProduct" />
+                    <div class="add-to-cart-and-checkout mb-2">
+                        <!-- Cart and Checkout -->
+                        <isinclude template="product/components/buyNowProduct" />
+                    </div>
                 </div>
 
 
                 <!-- Store Locator Link -->
-                <iscomment> <div class="row storeLinkPDP">
-                    <div class="col-12 mt-4">
-                        <isinclude template="product/components/storeLocatorLink" />
+                <iscomment>
+                    <div class="row storeLinkPDP">
+                        <div class="col-12 mt-4">
+                            <isinclude template="product/components/storeLocatorLink" />
 
-                        <div class="mt-3 d-flex storeLinkPDP__offer">
-                            <i class="fa fa-question-circle-o" aria-hidden="true"></i>
-                            <span>Llévate 3 piezas x $1,499</span>
-                        </div>
-                        <div class="mt-3 d-flex storeLinkPDP__payment">
-                            <i class="fa fa-credit-card" aria-hidden="true"></i>
-                            <span>6 MSI y hasta 9 MSI con Citibanamex</span>
+                            <div class="mt-3 d-flex storeLinkPDP__offer">
+                                <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                                <span>Llévate 3 piezas x $1,499</span>
+                            </div>
+                            <div class="mt-3 d-flex storeLinkPDP__payment">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span>6 MSI y hasta 9 MSI con Citibanamex</span>
+                            </div>
                         </div>
                     </div>
-                </div> </iscomment>
+                </iscomment>
 
                 <isset name="loopState" value="{count: 1}" scope="page" />
                 <isinclude template="product/components/descriptionAndDetails" />

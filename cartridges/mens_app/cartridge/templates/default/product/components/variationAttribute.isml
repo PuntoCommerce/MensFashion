@@ -68,16 +68,17 @@
         </div>
     </div>
 <iselse/>
-    <div class="attribute col-12">
+    <div class="attribute col-12 pr-0">
         <div class="attributeDetailTalla">
             <!-- Select <Attribute> Label -->
             <label class="d-lg-block ${attr.id}"
                 for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
-                <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
+                <iscomment> <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
                     ${Resource.msg('label.select.size', 'checkout', null)} ${attr.displayName.toLowerCase()}
                 <iselse/>
                     ${attr.displayName}
-                </isif>
+                </isif> </iscomment>
+                    ${attr.displayName}
             </label>
 
             <!-- Trigger Modal Sizes Guide -->

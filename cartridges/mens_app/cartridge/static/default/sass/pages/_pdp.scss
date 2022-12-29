@@ -452,12 +452,76 @@
     }
 }
 
+.select-talla{
+    width: 201px;
+    height: 30px;
+    font-size: 13px;
+    background: none !important;
+}
+
+.quantity-select{
+    width: 152px;
+    height: 30px;
+    font-size: 13px;
+    background: none !important;
+    margin-right: 18px;
+}
+
+.row-talla{
+    width: fit-content;
+    margin-right: 18px;
+}
+
+.add-to-cart-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 18px;
+
+    .btn-add-cart, .buy-now{
+        width: 201px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .product-detail {
         & .image-details-container {
             & .carousel-inner {
                 max-height: 60vh !important;
                 overflow: auto;
+            }
+        }
+    }
+
+    .row-talla{
+        width: 100%;
+
+        .select-talla{
+            width: 100%;
+        }
+    }
+
+    .quantityPDP{
+        width: 40%;
+
+        select{
+            width: 100%;
+        }
+    }
+
+    .add-to-cart-grid{
+        width: 100%;
+        display: block;
+
+        .cart-and-ipay{
+            margin: auto;
+            width: 100%;
+
+            .col-sm-12{
+                padding: 0;
+
+                button{
+                    width: 100%;
+                }
             }
         }
     }
@@ -508,6 +572,8 @@
         & .p-image-and-wrapper {
             max-height: 100vh;
             overflow: auto;
+            max-width: 93vw;
+            margin: auto;
 
             /* Hide scrollbar for Chrome, Safari and Opera */
             &::-webkit-scrollbar {
@@ -527,7 +593,7 @@
 
         & .product-details-wrapper {
             height: 93vh;
-            overflow: scroll;
+            // overflow: scroll;
         }
     }
 }
@@ -682,7 +748,6 @@ del {
 }
 
 .sizes-guide-cont {
-    width: 60% !important;
 
     .sizes-guide {
         // justify-content: flex-end;
@@ -771,24 +836,8 @@ del {
     }
 }
 
-@media (max-width: 425px) {
-    
-    .sizes-guide-cont {
-        width: 51% !important;
-    }
-}
-
-@media (max-width: 375px) {
-    
-    .sizes-guide-cont {
-        width: 54% !important;
-    }
-}
 
 @media (max-width: 320px) {
-    .sizes-guide-cont {
-        width: 65% !important;
-    }
 
     #productdetailpage .carousel-inner {
         margin: 15px 0;

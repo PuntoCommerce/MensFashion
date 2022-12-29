@@ -534,14 +534,14 @@ header .container {
   padding-right: 15px; }
 
 header .navbar-header {
-  height: 65px; }
+  height: auto; }
 
 .campaign-banner-message img {
   width: 80px !important;
   margin-right: 3px; }
 
 header .main-menu {
-  margin-top: 24px; }
+  margin-top: 21px; }
 
 .checkout.logo img {
   height: 2em; }
@@ -1200,9 +1200,6 @@ footer .socialMedia-paymentMethods {
 .suggestions {
   font-size: 13px; }
 
-.brand {
-  padding-top: 20px; }
-
 .suggestions .header div,
 .suggestions .children div,
 .suggestions span.name,
@@ -1797,7 +1794,7 @@ ul {
   color: #ffffff; }
 
 .product-breadcrumb a {
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Avenir-Next';
   text-transform: initial; }
 
@@ -3080,11 +3077,11 @@ header nav.homepage {
   transition: all .3s ease; }
 
 .wishlist_unselected {
-  font-size: 22px;
+  font-size: 19px;
   color: #64656A; }
 
 .wishlist_selected {
-  font-size: 22px;
+  font-size: 19px;
   color: #FD4237 !important; }
   .wishlist_selected::before {
     content: "\F08A" !important; }
@@ -3512,10 +3509,52 @@ header nav.homepage {
     transform: translate(70%, 0px);
     opacity: 0.2; }
 
+.select-talla {
+  width: 201px;
+  height: 30px;
+  font-size: 13px;
+  background: none !important; }
+
+.quantity-select {
+  width: 152px;
+  height: 30px;
+  font-size: 13px;
+  background: none !important;
+  margin-right: 18px; }
+
+.row-talla {
+  width: fit-content;
+  margin-right: 18px; }
+
+.add-to-cart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 18px; }
+  .add-to-cart-grid .btn-add-cart, .add-to-cart-grid .buy-now {
+    width: 201px; }
+
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
     max-height: 60vh !important;
-    overflow: auto; } }
+    overflow: auto; }
+  .row-talla {
+    width: 100%; }
+    .row-talla .select-talla {
+      width: 100%; }
+  .quantityPDP {
+    width: 40%; }
+    .quantityPDP select {
+      width: 100%; }
+  .add-to-cart-grid {
+    width: 100%;
+    display: block; }
+    .add-to-cart-grid .cart-and-ipay {
+      margin: auto;
+      width: 100%; }
+      .add-to-cart-grid .cart-and-ipay .col-sm-12 {
+        padding: 0; }
+        .add-to-cart-grid .cart-and-ipay .col-sm-12 button {
+          width: 100%; } }
 
 @media only screen and (max-width: 997px) {
   .product-detail .selector-wrapper[data-attr="color"] .col-lg-6 {
@@ -3540,6 +3579,8 @@ header nav.homepage {
   .product-detail .p-image-and-wrapper {
     max-height: 100vh;
     overflow: auto;
+    max-width: 93vw;
+    margin: auto;
     /* Hide scrollbar for Chrome, Safari and Opera */ }
     .product-detail .p-image-and-wrapper::-webkit-scrollbar {
       display: none;
@@ -3552,8 +3593,7 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: 93vh;
-    overflow: scroll; } }
+    height: 93vh; } }
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
@@ -3658,10 +3698,8 @@ header nav.homepage {
 del {
   text-decoration: none !important; }
 
-.sizes-guide-cont {
-  width: 60% !important; }
-  .sizes-guide-cont .sizes-guide img {
-    width: 15px; }
+.sizes-guide-cont .sizes-guide img {
+  width: 15px; }
 
 #productdetailpage .experience-component.experience-commerce_layouts-carousel {
   padding: 0 10px; }
@@ -3710,17 +3748,7 @@ del {
     .mobile-favorite-button button {
       border: none !important; } }
 
-@media (max-width: 425px) {
-  .sizes-guide-cont {
-    width: 51% !important; } }
-
-@media (max-width: 375px) {
-  .sizes-guide-cont {
-    width: 54% !important; } }
-
 @media (max-width: 320px) {
-  .sizes-guide-cont {
-    width: 65% !important; }
   #productdetailpage .carousel-inner {
     margin: 15px 0; } }
 

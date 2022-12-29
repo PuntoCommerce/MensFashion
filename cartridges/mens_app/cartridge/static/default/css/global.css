@@ -16831,6 +16831,9 @@ a.skip:hover {
 .navbar.bg-inverse {
   background-color: transparent !important;
   padding: 0;
+  justify-content: center;
+  border-top: 1px solid #B6B6B6;
+  border-bottom: 1px solid #B6B6B6;
 }
 
 @media (min-width: 769px) {
@@ -17839,7 +17842,7 @@ div.availability {
 }
 
 .container.product-detail {
-  margin-top: 2em;
+  margin-top: 12px;
   margin-bottom: 2em;
 }
 
@@ -18035,9 +18038,8 @@ div.availability {
 }
 
 .attributesPdp {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
+  display: flex;
+  margin-bottom: 18px;
 }
 
 .attributesPdp .row-color {
@@ -21322,8 +21324,10 @@ div.availability {
   opacity: 1;
   text-transform: uppercase;
   transition: 0.3s ease all;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: 31px;
+  width: 31px;
   padding: 9px;
+  border-radius: 3px;
 }
 
 .btn.btn-primary.wishlist_unselected_button i {
