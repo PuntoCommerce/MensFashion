@@ -74,7 +74,7 @@
         ${addressFields.address2.mandatory === true ? 'required' : ''}
             ${addressFields.address2.htmlName}">
             <label class="form-control-label" for="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.two', 'address', null)}
+                ${Resource.msg('field.shipping.address.two', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
             <input type="text" class="form-control shippingAddressTwo"
                 id="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}"
