@@ -18142,7 +18142,7 @@ div.availability {
 
 @media (max-width: 543.98px) {
   .product-tile {
-    min-height: 13.4375em;
+    min-height: 25.4375em;
   }
 }
 
@@ -22704,6 +22704,15 @@ button.close:focus {
   .trackorder {
     margin: 13px 20px 0 20px;
   }
+
+  .product-tile{
+
+  }
+
+  .product-tile .summary__pricing{
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 768.98px) {
