@@ -1592,7 +1592,7 @@ ul {
 
 @media (max-width: 768.98px) {
   .summary__pricing {
-    padding: 10px 0 !important; }
+    padding: 0 !important; }
   .promo-carousel .value {
     font-size: 16px !important; } }
 
@@ -3417,7 +3417,7 @@ header nav.homepage {
   .product-detail hr {
     border-top: 1px solid #f0f0f4; }
   .product-detail .description-and-detail .row {
-    margin: 23px 0; }
+    margin: 0 0 6px 0; }
   .product-detail .description-and-detail .title.btn {
     line-height: normal;
     padding: 0; }
@@ -3553,12 +3553,38 @@ header nav.homepage {
   .add-to-cart-grid .buy-now {
     width: 201px; }
 
+#accordion-content::before {
+  content: '\f078';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 17px;
+  display: flex;
+  font-family: 'FontAwesome';
+  align-items: center;
+  justify-content: center; }
+
+#accordion-content.open::before {
+  content: '\f077';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 17px;
+  display: flex;
+  font-family: 'FontAwesome';
+  align-items: center;
+  justify-content: center; }
+
 #accordion-content.details,
-.devolutions-container {
+#accordion-content.devolutions-container,
+#accordion-content.product-attributes,
+#accordion-content.composition {
   overflow: hidden;
   transition: all 0.2s linear; }
   #accordion-content.details .content,
-  .devolutions-container .content {
+  #accordion-content.devolutions-container .content,
+  #accordion-content.product-attributes .content,
+  #accordion-content.composition .content {
     margin-top: 12px;
     height: 0;
     transition: all 0.2s linear;
@@ -3625,9 +3651,11 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: 70vh;
+    height: 65vh;
     overflow-y: scroll;
-    overflow-x: hidden; } }
+    overflow-x: hidden; }
+    .product-detail .product-details-wrapper::-webkit-scrollbar {
+      background: none; } }
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {

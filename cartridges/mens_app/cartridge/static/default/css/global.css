@@ -19761,7 +19761,7 @@ div.availability {
   margin-right: 0.313em;
   position: relative;
 }
-
+  
 .swatch-circle-cafe-claro {
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   width: 2.5em;
@@ -19773,6 +19773,20 @@ div.availability {
 }
 
 .swatch-circle-cafe-claro.disabled {
+  opacity: 0.5 !important;
+}
+
+.swatch-circle-cafe {
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #a18262;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
+.swatch-circle-cafe.disabled {
   opacity: 0.5 !important;
 }
 
