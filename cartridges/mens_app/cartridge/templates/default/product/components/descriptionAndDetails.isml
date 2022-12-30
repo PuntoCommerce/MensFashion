@@ -13,7 +13,7 @@
         <hr />
     </isif> </iscomment>
 
-    <div class="row details collapsible-xl <isif condition=" ${!product.longDescription}">hidden-xl-down</isif>">
+    <div class="row details" id="accordion-content">
         <button class="title btn text-left btn-block" aria-expanded="false"
             aria-controls="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
             ${Resource.msg('label.description', 'product', null)}
@@ -21,16 +21,11 @@
         <isinclude template="product/components/details" />
     </div>
 
-    <hr />
-
     <div class="row product-attributes collapsible-xl">
         <isinclude template="product/components/attributes" />
     </div>
-    <isif condition="${product.attributes && product.attributes.length}">
-        <hr />
-    </isif>
 
-    <div class="row composition collapsible-xl ${product.composicion}<isif condition=" ${!product.composicion}">hidden-xl-down</isif>">
+    <div class="row composition" id="accordion-content">
         <button class="title btn text-left btn-block" aria-expanded="false"
             aria-controls="collapsible-composition-${loopState && loopState.count ? loopState.count : '1'}">
             ${Resource.msg('label.composicion', 'product', null)}
@@ -38,16 +33,12 @@
         <isinclude template="product/components/composition" />
     </div>
 
-    <hr/>
 
-    <div class="row devolutions-container collapsible-xl <isif condition=" ${!product.longDescription}">hidden-xl-down
-        </isif>">
-        <button class="title btn text-left btn-block" aria-expanded="false"
-            aria-controls="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
+    <div class="row devolutions-container" id="accordion-content">
+        <button class="title btn text-left btn-block">
             Envíos y Devoluciones
         </button>
-        <div class="col-12 value content mt-3"
-            id="collapsible-details-${loopState && loopState.count ? loopState.count : '1'}">
+        <div class="col-12 value content accordion-description">
             <div class="devolutions-container__store">
                 <span class="devolutions-container__store--title">Devolución en tienda gratuita</span>
                 <span class="devolutions-container__store--text">Puede devolver sus artículos en cualquier

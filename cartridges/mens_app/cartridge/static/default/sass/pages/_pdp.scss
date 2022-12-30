@@ -52,7 +52,8 @@
 
     & .mobile-fixed-details-wrapper {
         max-height: 52vh;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     & .product-name {
@@ -157,7 +158,7 @@
         flex-direction: row-reverse;
         justify-content: flex-end;
 
-        .productID{
+        .productID {
             margin-right: 35px;
         }
     }
@@ -494,13 +495,17 @@
     }
 }
 
-#accordion-content.details {
-    background: red;
-    height: 0;
-    transition: all 0.2 linear;
+#accordion-content.details,
+.devolutions-container {
+    overflow: hidden;
+    transition: all 0.2s linear;
 
     .content {
-        overflow: hidden;
+        margin-top: 12px;
+        height: 0;
+        transition: all 0.2s linear;
+        font-size: 12px;
+        font-family: $font-family-normal;
     }
 }
 
@@ -615,8 +620,9 @@
         }
 
         & .product-details-wrapper {
-            height: 93vh;
-            // overflow: scroll;
+            height: 70vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
     }
 }
@@ -689,14 +695,16 @@
     flex-direction: column;
 
     .devolutions-container__store--title {
-        font-size: 16px;
+        font-size: 12px;
         text-transform: uppercase;
+        font-family: $font-family-normal;
     }
 
     .devolutions-container__store--text {
-        font-size: 16px;
+        font-size: 12px;
         margin-top: 10px;
         color: #64656a;
+        font-family: $font-family-normal;
     }
 }
 
@@ -799,7 +807,7 @@ del {
 .description-and-detail {
     .title {
         font-family: $font-family-normal !important;
-        font-size: 16px !important;
+        font-size: 12px !important;
         font-weight: 400 !important;
     }
 }
