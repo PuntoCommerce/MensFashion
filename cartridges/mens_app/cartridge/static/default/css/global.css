@@ -22857,3 +22857,12 @@ button.close:focus {
     height: 250px;
   }
 }
+
+.video-home-hero-container{
+  padding: 20px 5.5rem !important;
+  background-color: #fff !important;
+}
+
+.carousel-title, .editorialRichText-component-container p{
+  font-family: "Avenir-Next" !important;
+}

@@ -680,7 +680,11 @@ header .main-menu {
     bottom: 5% !important;
     position: absolute !important; }
     .align-button-left a {
-      border: 1px solid #aaa !important; } }
+      border: 1px solid #aaa !important; } 
+    .ITBC-buttons.align-button-left{
+      bottom: 0 !important;
+    }
+    }
 
 @media (max-width: 543px) {
   .desk {
