@@ -21,7 +21,7 @@
         <isinclude template="product/components/details" />
     </div>
 
-    <div class="row product-attributes collapsible-xl">
+    <div class="row product-attributes" id="accordion-content">
         <isinclude template="product/components/attributes" />
     </div>
 

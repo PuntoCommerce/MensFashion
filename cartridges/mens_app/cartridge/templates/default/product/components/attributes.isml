@@ -3,7 +3,7 @@
         aria-controls="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
         ${Resource.msg('label.attributes', 'product', null)}
     </button>
-    <div class="value content mt-3 attributes-collapse-container" id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
+    <div class="value content accordion-description" id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
         <!--<isloop items="${product.attributes}" var="attrGroup">
             <isif condition="${attrGroup.ID !== 'mainAttributes'}">
                 <ul>
