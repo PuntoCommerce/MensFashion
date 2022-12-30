@@ -2,9 +2,10 @@
     var assets = require('*/cartridge/scripts/assets.js');
     assets.addJs('/js/pdpAddToCartUX.js');
     assets.addJs('/js/custom.js');
+    assets.addJs('/js/accordion.js');
 </isscript>
 <div class="custom-padding product-details-container h-100">
-    <div class="row justify-content-start h-100">
+    <div class="row justify-content-start h-100 pdp-content-container">
         <div class="col-lg-10 product-details-wrapper sticky-details">
 
             <!-- Product Name -->
@@ -27,18 +28,22 @@
                     <!-- Product Number -->
                     <div class="product-number">
                         <isinclude template="product/components/productNumber" />
+                        <div class="productID">
+                            <span>${Resource.msg('label.item.id', 'product', null)}</span>
+                            <span class="productID__id">${product.id}</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row d-xs-block d-md-none">
+            <iscomment> <div class="row d-xs-block d-md-none">
                 <div class="col">
                     <!-- Product Number -->
                     <div class="product-number">
                         <isinclude template="product/components/productNumber" />
                     </div>
                 </div>
-            </div>
+            </div> </iscomment>
             <div class="row prices-size-guide-container">
                 <!-- Prices -->
                 <div class="prices col-lg-12">

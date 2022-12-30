@@ -470,7 +470,7 @@ label.color ~ a:hover {
   text-decoration: none;
 }
 .description-and-detail {
-  margin-top: 1em;
+  margin-top: 0;
 }
 @media (max-width: 543.98px) {
   .description-and-detail {

@@ -3270,7 +3270,8 @@ header nav.homepage {
     padding: 0 15px; }
   .product-detail .mobile-fixed-details-wrapper {
     max-height: 52vh;
-    overflow: auto; }
+    overflow-y: auto;
+    overflow-x: hidden; }
   .product-detail .product-name {
     border: 0;
     color: #393939;
@@ -3552,12 +3553,17 @@ header nav.homepage {
   .add-to-cart-grid .buy-now {
     width: 201px; }
 
-#accordion-content.details {
-  background: red;
-  height: 0;
-  transition: all 0.2 linear; }
-  #accordion-content.details .content {
-    overflow: hidden; }
+#accordion-content.details,
+.devolutions-container {
+  overflow: hidden;
+  transition: all 0.2s linear; }
+  #accordion-content.details .content,
+  .devolutions-container .content {
+    margin-top: 12px;
+    height: 0;
+    transition: all 0.2s linear;
+    font-size: 12px;
+    font-family: "Avenir-Next"; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
@@ -3619,7 +3625,9 @@ header nav.homepage {
     position: sticky;
     top: 0; }
   .product-detail .product-details-wrapper {
-    height: 93vh; } }
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden; } }
 
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
@@ -3673,12 +3681,14 @@ header nav.homepage {
   display: flex;
   flex-direction: column; }
   .devolutions-container__store .devolutions-container__store--title {
-    font-size: 16px;
-    text-transform: uppercase; }
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "Avenir-Next"; }
   .devolutions-container__store .devolutions-container__store--text {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 10px;
-    color: #64656a; }
+    color: #64656a;
+    font-family: "Avenir-Next"; }
 
 .storeLinkPDP__offer {
   font-size: 16px; }
@@ -3740,7 +3750,7 @@ del {
 
 .description-and-detail .title {
   font-family: "Avenir-Next" !important;
-  font-size: 16px !important;
+  font-size: 12px !important;
   font-weight: 400 !important; }
 
 @media (max-width: 768px) {
