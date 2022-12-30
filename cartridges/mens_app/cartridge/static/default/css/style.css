@@ -1591,7 +1591,7 @@ ul {
 
 @media (max-width: 768.98px) {
   .summary__pricing {
-    padding: 0 !important; }
+    padding: 10px 0 !important; }
   .promo-carousel .value {
     font-size: 16px !important; } }
 
