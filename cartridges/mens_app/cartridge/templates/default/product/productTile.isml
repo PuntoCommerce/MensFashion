@@ -24,7 +24,7 @@
                 <isif condition="${product.promotions.length > 0}">
                     <div class="highlight-container">
                         <isloop items="${product.promotions}" var="promotion" status="loopstatus">
-                            <isif condition="${promotion === null}">
+                            <isif condition="${promotion.calloutMsg === null}">
                                 <div class="highlight-promotion">
 
                                 </div>
