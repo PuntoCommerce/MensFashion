@@ -196,8 +196,8 @@
                             </div>
                             <div
                                 class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-4">
-                                <span
-                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span>
+                                <a href="tel:800-0024-966"><span
+                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span></a>
                                 <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
                                 <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule2', 'checkout', null)}</span>
                             </div>
