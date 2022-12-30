@@ -22870,4 +22870,17 @@ button.close:focus {
   .container-custom-plp .product-tile .image-container {
     height: 250px;
   }
+<<<<<<< HEAD
+}
+
+.video-home-hero-container{
+  padding: 20px 5.5rem !important;
+  background-color: #fff !important;
+}
+
+.carousel-title, .editorialRichText-component-container p{
+  font-family: "Avenir-Next" !important;
+}
+=======
 } */
+>>>>>>> dcce6c6f482a98560c9302ba706af4a7910eb5bc
