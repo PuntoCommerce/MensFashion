@@ -163,6 +163,9 @@ let showMoreButton = $C(".grid-footer .show-more button");
 let changeSize = false;
 if (showMoreButton) {
   window.addEventListener("scroll", () => {
+    console.log(window.scrollY >=
+      document.body.clientHeight - document.body.clientHeight * 0.3 &&
+      !changeSize);
     if (
       window.scrollY >=
       document.body.clientHeight - document.body.clientHeight * 0.3 &&
@@ -174,7 +177,7 @@ if (showMoreButton) {
         changeSize = false;
         showMoreButton = $C(".grid-footer .show-more button");
         console.log(showMoreButton);
-      }, 3000);
+      }, 2000);
     }
   });
 }

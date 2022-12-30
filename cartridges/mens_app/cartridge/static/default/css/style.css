@@ -1238,7 +1238,8 @@ footer .socialMedia-paymentMethods {
   .navbar-header {
     display: flex;
     justify-content: flex-end;
-    align-items: center; } }
+    align-items: center;
+    height: 72px !important; } }
 
 /* Menu */
 .dropdown-menu {
@@ -3334,7 +3335,15 @@ header nav.homepage {
   .product-detail .product-number {
     color: #000;
     font-size: 12px;
-    padding: 0; }
+    padding: 0;
+    font-family: 'Avenir-Next';
+    border-bottom: 0.5px solid #000;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+    .product-detail .product-number .productID {
+      margin-right: 35px; }
   .product-detail .attribute label {
     font-size: 16px;
     min-height: 13px; }
@@ -3407,10 +3416,10 @@ header nav.homepage {
   .product-detail hr {
     border-top: 1px solid #f0f0f4; }
   .product-detail .description-and-detail .row {
-    margin: 15px 0; }
+    margin: 23px 0; }
   .product-detail .description-and-detail .title.btn {
     line-height: normal;
-    padding-left: 0; }
+    padding: 0; }
   .product-detail .description-and-detail .product-attributes ul {
     list-style-type: disc; }
   .product-detail .promotions {
@@ -3539,8 +3548,16 @@ header nav.homepage {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 18px; }
-  .add-to-cart-grid .btn-add-cart, .add-to-cart-grid .buy-now {
+  .add-to-cart-grid .btn-add-cart,
+  .add-to-cart-grid .buy-now {
     width: 201px; }
+
+#accordion-content.details {
+  background: red;
+  height: 0;
+  transition: all 0.2 linear; }
+  #accordion-content.details .content {
+    overflow: hidden; }
 
 @media only screen and (max-width: 768px) {
   .product-detail .image-details-container .carousel-inner {
@@ -3551,7 +3568,7 @@ header nav.homepage {
     .row-talla .select-talla {
       width: 100%; }
   .quantityPDP {
-    width: 40%; }
+    width: 100%; }
     .quantityPDP select {
       width: 100%; }
   .add-to-cart-grid {
@@ -3584,7 +3601,7 @@ header nav.homepage {
   .product-detail .product-name {
     margin: 0; }
   .product-detail .custom-padding {
-    padding: 0 30px; }
+    padding: 0 15px; }
   .product-detail .p-image-and-wrapper {
     max-height: 100vh;
     overflow: auto;
@@ -3607,10 +3624,6 @@ header nav.homepage {
 @media only screen and (min-width: 1200px) {
   .sizes-guide img {
     width: 15px; }
-  .product-detail .product-number {
-    font-family: 'Avenir-Next';
-    border-bottom: 0.5px solid #000;
-    margin-bottom: 0.5rem; }
   .modal-dialog.size-guide-modal .modal-content {
     width: 50vw; } }
 

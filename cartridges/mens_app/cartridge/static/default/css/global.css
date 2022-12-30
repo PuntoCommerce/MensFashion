@@ -3861,10 +3861,10 @@ input[type="submit"].btn-block {
   background-clip: padding-box;
   border: none;
   border-bottom-right-radius: 0.1875rem;
-  border-bottom-left-radius:0.5rem;
-  -webkit-box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
-  -moz-box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
-  box-shadow: 0px 6px 8px -1px rgba(98,101,105,1);
+  border-bottom-left-radius: 0.5rem;
+  -webkit-box-shadow: 0px 6px 8px -1px rgba(98, 101, 105, 1);
+  -moz-box-shadow: 0px 6px 8px -1px rgba(98, 101, 105, 1);
+  box-shadow: 0px 6px 8px -1px rgba(98, 101, 105, 1);
 }
 
 .dropdown-menu-left {
@@ -4543,7 +4543,7 @@ input[type="submit"].btn-block {
   transform: translateX(0.75rem);
 }
 
-.order-history-form-group{
+.order-history-form-group {
   padding: 0.375rem 3.75rem 0.375rem 3.75rem;
 }
 
@@ -6903,7 +6903,7 @@ a.close.disabled {
   border-radius: 0.1875rem;
 }
 
-.popover ul{
+.popover ul {
   display: flex;
   flex-direction: column !important;
 }
@@ -18038,7 +18038,10 @@ div.availability {
 }
 
 .attributesPdp {
-  display: flex;
+  display: -ms-inline-grid;
+  display: -moz-inline-grid;
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
   margin-bottom: 18px;
 }
 
@@ -18075,6 +18078,22 @@ div.availability {
   .choose-bonus-product-dialog .bonus-summary,
   .quick-view-dialog .bonus-summary {
     font-size: 0.625em;
+  }
+
+  .attributesPdp {
+    display: -ms-inline-grid;
+    display: -moz-inline-grid;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 18px;
+  }
+
+  .attributesPdp .row-talla {
+    grid-column: -5/-2;
+  }
+
+  .quantityPDP {
+    grid-column: -2/-1;
   }
 }
 
@@ -18204,15 +18223,15 @@ div.availability {
   text-transform: capitalize;
 }
 
-.footer-email-signup{
+.footer-email-signup {
   padding-left: 15px;
 }
 
-.lastItemFooter{
+.lastItemFooter {
   position: relative;
 }
 
-.footer-miniLogo{
+.footer-miniLogo {
   position: absolute;
   right: 13%;
   bottom: 42%;
@@ -18288,8 +18307,9 @@ div.availability {
   display: block;
 }
 
-.container-custom-plp .product-tile .image-container{
-  height: 425px;
+.container-custom-plp .product-tile .image-container {
+  /* height: 425px; */
+  height: auto;
 }
 
 .product-tile .image-container a .tile-image {
@@ -19651,7 +19671,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-azul-obscuro{
+.product-detail .attributes .swatch-circle-azul-obscuro {
   width: 18px;
   height: 18px;
   background: #252850;
@@ -19691,7 +19711,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-gris-medio{
+.product-detail .attributes .swatch-circle-gris-medio {
   width: 18px;
   height: 18px;
   background: #7c7c7c;
@@ -19731,7 +19751,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-vino-medio{
+.product-detail .attributes .swatch-circle-vino-medio {
   width: 18px;
   height: 18px;
   background: #722f37;
@@ -19771,7 +19791,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-cafe-claro{
+.product-detail .attributes .swatch-circle-cafe-claro {
   width: 18px;
   height: 18px;
   background: #a18262;
@@ -19812,7 +19832,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-azul-medio{
+.product-detail .attributes .swatch-circle-azul-medio {
   width: 18px;
   height: 18px;
   background: #0000CD;
@@ -19853,7 +19873,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rojo-medio{
+.product-detail .attributes .swatch-circle-rojo-medio {
   width: 18px;
   height: 18px;
   background: #a12312;
@@ -19894,7 +19914,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-beige-claro{
+.product-detail .attributes .swatch-circle-beige-claro {
   width: 18px;
   height: 18px;
   background: #f5f5dc;
@@ -19935,7 +19955,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rojo-cereza{
+.product-detail .attributes .swatch-circle-rojo-cereza {
   width: 18px;
   height: 18px;
   background: #c51d34;
@@ -19976,7 +19996,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-naranja-claro{
+.product-detail .attributes .swatch-circle-naranja-claro {
   width: 18px;
   height: 18px;
   background: #ffa420;
@@ -20017,7 +20037,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-gris-obscuro{
+.product-detail .attributes .swatch-circle-gris-obscuro {
   width: 18px;
   height: 18px;
   background: #4B4B4B;
@@ -20057,7 +20077,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-gris-obscuro{
+.product-detail .attributes .swatch-circle-gris-obscuro {
   width: 18px;
   height: 18px;
   background: #4B4B4B;
@@ -20098,7 +20118,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-verde-medio{
+.product-detail .attributes .swatch-circle-verde-medio {
   width: 18px;
   height: 18px;
   background: #3CB371;
@@ -20114,7 +20134,7 @@ div.availability {
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   width: 2.5em;
   height: 2.5em;
-  background: #FFFFE0 ;
+  background: #FFFFE0;
   border-radius: 1.25em;
   display: block;
   position: relative;
@@ -20128,9 +20148,9 @@ div.availability {
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   width: 1.38em;
   height: 1.38em;
-  background: #FFFFE0 ;
+  background: #FFFFE0;
   border-radius: 0.69em;
-  background-color: #FFFFE0 ;
+  background-color: #FFFFE0;
   display: block;
   position: relative;
 }
@@ -20139,10 +20159,10 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-amarillo-claro{
+.product-detail .attributes .swatch-circle-amarillo-claro {
   width: 18px;
   height: 18px;
-  background: #FFFFE0 ;
+  background: #FFFFE0;
   border-radius: 1.25em;
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   display: inline-block;
@@ -20180,7 +20200,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rosa-medio{
+.product-detail .attributes .swatch-circle-rosa-medio {
   width: 18px;
   height: 18px;
   background: #cd4b87;
@@ -20221,7 +20241,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-verde-claro{
+.product-detail .attributes .swatch-circle-verde-claro {
   width: 18px;
   height: 18px;
   background: #bdecb6;
@@ -20262,7 +20282,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-beige-medio{
+.product-detail .attributes .swatch-circle-beige-medio {
   width: 18px;
   height: 18px;
   background: #ffe5b4;
@@ -20303,7 +20323,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-cafe-obscuro{
+.product-detail .attributes .swatch-circle-cafe-obscuro {
   width: 18px;
   height: 18px;
   background: #3f2817;
@@ -20344,7 +20364,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-lila-medio{
+.product-detail .attributes .swatch-circle-lila-medio {
   width: 18px;
   height: 18px;
   background: #6c4675;
@@ -20385,7 +20405,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-lila-claro{
+.product-detail .attributes .swatch-circle-lila-claro {
   width: 18px;
   height: 18px;
   background: #d29bfd;
@@ -20426,7 +20446,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-naranja-medio{
+.product-detail .attributes .swatch-circle-naranja-medio {
   width: 18px;
   height: 18px;
   background: #ff8000;
@@ -20467,7 +20487,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-morado-obscuro{
+.product-detail .attributes .swatch-circle-morado-obscuro {
   width: 18px;
   height: 18px;
   background: #572364;
@@ -20479,7 +20499,7 @@ div.availability {
 }
 
 
-.swatch-circle-cafe-medio{
+.swatch-circle-cafe-medio {
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   width: 2.5em;
   height: 2.5em;
@@ -20493,7 +20513,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.swatch-filter-cafe-medio{
+.swatch-filter-cafe-medio {
   border: 0.063em solid rgba(0, 0, 0, 0.3);
   width: 1.38em;
   height: 1.38em;
@@ -20508,7 +20528,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-cafe-medio{
+.product-detail .attributes .swatch-circle-cafe-medio {
   width: 18px;
   height: 18px;
   background: #804000;
@@ -20549,7 +20569,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-gris-claro{
+.product-detail .attributes .swatch-circle-gris-claro {
   width: 18px;
   height: 18px;
   background: #EEEDED;
@@ -20590,7 +20610,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-shedron{
+.product-detail .attributes .swatch-circle-shedron {
   width: 18px;
   height: 18px;
   background: #d94f00;
@@ -20631,7 +20651,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-amarillo-medio{
+.product-detail .attributes .swatch-circle-amarillo-medio {
   width: 18px;
   height: 18px;
   background: #f8f32b;
@@ -20672,7 +20692,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-morado-medio{
+.product-detail .attributes .swatch-circle-morado-medio {
   width: 18px;
   height: 18px;
   background: #8c004b;
@@ -20713,7 +20733,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-amarillo-obscuro{
+.product-detail .attributes .swatch-circle-amarillo-obscuro {
   width: 18px;
   height: 18px;
   background: #9B870C;
@@ -20754,7 +20774,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rosa-obscuro{
+.product-detail .attributes .swatch-circle-rosa-obscuro {
   width: 18px;
   height: 18px;
   background: #E75480;
@@ -20795,7 +20815,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rojo-quemado{
+.product-detail .attributes .swatch-circle-rojo-quemado {
   width: 18px;
   height: 18px;
   background: #a23530;
@@ -20836,7 +20856,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-beige-obscuro{
+.product-detail .attributes .swatch-circle-beige-obscuro {
   width: 18px;
   height: 18px;
   background: #c3a98b;
@@ -20877,7 +20897,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-vino-obscuro{
+.product-detail .attributes .swatch-circle-vino-obscuro {
   width: 18px;
   height: 18px;
   background: #5e2129;
@@ -20918,7 +20938,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-rojo-carmesi{
+.product-detail .attributes .swatch-circle-rojo-carmesi {
   width: 18px;
   height: 18px;
   background: #ba3631;
@@ -20959,7 +20979,7 @@ div.availability {
   opacity: 0.5 !important;
 }
 
-.product-detail .attributes .swatch-circle-color-rojo-caramelo{
+.product-detail .attributes .swatch-circle-color-rojo-caramelo {
   width: 18px;
   height: 18px;
   background: #FF0800;
@@ -21349,7 +21369,7 @@ div.availability {
   font-weight: 500;
 }
 
-.container-custom-plp .summary__pricing .price .prices-container .sales-price .sales{
+.container-custom-plp .summary__pricing .price .prices-container .sales-price .sales {
   font-size: 16px;
 }
 
@@ -21742,7 +21762,7 @@ button.close:focus {
   padding: 0 20px;
 }
 
-.myAccount .card-header h2{
+.myAccount .card-header h2 {
   height: 43px;
   display: flex;
   align-items: center;
@@ -21750,14 +21770,14 @@ button.close:focus {
   font-size: 16px
 }
 
-.myAccount .card-header h2 ~ a{
+.myAccount .card-header h2~a {
   height: 43px;
   display: flex;
   align-items: center;
   margin: 0 !important;
 }
 
-.myAccount .card-header h2 ~ a img{
+.myAccount .card-header h2~a img {
   margin-bottom: 0 !important;
 }
 
@@ -22536,23 +22556,29 @@ button.close:focus {
 .checkout__order--product .price .strike-through {
   font-size: 12px;
 }
+
 .checkout__order--product .sales .value {
   font-size: 12px;
 }
+
 .checkout__order--product .strike-through span {
   font-size: 12px
 }
+
 .checkout__order--product .line-item-total-price-amount {
   font-size: 12px;
 }
+
 .checkout__order--product .qty-card-quantity-label {
   margin: 0;
 }
+
 .checkout__order--product .qty-card-quantity-count {
   font-size: 12px;
   margin-top: 3px;
 }
-.checkout__order--product .total-price-wrapper{
+
+.checkout__order--product .total-price-wrapper {
   display: block !important;
   text-align: left !important;
 }
@@ -22562,42 +22588,49 @@ button.close:focus {
   font-family: 'Avenir-Next';
 }
 
-.refinements .card, #pdp-items-container, .product-detail .product-details-container, .search-results, #filter-container .card-header{
+.refinements .card,
+#pdp-items-container,
+.product-detail .product-details-container,
+.search-results,
+#filter-container .card-header {
   background: #ffffff;
 }
 
-#productdetailpage .summary .tile-body{
+#productdetailpage .summary .tile-body {
   margin: 0 17%;
 }
 
-.lastItemFooter{
+.lastItemFooter {
   position: relative;
 }
 
-#footer-miniLogo .item{
+#footer-miniLogo .item {
   position: absolute;
   right: 10%;
   bottom: 40%;
 }
 
-.refinements .values.content{
+.refinements .values.content {
   margin-bottom: 0 !important;
 }
 
-.refinement{
+.refinement {
   margin-bottom: 10px !important;
 }
 
-.refinement span{
+.refinement span {
   font-size: 13px;
   font-family: 'Avenir-Next';
 }
 
-.card.shipping-section,.card.shipping-section .card-header, .data-checkout-stage .card, .data-checkout-stage .card-header{
+.card.shipping-section,
+.card.shipping-section .card-header,
+.data-checkout-stage .card,
+.data-checkout-stage .card-header {
   background-color: #f5f5f5;
 }
 
-.footer-item .title{
+.footer-item .title {
   font-family: 'Avenir-Bold' !important;
   padding-bottom: 12px;
 }
@@ -22608,46 +22641,47 @@ button.close:focus {
   font-size: 16px !important;
 }
 
-.card-header.clearfix.summary-edit-btn{
+.card-header.clearfix.summary-edit-btn {
   background-color: transparent;
 }
 
-.orderDetail .checkout__text{
+.orderDetail .checkout__text {
   padding: 0 15px;
 }
 
-.orderDetail .grand-total .checkout__text{
- font-family: 'Avenir-Bold' !important; 
+.orderDetail .grand-total .checkout__text {
+  font-family: 'Avenir-Bold' !important;
 }
 
-.dropdown .containerDropdown{ 
+.dropdown .containerDropdown {
   padding: 0 14.5;
 }
 
-.dropdown .containerDropdown .dropdown-menu-content{
+.dropdown .containerDropdown .dropdown-menu-content {
   width: 100%;
 }
 
-.dropdown .containerDropdown .dropdown-menu-content .menuCont{
+.dropdown .containerDropdown .dropdown-menu-content .menuCont {
   flex-wrap: wrap;
 }
 
-.dropdown .containerDropdown .dropdown-menu-content .menuCont .menuColCont{
+.dropdown .containerDropdown .dropdown-menu-content .menuCont .menuColCont {
   padding: 10px 2.5rem;
   width: 30%;
 }
 
-.pdpBottom{
+.pdpBottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.add-to-cart-actions, .add-to-cart-and-checkout{
+.add-to-cart-actions,
+.add-to-cart-and-checkout {
   width: 48%;
 }
 
-.description-and-detail{
+.description-and-detail {
   width: 100%;
 }
 
@@ -22694,25 +22728,27 @@ button.close:focus {
   .summary__pricing .price .prices-container .sales-price .sales {
     font-size: 16px;
   }
-  .orderDetail{
+
+  .orderDetail {
     margin: 0 20px;
   }
 
-  .socialMediaDesk{
+  .socialMediaDesk {
     display: none !important;
   }
 
-  .footer-email-signup{
+  .footer-email-signup {
     padding: 15px 25px 0 15px;
   }
 
-  .copyright .copyright-container span{
+  .copyright .copyright-container span {
     display: block;
     padding: 0;
     font-size: 10px;
   }
 
-  .add-to-cart-actions, .add-to-cart-and-checkout{
+  .add-to-cart-actions,
+  .add-to-cart-and-checkout {
     width: 100%;
   }
 }
@@ -22777,10 +22813,11 @@ button.close:focus {
 }
 
 @media (max-width: 1590px) {
-  .product-detail .cart-and-ipay button{
+  .product-detail .cart-and-ipay button {
     font-size: 14px;
   }
 }
+
 @media (max-width: 1200px) {
   .containerDropdown {
     padding: 0 6rem;
@@ -22794,29 +22831,29 @@ button.close:focus {
 }
 
 @media (max-width: 1024px) {
-  .container-custom-plp .product-tile .image-container{
+  .container-custom-plp .product-tile .image-container {
     height: 300px;
   }
 }
 
 @media (max-width: 768px) {
-  .container-custom-plp .product-tile .image-container{
+  .container-custom-plp .product-tile .image-container {
     height: fit-content;
   }
 
-  .container-custom-plp .product-tile.summary .tile-body{
+  .container-custom-plp .product-tile.summary .tile-body {
     padding-top: 30px;
   }
 }
 
 @media (max-width: 425px) {
-  .container-custom-plp .product-tile .image-container{
+  .container-custom-plp .product-tile .image-container {
     height: 285px;
   }
 }
 
 @media (max-width: 375px) {
-  .container-custom-plp .product-tile .image-container{
+  .container-custom-plp .product-tile .image-container {
     height: 250px;
   }
 }

@@ -150,7 +150,18 @@
         color: #000;
         font-size: 12px;
         padding: 0;
+        font-family: 'Avenir-Next';
+        border-bottom: 0.5px solid #000;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        .productID{
+            margin-right: 35px;
+        }
     }
+
 
     & .attribute label {
         font-size: 16px;
@@ -262,12 +273,12 @@
 
     & .description-and-detail {
         & .row {
-            margin: 15px 0;
+            margin: 23px 0;
         }
 
         & .title.btn {
             line-height: normal;
-            padding-left: 0;
+            padding: 0;
         }
 
         & .product-attributes ul {
@@ -452,14 +463,14 @@
     }
 }
 
-.select-talla{
+.select-talla {
     width: 201px;
     height: 30px;
     font-size: 13px;
     background: none !important;
 }
 
-.quantity-select{
+.quantity-select {
     width: 152px;
     height: 30px;
     font-size: 13px;
@@ -467,20 +478,32 @@
     margin-right: 18px;
 }
 
-.row-talla{
+.row-talla {
     width: fit-content;
     margin-right: 18px;
 }
 
-.add-to-cart-grid{
+.add-to-cart-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 18px;
 
-    .btn-add-cart, .buy-now{
+    .btn-add-cart,
+    .buy-now {
         width: 201px;
     }
 }
+
+#accordion-content.details {
+    background: red;
+    height: 0;
+    transition: all 0.2 linear;
+
+    .content {
+        overflow: hidden;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
     .product-detail {
@@ -492,34 +515,34 @@
         }
     }
 
-    .row-talla{
+    .row-talla {
         width: 100%;
 
-        .select-talla{
+        .select-talla {
             width: 100%;
         }
     }
 
-    .quantityPDP{
-        width: 40%;
+    .quantityPDP {
+        width: 100%;
 
-        select{
+        select {
             width: 100%;
         }
     }
 
-    .add-to-cart-grid{
+    .add-to-cart-grid {
         width: 100%;
         display: block;
 
-        .cart-and-ipay{
+        .cart-and-ipay {
             margin: auto;
             width: 100%;
 
-            .col-sm-12{
+            .col-sm-12 {
                 padding: 0;
 
-                button{
+                button {
                     width: 100%;
                 }
             }
@@ -566,7 +589,7 @@
         }
 
         & .custom-padding {
-            padding: 0 30px;
+            padding: 0 15px;
         }
 
         & .p-image-and-wrapper {
@@ -602,14 +625,6 @@
     .sizes-guide {
         & img {
             width: 15px;
-        }
-    }
-
-    .product-detail {
-        & .product-number {
-            font-family: 'Avenir-Next';
-            border-bottom: 0.5px solid #000;
-            margin-bottom: 0.5rem;
         }
     }
 
