@@ -1,18 +1,26 @@
 <isset name="product" value="${typeof product === 'undefined' || empty(product) ? pdict.product : product}"
     scope="page" />
 <isif condition="${product.promotions}">
-    <isloop items="${product.promotions}" var="promotion" status="promdet">
-        <iscomment> <span class="promotion-item">${promotion.name.replace('de descuento', '')}</span> </iscomment>
-        <iscomment> <div class="row collapsible-xl">
-            <div class="col-12">
-                <button class="title callout btn text-left btn-block" aria-expanded="false"
-                    aria-controls="collapsible-promotion-details-${promdet.index}">
-                    <isprint value="${promotion.calloutMsg}" encoding="off" />
-                </button>
+    <div class="promotion-item-container">
+        <isloop items="${product.promotions}" var="promotion" status="promdet">
+        <isif condition="${promotion.name === null}">
+
+        <iselse/>
+            <span class="promotion-item">${promotion.name.replace('de descuento', '')}</span>
+        </isif>
+        <iscomment>
+            <div class="row collapsible-xl">
+                <div class="col-12">
+                    <button class="title callout btn text-left btn-block" aria-expanded="false"
+                        aria-controls="collapsible-promotion-details-${promdet.index}">
+                        <isprint value="${promotion.calloutMsg}" encoding="off" />
+                    </button>
+                </div>
+                <div class="col-12 value content" id="collapsible-promotion-details-${promdet.index}">
+                    <isprint value="${promotion.details}" encoding="off" />
+                </div>
             </div>
-            <div class="col-12 value content" id="collapsible-promotion-details-${promdet.index}">
-                <isprint value="${promotion.details}" encoding="off" />
-            </div>
-        </div> </iscomment>
+        </iscomment>
     </isloop>
+    </div>
 </isif>
