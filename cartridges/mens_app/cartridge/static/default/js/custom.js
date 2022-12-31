@@ -176,8 +176,8 @@ if (showMoreButton) {
       setTimeout(() => {
         changeSize = false;
         showMoreButton = $C(".grid-footer .show-more button");
-        console.log(showMoreButton);
-      }, 2000);
+        // console.log(showMoreButton);
+      }, 1000);
     }
   });
 }
