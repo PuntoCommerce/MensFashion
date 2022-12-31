@@ -38,7 +38,7 @@
     <iselse/>
         <iscontentasset aid="top-banner-promo" />
     </isif>
-    
+
     ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
     <isinclude template="/components/header/pdStorePageHeader" />
@@ -51,6 +51,8 @@
     </div>
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
+    <div class="add-item-pdp-alert"></div>
+
     <iscontentasset aid="cookie_hint" />
     <!--[if lt IE 10]>
             <isinclude sf-toolkit="off" template="/common/scripts" />

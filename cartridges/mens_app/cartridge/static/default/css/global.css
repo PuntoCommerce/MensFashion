@@ -22692,7 +22692,7 @@ button.close:focus {
 
 .add-to-cart-actions,
 .add-to-cart-and-checkout {
-  width: 48%;
+  width: 100%;
 }
 
 .description-and-detail {
