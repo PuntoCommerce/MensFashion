@@ -3327,7 +3327,7 @@ header nav.homepage {
         color: rgba(68, 68, 68, 0.5);
         font-weight: 400; }
       .product-detail .prices .price .sales {
-        font-size: 30px; }
+        font-size: 16px; }
     .product-detail .prices .range {
       display: flex;
       flex-direction: row;
@@ -3406,7 +3406,7 @@ header nav.homepage {
     color: #393939;
     font-size: 30px; }
   .product-detail .price .sales .value {
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Avenir-Next";
     font-weight: 500; }
   .product-detail .product-number-rating {
@@ -3781,7 +3781,7 @@ header nav.homepage {
     margin-bottom: 0 !important;
     margin-right: 18px; }
     .prices .price .prices-container .stikePriceCont span {
-      font-size: 20px !important; }
+      font-size: 16px !important; }
 
 .prices .promotion-item-container {
   display: flex;
