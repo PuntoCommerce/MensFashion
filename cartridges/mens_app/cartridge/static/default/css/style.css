@@ -3625,7 +3625,7 @@ header nav.homepage {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -1; }
+  z-index: -2; }
   .add-item-pdp-alert__card {
     display: flex;
     flex-direction: column;
