@@ -22410,7 +22410,7 @@ button.close:focus {
 }
 
 .carousel-inner .product-tile .tile-image {
-  height: 485px;
+  height: auto;
   object-fit: contain;
   border: 1px solid #e5e2e3;
 }
@@ -22879,4 +22879,5 @@ button.close:focus {
 
 .title-carousel-00a8d357039a7493c7ce202d31{
   font-family: "Avenir-Next" !important;
+  font-size: 24px;
 }

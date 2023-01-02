@@ -234,6 +234,7 @@
             font-family: $font-family-normal;
             font-weight: bold;
             pointer-events: none;
+            font-size: 12px;
         }
 
         & button {
@@ -243,6 +244,7 @@
 
             font-family: $font-family-normal;
             font-weight: bold;
+            font-size: 12px;
         }
     }
 
@@ -901,7 +903,7 @@ del {
 
 .description-and-detail {
     .title {
-        font-family: $font-family-normal !important;
+        font-family: $font-family-bold-2 !important;
         font-size: 12px !important;
         font-weight: 400 !important;
     }
@@ -919,7 +921,7 @@ del {
 
     .description-and-detail {
         .title {
-            font-family: $font-family-normal !important;
+            font-family: $font-family-bold-2 !important;
             font-size: 16px !important;
         }
     }
