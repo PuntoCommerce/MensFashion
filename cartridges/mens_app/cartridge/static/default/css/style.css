@@ -3390,7 +3390,8 @@ header nav.homepage {
       border: 1px solid #000 !important;
       font-family: "Avenir-Next";
       font-weight: bold;
-      pointer-events: none; }
+      pointer-events: none;
+      font-size: 12px; }
       .product-detail .cart-and-ipay button:disabled:nth-child(1) {
         display: block;
         pointer-events: none;
@@ -3399,7 +3400,8 @@ header nav.homepage {
         color: #000; }
     .product-detail .cart-and-ipay button {
       font-family: "Avenir-Next";
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 12px; }
       .product-detail .cart-and-ipay button:nth-child(1) {
         display: none; }
   .product-detail .prices-add-to-cart-actions.bundle-footer .price span {
@@ -3825,7 +3827,7 @@ del {
   font-family: "Avenir-Next"; }
 
 .description-and-detail .title {
-  font-family: "Avenir-Next" !important;
+  font-family: "Avenir-bold" !important;
   font-size: 12px !important;
   font-weight: 400 !important; }
 
@@ -3836,7 +3838,7 @@ del {
   .product-details-wrapper .attributes {
     margin-top: 0 !important; }
   .description-and-detail .title {
-    font-family: "Avenir-Next" !important;
+    font-family: "Avenir-bold" !important;
     font-size: 16px !important; }
   #carrousel-slide-images-container .carousel-control-prev {
     margin-left: 40px;
