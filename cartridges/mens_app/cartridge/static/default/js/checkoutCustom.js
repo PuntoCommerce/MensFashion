@@ -1,7 +1,7 @@
 function setStores(lat, lng, search, data) {
   const url = search.getAttribute("data-url");
 
-  fetch(`${url}${lat && lng ? `&lat=${lat}&long=${lng}` : ""}`)
+  fetch(`${url}${lat && lng ? `&radius=50&lat=${lat}&long=${lng}` : ""}`)
     .then((res) => res.json())
     .then((json) => (data.innerHTML = json.storesResultsHtml));
 }
