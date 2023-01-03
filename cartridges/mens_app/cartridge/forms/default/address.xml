@@ -12,7 +12,7 @@
     <field formid="address2" label="label.input.address2" type="string" mandatory="true" binding="address2"
            missing-error="address.address2.missing" max-length="50" range-error="error.message.50orless"/>
     <field formid="city" label="label.input.city" type="string" mandatory="true" binding="city" min-length="2"
-           max-length="50" missing-error="address.city.missing" range-error="error.message.between2and50"/>
+           max-length="40" missing-error="address.city.missing" range-error="error.message.between2and50"/>
 
     <!--  postal code -->
     <field formid="postalCode" label="label.input.zipcode" type="string" mandatory="true" min-length="5" max-length="10"
