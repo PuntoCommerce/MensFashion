@@ -122,3 +122,17 @@ function hideAlertItem() {
   alertContainer.style.background = 'none'
   body.classList.remove('scroll-none');
 }
+
+const paymentOptions = document.querySelectorAll('.payment-options .nav-item');
+
+paymentOptions.forEach((item, index) => {
+  console.log(item);
+  const buttonPayment = document.querySelector('.submit-payment');
+
+  item.addEventListener('click', (e) => {
+
+    setTimeout(() => {
+      e.path[0].classList.contains('active') && e.path[0].classList.contains('openpay-tab')? buttonPayment.classList.remove('d-none') : '';
+    }, 200);
+  })
+})

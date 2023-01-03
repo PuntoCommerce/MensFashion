@@ -481,6 +481,12 @@
   padding-left: 15vh;
 }
 
+.check-and-label-container,
+.images-paymentCards-container,
+.check-and-label-container ~ img{
+  pointer-events: none;
+}
+
 @media (max-width: 991px) {
   .checkout-promotion {
     margin-left: 80%;
