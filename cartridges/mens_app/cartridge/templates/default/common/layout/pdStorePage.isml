@@ -14,6 +14,7 @@
 
     assets.addCss('/css/style.css');
     assets.addJs('/js/custom.js');
+    assets.addJs('/js/accordion.js');
     assets.addJs('/js/productTile.js');
     
 </isscript>
@@ -52,6 +53,25 @@
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
     <div class="add-item-pdp-alert"></div>
+    <div class="${pdict.page.ID}-alert-register d-none">
+        <div class="homepage-alert-register__card">
+            <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+
+            <div class="homepage-alert-register__card__info">
+                <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
+                <span class="homepage-alert-register__card__info__text">
+                    Estamos estrenando nuevo sitio, rápido
+                    y confiable. Por seguridad te invitamos
+                    a crear una nueva cuenta para empezar
+                    a disfrutar de beneficios exclusivos.
+                </span>
+                <a href="#" onclick="redirectLogin()" class="homepage-alert-register__card__info__link">CREAR CUENTA</a>
+            </div>
+            <div class="homepage-alert-register__card__image">
+                <img src="${URLUtils.staticURL('images/alert-home-image.png')}" alt="homeAlert">
+            </div>
+        </div>
+    </div>
 
     <iscontentasset aid="cookie_hint" />
     <!--[if lt IE 10]>

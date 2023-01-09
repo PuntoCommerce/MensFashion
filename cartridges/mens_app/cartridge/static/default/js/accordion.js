@@ -126,7 +126,6 @@ function hideAlertItem() {
 const paymentOptions = document.querySelectorAll('.payment-options .nav-item');
 
 paymentOptions.forEach((item, index) => {
-  console.log(item);
   const buttonPayment = document.querySelector('.submit-payment');
 
   item.addEventListener('click', (e) => {
@@ -136,3 +135,21 @@ paymentOptions.forEach((item, index) => {
     }, 200);
   })
 })
+
+// function nextStep(e) {
+//   const buttonShipping = e.children[0].children[1].disabled;
+//   const labelURL = e.children[0].children[0].dataset.href;
+
+//   buttonShipping === true ? window.location.replace(labelURL) : null;
+// }
+
+function redirectLogin() {
+  url = document.getElementById('redirectlogin').dataset.href;
+  sessionStorage.setItem('alertRegister', true)
+
+  window.location.replace(url)
+}
+
+console.log(sessionStorage.getItem('alertRegister'));
+
+if (sessionStorage.getItem('alertRegister') === null) document.querySelector('.homepage-alert-register').classList.remove('d-none');
