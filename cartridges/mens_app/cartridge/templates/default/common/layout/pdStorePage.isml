@@ -53,19 +53,27 @@
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
     <div class="add-item-pdp-alert"></div>
-    <div class="${pdict.page.ID}-alert-register d-none">
+    <div id="${pdict.page.ID}-alert" class="${pdict.page.ID}-alert-register d-none">
         <div class="homepage-alert-register__card">
+            <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
             <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
 
             <div class="homepage-alert-register__card__info">
                 <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
                 <span class="homepage-alert-register__card__info__text">
-                    Estamos estrenando nuevo sitio, rápido
-                    y confiable. Por seguridad te invitamos
-                    a crear una nueva cuenta para empezar
-                    a disfrutar de beneficios exclusivos.
+                    ¡Tenemos una buena noticia!
+                    Estamos estrenando un nuevo sitio, el cual es más rápido y fácil para comprar.
+                    Te invitamos a que te vuelvas a registrar para poder seguir realizando las compras de tus productos
+                    favoritos y recibir $200 en tu primera compra en línea.
                 </span>
-                <a href="#" onclick="redirectLogin()" class="homepage-alert-register__card__info__link">CREAR CUENTA</a>
+                <span class="homepage-alert-register__card__info__text--small">
+                    *Válido únicamente en tu primera compra, compra mínima de $1,000. Vigencia 30 días a partir de
+                    recibido, consulta términos y condiciones.
+                </span>
+                <a href="#" onclick="homeRedirectLogin()" class="homepage-alert-register__card__info__link">CREAR
+                    CUENTA</a>
             </div>
             <div class="homepage-alert-register__card__image">
                 <img src="${URLUtils.staticURL('images/alert-home-image.png')}" alt="homeAlert">

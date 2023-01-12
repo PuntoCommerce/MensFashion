@@ -717,7 +717,7 @@ header {
   &__card {
     display: flex;
     align-items: center;
-    height: 366px;
+    height: 417px;
     border-radius: 5px;
     background: #fff;
 
@@ -726,7 +726,7 @@ header {
       text-align: center;
       display: flex;
       flex-direction: column;
-      padding: 0 28px;
+      padding: 0px 28px;
       border-radius: 5px 0 0 5px;
       background: #fff;
 
@@ -740,11 +740,17 @@ header {
         font-family: $font-family-normal;
         font-size: 18px;
         margin-top: 30px;
+
+        &--small{
+          font-size: 10px;
+          line-height: 10px;
+          margin-top: 18px;
+        }
       }
 
       &__link {
         background: #3E403D;
-        margin-top: 30px;
+        margin-top: 18px;
         height: 36px;
         color: #fff;
         display: flex;
@@ -763,11 +769,23 @@ header {
 
     &__image {
       img {
+        height: 417px;
         border-radius: 0px 5px 5px 0;
       }
     }
+
+    &__close {
+      position: absolute;
+      transform: translate(790px, -180px);
+      background: none;
+      border: none;
+      color: #fff;
+      height: 40px;
+      width: 40px;
+    }
   }
 }
+
 
 @media (max-width: 1324px) {
   .promo-carousel__wrapper-countdown {
@@ -903,6 +921,8 @@ header {
         height: 200px;
 
         img {
+          height: auto;
+          width: 392px;
           border-radius: 5px 5px 0 0;
         }
       }
