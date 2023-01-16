@@ -1,6 +1,6 @@
 <isif condition="${refinement.displayName.toLowerCase() === 'talla'}">
     <li class="col-sm-4 col-md-10 check-custom ${!refinementValue.selectable ? 'disabled' : ''}">
-        <button data-href="${refinementValue.url}" class="w-100 ${!refinementValue.selectable ? 'disabled' : ''}" <isif
+        <button onclick="categoryBreadcums(this)" data-href="${refinementValue.url}" class="w-100 ${!refinementValue.selectable ? 'disabled' : ''}" <isif
             condition="${!refinementValue.selectable}">disabled</isif>>
             <iscomment>Label</iscomment>
             <span class=" <isif condition=" ${refinementValue.selected && refinementValue.selectable}">selected</isif>"
@@ -17,7 +17,7 @@
     </li>
 <iselse/>
     <li class="col-sm-4 col-md-12 ${!refinementValue.selectable ? 'disabled' : ''}">
-        <button data-href="${refinementValue.url}" class="${!refinementValue.selectable ? 'disabled' : ''}" <isif
+        <button onclick="categoryBreadcums(this)" data-href="${refinementValue.url}" class="${!refinementValue.selectable ? 'disabled' : ''}" <isif
             condition="${!refinementValue.selectable}">disabled</isif>>
             <iscomment>Checkbox</iscomment>
             <isif condition="${refinementValue.selected && refinementValue.selectable}">

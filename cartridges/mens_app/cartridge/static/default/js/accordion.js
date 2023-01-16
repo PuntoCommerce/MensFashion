@@ -44,19 +44,19 @@ function showAlertItemCart(e) {
 
   colors.forEach((item, index) => {
     const colorSwatch = item.querySelector('span');
-    colorSwatch.classList.contains('selected') ? 
-    messages.success = 'seleccionado' : 
-    messages.error = 'color';
+    colorSwatch.classList.contains('selected') ?
+      messages.success = 'seleccionado' :
+      messages.error = 'color';
   })
 
   if (select === 'talla' && messages.error) {
     message = 'Tienes que seleccionar un color y una talla.'
-  }else if(select = 'talla' && messages.success){
+  } else if (select = 'talla' && messages.success) {
     message = 'Tienes que seleccionar una talla'
-  }else if(!select && !messages.success){
+  } else if (!select && !messages.success) {
     message = 'Tienes que seleccionar un color'
   }
-  
+
   if (button === true) {
     $('.add-item-pdp-alert').append(`
       <div class='add-item-pdp-alert__card'>
@@ -84,19 +84,19 @@ function showAlertItemBuy(e) {
 
   colors.forEach((item, index) => {
     const colorSwatch = item.querySelector('span');
-    colorSwatch.classList.contains('selected') ? 
-    messages.success = 'seleccionado' : 
-    messages.error = 'color';
+    colorSwatch.classList.contains('selected') ?
+      messages.success = 'seleccionado' :
+      messages.error = 'color';
   })
 
   if (select === 'talla' && messages.error) {
     message = 'Tienes que seleccionar un color y una talla.'
-  }else if(select = 'talla' && messages.success){
+  } else if (select = 'talla' && messages.success) {
     message = 'Tienes que seleccionar una talla'
-  }else if(!select && !messages.success){
+  } else if (!select && !messages.success) {
     message = 'Tienes que seleccionar un color'
   }
-  
+
   if (button === true) {
     $('.add-item-pdp-alert').append(`
       <div class='add-item-pdp-alert__card'>
@@ -131,7 +131,7 @@ paymentOptions.forEach((item, index) => {
   item.addEventListener('click', (e) => {
 
     setTimeout(() => {
-      e.path[0].classList.contains('active') && e.path[0].classList.contains('openpay-tab')? buttonPayment.classList.remove('d-none') : '';
+      e.path[0].classList.contains('active') && e.path[0].classList.contains('openpay-tab') ? buttonPayment.classList.remove('d-none') : '';
     }, 200);
   })
 })
@@ -143,13 +143,52 @@ paymentOptions.forEach((item, index) => {
 //   buttonShipping === true ? window.location.replace(labelURL) : null;
 // }
 
-function redirectLogin() {
+function homeRedirectLogin() {
   url = document.getElementById('redirectlogin').dataset.href;
-  sessionStorage.setItem('alertRegister', true)
+  sessionStorage.setItem('homeAlertRegister', true)
 
   window.location.replace(url)
 }
 
-console.log(sessionStorage.getItem('alertRegister'));
+function checkoutRedirectLogin() {
+  sessionStorage.setItem('checkoutAlertRegister', true)
+  document.getElementById('checkout-alert').classList.add('d-none')
+}
 
-if (sessionStorage.getItem('alertRegister') === null) document.querySelector('.homepage-alert-register').classList.remove('d-none');
+function closeAlertPromotion() {
+  const checkout = document.getElementById('checkout-alert');
+  const home = document.getElementById('homepage-alert');
+
+  if (checkout) {
+    checkout.classList.add('d-none')
+    sessionStorage.setItem('checkoutAlertRegister', true)
+  };
+  if (home) {
+    home.classList.add('d-none')
+    sessionStorage.setItem('homeAlertRegister', true)
+  };
+}
+
+if (sessionStorage.getItem('homeAlertRegister') === null && document.getElementById('homepage-alert')) document.getElementById('homepage-alert').classList.remove('d-none');
+if (sessionStorage.getItem('checkoutAlertRegister') === null && document.getElementById('checkout-alert')) document.getElementById('checkout-alert').classList.remove('d-none');
+
+function categoryBreadcums(e) {
+
+
+  setTimeout(() => {
+    const ul = document.querySelectorAll('.values.content.breadcums');
+    ul.forEach(item => {
+      var itemSelected = item.querySelectorAll('li button span');
+
+      itemSelected.forEach((select) => {
+
+        select.classList.contains('selected') ? $('.plp-tools__item--breadcrums').append(`
+         <li>
+          <a class='breadcums-subcategories'>${select.innerHTML}</a>
+         </li>
+        `) 
+        : '';
+      })
+    })
+  }, 1000);
+}
