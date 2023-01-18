@@ -508,6 +508,7 @@
         font-family: 'FontAwesome';
         align-items: center;
         justify-content: center;
+        pointer-events: none;
     }
 }
 
@@ -522,6 +523,7 @@
         font-family: 'FontAwesome';
         align-items: center;
         justify-content: center;
+        pointer-events: none;
     }
 }
 
@@ -538,6 +540,7 @@
         transition: all 0.2s linear;
         font-size: 12px;
         font-family: $font-family-normal;
+        padding: 0;
     }
 }
 
@@ -700,7 +703,7 @@
         }
 
         & .product-details-wrapper {
-            height: 65vh;
+            height: 70vh;
             overflow-y: scroll;
             overflow-x: hidden;
 

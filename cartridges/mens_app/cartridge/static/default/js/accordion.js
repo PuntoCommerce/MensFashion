@@ -173,8 +173,6 @@ if (sessionStorage.getItem('homeAlertRegister') === null && document.getElementB
 if (sessionStorage.getItem('checkoutAlertRegister') === null && document.getElementById('checkout-alert')) document.getElementById('checkout-alert').classList.remove('d-none');
 
 function categoryBreadcums(e) {
-
-
   setTimeout(() => {
     const ul = document.querySelectorAll('.values.content.breadcums');
     ul.forEach(item => {
@@ -186,9 +184,22 @@ function categoryBreadcums(e) {
          <li>
           <a class='breadcums-subcategories'>${select.innerHTML}</a>
          </li>
-        `) 
-        : '';
+        `)
+          : '';
       })
     })
   }, 1000);
 }
+
+window.addEventListener('change', () => {
+  setTimeout(() => {
+    const productId = document.querySelector('.productID .productID__id');
+    const SKU = document.querySelector('.productSku .product-id');
+
+    if (productId.innerText != SKU.innerText){
+      $('.productSku').removeClass('d-none')
+    };
+
+  }, 500);
+})
+
