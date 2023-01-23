@@ -22713,6 +22713,10 @@ button.close:focus {
   padding: 0 !important
 }
 
+#checkout-main .coupon-price-adjustment{
+  display: none !important;
+}
+
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important;

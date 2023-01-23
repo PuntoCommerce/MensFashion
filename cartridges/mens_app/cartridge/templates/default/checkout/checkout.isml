@@ -178,7 +178,7 @@
                                 <div class="checkout__order--divider mb-4"></div>
                                               
                                 <isinclude template="cart/cartPromoCode" />
-                                <div class="coupons-and-promos d-none">
+                                <div class="coupons-and-promos">
                                     <isinclude template="cart/cartCouponDisplay" />
                                 </div>
                             </div>
