@@ -76,7 +76,7 @@
                             <div class="checkout__totals checkout__text">
                                 
                                 <isinclude template="cart/cartPromoCode" />
-                                <div class="coupons-and-promos">
+                                <div class="coupons-and-promos d-none">
                                     <isinclude template="cart/cartCouponDisplay" />
                                 </div>
                                 <iscomment> <div class="row">
