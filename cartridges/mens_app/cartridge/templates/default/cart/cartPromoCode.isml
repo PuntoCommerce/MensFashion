@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col-12">
-        <form action="${pdict.actionUrls.submitCouponCodeUrl}" class="promo-code-form" method="GET" name="promo-code-form">
+        <form action="${URLUtils.url('Cart-AddCoupon')}" class="promo-code-form" method="GET" name="promo-code-form">
             <div class="form-group">
                 <label class="checkout__text checkout__text--promotion" for="couponCode">${Resource.msg('label.promo.code','cart',null)}</label>
                 <div class="row mt-3 mb-3">

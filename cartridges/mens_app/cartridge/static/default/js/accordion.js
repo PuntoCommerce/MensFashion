@@ -191,15 +191,18 @@ function categoryBreadcums(e) {
   }, 1000);
 }
 
-window.addEventListener('change', () => {
-  setTimeout(() => {
-    const productId = document.querySelector('.productID .productID__id');
-    const SKU = document.querySelector('.productSku .product-id');
+const productId = document.querySelector('.productID .productID__id');
 
-    if (productId.innerText != SKU.innerText){
-      $('.productSku').removeClass('d-none')
-    };
+if (productId) {
+  window.addEventListener('change', () => {
+    setTimeout(() => {
+      const productId = document.querySelector('.productID .productID__id');
+      const SKU = document.querySelector('.productSku .product-id');
 
-  }, 500);
-})
+      if (productId.innerText != SKU.innerText) {
+        $('.productSku').removeClass('d-none')
+      };
+    }, 500);
+  })
+}
 

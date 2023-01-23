@@ -155,7 +155,7 @@
                     <!-- Order Totals, Details and Summary -->
                     <!----------------------------------------------------------------------------------->
                     <div class="col-12 col-lg-5">
-                        <div class="card checkout__order d-none d-lg-block mt-lg-4 mb-5">
+                        <div class="card checkout__order mt-lg-4 mb-5">
                             <div class="card-header d-flex justify-content-center align-items-center">
                                 <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}
                                 </h2>
