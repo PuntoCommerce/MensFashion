@@ -1,145 +1,134 @@
-<iscontent type="text/html" charset="UTF-8" compact="true" />
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 
 <head>
-    <meta name="x-apple-disable-message-reformatting" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
-        body {
-            margin: 0 auto;
-            max-width: 70%;
-        }
 
-        .email-container__header {
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px 0;
-        }
-
-        .email-container__header img {
-            width: 300px;
-            margin: auto;
-        }
-
-        .email-container__image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .email-container__image img {
-            width: 100%;
-        }
-
-        .email-container__info {
-            width: 600px;
-            text-align: center;
-            margin: 18px auto;
-            font-size: 20px;
-            font-family: 'Avenir';
-        }
-
-        .email-container__info .email-container__info--second{
-            margin-top: 20px;
-        }
-
-        .email-container__footer {
-            background: #000;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .email-container__footer--white {
-            color: #fff;
-            font-family: 'avenir';
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .email-container__footer--link{
-            color: #fff;
-            text-decoration: none;
-            font-family: 'avenir';
-            font-size: 12px;
-        }
-
-        .ii a[href]{
-            color: #fff;
-        }
-
-        .email-container__footer__redes {
-            color: #fff;
-            font-family: 'avenir';
-            margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .email-container__footer__redes__icons {
-        }
-
-        .email-container__footer__redes__icons img {
-            margin: 0 5px;
-        }
-
-        @media (max-width: 865px){
-            .email-container__info {
-                width: 90%;
-            }
-        }
     </style>
+    <!-- end:processor:head -->
 </head>
 
-<body>
-    <div class="email-container">
-        <header class="email-container__header">
-            <img src="${URLUtils.httpsStatic('/images/favicons/mens_logo_white.png')}" alt="logo">
-        </header>
-        <section class="email-container__image">
-            <img src="${URLUtils.httpsStatic('/images/favicons/mens_register.jpeg')}" alt="image">
-        </section>
-        <section class="email-container__info">
-            <div class="email-container__info--first">
-                <span>¡Bienvenido a lo último de la moda para hombre! </span>
-            </div>
-            <div class="email-container__info--second">
-                <span>Ahora estarás enterado de las últimas tendencias, de los mejores consejos de moda y claro, de las
-                promociones exclusivas que tenemos para ti.</span>
-            </div>
-        </section>
-        <footer class="email-container__footer">
-            <div>
-                <span class="email-container__footer--white">Atencion a clientes</span>
-            </div>
-            <div class="ii">
-                <a class="email-container__footer--link" href="tel:8000024966">800 0024 966</a>
-            </div>
-            <div class="ii">
-                <a class="email-container__footer--link" href="mailto:servicio@mensfashion.com.mx">
-                    servicio@mensfashion.com.mx
-                </a>
-            </div>
-
-            <div>
-                <img src="${URLUtils.httpsStatic('/images/favicons/whatsapp.png')}" alt="whatsapp">
-            </div>
-
-            <div class="email-container__footer__redes">
-                <span>Siguenos en redes</span>
-                <div class="email-container__footer__redes__icons">
-                    <img src="${URLUtils.httpsStatic('/images/favicons/facebook.png')}" alt="facebook">
-                    <img src="${URLUtils.httpsStatic('/images/favicons/youtube.png')}" alt="youtube">
-                    <img src="${URLUtils.httpsStatic('/images/favicons/instagram.png')}" alt="instagram">
-                </div>
-            </div>
-        </footer>
-    </div>
+<body bgcolor="#ffffff" text="#000000"
+    style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;"
+    class="body">
+    <!-- start:processor:prepend -->
+    <!-- start:processor:body:prepend -->
+    <!--[if mso]><!--><input type="radio" name="limited" id="interactive" style="display:none;mso-hide:all;" checked>
+    <!--<![endif]-->
+    <div id="rebel">
+        <!-- end:processor:body:prepend -->
+        <!-- end:processor:prepend -->
+        <div style="font-size:0; line-height:0;">
+            <custom name="opencounter" type="tracking">
+                <custom name="usermatch" type="tracking" />
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td align="center" valign="top">
+                    <custom type="header" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+                        <tr>
+                            <td>
+                                <table class="tb_properties border_style" style="background-color:#FFFFFF;"
+                                    cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <!-- added padding here -->
+                                                    <td class="content_padding" style="">
+                                                        <!-- end of comment -->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <!-- top slot -->
+                                                                <td align="center" class="header" valign="top">
+                                                                    <table align="left" border="0" cellpadding="0"
+                                                                        cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td align="left" valign="top">
+                                                                                    <table cellspacing="0"
+                                                                                        cellpadding="0"
+                                                                                        style="width:100%">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="responsive-td"
+                                                                                                    valign="top"
+                                                                                                    style="width: 100%;">
+                                                                                                    <table
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0"
+                                                                                                        width="100%"
+                                                                                                        role="presentation"
+                                                                                                        style="background-color: #000000; min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper">
+                                                                                                        <tr>
+                                                                                                            <td style=""
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <table
+                                                                                                                    width="100%"
+                                                                                                                    cellspacing="0"
+                                                                                                                    cellpadding="0"
+                                                                                                                    role="presentation"
+                                                                                                                    style="min-width: 100%;">
+                                                                                                                    <tr>
+                                                                                                                        <td
+                                                                                                                            align="center">
+                                                                                                                            <a href="${URLUtils.url('Login-Show')}"
+                                                                                                                                title=""
+                                                                                                                                alias=""
+                                                                                                                                conversion="false"
+                                                                                                                                data-linkto="https://">
+                                                                                                                                <img data-assetid="210856"
+                                                                                                                                    src="https://image.contacto.mensfashion.com.mx/lib/fe2a11737164047b711c77/m/1/1e0e4818-21e7-4081-92a3-5a2aa969e662.jpg"
+                                                                                                                                    alt=""
+                                                                                                                                    width="437"
+                                                                                                                                    style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <custom type="footer" />
+                </td>
+            </tr>
+        </table>
+        <!-- start:processor:append -->
+        <!-- start:processor:body:append -->
+    </div><!-- end:processor:body:append -->
+    <!-- end:processor:append -->
 </body>
 
 </html>

@@ -18,23 +18,70 @@
             max-width: 70%;
         }
 
+        .text--bold {
+            font-family: 'Avenir';
+            font-weight: bold;
+        }
+
+        .text--normal {
+            font-family: 'Avenir';
+        }
+
+        .text--sm {
+            font-size: 14px;
+        }
+
+        .text--md {
+            font-size: 20px;
+        }
+
+        .text--lg {
+            font-size: 25px;
+        }
+
+        .text--xl {
+            font-size: 30px;
+        }
+
+        .text-align--left {
+            text-align: start;
+        }
+
+        .text-align--right {
+            text-align: end;
+        }
+
+        .text-align--center {
+            text-align: center;
+        }
+
+        .margin-top--10 {
+            margin-top: 10px;
+        }
+
+        .margin-top--20 {
+            margin-top: 20px;
+        }
+
+        .margin-top--30 {
+            margin-top: 30px;
+        }
+
+        span {
+            color: #000;
+        }
+
         .email-container__header {
             background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px 0;
+            padding: 12px 0;
         }
 
         .email-container__header img {
-            width: 300px;
+            width: 250px;
             margin: auto;
-        }
-
-        .email-container__image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .email-container__image img {
@@ -42,61 +89,55 @@
         }
 
         .email-container__info {
-            width: 600px;
+            width: 100%;
             text-align: center;
-            margin: 18px auto;
             font-size: 20px;
             font-family: 'Avenir';
+            background: #ECECEC;
         }
 
-        .email-container__info .email-container__info--first {
-            font-family: 'Avenir';
-            font-size: 25px
+        .email-container__info__card {
+            width: 88%;
+            background: #ffff;
+            padding: 20px;
+            position: relative;
+            margin: 0 auto;
         }
 
-        .email-container__info .email-container__info--second {
-            margin-top: 20px;
-            font-size: 25px;
-            font-family: 'Avenir';
-            font-weight: bold;
+        .email-container__info__card__content {
+            text-align: start;
+            border: 1px solid #000;
+            padding: 10px;
         }
 
-        .email-container__info .email-container__info--third {
-            margin-top: 20px;
-            font-size: 25px;
-            font-family: 'Avenir';
-        }
-
-        .email-container__info .email-container__info--fourth {
-            margin-top: 20px;
-            font-size: 25px;
-            font-family: 'Avenir';
-        }
-
-        .email-container__info .email-container__info--fifth {
-            margin-top: 20px;
-            font-size: 14px;
-            font-family: 'Avenir';
+        .email-container__info__card__content__biling,
+        .email-container__info__card__content__delivery,
+        .email-container__info__card__content__items {
+            column-count: 2;
         }
 
         .email-container__footer {
-            background: #000;
+            background: #ECECEC;
             text-align: center;
             padding: 20px;
         }
 
         .email-container__footer--white {
-            color: #fff;
+            color: gray;
             font-family: 'avenir';
             font-size: 16px;
             font-weight: bold;
         }
 
         .email-container__footer--link {
-            color: #fff;
             text-decoration: none;
             font-family: 'avenir';
             font-size: 12px;
+        }
+
+        .email-container__footer--link span,
+        .email-container__footer__redes span{
+            color: gray;
         }
 
         .ii a[href] {
@@ -107,19 +148,24 @@
             color: #fff;
             font-family: 'avenir';
             margin-top: 20px;
+            padding-bottom: 20px;
             font-weight: bold;
+            border-bottom: 4px solid gray;
         }
-
-        .email-container__footer__redes__icons {}
 
         .email-container__footer__redes__icons img {
             margin: 0 5px;
         }
 
-        @media (max-width: 865px) {
-            .email-container__info {
-                width: 90%;
-            }
+        .link-account {
+            background: #000;
+            padding: 10px;
+            text-decoration: none;
+            margin: auto;
+        }
+
+        .link-account span {
+            color: #fff;
         }
     </style>
 </head>
@@ -130,45 +176,120 @@
             <img src="${URLUtils.httpsStatic('/images/favicons/mens_logo_white.png')}" alt="logo">
         </header>
         <section class="email-container__image">
-            <img src="${URLUtils.httpsStatic('/images/favicons/mens_order.jpeg')}" alt="image">
+            <img src="${URLUtils.httpsStatic('/images/favicons/mens_order_new.jpeg')}" alt="image">
         </section>
         <section class="email-container__info">
-            <div class="email-container__info--first">
-                <span>Hemos recibido tu pedido</span>
-            </div>
-            <div class="email-container__info--second">
-                <span>¡Gracias por tu compra!</span>
-            </div>
-            <div class="email-container__info--third">
-                <span>En cuanto validemos tu pago, te enviaremos un correo para notificarte de ello y para compartirte
-                    el código de rastreo de la paquetería que te entregará tu compra. </span>
-            </div>
-            <div class="email-container__info--fourth">
-                <span>Para revisar el estado de tu pedido basta con que ingreses a tu cuenta</span>
-            </div>
-            <div class="email-container__info--fifth">
-                <span>Si tienes alguna duda o comentario, puedes comunicarte con nosotros mediante nuestros contactos de atención:</span>
+            <div class="email-container__info__card">
+                <div class="email-container__info--first">
+                    <span class="text--bold text--xl">Hemos recibido tu pedido</span>
+                </div>
+                <div class="email-container__info--second">
+                    <span class="text--normal text--lg">¡Gracias por tu compra!</span>
+                </div>
+                <div class="email-container__info--third margin-top--20">
+                    <span>Numero de pedido: ${pdict.order.orderNumber}</span>
+                </div>
+                <div class="email-container__info--fourth margin-top--20">
+                    <span>
+                        Para revisar el estado de tu pedido basta con que ingreses a tu
+                        <span class="text--bold">cuenta</span>
+                    </span>
+                </div>
+
+                <div class="email-container__info__card__content margin-top--20">
+                    <span class="text--bold">Detalles del pedido</span>
+
+                    <div class="email-container__info__card__content__delivery">
+                        <span class="text--sm">
+                            Cantidad Total:
+                            <span>${pdict.order.priceTotal}</span>
+                        </span>
+
+                        <div>
+                            <span class="text--sm">
+                                Metodo de envío:
+                                ${pdict.order.shipping[0].selectedShippingMethod.ID === 'MEX001' ? pdict.order.shipping[0].selectedShippingMethod
+                                .estimatedArrivalTime : pdict.order.shipping[0].selectedShippingMethod.displayName}
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="email-container__info__card__content__biling">
+                        <div class="text-align--left">
+                            <span class="text--sm">
+                                Metodo de pago:
+                                <span>${pdict.order.billing.payment.selectedPaymentInstruments[0].paymentMethod}</span>
+                            </span>
+                        </div>
+
+                        <div class="text-align--left">
+                            <span class="text--sm">
+                                Dirección de envio:
+                                <span>
+                                    ${pdict.order.billing.billingAddress.address.address1}
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="email-container__info__card__content__items margin-top--20">
+                        <isloop items="${pdict.order.items.items}" var="item">
+                            <iscomment>
+                                <isloop items="${item.images.small}" var="image">
+                                    <div>
+                                        <img src="${URLUtils.httpStatic(image.url)}" alt="producto">
+                                    </div>
+                                </isloop>
+                            </iscomment>
+                            <div>
+                                <div>
+                                    <span class="text--sm">${item.productName}</span>
+                                </div>
+                                <div>
+                                    <span class="text--sm">SKU: ${item.id}</span>
+                                </div>
+
+                                <isloop items="${item.variationAttributes}" var="atr">
+                                    <div>
+                                        <span class="text--sm">Talla: ${atr.displayValue}</span>
+                                    </div>
+                                </isloop>
+
+                                <div>
+                                    <span class="text--sm">Cantidad: ${item.quantity}</span>
+                                </div>
+                                <div>
+                                    <span class="text--sm">SubTotal: ${item.priceTotal.price}</span>
+                                </div>
+                            </div>
+                        </isloop>
+                    </div>
+                </div>
+
+                <div class="text-align--center margin-top--30">
+                    <a class="text--sm link-account" href="${URLUtils.url('Login-Show')}">
+                        <span>Ingresar a mi cuenta</span>
+                    </a>
+                </div>
             </div>
         </section>
         <footer class="email-container__footer">
             <div>
-                <span class="email-container__footer--white">Atencion a clientes</span>
-            </div>
-            <div class="ii">
-                <a class="email-container__footer--link" href="tel:8000024966">800 0024 966</a>
+                <span class="email-container__footer--white">¿Tienes algúna duda? Contactanos</span>
             </div>
             <div class="ii">
                 <a class="email-container__footer--link" href="mailto:servicio@mensfashion.com.mx">
-                    servicio@mensfashion.com.mx
+                    <span>servicio@mensfashion.com.mx</span>
                 </a>
             </div>
 
-            <div>
+            <div class="margin-top--10">
                 <img src="${URLUtils.httpsStatic('/images/favicons/whatsapp.png')}" alt="whatsapp">
             </div>
 
             <div class="email-container__footer__redes">
-                <span>Siguenos en redes</span>
+                <span>¡Siguenos! &#35;soloenMENS</span>
                 <div class="email-container__footer__redes__icons">
                     <img src="${URLUtils.httpsStatic('/images/favicons/facebook.png')}" alt="facebook">
                     <img src="${URLUtils.httpsStatic('/images/favicons/youtube.png')}" alt="youtube">
