@@ -22699,6 +22699,10 @@ button.close:focus {
   width: 100%;
 }
 
+.accordion-description ul{
+  padding: 0 !important
+}
+
 @media (max-width: 1200px) {
   .checkout__cart {
     background: #ffffff !important;
