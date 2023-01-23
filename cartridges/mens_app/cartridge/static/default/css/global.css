@@ -17916,6 +17916,16 @@ div.availability {
   position: relative;
 }
 
+.swatch-circle-verde-oscuro{
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #2d572c;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
 .choose-bonus-product-dialog .swatch-circle.color-value[data-selected="true"]:after,
 .quick-view-dialog .swatch-circle.color-value[data-selected="true"]:after {
   color: #000;
