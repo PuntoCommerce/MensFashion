@@ -80,13 +80,9 @@
                                                                                                                     <tr>
                                                                                                                         <td
                                                                                                                             align="center">
-                                                                                                                            <a href="${URLUtils.url('Login-Show')}"
-                                                                                                                                title=""
-                                                                                                                                alias=""
-                                                                                                                                conversion="false"
-                                                                                                                                data-linkto="https://">
+                                                                                                                            <a href="${URLUtils.url('Login-Show')}">
                                                                                                                                 <img data-assetid="210856"
-                                                                                                                                    src="https://image.contacto.mensfashion.com.mx/lib/fe2a11737164047b711c77/m/1/1e0e4818-21e7-4081-92a3-5a2aa969e662.jpg"
+                                                                                                                                    src="${URLUtils.httpStatic('/images/favicons/mens_register.jpeg')}"
                                                                                                                                     alt=""
                                                                                                                                     width="437"
                                                                                                                                     style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;">
