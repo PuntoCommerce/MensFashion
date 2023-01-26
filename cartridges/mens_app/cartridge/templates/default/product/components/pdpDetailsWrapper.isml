@@ -136,6 +136,9 @@
                         <!-- Cart and Checkout -->
                         <isinclude template="product/components/buyNowProduct" />
                     </div>
+                    <div class="add-to-cart-paypal">
+                        <isinclude template="product/components/addToCartButtonExtension" />
+                    </div>
                 </div>
 
 

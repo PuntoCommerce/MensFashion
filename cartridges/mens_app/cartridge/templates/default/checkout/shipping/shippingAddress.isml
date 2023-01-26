@@ -186,7 +186,7 @@
             <label class="form-control-label" for="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}">
                 ${Resource.msg('field.shipping.address.phone', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
-            <input type="tel" class="form-control shippingPhoneNumber"
+            <input type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" maxlength="10" class="form-control shippingPhoneNumber"
                 id="shippingPhoneNumber${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}TelephoneNumber"
                 value="${shippingAddress.phone || ''}" <isprint value="${addressFields.phone.attributes}"
