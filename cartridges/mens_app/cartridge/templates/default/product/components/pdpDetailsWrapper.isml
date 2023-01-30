@@ -137,7 +137,8 @@
                         <isinclude template="product/components/buyNowProduct" />
                     </div>
                     <div class="add-to-cart-paypal">
-                        <isinclude template="product/components/addToCartButtonExtension" />
+                    <span>Btn paypal</span>
+                        <iscomment> <isinclude template="product/components/" /> </iscomment>
                     </div>
                 </div>
 

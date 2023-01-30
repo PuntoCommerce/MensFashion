@@ -58,7 +58,7 @@
             <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
-            <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+            <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
 
             <div class="homepage-alert-register__card__info">
                 <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
