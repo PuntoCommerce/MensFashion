@@ -11,8 +11,11 @@
     <input name="originalShipmentUUID" type="hidden" value="${shippingModel.UUID}" />
     <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
 
-    <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}">
-        
+    <div class="shipping-address">
+    <iscomment> <div class="shipping-address ${pdict.order.usingMultiShipping ? 'd-none' : ''}"> </iscomment>
+        <fieldset class="shipping d-none">
+            <isinclude template="checkout/shipping/shippingMethodCards" />
+        </fieldset>
 
         <fieldset class="shipment-selector-btns no-padding">
             <h3 class="checkout-shipping-method">${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
@@ -84,13 +87,10 @@
             <fieldset class="shipping-address-block">
                 <isinclude template="checkout/shipping/shippingAddress" />
             </fieldset>
-            <iscomment>
                 <fieldset class="shipping-method-block">
-                    <h3>${Resource.msg('heading.shipping.method', 'checkout', null)}</h3>
 
                     <isinclude template="checkout/shipping/shippingMethod" />
                 </fieldset>
-            </iscomment>
 
             <iscomment>
                 <fieldset class="gift-message-block">
@@ -104,10 +104,6 @@
                 <isinclude
                     url="${URLUtils.url('Stores-GetStoreById', 'storeId', shippingModel.productLineItems.items[0].fromStoreId)}" />
             </isif>
-        </fieldset>
-
-        <fieldset class="shipping d-none">
-            <isinclude template="checkout/shipping/shippingMethodCards" />
         </fieldset>
 
         <button onclick="hideHoursInStore()" class="btn btn--gray btn__small text-uppercase btn-block submit-shipping col-sm-12 col-lg-10 change-store ${shippingModel.selectedShippingMethod.storePickupEnabled && shippingModel.productLineItems.items[0].fromStoreId ? '' :
@@ -144,11 +140,9 @@
 
     <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
     </form>
-    <fieldset class="shipping only-visible col-12 col-lg-7 d-sm-block d-lg-none">
-        <iscomment>
+    <iscomment> <fieldset class="shipping only-visible col-12 col-lg-7 d-sm-block d-lg-none">
         <span class="checkout-summary-title-2 d-block mb-3">${Resource.msg('check.shipping.summary.title', 'checkout', null)}</span>
             <isinclude template="checkout/shipping/shippingMethod" />
-        </iscomment>
         <div class="card checkout__order mt-4">
             <div class="card-header d-flex justify-content-center align-items-center">
                 <h2 class="card-header-custom">${Resource.msg('heading.order.summary', 'checkout', null)}
@@ -177,5 +171,5 @@
                 </div>
             </div>
         </div>
-    </fieldset>
+    </fieldset> </iscomment>
 </div>

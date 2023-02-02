@@ -17916,6 +17916,16 @@ div.availability {
   position: relative;
 }
 
+.swatch-circle-verde-oscuro{
+  border: 0.063em solid rgba(0, 0, 0, 0.3);
+  width: 2.5em;
+  height: 2.5em;
+  background: #2d572c;
+  border-radius: 1.25em;
+  display: block;
+  position: relative;
+}
+
 .choose-bonus-product-dialog .swatch-circle.color-value[data-selected="true"]:after,
 .quick-view-dialog .swatch-circle.color-value[data-selected="true"]:after {
   color: #000;
@@ -18428,7 +18438,7 @@ div.availability {
 .container.product-detail .breadcrumb {
   border-radius: 0;
   border-bottom: 1px solid #000;
-  margin: 0 60px 36px 60px;
+  margin: 0 60px 12px 60px;
   padding-bottom: 6px;
 }
 
@@ -22697,6 +22707,14 @@ button.close:focus {
 
 .description-and-detail {
   width: 100%;
+}
+
+.accordion-description ul{
+  padding: 0 !important
+}
+
+#checkout-main .coupon-price-adjustment{
+  display: none !important;
 }
 
 @media (max-width: 1200px) {

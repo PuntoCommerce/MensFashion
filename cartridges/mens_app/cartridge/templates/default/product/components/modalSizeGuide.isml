@@ -1,6 +1,5 @@
 <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" status="loopState">
     <isif condition="${loopState.last}">
-
         <isif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('pantalon')}">
             <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-pantalon')}" />
 
@@ -8,6 +7,9 @@
             <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-playera')}" />
 
         <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sueter')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-sueter')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sueteres')}" />
             <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-sueter')}" />
 
         <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('chamarra')}" />
@@ -20,6 +22,9 @@
             <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-chaleco')}" />
 
         <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('saco')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-saco')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sacos')}" />
             <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-saco')}" />
 
         <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('camisa')}" />

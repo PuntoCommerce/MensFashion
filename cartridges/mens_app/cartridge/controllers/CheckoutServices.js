@@ -203,9 +203,9 @@ server.replace('PlaceOrder', server.middleware.https, function (req, res, next) 
 
     // ===================== Confirmation Email =====================
 
-    // if (order.getCustomerEmail()) {
-    //     COHelpers.sendConfirmationEmail(order, req.locale.id);
-    // }
+    if (order.getCustomerEmail()) {
+         COHelpers.sendConfirmationEmail(order, req.locale.id);
+    }
 
     // Reset usingMultiShip after successful Order placement
     req.session.privacyCache.set('usingMultiShipping', false);
@@ -219,6 +219,7 @@ server.replace('PlaceOrder', server.middleware.https, function (req, res, next) 
         orderToken: order.orderToken,
         continueUrl: URLUtils.url('Order-Confirm').toString()
     });
+
 
     return next();
 });

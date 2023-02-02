@@ -1,4 +1,4 @@
-<div class="productSku">
+<div class="productSku d-none">
     <span>${Resource.msg('label.item', 'product', null)}</span>
     <span class="product-id">${product.id}</span>
 </div>

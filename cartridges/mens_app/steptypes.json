@@ -245,6 +245,7 @@
         }
       },
       {
+<<<<<<< HEAD
         "@type-id": "custom.mergeProductsF",
         "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
@@ -285,6 +286,31 @@
           ]
         }
       }
+=======
+        "@type-id": "custom.unzip",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "unzip all zip file",
+        "module": "mens_app/cartridge/scripts/jobs/unzip.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {},
+        "status-codes": {
+            "status": [
+                {
+                    "@code": "ERROR",
+                    "description": "An error occurs, please re-run the job or contact Support"
+                },
+                {
+                    "@code": "FINISHED",
+                    "description": "All orders were checked"
+                }
+            ]
+        }
+    }
+>>>>>>> 41440956e325eaa98de5f22ef534ba5fe759020a
     ]
   }
 }

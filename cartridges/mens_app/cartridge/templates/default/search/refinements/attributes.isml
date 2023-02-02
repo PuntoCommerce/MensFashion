@@ -1,7 +1,7 @@
 <isif condition="${refinement.displayName.toLowerCase() === 'talla'}">
-    <ul class="values content check-custom-container">
+    <ul class="values content breadcums check-custom-container">
 <iselse/>
-    <ul class="values content">
+    <ul class="values content breadcums">
 </isif>
     <isloop items="${refinement.values}" var="refinementValue">
         <isif condition="${refinementValue.type === 'color'}">

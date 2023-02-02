@@ -1,7 +1,11 @@
 {
-  "hostname": "bjgb-002.sandbox.us01.dx.commercecloud.salesforce.com",
+  "hostname": "bjgb-005.sandbox.us01.dx.commercecloud.salesforce.com",
   "username": "ojimenez@h-h.com.mx",
+<<<<<<< HEAD
   "password": "8kE#[u%a=eIFJP_UuwfRD])16B5~O6+GYZRgWk_R",
+=======
+  "password": "8hF_B~K~B_{#)8RUUMhi?x2AEtY_S~vyx|XS-bqf",
+>>>>>>> 41440956e325eaa98de5f22ef534ba5fe759020a
   "code-version": "version1"
 }
   

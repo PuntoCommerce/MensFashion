@@ -339,6 +339,21 @@
   }
 }
 
+.values.content{
+  span,img{
+    pointer-events: none;
+  }
+}
+
+.breadcums-subcategories{
+  font-size: 14px;
+
+  &::before{
+    content: '/';
+    padding: 0 6px;
+  }
+}
+
 @media (max-width: 768px) {
   .filter-collapse-button {
     padding-left: 0;

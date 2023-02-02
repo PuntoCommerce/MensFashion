@@ -81,14 +81,14 @@
   background-color: #fff;
   z-index: 2;
 }
-.leading-lines .start-lines:before {
+/* .leading-lines .start-lines:before {
   float: left;
   width: 0;
   white-space: nowrap;
   content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
   z-index: 1;
   color: #adadad;
-}
+} */
 .leading-lines .end-lines {
   padding: 1px;
 }

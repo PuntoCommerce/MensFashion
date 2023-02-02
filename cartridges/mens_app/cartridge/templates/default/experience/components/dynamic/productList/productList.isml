@@ -1,6 +1,7 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets');
     assets.addJs('/js/search.js');
+    assets.addJs('/js/accordion.js');
     assets.addCss('/css/experience/components/commerceLayouts/layout.css');
     assets.addCss('/css/search.css');
     assets.addCss('/css/experience/components/commerceLayouts/productList.css');

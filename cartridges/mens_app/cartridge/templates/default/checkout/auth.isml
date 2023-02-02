@@ -3,21 +3,51 @@
   <isscript>
       var assets = require('*/cartridge/scripts/assets.js');
       assets.addJs('/js/login.js');
+      assets.addJs('/js/accordion.js');
   </isscript>
+
+  <div id='checkout-alert' class="homepage-alert-register d-none">
+    <div class="homepage-alert-register__card">
+      <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+
+      <div class="homepage-alert-register__card__info">
+        <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
+        <span class="homepage-alert-register__card__info__text">
+          ¡Tenemos una buena noticia!
+          Estamos estrenando un nuevo sitio, el cual es más rápido y fácil para comprar.
+          Te invitamos a que te vuelvas a registrar para poder seguir realizando las compras de tus productos
+          favoritos y recibir $200 en tu primera compra en línea.
+        </span>
+        <span class="homepage-alert-register__card__info__text--small">
+          *Válido únicamente en tu primera compra, compra mínima de $1,000. Vigencia 30 días a partir de
+          recibido, consulta términos y condiciones.
+        </span>
+        <a href="#" onclick="closeAlertPromotion()" class="homepage-alert-register__card__info__link">CREAR CUENTA</a>
+      </div>
+      <div class="homepage-alert-register__card__image">
+        <img src="${URLUtils.staticURL('images/alert-home-image.png')}" alt="homeAlert">
+      </div>
+    </div>
+  </div>
 
   <div class="mt-5 mb-5 checkout container-custom">
     <div class="row mb-2 d-flex form-checkout justify-content-center login-checkout checkout__login-checkout">
-        <div class="col-12 col-md-6 d-flex checkoutLeftCheck no-margin no-padding">
+      <div class="col-12 col-md-6 d-flex checkoutLeftCheck no-margin no-padding">
         <div class='checkout__container-col checkout__container-col--left-side'>
           <p class='checkout__paragraph checkout__paragraph--margin d-flex align-items-center'>
-            <img class="checkout__check-img" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+            <img class="checkout__check-img" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check"
+              height="14px" />
             ${Resource.msg('check.shipping', 'checkout', null)}
           </p>
         </div>
       </div>
       <div class="col-12 col-md-6 d-flex checkoutRightCheck no-margin no-padding">
         <div class='checkout__container-col checkout__container-col--right-side d-flex align-items-center'>
-          <img class="checkout__check-img d-none d-md-block" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+          <img class="checkout__check-img d-none d-md-block" src="${URLUtils.staticURL('/images/check.checkout.svg')}"
+            alt="check" height="14px" />
           ${Resource.msg('check.interest.free', 'checkout', null)}
         </div>
       </div>
@@ -28,26 +58,31 @@
         <div class='checkout__container-col checkout__container-col--left-side'>
           <div class="d-flex justify-content-center">
             <div class="checkout__bottomBorder d-flex justify-content-center flex-column full-width">
-              <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
+              <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}"
+                class="mb-3 btn btn--gray btn__small">${Resource.msg('button.continue.guess', 'checkout', null)}</a>
               <p>${Resource.msg('msg.pay.without.auth', 'checkout', null)}</p>
             </div>
           </div>
 
           <div class="d-flex justify-content-center">
             <div class="checkout_create d-flex justify-content-center flex-column full-width">
-              <a href="${URLUtils.url('Login-Show')}" class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
+              <a href="${URLUtils.url('Login-Show')}"
+                class="mb-3 btn btn--gray btn__small">${Resource.msg('button.create.account', 'checkout', null)}</a>
               <p>${Resource.msg('msg.create.account', 'checkout', null)}</p>
               <div class="checks">
                 <div class="item mb-3 d-flex">
-                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check"
+                    height="14px" />
                   ${Resource.msg('check.save.payment', 'checkout', null)}
                 </div>
                 <div class="item mb-3 d-flex">
-                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check"
+                    height="14px" />
                   ${Resource.msg('check.order.record', 'checkout', null)}
                 </div>
                 <div class="item mb-3 d-flex">
-                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check" height="14px"/>
+                  <img class="mr-2" src="${URLUtils.staticURL('/images/check.checkout.svg')}" alt="check"
+                    height="14px" />
                   ${Resource.msg('check.wishlist.create', 'checkout', null)}
                 </div>
               </div>
@@ -63,7 +98,6 @@
             <div class="checkout_login d-flex justify-content-center flex-column">
               <isinclude template="account/components/loginForm" />
             </div>
-            
           </div>
         </div>
       </div>

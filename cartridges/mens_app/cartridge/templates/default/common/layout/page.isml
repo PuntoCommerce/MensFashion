@@ -9,6 +9,7 @@
     
     assets.addCss('/css/style.css');
     assets.addJs('/js/custom.js');
+    assets.addJs('/js/accordion.js');
     assets.addJs('/js/Plp-Custom.js');
     assets.addJs('/js/productTile.js');
 </isscript>

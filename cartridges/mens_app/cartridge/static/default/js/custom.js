@@ -596,5 +596,11 @@ if (widthScreen > 543) {
     }
   });}
 
+  const urlObject = new URL(location.href);
+  const active= document.getElementById('register');
+  const actionRegister= urlObject.searchParams.get('action');
+  if(actionRegister === 'register'){
+    active.classList.add('active');
+  }
 
 localValues();

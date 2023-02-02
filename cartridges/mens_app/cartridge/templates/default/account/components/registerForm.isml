@@ -1,4 +1,4 @@
-<form action="${pdict.createAccountUrl}" class="registration" method="POST" name="${pdict.profileForm.htmlName}">
+<form action="${pdict.createAccountUrl}" class="registration" id="register-form" method="POST" name="${pdict.profileForm.htmlName}">
     <div class="form-group
         <isif condition=" ${!!pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-fname">

@@ -1,194 +1,130 @@
-<iscontent type="text/html" charset="UTF-8" compact="true" />
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 
 <head>
-    <meta name="x-apple-disable-message-reformatting" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style type="text/css">
 
-        footer {
-            background-color: #000000;
-            width: 100%;
-            padding: 20px 0;
-        }
-
-        .email-container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .banner-email-body{
-            width: 100%
-        }
-
-        .email-main {
-            margin: 0;
-        }
-
-        .email-title {
-            background-color: #000;
-            padding: 10px 50px;
-            text-align: center;
-        }
-
-        .email-title span {
-            color: #fff;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        .logo-body {
-            text-align: center;
-        }
-
-        .divider-footer {
-            width: 100%;
-        }
-
-        .logo-footer {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .logo-footer-img {
-            width: 90px;
-        }
-
-        .pay-footer-text,
-        .legal-footer-text {
-            color: #ffffff;
-            font-size: 14px;
-            margin: 10px;
-            padding: 0 5rem;
-            text-align: center;
-        }
-
-        .pay-methods {
-            margin: 0 auto;
-            width: fit-content;
-
-        }
-
-        .pay-methods img {
-            width: 30px;
-            height: auto;
-        }
-
-        .email-main p,
-        .email-main h1 {
-            margin: 0 auto;
-            max-width: 90%;
-            text-align: center;
-            width: fit-content;
-        }
-
-        .email-main h1 {
-            font-size: 18px;
-            color: #000000;
-        }
-
-        .email-main p {
-            font-size: 14px;
-            color: #000000;
-        }
-
-        .email-main p a{
-            font-size: 14px;
-            color: #000000;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        table {
-            margin: 10px auto 10px auto;
-            width: 100%;
-        }
-
-        .text-container{
-            margin: 59px 0 99px 0;
-        }
-
-        @media only screen and (max-width:480px) {
-            .email-container {
-                max-width: 100%;
-                padding: 0px;
-            }
-
-            .email-main p,
-            .email-main h1 {
-                max-width: 100%;
-            }
-
-
-        }
     </style>
+    <!-- end:processor:head -->
 </head>
 
-<body>
-    <div class="email-container">
-        <div class="email-main">
-            <table>
-                <tr>
-                    <td>
-                        <div class="logo-body">
-                            <img class="logo-email-body"  src="${URLUtils.httpsStatic('/images/mens_logo.png')}"
-                                alt="logo Mens Fashion" />
-                        </div>
-                    </td>
-                </tr>
-                <tr class="email-title">
-                    <td>
-                        <span>¡Bienvenido a Men's Fashion!</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="banner-body">
-                            <img class="banner-email-body" src="${URLUtils.httpsStatic('/images/bannerMail.png')}"
-                                alt="Banner Mens Fashion" />
-                        </div>
-                    </td>
-                </tr>                
-                <tr>
-                    <td>
-                        <div class="text-container">
-                            <h1>${Resource.msg('email.msg.new.registration.dear', 'registration', null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName},</h1>
-
-                            <p>${Resource.msg('email.msg.new.registration.body1','registration',null)}</p>
-
-                            <p><a href="${pdict.url}">${pdict.url}</a></p>
-
-                            <p>${Resource.msg('email.msg.new.registration.body2','registration',null)}</p>  
-                        </div>
-                    </td>                 
-                </tr>
-            </table>    
-        </div>      
-        <footer>
-            <div class="pay-footer">
-                <p class="pay-footer-text">Pagos seguros</p>
-            </div>
-            <div class="pay-methods">
-                <img class="pay-icon" src="${URLUtils.httpsStatic('/images/visa.png')}" alt="Visa" />
-
-                <img class="pay-icon" src="${URLUtils.httpsStatic('/images/mc.png')}" alt="Mastercard" />
-
-                <img class="pay-icon" src="${URLUtils.httpsStatic('/images/pp.png')}" alt="Paypal" />
-
-                <img class="pay-icon" src="${URLUtils.httpsStatic('/images/mercado.png')}" alt="Mercado Pago" />
-            </div>
-            <div class="legal-footer">
-                <p class="legal-footer-text">${Resource.msg('msg.footeremailtemplates.copyright', 'common', null)}</p>
-            </div>
-        </footer>
-    </div>
+<body bgcolor="#ffffff" text="#000000"
+    style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;"
+    class="body">
+    <!-- start:processor:prepend -->
+    <!-- start:processor:body:prepend -->
+    <!--[if mso]><!--><input type="radio" name="limited" id="interactive" style="display:none;mso-hide:all;" checked>
+    <!--<![endif]-->
+    <div id="rebel">
+        <!-- end:processor:body:prepend -->
+        <!-- end:processor:prepend -->
+        <div style="font-size:0; line-height:0;">
+            <custom name="opencounter" type="tracking">
+                <custom name="usermatch" type="tracking" />
+        </div>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+                <td align="center" valign="top">
+                    <custom type="header" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+                        <tr>
+                            <td>
+                                <table class="tb_properties border_style" style="background-color:#FFFFFF;"
+                                    cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <!-- added padding here -->
+                                                    <td class="content_padding" style="">
+                                                        <!-- end of comment -->
+                                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                            <tr>
+                                                                <!-- top slot -->
+                                                                <td align="center" class="header" valign="top">
+                                                                    <table align="left" border="0" cellpadding="0"
+                                                                        cellspacing="0" width="100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td align="left" valign="top">
+                                                                                    <table cellspacing="0"
+                                                                                        cellpadding="0"
+                                                                                        style="width:100%">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="responsive-td"
+                                                                                                    valign="top"
+                                                                                                    style="width: 100%;">
+                                                                                                    <table
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0"
+                                                                                                        width="100%"
+                                                                                                        role="presentation"
+                                                                                                        style="background-color: #000000; min-width: 100%; "
+                                                                                                        class="stylingblock-content-wrapper">
+                                                                                                        <tr>
+                                                                                                            <td style=""
+                                                                                                                class="stylingblock-content-wrapper camarker-inner">
+                                                                                                                <table
+                                                                                                                    width="100%"
+                                                                                                                    cellspacing="0"
+                                                                                                                    cellpadding="0"
+                                                                                                                    role="presentation"
+                                                                                                                    style="min-width: 100%;">
+                                                                                                                    <tr>
+                                                                                                                        <td
+                                                                                                                            align="center">
+                                                                                                                            <a href="${URLUtils.url('Login-Show')}">
+                                                                                                                                <img data-assetid="210856"
+                                                                                                                                    src="${URLUtils.httpStatic('/images/favicons/mens_register.jpeg')}"
+                                                                                                                                    alt=""
+                                                                                                                                    width="437"
+                                                                                                                                    style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <custom type="footer" />
+                </td>
+            </tr>
+        </table>
+        <!-- start:processor:append -->
+        <!-- start:processor:body:append -->
+    </div><!-- end:processor:body:append -->
+    <!-- end:processor:append -->
 </body>
 
 </html>
