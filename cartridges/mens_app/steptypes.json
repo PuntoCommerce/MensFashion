@@ -245,7 +245,6 @@
         }
       },
       {
-<<<<<<< HEAD
         "@type-id": "custom.mergeProductsF",
         "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
@@ -285,8 +284,8 @@
             }
           ]
         }
-      }
-=======
+      },
+      {
         "@type-id": "custom.unzip",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
@@ -310,7 +309,6 @@
             ]
         }
     }
->>>>>>> 41440956e325eaa98de5f22ef534ba5fe759020a
     ]
   }
 }
