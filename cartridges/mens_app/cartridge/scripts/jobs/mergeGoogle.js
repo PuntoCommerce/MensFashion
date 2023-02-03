@@ -6,9 +6,9 @@ var File1 = require("dw/io/File");
 var FileReader1 = require("dw/io/FileReader");
 module.exports.execute = () => {
   //variables que apuntan a donde estan los xml que vamos a convertir
-  let dir = new File(File.IMPEX + "/src/catalog/google/ExportCatalogMens");
-  let dirPrices = new File(File.IMPEX + "/src/catalog/google/ExportPricesMens");
-  let final = new File(File.IMPEX + "/src/catalog/google/catalogoMerchant.xml");
+  let dir = new File(File.IMPEX + '/src/catalog/google/ExportCatalogMens');
+  let dirPrices = new File(File.IMPEX + '/src/catalog/google/ExportPricesMens1');
+  let final = new File(File.IMPEX + '/src/catalog/google/catalogoMerchant.xml');
   let finalWritter = new FileWriter(final);
   let isFirst = true;
   //variables codigo
@@ -51,8 +51,8 @@ module.exports.execute = () => {
     }
     
     let product = XMLList(xmlString).descendants('product');
-    let brand = product.descendants("brand");
-    let searchableFlag = product.descendants("searchable-flag");
+    let brand = product.descendants('brand');
+    let searchableFlag = product.descendants('searchable-flag');
     let title = product.descendants('display-name');
     let shortDescription = product.descendants('short-description');
     let onlineFlag = product.descendants('online-flag');
@@ -109,7 +109,7 @@ module.exports.execute = () => {
           }else{
             priceValue = 0 + " MXN";
           }
-          finalWritter.writeLine("<g:price>"+priceValue+"</g:price>");
+          finalWritter.writeLine('<g:price>'+priceValue+'</g:price>');
           finalWritter.writeLine('<g:brand>'+brand[i]+'</g:brand>');
           finalWritter.writeLine('<g:condition>new</g:condition>');
           finalWritter.writeLine('<g:google_product_category>Clothing &amp; Accessories</g:google_product_category>');
