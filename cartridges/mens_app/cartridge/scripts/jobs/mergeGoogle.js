@@ -7,16 +7,23 @@ var FileReader1 = require("dw/io/FileReader");
 module.exports.execute = () => {
   //variables que apuntan a donde estan los xml que vamos a convertir
   let dir = new File(File.IMPEX + '/src/catalog/google/ExportCatalogMens');
-  let dirPrices = new File(File.IMPEX + '/src/catalog/google/ExportPricesMens1');
+  let dirPrices = new File(File.IMPEX + '/src/catalog/google/ExportPricesMens');
   let final = new File(File.IMPEX + '/src/catalog/google/catalogoMerchant.xml');
   let finalWritter = new FileWriter(final);
   let isFirst = true;
   //variables codigo
   let headerGoogle = '<?xml version="1.0"?><rss xmlns:g="http://base.google.com/ns/1.0" version="2.0"><channel>';
   let endGoogle = '</channel></rss>';
-
-  let dirList = dir.listFiles().iterator();
-  let dirListPrices = dirPrices.listFiles().iterator();
+  let dirList = '';
+  if(dir.listFiles().iterator().hasNext()){
+    dirList= dir.listFiles().iterator();
+  }
+   
+  let dirListPrices = '';
+  if(dirPrices.listFiles().iterator().hasNext()){
+    dirListPrices = dirPrices.listFiles().iterator();
+  }
+  
   var obj = new Object();
 
   while (dirList.hasNext()) {
