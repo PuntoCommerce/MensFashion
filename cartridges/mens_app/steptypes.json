@@ -146,7 +146,7 @@
         "@supports-site-context": "true",
         "@supports-organization-context": "true",
         "description": "Merge all google xml created for SalesCloud",
-        "module": "mens_app/cartridge/scripts/jobs/clearFile.js",
+        "module": "mens_app/cartridge/scripts/jobs/mergeGoogle.js",
         "function": "execute",
         "transactional": "true",
         "timeout-in-seconds": "900",
@@ -193,12 +193,12 @@
         }
       },
       {
-        "@type-id": "custom.mergeProductsF",
+        "@type-id": "custom.merge.ProductsPrices",
         "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
         "@supports-organization-context": "false",
         "description": "Send Orders to SalesCloud",
-        "module": "mens_app/cartridge/scripts/jobs/clearFile.js",
+        "module": "mens_app/cartridge/scripts/jobs/mergeProducts2.js",
         "function": "execute",
         "transactional": "true",
         "timeout-in-seconds": "900",
