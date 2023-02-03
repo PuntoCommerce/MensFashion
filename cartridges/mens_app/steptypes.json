@@ -141,58 +141,6 @@
         }
       },
       {
-        "@type-id": "custom.merge.ExportPrices",
-        "@supports-parallel-execution": "true",
-        "@supports-site-context": "true",
-        "@supports-organization-context": "true",
-        "description": "Merge all export prices created for SalesCloud",
-        "module": "mens_app/cartridge/scripts/jobs/mergeExportPrices.js",
-        "function": "execute",
-        "transactional": "true",
-        "timeout-in-seconds": "900",
-        "parameters": {
-          "parameter": []
-        },
-        "status-codes": {
-          "status": [
-            {
-              "@code": "ERROR",
-              "description": "An error occurs, please re-run the job or contact Support"
-            },
-            {
-              "@code": "FINISHED",
-              "description": "All orders were checked"
-            }
-          ]
-        }
-      },
-      {
-        "@type-id": "custom.merge.ExportCatalog",
-        "@supports-parallel-execution": "true",
-        "@supports-site-context": "true",
-        "@supports-organization-context": "true",
-        "description": "Merge all export catalog created for SalesCloud",
-        "module": "mens_app/cartridge/scripts/jobs/mergeExportCatalog.js",
-        "function": "execute",
-        "transactional": "true",
-        "timeout-in-seconds": "900",
-        "parameters": {
-          "parameter": []
-        },
-        "status-codes": {
-          "status": [
-            {
-              "@code": "ERROR",
-              "description": "An error occurs, please re-run the job or contact Support"
-            },
-            {
-              "@code": "FINISHED",
-              "description": "All orders were checked"
-            }
-          ]
-        }
-      },
-      {
         "@type-id": "custom.merge.Google",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
@@ -308,7 +256,7 @@
                 }
             ]
         }
-    }
+      }
     ]
   }
 }
