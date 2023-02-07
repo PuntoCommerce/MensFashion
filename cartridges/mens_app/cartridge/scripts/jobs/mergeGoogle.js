@@ -20,25 +20,26 @@ module.exports.execute = () => {
   let dirList =  dir.listFiles().iterator();
   let dirListPrices =  dirPrices.listFiles().iterator();
   if(dirList.hasNext()){
-    if(dirListPrices.hasNext()){
     while (dirList.hasNext()) {
-      while (dirListPrices.hasNext()) {
-        file1 = FileReader1(dirListPrices.next());
-        fileString1 = file1.readString();
-        let requestXMLPrices = XML(fileString1);
-        let xmlStringPrices = requestXMLPrices.toXMLString();
-        let prices = XMLList(xmlStringPrices).descendants('price-table');
-        let amount = prices.descendants('amount');
-        let valueAmount = null
-        for(let f =0; f<prices.length();f++){
-          valueAmount = amount[f]; 
-          let label30=prices.toString().indexOf('<price-table product-id="');
-          let label31=prices.toString().indexOf('">');
-          let label32=label30+25;
-          var idPriceProduct = prices[f].toString().slice(label32, label31);
-          obj[idPriceProduct]=valueAmount;
+      if(dirListPrices.hasNext()){
+        while (dirListPrices.hasNext()) {
+          file1 = FileReader1(dirListPrices.next());
+          fileString1 = file1.readString();
+          let requestXMLPrices = XML(fileString1);
+          let xmlStringPrices = requestXMLPrices.toXMLString();
+          let prices = XMLList(xmlStringPrices).descendants('price-table');
+          let amount = prices.descendants('amount');
+          let valueAmount = null
+          for(let f =0; f<prices.length();f++){
+            valueAmount = amount[f]; 
+            let label30=prices.toString().indexOf('<price-table product-id="');
+            let label31=prices.toString().indexOf('">');
+            let label32=label30+25;
+            var idPriceProduct = prices[f].toString().slice(label32, label31);
+            obj[idPriceProduct]=valueAmount;
+          }
+    
         }
-  
       }
       //lectura de archivo.
       file = FileReader(dirList.next());
@@ -124,7 +125,6 @@ module.exports.execute = () => {
         }
       }
     }
-  }
 }
   
   //FinalGoogle.
