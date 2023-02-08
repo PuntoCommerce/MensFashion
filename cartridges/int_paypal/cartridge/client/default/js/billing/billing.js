@@ -80,9 +80,9 @@ if (!isBAEnabled) {
 
     updateSubmitOrderButton();
 
-    document.querySelector('.payment-summary .edit-button').onclick = function () {
-        document.querySelector('button.place-order').innerText = 'Place Order';
-    };
+    // document.querySelector('.payment-summary .edit-button').onclick = function () {
+    //     document.querySelector('button.place-order').innerText = 'Place Order';
+    // };
 }
 
 if (document.querySelector('.paypal-checkbox-container')) {
