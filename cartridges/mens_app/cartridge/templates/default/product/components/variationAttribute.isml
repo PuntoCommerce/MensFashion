@@ -84,44 +84,44 @@
                 ${attr.displayName}
             </label>
             <iscomment> <span>${JSON.stringify(product.gtmData.categoryID)}</span> </iscomment>
-            <isif condition="${product.gtmData.categoryID === " cinturones"}">
+            <isif condition="${product.gtmData.categoryID === "cinturones"}">
                 <div>
 
                 </div>
 
-            <iselseif condition="${product.gtmData.categoryID === " mancuernillas"}" />
+            <iselseif condition="${product.gtmData.categoryID === "mancuernillas"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " pisacorbatas"}" />
+            <iselseif condition="${product.gtmData.categoryID === "pisacorbatas"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " tirantes"}" />
+            <iselseif condition="${product.gtmData.categoryID === "tirantes"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " pulseras"}" />
+            <iselseif condition="${product.gtmData.categoryID === "pulseras"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " corbatas"}" />
+            <iselseif condition="${product.gtmData.categoryID === "corbatas"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " moños"}" />
+            <iselseif condition="${product.gtmData.categoryID === "moños"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " kitsdeceremonia"}" />
+            <iselseif condition="${product.gtmData.categoryID === "kitsdeceremonia"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " gorros"}" />
+            <iselseif condition="${product.gtmData.categoryID === "gorros"}" />
                 <div>
 
                 </div>
-            <iselseif condition="${product.gtmData.categoryID === " panuelos"}" />
+            <iselseif condition="${product.gtmData.categoryID === "panuelos"}" />
                 <div>
 
                 </div>
