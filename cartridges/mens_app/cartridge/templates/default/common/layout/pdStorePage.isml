@@ -58,7 +58,8 @@
             <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
-            <label id="redirectlogin" class="d-none" data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
+            <label id="redirectlogin" class="d-none"
+                data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
 
             <div class="homepage-alert-register__card__info">
                 <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
@@ -99,7 +100,7 @@
         type="text/javascript"> </script>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7R3G8Q" height="0" width="0"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VG8CP5" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </body>
