@@ -101,14 +101,14 @@
                             </div>
 
                             <div class="card-body row">
-                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container">
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
-                                    <button class="custom_edit-button"
+                                    <button class="custom_edit-button" id="custom-edit-shipping"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
-                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container">
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
-                                    <button class="custom_edit-button"
+                                    <button class="custom_edit-button" id="custom-edit-payment"
                                         aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
                             </div>
@@ -166,8 +166,8 @@
                             <div class="card-body order-total-summary ">
                                 <div class="card shipping-summary">
                                     <div class="card-header clearfix summary-edit-btn">
-                                        <button class="edit-button pull-right"
-                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                      <iscomment>   <button class="edit-button pull-right"
+                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                     </div>
                                     <div class="card-body">
                                         <isinclude template="checkout/shipping/shippingSummary" />

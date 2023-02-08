@@ -25,7 +25,8 @@
                         <isloop items="${attr.values}" var="attrValue" status="loopState">
                             <isif
                                 condition="${!(isBundle && product.productType === 'variant' && !attrValue.selected)}">
-                                <button id="colorsSelecteable" class="color-attribute d-flex align-items-center color-button-${attrValue.selectable ? 'selectable' : 'unselectable'}"
+                                <button id="colorsSelecteable"
+                                    class="color-attribute d-flex align-items-center color-button-${attrValue.selectable ? 'selectable' : 'unselectable'}"
                                     aria-label="${Resource.msg('label.select', 'common', null)} ${attr.displayName} ${attrValue.displayValue}"
                                     aria-describedby="${attrValue.id}" data-url="${attrValue.url}"
                                     ${product.productType === "variant" && isBundle ? "disabled" : ""}>
@@ -73,24 +74,71 @@
             <!-- Select <Attribute> Label -->
             <label class="d-lg-block ${attr.id}"
                 for="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}">
-                <iscomment> <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
-                    ${Resource.msg('label.select.size', 'checkout', null)} ${attr.displayName.toLowerCase()}
-                <iselse/>
-                    ${attr.displayName}
-                </isif> </iscomment>
-                    ${attr.displayName}
+                <iscomment>
+                    <isif condition="${attr.displayName.toLowerCase() === 'talla'}">
+                        ${Resource.msg('label.select.size', 'checkout', null)} ${attr.displayName.toLowerCase()}
+                    <iselse/>
+                        ${attr.displayName}
+                    </isif>
+                </iscomment>
+                ${attr.displayName}
             </label>
+            <iscomment> <span>${JSON.stringify(product.gtmData.categoryID)}</span> </iscomment>
+            <isif condition="${product.gtmData.categoryID === "cinturones"}">
+                <div>
 
-            <!-- Trigger Modal Sizes Guide -->
-            <div class="row sizes-guide-cont">
-                <div class="col sizes-guide d-flex align-items-center">
-                    <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.png')}" alt="Guia de tallas" />
-                    <!-- Button trigger modal -->
-                    <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
-                        ${Resource.msg('size.guide', 'common', null)}
-                    </button>
                 </div>
-            </div>
+
+            <iselseif condition="${product.gtmData.categoryID === "mancuernillas"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "pisacorbatas"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "tirantes"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "pulseras"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "corbatas"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "moños"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "kitsdeceremonia"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "gorros"}" />
+                <div>
+
+                </div>
+            <iselseif condition="${product.gtmData.categoryID === "panuelos"}" />
+                <div>
+
+                </div>
+            <iselse/>
+                <!-- Trigger Modal Sizes Guide -->
+                <div class="row sizes-guide-cont">
+                    <div class="col sizes-guide d-flex align-items-center">
+                        <img class="mr-2" src="${URLUtils.staticURL('/images/pdp/size_guide.png')}"
+                            alt="Guia de tallas" />
+                        <!-- Button trigger modal -->
+                        <button type="button" data-toggle="modal" data-target="#guiaDeTallas">
+                            ${Resource.msg('size.guide', 'common', null)}
+                        </button>
+                    </div>
+                </div>
+            </isif>
+
         </div>
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom-select form-control select-${attr.id}"
