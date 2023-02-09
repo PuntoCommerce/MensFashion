@@ -442,22 +442,7 @@ var scrollAnimate = require('../components/scrollAnimate');
                     members.gotoStage('customer');
                 });
 
-                // $('.shipping-summary .edit-button', plugin).on('click', function () {
-                //     if (!$('#checkout-main').hasClass('multi-ship')) {
-                //         $('body').trigger('shipping:selectSingleShipping');
-                //     }
-
-                //     members.gotoStage('shipping');
-                // });
-
-                // $('.payment-summary .edit-button', plugin).on('click', function () {
-                //     members.gotoStage('payment');
-                // });
-
-                // edit shipping & pay
-
-                console.log(('#custom-edit-shipping', plugin));
-                $('#custom-edit-shipping').on('click', function () {
+                $('.shipping-summary .edit-button', plugin).on('click', function () {
                     if (!$('#checkout-main').hasClass('multi-ship')) {
                         $('body').trigger('shipping:selectSingleShipping');
                     }
@@ -465,7 +450,7 @@ var scrollAnimate = require('../components/scrollAnimate');
                     members.gotoStage('shipping');
                 });
 
-                $('#custom-edit-payment').on('click', function () {
+                $('.payment-summary .edit-button', plugin).on('click', function () {
                     members.gotoStage('payment');
                 });
 
