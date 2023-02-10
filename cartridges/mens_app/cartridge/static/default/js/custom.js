@@ -604,11 +604,11 @@ if (widthScreen > 543) {
   }
 
    window.onload=function(){
-    var pos=window.name || 0;
+    var pos=window.product.ID || 0;
     document.getElementById('plp-products').scrollTop=pos;
     }
     window.onunload=function(){
-    window.name=document.getElementById('plp-products').scrollTop;
+    window.product.ID=document.getElementById('plp-products').scrollTop;
     }
 
 localValues();
