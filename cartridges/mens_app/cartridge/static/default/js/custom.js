@@ -603,12 +603,5 @@ if (widthScreen > 543) {
     active.classList.add('active');
   }
 
-   window.onload=function(){
-    var pos=window.product.ID || 0;
-    document.getElementById('plp-products').scrollTop=pos;
-    }
-    window.onunload=function(){
-    window.product.ID=document.getElementById('plp-products').scrollTop;
-    }
 
 localValues();

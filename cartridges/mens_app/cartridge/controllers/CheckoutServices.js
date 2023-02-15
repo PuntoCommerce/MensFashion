@@ -45,6 +45,12 @@ server.replace('PlaceOrder', server.middleware.https, function (req, res, next) 
         return next();
     }
 
+    var usingMultiShipping = req.session.privacyCache.get('usingMultiShipping');
+    if (usingMultiShipping === true && currentBasket.shipments.length < 2) {
+        req.session.privacyCache.set('usingMultiShipping', false);
+        usingMultiShipping = false;
+    }
+
     var validatedProducts = validationHelpers.validateProducts(currentBasket);
     if (validatedProducts.error) {
         res.json({

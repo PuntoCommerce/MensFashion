@@ -77,9 +77,9 @@
                 ${Resource.msg('field.customer.email', 'checkout', null)}
             </label>
             <input type="text" class="form-control email" id="email-guest" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile
-                                                                                          .email: ''}" <isprint
+                                                                                          .email: ''}" aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email"<isprint
                     value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
-                    aria-describedby="guestEmailInvalidMessage" >
+                     >
             <div class="invalid-feedback" id="guestEmailInvalidMessage"></div>
         </div>
     </div>
