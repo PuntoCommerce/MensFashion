@@ -442,7 +442,7 @@ var scrollAnimate = require('../components/scrollAnimate');
                     members.gotoStage('customer');
                 });
 
-                /* $('.shipping-summary .edit-button', plugin).on('click', function () {
+                $('.shipping-summary .edit-button', plugin).on('click', function () {
                     if (!$('#checkout-main').hasClass('multi-ship')) {
                         $('body').trigger('shipping:selectSingleShipping');
                     }
@@ -452,9 +452,9 @@ var scrollAnimate = require('../components/scrollAnimate');
 
                 $('.payment-summary .edit-button', plugin).on('click', function () {
                     members.gotoStage('payment');
-                });  */
+                }); 
 
-                $ ('#custom-edit-shipping').on('click', function () {
+               /*  $ ('#custom-edit-shipping').on('click', function () {
                     if (!$('#checkout-main').hasClass('multi-ship')) {
                         $('body').trigger('shipping:selectSingleShipping');
                     }
@@ -464,7 +464,7 @@ var scrollAnimate = require('../components/scrollAnimate');
 
                 $('#custom-edit-payment').on('click', function () {
                     members.gotoStage('payment');
-                }); 
+                });  */
                 //
                 // remember stage (e.g. shipping)
                 //

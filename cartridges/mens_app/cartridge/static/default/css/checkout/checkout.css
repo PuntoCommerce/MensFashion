@@ -638,6 +638,7 @@ span.ship-to-phone {
   text-transform: uppercase;
   letter-spacing: -0.011em;
   margin-right: 30%;
+  color: #000;
 }
 .card.payment-summary .custom_edit-button:hover {
   color: #fff;
@@ -662,7 +663,7 @@ span.ship-to-phone {
   }
 }
 .order-total-summary .edit-button {
-  color: #000;
+  color: var(--color-grey5);
 }
 .order-total-summary .leading-lines p {
   margin: 0;

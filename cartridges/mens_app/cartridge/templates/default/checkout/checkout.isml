@@ -80,7 +80,7 @@
                             <div class="card-header clearfix">
                                 <h2 class="pull-left card-header-custom">${Resource.msg('heading.checkout.customer', 'checkout', null)}</h2>
                                 <isif condition="${!pdict.customer.registeredUser}">
-                                    <button class="edit-button pull-right"
+                                    <button class="edit-button custom_edit-button pull-right"
                                         aria-label="${Resource.msg('action.edit.step.msg.customer', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </isif>
                             </div>
@@ -103,13 +103,17 @@
                             <div class="card-body row">
                                 <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
-                                    <button class="custom_edit-button" id="custom-edit-shipping"
-                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                   
+                                    
+                                   <iscomment>  <button class="custom_edit-button" id="custom-edit-shipping"
+                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                 </div>
                                 <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
-                                    <button class="custom_edit-button" id="custom-edit-payment"
-                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                    <button class="edit-button custom_edit-button"
+                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.payment', 'checkout', null)}</button>
+                                   <iscomment>  <button class="custom_edit-button" id="custom-edit-payment"
+                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                 </div>
                             </div>
                         </div>
@@ -123,6 +127,7 @@
                                 <div class="row steps-container">
                                     <div class="next-step-button col-12">
                                         <div class="mb-sm-5">
+
                                             <button
                                                 class="btn btn--gray btn__small text-uppercase btn-block submit-shipping col-sm-12 col-lg-10"
                                                 type="submit" name="submit" value="submit-shipping" <isif
@@ -166,8 +171,8 @@
                             <div class="card-body order-total-summary ">
                                 <div class="card shipping-summary">
                                     <div class="card-header clearfix summary-edit-btn">
-                                      <iscomment>   <button class="edit-button pull-right"
-                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
+                                     <button class="edit-button pull-right"
+                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.shipping', 'checkout', null)}</button>
                                     </div>
                                     <div class="card-body">
                                         <isinclude template="checkout/shipping/shippingSummary" />
