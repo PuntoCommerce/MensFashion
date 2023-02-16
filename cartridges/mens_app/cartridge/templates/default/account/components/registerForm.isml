@@ -30,12 +30,13 @@
         <label class="form-control-label" for="registration-form-phone">
             <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
         </label>
-        <input type="tel" class="form-control" id="registration-form-phone"
+        <input type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" maxlength="10" class="form-control" id="registration-form-phone"
             data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
             data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form', 'forms', null)}"
             data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
             aria-describedby="form-phone-error" <isprint value=${pdict.profileForm.customer.phone.attributes}
             encoding="off" />
+
         >
         <div class="invalid-feedback" id="form-phone-error"></div>
     </div>

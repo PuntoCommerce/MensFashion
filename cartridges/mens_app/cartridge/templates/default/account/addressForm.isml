@@ -122,7 +122,7 @@
     <label class="form-control-label address--labels" for="phone">
         <isprint value="${pdict.addressForm.phone.label}" encoding="htmlcontent" />
     </label>
-    <input type="text" class="form-control" id="phone" <isprint value="${pdict.addressForm.phone.attributes}"
+    <input type="text" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" maxlength="10" class="form-control" id="phone" <isprint value="${pdict.addressForm.phone.attributes}"
         encoding="off" />
     autocomplete="tel">
     <div class="invalid-feedback"></div>
