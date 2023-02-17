@@ -3782,7 +3782,7 @@ header nav.homepage:hover {
 
 .homepage-alert-register__card__close {
   position: absolute;
-  transform: translate(790px, -180px);
+  transform: translate(730px, -180px);
   background: none;
   border: none;
   color: #fff;
@@ -4144,7 +4144,7 @@ header nav.homepage:hover {
   }
 
   .homepage-alert-register__card__close {
-    transform: translate(130px, -290px);
+    transform: translate(130px, -320px);
   }
 }
 
