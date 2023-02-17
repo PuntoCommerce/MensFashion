@@ -3725,7 +3725,7 @@ header nav.homepage:hover {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 0px 28px;
+  padding: 0px 13px;
   border-radius: 5px 0 0 5px;
   background: #fff;
 }
@@ -3743,7 +3743,7 @@ header nav.homepage:hover {
 .homepage-alert-register__card__info__text {
   font-family: "Avenir-Next";
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 .homepage-alert-register__card__info__text.text2{
