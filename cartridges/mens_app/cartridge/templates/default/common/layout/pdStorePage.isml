@@ -62,12 +62,17 @@
                 data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
 
             <div class="homepage-alert-register__card__info">
-                <span class="homepage-alert-register__card__info__title">¡Año Nuevo, Sitio Nuevo!</span>
+                <span class="homepage-alert-register__card__info__title">¡ESTAMOS ESTRENANDO</span>
+                <span class="homepage-alert-register__card__info__title title2">NUEVA PÁGINA!</span>
                 <span class="homepage-alert-register__card__info__text">
-                    ¡Tenemos una buena noticia!
-                    Estamos estrenando un nuevo sitio, el cual es más rápido y fácil para comprar.
-                    Te invitamos a que te vuelvas a registrar para poder seguir realizando las compras de tus productos
-                    favoritos y recibir $200 en tu primera compra en línea.
+                    Nos renovamos para brindarte la mejor experiencia de compra, festeja con nosotros y regístrate
+                    nuevamente para ganarte
+                </span>
+                <span class="homepage-alert-register__card__info__text text2">
+                    ¡Un cupón con valor de $200 pesos!
+                </span>
+                <span class="homepage-alert-register__card__info__text">
+                    Úsalo en tu primera compra en línea.
                 </span>
                 <span class="homepage-alert-register__card__info__text--small">
                     *Válido únicamente en tu primera compra, compra mínima de $1,000. Vigencia 30 días a partir de
@@ -77,7 +82,7 @@
                     CUENTA</a>
             </div>
             <div class="homepage-alert-register__card__image">
-                <img src="${URLUtils.staticURL('images/alert-home-image.png')}" alt="homeAlert">
+                <img src="${URLUtils.staticURL('images/alert-home-image-change.png')}" alt="homeAlert">
             </div>
         </div>
     </div>

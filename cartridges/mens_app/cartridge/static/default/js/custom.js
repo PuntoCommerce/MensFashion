@@ -603,5 +603,8 @@ if (widthScreen > 543) {
     active.classList.add('active');
   }
 
+  //
+  console.log("Si estamos");
+
 
 localValues();

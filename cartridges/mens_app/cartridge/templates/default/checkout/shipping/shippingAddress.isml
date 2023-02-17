@@ -1,4 +1,5 @@
 <isset name="addressFields" value="${pdict.forms.shippingForm.shippingAddress.addressFields}" scope="page" />
+<isset name="customPickup" value="${pdict.forms.shippingForm.customPickUp}" scope="page" />
 <isif condition="${shippingModel.shippingAddress}">
     <isset name="shippingAddress" value="${shippingModel.shippingAddress}" scope="page" />
 <iselse/>
@@ -7,6 +8,8 @@
 
 <div class="row">
     <div class="col-sm-12 col-lg-10">
+    <p>${JSON.stringify(customPickup)}</p>
+     
         <div class="form-group
             ${addressFields.firstName.mandatory === true ? 'required' : ''}
             ${addressFields.firstName.htmlName}">
@@ -160,12 +163,15 @@
             <label class="form-control-label" for="shippingCountry${lineItem ? lineItem.UUID : 'default'}">
                 ${Resource.msg('field.shipping.address.country', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
+           
             <select class="form-control shippingCountry custom-select"
                 id="shippingCountry${lineItem ? lineItem.UUID : 'default'}" <isprint
                 value=${addressFields.country.attributes} encoding="off" />
             autocomplete="shipping country"
             aria-describedby="${lineItem ? lineItem.UUID : 'default'}Country">
             <option label=" "></option>
+
+            
             <isloop items=${addressFields.country.options} var="country">
                 <option id="${country.id}" value="${country.htmlValue}" ${shippingAddress.countryCode && country.id === shippingAddress.countryCode.value ? 'selected' : 'MX'}>${country.label}</option>
             </isloop>
@@ -208,13 +214,15 @@
 
 <div class="row">
     <div class="col-sm-12 col-lg-10">
-        <div class="form-group">
+       <div class="form-group
+            ${customPickup.email.mandatory === true ? 'required' : ''}
+            ${customPickup.email.htmlName}">
             <label class="form-control-label">
                 ${Resource.msg('field.customer.email', 'checkout', null)}
             </label>
-            <input type="text" class="form-control email" id="email-guest" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint  value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
-                    aria-describedby="guestEmailInvalidMessage" >
-            <div class="invalid-feedback" id="guestEmailInvalidMessage"></div>
+            <input type="text" class="form-control email" id="email${lineItem ? lineItem.UUID : 'default'}" aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint  value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
+                     >
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email"></div>
             <div class="checkout-mail-cont">
                 <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
             </div>
