@@ -8,8 +8,6 @@
 
 <div class="row">
     <div class="col-sm-12 col-lg-10">
-    <p>${JSON.stringify(customPickup)}</p>
-     
         <div class="form-group
             ${addressFields.firstName.mandatory === true ? 'required' : ''}
             ${addressFields.firstName.htmlName}">

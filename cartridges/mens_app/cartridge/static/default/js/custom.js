@@ -603,8 +603,19 @@ if (widthScreen > 543) {
     active.classList.add('active');
   }
 
-  //
-  console.log("Si estamos");
-
+  if (navigator.appVersion.includes("Mac OS") || navigator.appVersion.includes("iPhone")){
+    //estilo css para mac os 
+    var styles = `
+    @media (max-width: 991px){
+      .homepage-alert-register__card__info{
+        padding: 150px 28px 42px 28px;
+      }
+    }
+    `
+  var styleSheet = document.createElement("style")
+  styleSheet.type = "text/css"
+  styleSheet.innerText = styles
+  document.head.appendChild(styleSheet)
+};
 
 localValues();
