@@ -212,15 +212,21 @@
 
 <div class="row">
     <div class="col-sm-12 col-lg-10">
-       <div class="form-group
-            ${customPickup.email.mandatory === true ? 'required' : ''}
-            ${customPickup.email.htmlName}">
-            <label class="form-control-label">
+        <div class="form-group
+            ${addressFields.email.mandatory === true ? 'required' : ''}
+            ${addressFields.email.htmlName}">
+            <label class="form-control-label" for="shippingEmail${lineItem ? lineItem.UUID : 'default'}">
                 ${Resource.msg('field.customer.email', 'checkout', null)}
             </label>
-            <input type="text" class="form-control email" id="email${lineItem ? lineItem.UUID : 'default'}" aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint  value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
-                     >
-            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email"></div>
+            <input autofocus type="email" class="form-control shippingEmail"
+                id="shippingEmail${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email"
+                value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint value="${addressFields.email.attributes}"
+                encoding="off" />
+             >
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email">
+                <isprint value="${addressFields.email.error}">
+            </div>
             <div class="checkout-mail-cont">
                 <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
             </div>
