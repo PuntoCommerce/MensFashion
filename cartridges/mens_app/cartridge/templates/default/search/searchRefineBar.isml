@@ -65,6 +65,7 @@
                     <!--- ATTRIBUTE REFINEMENTS --->
                     <isif condition="${refinement.isAttributeRefinement || refinement.isPromotionRefinement}">
                         <isinclude template="search/refinements/attributes" />
+                        
                     </isif>
 
                     <!--- PRICE REFINEMENTS --->

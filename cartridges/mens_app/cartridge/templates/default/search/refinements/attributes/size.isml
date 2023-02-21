@@ -1,5 +1,6 @@
 <li class="col-sm-2 col-md-12 ${!refinementValue.selectable ? 'disabled' : ''}">
-    <button onclick="categoryBreadcums(this)" data-href="${refinementValue.url}" class="a ${!refinementValue.selectable ? 'disabled' : ''}"
+   <isif condition="${refinementValue.displayValue === "G"}">
+        <button onclick="categoryBreadcums(this)" data-href="${refinementValue.url}" class="a ${!refinementValue.selectable ? 'disabled' : ''}"
         <isif condition="${!refinementValue.selectable}">disabled</isif>
     >
         <isif condition="${refinementValue.selected && refinementValue.selectable}">
@@ -19,4 +20,7 @@
             ${refinementValue.title}
         </span>
     </button>
+   <iselse/>
+       
+   </isif>
 </li>

@@ -26,8 +26,14 @@
                         <isloop items="${product.promotions}" var="promotion" status="loopstatus">
                             <isif condition="${promotion.calloutMsg === null}">
 
+                            <iselseif condition="${promotion.calloutMsg === "%"}" />
+                                  <div class="highlight-promotion-porcent">
+
+                                    <span id="highlight-price">${promotion.calloutMsg}</span>
+                                </div>
                             <iselse/>
                                 <div class="highlight-promotion">
+
                                     <span id="highlight-price">${promotion.calloutMsg}</span>
                                 </div>
                             </isif>
