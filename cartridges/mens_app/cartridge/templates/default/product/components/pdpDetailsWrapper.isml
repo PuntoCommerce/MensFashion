@@ -7,7 +7,6 @@
 <div class="custom-padding product-details-container h-100">
     <div class="row justify-content-start h-100 pdp-content-container">
         <div class="col-lg-10 product-details-wrapper sticky-details">
-    <p>${JSON.stringify(product)}</p>
             <!-- Product Name -->
             <div class="row">
                 <div class="col">

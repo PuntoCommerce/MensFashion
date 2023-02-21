@@ -216,7 +216,7 @@
             ${addressFields.email.mandatory === true ? 'required' : ''}
             ${addressFields.email.htmlName}">
             <label class="form-control-label" for="shippingEmail${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.customer.email', 'checkout', null)}
+                ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
             <input autofocus type="email" class="form-control shippingEmail"
                 id="shippingEmail${lineItem ? lineItem.UUID : 'default'}"
