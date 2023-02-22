@@ -2966,9 +2966,9 @@ ul {
 
 .summary__swatches .swatch-border-circle {
   border: 1px solid #000;
-  border-radius: 28px;
-  width: 28px;
-  height: 28px;
+  border-radius: 22px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4251,13 +4251,14 @@ header nav.homepage:hover {
 }
 
 .summary__pricing {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-flex;
+  align-items: left;
+  flex-direction: column;
 }
 
 .summary__pricing .highlight-container {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .summary__pricing .highlight-container .highlight-promotion:nth-child(1) {
@@ -5397,9 +5398,10 @@ header nav.homepage:hover {
   display: flex;
   align-items: center;
   margin-left: 24px;
+  flex-direction: row-reverse;
 }
 
-.prices .promotion-item-container .promotion-item:nth-child(1) {
+/* .prices .promotion-item-container .promotion-item:nth-child(1) {
   background: #fd4237;
   color: white;
   padding: 3px 14px 0;
@@ -5416,6 +5418,22 @@ header nav.homepage:hover {
   font-size: 12px;
   font-weight: bold;
   font-family: "Avenir-Next";
+} */
+
+.promotion-item{
+  width: max-content;
+  background-color: #D9D9D9;
+  color: #000000;
+  padding: 3px 14px 0;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Avenir-Next";
+  margin-right: 6px;
+}
+
+.promotion-item-desc{
+  color: #FF0000;
+  font-weight: 800;
 }
 
 del {
@@ -6663,5 +6681,19 @@ a .oauth-facebook--button {
 
   #paquetes3x1699 .experience-component.experience-commerce_layouts-carousel .carousel-title {
     padding: 16px;
+  }
+}
+/*Design responsive product tile & pdp*/
+@media (max-width: 991px){
+  .summary__pricing .highlight-container{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .promotion-item.promotion-item-desc {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .promotion-item{
+    margin-bottom: 5px;
   }
 }
