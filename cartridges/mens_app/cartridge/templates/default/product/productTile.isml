@@ -13,21 +13,23 @@
         <iscomment>
             <div class="summary_price">
         </iscomment>
-        <div class="summary_swatch">
-            <div class="summary__swatches">
-                <isif condition="${pdict.display.swatches !== false}">
-                    <isinclude template="product/components/productTileSwatch" />
-                </isif>
-            </div>
-        </div>
+        
         
             <div class="summary__pricing">
+
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />
                 <iselse/>
                     <isinclude template="product/components/pricing/main" />
                 </isif>
+                <div class="summary_swatch">
+            <div class="summary__swatches">
+                <isif condition="${pdict.display.swatches !== false}">
+                    <isinclude template="product/components/productTileSwatch" />
+                </isif>
+            </div>
+        </div>
                 <isif condition="${product.promotions.length > 0}">
                     <div class="highlight-container">
                         <isloop items="${product.promotions}" var="promotion" status="promdet">

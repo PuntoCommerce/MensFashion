@@ -4,11 +4,10 @@
             <button onclick="categoryBreadcums(this)" data-href="${category.url}" class="d-flex align-items-center">
                 <!--- Radio button --->
                 <isif condition="${category.selected}">
-                    <img class="checkBox" src="${URLUtils.staticURL('/images/check.svg')}"/>
+                    <img class="checkBox" src="${URLUtils.staticURL('/images/check_circle.svg')}" alt="Circle check"/>
                 <iselse>
-                    <svg class="checkBox" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="19" height="19" rx="3.5" stroke="black"/>
-                    </svg>
+                <img class="" src="${URLUtils.staticURL('/images/eclipse_filter.svg')}" alt="Circle filter" />
+                
                 </isif>
 
                 <!--- Label --->

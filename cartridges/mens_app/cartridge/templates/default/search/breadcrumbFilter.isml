@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col  plp-tools__item plp-tools__item--no-responsive">
+        <ol class="plp-tools__item--breadcrums">
+            <isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" status="loopState">
+                <li class="">
+                 <img class=""  src="${URLUtils.staticURL('/images/back_circle.svg')}" alt="">
+                
+                <a class="${loopState.last? 'last-item' : 'item'}" href="${breadcrumbValue.url}" >${breadcrumbValue.htmlValue}
+                    
+                    </a>
+                </li>
+            </isloop>
+        </ol>
+    </div>
+</div>

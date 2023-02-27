@@ -59,7 +59,8 @@
                     <!--- CATEGORY REFINEMENTS --->
                     <isif condition="${refinement.isCategoryRefinement}">
                         <isset name="categories" value="${refinement.values}" scope="page" />
-                        <isinclude template="search/refinements/categories" />
+                        <isinclude
+                                url="${URLUtils.url('Search-BreadcrumsFilter', 'cgid', pdict.productSearch.category.id)}" />
                     </isif>
 
                     <!--- ATTRIBUTE REFINEMENTS --->

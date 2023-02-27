@@ -2,6 +2,12 @@
 <iselse/>
 <li class="color-attribute ${!refinementValue.selectable ? 'disabled' : ''}">
     <button onclick="categoryBreadcums(this)" data-href="${refinementValue.url}" <isif condition="${!refinementValue.selectable}">disabled</isif> >
+           <isif condition="${category.selected}">
+                    <img class="checkBox" src="${URLUtils.staticURL('/images/check_circle.svg')}" alt="Circle check"/>
+                <iselse>
+                <img class="" src="${URLUtils.staticURL('/images/eclipse_filter.svg')}" alt="Circle filter" />
+                
+                </isif>
         <span class="${refinementValue.swatchId.toLowerCase().replace(/ /g, '-')} swatch-circle color-value swatch-mark
               <isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif>
               <isif condition="${!refinementValue.selectable}">disabled</isif>"

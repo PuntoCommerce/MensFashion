@@ -16,4 +16,17 @@ server.get("Breadcrums", (req, res, next) => {
     next();
 });
 
+server.get("BreadcrumsFilter", (req, res, next) => {
+    var productHelper = require("*/cartridge/scripts/helpers/productHelpers");
+    var breadcrumbs = productHelper.getAllBreadcrumbs(
+        req.querystring.cgid,
+        null,
+        []
+    );
+    res.render("search/breadcrumbFilter", {
+        breadcrumbs: breadcrumbs.reverse(),
+    });
+    next();
+});
+
 module.exports = server.exports();

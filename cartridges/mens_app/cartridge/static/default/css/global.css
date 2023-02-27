@@ -18182,7 +18182,7 @@ div.availability {
 }
 
 .product-tile .tile-body .price {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 0;
 }
 
@@ -18229,7 +18229,7 @@ div.availability {
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: capitalize;
 }
 
@@ -22690,7 +22690,7 @@ button.close:focus {
 }
 
 .dropdown .containerDropdown .dropdown-menu-content .menuCont .menuColCont {
-  padding: 10px 2.5rem;
+  padding: 10px 1.5rem;
   width: 30%;
 }
 
@@ -22874,7 +22874,7 @@ button.close:focus {
   }
 
   .container-custom-plp .product-tile.summary .tile-body {
-    padding-top: 30px;
+    margin-top: 30px;
   }
 }
 
