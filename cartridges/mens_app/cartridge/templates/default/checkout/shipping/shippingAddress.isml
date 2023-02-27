@@ -1,5 +1,5 @@
 <isset name="addressFields" value="${pdict.forms.shippingForm.shippingAddress.addressFields}" scope="page" />
-<isset name="customPickup" value="${pdict.forms.shippingForm.customPickUp}" scope="page" />
+<isset name="coCustomer" value="${pdict.forms.guestCustomerForm}" scope="page" />
 <isif condition="${shippingModel.shippingAddress}">
     <isset name="shippingAddress" value="${shippingModel.shippingAddress}" scope="page" />
 <iselse/>
@@ -210,26 +210,47 @@
     </div>
 </div>
 
-<div class="row">
+ <div class="row">
     <div class="col-sm-12 col-lg-10">
         <div class="form-group
-            ${addressFields.email.mandatory === true ? 'required' : ''}
-            ${addressFields.email.htmlName}">
-            <label class="form-control-label" for="shippingEmail${lineItem ? lineItem.UUID : 'default'}">
+            ${coCustomer.email.mandatory === true ? 'required' : ''}
+            ${coCustomer.email.htmlName}">
+            <label class="form-control-label" for="email-guest">
                 ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
-            <input autofocus type="email" class="form-control shippingEmail"
-                id="shippingEmail${lineItem ? lineItem.UUID : 'default'}"
+
+            <input type="email" class="form-control email"
+                id="email-guest"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email"
-                value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint value="${addressFields.email.attributes}"
+                value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint value=${coCustomer.email.attributes}
                 encoding="off" />
              >
+
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email">
-                <isprint value="${addressFields.email.error}">
+                <isprint value="${coCustomer.email.error}">
             </div>
             <div class="checkout-mail-cont">
                 <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
             </div>
         </div>
     </div>
-</div>
+</div>  
+
+ <iscomment> <div class="row">
+    <div class="col-sm-12 col-lg-10">
+        <div class="form-group
+            ${pdict.forms.guestCustomerForm.email.mandatory === true ? 'required' : ''}
+            ${pdict.forms.guestCustomerForm.email.htmlName}">
+            <label class="form-control-label" for="email-guest">
+                ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+            </label>
+            
+            <input type="text" class="form-control email" id="email-guest" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint  value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
+                    aria-describedby="guestEmailInvalidMessage" >
+            <div class="invalid-feedback" id="guestEmailInvalidMessage"><isprint value="${pdict.forms.guestCustomerForm.email.error}"></div>
+            <div class="checkout-mail-cont">
+                <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
+            </div>
+        </div>
+    </div>
+</div>  </iscomment>
