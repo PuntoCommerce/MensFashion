@@ -41,4 +41,12 @@ server.get(
   }
 );
 
+server.append('Begin', function (req, res, next) {
+  var viewData = res.getViewData();
+  var usingMultiShipping = false;
+  viewData.order.usingMultiShipping = usingMultiShipping;
+  res.setViewData(viewData);
+  next();
+});
+
 module.exports = server.exports();
