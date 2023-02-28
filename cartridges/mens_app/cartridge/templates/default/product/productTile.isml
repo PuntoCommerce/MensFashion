@@ -37,7 +37,7 @@
                             <div>
                                 
                             </div>
-                            <iselseif condition="${promotion.name === "-10%" || promotion.name === "-15%" || promotion.name === "-20%" || promotion.name === "-25%" ||
+                            <iselseif condition="${promotion.name === "-5%" || promotion.name === "-10%" || promotion.name === "-15%" || promotion.name === "-20%" || promotion.name === "-25%" ||
                                                      promotion.name === "-30%" || promotion.name === "-35%" || promotion.name === "-40%" || promotion.name === "-45%" ||
                                                      promotion.name === "-50%" || promotion.name === "-55%" || promotion.name === "-60%" || promotion.name === "-65%" ||
                                                      promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" || promotion.name === "-85%" ||

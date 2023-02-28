@@ -18157,7 +18157,7 @@ div.availability {
 }
 
 .product-tile .tile-body {
-  padding: 0.625em 0 1.875em;
+  padding: 0;
 }
 
 .product-tile .tile-body .color-swatches {
@@ -22636,6 +22636,7 @@ button.close:focus {
 
 .refinements .values.content {
   margin-bottom: 0 !important;
+  overflow: hidden;
 }
 
 .refinement {

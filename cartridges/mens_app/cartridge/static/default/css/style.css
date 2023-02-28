@@ -966,6 +966,10 @@ footer .content,
   font-family: "Avenir-LT-Std" !important;
 }
 
+.li-us svg{
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
 .goToUp {
   position: fixed !important;
   bottom: 25%;
@@ -1453,6 +1457,7 @@ footer .socialMedia-paymentMethods {
   border-bottom: 1px solid rgba(68, 68, 68, 0.5);
   width: 100%;
   padding-bottom: 6px;
+  letter-spacing: 1px;
 }
 
 #menuDesk .dropdown-menu .sub-category-item.item a {
@@ -1466,6 +1471,7 @@ footer .socialMedia-paymentMethods {
   color: #000000;
   font-size: 14px;
   font-family: "Avenir-Bold" !important;
+  letter-spacing: 1px;
 }
 
 .catTitle a {
@@ -1977,11 +1983,11 @@ ul {
 }
 
 .values.content li {
-  padding: 5px 0;
+  padding: 5px 0 12px 0;
 }
 
 .values.content li:first-child {
-  padding-top: 18px;
+  padding-top: 0;
 }
 
 .values.content button {
@@ -1993,7 +1999,8 @@ ul {
 }
 
 .refinement-color .values.content li {
-  padding: 8px 0;
+  display: inline-flex;
+  max-height: 55px;
 }
 
 .card {
@@ -4396,7 +4403,7 @@ header nav.homepage:hover {
   text-transform: capitalize;
   font-family: "Avenir-Next";
   font-size: 15px;
-  visibility: hidden;
+  padding: 6px 10px;
 }
 
 .color-attribute:hover .colorName {
@@ -4557,10 +4564,17 @@ header nav.homepage:hover {
   }
 }
 
-.values.content span,
-.values.content img {
+.values.content span {
   pointer-events: none;
   padding: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+.values.content img{
+  margin: 5px 10px 5px 0;
+  width: 20px;
+  height: 20px;
 }
 
 .refinements .plp-tools__item--breadcrums{
@@ -6761,8 +6775,7 @@ a .oauth-facebook--button {
     grid-row: 1;
   }
   .promotion-item{
-    margin-bottom: 5px;
-    padding: 3px 10px 0;
+    padding: 0 10px 0;
     font-size: 10px;
   }
   .product-grid--full-width {
