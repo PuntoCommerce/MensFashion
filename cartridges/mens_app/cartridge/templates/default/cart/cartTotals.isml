@@ -1,11 +1,20 @@
-<iscomment> <div class="row">
+<div class="row">
+    <div class="col-8">
+        <p>${Resource.msg('label.subtotal.price','cart',null)}</p>
+    </div>
+    <div class="col-4">
+        <p class="text-right tax-total">${pdict.totals.subTotal}</p>
+    </div>
+</div>
+<div class="row">
     <div class="col-8">
         <p>${Resource.msg('label.shipping.cost','cart',null)}</p>
     </div>
+   
     <div class="col-4">
         <p class="text-right shipping-cost">${pdict.totals.totalShippingCost}</p>
     </div>
-</div> </iscomment>
+</div>
 
 <!--- Shipping Discount --->
 <div class="row shipping-discount <isif condition="${pdict.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">

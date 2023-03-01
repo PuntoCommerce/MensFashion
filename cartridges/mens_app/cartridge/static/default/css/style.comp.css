@@ -1384,7 +1384,7 @@ ul {
   padding: 0 6px;
 }
 .plp-tools__item--breadcrums li .last-item {
-  color: #000000 !important;
+  background-image: url(..images/point_black.svg) !important;
 }
 
 .container-custom-plp {
@@ -2170,6 +2170,7 @@ ul {
 .summary__swatches {
   align-items: flex-end;
   display: flex;
+  margin-bottom: 6px;
 }
 .summary__swatches .swatch-circle {
   height: 15px;

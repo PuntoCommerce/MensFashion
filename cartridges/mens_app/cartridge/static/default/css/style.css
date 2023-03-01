@@ -785,12 +785,16 @@ header .main-menu {
     line-height: 30px;
   }
 
-  #customMenuResponsive .sub-items--lvl-two .nav-link.parent,
-  #customMenuResponsive .sub-items--lvl-two .nav-link {
+  
+  #customMenuResponsive .sub-items--lvl-two .nav-link.parent{
     font-size: 22px !important;
     line-height: 30px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: 0 !important;
+  }
+
+  #customMenuResponsive .sub-items--lvl-two .nav-link {
+    text-transform: capitalize;
   }
 
   #customMenuResponsive .sub-items--lvl-two .sub-items-parent,
@@ -962,6 +966,10 @@ footer .content,
   font-family: "Avenir-LT-Std" !important;
 }
 
+.li-us svg{
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
 .goToUp {
   position: fixed !important;
   bottom: 25%;
@@ -1441,18 +1449,29 @@ footer .socialMedia-paymentMethods {
   color: #000000;
 }
 
-#menuDesk .dropdown-menu .category-item.item a,
-#menuDesk .dropdown-menu .sub-category-item.item a {
+#menuDesk .dropdown-menu .category-item.item a {
+  display: flex;
   color: #000000;
   font-family: 'Avenir-Next';
   font-size: 14px;
   border-bottom: 1px solid rgba(68, 68, 68, 0.5);
+  width: 100%;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+#menuDesk .dropdown-menu .sub-category-item.item a {
+  color: #000000;
+  font-family: 'Avenir-Next';
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 #menuDesk .nav-item .nav-link.dropdown-toggle {
   color: #000000;
   font-size: 14px;
   font-family: "Avenir-Bold" !important;
+  letter-spacing: 1px;
 }
 
 .catTitle a {
@@ -1637,6 +1656,25 @@ footer .socialMedia-paymentMethods {
   width: 100vw;
 }
 
+.dropdown-menu .containerDropdown{
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.dropdown-menu .containerDropdown .div-img-menu{
+  justify-content: right;
+}
+
+.dropdown-menu .containerDropdown .img-menu-drop{
+  margin-right: 20px;
+  max-width: 280px;
+  max-height: 278px;
+}
+
+.dropdown-menu .containerDropdown .coleccion.img2.img-menu-drop, .dropdown-menu .containerDropdown .ocasion.img2.img-menu-drop{
+  display: none;
+}
+
 .dropdown-menu-content {
   width: 65%;
 }
@@ -1647,6 +1685,10 @@ ul {
 
 .dropdown-menu .category-item {
   font-weight: bold;
+}
+
+.sub-category-item.item a{
+  margin-bottom: 6px;
 }
 
 /*#customMenu:hover{
@@ -1720,7 +1762,7 @@ ul {
   #customMenuResponsive a {
     color: #000000 !important;
     font-family: "Avenir-LT-Std";
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .subCategory-item .toggle-subcategories {
@@ -1741,7 +1783,7 @@ ul {
 
   #customMenuResponsive .category-title {
     font-family: "Avenir-LT-Std" !important;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 27px;
     text-transform: uppercase;
     text-align: left;
@@ -1794,6 +1836,7 @@ ul {
 
   #customMenuResponsive .toggle-category-button.back {
     margin-bottom: 20px;
+    padding: 0;
   }
 
   #customMenuResponsive #actions-icons {
@@ -1844,6 +1887,14 @@ ul {
   .plp-tools__item {
     padding-right: 0;
   }
+}
+
+.refinement-categoría .plp-tools__item--breadcrums{
+  flex-direction: column;
+}
+
+.refinement-categoría .plp-tools__item--breadcrums li .item::after, .refinement-categoría .breadcums-subcategories::before{
+  display: none;
 }
 
 .plp-tools__item--breadcrums {
@@ -1932,11 +1983,11 @@ ul {
 }
 
 .values.content li {
-  padding: 5px 0;
+  padding: 5px 0 12px 0;
 }
 
 .values.content li:first-child {
-  padding-top: 18px;
+  padding-top: 0;
 }
 
 .values.content button {
@@ -1948,7 +1999,8 @@ ul {
 }
 
 .refinement-color .values.content li {
-  padding: 8px 0;
+  display: inline-flex;
+  max-height: 55px;
 }
 
 .card {
@@ -2165,12 +2217,16 @@ ul {
 }
 
 .refinement-bar .refinement-color .values.content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .refinement-bar .refinement-color .color-attribute {
   text-align: center;
+}
+
+.refinements li.color-attribute button{
+  display: inline-flex;
 }
 
 .title.btn.text-left.btn-block.d-md-none {
@@ -2936,7 +2992,7 @@ ul {
 }
 
 .summary .tile-body {
-  padding-top: 24px;
+  margin-top: 24px;
 }
 
 .summary__name {
@@ -2957,6 +3013,7 @@ ul {
 .summary__swatches {
   align-items: flex-end;
   display: flex;
+  margin-bottom: 6px;
 }
 
 .summary__swatches .swatches {
@@ -2966,9 +3023,9 @@ ul {
 
 .summary__swatches .swatch-border-circle {
   border: 1px solid #000;
-  border-radius: 28px;
-  width: 28px;
-  height: 28px;
+  border-radius: 22px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3041,9 +3098,17 @@ ul {
 }
 
 @media (max-width: 543px) {
+  .summary__swatches .swatch-border-circle{
+    height: 17.73px;
+    width: 17.73px;
+  }
   .summary__swatches .swatch-border-circle .swatch-circle {
-    height: 18px;
-    width: 18px;
+    height: 14.73px;
+    width: 14.73px;
+  }
+  .summary__swatches .swatch-circle{
+    height: 15.73px;
+    width: 15.73px;
   }
 }
 
@@ -4251,13 +4316,14 @@ header nav.homepage:hover {
 }
 
 .summary__pricing {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-flex;
+  align-items: left;
+  flex-direction: column;
 }
 
 .summary__pricing .highlight-container {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .summary__pricing .highlight-container .highlight-promotion:nth-child(1) {
@@ -4337,7 +4403,7 @@ header nav.homepage:hover {
   text-transform: capitalize;
   font-family: "Avenir-Next";
   font-size: 15px;
-  visibility: hidden;
+  padding: 6px 10px;
 }
 
 .color-attribute:hover .colorName {
@@ -4498,9 +4564,22 @@ header nav.homepage:hover {
   }
 }
 
-.values.content span,
-.values.content img {
+.values.content span {
   pointer-events: none;
+  padding: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+.values.content img{
+  margin: 5px 10px 5px 0;
+  width: 20px;
+  height: 20px;
+}
+
+.refinements .plp-tools__item--breadcrums{
+  display: flex;
+  flex-direction: column;
 }
 
 .breadcums-subcategories {
@@ -4533,15 +4612,13 @@ header nav.homepage:hover {
 
   .refinements .card-header span {
     font-size: 16px;
-  }
-
-  .refinement span {
-    font-size: 15px;
+    font-weight: bold;
   }
 
   .filters {
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Avenir-Next";
+    font-weight: bold;
   }
 
   .filter-collapse-button {
@@ -4557,6 +4634,11 @@ header nav.homepage:hover {
     visibility: visible;
     font-size: 12px;
   }
+}
+
+.refinement span{
+  font-size: 15px;
+  font-family: "Avenir-Next";
 }
 
 @media (max-width: 543px) {
@@ -5397,9 +5479,10 @@ header nav.homepage:hover {
   display: flex;
   align-items: center;
   margin-left: 24px;
+  flex-direction: row-reverse;
 }
 
-.prices .promotion-item-container .promotion-item:nth-child(1) {
+/* .prices .promotion-item-container .promotion-item:nth-child(1) {
   background: #fd4237;
   color: white;
   padding: 3px 14px 0;
@@ -5416,6 +5499,22 @@ header nav.homepage:hover {
   font-size: 12px;
   font-weight: bold;
   font-family: "Avenir-Next";
+} */
+
+.promotion-item{
+  width: max-content;
+  background-color: #D9D9D9;
+  color: #000000;
+  padding: 3px 14px 0;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Avenir-Next";
+  margin-right: 6px;
+}
+
+.promotion-item-desc{
+  color: #FF0000;
+  font-weight: 800;
 }
 
 del {
@@ -6665,3 +6764,34 @@ a .oauth-facebook--button {
     padding: 16px;
   }
 }
+/*Design responsive product tile & pdp*/
+@media (max-width: 991px){
+  .summary__pricing .highlight-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+  .promotion-item.promotion-item-desc {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .promotion-item{
+    padding: 0 10px 0;
+    font-size: 10px;
+  }
+  .product-grid--full-width {
+    padding-bottom: 10px;
+  }
+
+  .product-tile .tile-body .pdp-link a, .product-tile .tile-body .price, 
+  .container-custom-plp .summary__pricing .price .prices-container .sales-price .sales{
+    font-size: 14px;
+  }
+  .refinement span {
+    font-size: 13px;
+  }
+}
+
+.container-custom-plp .summary__pricing .price .prices-container .sales-price .sales{
+  font-size: 14px;
+}
+

@@ -13,42 +13,67 @@
         <iscomment>
             <div class="summary_price">
         </iscomment>
-        <div>
+        
+        
             <div class="summary__pricing">
+
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />
                 <iselse/>
                     <isinclude template="product/components/pricing/main" />
                 </isif>
-                <isif condition="${product.promotions.length > 0}">
-                    <div class="highlight-container">
-                        <isloop items="${product.promotions}" var="promotion" status="loopstatus">
-                            <isif condition="${promotion.calloutMsg === null}">
-
-                            <iselseif condition="${promotion.calloutMsg === "%"}" />
-                                  <div class="highlight-promotion-porcent">
-
-                                    <span id="highlight-price">${promotion.calloutMsg}</span>
-                                </div>
-                            <iselse/>
-                                <div class="highlight-promotion">
-
-                                    <span id="highlight-price">${promotion.calloutMsg}</span>
-                                </div>
-                            </isif>
-                        </isloop>
-                    </div>
-                </isif>
-            </div>
-        </div>
-        <div class="summary_swatch">
+                <div class="summary_swatch">
             <div class="summary__swatches">
                 <isif condition="${pdict.display.swatches !== false}">
                     <isinclude template="product/components/productTileSwatch" />
                 </isif>
             </div>
         </div>
+                <isif condition="${product.promotions.length > 0}">
+                    <div class="highlight-container">
+                        <isloop items="${product.promotions}" var="promotion" status="promdet">
+                            <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
+                            <div>
+                                
+                            </div>
+                            <iselseif condition="${promotion.name === "-5%" || promotion.name === "-10%" || promotion.name === "-15%" || promotion.name === "-20%" || promotion.name === "-25%" ||
+                                                     promotion.name === "-30%" || promotion.name === "-35%" || promotion.name === "-40%" || promotion.name === "-45%" ||
+                                                     promotion.name === "-50%" || promotion.name === "-55%" || promotion.name === "-60%" || promotion.name === "-65%" ||
+                                                     promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" || promotion.name === "-85%" ||
+                                                     promotion.name === "-90%" || promotion.name === "-95%"}" />
+                                <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
+                            <iselseif condition="${promotion.name !== null}" />
+                                <span class="promotion-item">${promotion.name}</span>
+                            <iselse/>
+                                <span class="promotion-item">${promotion.calloutMsg}</span>
+                                <iscomment> <p>${JSON.stringify(promotion.name)}</p> </iscomment>
+                            </isif>
+                            
+                        </isloop>
+
+                        <iscomment>
+                            <isloop items="${product.promotions}" var="promotion" status="loopstatus">
+
+                                <isif condition="${promotion.calloutMsg === null}">
+                                <iselseif condition="${promotion.name === " -10%"}" />
+                                    <div class="highlight-promotion">
+                                        <span id="highlight-price">${promotion.name.replace('de descuento', '')}</span>
+                                    </div>
+
+                                <iselse/>
+                                    <div class="highlight-promotion">
+
+                                        <span id="highlight-price">${promotion.calloutMsg}</span>
+                                    </div>
+                                </isif>
+                            </isloop>
+                        </iscomment>
+                    </div>
+                </isif>
+            </div>
+        
+        
         <iscomment>
             <div class="summary__footer">
                 <a class="btn btn--gray btn__small"
