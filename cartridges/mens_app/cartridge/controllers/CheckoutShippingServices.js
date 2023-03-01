@@ -75,12 +75,12 @@ server.replace(
       var emailFormErrors = COHelpers.validateShippingForm(emailForm);
       var shippingFormErrors = COHelpers.validateShippingForm(form.shippingAddress.addressFields);
 
-      if (Object.keys(shippingFormErrors).length > 0 || Object.keys(emailFormErrors).length > 0) {
+      if (Object.keys(shippingFormErrors).length > 0 && Object.keys(emailFormErrors).length > 0) {
           req.session.privacyCache.set(currentBasket.defaultShipment.UUID, 'invalid');
 
           res.json({
               form: form,
-              fieldErrors: [emailFormErrors,shippingFormErrors],
+              fieldErrors: [shippingFormErrors, emailFormErrors,],
               serverErrors: [],
               error: true
           });
