@@ -131,6 +131,8 @@ function updateSelectedShippingMethod() {
   }, 1000);
 }
 
+//Show Pickup Form
+
 const togglePickupForm = (selectPickupBtn) => {
   const pickupForm = document.querySelector(
     ".shipping-form .shipping-address-block"
@@ -138,10 +140,12 @@ const togglePickupForm = (selectPickupBtn) => {
   const addressField = document.querySelectorAll(
     ".shipping-form .shipping-address-block .hidde-pickup"
   );
+
   setTimeout(() => {
     pickupForm.classList.remove("d-none");
     if (selectPickupBtn.classList.contains("active")) {
-      addressField.forEach((el) => {
+
+      return addressField.forEach((el) => {
         el.classList.add("d-none");
       });
     } else {
@@ -152,8 +156,27 @@ const togglePickupForm = (selectPickupBtn) => {
   }, 500);
 };
 
+
 let selectShippingBtn = document.querySelector("#selectShipping");
 let selectPickupBtn = document.querySelector("#selectPickup");
+
+if (selectPickupBtn.classList.contains('active')) {
+  const pickupForm = document.querySelector(
+    ".shipping-form .shipping-address-block"
+  );
+
+  const addressField = document.querySelectorAll(
+    ".shipping-form .shipping-address-block .hidde-pickup"
+  );
+  pickupForm.classList.remove("d-none");
+
+  addressField.forEach((el) => {
+    el.classList.add("d-none");
+  });
+}
+
+// ============================================
+
 if (selectShippingBtn) {
   selectShippingBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -320,14 +343,14 @@ function showPassword() {
 
 function showHoursInStore() {
   const storeHours = document.querySelectorAll('.store-hours');
-  storeHours.forEach(i =>{
+  storeHours.forEach(i => {
     i.classList.remove('d-none')
   })
 }
 
 function hideHoursInStore() {
   const storeHours = document.querySelectorAll('.store-hours');
-  storeHours.forEach(i =>{
+  storeHours.forEach(i => {
     i.classList.add('d-none')
   })
 }
@@ -336,7 +359,7 @@ const csvPaypal = document.querySelector('.css-gokeqi');
 const paypalButtonCreditCard = document.querySelector('.paypal-button-number-1')
 
 if (paypalButtonCreditCard) {
-  paypalButtonCreditCard.addEventListener('click', () =>{
+  paypalButtonCreditCard.addEventListener('click', () => {
     console.log(csvPaypal);
   })
 }
