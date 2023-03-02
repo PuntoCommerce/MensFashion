@@ -43,10 +43,10 @@
                         </div>
                     </button>
                 </div>
-                <div class="col-12 col-lg-6 mb-3">
+                <div class="col-12 col-lg-6 mb-3 d-none">
                     <button id="selectPickup" class="shipping-check-card h-100 w-100 <isloop items="
                     ${shippingModel.applicableShippingMethods}" var="shippingMethod">
-                    <isif condition="${shippingMethod.ID == "pickup" && shippingMethod.selected}">
+                    <isif condition="${shippingMethod.ID === "pickup" && shippingMethod.selected}">
                         active
                     </isif>
                     </isloop>">
