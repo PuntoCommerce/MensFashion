@@ -45,19 +45,31 @@ function hashController(newUrl) {
 
 const parametersURL = (url) => {
 
-    if(url.includes('customer')) {
+    if (url.includes('customer')) {
         stepBar(1);
     }
-    if(url.includes('shipping')) {
+    if (url.includes('shipping')) {
         stepBar(1);
+        reloadPaymentPage(1)
     }
-    if(url.includes('payment')) {
+    if (url.includes('payment')) {
         stepBar(2);
+        reloadPaymentPage(2)
     }
-    if(url.includes('placeOrder')) {
+    if (url.includes('placeOrder')) {
         stepBar(3);
     }
 }
+
+function reloadPaymentPage(step) {
+    if (step === 1) return sessionStorage.setItem('isLoaded', 'false');
+
+    if (step === 2 && sessionStorage.getItem('isLoaded') === 'false') {
+        window.location.reload()
+        sessionStorage.setItem('isLoaded', 'true');
+    }
+}
+
 // launch progress bar on page load
 document.addEventListener('DOMContentLoaded', (e) => {
     hashController();

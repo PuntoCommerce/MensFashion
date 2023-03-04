@@ -14,7 +14,7 @@
             data-address-mode="${!pdict.order.billing.billingAddress.address ? 'new' : 'edit'}" <isprint
             value=${pdict.forms.billingForm.attributes} encoding="off" /> novalidate>
 
-        <fieldset class="billing-address-block d-none">
+        <fieldset class="billing-address-block ${pdict.order.shipping[0].selectedShippingMethod.ID === 'pickup' ? '' : 'd-none'}">
             <!-------------------------------------------------------------------------->
             <!-- Billing Address Selector                                             -->
             <!-------------------------------------------------------------------------->
@@ -49,7 +49,7 @@
         <!-------------------------------------------------------------------------->
         <!-- Contact Info (Email and Phone)                                       -->
         <!-------------------------------------------------------------------------->
-        <fieldset class="contact-info-block d-none">
+        <fieldset class="contact-info-block ${pdict.order.shipping[0].selectedShippingMethod.ID === 'pickup' ? '' : 'd-none'}">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group
