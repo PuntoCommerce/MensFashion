@@ -6806,6 +6806,10 @@ a .oauth-facebook--button {
     font-size: 13px;
   }
 
+  .plp-tools__item--breadcrums li .item{
+    font-size: 15px;
+  }
+
 }
 
 .container-custom-plp .summary__pricing .price .prices-container .sales-price .sales {

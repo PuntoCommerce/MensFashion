@@ -95,6 +95,24 @@
 
 <!--- make drop down--->
 <div class="row  hidde-pickup">
+<div class="col-6 col-lg-5">
+        <div class="form-group
+            ${addressFields.postalCode.mandatory === true ? 'required' : ''}
+            ${addressFields.postalCode.htmlName}">
+            <label class="form-control-label" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
+                ${Resource.msg('field.shipping.address.zip.code', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+            </label>
+            <input type="text" class="form-control shippingZipCode"
+                id="shippingZipCode${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}ZipCode"
+                value="${shippingAddress.postalCode || ''}" <isprint value="${addressFields.postalCode.attributes}"
+                encoding="off" />
+            autocomplete="shipping postal-code">
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}ZipCode">
+                <isprint value="${addressFields.postalCode.error}">
+            </div>
+        </div>
+    </div>
     <div class="col-6 col-lg-5">
         <div class="form-group
             ${addressFields.states.stateCode.mandatory === true ? 'required' : ''}
@@ -113,24 +131,6 @@
             </select>
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}State">
                 <isprint value="${addressFields.states.stateCode.error}">
-            </div>
-        </div>
-    </div>
-    <div class="col-6 col-lg-5">
-        <div class="form-group
-            ${addressFields.postalCode.mandatory === true ? 'required' : ''}
-            ${addressFields.postalCode.htmlName}">
-            <label class="form-control-label" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.zip.code', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
-            </label>
-            <input type="text" class="form-control shippingZipCode"
-                id="shippingZipCode${lineItem ? lineItem.UUID : 'default'}"
-                aria-describedby="${lineItem ? lineItem.UUID : 'default'}ZipCode"
-                value="${shippingAddress.postalCode || ''}" <isprint value="${addressFields.postalCode.attributes}"
-                encoding="off" />
-            autocomplete="shipping postal-code">
-            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}ZipCode">
-                <isprint value="${addressFields.postalCode.error}">
             </div>
         </div>
     </div>
