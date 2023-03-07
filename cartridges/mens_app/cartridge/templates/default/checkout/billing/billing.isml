@@ -11,7 +11,7 @@
     </div>
     <div class="card-body">
         <form autocomplete="on" method="POST" action="${URLUtils.url('CheckoutServices-SubmitPayment')}"
-            data-address-mode="${!pdict.order.billing.billingAddress.address ? 'new' : 'edit'}" <isprint
+            data-address-mode="${!pdict.order.billing.billingAddress.address ? 'new' : 'new'}" <isprint
             value=${pdict.forms.billingForm.attributes} encoding="off" /> novalidate>
 
         <fieldset class="billing-address-block ${pdict.order.shipping[0].selectedShippingMethod.ID === 'pickup' ? '' : 'd-none'}">
@@ -24,7 +24,9 @@
                         ${Resource.msg('heading.billing.address', 'checkout', null)}
                     </label>
 
-                    <isinclude template="checkout/billing/addressSelector" />
+                    <div class="d-none">
+                        <isinclude template="checkout/billing/addressSelector" />
+                    </div>
                     <div class="invalid-feedback"></div>
                     <div class="row justify-content-center">
                         <button class="col-12 col-md-5 m-3 btn--gray btn__small text-uppercase btn-show-details btn"
