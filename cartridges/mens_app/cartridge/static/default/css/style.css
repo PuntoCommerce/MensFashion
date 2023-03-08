@@ -1245,12 +1245,17 @@ footer .socialMedia-paymentMethods {
 
   .footer-item button {
     margin-top: 17px;
-    margin-bottom: 17px;
   }
 
   .collapsible-xs .title:after {
     position: absolute;
     right: 30px;
+  }
+
+  #footer-visa, #footer-mastercard, #footer-americanexpress,
+  #footer-mercadopago, #footer-paypal{
+    width: 41.09px;
+    height: 24.11px;
   }
 }
 
@@ -1322,6 +1327,8 @@ footer .socialMedia-paymentMethods {
 
   .footer-item.collapsible-md .title {
     color: #fff !important;
+    font-size: 14px;
+    font-family: "Avenir-next" !important;
   }
 
   .footer-item.collapsible-md .title::after {
@@ -2002,8 +2009,9 @@ ul {
 }
 
 .refinement-color .values.content li {
-  display: inline-flex;
+  display: flex;
   max-height: 50px;
+  flex-direction: column;
 }
 
 .card {
@@ -2220,8 +2228,8 @@ ul {
 }
 
 .refinement-bar .refinement-color .values.content {
-  display: inline-flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .refinement-bar .refinement-color .color-attribute {
@@ -4408,8 +4416,11 @@ header nav.homepage:hover {
   text-transform: capitalize;
   font-family: "Avenir-Next";
   font-size: 15px;
-  padding: 6px 10px;
+  padding: 0;
+  visibility: hidden;
+  position: absolute;
 }
+
 
 .color-attribute:hover .colorName {
   visibility: visible;
@@ -4845,7 +4856,6 @@ header nav.homepage:hover {
   font-size: 12px;
   padding: 0;
   font-family: 'Avenir-Next';
-  border-bottom: 0.5px solid #000;
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: row-reverse;
@@ -4857,7 +4867,7 @@ header nav.homepage:hover {
 }
 
 .product-detail .attribute label {
-  font-size: 16px;
+  font-size: 14px;
   min-height: 13px;
 }
 
@@ -4919,6 +4929,8 @@ header nav.homepage:hover {
   font-weight: bold;
   pointer-events: none;
   font-size: 12px;
+  height: 43px;
+  width: 100%;
 }
 
 .product-detail .cart-and-ipay button:disabled:nth-child(1) {
@@ -4933,6 +4945,8 @@ header nav.homepage:hover {
   font-family: "Avenir-Next";
   font-weight: bold;
   font-size: 12px;
+  height: 43px;
+  width: 100%;
 }
 
 .product-detail .cart-and-ipay button:nth-child(1) {
@@ -4945,7 +4959,7 @@ header nav.homepage:hover {
 }
 
 .product-detail .price .sales .value {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Avenir-Next";
   font-weight: 500;
 }
@@ -4970,6 +4984,7 @@ header nav.homepage:hover {
 .product-detail .description-and-detail .title.btn {
   line-height: normal;
   padding: 0;
+  color: #64656A;
 }
 
 .product-detail .description-and-detail .product-attributes ul {
@@ -5132,29 +5147,34 @@ header nav.homepage:hover {
 }
 
 .select-talla {
-  width: 201px;
-  height: 30px;
+  min-width: 233px;
+  height: 43px;
   font-size: 13px;
   background: none !important;
 }
 
 .quantity-select {
-  width: 152px;
+  width: 120px;
   height: 30px;
   font-size: 13px;
   background: none !important;
-  margin-right: 18px;
+  margin-right: 12px;
+}
+
+.product-detail .quantity-select{
+  height: 43px;
 }
 
 .row-talla {
   width: fit-content;
-  margin-right: 18px;
+  margin-right: 12px;
 }
 
 .add-to-cart-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-column-gap: 18px;
+  width: 90%;
 }
 
 .add-to-cart-grid .btn-add-cart,
@@ -5175,12 +5195,17 @@ header nav.homepage:hover {
   pointer-events: none;
 }
 
+.description-and-detail #accordion-content::before{
+  right: 13%;
+  color: #64656A;
+}
+
 #accordion-content.open::before {
   content: '\f077';
   width: 20px;
   height: 20px;
   position: absolute;
-  right: 17px;
+  right: 13%;
   display: flex;
   font-family: 'FontAwesome';
   align-items: center;
@@ -5206,6 +5231,11 @@ header nav.homepage:hover {
   font-size: 12px;
   font-family: "Avenir-Next";
   padding: 0;
+  padding-right: 15px;
+}
+
+#accordion-content.details .content{
+  color: #64656A;
 }
 
 @media only screen and (max-width: 768px) {
@@ -5416,6 +5446,7 @@ header nav.homepage:hover {
 .availability-msg {
   margin: 0 0 0 28px;
   color: #23ac00;
+  font-size: 14px;
 }
 
 .fa.fa-whatsapp {
@@ -5553,7 +5584,7 @@ del {
 }
 
 .description-and-detail .title {
-  font-family: "Avenir-bold" !important;
+  font-family: "Avenir-Next" !important;
   font-size: 12px !important;
   font-weight: 400 !important;
 }
@@ -6808,6 +6839,49 @@ a .oauth-facebook--button {
 
   .plp-tools__item--breadcrums li .item{
     font-size: 15px;
+  }
+
+  .attributesPdp .row-color{
+    width: max-content;
+    margin-top: 24px;
+  }
+
+  .product-detail .cart-and-ipay button{
+    max-width: 392px;
+  }
+
+  .description-and-detail #accordion-content::before {
+    right: 5%;
+  }
+
+  .select-talla {
+    width: 210px;
+  }
+
+  .product-details-wrapper .promotion-item{
+    font-size: 13px;
+  }
+
+  .product-detail .attribute label {
+    font-size: 16px;
+  }
+
+  .product-detail .prices{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .prices .promotion-item-container{
+    margin-left: 0;
+  }
+
+  .product-detail .sizes-guide button{
+    font-size: 12px;
+  }
+
+  .description-and-detail .title{
+    font-size: 12px;
+    font-family: "Avenir-Next" ;
   }
 
 }

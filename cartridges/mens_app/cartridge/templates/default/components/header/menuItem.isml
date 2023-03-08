@@ -2,8 +2,9 @@
    <div class="containerDropdown col-12">
       <div class="d-flex col-4 div-img-menu ${category.id}" style="width:100%">
       
-         <img class="${category.id} img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.name}.png"
+         <img class="${category.id} img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}.png"
             alt="${Resource.msg('global.storename', 'common', null)}" />
+
 
       <img class="${category.id} img2 img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}2.png"
             alt="${Resource.msg('global.storename', 'common', null)}" />
@@ -21,7 +22,7 @@
                         </div>
                         <isif condition="${category.subCategories}">
                            <ul class="subcategories">
-                              <isloop items="${category.subCategories}" var="subCategory">
+                              <isloop items="${category.subCategories}"  var="subCategory" status="loopstatus" >
                                  <li class="sub-category-item item ${subCategory.name}" imageurl="
                               <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
                                  ">

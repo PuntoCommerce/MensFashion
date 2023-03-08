@@ -2,6 +2,7 @@
     <div class="col-8">
         <p>${Resource.msg('label.subtotal.price','cart',null)}</p>
     </div>
+    <iscomment> <p>${JSON.stringify(pdict.totals)}</p> </iscomment>
     <div class="col-4">
         <p class="text-right tax-total">${pdict.totals.subTotal}</p>
     </div>

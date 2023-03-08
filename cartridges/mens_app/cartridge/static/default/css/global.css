@@ -21368,8 +21368,8 @@ div.availability {
   opacity: 1;
   text-transform: uppercase;
   transition: 0.3s ease all;
-  height: 31px;
-  width: 31px;
+  height: 43px;
+  width: 43px;
   padding: 9px;
   border-radius: 3px;
 }
@@ -22638,7 +22638,10 @@ button.close:focus {
   margin-bottom: 0 !important;
   overflow: hidden;
 }
-
+.refinement-bar .refinement-colores .values.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .refinement {
   margin-bottom: 10px !important;
 }
@@ -22707,7 +22710,7 @@ button.close:focus {
 }
 
 .description-and-detail {
-  width: 100%;
+  width: 90%;
 }
 
 .accordion-description ul{
