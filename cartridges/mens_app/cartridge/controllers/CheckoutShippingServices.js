@@ -2,8 +2,10 @@ const server = require("server");
 server.extend(module.superModule);
 const Transaction = require("dw/system/Transaction");
 var BasketMgr = require("dw/order/BasketMgr");
+const COHelpers = require("*/cartridge/scripts/checkout/checkoutHelpers");
 var csrfProtection = require('*/cartridge/scripts/middleware/csrf');
 
+<<<<<<< HEAD
 /**
  * Handle Ajax shipping form submit
  */
@@ -186,6 +188,8 @@ server.replace(
   }
 );
 
+=======
+>>>>>>> 2cb975c3bb96f52ce0321a8de227cce4eaf63788
 server.append("SubmitShipping", (req, res, next) => {
   const coCustomerForm = server.forms.getForm("coCustomer");
   const viewData = res.getViewData();
@@ -203,5 +207,25 @@ server.append("SubmitShipping", (req, res, next) => {
 
   next();
 });
+
+server.append('SubmitShipping', (req, res, next) => {
+  const currentBasket = BasketMgr.getCurrentBasket();
+
+  const customerForm = server.forms.getForm("coCustomer");
+  const customerErrors = COHelpers.validateShippingForm(customerForm);
+
+  if (Object.keys(customerErrors).length > 0) {
+    req.session.privacyCache.set(currentBasket.defaultShipment.UUID, 'invalid');
+
+    res.json({
+      form: customerForm,
+      fieldErrors: [customerErrors],
+      serverErrors: [],
+      error: true
+    });
+  }
+
+  next();
+})
 
 module.exports = server.exports();
