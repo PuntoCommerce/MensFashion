@@ -608,7 +608,20 @@ if (widthScreen > 543) {
     var styles = `
     @media (max-width: 991px){
       .homepage-alert-register__card__info{
-        padding: 150px 28px 42px 28px;
+        padding: 40px 28px 42px 28px;
+        margin-top: 50px;
+        z-index: 1;
+      }
+
+      .homepage-alert-register__card__image{
+        padding-top: 27%;
+      }
+
+      .homepage-alert-register__card__close {
+        transform: translate(130px, -270px);
+      }
+      .homepage-alert-register{
+        top: 45%;
       }
     }
     `
