@@ -142,7 +142,7 @@ const togglePickupForm = (selectPickupBtn) => {
   );
 
   setTimeout(() => {
-    pickupForm.classList.remove("d-none");
+    pickupForm.classList.add("d-block");
     if (selectPickupBtn.classList.contains("active")) {
 
       return addressField.forEach((el) => {
@@ -168,7 +168,7 @@ if (selectPickupBtn.classList.contains('active')) {
   const addressField = document.querySelectorAll(
     ".shipping-form .shipping-address-block .hidde-pickup"
   );
-  pickupForm.classList.remove("d-none");
+  pickupForm.classList.add("d-block");
 
   addressField.forEach((el) => {
     el.classList.add("d-none");
