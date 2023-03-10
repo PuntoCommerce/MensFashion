@@ -4,12 +4,16 @@ const Transaction = require("dw/system/Transaction");
 var BasketMgr = require("dw/order/BasketMgr");
 const COHelpers = require("*/cartridge/scripts/checkout/checkoutHelpers");
 var csrfProtection = require('*/cartridge/scripts/middleware/csrf');
+const SystemObjectMgr = require("dw/object/SystemObjectMgr");
+const CustomerMgr = require("dw/customer/CustomerMgr");
 
 server.append("SubmitShipping", (req, res, next) => {
   const coCustomerForm = server.forms.getForm("coCustomer");
   const viewData = res.getViewData();
   const shippingInfo = server.forms.getForm("shipping").shippingAddress.addressFields;
+ /*  const inter = server.forms.getForm("shipping").shippingAddress; */
   const currentBasket = BasketMgr.getCurrentBasket();
+
 
   Transaction.wrap(function () {
     currentBasket.setCustomerEmail(coCustomerForm.email.value);
@@ -19,6 +23,16 @@ server.append("SubmitShipping", (req, res, next) => {
       );
     }
   });
+
+  try {
+    /* const info = SystemObjectMgr.querySystemObjects('OrderAddress'); */
+    const customer = CustomerMgr.getProfile(numeroInterior);
+    Transaction.wrap(function(){
+      customer.custom.
+    })
+  } catch (error) {
+    const err = error;
+  }
 
   next();
 });

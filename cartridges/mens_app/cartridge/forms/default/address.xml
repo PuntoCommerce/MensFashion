@@ -9,6 +9,8 @@
            missing-error="address.lastname.missing" range-error="error.message.50orless"/>
     <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="50"
            missing-error="address.address1.missing" range-error="error.message.50orless"/>
+    <field formid="noInterior" label="label.input.noInterior" type="string" mandatory="true" binding="noInterior" max-length="10"
+           missing-error="address.noInterior.missing" range-error="error.message.50orless"/>
     <field formid="address2" label="label.input.address2" type="string" mandatory="true" binding="address2"
            missing-error="address.address2.missing" max-length="50" range-error="error.message.50orless"/>
     <field formid="city" label="label.input.city" type="string" mandatory="true" binding="city" min-length="2"
