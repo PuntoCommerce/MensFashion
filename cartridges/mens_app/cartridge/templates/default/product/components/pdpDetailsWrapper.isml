@@ -9,7 +9,7 @@
         <div class="col-lg-10 col-xl-9 product-details-wrapper sticky-details">
             <!-- Product Name -->
             <div class="row">
-                <div class="col-11">
+                <div class="col-12">
                     <span class="product-name">${product.productName.toLowerCase()}</span>
                     <!-- Applicable Promotions -->
                     <iscomment>

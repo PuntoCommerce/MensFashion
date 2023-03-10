@@ -18053,6 +18053,7 @@ div.availability {
   display: inline-grid;
   grid-template-columns: 1fr auto;
   margin-bottom: 18px;
+  width: 100%;
 }
 
 .attributesPdp .row-color {
@@ -18063,6 +18064,7 @@ div.availability {
 .attributesPdp .row-talla {
   grid-row: 2;
   grid-column: 1;
+  width: 100%;
 }
 
 .quantityPDP {
@@ -21388,7 +21390,7 @@ div.availability {
   display: flex;
   flex-direction: row;
   color: #231F20;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Avenir-Next';
   font-weight: 500;
 }
@@ -22710,7 +22712,7 @@ button.close:focus {
 }
 
 .description-and-detail {
-  width: 90%;
+  width: 100%;
 }
 
 .accordion-description ul{
@@ -22796,7 +22798,7 @@ button.close:focus {
   }
 
   .summary__pricing .price .prices-container .sales-price .sales {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .summary__pricing .strike-through span {
