@@ -243,7 +243,7 @@
 .next-step-button {
   bottom: 0;
   z-index: 3;
-  padding: 0;
+  padding: 0 10px 0 15px;
 }
 .shipping-methods {
   font-size: 1.125em;
@@ -413,7 +413,7 @@ span.ship-to-phone {
 .form-control-label span {
   font-family: "Avenir-Next";
   margin-left: 10px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .shipping-check-card {
   padding: 30px;

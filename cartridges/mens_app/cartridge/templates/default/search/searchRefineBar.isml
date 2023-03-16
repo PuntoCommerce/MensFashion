@@ -9,7 +9,12 @@
                 FILTROS
             </p>
             <button class="d-md-none d-sm-block btn-close-filter" onclick="hideFilter()" type="button">
-                <i class="fa fa-times" aria-hidden="true"></i>
+                 <img class="icon-close-filter"
+                src="${URLUtils.staticURL('/images/close3.svg')}"
+                
+                alt=""
+                title=""
+        >
             </button>
         </div>
         <iscomment> <button class="close" onclick="toggleFilters()">
