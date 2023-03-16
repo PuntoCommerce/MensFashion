@@ -363,3 +363,23 @@ if (paypalButtonCreditCard) {
     console.log(csvPaypal);
   })
 }
+
+
+///// Quantity products listener
+const totalQuantity = () => {
+  let allCardProducts = document.querySelectorAll('.product-line-item .pricing.qty-card-quantity-count');
+  let totalText = document.querySelector('.total-of-items');
+  let total = 0;
+  let label = document.querySelector('.order-receipt-label.ml-1');
+
+  allCardProducts.forEach(element => {
+    total  = total + parseInt(element.innerText);
+  });
+
+  totalText.innerText = total;
+
+  if (total > 1 ) label.innerText = 'productos' ;
+
+}
+
+totalQuantity();
