@@ -42,12 +42,8 @@ server.get(
 );
 
 server.append('Begin', function (req, res, next) {
-
   var viewData = res.getViewData();
   var usingMultiShipping = false;
-
-  const noInterior = req.body;
-
   viewData.order.usingMultiShipping = usingMultiShipping;
   res.setViewData(viewData);
   next();

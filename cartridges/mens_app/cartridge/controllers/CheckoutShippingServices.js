@@ -24,16 +24,6 @@ server.append("SubmitShipping", (req, res, next) => {
     }
   });
 
-  try {
-    /* const info = SystemObjectMgr.querySystemObjects('OrderAddress'); */
-    const customer = CustomerMgr.getProfile(numeroInterior);
-    Transaction.wrap(function(){
-      customer.custom.
-    })
-  } catch (error) {
-    const err = error;
-  }
-
   next();
 });
 
