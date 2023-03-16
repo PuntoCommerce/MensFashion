@@ -1,7 +1,37 @@
 <!--- Products quatity --->
 <div class="row leading-lines subtotal-item">
     <div class="col-6 d-flex">
-        <p class="text-right"><span>${JSON.stringify(pdict.order.shipping[0].productLineItems.totalQuantity)}</span></p>
+
+        <isif condition="${pdict.order.shipping[4].productLineItems.totalQuantity}">
+                <p class="text-right"><span>${JSON.stringify(
+                pdict.order.shipping[0].productLineItems.totalQuantity + 
+                pdict.order.shipping[1].productLineItems.totalQuantity +
+                pdict.order.shipping[2].productLineItems.totalQuantity +
+                pdict.order.shipping[3].productLineItems.totalQuantity +
+                pdict.order.shipping[4].productLineItems.totalQuantity
+                )}</span></p>
+        <iselseif condition="${pdict.order.shipping[3].productLineItems.totalQuantity}" />
+                <p class="text-right"><span>${JSON.stringify(
+                pdict.order.shipping[0].productLineItems.totalQuantity + 
+                pdict.order.shipping[1].productLineItems.totalQuantity +
+                pdict.order.shipping[2].productLineItems.totalQuantity +
+                pdict.order.shipping[3].productLineItems.totalQuantity +
+                )}</span></p>
+        <iselseif condition="${pdict.order.shipping[2].productLineItems.totalQuantity}" />
+            <p class="text-right"><span>${JSON.stringify(
+                pdict.order.shipping[0].productLineItems.totalQuantity + 
+                pdict.order.shipping[1].productLineItems.totalQuantity + 
+                pdict.order.shipping[2].productLineItems.totalQuantity
+                )}</span></p>
+        <iselseif condition="${pdict.order.shipping[1].productLineItems.totalQuantity}" />
+             <p class="text-right"><span>${JSON.stringify(
+                pdict.order.shipping[0].productLineItems.totalQuantity + 
+                pdict.order.shipping[1].productLineItems.totalQuantity)}</span></p>
+        <iselse/>
+            <p class="text-right"><span>${JSON.stringify(pdict.order.shipping[0].productLineItems.totalQuantity)}</span></p>
+        </isif>
+
+
         <p class="order-receipt-label ml-1">
         <isif condition="${pdict.order.shipping[0].productLineItems.totalQuantity > 1}">
             <span class="text-lowercase">${Resource.msg('label.order.products', 'confirmation', null)}</span>

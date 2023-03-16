@@ -19,7 +19,7 @@
                 </isloop>
 
                 <isif condition="${pdict.order.shipping.length > 1}">
-                    <isinclude template="checkout/shipping/shippingCard" />
+                    <iscomment> <isinclude template="checkout/shipping/shippingCard" /> </iscomment>
         </div>
         </isif>
         </isloop>
