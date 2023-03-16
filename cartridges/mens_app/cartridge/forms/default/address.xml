@@ -7,12 +7,16 @@
            max-length="50" missing-error="address.firstname.missing" range-error="error.message.50orless"/>
     <field formid="lastName" label="label.input.lastname.profile" type="string" mandatory="true" binding="lastName" max-length="50"
            missing-error="address.lastname.missing" range-error="error.message.50orless"/>
-    <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="50"
+    <field formid="address1" label="label.input.address1" type="string" mandatory="true" binding="address1" max-length="40"
            missing-error="address.address1.missing" range-error="error.message.50orless"/>
-    <field formid="noInterior" label="label.input.noInterior" type="string" mandatory="true" binding="noInterior" max-length="10"
-           missing-error="address.noInterior.missing" range-error="error.message.50orless"/>
+    <field formid="numExt" label="label.input.numExt" type="string" mandatory="true" binding="numExt" max-length="4"
+           missing-error="address.numExt.missing" range-error="error.message.50orless"/>
+    <field formid="numInt" label="label.input.numInt" type="string" binding="numInt" max-length="4"
+           missing-error="address.numInt.missing" range-error="error.message.50orless"/>
     <field formid="address2" label="label.input.address2" type="string" mandatory="true" binding="address2"
            missing-error="address.address2.missing" max-length="50" range-error="error.message.50orless"/>
+    <field formid="reference" label="label.input.reference" type="string" mandatory="true" binding="reference" max-length="30"
+           missing-error="address.reference.missing" range-error="error.message.50orless"/>
     <field formid="city" label="label.input.city" type="string" mandatory="true" binding="city" min-length="2"
            max-length="40" missing-error="address.city.missing" range-error="error.message.between2and50"/>
 

@@ -36,7 +36,7 @@
             </a>
         </isif>
     </div>
-    <div class="d-sm-block d-md-none mobile-fixed-details-wrapper mt-2">
+    <div class="d-sm-block d-md-none mobile-fixed-details-wrapper">
         <iscomment> <div id="alert-scroll-images">
 
         </div> </iscomment>

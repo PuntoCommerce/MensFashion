@@ -31,7 +31,6 @@
             <p class="text-right"><span>${JSON.stringify(pdict.order.shipping[0].productLineItems.totalQuantity)}</span></p>
         </isif>
 
-
         <p class="order-receipt-label ml-1">
         <isif condition="${pdict.order.shipping[0].productLineItems.totalQuantity > 1}">
             <span class="text-lowercase">${Resource.msg('label.order.products', 'confirmation', null)}</span>

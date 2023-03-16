@@ -62,56 +62,49 @@
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine1">
                 <isprint value="${addressFields.address1.error}">
             </div>
-            <div class="mt-2">
+            <iscomment> <div class="mt-2">
                 <span class="exampleText">${Resource.msg('example.address1', 'forms', null)}</span>
-            </div>
+            </div> </iscomment>
         </div>
     </div>
 </div>
 
 <div class="row hidde-pickup">
-    <div class="col-sm-12 col-lg-10">
-        <div>
-            <label for="shippingNoInterior${lineItem ? lineItem.UUID : 'default'}">Numero interor</label>
-            <input autofocus type="text" class="form-control shippingNoInterior"
-                id="shippingNoInterior${lineItem ? lineItem.UUID : 'default'}"
-                value="Texto" >
+    <div class="col-6 col-lg-5">
+        <div class="form-group ${addressFields.numExt.mandatory === true ? 'required' : ''}
+        ${addressFields.numExt.htmlName}">
+            <label class="form-control-label form-control-label-ext" for="shippingNumExt${lineItem ? lineItem.UUID : 'default'}">${Resource.msg('field.shipping.address.number', 'address', null)}<span class="span-ext">${Resource.msg('field.shipping.address.required', 'address', null)}</span></label>
+            <input type="text" class="form-control shippingNumExt"
+                id="shippingNumExt${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}numExt"
+                value="${shippingAddress.numExt || ''}" <isprint value="${addressFields.numExt.attributes}" encoding="off"/>>
+                <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}numExt">
+                <isprint value="${addressFields.numExt.error}">
+            </div>
         </div>
     </div>
-</div>
-
-<div class="row  hidde-pickup">
-    <div class="col-sm-12 col-lg-10">
-        <div class="form-group
-        ${addressFields.address2.mandatory === true ? 'required' : ''}
-            ${addressFields.address2.htmlName}">
-            <label class="form-control-label" for="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.two', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
-            </label>
-            <input type="text" class="form-control shippingAddressTwo"
-                id="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}"
-                aria-describedby="${lineItem ? lineItem.UUID : 'default'}AddressLine2"
-                value="${shippingAddress.address2 || ''}" <isprint value="${addressFields.address2.attributes}"
-                encoding="off" />
-            autocomplete="shipping address-line2">
-            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine2">
-                <isprint value="${addressFields.address2.error}">
-            </div>
-            <div class="mt-2">
-                <span class="exampleText">${Resource.msg('example.address2', 'forms', null)}</span>
+      <div class="col-6 col-lg-5">
+        <div class="form-group ${addressFields.numInt.mandatory === true ? 'required' : ''}
+        ${addressFields.numInt.htmlName}">
+            <label class="form-control-label" for="shippingNumInt${lineItem ? lineItem.UUID : 'default'}">${Resource.msg('field.shipping.address.number.two', 'address', null)}</label>
+            <input type="text" class="form-control shippingNumInt"
+                id="shippingNumInt${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}numInt"
+                value="${shippingAddress.numInt || ''}" <isprint value="${addressFields.numInt.attributes}" encoding="off"/>>
+                <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}numInt">
+                <isprint value="${addressFields.numInt.error}">
             </div>
         </div>
     </div>
 </div>
-
 <!--- make drop down--->
 <div class="row  hidde-pickup">
-<div class="col-6 col-lg-5">
+<div class="col-6 col-lg-5 container-code">
         <div class="form-group
             ${addressFields.postalCode.mandatory === true ? 'required' : ''}
             ${addressFields.postalCode.htmlName}">
-            <label class="form-control-label" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.zip.code', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+            <label class="form-control-label zipCode" for="shippingZipCode${lineItem ? lineItem.UUID : 'default'}">
+                ${Resource.msg('field.shipping.address.zip.code', 'address', null)}<span class="span-zipCode">${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
             <input type="text" class="form-control shippingZipCode"
                 id="shippingZipCode${lineItem ? lineItem.UUID : 'default'}"
@@ -124,7 +117,7 @@
             </div>
         </div>
     </div>
-    <div class="col-6 col-lg-5">
+    <div class="col-6 col-lg-5 container-state">
         <div class="form-group
             ${addressFields.states.stateCode.mandatory === true ? 'required' : ''}
             ${addressFields.states.stateCode.htmlName}">
@@ -150,6 +143,30 @@
 <div class="row  hidde-pickup">
     <div class="col-sm-12 col-lg-10">
         <div class="form-group
+        ${addressFields.address2.mandatory === true ? 'required' : ''}
+            ${addressFields.address2.htmlName}">
+            <label class="form-control-label" for="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}">
+                ${Resource.msg('field.shipping.address.two', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+            </label>
+            <input type="text" class="form-control shippingAddressTwo"
+                id="shippingAddressTwo${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}AddressLine2"
+                value="${shippingAddress.address2 || ''}" <isprint value="${addressFields.address2.attributes}"
+                encoding="off" />
+            autocomplete="shipping address-line2">
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}AddressLine2">
+                <isprint value="${addressFields.address2.error}">
+            </div>
+           <iscomment>  <div class="mt-2">
+                <span class="exampleText">${Resource.msg('example.address2', 'forms', null)}</span>
+            </div> </iscomment>
+        </div>
+    </div>
+</div>
+
+<div class="row  hidde-pickup">
+    <div class="col-sm-12 col-lg-10">
+        <div class="form-group
             ${addressFields.city.mandatory === true ? 'required' : ''}
             ${addressFields.city.htmlName}">
             <label class="form-control-label" for="shippingAddressCity${lineItem ? lineItem.UUID : 'default'}">
@@ -163,6 +180,30 @@
             <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}City">
                 <isprint value="${addressFields.city.error}">
             </div>
+        </div>
+    </div>
+   
+</div>  
+ <div class="row">
+    <div class="col-sm-12 col-lg-10">
+        <div class="form-group
+            ${coCustomer.email.mandatory === true ? 'required' : ''}
+            ${coCustomer.email.htmlName}">
+            <label class="form-control-label" for="email-guest">
+                ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+            </label>
+
+            <input type="email" class="form-control email"
+                id="email-guest"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email"
+                value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint value=${coCustomer.email.attributes}
+                encoding="off" />
+             >
+
+            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email">
+                <isprint value="${coCustomer.email.error}">
+            </div>
+           
         </div>
     </div>
     <div class="col-sm-6 col-lg-5">
@@ -213,39 +254,32 @@
             <div class="mt-2">
                 <span class="exampleText">${Resource.msg('example.phone', 'forms', null)}</span>
             </div>
-            <div class="tel-description-container d-flex flex-column">
+            <iscomment> <div class="tel-description-container d-flex flex-column">
                 <span class="checkout-summary-title-1 mb-2 mt-4">${Resource.msg('check.shipping.tel.heading', 'checkout', null)}</span>
-                <iscomment> <span class="tel-description">${Resource.msg('check.shipping.tel.text', 'checkout', null)}</span> </iscomment>
-            </div>
+                <span class="tel-description">${Resource.msg('check.shipping.tel.text', 'checkout', null)}</span>
+            </div> </iscomment>
         </div>
     </div>
 </div>
 
- <div class="row">
+<div class="row hidde-pickup">
     <div class="col-sm-12 col-lg-10">
-        <div class="form-group
-            ${coCustomer.email.mandatory === true ? 'required' : ''}
-            ${coCustomer.email.htmlName}">
-            <label class="form-control-label" for="email-guest">
-                ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
-            </label>
-
-            <input type="email" class="form-control email"
-                id="email-guest"
-                aria-describedby="${lineItem ? lineItem.UUID : 'default'}Email"
-                value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint value=${coCustomer.email.attributes}
-                encoding="off" />
-             >
-
-            <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}Email">
-                <isprint value="${coCustomer.email.error}">
+        <div class="form-group ${addressFields.reference.mandatory === true ? 'required' : ''}
+        ${addressFields.reference.htmlName}">
+            <label class="form-control-label" for="shippingReference${lineItem ? lineItem.UUID : 'default'}">${Resource.msg('field.shipping.address.reference', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span></label>
+            <input type="text" class="form-control shippingReference"
+                id="shippingReference${lineItem ? lineItem.UUID : 'default'}"
+                aria-describedby="${lineItem ? lineItem.UUID : 'default'}reference"
+                value="${shippingAddress.reference || ''}" <isprint value="${addressFields.reference.attributes}" encoding="off"/>>
+                <div class="invalid-feedback" id="${lineItem ? lineItem.UUID : 'default'}reference">
+                <isprint value="${addressFields.reference.error}">
             </div>
-            <div class="checkout-mail-cont">
+             <div class="checkout-mail-cont">
                 <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
             </div>
         </div>
     </div>
-</div>  
+</div>
 
  <iscomment> <div class="row">
     <div class="col-sm-12 col-lg-10">

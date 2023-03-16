@@ -134,8 +134,7 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif;
+  font-family: 'Avenir-Next';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -22877,10 +22876,6 @@ button.close:focus {
 @media (max-width: 768px) {
   .container-custom-plp .product-tile .image-container {
     height: fit-content;
-  }
-
-  .container-custom-plp .product-tile.summary .tile-body {
-    margin-top: 24px;
   }
 }
 
