@@ -603,6 +603,8 @@ if (widthScreen > 543) {
     active.classList.add('active');
   }
 
+  // ============================= Styles for iphone and macbook =============================
+
   if (navigator.appVersion.includes("Mac OS") || navigator.appVersion.includes("iPhone")){
     //estilo css para mac os 
     var styles = `
@@ -630,6 +632,22 @@ if (widthScreen > 543) {
   styleSheet.innerText = styles
   document.head.appendChild(styleSheet)
 };
+
+// ============================= function see more in mega menu =============================
+const content = document.querySelector("#subcategories");
+const button = document.querySelector("#btn-see-more");
+
+button.addEventListener("click", seeMore);
+
+function seeMore() {
+  if (content.className == "open") {
+    content.className = "";
+    button.textContent ="Ver más +"
+  } else {
+    content.className = "open";
+    button.textContent = "Ver menos -"
+  }
+}
 
 
 localValues();

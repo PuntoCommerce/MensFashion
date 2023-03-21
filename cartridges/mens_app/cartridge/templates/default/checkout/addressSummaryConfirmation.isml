@@ -23,8 +23,8 @@
         </div>
         <div class="name-shipping">
             <span class="firstName">
-                <isif condition="${address && address.firstName}">${address.firstName}</isif>
-            </span>
+            <isif condition="${address && address.firstName}">${address.firstName}</isif>
+        </span>
             <span class="lastName">
                 <isif condition="${address && address.lastName}">${address.lastName}</isif>
             </span>
@@ -34,7 +34,8 @@
 
     <div class="address1">
         <span class="street">
-            <isif condition="${address && address.address1}">${address.address1}, </isif>
+             <isif condition="${address && address.address1}">${address.address1} ${address.suite}
+             <isif condition="${address && address.suffix}">Int. ${address.suffix},</isif></isif>
         </span>
         <span class="city">
             <isif condition="${address && address.city}">${address.city}, </isif>

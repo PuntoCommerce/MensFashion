@@ -11,7 +11,7 @@
            missing-error="address.address1.missing" range-error="error.message.50orless"/>
     <field formid="numExt" label="label.input.numExt" type="string" mandatory="true" binding="numExt" max-length="4"
            missing-error="address.numExt.missing" range-error="error.message.50orless"/>
-    <field formid="numInt" label="label.input.numInt" type="string" binding="numInt" max-length="4"
+    <field formid="numInt" label="label.input.numInt" type="string" mandatory="false" binding="numInt" max-length="4"
            missing-error="address.numInt.missing" range-error="error.message.50orless"/>
     <field formid="address2" label="label.input.address2" type="string" mandatory="true" binding="address2"
            missing-error="address.address2.missing" max-length="50" range-error="error.message.50orless"/>
