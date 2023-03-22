@@ -1,5 +1,6 @@
 const accordion = document.querySelectorAll('#accordion-content');
 
+
 accordion.forEach((item, index) => {
   let button = item.querySelector('button');
   if (button) {
