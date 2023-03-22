@@ -83,7 +83,7 @@
             </div>
         </div>
     </div>
-      <div class="col-6 col-lg-5">
+     <div class="col-6 col-lg-5">
         <div class="form-group ${addressFields.numInt.mandatory === true ? 'required' : ''}
         ${addressFields.numInt.htmlName}">
             <label class="form-control-label" for="shippingNumInt${lineItem ? lineItem.UUID : 'default'}">${Resource.msg('field.shipping.address.number.two', 'address', null)}</label>
@@ -280,22 +280,3 @@
         </div>
     </div>
 </div>
-
- <iscomment> <div class="row">
-    <div class="col-sm-12 col-lg-10">
-        <div class="form-group
-            ${pdict.forms.guestCustomerForm.email.mandatory === true ? 'required' : ''}
-            ${pdict.forms.guestCustomerForm.email.htmlName}">
-            <label class="form-control-label" for="email-guest">
-                ${Resource.msg('field.customer.email', 'checkout', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
-            </label>
-            
-            <input type="text" class="form-control email" id="email-guest" value="${(pdict.customer.registeredUser && pdict.customer.profile && pdict.customer.profile.email) ? pdict.customer.profile.email: ''}" <isprint  value=${pdict.forms.guestCustomerForm.email.attributes} encoding="off" />
-                    aria-describedby="guestEmailInvalidMessage" >
-            <div class="invalid-feedback" id="guestEmailInvalidMessage"><isprint value="${pdict.forms.guestCustomerForm.email.error}"></div>
-            <div class="checkout-mail-cont">
-                <span class="checkout-mail-text mb-2 mt-4">${Resource.msg('check.mail.text', 'checkout', null)}</span>
-            </div>
-        </div>
-    </div>
-</div>  </iscomment>

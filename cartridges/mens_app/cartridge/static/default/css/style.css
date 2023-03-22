@@ -1705,8 +1705,25 @@ ul {
 /*#customMenu:hover{
   border-top: 0.3px solid rgba(68, 68, 68, 0.5);
 }*/
-.dropdown-menu .subcategories {
+.dropdown-menu-content .subcategories{
   padding-inline-start: 0px;
+}
+#subcategories {
+  padding-inline-start: 0px;
+  max-height: 240px;
+  overflow-y: hidden;
+  transition: max-height 1s;
+}
+
+#subcategories.open {
+  max-height: 370px;
+}
+
+.btn-see-more{
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  outline-color: transparent;
 }
 
 .nav-link::after {
@@ -3864,7 +3881,7 @@ header nav.homepage:hover {
 
 .homepage-alert-register__card__close {
   position: absolute;
-  transform: translate(730px, -180px);
+  transform: translate(780px, -180px);
   background: none;
   border: none;
   color: #fff;
@@ -6976,6 +6993,22 @@ a .oauth-facebook--button {
   }
   .header-bar{
     padding: 0 0 10px 0 !important;
+  }
+
+  .line-item-attributes{
+    font-size: 16px;
+  }
+
+  .line-item-price-info, .line-item-pricing-info {
+    font-size: 14px;
+  }
+
+  .price{
+    font-size: 14px;
+  }
+
+  .optional-promo{
+    font-size: 16px;
   }
 }
 
