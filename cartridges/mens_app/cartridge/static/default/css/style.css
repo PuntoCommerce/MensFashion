@@ -1708,14 +1708,14 @@ ul {
 .dropdown-menu-content .subcategories{
   padding-inline-start: 0px;
 }
-#subcategories {
+/* #subcategories {
   padding-inline-start: 0px;
-  max-height: 240px;
+  max-height: 190px;
   overflow-y: hidden;
   transition: max-height 1s;
-}
+} */
 
-#subcategories.open {
+/* #subcategories.open {
   max-height: 370px;
 }
 
@@ -1724,6 +1724,11 @@ ul {
   border: none;
   font-weight: bold;
   outline-color: transparent;
+} */
+
+.exampleText, .checkout-mail-cont{
+  font-family: "Avenir-Next";
+  font-size: 14px;
 }
 
 .nav-link::after {

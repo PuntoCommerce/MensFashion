@@ -635,9 +635,18 @@ if (widthScreen > 543) {
 
 // ============================= function see more in mega menu =============================
 const content = document.querySelector("#subcategories");
-const button = document.querySelector("#btn-see-more");
 
-button.addEventListener("click", seeMore);
+content.forEach((item, index) =>{
+  let button = item.querySelector("#btn-see-more");
+  if (content.className == "open") {
+    content.className = "";
+    button.textContent ="Ver más +"
+  } else {
+    content.className = "open";
+    button.textContent = "Ver menos -"
+  }
+})
+/* button.addEventListener("click", seeMore);
 
 function seeMore() {
   if (content.className == "open") {
@@ -647,7 +656,7 @@ function seeMore() {
     content.className = "open";
     button.textContent = "Ver menos -"
   }
-}
+} */
 
 
 localValues();

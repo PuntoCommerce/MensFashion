@@ -1,64 +1,59 @@
 <div class="dropdown-menu ${category.name}">
    <div class="containerDropdown col-12">
       <div class="d-flex col-4 div-img-menu ${category.id}" style="width:100%">
-      
+
          <img class="${category.id} img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}.png"
             alt="${Resource.msg('global.storename', 'common', null)}" />
 
 
-      <img class="${category.id} img2 img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}2.png"
+         <img class="${category.id} img2 img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}2.png"
             alt="${Resource.msg('global.storename', 'common', null)}" />
       </div>
 
-      
-         <div class="dropdown-menu-content col-8" style="width:100%" role="menu" aria-hidden="true" aria-label="${category.id}">
-            <isset name="categoryImage" value="${category.thumbnail}" scope="page" />
-            <div class="d-flex justify-content-center row">
-               <div class="col-12 d-flex menuCont">
-                  <isloop items="${menuItem.subCategories}" var="category">
-                     <div class="menuColCont">
-                        <div class="category-item item catTitle">
-                           <a href="${category.url}">${category.name}</a>
-                        </div>
-                       
-                        <isif condition="${category.subCategories >= category.subCategories[10]}">
-                            <ul class="subcategories" id="subcategories">
-                              <isloop items="${category.subCategories}"  var="subCategory" status="loopstatus" >
-                                 <li class="sub-category-item item ${subCategory.name}" imageurl="
-                              <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
-                                 ">
-                                 <a href="${subCategory.url}">${subCategory.name}</a>
-                                 </li>
-                              </isloop>
-                           </ul>
-                            <button type="" class="btn-see-more" id="btn-see-more">Ver más +</button>
-                        <iselse/>
-                             <ul class="subcategories">
-                              <isloop items="${category.subCategories}"  var="subCategory" status="loopstatus" >
-                                 <li class="sub-category-item item ${subCategory.name}" imageurl="
-                              <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
-                                 ">
-                                 <a href="${subCategory.url}">${subCategory.name}</a>
-                                 </li>
-                              </isloop>
-                             
-                           </ul>
-                        </isif>
-                            
-                       
-                       
+
+      <div class="dropdown-menu-content col-8" style="width:100%" role="menu" aria-hidden="true"
+         aria-label="${category.id}">
+         <isset name="categoryImage" value="${category.thumbnail}" scope="page" />
+         <div class="d-flex justify-content-center row">
+            <div class="col-12 d-flex menuCont">
+               <isloop items="${menuItem.subCategories}" var="category">
+                  <div class="menuColCont" id="menuColCont">
+                     <div class="category-item item catTitle">
+                        <a href="${category.url}">${category.name}</a>
                      </div>
-                  </isloop>
-               </div>
-              
+                     <isif condition="${category.subCategories}">
+                    <iscomment>  <isif condition="${category.subCategories >= category.subCategories[7]}"> </iscomment>
+                        <ul class="subcategories" id="subcategories">
+                           <isloop items="${category.subCategories}" var="subCategory" status="loopstatus">
+                              <li class="sub-category-item item ${subCategory.name}" imageurl="
+                              <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
+                              ">
+                              <a href="${subCategory.url}">${subCategory.name}</a>
+                              </li>
+                           </isloop>
+                        </ul>
+                       <iscomment>  <button type="" class="btn-see-more" id="btn-see-more">Ver más +</button>
+
+                    <iselse/>
+                        <ul class="subcategories">
+                           <isloop items="${category.subCategories}" var="subCategory" status="loopstatus">
+                              <li class="sub-category-item item ${subCategory.name}" imageurl="
+                              <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
+                              ">
+                              <a href="${subCategory.url}">${subCategory.name}</a>
+                              </li>
+                           </isloop>
+                        </ul> </iscomment>
+                     </isif>
+                  </div>
+               </isloop>
             </div>
          </div>
-
-         <iscomment>
-            <div class="d-flex justify-content-start align-self-start">
-               <img id="imageMenu" src="${categoryImage}" alt="${category.name}" height="300px">
-            </div>
-         </iscomment>
-
+      </div>
+      <iscomment>
+         <div class="d-flex justify-content-start align-self-start">
+            <img id="imageMenu" src="${categoryImage}" alt="${category.name}" height="300px">
+         </div>
+      </iscomment>
    </div>
 </div>
