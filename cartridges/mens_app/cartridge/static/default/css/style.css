@@ -1682,7 +1682,7 @@ footer .socialMedia-paymentMethods {
 }
 
 .dropdown-menu .containerDropdown .coleccion.img2.img-menu-drop,
-.dropdown-menu .containerDropdown .ocasion.img2.img-menu-drop {
+.dropdown-menu .containerDropdown .ocasion.img2.img-menu-drop, .sale.img2.img-menu-drop, .sale.img-menu-drop {
   display: none;
 }
 
@@ -3886,7 +3886,7 @@ header nav.homepage:hover {
 
 .homepage-alert-register__card__close {
   position: absolute;
-  transform: translate(780px, -180px);
+  transform: translate(740px, -180px);
   background: none;
   border: none;
   color: #fff;
