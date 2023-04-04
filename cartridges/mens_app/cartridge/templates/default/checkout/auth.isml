@@ -6,7 +6,7 @@
       assets.addJs('/js/accordion.js');
   </isscript>
 
-  <div id='checkout-alert' class="homepage-alert-register d-none">
+  <div id='checkout-alert' class="homepage-alert-register homepage-alert-register-checkout d-none">
     <div class="homepage-alert-register__card">
       <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
         <i class="fa fa-times" aria-hidden="true"></i>

@@ -1,9 +1,0 @@
-<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption" status="loopSate">
-    <isif condition="${paymentOption.ID === 'MercadoPago'}">
-        <isinclude template="mercadopago/checkout/mercadopagoTab" />
-    </isif>
-    <isif condition="${paymentOption.ID === 'PayPal' && pdict.paypal}">
-        <isinclude template="paypal/checkout/paypalTab" />
-    </isif>
-
-</isloop>
