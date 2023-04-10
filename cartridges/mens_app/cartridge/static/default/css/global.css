@@ -18315,6 +18315,14 @@ div.availability {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.quickviewInfo .promotion-item{
+  margin-left: 10px;
+  background-color: #FD4237;
+  font-size: 18px;
+  color: #fff;
+  padding-top: 6px;
+}
+
 .product-tile .image-container a {
   display: block;
 }
