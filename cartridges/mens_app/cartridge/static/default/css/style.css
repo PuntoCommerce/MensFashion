@@ -2043,7 +2043,7 @@ ul {
 
 .refinement-color .values.content li {
   display: flex;
-  max-height: 50px;
+  max-height: 58px;
   flex-direction: column;
 }
 
@@ -4507,10 +4507,10 @@ header nav.homepage:hover {
 .colorName {
   text-transform: capitalize;
   font-family: "Avenir-Next";
-  font-size: 15px;
+  font-size: 14px;
   padding: 0;
   visibility: hidden;
-  position: absolute;
+  text-align: left;
 }
 
 .color-attribute:hover .colorName {
