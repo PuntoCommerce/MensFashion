@@ -69,7 +69,7 @@
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
                     <isinclude template="cart/cartPromoCode" />
-                    <div class="coupons-and-promos">
+                    <div class="coupons-and-promos d-none">
                         <isinclude template="cart/cartCouponDisplay" />
                     </div>
                     <div class="row">

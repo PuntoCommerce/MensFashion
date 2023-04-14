@@ -38,6 +38,9 @@ This is a README file for an e-commerce website, which provides an online platfo
 
 And of course it has a [private repository] on GitHub.
 
+## Deploy
+
+
 ## Productive project location
 [Mens Fashion](https://www.mensfashion.com.mx/)
 
@@ -45,6 +48,6 @@ And of course it has a [private repository] on GitHub.
 If you want to contribute to this project, request permission, create a new branch, and submit a pull request with your changes. Follow the existing code style and send meaningful commit messages.
 
 ## Contact Information
-If you have any questions, suggestions, or issues, please contact the project owner at your-email@example.com.
+If you have any questions, suggestions, or issues, please contact the project owner at miguel@puntocommerce.com.
 
 

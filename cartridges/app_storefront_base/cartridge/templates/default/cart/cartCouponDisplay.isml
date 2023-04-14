@@ -29,7 +29,7 @@
             </ul>
         </div>
     <iselse/>
-        <div class="promotion-information">
+        <div class="promotion-information d-none">
             <span class="promotion-name">${discount.lineItemText}</span>
             <span class="applied-promotion-discount">${discount.price}</span>
         </div>

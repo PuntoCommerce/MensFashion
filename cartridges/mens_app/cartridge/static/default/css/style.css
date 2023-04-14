@@ -7157,3 +7157,7 @@ a .oauth-facebook--button {
 .homepage-alert-register-checkout {
   display: none !important;
 }
+
+.coupons-and-promos{
+  display: none;
+}

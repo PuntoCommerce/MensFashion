@@ -846,6 +846,7 @@ div.availability {
   float: right;
 }
 .promotion-information {
+  display: none;
   margin-bottom: 0.625rem;
   margin-top: 0.625rem;
 }
