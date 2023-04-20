@@ -186,6 +186,7 @@ if (selectShippingBtn) {
     updateSelectedShippingMethod();
     pickCountry();
     togglePickupForm(selectPickupBtn);
+
   });
 }
 if (selectPickupBtn) {

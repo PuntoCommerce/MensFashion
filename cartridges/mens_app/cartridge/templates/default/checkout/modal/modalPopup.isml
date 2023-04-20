@@ -1,0 +1,14 @@
+
+<div id="modal-check" class="checkout-popup-alert">
+    <div class="checkout-popup-alert-card">
+       
+      <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+       <div class="checkout-popup-alert-card-info">
+       <p>${Resource.msg('error.message.popup', 'checkout', null)}</p>
+    </div>
+     <button onclick="closeAlertModal()" class="checkout-alert-register-card-close" type="">
+        <p>${Resource.msg('txt.button.error.popup', 'checkout', null)}</p>
+      </button>
+    </div>
+   
+</div>

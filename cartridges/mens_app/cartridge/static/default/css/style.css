@@ -3879,10 +3879,34 @@ header nav.homepage:hover {
   z-index: 100;
 }
 
+.checkout-popup-alert{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
 .homepage-alert-register__card {
   display: flex;
   align-items: center;
   height: 417px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.checkout-popup-alert-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 231px;
   border-radius: 5px;
   background: #fff;
 }
@@ -3897,7 +3921,29 @@ header nav.homepage:hover {
   background: #fff;
 }
 
+.checkout-popup-alert-card-info{
+  width: 441px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 13px;
+  border-radius: 5px 0 0 5px;
+  background: #fff;
+  padding: 0 40px 30px 40px;
+}
+
+.checkout-popup-alert-card-info p{
+  padding: 0 40px;
+  font-weight: bold;
+  
+}
+
 .homepage-alert-register__card__info__title {
+  font-family: "AvenirLTStd-Heavy";
+  font-size: 22px;
+}
+
+.checkout-alert-register__card__info__title {
   font-family: "AvenirLTStd-Heavy";
   font-size: 22px;
 }
@@ -3947,6 +3993,11 @@ header nav.homepage:hover {
   border-radius: 0px 5px 5px 0;
 }
 
+.checkout-alert-register__card__image img{
+  height: 417px;
+  border-radius: 0px 5px 5px 0;
+}
+
 .homepage-alert-register__card__close {
   position: absolute;
   transform: translate(740px, -180px);
@@ -3955,6 +4006,18 @@ header nav.homepage:hover {
   color: #fff;
   height: 40px;
   width: 40px;
+}
+
+.checkout-alert-register-card-close{
+  background: #3E403D;
+  border: none;
+  color: #FFFFFF;
+  height: 33px;
+  width: 300px;
+}
+
+.checkout-alert-register-card-close  p{
+  margin-bottom: 0 !important;
 }
 
 @media (max-width: 1324px) {
@@ -6952,7 +7015,7 @@ a .oauth-facebook--button {
   }
 }
 
-/*Design responsive product tile & pdp*/
+/*Design responsive product tile, pdp & popup checkout*/
 @media (max-width: 991px) {
   .summary__pricing .highlight-container {
     display: grid;
@@ -7135,6 +7198,16 @@ a .oauth-facebook--button {
   .optional-promo {
     font-size: 16px;
   }
+
+  .checkout-popup-alert-card-info{
+    width: 360px;
+    padding: 0 30px;
+  }
+
+  .checkout-popup-alert-card{
+   
+    height: 161px;
+  }
 }
 
 .span-zipCode2 {
@@ -7152,10 +7225,6 @@ a .oauth-facebook--button {
   .sales-price
   .sales {
   font-size: 14px;
-}
-
-.homepage-alert-register-checkout {
-  display: none !important;
 }
 
 .coupons-and-promos{

@@ -10,7 +10,8 @@
 
     <div class="address1">
         <isif condition="${address && address.address1}">${address.address1} ${address.suite}
-         <isif condition="${address && address.suffix}">Int. ${address.suffix}</isif></isif>
+         <isif condition="${address && address.suffix}">Int. ${address.suffix}</isif>
+         </isif>
        
     </div>
 

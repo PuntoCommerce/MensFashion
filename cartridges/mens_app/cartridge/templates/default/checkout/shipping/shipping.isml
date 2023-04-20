@@ -5,6 +5,7 @@
 </div>
 
 <div class="card shipping-section">
+
     <div class="single-shipping">
         <isset name="shippingModel" value="${pdict.order.shipping[0]}" scope="page" />
         <isset name="shipmentLoopState" value="${null}" scope="page" />
@@ -15,7 +16,7 @@
                     ${Resource.msg('heading.checkout.shipping', 'checkout', null)}
                 </h2>
             </div>
-
+ 
             <div class="shipping-error"></div>
             <isinclude template="checkout/shipping/shipmentCard" />
         </div>

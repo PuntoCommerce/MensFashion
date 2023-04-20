@@ -5,8 +5,8 @@
       assets.addJs('/js/login.js');
       assets.addJs('/js/accordion.js');
   </isscript>
-
-  <div id='checkout-alert' class="homepage-alert-register homepage-alert-register-checkout d-none">
+<iscomment> 
+  <div id='checkout-alert' class="homepage-alert-register d-none">
     <div class="homepage-alert-register__card">
       <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
         <i class="fa fa-times" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
         <img src="${URLUtils.staticURL('images/alert-home-image.png')}" alt="homeAlert">
       </div>
     </div>
-  </div>
+  </div> </iscomment>
 
   <div class="mt-5 mb-5 checkout container-custom">
     <div class="row mb-2 d-flex form-checkout justify-content-center login-checkout checkout__login-checkout">

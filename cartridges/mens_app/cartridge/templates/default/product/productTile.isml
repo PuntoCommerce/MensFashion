@@ -9,14 +9,12 @@
         <div class="summary__name">
             <isinclude template="product/components/productTileName" />
         </div>
-
+    
         <iscomment>
             <div class="summary_price">
         </iscomment>
-        
-        
             <div class="summary__pricing">
-
+                
                 <isset name="price" value="${product.price}" scope="page" />
                 <isif condition="${product.productType === 'set'}">
                     <isinclude template="product/components/pricing/setPrice" />

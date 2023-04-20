@@ -53,7 +53,7 @@
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
     <div class="add-item-pdp-alert"></div>
-    <div id="${pdict.page.ID}-alert" class="${pdict.page.ID}-alert-register d-none">
+  <iscomment>   <div id="${pdict.page.ID}-alert" class="${pdict.page.ID}-alert-register d-none">
         <div class="homepage-alert-register__card">
             <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
                 <i class="fa fa-times" aria-hidden="true"></i>
@@ -85,7 +85,7 @@
                 <img src="${URLUtils.staticURL('images/alert-home-image-change.png')}" alt="homeAlert">
             </div>
         </div>
-    </div>
+    </div> </iscomment>
 
     <iscontentasset aid="cookie_hint" />
     <!--[if lt IE 10]>

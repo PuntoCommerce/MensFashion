@@ -36,14 +36,17 @@
                     <div class="row">
                         <div class="col">
                             <span class="product-name">${product.productName}</span>
+                             
                         </div>
                     </div>
+                    
 
                     <div class="row prices-size-guide-container">
                         <!-- Prices -->
                         <div class="prices col-lg-8">
                             <isset name="price" value="${product.price}" scope="page" />
                             <isinclude template="product/components/pricing/main" />
+                           
                         </div>
                         <!-- Trigger Modal Sizes Guide -->
                         <div class="sizes-guide d-flex justify-content-start align-items-end col-lg-4">
@@ -62,6 +65,7 @@
                             <div class="product-number">
                                 <isinclude template="product/components/productNumber" />
                             </div>
+                        
                         </div>
                     </div>
 

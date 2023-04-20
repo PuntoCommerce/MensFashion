@@ -159,6 +159,7 @@ function checkoutRedirectLogin() {
 function closeAlertPromotion() {
   const checkout = document.getElementById('checkout-alert');
   const home = document.getElementById('homepage-alert');
+  const popupCheckout = document.getElementById('modal-check');
 
   if (checkout) {
     checkout.classList.add('d-none')
@@ -168,6 +169,11 @@ function closeAlertPromotion() {
     home.classList.add('d-none')
     sessionStorage.setItem('homeAlertRegister', true)
   };
+}
+
+function closeAlertModal(){
+  const popupCheckout = document.getElementById('modal-check');
+  popupCheckout.classList.add('d-none');
 }
 
 if (sessionStorage.getItem('homeAlertRegister') === null && document.getElementById('homepage-alert')) document.getElementById('homepage-alert').classList.remove('d-none');
