@@ -1,17 +1,17 @@
 // const collections = require("*/cartridge/scripts/util/collections");
-const OrderMgr = require("dw/order/OrderMgr");
-const StoreMgr = require("dw/catalog/StoreMgr");
-const { sendOrder, getToken } = require("~/cartridge/scripts/salescloud/api");
-const Transaction = require("dw/system/Transaction");
-const Order = require("dw/order/Order");
-const Logger = require("dw/system/Logger");
+const OrderMgr = require('dw/order/OrderMgr');
+const StoreMgr = require('dw/catalog/StoreMgr');
+const { sendOrder, getToken } = require('~/cartridge/scripts/salescloud/api');
+const Transaction = require('dw/system/Transaction');
+const Order = require('dw/order/Order');
+const Logger = require('dw/system/Logger');
 
 const getPorcentage = (cant, total) => {
   return (cant / total) * 100;
 };
 
 const handleShipment = (shipment) => {
-  if (shipment.shippingMethodID == "pickup") {
+  if (shipment.shippingMethodID == 'pickup') {
     let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
     return {
@@ -29,7 +29,7 @@ const handleShipment = (shipment) => {
     shippingPostalCode: shipment.shippingAddress.postalCode,
     shippingCity: shipment.shippingAddress.city,
     shippingState: shipment.shippingAddress.stateCode,
-    shippingCountry: "Mexico",
+    shippingCountry: 'Mexico',
     shippingCost: shipment.shippingTotalNetPrice.value,
   };
 };
@@ -39,13 +39,13 @@ const parseDate = (date) => {
   let day = date.getDate();
 
   if (day < 10) {
-    day = "0" + day;
+    day = '0' + day;
   }
 
   if (month < 10) {
-    month = "0" + month;
+    month = '0' + month;
   }
-  return day + "/" + month + "/" + date.getFullYear();
+  return day + '/' + month + '/' + date.getFullYear();
 };
 
 const handlePayment = (payment) => {
@@ -57,13 +57,13 @@ const handlePayment = (payment) => {
 };
 
 module.exports.execute = () => {
-  const logger = Logger.getLogger("Sales", "Sales");
+  const logger = Logger.getLogger('Sales', 'Sales');
   let currentDate = new Date();
   currentDate.setDate(currentDate.getDate() - 15);
 
   let orders = OrderMgr.searchOrders(
-    "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND (paymentStatus = {2} OR custom.paypalPaymentMethod != {1})",
-    "creationDate desc",
+    'creationDate > {0} AND custom.SalesCloudOrderId = {1} AND (paymentStatus = {2} OR custom.paypalPaymentMethod != {1})',
+    'creationDate desc',
     currentDate,
     null,
     Order.PAYMENT_STATUS_PAID
@@ -104,7 +104,7 @@ module.exports.execute = () => {
       }
 
       let porcToOrderDiscount =
-        (p.price.value * p.quantityValue) / 
+        (p.price.value * p.quantityValue) /
         order.adjustedMerchandizeTotalPrice.value;
       let aditionalDiscount = 0;
       if (orderDiscount != 0) {
@@ -123,18 +123,18 @@ module.exports.execute = () => {
     });
     // let paymentInstruments = order.paymentInstruments[0];
 
-    let firstName = "";
-    let lastName = "";
+    let firstName = '';
+    let lastName = '';
 
     if (order.customer.authenticated) {
       firstName = order.customer.firstName;
       lastName = order.customer.lastName;
     } else {
-      let customerName = order.customerName.split(" ");
-      firstName = customerName.slice(0, customerName.length / 2).join(" ");
+      let customerName = order.customerName.split(' ');
+      firstName = customerName.slice(0, customerName.length / 2).join(' ');
       lastName = customerName
         .slice(customerName.length / 2, customerName.length)
-        .join(" ");
+        .join(' ');
     }
 
     let defaultShipment = order.defaultShipment;
@@ -148,7 +148,8 @@ module.exports.execute = () => {
         FirstName: firstName,
         LastName: lastName,
         PersonEmail: order.customerEmail,
-        Phone: defaultShipment.shippingAddress.phone,
+        //Phone: defaultShipment.shippingAddress.phone,
+        Phone: order.billingAddress.phone,
       },
       shippingInfo: handleShipment(defaultShipment),
       paymentInfo: handlePayment(paymentTransaction),
@@ -167,7 +168,7 @@ module.exports.execute = () => {
         order.custom.SalesCloudOrderId = salesOrderId;
       });
     } else {
-      logger.error("OrderError {0}", JSON.stringify(body));
+      logger.error('OrderError {0}', JSON.stringify(body));
     }
   }
 };
