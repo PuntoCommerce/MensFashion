@@ -452,19 +452,8 @@ var scrollAnimate = require('../components/scrollAnimate');
 
                 $('.payment-summary .edit-button', plugin).on('click', function () {
                     members.gotoStage('payment');
-                }); 
-
-               /*  $ ('#custom-edit-shipping').on('click', function () {
-                    if (!$('#checkout-main').hasClass('multi-ship')) {
-                        $('body').trigger('shipping:selectSingleShipping');
-                    }
-
-                    members.gotoStage('shipping');
                 });
 
-                $('#custom-edit-payment').on('click', function () {
-                    members.gotoStage('payment');
-                });  */
                 //
                 // remember stage (e.g. shipping)
                 //
