@@ -148,7 +148,8 @@ module.exports.execute = () => {
         FirstName: firstName,
         LastName: lastName,
         PersonEmail: order.customerEmail,
-        Phone: defaultShipment.shippingAddress.phone,
+        //Phone: defaultShipment.shippingAddress.phone,
+        Phone:order.billingAddress.phone
       },
       shippingInfo: handleShipment(defaultShipment),
       paymentInfo: handlePayment(paymentTransaction),
