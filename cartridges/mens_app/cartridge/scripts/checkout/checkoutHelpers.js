@@ -25,7 +25,6 @@ var ShippingHelper = require("*/cartridge/scripts/checkout/shippingHelpers");
 var basketCalculationHelpers = require("*/cartridge/scripts/helpers/basketCalculationHelpers");
 
 
-
 base.copyBillingAddressToBasket = function (address, currentBasket) {
   var billingAddress = currentBasket.billingAddress;
 
@@ -135,7 +134,6 @@ base.copyCustomerAddressToBilling = function (address) {
     }
   });
 }
-
 /**
  * Sends a confirmation to the current user
  * @param {dw.order.Order} order - The current user's order

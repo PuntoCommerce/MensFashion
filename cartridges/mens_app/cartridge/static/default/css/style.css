@@ -3162,6 +3162,7 @@ ul {
 /* **************************** HOME **************************** */
 #maincontent .container {
   max-width: 100vw;
+  min-height: 100vh;
   padding-left: 0px;
   padding-right: 0px;
   overflow-x: hidden;
@@ -4872,6 +4873,7 @@ header nav.homepage:hover {
 }
 
 .product-detail .product-details-wrapper {
+  min-height: 90vh;
   padding-left: 50px;
   padding-right: 3%;
 }
@@ -4993,11 +4995,17 @@ header nav.homepage:hover {
 
 .product-detail .prices {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
 }
 
 .product-detail .prices .price {
   text-align: left;
+  margin-bottom: 12px;
+}
+
+.product-detail .prices .promotion-item-container{
+  justify-content: left;
+  margin-left: 0 !important;
 }
 
 .product-detail .prices .price .strike-through {
@@ -5529,7 +5537,7 @@ header nav.homepage:hover {
   }
 
   .product-detail .p-image-and-wrapper {
-    max-height: 100vh;
+    min-height: 100vh;
     overflow: auto;
     max-width: 93vw;
     margin: auto;
@@ -5708,9 +5716,10 @@ header nav.homepage:hover {
 
 .promotion-item {
   width: max-content;
+  height: 24px;
   background-color: #d9d9d9;
   color: #000000;
-  padding: 0 14px 0;
+  padding: 3px 6px;
   font-size: 12px;
   font-weight: bold;
   font-family: "Avenir-Next";
@@ -6432,7 +6441,12 @@ del {
 }
 
 #search-storelocator .title-container .title {
-  font-size: 18px !important;
+  font-size: 22px !important;
+}
+
+#search-storelocator .title-container{
+  height: auto !important;
+  padding-bottom: 8px !important;
 }
 
 .mt-5.mb-5.checkout.container-custom {
@@ -7090,6 +7104,16 @@ a .oauth-facebook--button {
     align-items: flex-start;
     flex-direction: column;
   }
+
+.product-detail .prices .promotion-item-container{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+.promotion-item-container .promotion-item{
+  margin-bottom: 10px;
+}
+
   .prices .promotion-item-container {
     margin-left: 0;
   }
@@ -7229,4 +7253,102 @@ a .oauth-facebook--button {
 
 .coupons-and-promos{
   display: none;
+}
+
+/*Design map list*/
+
+#map-list #listing {
+  height: 75% !important;
+  background: #FFFFFF !important;
+  margin: 20px 0 0 20px;
+}
+
+.text-us-stores{
+  width: 90%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.text-us-stores {
+  font-family: "Avenir-Next";
+}
+
+.text-us-stores span{
+  font-family: "Avenir-Bold";
+}
+
+.btn-map-list{
+  background-color: #3E403D;
+  color: #FFFFFF;
+  height: 41px;
+  width: 87%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Avenir-Next";
+}
+
+.btn-map-list:hover{
+  background: #000;
+  color: #fff;
+}
+
+.container-all-stores{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 8rem;
+    font-family: "Avenir-Next";
+}
+
+.container-stores{
+  background-color: #F3F3F3;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.title-stores{
+  display: flex;
+  justify-content: center;
+}
+
+.title-stores h2{
+  margin: 0 0 2rem 0;
+  font-family: "Avenir-Bold";
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.ul-stores{
+  padding: 30px;
+  margin-bottom: 0;
+}
+
+.container-address{
+  display: inline-flex;
+}
+
+.address-storeLocator .p-address, .phone-storeLocator .p-address{
+  margin-bottom: 0;
+}
+.container-phone{
+  display: flex;
+  flex-direction: row;
+}
+.img-storeLocator img{
+  display: flex;
+  padding-top: 2px;
+  padding-right: 10px;
+  width: 20px;
+  height: 18px;
+}
+
+.container-stores .p-store,.container-stores .p-cp{
+  margin-bottom: 10px !important;
+}
+
+.card.product-info .bonus-line-item-row {
+  padding-bottom: 70px;
 }

@@ -1,5 +1,5 @@
 <isloop items="${item.bundleItems}" var="bundledLineItem">
-    <div class="bundled-line-item clearfix">
+    <div class="bundled-line-item clearfix"> 
         <div class="line-item-name">
             <span>${bundledLineItem.name}</span>
         </div>

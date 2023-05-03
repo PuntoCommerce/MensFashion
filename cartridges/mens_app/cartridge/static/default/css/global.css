@@ -18054,6 +18054,7 @@ div.availability {
   grid-template-columns: 1fr auto;
   margin-bottom: 18px;
   width: 100%;
+  padding-left: 0;
 }
 
 .attributesPdp .row-color {
@@ -22712,6 +22713,7 @@ button.close:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 0;
 }
 
 .add-to-cart-actions,

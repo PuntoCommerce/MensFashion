@@ -1,0 +1,37 @@
+
+<isdecorate template="common/layout/page">
+  <div class="container-all-stores">
+     <div class="title-stores">
+        <h2 class="">TODAS LAS TIENDAS</h2>
+    </div>
+    <div class="container-stores col-12">
+  
+    <isloop items=${pdict.storelocator.stores} var="stores">
+       
+            <ul class="ul-stores">
+                <li class=""><p class="p-store">${stores.name}</p></li>
+                <li class="container-address">
+                <div class="img-storeLocator">
+                    <img alt="" src="${URLUtils.staticURL('/images/store_locator.svg')}" />
+                </div>
+                <br/>
+                <div class="address-storeLocator">
+                    <p class="p-address">${stores.address}.</p><p class="p-cp">C.P: ${stores.postalCode}, ${stores.city}</p>
+                </div></li>
+
+                <li class="container-phone">
+                <div class="img-storeLocator">
+                     <img alt="" src="${URLUtils.staticURL('/images/phone.svg')}" /> 
+                </div>
+                <div class="phone-storeLocator">
+                    <p class="p-address">Tel: ${stores.phone}</p>
+                </div></li>
+          </ul>
+       
+</isloop>
+
+   
+       
+</div>
+  </div>
+</isdecorate>

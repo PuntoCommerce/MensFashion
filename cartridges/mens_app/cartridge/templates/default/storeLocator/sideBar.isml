@@ -1,0 +1,10 @@
+
+<div id="map-list" class="d-flex justify-content-center align-items-center">
+   <isinclude template="storelocator/filters" />
+
+        <ul id="listing" stores="${JSON.stringify(pdict.storelocator.stores)}"></ul>
+       
+ 
+  <button type="">Ver todas las tiendas</button>
+</div>
+

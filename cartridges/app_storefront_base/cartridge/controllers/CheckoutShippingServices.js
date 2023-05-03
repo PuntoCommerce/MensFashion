@@ -427,6 +427,7 @@ server.post(
                 numExt: form.shippingAddress.addressFields.numExt.value,
                 numInt: form.shippingAddress.addressFields.numInt.value,
                 reference: form.shippingAddress.addressFields.reference.value
+           
             };
             if (Object.prototype.hasOwnProperty
                 .call(form.shippingAddress.addressFields, 'states')) {

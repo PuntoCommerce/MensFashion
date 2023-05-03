@@ -55,9 +55,9 @@
             ${addressFields.address1.mandatory === true ? 'required' : ''}
             ${addressFields.address1.htmlName}">
             <label class="form-control-label" for="shippingAddressOne${lineItem ? lineItem.UUID : 'default'}">
-                ${Resource.msg('field.shipping.address.one', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
+                ${Resource.msg('field.billing.address.street', 'address', null)}<span>${Resource.msg('field.shipping.address.required', 'address', null)}</span>
             </label>
-            <input type="text" class="form-control shippingAddressOne"
+            <input type="text" class="form-control shippingAddressOne" onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122 || event.charCode >= 48 && event.charCode <= 57) || event.charCode == 32"
                 id="shippingAddressOne${lineItem ? lineItem.UUID : 'default'}"
                 aria-describedby="${lineItem ? lineItem.UUID : 'default'}AddressLine1"
                 value="${shippingAddress.address1 || ''}" <isprint value="${addressFields.address1.attributes}"

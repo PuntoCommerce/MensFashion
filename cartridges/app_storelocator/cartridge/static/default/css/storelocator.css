@@ -1,0 +1,285 @@
+/* 
+  * Always set the map height explicitly to define the size of the div element
+  * that contains the map. 
+  */
+#map {
+  height: 100%;
+  width: 75%;
+}
+
+/* 
+  * Optional: Makes the sample page fill the window. 
+  */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.storelocator-container {
+  max-width: 99vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0px;
+  background: #F5F5F5;
+}
+
+.storelocator {
+  height: 730px;
+  max-width: 99vw;
+  
+  /* overflow: hidden; */
+}
+
+.storelocator #listing {
+  height: 670px;
+  overflow-y: scroll;
+
+  padding-inline-start: 0px;
+}
+
+#map-list {
+  padding-right: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 730px;
+  width: 25%;
+  background-color: #F5F5F5;
+}
+
+#map-list #listing {
+  height: 85%;
+}
+
+#map-list #search-storelocator {
+  height: 15%;
+  width: 90%;
+  background: #F3F3F3;
+}
+
+#map-list #search-storelocator div {
+  width: 100%;
+}
+
+#map-list #search-storelocator span {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Avenir-LT-Std";
+}
+
+#map-list #search-storelocator .title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.storelocator #listing .item {
+  padding: 10px;
+  margin: 0 15px;
+}
+#details-hours span {
+  position: relative;
+  top: -3.5px;
+}
+
+#storeDetailModal a,
+#storeDetailModal button,
+#storeDetailModal #details-name,
+#details-hours td,
+#details-hours span,
+#storelocator-search,
+#storelocator-search::placeholder,
+.storelocator .sub-item span,
+.storelocator #listing .item .name {
+  font-size: 16px;
+  font-family: "Avenir-Next";
+}
+
+.details .sub-item,
+.storelocator #listing .item .sub-item {
+  padding-top: 10px;
+}
+
+.storelocator #listing .item:hover {
+  background-color: #ffffff;
+}
+
+.storelocator .store-details {
+  background-color: transparent;
+  border: none;
+  color: #000;
+}
+
+#storeDetailModal .label {
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.storelocator-container .filters-group {
+  margin-bottom: 10px;
+}
+
+.storelocator-container .filters-button {
+  background-color: transparent;
+  border: none;
+}
+
+#storelocator-search {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #f5f5f5;
+}
+
+.hidden {
+  display: none;
+}
+
+#clearInputStoreLocator {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.storelocator-store {
+  cursor: pointer;
+}
+
+#storeDetailModal #details-image {
+  width: 100%;
+  height: auto;
+}
+
+#storeDetailModal #route {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#storeDetailModal #route:disabled {
+  background-color: #999;
+}
+
+#details-hours .isopen {
+  color: rgb(0, 163, 0);
+  font-weight: bold;
+}
+
+#details-hours .isclosed {
+  color: rgb(163, 0, 0);
+  font-weight: bold;
+}
+
+#search-storelocator .title-container .title {
+  width: 80%;
+}
+
+/* LEFT Position */
+
+.modal.modal-left .modal-dialog {
+  max-width: 380px;
+  min-height: calc(100vh - 0);
+}
+.modal.modal-left.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal.modal-left .modal-content {
+  height: calc(50vh - 0);
+  overflow-y: auto;
+}
+.modal.modal-left .modal-dialog {
+  transform: translate(-100%, 0);
+  margin: 0 auto 0 0;
+}
+
+.sub-item .img-null {
+  width: 20px;
+}
+
+.sub-item img {
+  height: 15px;
+}
+
+.storelocator-container .userLocation {
+  height: 25px;
+}
+
+.storelocator-container #userLocationButton {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/* RIGTH Position */
+
+.modal.modal-right .modal-dialog {
+  max-width: 380px;
+  min-height: calc(100vh - 0);
+}
+.modal.modal-right.show .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal.modal-right .modal-content {
+  height: calc(50vh - 0);
+  overflow-y: auto;
+}
+.modal.modal-right .modal-dialog {
+  transform: translate(100%, 0);
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: 1240px) {
+  #map-list {
+    width: 30%;
+  }
+  #map {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  #map-list {
+    width: 100%;
+    height: 40%;
+  }
+  #map {
+    width: 100%;
+    height: 60%;
+  }
+  #search-storelocator div {
+    justify-content: center !important;
+  }
+
+  #map-list #listing {
+    height: 75%;
+  }
+
+  #map-list #search-storelocator {
+    height: 25%;
+  }
+
+  .modal.modal-left .modal-dialog,
+  .modal.modal-right .modal-dialog {
+    max-width: 380px;
+    min-height: calc(100vh - 0);
+  }
+  .modal.modal-left.show .modal-dialog,
+  .modal.modal-right.show .modal-dialog {
+    transform: translate(0, 0);
+  }
+
+  .modal.modal-left .modal-content,
+  .modal.modal-right .modal-content {
+    height: calc(50vh - 0);
+    overflow-y: auto;
+  }
+  .modal.modal-left .modal-dialog,
+  .modal.modal-right .modal-dialog {
+    transform: translate(0, -100%);
+    margin: auto auto;
+  }
+}

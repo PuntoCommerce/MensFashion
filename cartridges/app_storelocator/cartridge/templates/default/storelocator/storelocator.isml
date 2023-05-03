@@ -1,0 +1,26 @@
+<isdecorate template="common/layout/page">
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   <script
+      src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+   <div class="storelocator-container row">
+   <iscomment> <img src="${URLUtils.staticURL('/images/storelocator/clustericon.png')}" alt=""> </iscomment>
+      <div class="col-12">
+         <div class="storelocator row ${pdict.storelocator.layout === "left" ? 'flex-row' : 'flex-row-reverse'}">
+          <isinclude template="storelocator/sideBar" />
+          <div id="map" icons="${JSON.stringify(pdict.storelocator.icons)}" marker-image max-distance="${pdict.storelocator.MAX_DISTANCE}"
+              marker-style="${JSON.stringify(pdict.storelocator.svgMarker)}">
+          </div>
+          <isinclude template="storelocator/details" />
+        </div>
+      </div>
+   </div>
+   <script
+      src="https://maps.googleapis.com/maps/api/js?key=${pdict.storelocator.mapAPI}&libraries=places&callback=initMap&v=weekly"
+      defer></script>
+   <isscript>
+      var assets = require('*/cartridge/scripts/assets.js');
+      assets.addJs("/js/utils.js");
+      assets.addJs('/js/storelocator.js');
+      assets.addCss('/css/storelocator.css');
+   </isscript>
+</isdecorate>

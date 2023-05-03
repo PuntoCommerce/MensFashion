@@ -1,0 +1,18 @@
+<isdecorate template="common/layout/page">
+  <isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs("/js/session/store.js");
+  </isscript>
+
+  <div class="storesession">
+    <input type="text" id="session_search" name="location" value="" />
+    <button type="button">Este es un boton</button>
+  </div>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=${pdict.apikey}&libraries=places&callback=initAutocomplete&v=weekly"
+    defer></script>
+
+</isdecorate>
+
+

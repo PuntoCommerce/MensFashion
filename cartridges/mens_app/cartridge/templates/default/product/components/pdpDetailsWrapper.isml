@@ -6,7 +6,7 @@
 </isscript>
 <div class="custom-padding product-details-container h-100">
     <div class="row justify-content-start h-100 pdp-content-container">
-        <div class="col-lg-10 col-xl-9 product-details-wrapper sticky-details">
+        <div class="col-lg-10 col-xl-12 product-details-wrapper sticky-details">
             <!-- Product Name -->
             <div class="row">
                 <div class="col-12">
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="attributes attributesPdp">
+            <div class="attributes attributesPdp col-xl-10 col-lg-12">
                 <!-- Attributes and Quantity -->
                 <iscomment>
                     <isinclude template="product/components/mainAttributes" />
@@ -119,7 +119,7 @@
                 </div>
             </div>
 
-            <div class="pdpBottom">
+            <div class="pdpBottom col-xl-10 col-lg-12">
                 <!-- Size Chart -->
                 <isif condition="${product.variationAttributes && product.sizeChartId}">
                     <div class="row">
