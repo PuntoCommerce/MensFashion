@@ -10,7 +10,7 @@ const getPorcentage = (cant, total) => {
   return (cant / total) * 100;
 };
 
-const handleShipment = (shipment) => {
+const handleShipment = (shipment, shippingPriceAdjustment) => {
   if (shipment.shippingMethodID == "pickup") {
     let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
@@ -30,7 +30,7 @@ const handleShipment = (shipment) => {
     shippingCity: shipment.shippingAddress.city,
     shippingState: shipment.shippingAddress.stateCode,
     shippingCountry: "Mexico",
-    shippingCost: shipment.shippingTotalNetPrice.value,
+    shippingCost: shipment.shippingTotalNetPrice.value + shippingPriceAdjustment,
   };
 };
 
@@ -69,7 +69,7 @@ module.exports.execute = () => {
     Order.PAYMENT_STATUS_PAID
   );
 
-  const token = getToken();
+//  const token = getToken();
 
   let order;
   let body;
@@ -142,6 +142,13 @@ module.exports.execute = () => {
 
     let pricebook =
       order.allProductLineItems[0].product.priceModel.priceInfo.priceBook.ID;
+    let shippingPriceAdjustment = 0;
+    let allShippingPriceAdjustments =
+      order.allShippingPriceAdjustments.toArray();
+  
+    allShippingPriceAdjustments.forEach((p) => {
+      shippingPriceAdjustment = shippingPriceAdjustment + p.netPrice.value;
+    });
 
     body = {
       account: {
@@ -151,7 +158,7 @@ module.exports.execute = () => {
         //Phone: defaultShipment.shippingAddress.phone,
         Phone:order.billingAddress.phone
       },
-      shippingInfo: handleShipment(defaultShipment),
+      shippingInfo: handleShipment(defaultShipment,shippingPriceAdjustment),
       paymentInfo: handlePayment(paymentTransaction),
       oppName: order.orderNo,
       cadena: "Men's Fashion",
