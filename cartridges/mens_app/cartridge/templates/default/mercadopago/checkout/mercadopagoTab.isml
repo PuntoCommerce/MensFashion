@@ -1,5 +1,5 @@
 <li class="nav-item" data-method-id="${paymentOption.ID}">
-    <a class="nav-link mercadopago-tab active" data-toggle="tab" href="#mercado-pago-content" role="tab">
+    <a class="nav-link mercadopago-tab" data-toggle="tab" href="#checkout-pro-content" role="tab">
         <div class="check-and-label-container d-flex">
             <div class="check-decorator-payment">
                 <div class="outer-circle">
@@ -10,7 +10,7 @@
                 <span>${paymentOption.name}</span>
             </div>
         </div>
-        <img class="credit-card-option" src="${URLUtils.staticURL('/images/mercado_pago.jpg')}" height="40"
+        <img class="credit-card-option" src="${URLUtils.staticURL('/images/payment-mercado-pago.png')}" height="40"
             alt="${paymentOption.name}" title="${paymentOption.name}" />
     </a>
 </li>
