@@ -33,9 +33,8 @@ server.get("Start", (req, res, next) => {
 
   while (stores.hasNext()) {
     let store = stores.next();
-    
-    if (pos < 4) {
-      
+
+    if (pos < 4) { 
       storeList.push({
         id: store.ID,
         name: store.name,

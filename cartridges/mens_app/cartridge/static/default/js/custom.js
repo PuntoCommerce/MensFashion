@@ -636,7 +636,7 @@ if (widthScreen > 543) {
 
 
 // ============================= function see more in mega menu =============================
-/* const content = document.querySelector("#subcategories");
+const content = document.querySelector("#subcategories");
 const button = document.querySelector("#btn-see-more");
 
 function seeMore(e) {
@@ -648,6 +648,6 @@ function seeMore(e) {
     content.className = "open";
     button.textContent = "Ver menos -"
   }
-} */
+}
 
 localValues();

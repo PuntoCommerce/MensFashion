@@ -21,10 +21,10 @@
                      <div class="category-item item catTitle">
                         <a href="${category.url}">${category.name}</a>
                      </div>
-                     <isif condition="${category.subCategories}">
+                    <iscomment>  <isif condition="${category.subCategories}">
                     
-                        <ul class="subcategories" id="subcategories">
-                           <iscomment> <isif condition="${category.subCategories >= category.subCategories[10]}">
+                        <ul class="subcategories" id="subcategories"> </iscomment>
+                           <isif condition="${category.subCategories >= category.subCategories[10]}">
                             <ul class="subcategories" id="subcategories">
                               <isloop items="${category.subCategories}"  var="subCategory" status="loopstatus" >
                                  <li class="sub-category-item item ${subCategory.name}" imageurl="
@@ -36,7 +36,7 @@
                            </ul>
                             <button type="" class="btn-see-more" id="btn-see-more" onclick="seeMore(this)">Ver más +</button>
                         <iselse/>
-                             <ul class="subcategories"> </iscomment>
+                             <ul class="subcategories">
                            <isloop items="${category.subCategories}" var="subCategory" status="loopstatus">
                               <li class="sub-category-item item ${subCategory.name}" imageurl="
                               <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />

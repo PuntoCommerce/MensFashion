@@ -1713,7 +1713,7 @@ ul {
 .dropdown-menu-content .subcategories {
   padding-inline-start: 0px;
 }
-/* 
+
 #subcategories {
   padding-inline-start: 0px;
   max-height: 240px;
@@ -1730,7 +1730,7 @@ ul {
   border: none;
   font-weight: bold;
   outline-color: transparent;
-} */
+}
 
 .exampleText,
 .checkout-mail-cont {
