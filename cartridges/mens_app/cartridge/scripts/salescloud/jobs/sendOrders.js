@@ -69,7 +69,7 @@ module.exports.execute = () => {
     Order.PAYMENT_STATUS_PAID
   );
 
-//  const token = getToken();
+  const token = getToken();
 
   let order;
   let body;
