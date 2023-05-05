@@ -1,5 +1,5 @@
 <isif condition="${pdict.stores.stores.length === 0}">
- <isinclude template="checkout/modal/modalPopup"/>
+<iscomment>  <isinclude template="checkout/modal/modalPopup"/> </iscomment>
     <iscomment> <p class="text-center store-locator-no-results">
         ${Resource.msg('error.no.results', 'storeLocator', null)}
     </p> </iscomment>
