@@ -8,24 +8,41 @@ var SeekableIterator = require('dw/util/SeekableIterator');
 var File = require("dw/io/File");
 var FileWriter = require("dw/io/FileWriter");
 var FileReader = require("dw/io/FileReader");
+var Logger = require('dw/system/Logger');
+Logger = Logger.getLogger('AkService', 'log');
 
 module.exports.execute = (args) => {
+
+  let final = new File(File.CATALOGS + "/" + args.siteNameURL + "/default/googleMerchantFinalFile.xml");
+  let finalWritter = new FileWriter(final);
+
+
+
+
+  
+  
+
 
   let headerGoogle = '<?xml version="1.0"?><rss xmlns:g="http://base.google.com/ns/1.0" version="2.0"><channel>';
   let endGoogle = '</channel></rss>';
   let title = '<title>Example - Online Store zapata</title>';
   let link = '<link>http://www.example.com</link>';
   let description = '<description>This is a sample feed containing the required and recommended attributes for a variety of different products</description>';
-  let itemOpen = "<item>";
-  let itemClose = "</item>";
-  let itemCollector = "";
+  
 
+  finalWritter.writeLine(headerGoogle + title + link + description);
 
   //get all product from site assigned
   let productIterator = ProductMgr.queryAllSiteProducts();
-  
-  
+  Logger.info(File.CATALOGS + "/" + args.siteNameURL + "/default/googleMerchantFinalFile.xml");
+  var itera = 0;
   while (productIterator.hasNext()) {
+    let itemOpen = "<item>";
+    let itemClose = "</item>";
+    let itemCollector = "";
+    Logger.info("Numero: " + itera);
+    itera = itera+1;
+    
     let product = productIterator.next();
     let priceModel = product.getPriceModel();
     let productPriceMXN = priceModel.getPriceBookPrice("01s8V000002BlNUQA0");
@@ -62,7 +79,8 @@ module.exports.execute = (args) => {
     let Item = itemOpen;
     Item += "<g:id>"+g_id+"</g:id>";
     Item += "<g:title>"+g_title+"</g:title>";
-    Item += "<g:description>"+g_description+"</g:description>";
+    // Item += "<g:description>"+g_description+"</g:description>";
+    Item += "<g:description>"+"</g:description>";    
     Item += "<g:link>"+g_link+"</g:link>";
     Item += "<g:image_link>"+g_imagelink+"</g:image_link>";
     Item += "<g:condition>new</g:condition>";
@@ -74,19 +92,24 @@ module.exports.execute = (args) => {
     Item += "<g:gtin></g:gtin>";
     Item += itemClose;
 
-    itemCollector += Item
+    // itemCollector += Item
+    finalWritter.writeLine(Item);
+    // if(itera+1 == 1049)
+    // {
+    //   break;
+    // }
   }
 
   //Close iterator for good practices
   productIterator.close();
 
-  let finalXMLText = headerGoogle + title + link + description + itemCollector + endGoogle;
+  // let finalXMLText = headerGoogle + title + link + description + itemCollector + endGoogle;
+  finalWritter.writeLine(endGoogle);
 
 
-  let final = new File(File.CATALOGS + "/" + args.siteNameURL + "/default/googleMerchantFinalFile.xml");
 
-  let finalWritter = new FileWriter(final);
-  finalWritter.writeLine(finalXMLText);
+  // let finalWritter = new FileWriter(final);
+  // finalWritter.writeLine(finalXMLText);
   finalWritter.close();
 
 
