@@ -297,6 +297,61 @@
                 }
             ]
         }
+      },
+      {
+        "@type-id": "custom.create.productGoogleFeedXML",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Generate products for google feed",
+        "module": "mens_app/cartridge/scripts/jobs/productGoogleFeedXML.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "storeURL",
+              "@type": "string",
+              "@required": "true",
+              "description": "URL of the store for creating link to google feed [URL must end with /]",
+              "@trim": true
+            },
+            {
+              "@name": "mainCategoryName",
+              "@type": "string",
+              "@required": "true",
+              "description": "Value for get Main category at google path",
+              "@trim": true
+            },
+            {
+              "@name": "googleProductCategoryDefault",
+              "@type": "string",
+              "@required": "true",
+              "description": "default value por google product category field, if not default value put null on this field",
+              "@trim": true
+            },
+            {
+              "@name": "siteNameURL",
+              "@type": "string",
+              "@required": "true",
+              "description": "using images public path for saving five, this use file.CATALOG class and need the store site name for correct working",
+              "@trim": true
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All good"
+            }
+          ]
+        }
       }
     ]
   }
