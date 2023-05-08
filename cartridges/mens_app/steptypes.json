@@ -299,7 +299,7 @@
         }
       },
       {
-        "@type-id": "custom.create.productGoogleFeedXML",
+        "@type-id": "custom.googleFeed",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
         "@supports-organization-context": "true",
