@@ -45,18 +45,7 @@
                               </li>
                            </isloop>
                         </ul>
-                       <iscomment>  <button type="" class="btn-see-more" id="btn-see-more">Ver más +</button>
-
-                    <iselse/>
-                        <ul class="subcategories">
-                           <isloop items="${category.subCategories}" var="subCategory" status="loopstatus">
-                              <li class="sub-category-item item ${subCategory.name}" imageurl="
-                              <isprint value=" ${subCategory.image}" encoding="htmldoublequote" />
-                              ">
-                              <a href="${subCategory.url}">${subCategory.name}</a>
-                              </li>
-                           </isloop>
-                        </ul> </iscomment>
+                      
                      </isif>
                   </div>
                </isloop>
