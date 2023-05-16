@@ -28,14 +28,24 @@ server.get("Start", (req, res, next) => {
   );
 
   let storeList = [];
-
+  let storeListAux = [];
   let pos = 1;
 
   while (stores.hasNext()) {
     let store = stores.next();
-
+    storeList.push({
+      id: store.ID,
+      name: store.name,
+      address: store.address1,
+      city: store.city,
+      state: store.stateCode,
+      postalCode: store.postalCode,
+      phone: store.phone,
+      latitude: store.latitude,
+      longitude: store.longitude,
+    });
     if (pos < 4) { 
-      storeList.push({
+      storeListAux.push({
         id: store.ID,
         name: store.name,
         address: store.address1,
@@ -76,6 +86,7 @@ server.get("Start", (req, res, next) => {
     storelocator: {
       mapAPI: mapAPI,
       stores: storeList,
+      storesAux: storeListAux,
       svgMarker: svgMarker,
       MAX_DISTANCE: MAX_DISTANCE,
       layout: layout.value,

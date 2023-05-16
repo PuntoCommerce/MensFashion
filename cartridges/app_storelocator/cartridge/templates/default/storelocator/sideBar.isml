@@ -3,7 +3,7 @@
    <div class="text-us-stores">
       <span>NUESTRAS TIENDAS</span>
    </div>
-   <ul id="listing" stores="${JSON.stringify(pdict.storelocator.stores)}"></ul>
+   <ul id="listing" stores="${JSON.stringify(pdict.storelocator.stores)}" storesaux="${JSON.stringify(pdict.storelocator.storesAux)}"></ul>
 
    <a href="${URLUtils.url('StoreLocator-MapList')}" class="btn-map-list"
       aria-label="${Resource.msg('label.addressbook.addnewaddress', 'account', null)}">
