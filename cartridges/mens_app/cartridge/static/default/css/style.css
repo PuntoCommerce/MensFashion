@@ -7232,16 +7232,17 @@ a .oauth-facebook--button {
   }
 
   .checkout__stepper{
-    padding: 10px 0 30px 0;
+    padding: 10px 0 20px 0;
   }
 
   .checkout__stepper--item-circle{
     height: 36px;
     width: 36px;
+    font-size: 24px;
   }
 
-  .checkout__stepper--item-circle h3{
-    font-size: 24px;
+  .checkout__stepper--item p{
+    margin-bottom: 0.3rem !important;
   }
 
   .checkout__stepper--item-title {

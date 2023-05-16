@@ -17,6 +17,7 @@
         <!--<![endif]-->
         <isinclude template="/common/htmlHead" />
         <isactivedatahead/>
+        <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5SXG7L3"></script>
     </head>
     <body>
         ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
