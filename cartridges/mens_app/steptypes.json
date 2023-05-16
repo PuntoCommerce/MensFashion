@@ -318,13 +318,6 @@
               "@trim": true
             },
             {
-              "@name": "mainCategoryName",
-              "@type": "string",
-              "@required": "true",
-              "description": "Value for get Main category at google path",
-              "@trim": true
-            },
-            {
               "@name": "googleProductCategoryDefault",
               "@type": "string",
               "@required": "true",
@@ -335,7 +328,21 @@
               "@name": "siteNameURL",
               "@type": "string",
               "@required": "true",
-              "description": "using images public path for saving five, this use file.CATALOG class and need the store site name for correct working",
+              "description": "using images public path for saving five, this use file.CATALOG class and need the store site name for correct working, the site name can be find in administration > development setup > catalog > [name of catalog]",
+              "@trim": true
+            },
+            {
+              "@name": "pricebookListID",
+              "@type": "string",
+              "@required": "true",
+              "description": "the id of the pricebook can be find in the pricing section of a product",
+              "@trim": true
+            },
+            {
+              "@name": "useDescription",
+              "@type": "boolean",
+              "@required": "true",
+              "description": "use Short Descrption or not, if using html in description field may fail at creating xml",
               "@trim": true
             }
           ]

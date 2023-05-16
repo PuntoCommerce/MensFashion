@@ -45,7 +45,7 @@ module.exports.execute = (args) => {
     
     let product = productIterator.next();
     let priceModel = product.getPriceModel();
-    let productPriceMXN = priceModel.getPriceBookPrice("01s8V000002BlNUQA0");
+    let productPriceMXN = priceModel.getPriceBookPrice(args.pricebookListID);
 
     let g_id = product.ID;
     let g_title = product.name;
@@ -79,8 +79,14 @@ module.exports.execute = (args) => {
     let Item = itemOpen;
     Item += "<g:id>"+g_id+"</g:id>";
     Item += "<g:title>"+g_title+"</g:title>";
-    // Item += "<g:description>"+g_description+"</g:description>";
-    Item += "<g:description>"+"</g:description>";    
+
+    if(args.useDescription == true){
+      Item += "<g:description>"+g_description+"</g:description>";
+    }
+    else{
+      Item += "<g:description></g:description>";  
+    }
+      
     Item += "<g:link>"+g_link+"</g:link>";
     Item += "<g:image_link>"+g_imagelink+"</g:image_link>";
     Item += "<g:condition>new</g:condition>";
