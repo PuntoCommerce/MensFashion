@@ -18,7 +18,7 @@
             <!--- Shipping information --->
             <p class="summary-section-label shipping-method-label">${Resource.msg('label.order.shipping.method', 'confirmation', null)}</p>
             <div class="row summary-details">
-                <div class="col-8">
+                <div class="col-12 col-lg-8 col-xl-8">
                     <p class="shipping-method">
                         <span class="shipping-method-title">${shippingModel.selectedShippingMethod.displayName}</span>
                         <span class="shipping-method-arrival-time">

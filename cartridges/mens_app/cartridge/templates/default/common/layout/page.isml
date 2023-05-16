@@ -14,6 +14,8 @@
     assets.addJs('/js/productTile.js');
 </isscript>
 
+
+
 <!DOCTYPE html>
 <html lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
 
@@ -27,6 +29,7 @@
     </isif>
     <isactivedatahead/>
     <isinclude template="/components/schema" />
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5SXG7L3"></script>
 </head>
 
 <body id="body-scroll">

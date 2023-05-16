@@ -103,14 +103,14 @@
                             </div>
 
                             <div class="card-body row">
-                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
+                                <div class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
                                    
                                     
                                    <iscomment>  <button class="custom_edit-button" id="custom-edit-shipping"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                 </div>
-                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
+                                <div class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
                                     <button class="edit-button custom_edit-button"
                                             aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.payment', 'checkout', null)}</button>

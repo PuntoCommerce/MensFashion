@@ -5,7 +5,7 @@
    </div>
    <ul id="listing" stores="${JSON.stringify(pdict.storelocator.stores)}"></ul>
 
-   <a href="${URLUtils.url('StoreLocator-MapList')}" class="btn-map-list"
+   <iscomment> <a href="${URLUtils.url('StoreLocator-MapList')}" class="btn-map-list"
       aria-label="${Resource.msg('label.addressbook.addnewaddress', 'account', null)}">
-      VER TODAS LAS TIENDAS</a>
+      VER TODAS LAS TIENDAS</a> </iscomment>
 </div>
