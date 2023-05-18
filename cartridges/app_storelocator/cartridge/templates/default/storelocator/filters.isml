@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-start">
     <div class="title-container d-flex align-items-center">
       <span class="title">${Resource.msg('filters.title', 'storelocator', null)}</span>
-      <button type="" class="popup" id="userLocationButton">
+      <button type="" class="popup d-none" id="userLocationButton">
         <img class="userLocation" location-disable-message="${Resource.msg('error.location.disable.message', 'storelocator', null)}" id="userLocationIcon" src="${pdict.storelocator.icons.userLocationDisabled}" alt="">
       </button>
     </div>

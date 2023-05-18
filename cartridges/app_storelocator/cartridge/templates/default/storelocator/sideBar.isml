@@ -1,11 +1,12 @@
 <div id="map-list" class="d-flex justify-content-center align-items-center">
    <isinclude template="storelocator/filters" />
-   <div class="text-us-stores">
+   <div class="container-us-stores">
+       <div class="text-us-stores">
       <span>NUESTRAS TIENDAS</span>
    </div>
    <ul id="listing" stores="${JSON.stringify(pdict.storelocator.stores)}" storesaux="${JSON.stringify(pdict.storelocator.storesAux)}"></ul>
-
+   </div>
    <a href="${URLUtils.url('StoreLocator-MapList')}" class="btn-map-list"
       aria-label="${Resource.msg('label.addressbook.addnewaddress', 'account', null)}">
-      VER TODAS LAS TIENDAS</a>
+      <button type="">VER TODAS LAS TIENDAS</button></a>
 </div>

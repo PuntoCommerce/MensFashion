@@ -7304,15 +7304,23 @@ a .oauth-facebook--button {
 /*Design map list*/
 
 #map-list #listing {
-  height: 75% !important;
+  height: 80% !important;
   background: #FFFFFF !important;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.container-us-stores{
+  background-color: #ffffff;
+  margin-left: 20px;
 }
 
 .text-us-stores{
-  width: 90%;
+  width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 10px;
+  padding: 20px;
+
 }
 
 .text-us-stores {
@@ -7327,16 +7335,25 @@ a .oauth-facebook--button {
   background-color: #3E403D;
   color: #FFFFFF;
   height: 41px;
-  width: 87%;
+  width: 77%;
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
   margin-bottom: 10px;
   font-family: "Avenir-Next";
 }
 
-.btn-map-list:hover{
+.btn-map-list button{
+  height: 41px;
+  border: none;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #3E403D;
+}
+
+.btn-map-list button:hover{
   background: #000;
   color: #fff;
 }
@@ -7355,6 +7372,10 @@ a .oauth-facebook--button {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.storelocator #listing .item .name{
+  text-transform: uppercase;
+  font-size: 15px;
+}
 .title-stores{
   display: flex;
   justify-content: center;
@@ -7401,7 +7422,12 @@ a .oauth-facebook--button {
 
 /*Design order size*/
 .refinement-talla-camisas-divider ul, 
-.refinement-talla-sacos ul{
+.refinement-talla-sacos ul, .refinement-talla-pantalones ul, 
+.refinement-talla-trajes ul, .refinement-talla-playeras ul, 
+.refinement-talla-chalecos ul, .refinement-talla-suéteres ul,
+.refinement-talla-chamarras ul, .refinement-talla-sobrecamisas ul,
+.refinement-talla-abrigos ul, .refinement-talla-jeans ul,
+.refinement-talla-underwear ul, .refinement-talla-calcetines ul, .refinement-talla-cinturones ul{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
@@ -7409,7 +7435,13 @@ a .oauth-facebook--button {
 }
 
 .refinement-talla-camisas-divider li, 
-.refinement-talla-sacos li{
+.refinement-talla-sacos li, .refinement-talla-pantalones li, 
+.refinement-talla-trajes li, .refinement-talla-playeras li, 
+.refinement-talla-chalecos li, .refinement-talla-suéteres li,
+.refinement-talla-chamarras li, .refinement-talla-sobrecamisas li,
+.refinement-talla-abrigos li, .refinement-talla-jeans li,
+.refinement-talla-underwear li, .refinement-talla-calcetines li
+.refinement-talla-cinturones li{
   border: 1px solid #aaa;
     padding: 0 !important;
     font-size: 16px;
@@ -7419,11 +7451,22 @@ a .oauth-facebook--button {
 }
 
 .refinement-talla-camisas-divider li button, 
-.refinement-talla-sacos li button{
+.refinement-talla-sacos li button, .refinement-talla-pantalones li button, 
+.refinement-talla-trajes li button, .refinement-talla-playeras li button, 
+.refinement-talla-chalecos li button, .refinement-talla-suéteres li button,
+.refinement-talla-chamarras li button, .refinement-talla-sobrecamisas li button,
+.refinement-talla-abrigos li button, .refinement-talla-jeans li button,
+.refinement-talla-underwear li button, .refinement-talla-calcetines li button,
+.refinement-talla-cinturones li button{
   width: max-content;
 }
 
-.refinement-talla-camisas-divider li button img, 
-.refinement-talla-sacos li button img{
+.refinement-talla-camisas-divider li button img, .refinement-talla-sacos li button img, 
+.refinement-talla-pantalones li button img, .refinement-talla-trajes li button img, 
+.refinement-talla-playeras li button img, .refinement-talla-chalecos li button img, 
+.refinement-talla-suéteres li button img, .refinement-talla-chamarras li button img, 
+.refinement-talla-sobrecamisas li button img, .refinement-talla-abrigos li button img, 
+.refinement-talla-jeans li button img, .refinement-talla-underwear li button img, 
+.refinement-talla-calcetines li button img, .refinement-talla-cinturones li button img{
   display: none;
 }

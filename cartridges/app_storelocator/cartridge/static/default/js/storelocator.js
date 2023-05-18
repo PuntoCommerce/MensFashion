@@ -7,7 +7,7 @@ let currentPositionClient = {};
 let directionsService;
 let directionsDisplay;
 let markerClustered;
-let memovar = [];
+let storAux = [];
 function initMap() {
     const minerva = { lat: 20.67645435642226, lng: -103.38935752238434 };
     const map = new google.maps.Map(elementMap, {
@@ -20,7 +20,7 @@ function initMap() {
     const storesArray = JSON.parse(
         document.getElementById("listing").getAttribute("stores")
     );
-    memovar = storesArray;
+    storAux = storesArray;
     const storesArrayAux = JSON.parse(
         document.getElementById("listing").getAttribute("storesAux")
     );

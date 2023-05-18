@@ -61,7 +61,6 @@ server.get("Start", (req, res, next) => {
   }
 
 
-
   const clusterMarker = URLUtils.staticURL(
     "/images/storelocator/clusterMarker.svg"
   );
