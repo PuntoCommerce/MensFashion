@@ -25,14 +25,16 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
     };
   }
   return {
-    shippingStreet: shipment.shippingAddress.address1,
-    shippingPostalCode: shipment.shippingAddress.postalCode,
-    shippingCity: shipment.shippingAddress.city,
-    shippingState: shipment.shippingAddress.stateCode,
-    shippingCountry: "Mexico",
-    shippingCost: shipment.shippingTotalNetPrice.value + shippingPriceAdjustment,
-  };
-};
+        shippingStreet:`${shipment.shippingAddress.address1} ${shipment.shippingAddress.suite}`,
+        Numero_exterior__c:shipment.shippingAddress.suite,
+        shippingPostalCode: shipment.shippingAddress.postalCode,
+        shippingCity: shipment.shippingAddress.city,
+        shippingState: shipment.shippingAddress.stateCode,
+        shippingCountry: "Mexico",
+        shippingCost:
+            shipment.shippingTotalNetPrice.value + shippingPriceAdjustment,
+    };
+    };
 
 const parseDate = (date) => {
   let month = date.getMonth() + 1;
