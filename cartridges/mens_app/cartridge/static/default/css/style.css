@@ -3878,7 +3878,7 @@ header nav.homepage:hover {
   z-index: 100;
 }
 
-.checkout-popup-alert{
+.checkout-popup-alert, .alert-popup-pay{
   position: fixed;
   top: 50%;
   left: 50%;
@@ -7278,6 +7278,23 @@ a .oauth-facebook--button {
   .checkout-summary-container-payment, .checkout-summary-container-shipping{
     margin-bottom: 0 !important;
   }
+
+  
+  .container-all-stores{
+    padding: 1rem 1rem !important;
+  }
+
+  .container-stores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .btn-map-list{
+    display: block;
+  }
+
+  .title-stores h2{
+    margin: 1rem !important;
+  }
 }
 
 .span-zipCode2 {
@@ -7314,6 +7331,7 @@ a .oauth-facebook--button {
 .container-us-stores{
   background-color: #ffffff;
   margin-left: 20px;
+
 }
 
 .text-us-stores{
