@@ -344,6 +344,13 @@
               "@required": "true",
               "description": "use Short Descrption or not, if using html in description field may fail at creating xml",
               "@trim": true
+            },
+            {
+              "@name": "fileName",
+              "@type": "string",
+              "@required": "true",
+              "description": "Final name for file path",
+              "@trim": true
             }
           ]
         },

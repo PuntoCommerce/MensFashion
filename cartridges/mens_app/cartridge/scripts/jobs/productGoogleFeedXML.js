@@ -34,7 +34,9 @@ module.exports.execute = (args) => {
 
   //get all product from site assigned
   let productIterator = ProductMgr.queryAllSiteProducts();
-  Logger.info(File.CATALOGS + "/" + args.siteNameURL + "/default/googleMerchantFinalFile.xml");
+
+  // Logger.info(File.CATALOGS + "/" + args.siteNameURL + "/default/googleMerchantFinalFile.xml");
+  Logger.info(File.CATALOGS + "/" + args.siteNameURL + "/default/" + args.fileName + ".xml");
   var itera = 0;
   while (productIterator.hasNext()) {
     let itemOpen = "<item>";
