@@ -13,6 +13,8 @@
                                                      promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" || promotion.name === "-85%" ||
                                                      promotion.name === "-90%" || promotion.name === "-95%"}" />
                                 <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
+                                  <iselseif condition="${promotion.name === "1 prenda -20%" || promotion.name === "2 prendas -30%" || promotion.name === "3 prendas -40%"}" />
+                            <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name !== null}" />
                                 <span class="promotion-item">${promotion.name}</span>
                                 <iselseif condition="${promotion.calloutMsg === ""}" />
@@ -23,19 +25,6 @@
                                 <span class="promotion-item">${promotion.calloutMsg}</span>
                                 <iscomment> <p>${JSON.stringify(promotion.name)}</p> </iscomment>
                             </isif>
-        <iscomment>
-            <div class="row collapsible-xl">
-                <div class="col-12">
-                    <button class="title callout btn text-left btn-block" aria-expanded="false"
-                        aria-controls="collapsible-promotion-details-${promdet.index}">
-                        <isprint value="${promotion.calloutMsg}" encoding="off" />
-                    </button>
-                </div>
-                <div class="col-12 value content" id="collapsible-promotion-details-${promdet.index}">
-                    <isprint value="${promotion.details}" encoding="off" />
-                </div>
-            </div>
-        </iscomment>
     </isloop>
     </div>
 </isif>

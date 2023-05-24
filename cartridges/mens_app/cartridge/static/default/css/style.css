@@ -7278,6 +7278,22 @@ a .oauth-facebook--button {
   .checkout-summary-container-payment, .checkout-summary-container-shipping{
     margin-bottom: 0 !important;
   }
+
+  .container-all-stores{
+    padding: 1rem 1rem !important;
+  }
+
+  .container-stores {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .btn-map-list{
+    display: block;
+  }
+
+  .title-stores h2{
+    margin: 1rem !important;
+  }
 }
 
 .span-zipCode2 {
@@ -7469,4 +7485,17 @@ a .oauth-facebook--button {
 .refinement-talla-jeans li button img, .refinement-talla-underwear li button img, 
 .refinement-talla-calcetines li button img, .refinement-talla-cinturones li button img{
   display: none;
+}
+
+.img-hotSale img{
+  width: 40px;
+  top: 10px;
+  position: absolute;
+}
+
+.img-hotSale-pdp{
+  width: 40px;
+  position: absolute;
+  right: 8.5rem;
+  top: -5px;
 }

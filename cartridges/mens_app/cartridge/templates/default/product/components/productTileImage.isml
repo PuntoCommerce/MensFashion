@@ -37,4 +37,8 @@
             </a> </iscomment>
         </div>
     </div>
+
+    <div class="img-hotSale">
+         <img src="${URLUtils.staticURL('/images/hot-sale.png')}" alt="Hot sale"/>
+    </div>
 </div>
