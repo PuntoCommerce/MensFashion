@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="col-12">
                     <span class="product-name">${product.productName.toLowerCase()}</span>
-                     <img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.png')}" alt="Hot sale"/>
+                    
                     <iscomment> <p>${JSON.stringify(product)}</p> </iscomment>
                     <!-- Applicable Promotions -->
                     <iscomment>
@@ -54,6 +54,7 @@
                     <isset name="price" value="${product.price}" scope="page" />
                     <isinclude template="product/components/pricing/main" />
                     <isinclude template="product/components/promotionsPdp" />
+                    
                 </div>
                 <iscomment>
                     <!-- Trigger Modal Sizes Guide -->

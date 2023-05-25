@@ -54,6 +54,7 @@
                     </div>
                     <!-- Product Availability -->
                     <isinclude template="product/components/productAvailability" />
+                     
                 </div>
             </div>
 

@@ -4,16 +4,16 @@
     assets.addJs('/js/carousel.js');
 </isscript>
 
-<isif condition="${pdict.title}">
+<iscomment> <isif condition="${pdict.title}">
     <div class="row">
         <div class="col-10 promo-carousel__headings row">
             <h3 class="carousel-title col-5 promo-carousel__title">${pdict.title}</h3>
-            <isif condition="${pdict.countdownDate}">
+            <isif condition="${pdict.countdownDate}"> 
                 <h3 class="col-6 promo-carousel__countdown">Termina en: <span>${pdict.countdownDate}</span></h3>
             </isif>
         </div>
     </div>
-</isif>
+</isif> </iscomment>
 
 
 <div id="${pdict.id}"

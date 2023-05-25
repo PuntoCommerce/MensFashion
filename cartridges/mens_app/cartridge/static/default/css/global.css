@@ -22880,7 +22880,7 @@ button.close:focus {
 
 @media (max-width: 1024px) {
   .container-custom-plp .product-tile .image-container {
-    height: 300px;
+    height: auto;
   }
 }
 
@@ -22892,13 +22892,13 @@ button.close:focus {
 
 @media (max-width: 425px) {
   .container-custom-plp .product-tile .image-container {
-    height: 285px;
+    height: auto;
   }
 }
 
 @media (max-width: 375px) {
   .container-custom-plp .product-tile .image-container {
-    height: 250px;
+    height: auto;
   }
 }
 
