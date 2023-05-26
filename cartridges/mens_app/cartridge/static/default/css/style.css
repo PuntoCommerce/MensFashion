@@ -7327,6 +7327,18 @@ a .oauth-facebook--button {
   .title-stores h2{
     margin: 1rem !important;
   }
+
+  .ITBC-container.ITBC-onlyButton-container-promo{
+    height: auto !important;
+  }
+
+  .carousel.promo-carousel .summary__pricing .highlight-container{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .carousel.promo-carousel .summary__pricing .highlight-container .promotion-item{
+    margin-bottom: 5px;
+  }
 }
 
 .span-zipCode2 {
@@ -7544,7 +7556,8 @@ a .oauth-facebook--button {
   color: #FF0000 !important;
 }
 
-.product-tile .img-hotSale-pdp, .cart-page .img-hotSale-pdp, .container.data-checkout-stage  .img-hotSale-pdp{
+.product-tile .img-hotSale-pdp, .cart-page .img-hotSale-pdp, 
+.container.data-checkout-stage .img-hotSale-pdp{
   display: none !important;
 }
 
