@@ -30,8 +30,12 @@
 <div class="row">
     <div class="col-8">
         <strong>${Resource.msg('label.estimatedtotal','cart',null)}</strong>
+        
     </div>
     <div class="col-4">
         <p class="text-right grand-total">${pdict.totals.grandTotal}</p>
     </div>
 </div>
+
+
+ 

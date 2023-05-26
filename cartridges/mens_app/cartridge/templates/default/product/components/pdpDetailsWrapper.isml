@@ -52,6 +52,7 @@
                 <div class="prices col-lg-12">
                  
                     <isset name="price" value="${product.price}" scope="page" />
+                    
                     <isinclude template="product/components/pricing/main" />
                     <isinclude template="product/components/promotionsPdp" />
                     

@@ -29,10 +29,10 @@
 
 <!--- Order Discount --->
 <div class="row order-discount <isif condition="${pdict.totals.orderLevelDiscountTotal.value === 0}">hide-order-discount</isif>">
-    <div class="col-8">
+    <div class="col-7 col-xl-8 col-lg-8">
         <p>${Resource.msg('label.order.discount', 'common', null)}</p>
     </div>
-    <div class="col-4">
+    <div class="col-5 col-xl-4 col-lg-4">
         <p class="text-right order-discount-total"> - ${pdict.totals.orderLevelDiscountTotal.formatted}</p>
     </div>
 </div>

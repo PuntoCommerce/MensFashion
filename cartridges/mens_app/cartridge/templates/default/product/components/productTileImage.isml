@@ -23,7 +23,7 @@
         </a>
     </isif>
 
-   <div class='wishlist'>
+   <iscomment>  <div class='wishlist'>
         <div class='wishlist__wrapper'>
             <a class="wishlistTile wishlist_unselected d-flex align-items-center"
                 href="${URLUtils.url('Wishlist-AddProduct')}"
@@ -34,11 +34,11 @@
                 href="${URLUtils.url('Wishlist-RemoveProductPLP', 'pid', product.id)}"
                 title="${Resource.msg('wishlist.addto.wishlist.heart', 'wishlist', null)}">
                 <i class="fa fa-heart-o wishlist_unselected reload-plp" aria-hidden="true"></i>
-            </a> </iscomment>
+            </a> 
         </div>
-    </div> 
-
-    <iscomment> <div class="img-hotSale">
-         <img src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
     </div> </iscomment>
+
+    <div class="img-hotSale">
+         <img src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
+    </div>
 </div>

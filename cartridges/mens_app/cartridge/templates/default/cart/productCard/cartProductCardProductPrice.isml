@@ -33,6 +33,7 @@
             
             <div class="item-total-${lineItem.UUID} price">
                 <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+                 <img class="img-hotSale-car" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
             </div>
         </div>
 

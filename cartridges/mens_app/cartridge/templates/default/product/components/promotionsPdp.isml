@@ -26,6 +26,7 @@
                                 <iscomment> <p>${JSON.stringify(promotion.name)}</p> </iscomment>
                             </isif>
     </isloop>
+    
     </div>
-    <iscomment> <img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/> </iscomment>
+   
 </isif>

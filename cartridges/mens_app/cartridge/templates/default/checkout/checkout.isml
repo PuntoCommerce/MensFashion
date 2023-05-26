@@ -69,32 +69,9 @@
                         <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
                         <!----------------------------------------------------------------------------------->
 
-                        <div class="alert alert-danger error-message alert-popup-pay" id="modal-check" role="alert">
-                         <div class="checkout-popup-alert-card">
-       
-      <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
-       <div class="checkout-popup-alert-card-info">
-       <p>${Resource.msg('error.message.popup', 'checkout', null)}</p>
-    </div>
-     <button onclick="closeAlertModal()" class="checkout-alert-register-card-close" type="">
-        <p>${Resource.msg('txt.button.error.popup', 'checkout', null)}</p>
-      </button>
-    </div>
+                        
                             <p class="error-message-text"></p>
-                        </div>
-                        <div id="modal-check" class="checkout-popup-alert">
-    <div class="checkout-popup-alert-card">
-       
-      <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
-       <div class="checkout-popup-alert-card-info">
-       <p>${Resource.msg('error.message.popup', 'checkout', null)}</p>
-    </div>
-     <button onclick="closeAlertModal()" class="checkout-alert-register-card-close" type="">
-        <p>${Resource.msg('txt.button.error.popup', 'checkout', null)}</p>
-      </button>
-    </div>
-   
-</div>
+                       
 
                         <!-- Step 1: Customer -->
                         <iscomment>We only allow edits for non-registered customers</iscomment>

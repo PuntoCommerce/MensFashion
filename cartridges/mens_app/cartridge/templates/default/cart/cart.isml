@@ -83,6 +83,7 @@
                                     <isinclude template="cart/cartShippingMethodSelection" />
                                 </div> </iscomment>
                                 <isinclude template="cart/cartTotals" />
+                                
                                 <div class="row d-none d-sm-block">
                                     <div class="col-12 ">
                                         <isinclude template="cart/checkoutButtons" />

@@ -29,7 +29,7 @@
                         </isloop>
 
                         <isinclude template="cart/productCard/cartProductCardAvailability" />
-                        <iscomment> <img class="img-hotSale-car" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/> </iscomment>
+                       
                         <isinclude template="cart/productCard/cartProductCardEdit" />
                     </div>
                 </div>

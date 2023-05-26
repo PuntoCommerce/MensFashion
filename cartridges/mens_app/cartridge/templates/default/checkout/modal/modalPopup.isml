@@ -1,5 +1,5 @@
 
-<div id="modal-check" class="checkout-popup-alert">
+<iscomment> <div id="modal-check" class="checkout-popup-alert">
     <div class="checkout-popup-alert-card">
        
       <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
@@ -11,4 +11,4 @@
       </button>
     </div>
    
-</div>
+</div> </iscomment>

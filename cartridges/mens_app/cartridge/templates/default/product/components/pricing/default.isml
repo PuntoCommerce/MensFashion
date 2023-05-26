@@ -35,3 +35,4 @@
     </div>
 </span>
 </span>
+<img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
