@@ -5033,6 +5033,7 @@ header nav.homepage:hover {
 .product-detail .prices .price {
   text-align: left;
   margin-bottom: 12px;
+  display: inline-flex;
 }
 
 .product-detail .prices .promotion-item-container{
