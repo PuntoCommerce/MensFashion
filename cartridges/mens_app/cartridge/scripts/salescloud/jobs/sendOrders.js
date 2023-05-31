@@ -11,6 +11,9 @@ const getPorcentage = (cant, total) => {
 };
 
 const handleShipment = (shipment, shippingPriceAdjustment) => {
+    const { suffix, suite } = shipment.shippingAddress;
+    const interior = suffix != null ? suffix : "-";
+    const exteriot = suite != null ? suite : "-";
     if (shipment.shippingMethodID == "pickup") {
         let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
@@ -20,7 +23,6 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
             storeShippingPostalCode: store.postalCode,
             storeShippingCity: store.city,
             storeShippingState: store.stateCode,
-
             shippingCost: shipment.shippingTotalNetPrice.value,
         };
     }
@@ -29,8 +31,14 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
         shippingStreet:
             shipment.shippingAddress.address1 +
             " " +
-            shipment.shippingAddress.suite,
+            shipment.shippingAddress.address2 +
+            " ext:" +
+            exteriot +
+            " int:" +
+            interior,
         Numero_exterior__c: shipment.shippingAddress.suite,
+        Numero_interior__c: shipment.shippingAddress.suffix,
+        Referencia__c: shipment.shippingAddress.postBox,
         shippingPostalCode: shipment.shippingAddress.postalCode,
         shippingCity: shipment.shippingAddress.city,
         shippingState: shipment.shippingAddress.stateCode,
@@ -180,7 +188,7 @@ module.exports.execute = () => {
             products: products,
             pricebookId: pricebook,
         };
-
+        
         salesOrderId = sendOrder(body, token);
 
         if (!salesOrderId.error) {
