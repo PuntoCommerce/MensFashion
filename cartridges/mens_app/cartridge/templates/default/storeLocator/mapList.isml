@@ -24,7 +24,7 @@
                      <img alt="" src="${URLUtils.staticURL('/images/phone.svg')}" /> 
                 </div>
                 <div class="phone-storeLocator">
-                    <p class="p-address">Tel: ${stores.phone}</p>
+                <a href="tel:${stores.phone}"><p class="p-address">Tel: ${stores.phone}</p></a>
                 </div></li>
           </ul>
        
