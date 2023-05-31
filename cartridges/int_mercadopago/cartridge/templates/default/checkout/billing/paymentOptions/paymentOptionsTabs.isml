@@ -2,9 +2,9 @@
     <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
         <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
     </isif>
-    <isif condition="${paymentOption.ID === 'PIX'}">
+    <iscomment> <isif condition="${paymentOption.ID === 'PIX'}">
         <isinclude template="checkout/billing/paymentOptions/pixTab" />
-    </isif> 
+    </isif>  </iscomment>
     <isif condition="${paymentOption.ID === 'CHECKOUT_PRO'}">
         <isinclude template="checkout/billing/paymentOptions/checkoutProTab" />
     </isif>

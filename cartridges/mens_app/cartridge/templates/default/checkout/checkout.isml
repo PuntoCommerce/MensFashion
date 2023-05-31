@@ -5,11 +5,14 @@
     <!----------------------------------------------------------------------------------->
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('https://sdk.mercadopago.com/js/v2');
         assets.addJs('/js/checkout.js');
-        assets.addJs('/js/accordion.js');
-        assets.addJs('/js/checkoutCp.js')
+        //assets.addJs('/js/accordion.js');
+        //assets.addJs('/js/checkoutCp.js')
         assets.addCss('/css/checkout/checkout.css');
         assets.addCss('/css/checkout/popup.css')
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addCss('css/mercadopago.css');
     </isscript>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
@@ -24,8 +27,7 @@
 
     <div class="checkout_top">
         <div>
-            <p class="checkout_top_text"><img class="mr-3 checkout_top_img"
-                    src="${URLUtils.staticURL('/images/segura.svg')}" alt="lock" />Compra segura</p>
+            <p class="checkout_top_text"><img class="mr-3 checkout_top_img" src="${URLUtils.staticURL('/images/segura.svg')}" alt="lock"/>Compra segura</p>
         </div>
         <div>
             <p class="ml-4">Resumen del pedido</p>
@@ -74,7 +76,6 @@
                             <p class="error-message-text"></p>
                         </div>
 
-
                         <!-- Step 1: Customer -->
                         <iscomment>We only allow edits for non-registered customers</iscomment>
                         <isif condition="${!pdict.customer.registeredUser}">
@@ -98,6 +99,9 @@
 
 
                         <!-- Step 3: Payment and Billing-->
+                        <fieldset class="mp-error-messages" data-mp-error-messages="${JSON.stringify(pdict.mercadopago.errorMessages)}" />
+                        <fieldset class="mp-text-messages" data-mp-text-messages="${JSON.stringify(pdict.mercadopago.textMessages)}" />
+                        <fieldset class="js-mp-form" data-mp-preferences="${JSON.stringify(pdict.mercadopago.preferences)}" />
                         <isinclude template="checkout/billing/billing" />
                         <div class="card payment-summary">
                             <div class="card-header">
@@ -105,21 +109,19 @@
                             </div>
 
                             <div class="card-body row">
-                                <div
-                                    class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
-
-
-                                    <iscomment> <button class="custom_edit-button" id="custom-edit-shipping"
-                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
+                                   
+                                    
+                                   <iscomment>  <button class="custom_edit-button" id="custom-edit-shipping"
+                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                 </div>
-                                <div
-                                    class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
+                                <div class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
                                     <button class="edit-button custom_edit-button"
-                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.payment', 'checkout', null)}</button>
-                                    <iscomment> <button class="custom_edit-button" id="custom-edit-payment"
-                                            aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
+                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.payment', 'checkout', null)}</button>
+                                   <iscomment>  <button class="custom_edit-button" id="custom-edit-payment"
+                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                                 </div>
                             </div>
                         </div>
@@ -154,9 +156,7 @@
                                                 type="submit" name="submit"
                                                 value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
                                             </button>
-                                            <iscomment> <button
-                                                    class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button>
-                                            </iscomment>
+                                            <iscomment> <button class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button> </iscomment>
                                         </div>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                             <div class="card-body order-total-summary ">
                                 <div class="card shipping-summary">
                                     <div class="card-header clearfix summary-edit-btn">
-                                        <button class="edit-button pull-right"
+                                     <button class="edit-button pull-right"
                                             aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.shipping', 'checkout', null)}</button>
                                     </div>
                                     <div class="card-body">
@@ -189,7 +189,7 @@
                                 </div>
                                 <isinclude template="checkout/orderTotalSummary" />
                                 <div class="checkout__order--divider mb-4"></div>
-
+                                              
                                 <isinclude template="cart/cartPromoCode" />
                                 <div class="coupons-and-promos">
                                     <isinclude template="cart/cartCouponDisplay" />
@@ -201,8 +201,7 @@
 
                         <div class="need-help-cont d-flex justify-content-center align-items-center flex-column">
                             <div class="need-help justify-content-center align-items-center mb-4">
-                                <span
-                                    class="checkout__text checkout__text--need-help">${Resource.msg('label.need.help2', 'checkout', null)}</span>
+                                <span class="checkout__text checkout__text--need-help">${Resource.msg('label.need.help2', 'checkout', null)}</span>
                             </div>
                             <div
                                 class="need-help-description text-center d-fex justify-content-center align-items-center mb-4">
@@ -212,13 +211,12 @@
                             <div
                                 class="need-help-phonenumber d-flex justify-content-center align-items-center flex-column mb-4">
                                 <a href="tel:800-0024-966"><span
-                                        class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span></a>
+                                    class="checkout-tel checkout__text checkout__text--bold checkout__text--need-help">${Resource.msg('label.need.help.phone', 'checkout', null)}</span></a>
                                 <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule', 'checkout', null)}</span>
                                 <span class="checkout__text--help-text">${Resource.msg('label.need.help.schedule2', 'checkout', null)}</span>
                             </div>
                             <div class="need-help-email d-flex justify-content-center align-items-center mb-4">
-                                <a href="mailto:${Resource.msg('label.need.help.email', 'checkout', null)}"
-                                    class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</a>
+                                <a href="mailto:${Resource.msg('label.need.help.email', 'checkout', null)}" class="checkout__text">${Resource.msg('label.need.help.email', 'checkout', null)}</a>
                             </div>
                         </div>
 
