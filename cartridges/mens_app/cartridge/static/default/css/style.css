@@ -7340,6 +7340,14 @@ a .oauth-facebook--button {
   .carousel.promo-carousel .summary__pricing .highlight-container .promotion-item{
     margin-bottom: 5px;
   }
+
+  .title-promo-ms{
+    font-size: 14px;
+  }
+
+  .container-promo-ms img{
+    width: 90px !important;
+  }
 }
 
 .span-zipCode2 {
@@ -7560,6 +7568,29 @@ a .oauth-facebook--button {
 .product-tile .img-hotSale-pdp, .cart-page .img-hotSale-pdp, 
 .container.data-checkout-stage .img-hotSale-pdp{
   display: none !important;
+}
+
+.container-promo-ms{
+  height: 50px;
+  width: 100%;
+  background-color: #1956F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title-promo-ms{
+  font-family: "Avenir-Next";
+  color: #FFFFFF;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding: 2px 0 0 0;
+}
+
+.container-promo-ms img{
+  width: 111px;
+  height: 37px;
 }
 
 
