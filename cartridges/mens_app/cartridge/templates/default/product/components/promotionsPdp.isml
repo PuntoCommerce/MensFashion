@@ -15,13 +15,15 @@
                                 <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
                                   <iselseif condition="${promotion.name === "1 prenda -20%" || promotion.name === "2 prendas -30%" || promotion.name === "3 prendas -40%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name}</span>
+                             <iselseif condition="${promotion.name === "Camisa y accesorio de regalo"}" />
+                                  <span class="promotion-item">${promotion.name}</span>
+                                  <span class="container-txt-promo"><img class="img-promoCA-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Promo CA"/><span class="txt-hover-promo">Selecciona una camisa y accesorio de nuestro sitio y agrégalo a tu carrito ambos van por nuestra cuenta en la compra de tu Traje.</span></span>
                             <iselseif condition="${promotion.name !== null}" />
                                 <span class="promotion-item">${promotion.name}</span>
                             <iselseif condition="${promotion.calloutMsg === ""}" />
                                   <div>
                                     
                                   </div>
-                              
                             <iselse/>
                                 <span class="promotion-item">${promotion.calloutMsg}</span>
                                 <iscomment> <p>${JSON.stringify(promotion.name)}</p> </iscomment>

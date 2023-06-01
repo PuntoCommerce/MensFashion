@@ -7594,3 +7594,20 @@ a .oauth-facebook--button {
 }
 
 
+.container-txt-promo .txt-hover-promo {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the container-txt-promo */
+  position: absolute;
+  z-index: 1;
+}
+
+.container-txt-promo:hover .txt-hover-promo {
+  visibility: visible;
+}
