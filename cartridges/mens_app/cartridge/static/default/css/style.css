@@ -7348,6 +7348,12 @@ a .oauth-facebook--button {
   .container-promo-ms img{
     width: 90px !important;
   }
+
+  .container-txt-promo .txt-hover-promo {
+    width: 250px !important;
+    left: 30px;
+    top: 90px;
+  }
 }
 
 .span-zipCode2 {
@@ -7602,7 +7608,6 @@ a .oauth-facebook--button {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
   /* Position the container-txt-promo */
   position: absolute;
   z-index: 1;
