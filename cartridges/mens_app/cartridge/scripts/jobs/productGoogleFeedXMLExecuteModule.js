@@ -56,11 +56,28 @@ function GenerateXMLGoogleMerchant(args) {
     let g_description = product.shortDescription;
     let g_link = args.storeURL + product.ID + ".html"
 
+
+
+
+
     let g_imagelink = null
     let g_imagelinkCount = product.getImages("large");
     if(g_imagelinkCount.length > 0){
-      g_imagelink = g_imagelinkCount[0].absURL;
+      if(args.useCustomImageUrl == "true")
+      {
+        g_imagelink = args.customImageUrl + g_imagelinkCount[0].url;
+      }
+      else
+      {
+        g_imagelink = g_imagelinkCount[0].absURL;
+      }
     }
+
+
+
+
+
+
 
     let g_availabilityRaw = product.available;
     let g_gavailabilityFinal = "";
