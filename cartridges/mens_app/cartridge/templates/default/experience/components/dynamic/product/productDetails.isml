@@ -20,7 +20,7 @@
             <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
         </div>
         
-        <div class="row p-image-and-wrapper">
+        <div class="row p-image-and-wrapper category-${product.gtmData.categoryID}">
             <!-- Product Images Scroll -->
             <isinclude template="product/components/imageScroll" />
             <div class="d-none d-md-block col-md-6">

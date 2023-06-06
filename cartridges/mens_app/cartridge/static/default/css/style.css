@@ -7354,6 +7354,12 @@ a .oauth-facebook--button {
     left: 30px;
     top: 90px;
   }
+
+  .arrow-input-pdp{
+    width: 8px;
+    right: 10px !important;
+    top: 45px !important;
+  }
 }
 
 .span-zipCode2 {
@@ -7600,7 +7606,7 @@ a .oauth-facebook--button {
 }
 
 
-.container-txt-promo .txt-hover-promo {
+.container-txt-promo .txt-hover-promo-gradu, .container-txt-promo .txt-hover-promo-sacopanta {
   visibility: hidden;
   width: 300px;
   background-color: black;
@@ -7613,6 +7619,41 @@ a .oauth-facebook--button {
   z-index: 1;
 }
 
-.container-txt-promo:hover .txt-hover-promo {
+.container-txt-promo:hover .txt-hover-promo-gradu, .container-txt-promo:hover .txt-hover-promo-sacopanta{
   visibility: visible;
 }
+
+.arrow-input-pdp{
+  position: absolute;
+  transform: rotate(90deg);
+  right: 20px;
+  top: 41px;
+}
+
+.link-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.custom-select.select-talla{
+  position: absolute;
+  z-index: 1;
+}
+
+.promotion-item-grad{
+  background-color: #3A78A4;
+  color: #FFFFFF;
+}
+
+.category-camisas .id-graduacion, .product-tile .id-graduacion{
+  display: none;
+}
+
+.category-sacos .txt-hover-promo-gradu, .category-pantalones .txt-hover-promo-gradu, .category-trajes .txt-hover-promo-sacopanta{
+  display: none;
+}
+

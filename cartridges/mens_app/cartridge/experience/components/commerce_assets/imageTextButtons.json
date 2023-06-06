@@ -36,6 +36,12 @@
           "description": "Text for the component",
           "type": "markup",
           "required": false
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "url",
+          "required": false
         }
       ]
     },
