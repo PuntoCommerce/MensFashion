@@ -7349,7 +7349,7 @@ a .oauth-facebook--button {
     width: 90px !important;
   }
 
-  .container-txt-promo .txt-hover-promo {
+  .container-txt-promo .txt-hover-promo-gradu,  .container-txt-promo .txt-hover-promo-sacopanta{
     width: 250px !important;
     left: 30px;
     top: 90px;
@@ -7649,7 +7649,7 @@ a .oauth-facebook--button {
   color: #FFFFFF;
 }
 
-.category-camisas .id-graduacion, .product-tile .id-graduacion{
+.category-camisas .id-graduacion, .product-tile .category-camisas .id-graduacion{
   display: none;
 }
 

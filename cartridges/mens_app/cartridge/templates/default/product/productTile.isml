@@ -1,5 +1,5 @@
 <isset name="product" value="${pdict.product}" scope="page" />
-<div class="product-tile summary" data-gtmdatatile="${JSON.stringify(product)}">
+<div class="product-tile summary category-${product.gtmData.categoryID}" data-gtmdatatile="${JSON.stringify(product)}">
 
     <isinclude template="product/components/highlight" />
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
@@ -43,13 +43,13 @@
                                                  promotion.name === "-65%" || promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" ||
                                                  promotion.name === "-85%" || promotion.name === "-90%" || promotion.name === "-95%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
-                        <iselseif condition="${promotion.name === " 1 prenda -20%"}" />
+                        <iselseif condition="${promotion.name === "1 prenda -20%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('prenda', '')}</span>
-                        <iselseif condition="${promotion.name === " 2 prendas -30%"}" />
+                        <iselseif condition="${promotion.name === "2 prendas -30%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('prendas', '')}</span>
-                        <iselseif condition="${promotion.name === " 3 prendas -40%"}" />
+                        <iselseif condition="${promotion.name === "3 prendas -40%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('prendas', '')}</span>
-                        <iselseif condition="${promotion.name === " Camisa y accesorio de regalo"}" />
+                        <iselseif condition="${promotion.name === "Camisa y accesorio de regalo"}" />
                             <span
                                 class="promotion-item promotion-item-grad container-txt-promo id-${promotion.ID}">${promotion.name}
                             </span>
