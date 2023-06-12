@@ -17,10 +17,11 @@
                             <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name !== null}" />
                                 <span class="promotion-item">${promotion.name}</span>
-                                <iselseif condition="${promotion.calloutMsg === ""}" />
+                            <iselseif condition="${promotion.calloutMsg === ""}" />
                                   <div>
                                     
-                                  </div>  
+                                  </div>
+                              
                             <iselse/>
                                 <span class="promotion-item">${promotion.calloutMsg}</span>
                                 <iscomment> <p>${JSON.stringify(promotion.name)}</p> </iscomment>

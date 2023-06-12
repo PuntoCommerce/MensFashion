@@ -49,6 +49,9 @@
             <p class="checkout__stepper--item-title">Realizar Pedido</p>
         </li>
     </ul>
+    <div class="container-promo-ms">
+        <p class="title-promo-ms">${Resource.msg('title.checkout.promo.ms', 'checkout', null)}</p><img src="${URLUtils.staticURL('/images/logo-pp-check.png')}" alt="Meses sin intereses PP"/>
+    </div>
     <div class="d-flex justify-content-center checkout-container">
         <div class="col-sm-12 col-lg-10">
             <div id="checkout-main" class="container data-checkout-stage <isif condition="

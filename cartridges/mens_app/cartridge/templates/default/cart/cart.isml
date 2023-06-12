@@ -58,6 +58,7 @@
                     <div class="row">
                         <!---product cards--->
                         <div class="col-xl-6 col-12">
+                            
                             <isloop items="${pdict.items}" var="lineItem">
                                 <isif condition="${lineItem.productType === 'bundle'}">
                                     <isinclude template="cart/productCard/cartBundleCard" />
@@ -68,8 +69,10 @@
                                         <isinclude template="cart/productCard/cartProductCard" />
                                     </isif>
                                 </isif>
+                                  
                             </isloop>
                             <isinclude template="cart/cartApproachingDiscount" />
+                          
                         </div>
                         <!---totals, and checkout actions--->
                         <div class="col-xl-6 col-12">
@@ -113,6 +116,7 @@
             </div>
         </div>
     </div>
+   
 
     <div id="igdrec_1"></div><div id="igdrec_2"></div>
 </isdecorate>
