@@ -21409,10 +21409,10 @@ div.availability {
 }
 
 .summary__pricing .prices-container .strike-price del {
-  color: rgba(68, 68, 68, 0.5)
+  color: rgba(68, 68, 68, 0.5);
 }
 
-.summary__pricing .price .prices-container {
+.summary__pricing .price .prices-container,  .summary__pricing .price .stikePriceCont{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22509,9 +22509,9 @@ button.close:focus {
   margin-bottom: 0 !important;
 }
 
-#productdetailpage .prices-container .stikePriceCont {
+#productdetailpage .prices-container .stikePriceCont, .product-tile .prices-container .stikePriceCont{
   margin-bottom: 12px;
-}
+} 
 
 .product-details-wrapper .attributes .attribute {
   margin-top: 0;

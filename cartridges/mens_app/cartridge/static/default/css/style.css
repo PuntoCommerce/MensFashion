@@ -5592,7 +5592,7 @@ header nav.homepage:hover {
   }
 
   .product-detail .product-details-wrapper {
-    height: 70vh;
+    height: 140vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -7554,7 +7554,10 @@ a .oauth-facebook--button {
   display: none;
 }
 
+
+/* only applies in hot sale */
 .img-hotSale img{
+  display: none;
   width: 29px;
   top: 9px;
   right: 16px;
@@ -7562,6 +7565,7 @@ a .oauth-facebook--button {
 }
 
 .img-hotSale-pdp{
+  display: none;
   width: 53px;
   height: 46px;
   margin-top: -15px;
@@ -7569,9 +7573,10 @@ a .oauth-facebook--button {
 }
 
 .img-hotSale-car{
+  display: none;
   width: 40px;
   height: 30px;
-}
+} 
 
 .order-discount{
   color: #FF0000 !important;
@@ -7630,15 +7635,6 @@ a .oauth-facebook--button {
   top: 41px;
 }
 
-.link-container{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
 .custom-select.select-talla{
   position: absolute;
   z-index: 1;
@@ -7649,11 +7645,21 @@ a .oauth-facebook--button {
   color: #FFFFFF;
 }
 
-.category-camisas .id-graduacion, .product-tile .category-camisas .id-graduacion{
+.category-camisas .container-txt-promo, .category-coleccion .container-txt-promo,
+.category-cinturones .container-txt-promo, .category-mancuernillas .container-txt-promo, 
+.category-pisacorbatas .container-txt-promo, .category-tirantes .container-txt-promo, 
+.category-pulseras .container-txt-promo, .category-corbatas .container-txt-promo,
+.category-moños .container-txt-promo, .category-kitsdeceremonia .container-txt-promo, 
+.category-gorros .container-txt-promo, .category-panuelos .container-txt-promo, 
+.category-pines .container-txt-promo, .category-accesorios .container-txt-promo, 
+.category-pantalones .container-txt-promo, .category-accesorios .container-txt-promo, 
+.category-lociones .container-txt-promo{
   display: none;
 }
 
-.category-sacos .txt-hover-promo-gradu, .category-pantalones .txt-hover-promo-gradu, .category-trajes .txt-hover-promo-sacopanta{
+.category-sacos .txt-hover-promo-gradu, 
+.category-pantalones .txt-hover-promo-gradu, 
+.category-trajes .txt-hover-promo-sacopanta{
   display: none;
 }
 

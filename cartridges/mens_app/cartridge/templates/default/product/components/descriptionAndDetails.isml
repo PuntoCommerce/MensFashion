@@ -39,7 +39,7 @@
             Envíos y Devoluciones
         </button>
         <div class="col-12 value content accordion-description">
-            <div class="devolutions-container__store">
+           <iscomment>  <div class="devolutions-container__store">
                 <span class="devolutions-container__store--title">Devolución en tienda gratuita</span>
                 <span class="devolutions-container__store--text">Puede devolver sus artículos en cualquier
                     tienda Lmental, siempre que sea
@@ -47,18 +47,12 @@
                     compra.</span>
                 <span class="devolutions-container__store--text">Tiene 30 días para devolver a partir de la
                     fecha en que hizo la compra.</span>
-            </div>
+            </div> </iscomment>
             <div class="devolutions-container__store mt-4">
-                <span class="devolutions-container__store--title">Devolución a domicilio gratuita</span>
-                <span class="devolutions-container__store--text">Puede solicitar la devolución a domicilio
-                    desde la sección MI CUENTA. En el caso
-                    de pedido sin registro, puede solicitar
-                    devolución haciendo clic en seguimiento/detalle del pedido que
-                    encontrará en el email de expedición.</span>
-                <span class="devolutions-container__store--text">Tiene 30 días para devolver a partir de la
-                    fecha en que hizo la compra.</span>
-                <span class="devolutions-container__store--text">*Adjuntando un justificante de aduanas si
-                    reside en zona fronteriza.</span>
+                <span class="devolutions-container__store--text">${Resource.msg('msg.enviodevoluciones.pdp', 'product', null)}</span>
+                <span class="devolutions-container__store--text">${Resource.msg('msg.enviodevoluciones.pdp1', 'product', null)}</span>
+                <span class="devolutions-container__store--text">${Resource.msg('msg.enviodevoluciones.pdp2', 'product', null)}</span>
+                <span class="devolutions-container__store--text">${Resource.msg('msg.enviodevoluciones.pdp3', 'product', null)}</span>
             </div>
         </div>
     </div>

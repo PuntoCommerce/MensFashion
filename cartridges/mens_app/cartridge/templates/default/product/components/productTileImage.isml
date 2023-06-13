@@ -38,7 +38,8 @@
         </div>
     </div> </iscomment>
 
-    <div class="img-hotSale">
+    <!--- only applies in hot sale --->
+    <iscomment> <div class="img-hotSale">
          <img src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
-    </div>
+    </div> </iscomment>
 </div>

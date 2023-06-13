@@ -1,0 +1,22 @@
+<section class="main-banner-image">
+    <a href="${pdict.link}">
+        <section class="main-banner-image__mobile-img d-lg-none">
+            <picture>
+                <img class="main-banner-image__image" src="${pdict.imageMobile.src.mobile}"
+                    style="--focal-point-x:${pdict.imageMobile.focalPointX}; --focal-point-y:${pdict.imageMobile.focalPointY}"
+                    <isif condition="${pdict.imageMobile.alt}">alt="${pdict.imageMobile.alt}"
+                title="${pdict.imageMobile.alt}"</isif>
+                />
+            </picture>
+        </section>
+        <secion class="main-banner-image__desk-img d-none d-lg-block">
+            <picture>
+                <img class="main-banner-image__image" src="${pdict.imageDesktop.src.mobile}"
+                    style="--focal-point-x:${pdict.imageDesktop.focalPointX}; --focal-point-y:${pdict.imageDesktop.focalPointY}"
+                    <isif condition="${pdict.imageMobile.alt}">alt="${pdict.imageMobile.alt}"
+                title="${pdict.imageMobile.alt}"</isif>
+                />
+            </picture>
+        </secion>
+    </a>
+</section>

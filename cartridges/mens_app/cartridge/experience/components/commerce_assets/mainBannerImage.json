@@ -1,0 +1,40 @@
+{
+  "name": "Simple image banner",
+  "description": "This component displays a simple image banner with a link",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "ITCImageButton",
+      "attribute_definitions": [
+        {
+          "id": "imageMobile",
+          "name": "Image Tile Mobile",
+          "description": "Select a photo to be displayed on Desktop",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "imageDesktop",
+          "name": "Image Tile Desktop/Tablet",
+          "description": "Select a photo to be displayed on Desktop",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "alt",
+          "name": "Alt Text",
+          "description": "The image alt text shown by the component.",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "url",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
