@@ -10,7 +10,7 @@
         //assets.addJs('/js/accordion.js');
         //assets.addJs('/js/checkoutCp.js')
         assets.addCss('/css/checkout/checkout.css');
-        assets.addCss('/css/checkout/popup.css')
+        assets.addCss('/css/checkout/popup.css');
         assets.addCss('/css/checkout/checkout.css');
         assets.addCss('css/mercadopago.css');
     </isscript>
