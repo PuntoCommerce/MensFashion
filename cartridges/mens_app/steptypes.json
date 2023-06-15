@@ -141,6 +141,32 @@
         }
       },
       {
+        "@type-id": "custom.merge.PricebooksRebajas",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud Rebajas",
+        "module": "mens_app/cartridge/scripts/jobs/mergePricebooksRebajas.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
         "@type-id": "custom.merge.Google",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
