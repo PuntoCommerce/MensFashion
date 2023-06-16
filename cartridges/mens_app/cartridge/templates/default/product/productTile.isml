@@ -5,8 +5,8 @@
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
     <isinclude template="product/components/productTileImage" />
     <div class="tile-body">
-
         <div class="summary__name">
+        
             <isinclude template="product/components/productTileName" />
         </div>
 

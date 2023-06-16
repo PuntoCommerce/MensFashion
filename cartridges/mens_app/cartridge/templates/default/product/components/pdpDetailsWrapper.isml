@@ -10,6 +10,7 @@
             <!-- Product Name -->
             <div class="row">
                 <div class="col-12">
+                
                     <span class="product-name">${product.productName.toLowerCase()}</span>
                     
                     <iscomment> <p>${JSON.stringify(product)}</p> </iscomment>

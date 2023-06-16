@@ -73,8 +73,8 @@
                         <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
                         <!----------------------------------------------------------------------------------->
 
-                        <div class="alert alert-danger error-message" role="alert">
-                            <p class="error-message-text"></p>
+                        <div  class="alert alert-danger error-message" role="alert">
+                            <p id="modal-check" class="error-message-text checkout-popup-alert"></p>
                         </div>
 
 
