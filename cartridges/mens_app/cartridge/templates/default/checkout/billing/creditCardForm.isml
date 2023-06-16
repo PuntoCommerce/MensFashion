@@ -220,7 +220,7 @@
             <label class="form-control-label" for="installments">${Resource.msg('mercadopago.field.installments', 'mercadopago', null)}</label>
 
             <select id="installments" class="form-control" <isprint value=${creditFields.installments.attributes}
-                encoding="htmlsinglequote" /> >
+                encoding="htmlsinglequote" formatter= "MONEY_SHORT" /> >
             </select>
         </div>
     </div>

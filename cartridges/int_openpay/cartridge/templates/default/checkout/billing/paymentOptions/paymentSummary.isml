@@ -1,5 +1,0 @@
-<div class="openpay-type">
-    <div class="payment-name">
-      ${pdict.payment.name}
-    </div>
-</div>

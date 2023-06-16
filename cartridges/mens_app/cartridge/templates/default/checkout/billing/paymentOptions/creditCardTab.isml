@@ -1,0 +1,23 @@
+<li class="nav-item" data-method-id="${paymentOption.ID}">
+    <a class="nav-link credit-card-tab active" data-toggle="tab" href="#credit-card-content" role="tab">
+        <div class="check-and-label-container d-flex">
+            <div class="check-decorator-payment">
+                <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+            <div class="label-payment">
+                <iscomment> <span>${paymentOption.name}</span> </iscomment>
+                <span>Pago con tarjeta de crédito/débito</span>
+            </div>
+        </div>
+        <div class="images-paymentCards-container">
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/visa.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/mastercard.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+            <img class="credit-card-option" src="${URLUtils.staticURL('/images/checkout/americanexpress.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</li>

@@ -1,5 +1,0 @@
-<div class="openpay-type">
-    <span>${Resource.msg('brand.openpay', 'openpay', null)}</span> <br />
-    <span>${Resource.msg('customer.email', 'openpay', null)}</span> <span>${pdict.order.orderEmail}</span><br />
-    <span>${Resource.msg('customer.total', 'openpay', null)}</span> <span>${pdict.order.priceTotal}</span><br />
-</div>

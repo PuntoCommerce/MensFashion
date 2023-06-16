@@ -18,12 +18,12 @@
                 </span>
             </button>
 
-            <input type="email" class="form-control email" id="email" value="${pdict.order.orderEmail || ''}" <isprint
+            <iscomment> <input type="email" class="form-control email" id="email" value="${pdict.order.orderEmail || ''}" <isprint
                 value="${creditFields.email.attributes}" encoding="htmlsinglequote" />
             autocomplete="email"
             data-checkout="email"
             required
-            />
+            /> </iscomment>
 
             <div class="invalid-feedback"></div>
         </div>
