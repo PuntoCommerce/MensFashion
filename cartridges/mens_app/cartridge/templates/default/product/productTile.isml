@@ -44,20 +44,22 @@
                                                  promotion.name === "-65%" || promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" ||
                                                  promotion.name === "-85%" || promotion.name === "-90%" || promotion.name === "-95%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
-                        <iselseif condition="${promotion.name === "1 prenda -20%"}" />
+                        <iselseif condition="${promotion.name === "1 prenda -20%" || promotion.name === "2 prendas -30%" || promotion.name === "3 prendas -40%"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name.replace('prenda', '')}</span>
-                        <iselseif condition="${promotion.name === "2 prendas -30%"}" />
-                            <span class="promotion-item promotion-item-desc">${promotion.name.replace('prendas', '')}</span>
-                        <iselseif condition="${promotion.name === "3 prendas -40%"}" />
-                            <span class="promotion-item promotion-item-desc">${promotion.name.replace('prendas', '')}</span>
                         <iselseif condition="${promotion.name === "Camisa y accesorio de regalo"}" />
                             <span
                                 class="promotion-item promotion-item-grad container-txt-promo id-${promotion.ID}">${promotion.name}
                             </span>
+                        <iselseif condition="${promotion.ID === "sales4x999"}" />
+                            <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
+                        <iselseif condition="${promotion.ID === "sales1499"}" />
+                            <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
+                        <iselseif condition="${promotion.ID === "sales999"}" />
+                            <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
                         <iselseif condition="${promotion.name !== null}" />
-                            <span class="promotion-item">${promotion.name}</span>
+                            <span class="promotion-item id-${promotion.ID}">${promotion.name}</span>
                         <iselse/>
-                            <span class="promotion-item">${promotion.calloutMsg}</span>
+                            <span class="promotion-item id-${promotion.ID}">${promotion.calloutMsg}</span>
 
                         </isif>
 

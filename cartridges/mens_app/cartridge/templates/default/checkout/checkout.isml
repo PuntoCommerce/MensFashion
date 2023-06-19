@@ -48,7 +48,8 @@
         </li>
     </ul>
     <div class="container-promo-ms">
-        <p class="title-promo-ms">${Resource.msg('title.checkout.promo.ms', 'checkout', null)}</p><img src="${URLUtils.staticURL('/images/logo-pp-check.png')}" alt="Meses sin intereses PP"/>
+        <p class="title-promo-ms">${Resource.msg('title.checkout.promo.ms', 'checkout', null)}</p><img
+            src="${URLUtils.staticURL('/images/logo-pp-check.png')}" alt="Meses sin intereses PP" />
     </div>
     <div class="d-flex justify-content-center checkout-container">
         <div class="col-sm-12 col-lg-10">
@@ -72,11 +73,12 @@
                         <!----------------------------------------------------------------------------------->
                         <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
                         <!----------------------------------------------------------------------------------->
-
-                        <div  class="alert alert-danger error-message" role="alert">
-                            <p id="modal-check" class="error-message-text checkout-popup-alert"></p>
+                        <div class="alert alert-danger error-message" style="" role="alert">
+                           <p id="modal-check" class="error-message-text"></p>
                         </div>
-
+                        <iscomment> <div class="alert alert-danger error-message" style="" role="alert">
+                           <button type="" id="modal-check" class="error-message-text" onclick="closeAlertModal()"></button>
+                        </div> </iscomment>
 
                         <!-- Step 1: Customer -->
                         <iscomment>We only allow edits for non-registered customers</iscomment>
