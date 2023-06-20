@@ -16,7 +16,7 @@
                     <isif condition="${pdict.imageMobile.alt}">alt="${pdict.imageMobile.alt}"
                 title="${pdict.imageMobile.alt}"</isif>
                 />
-            </picture>
+            </picture> 
         </secion>
     </a>
 </section>

@@ -50,11 +50,7 @@
                             <span
                                 class="promotion-item promotion-item-grad container-txt-promo id-${promotion.ID}">${promotion.name}
                             </span>
-                        <iselseif condition="${promotion.ID === "sales4x999"}" />
-                            <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
-                        <iselseif condition="${promotion.ID === "sales1499"}" />
-                            <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
-                        <iselseif condition="${promotion.ID === "sales999"}" />
+                        <iselseif condition="${promotion.ID === "sales4x999" || promotion.ID === "sales1499" || promotion.ID === "sales999"}" />
                             <span class="promotion-item promotion-item-desc id-${promotion.ID}">${promotion.name}</span>
                         <iselseif condition="${promotion.name !== null}" />
                             <span class="promotion-item id-${promotion.ID}">${promotion.name}</span>
