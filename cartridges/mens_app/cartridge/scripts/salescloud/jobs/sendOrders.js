@@ -117,15 +117,13 @@ module.exports.execute = () => {
                 pDiscount += ppAdjustment.price.value * -1;
             }
 
-            let porcToOrderDiscount =
-                (p.price.value * p.quantityValue) /
-                order.adjustedMerchandizeTotalPrice.value;
+            let porcToOrderDiscount = (p.price.value * p.quantityValue) / order.adjustedMerchandizeTotalPrice.value;
             let aditionalDiscount = 0;
-            if (orderDiscount != 0) {
-                //aditionalDiscount = porcToOrderDiscount * orderDiscount;
-                aditionalDiscount = porcToOrderDiscount * 50;
-                pDiscount += aditionalDiscount;
-            }
+            // if (orderDiscount != 0) {
+            //     //aditionalDiscount = porcToOrderDiscount * orderDiscount;
+            //     aditionalDiscount = porcToOrderDiscount * 50;
+            //     pDiscount += aditionalDiscount;
+            // }
 
             products.push({
                 ProductCode: p.productID,
@@ -188,7 +186,10 @@ module.exports.execute = () => {
             products: products,
             pricebookId: pricebook,
         };
+
+        logger.debug("body: ", JSON.stringify(body));
         
+        //Mandar orden
         salesOrderId = sendOrder(body, token);
 
         if (!salesOrderId.error) {
