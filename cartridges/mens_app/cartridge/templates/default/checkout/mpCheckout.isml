@@ -5,9 +5,11 @@
     <!----------------------------------------------------------------------------------->
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
-        assets.addJs('/js/store-checkout.js');
+        assets.addJs('https://sdk.mercadopago.com/js/v2');
+        assets.addJs('/js/mp-checkout.js');
         assets.addJs('/js/accordion.js');
         assets.addCss('/css/checkout/checkout.css');
+        assets.addCss('css/mercadopago.css');
     </isscript>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
@@ -128,14 +130,13 @@
                                     <div class="next-step-button col-12 p-0">
                                         <div class="mb-sm-5">
 
-                                            <a
-                                                href="${URLUtils.url('Checkout-MpBegin', 'stage', 'payment')}"
+                                            <button
                                                 class="btn btn--gray btn__small text-uppercase btn-block submit-shipping col-sm-12 col-lg-10"
                                                 type="submit" name="submit" value="submit-shipping" <isif
                                                 condition="${pdict.order.usingMultiShipping && !pdict.order.shippable}">disabled
                                                 </isif>>
                                                 ${Resource.msg('button.next.payment', 'checkout', null)}
-                                            </a>
+                                            </button>
 
                                             <button
                                                 class="btn btn--gray btn__small text-uppercase btn-block submit-payment"
