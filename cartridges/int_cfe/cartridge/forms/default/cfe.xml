@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+    <field formid="device_session_id" type="string" mandatory="false" />
+    
+    <field formid="name_cfe" type="string" mandatory="true"/>
+    <field formid="card_number_cfe" type="string" mandatory="true" max-length="16"/>
+    <field formid="cvv_cfe" type="string" mandatory="true" max-length="4"/>
+
+</form>

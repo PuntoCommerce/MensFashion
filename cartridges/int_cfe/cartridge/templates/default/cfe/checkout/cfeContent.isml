@@ -1,0 +1,41 @@
+<isset name="cfe" value="${pdict.forms.billingForm.CFE}" scope="page" />
+<div class="tab-pane cfe-pay-content" id="cfe-pay-content" role="tabpanel">
+   <div id="payment-form-cfe">
+      <p> ${Resource.msg('heading.checkout.CFEPayment.card', 'checkout', null)}</p>
+      <fieldset class="payment-form-fields">
+         <input type="hidden" name="use_card_points" id="use_card_points" value="false">
+         <input type="hidden" class="form-control" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+            value="CFE">
+         <div class="pymnt-itm card active">
+            <div class="pymnt-cntnt">
+               <div class="row">
+                  <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.name', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
+                        value=${cfe.name_cfe.attributes} encoding="off" />
+                     >
+                  </div>
+                  <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.name2', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
+                        value=${cfe.name_cfe.attributes} encoding="off" />
+                     >
+                  </div>
+                  <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.PIN', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
+                        value=${cfe.name_cfe.attributes} encoding="off" />
+                     >
+                  </div>
+               </div>
+            </div>
+         </div>
+          <input id="device_session_id_field" style="visibility: hidden;" <isprint
+            value=${cfe.device_session_id.attributes} encoding="off" /> >
+      </fieldset>
+   </div>
+</div>
+<isscript>
+   var assets = require('*/cartridge/scripts/assets.js');
+   assets.addJs('/js/openpay.js');
+</isscript>
