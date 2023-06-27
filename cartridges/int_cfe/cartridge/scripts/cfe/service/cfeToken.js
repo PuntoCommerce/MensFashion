@@ -2,11 +2,12 @@
 
 const serviceName = "CFEPaymentToken";
 const paymentMethodID = "CFE"
-
+var Site = require('dw/system/Site');
 const ServiceCredential = require("dw/svc/ServiceCredential");
 const LocalServiceRegistry = require("dw/svc/LocalServiceRegistry");
 const PaymentMgr = require("dw/order/PaymentMgr");
 const Resource = require("dw/web/Resource");
+var authTokenkey = Site.current.getCustomPreferenceValue('cfeTokenKey');
 
 const { Base64 } = require("~/cartridge/scripts/cfe/utils/Base64");
 
@@ -40,7 +41,7 @@ const createRequest = (service, data) => {
     var password = credential.password;;
     var token = 'Basic ' + encoding.toBase64(bytes(username + ':' + password));
     service.setRequestMethod('POST');
-    service.addHeader('x-loyalty3-key','L3.2515120000062022830242');
+    service.addHeader('x-loyalty3-key', authTokenkey);
     service.addHeader('Authorization', token);
   // service.setAu
   // service.addHeader(" " + credential.password);
