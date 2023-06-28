@@ -5,10 +5,16 @@
     <!----------------------------------------------------------------------------------->
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('https://sdk.mercadopago.com/js/v2');
+        assets.addJs('/js/mp-checkout.js');
         assets.addJs('/js/store-checkout.js');
         assets.addJs('/js/accordion.js');
         assets.addCss('/css/checkout/checkout.css');
     </isscript>
+
+    <div class="custom_loader" id="custom_loader" style="display:none;">
+        <span>Loading...</span>
+    </div>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
         <isinclude template="reporting/reportingUrls" />
@@ -148,6 +154,12 @@
                                                 type="submit" name="submit"
                                                 value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
                                             </button>
+                                            <iscomment> <a href="${URLUtils.url('Checkout-MpBegin', 'stage', 'placeOrder')}"
+                                                class="btn btn--gray btn__small text-uppercase btn-block place-order"
+                                                data-action="${URLUtils.url('CheckoutServices-PlaceOrder')}"
+                                                type="submit" name="submit"
+                                                value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
+                                            </a> </iscomment>
                                         </div>
                                     </div>
                                 </div>
@@ -219,6 +231,60 @@
         </div>
     </div>
 
+
     <isinclude template="checkout/shipping/shippingAddressTemplate" />
 
 </isdecorate>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- script for stepper and other checkout -->
+<script>
+function updateCheckoutState(){
+    const stepShipping = document.querySelector("#checkout-main");
+
+    const checkoutStep2 = document.querySelector("#checkoutStep2");
+    const checkoutStep3 = document.querySelector("#checkoutStep3");
+    const checkoutDivider1 = document.querySelector("#checkoutStepDivider1");
+    const checkoutDivider2 = document.querySelector("#checkoutStepDivider2");
+
+    let stage;
+    if (stepShipping) {
+        stage = stepShipping.dataset.checkoutStage;
+    };
+
+    if (stage === "shipping") {
+        console.log('shipping')
+    }
+    if (stage === "payment") {
+
+        console.log('payment')
+    }
+    if (stage === "placeOrder") {
+
+        console.log('placeOrder')
+        //$('#custom_loader').show();        
+        // var url = $('.place-order').attr('href');
+        // goToMpCheckout(url)
+
+        removejscssfile("store-checkout.js", "js")
+        
+    }
+}
+$( document ).ready(function() {
+
+setInterval(updateCheckoutState, 2000);
+
+});
+
+function removejscssfile(filename, filetype){
+    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+    var allsuspects=document.getElementsByTagName(targetelement)
+    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+    }
+}
+
+</script>

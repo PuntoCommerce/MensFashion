@@ -224,3 +224,13 @@
     <isinclude template="checkout/shipping/shippingAddressTemplate" />
 
 </isdecorate>
+
+
+<script>
+var real_mp = document.getElementById('real-mp-pro-li');
+var dum_mp = document.getElementById('dum-mp-pro-li');
+
+real_mp.style.display = 'block';          
+dum_mp.style.display = 'none';          
+
+</script>
