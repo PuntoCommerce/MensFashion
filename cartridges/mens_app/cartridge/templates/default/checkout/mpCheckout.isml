@@ -105,8 +105,8 @@
                                 <div
                                     class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
-
-                                    <button class="custombtn-edit-button custom_edit-button"
+                                    
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
 
@@ -114,7 +114,7 @@
                                     class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
 
-                                    <button class="edit-button custom_edit-button"
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
                             </div>
@@ -225,12 +225,26 @@
 
 </isdecorate>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <script>
 var real_mp = document.getElementById('real-mp-pro-li');
 var dum_mp = document.getElementById('dum-mp-pro-li');
 
 real_mp.style.display = 'block';          
-dum_mp.style.display = 'none';          
+dum_mp.style.display = 'none';        
+
+var real_mp_card = document.getElementById('real-mp-card-li');
+var dum_mp_card = document.getElementById('dum-mp-card-li');
+
+real_mp_card.style.display = 'none';
+dum_mp_card.style.display = 'block';     
+
+real_mp.click();
+
+
+$( document ).ready(function() {
+    $( ".checkout-pro-tab" ).trigger( "click" );
+});
 
 </script>

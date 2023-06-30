@@ -395,6 +395,14 @@ if (paypalButtonCreditCard) {
 // totalQuantity();
 
 function goToMpCheckout(url){
-  window.location.href = url; //relative to domain
+  let confirmAction = confirm("Are you sure to edit this, you will be redirect to step 1 ?");
+  if (confirmAction) {
+    window.location.href = url; //relative to domain
+  } else {
+    //do nothing
+  }
+}
 
+function goToCheckoutWithoutAlert(url){
+  window.location.href = url; //relative to domain
 }
