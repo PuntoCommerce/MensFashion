@@ -15,13 +15,13 @@
     <field formid="subscribe" type="boolean" checked="false" default-value="false" mandatory="false" />
 
     <!-- fields for OpenPay selection -->
-    <include formid="openpay" name="openpay" />
+    <!-- <include formid="openpay" name="openpay" /> -->
 
      <!-- fields for PayPal selection -->
-	<include formid="paypal" name="paypal"/>
+	<!-- <include formid="paypal" name="paypal"/> -->
 
     <!-- fields for CFE selection -->
-	<include formid="cfe" name="cfe"/>
+	<!-- <include formid="cfe" name="cfe"/> -->
 
     <!-- fields for Gift Certificate selection -->
     <!-- <include formid="giftCertFields" name="billinggiftcert"/> -->

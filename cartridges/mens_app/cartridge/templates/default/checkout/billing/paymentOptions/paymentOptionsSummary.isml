@@ -9,5 +9,8 @@
         <isif condition="${payment.paymentMethod === 'PayPal'}">
             <isinclude template="paypal/checkout/paypalSummary" />
         </isif>
+        <isif condition="${payment.paymentMethod === 'CFE'}">
+            <isinclude template="checkout/billing/paymentOptions/cfePaymentSummary" />
+        </isif>        
     </isloop>
 </div>

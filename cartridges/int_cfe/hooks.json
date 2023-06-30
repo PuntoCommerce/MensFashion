@@ -1,0 +1,12 @@
+{
+  "hooks": [
+    {
+      "name": "app.payment.form.processor.cfe",
+      "script": "./cartridge/scripts/hooks/payment/processor/cfe_form"
+    },
+    {
+      "name": "app.payment.processor.cfe",
+      "script": "./cartridge/scripts/hooks/payment/processor/cfe"
+    }
+  ]
+}

@@ -74,10 +74,10 @@
                         <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
                         <!----------------------------------------------------------------------------------->
                         <div class="alert alert-danger error-message" style="" role="alert">
-                           <p id="modal-check" class="error-message-text"></p>
+                           <span id="modal-check" class="error-message-text"></span>
                         </div>
                         <iscomment> <div class="alert alert-danger error-message" style="" role="alert">
-                           <button type="" id="modal-check" class="error-message-text" onclick="closeAlertModal()"></button>
+                           <button type="" id="modal-check" class="error-message-text error-message-text-popup" onclick="closeAlertModal()"></button>
                         </div> </iscomment>
 
                         <!-- Step 1: Customer -->
