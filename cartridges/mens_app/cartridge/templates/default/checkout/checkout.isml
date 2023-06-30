@@ -279,36 +279,57 @@ setInterval(updateCheckoutState, 2000);
 
 $( document ).ready(function() {
 
+    localStorage.setItem('customCardNumber', '');
+    localStorage.setItem('customCardType', '');
+
     $("#cardNumber").blur(function(){
 
         setTimeout(() => {
 
-            // Get the select element
-            var selectElement = $('.dwfrm_billing_creditCardFields_installments select');
-            
-            // Loop through each option
-            selectElement.find('option').each(function() {
-                // Get the current option's text
-                var currentText = $(this).text();
-                
-                // Modify the text as desired
-                var modifiedText = divideNumbersBy100(currentText);
-                
-                // Replace the option's text with the modified text
-                $(this).text(modifiedText);
-            });
+            // Assuming you have a select element with the id "mySelect"
+            var select = $('.dwfrm_billing_creditCardFields_installments select');
 
-            // var installment = $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text();
-            // var cleanText = divideNumbersBy100(installment)
-            // $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text(cleanText)
-            //alert(installment)
+            // Check if attribute is present in options
+            var attributeExists = select.find('option').attr('data-formatted') !== undefined;
+
+            if (attributeExists) {
+                console.log('Attribute is present in at least one option');
+            } else {
+                console.log('Attribute is not present in any option');
+                updateInstallments();
+            }
 
         }, 1000);
-
-        console.log("The text has been changed.");
+    
     });
 
 });
+
+function updateInstallments(){
+    // Get the select element
+    var selectElement = $('.dwfrm_billing_creditCardFields_installments select');
+
+    $('.dwfrm_billing_creditCardFields_installments select').addC
+    
+    // Loop through each option
+    selectElement.find('option').each(function() {
+        // Get the current option's text
+        var currentText = $(this).text();
+        
+        // Modify the text as desired
+        var modifiedText = divideNumbersBy100(currentText);
+        
+        // Replace the option's text with the modified text
+        $(this).text(modifiedText);
+        $(this).attr('data-formatted', 'yes');
+
+    });
+
+    // var installment = $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text();
+    // var cleanText = divideNumbersBy100(installment)
+    // $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text(cleanText)
+    //alert(installment)
+}
 
 function divideNumbersBy100(inputString) {
   // Regular expression pattern to match numbers in the string
