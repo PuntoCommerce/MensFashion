@@ -110,7 +110,7 @@
                                     class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
 
-                                    <button class="custombtn-edit-button custom_edit-button"
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
 
@@ -118,7 +118,7 @@
                                     class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
 
-                                    <button class="edit-button custom_edit-button"
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
                                         aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
                             </div>
@@ -286,16 +286,14 @@ $( document ).ready(function() {
 
         setTimeout(() => {
 
-            // Assuming you have a select element with the id "mySelect"
             var select = $('.dwfrm_billing_creditCardFields_installments select');
 
             // Check if attribute is present in options
             var attributeExists = select.find('option').attr('data-formatted') !== undefined;
 
             if (attributeExists) {
-                console.log('Attribute is present in at least one option');
+                //do nothing
             } else {
-                console.log('Attribute is not present in any option');
                 updateInstallments();
             }
 
@@ -316,19 +314,12 @@ function updateInstallments(){
         // Get the current option's text
         var currentText = $(this).text();
         
-        // Modify the text as desired
         var modifiedText = divideNumbersBy100(currentText);
         
-        // Replace the option's text with the modified text
         $(this).text(modifiedText);
         $(this).attr('data-formatted', 'yes');
 
     });
-
-    // var installment = $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text();
-    // var cleanText = divideNumbersBy100(installment)
-    // $('.dwfrm_billing_creditCardFields_installments select').find(":selected").text(cleanText)
-    //alert(installment)
 }
 
 function divideNumbersBy100(inputString) {
