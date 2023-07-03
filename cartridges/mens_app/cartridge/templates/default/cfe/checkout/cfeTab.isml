@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="images-paymentCards-container">
-            <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/checkout/cfe.svg')}"
+            <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/checkout/img-cfe.png')}"
                 alt="${paymentOption.name}" title="${paymentOption.name}" />
         </div>
     </a>

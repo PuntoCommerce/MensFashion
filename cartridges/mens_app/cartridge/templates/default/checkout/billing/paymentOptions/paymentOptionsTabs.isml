@@ -1,7 +1,7 @@
 <isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption" status="loopSate">
     <iscomment> <isif condition="${paymentOption.ID === 'MercadoPago'}">
         <isinclude template="mercadopago/checkout/mercadopagoTab" />
-    </isif> </iscomment>
+    </isif> </iscomment> 
     <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
         <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
     </isif>

@@ -2,9 +2,9 @@
     <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
         <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
     </isif>
-    <iscomment> <isif condition="${paymentOption.ID === 'MercadoPago'}">
+<iscomment>  <isif condition="${paymentOption.ID === 'MercadoPago'}">
         <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
-    </isif> </iscomment>
+    </isif>  </iscomment>
     <isif condition="${paymentOption.ID === 'PayPal' && pdict.paypal}">
         <isinclude template="paypal/checkout/paypalContent" />
     </isif>
