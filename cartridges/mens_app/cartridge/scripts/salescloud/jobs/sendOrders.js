@@ -15,7 +15,7 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
     const interior = suffix != null ? suffix : "-";
     const exteriot = suite != null ? suite : "-";
     if (shipment.shippingMethodID == "pickup") {
-        let store = StoreMgr.getStore(shipment.shippingAddress.lastName);
+        var store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
         return {
             pickUpStoreId: store.ID,
@@ -49,8 +49,8 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
 };
 
 const parseDate = (date) => {
-    let month = date.getMonth() + 1;
-    let day = date.getDate();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
 
     if (day < 10) {
         day = "0" + day;
@@ -72,10 +72,10 @@ const handlePayment = (payment) => {
 
 module.exports.execute = () => {
     const logger = Logger.getLogger("Sales", "Sales");
-    let currentDate = new Date();
+    var currentDate = new Date();
     currentDate.setDate(currentDate.getDate() - 15);
 
-    let orders = OrderMgr.searchOrders(
+    var orders = OrderMgr.searchOrders(
         "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND (paymentStatus = {2} OR custom.paypalPaymentMethod != {1})",
         "creationDate desc",
         currentDate,
@@ -85,40 +85,40 @@ module.exports.execute = () => {
 
     const token = getToken();
 
-    let order;
-    let body;
-    let salesOrderId;
+    var order;
+    var body;
+    var salesOrderId;
     while (orders.hasNext()) {
         order = orders.next();
         order = OrderMgr.getOrder(order.orderNo);
 
-        let discounts = 0;
-        let pAdjustment;
-        let priceAdjustments = order.priceAdjustments.iterator();
+        var discounts = 0;
+        var pAdjustment;
+        var priceAdjustments = order.priceAdjustments.iterator();
         while (priceAdjustments.hasNext()) {
             pAdjustment = priceAdjustments.next();
             discounts += pAdjustment.price.value * -1;
         }
 
-        let orderDiscount = discounts;
+        var orderDiscount = discounts;
 
-        let products = [];
-        let productLineItems = order.productLineItems.toArray();
-        let p;
+        var products = [];
+        var productLineItems = order.productLineItems.toArray();
+        var p;
 
         productLineItems.forEach((p) => {
-            let promotionIds = [];
-            let pDiscount = 0;
-            let productPAdjusments = p.priceAdjustments.iterator();
-            let ppAdjustment;
+            var promotionIds = [];
+            var pDiscount = 0;
+            var productPAdjusments = p.priceAdjustments.iterator();
+            var ppAdjustment;
             while (productPAdjusments.hasNext()) {
                 ppAdjustment = productPAdjusments.next();
                 discounts += ppAdjustment.price.value * -1;
                 pDiscount += ppAdjustment.price.value * -1;
             }
 
-            let porcToOrderDiscount = (p.price.value * p.quantityValue) / order.adjustedMerchandizeTotalPrice.value;
-            let aditionalDiscount = 0;
+            var porcToOrderDiscount = (p.price.value * p.quantityValue) / order.adjustedMerchandizeTotalPrice.value;
+            var aditionalDiscount = 0;
             // if (orderDiscount != 0) {
             //     //aditionalDiscount = porcToOrderDiscount * orderDiscount;
             //     aditionalDiscount = porcToOrderDiscount * 50;
@@ -133,16 +133,16 @@ module.exports.execute = () => {
                 Discount: pDiscount,
             });
         });
-        // let paymentInstruments = order.paymentInstruments[0];
+        // var paymentInstruments = order.paymentInstruments[0];
 
-        let firstName = "";
-        let lastName = "";
+        var firstName = "";
+        var lastName = "";
 
         if (order.customer.authenticated) {
             firstName = order.customer.firstName;
             lastName = order.customer.lastName;
         } else {
-            let customerName = order.customerName.split(" ");
+            var customerName = order.customerName.split(" ");
             firstName = customerName
                 .slice(0, customerName.length / 2)
                 .join(" ");
@@ -151,14 +151,14 @@ module.exports.execute = () => {
                 .join(" ");
         }
 
-        let defaultShipment = order.defaultShipment;
-        let paymentTransaction = order.paymentTransaction;
+        var defaultShipment = order.defaultShipment;
+        var paymentTransaction = order.paymentTransaction;
 
-        let pricebook =
+        var pricebook =
             order.allProductLineItems[0].product.priceModel.priceInfo.priceBook
                 .ID;
-        let shippingPriceAdjustment = 0;
-        let allShippingPriceAdjustments =
+        var shippingPriceAdjustment = 0;
+        var allShippingPriceAdjustments =
             order.allShippingPriceAdjustments.toArray();
 
         allShippingPriceAdjustments.forEach((p) => {
