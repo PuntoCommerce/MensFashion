@@ -30,6 +30,7 @@
     <isactivedatahead/>
     <isinclude template="/components/schema" />
     <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5SXG7L3"></script>
+    
 </head>
 
 <body id="body-scroll">
@@ -41,12 +42,15 @@
     ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
     <isinclude template="/components/header/pdStorePageHeader" />
+    
 
     <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}"
         data-gtmpageview="${pdict.action}">
 
         <div role="main" id="maincontent">
             <isreplace/>
+            <div class='cookie-container'>
+
         </div>
 
         <isif condition="${pdict.action === 'Checkout-oAuth'}">

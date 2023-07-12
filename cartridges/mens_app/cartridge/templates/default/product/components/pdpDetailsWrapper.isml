@@ -10,10 +10,12 @@
             <!-- Product Name -->
             <div class="row">
                 <div class="col-12">
-                
+
                     <span class="product-name">${product.productName.toLowerCase()}</span>
-                    
-                    <iscomment> <p>${JSON.stringify(product)}</p> </iscomment>
+
+                    <iscomment>
+                        <p>${JSON.stringify(product)}</p>
+                    </iscomment>
                     <!-- Applicable Promotions -->
                     <iscomment>
                         <div class="row">
@@ -23,14 +25,14 @@
                         </div>
                     </iscomment>
                 </div>
-                
+
             </div>
 
             <div class="row">
                 <div class="col-12">
                     <!-- Product Number -->
                     <div class="product-number">
-                    
+
                         <isinclude template="product/components/productNumber" />
                         <div class="productID">
                             <span>${Resource.msg('label.item.id', 'product', null)}</span>
@@ -40,23 +42,25 @@
                 </div>
             </div>
 
-            <iscomment> <div class="row d-xs-block d-md-none">
-                <div class="col">
-                    <!-- Product Number -->
-                    <div class="product-number">
-                        <isinclude template="product/components/productNumber" />
+            <iscomment>
+                <div class="row d-xs-block d-md-none">
+                    <div class="col">
+                        <!-- Product Number -->
+                        <div class="product-number">
+                            <isinclude template="product/components/productNumber" />
+                        </div>
                     </div>
                 </div>
-            </div> </iscomment>
+            </iscomment>
             <div class="row prices-size-guide-container">
                 <!-- Prices -->
                 <div class="prices col-lg-12">
-                 
+
                     <isset name="price" value="${product.price}" scope="page" />
-                    
+
                     <isinclude template="product/components/pricing/main" />
                     <isinclude template="product/components/promotionsPdp" />
-                    
+
                 </div>
                 <iscomment>
                     <!-- Trigger Modal Sizes Guide -->
@@ -133,19 +137,20 @@
                     </div>
                 </isif>
 
-                <div class="add-to-cart-grid">
-                    <div class="add-to-cart-actions mb-2">
-                        <!-- Cart and [Optionally] Apple Pay -->
-                        <isinclude template="product/components/addToCartProduct" />
-                    </div>
+                
+                    <div class="add-to-cart-grid">
+                        <div class="add-to-cart-actions mb-2">
+                            <!-- Cart and [Optionally] Apple Pay -->
+                            <isinclude template="product/components/addToCartProduct" />
+                        </div>
+                    
+                        <div class="add-to-cart-and-checkout mb-2">
+                            <!-- Cart and Checkout -->
+                            <isinclude template="product/components/buyNowProduct" />
+                        </div> 
 
-                    <div class="add-to-cart-and-checkout mb-2">
-                        <!-- Cart and Checkout -->
-                        <isinclude template="product/components/buyNowProduct" />
                     </div>
-                   
-                </div>
-
+               
 
                 <!-- Store Locator Link -->
                 <iscomment>

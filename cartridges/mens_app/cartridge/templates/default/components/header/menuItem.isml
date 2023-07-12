@@ -8,12 +8,13 @@
 
          <img class="${category.id} img2 img-menu-drop" src="${URLUtils.staticURL('/images/')}${category.id}2.png"
             alt="${Resource.msg('global.storename', 'common', null)}" />
+         <isset name="categoryImage" value="${category.thumbnail}" scope="page" />
       </div>
 
 
       <div class="dropdown-menu-content col-8" style="width:100%" role="menu" aria-hidden="true"
          aria-label="${category.id}">
-         <isset name="categoryImage" value="${category.thumbnail}" scope="page" />
+        
          <div class="d-flex justify-content-center row">
             <div class="col-12 d-flex menuCont">
                <isloop items="${menuItem.subCategories}" var="category">

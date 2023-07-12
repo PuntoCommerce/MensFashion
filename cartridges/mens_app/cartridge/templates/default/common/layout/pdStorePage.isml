@@ -37,6 +37,7 @@
 </head>
 
 <body id="body-scroll">
+    
     <isif condition="${pdict.action === 'Checkout-oAuth'}">
     <iselse/>
         <iscontentasset aid="top-banner-promo" />
@@ -47,6 +48,7 @@
     <isinclude template="/components/header/pdStorePageHeader" />
     <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}"
         data-gtmpageview="${pdict.action}">
+        
         <div role="main" id="maincontent">
             <isreplace/>
         </div>
@@ -88,6 +90,20 @@
             </div>
         </div>
     </div> </iscomment>
+    <div id="modal-check" class="checkout-popup-alert">
+    <div class="checkout-popup-alert-card">
+       
+      <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+       <div class="checkout-popup-alert-card-info">
+       <p>${Resource.msg('msg.cookies', 'checkout', null)}: <u><a href="https://www.mensfashion.com.mx/on/demandware.store/Sites-MensFashion-Site/es/PDrender-Show?page=aviso">${Resource.msg('msg.cookies.link', 'checkout', null)}</a></u></p>
+       
+    </div>
+     <button onclick="closeAlertPromotion()" class="checkout-alert-register-card-close" type="">
+        <p>X</p>
+      </button>
+    </div>
+   
+</div>
 
     <iscontentasset aid="cookie_hint" />
     <!--[if lt IE 10]>
@@ -109,7 +125,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VG8CP5" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->   
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+<iscache type="relative" hour="24" status="on" varyby="price_promotion" />
+
 <isscript>
     var assets = require('*/cartridge/scripts/assets');
     assets.addJs('/js/productDetail.js');
