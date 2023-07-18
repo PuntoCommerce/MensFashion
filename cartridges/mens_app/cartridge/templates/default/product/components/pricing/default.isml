@@ -1,5 +1,6 @@
 <span class="prices-container">
     <isset name="finalOrigPrice" value="${price}" scope="page" />
+    
     <isif condition="${finalOrigPrice.list}">
         <div class="stikePriceCont">
             <div class="strike-price">
@@ -35,4 +36,6 @@
     </div>
 </span>
 </span>
-<img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/>
+
+<!--- only applies in hot sale --->
+<iscomment> <img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/> </iscomment>

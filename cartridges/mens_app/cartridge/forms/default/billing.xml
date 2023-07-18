@@ -20,6 +20,9 @@
      <!-- fields for PayPal selection -->
 	<!-- <include formid="paypal" name="paypal"/> -->
 
+    <!-- fields for CFE selection -->
+	<include formid="cfe" name="cfe"/>
+
     <!-- fields for Gift Certificate selection -->
     <!-- <include formid="giftCertFields" name="billinggiftcert"/> -->
 

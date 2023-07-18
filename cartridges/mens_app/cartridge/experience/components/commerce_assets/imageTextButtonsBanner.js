@@ -85,7 +85,7 @@ module.exports.render = function (context, modelIn) {
   model.marginT = content.marginT ? content.marginT : ''
   model.align_button = content.align_button ? content.align_button : ''
   model.display_titles = content.display_titles ? content.display_titles : ''
-
+  model.link = content.link ? content.link : '#';
   model.tiles_container = [
     {
       primary_title: content.primary_title

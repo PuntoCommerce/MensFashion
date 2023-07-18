@@ -141,6 +141,32 @@
         }
       },
       {
+        "@type-id": "custom.merge.PricebooksRebajas",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud Rebajas",
+        "module": "mens_app/cartridge/scripts/jobs/mergePricebooksRebajas.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
         "@type-id": "custom.merge.Google",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
@@ -173,6 +199,32 @@
         "@supports-organization-context": "true",
         "description": "Merge all pricebooks created for SalesCloud",
         "module": "mens_app/cartridge/scripts/jobs/mergeProducts.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": []
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
+        "@type-id": "custom.merge.ProductsRoberts",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud",
+        "module": "mens_app/cartridge/scripts/jobs/mergeProductsRoberts.js",
         "function": "execute",
         "transactional": "true",
         "timeout-in-seconds": "900",
@@ -366,7 +418,131 @@
             }
           ]
         }
-      }
+      },
+      {
+        "@type-id": "custom.merge.ProductsAndCustomPath",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge XML for Catalog coming from Sales Cloud, this job can have multiple custom field path for save final file, catalog id and folder to merge",
+        "module": "mens_app/cartridge/scripts/jobs/mergeProductsAndCustomPath.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "path",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/products",
+              "description": "Foldel Path to merge XML, default: '/src/catalogRobert/products'",
+              "@trim": true
+            },
+            {
+              "@name": "pathSaveFileName",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/",
+              "description": "Foldel Path to save final merged file, default: '/src/catalog/' must end with '/'",
+              "@trim": true
+            },
+            {
+              "@name": "fileName",
+              "@type": "string",
+              "@required": "true",
+              "default-value": "finalProducts.xml",
+              "description": "File name to final merge, default: finalProducts.xml, must end with .xml",
+              "@trim": true
+            },
+            {
+              "@name": "catalogProductID",
+              "@type": "string",
+              "@required": "true",
+              "description": "id of the catalog to merge products",
+              "@trim": true
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All GOOD!"
+            }
+          ]
+        }
+      },
+      {
+        "@type-id": "custom.merge.PricebooksAndCustomPath",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud with a custom path",
+        "module": "mens_app/cartridge/scripts/jobs/mergePricebooksAndCustomPath.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "path",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalogPricebook/StandardPriceBook",
+              "description": "Foldel Path to merge XML, default: '/src/catalogPricebook/StandardPriceBook'",
+              "@trim": true
+            },
+            {
+              "@name": "pathSaveFileName",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/",
+              "description": "Foldel Path to save final merged file, default: '/src/catalog/' must end with '/'",
+              "@trim": true
+            },
+            {
+              "@name": "fileName",
+              "@type": "string",
+              "@required": "true",
+              "default-value": "finalPricebook.xml",
+              "description": "File name to final merge, default: finalPricebook.xml, must end with .xml",
+              "@trim": true
+            },
+            {
+              "@name": "pricebookID",
+              "@type": "string",
+              "@required": "true",
+              "description": "id of the pricebook to merge prices",
+              "@trim": true
+            },
+            {
+              "@name": "pricebookName",
+              "@type": "string",
+              "@required": "true",
+              "default-value": "Standard Price Book",
+              "description": "name of the pricebook default 'Standard Price Book'",
+              "@trim": true
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All Good"
+            }
+          ]
+        }
+      },
     ]
   }
 }

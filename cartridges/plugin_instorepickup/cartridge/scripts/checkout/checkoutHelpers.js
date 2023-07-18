@@ -45,7 +45,7 @@ function ensureValidShipments(lineItemContainer) {
     var allValid = collections.every(shipments, function (shipment) {
         if (shipment) {
             var hasStoreID = shipment.custom && shipment.custom.fromStoreId;
-            if (shipment.shippingMethod.custom && shipment.shippingMethod.custom.storePickupEnabled && !hasStoreID) {
+            if (shipment && shipment.shippingMethod && shipment.shippingMethod.custom && shipment.shippingMethod.custom.storePickupEnabled && !hasStoreID) {
                 storeAddress = false;
             }
             var address = shipment.shippingAddress;

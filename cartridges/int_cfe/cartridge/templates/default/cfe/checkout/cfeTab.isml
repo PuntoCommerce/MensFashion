@@ -1,0 +1,6 @@
+<li class="nav-item" data-method-id="${paymentOption.ID}">
+    <a class="nav-link cfe-tab" data-toggle="tab" href="#cfe-pay-content" role="tab">
+         <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/checkout/cfe.svg')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+    </a>
+</li>

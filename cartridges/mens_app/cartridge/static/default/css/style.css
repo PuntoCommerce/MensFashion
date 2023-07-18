@@ -5592,7 +5592,7 @@ header nav.homepage:hover {
   }
 
   .product-detail .product-details-wrapper {
-    height: 70vh;
+    height: 140vh;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -5718,7 +5718,12 @@ header nav.homepage:hover {
 }
 
 .prices .price .prices-container .stikePriceCont span {
-  font-size: 16px !important;
+  font-size: 20px !important;
+  font-family: "Avenir-Next";
+}
+
+.sales-price-red .sales{
+  color: #FF0000;
 }
 
 .prices .promotion-item-container {
@@ -5859,6 +5864,19 @@ del {
 .checkout.container-custom {
   margin: 38px auto 0 auto !important;
   max-width: 85%;
+}
+
+.link-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main-banner-image__image{
+  width: 100%;
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -7348,6 +7366,18 @@ a .oauth-facebook--button {
   .container-promo-ms img{
     width: 90px !important;
   }
+
+  .container-txt-promo .txt-hover-promo-gradu,  .container-txt-promo .txt-hover-promo-sacopanta{
+    width: 250px !important;
+    left: 30px;
+    top: 90px;
+  }
+
+  .arrow-input-pdp{
+    width: 8px;
+    right: 10px !important;
+    top: 45px !important;
+  }
 }
 
 .span-zipCode2 {
@@ -7363,8 +7393,12 @@ a .oauth-facebook--button {
   .price
   .prices-container
   .sales-price
-  .sales {
-  font-size: 14px;
+  .sales, .container-custom-plp .summary__pricing .strike-through span {
+  font-size: 14px !important;
+}
+
+#productdetailpage .prices-container .stikePriceCont, .product-tile .prices-container .stikePriceCont{
+  margin-bottom: 0 !important;  
 }
 
 .coupons-and-promos{
@@ -7542,7 +7576,10 @@ a .oauth-facebook--button {
   display: none;
 }
 
+
+/* only applies in hot sale */
 .img-hotSale img{
+  display: none;
   width: 29px;
   top: 9px;
   right: 16px;
@@ -7550,6 +7587,7 @@ a .oauth-facebook--button {
 }
 
 .img-hotSale-pdp{
+  display: none;
   width: 53px;
   height: 46px;
   margin-top: -15px;
@@ -7557,9 +7595,10 @@ a .oauth-facebook--button {
 }
 
 .img-hotSale-car{
+  display: none;
   width: 40px;
   height: 30px;
-}
+} 
 
 .order-discount{
   color: #FF0000 !important;
@@ -7593,4 +7632,56 @@ a .oauth-facebook--button {
   height: 37px;
 }
 
+
+.container-txt-promo .txt-hover-promo-gradu, .container-txt-promo .txt-hover-promo-sacopanta {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the container-txt-promo */
+  position: absolute;
+  z-index: 1;
+}
+
+.container-txt-promo:hover .txt-hover-promo-gradu, .container-txt-promo:hover .txt-hover-promo-sacopanta{
+  visibility: visible;
+}
+
+.arrow-input-pdp{
+  position: absolute;
+  transform: rotate(90deg);
+  right: 20px;
+  top: 41px;
+}
+
+.custom-select.select-talla{
+  position: absolute;
+  z-index: 1;
+}
+
+.promotion-item-grad{
+  background-color: #3A78A4;
+  color: #FFFFFF;
+}
+
+.category-camisas .container-txt-promo, .category-coleccion .container-txt-promo,
+.category-cinturones .container-txt-promo, .category-mancuernillas .container-txt-promo, 
+.category-pisacorbatas .container-txt-promo, .category-tirantes .container-txt-promo, 
+.category-pulseras .container-txt-promo, .category-corbatas .container-txt-promo,
+.category-moños .container-txt-promo, .category-kitsdeceremonia .container-txt-promo, 
+.category-gorros .container-txt-promo, .category-panuelos .container-txt-promo, 
+.category-pines .container-txt-promo, .category-accesorios .container-txt-promo, 
+.category-pantalones .container-txt-promo, .category-accesorios .container-txt-promo, 
+.category-lociones .container-txt-promo{
+  display: none;
+}
+
+.category-sacos .txt-hover-promo-gradu, 
+.category-pantalones .txt-hover-promo-gradu, 
+.category-trajes .txt-hover-promo-sacopanta{
+  display: none;
+}
 

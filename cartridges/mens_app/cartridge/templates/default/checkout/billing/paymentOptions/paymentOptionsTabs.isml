@@ -8,4 +8,5 @@
     <isif condition="${paymentOption.ID === 'CHECKOUT_PRO'}">
         <isinclude template="checkout/billing/paymentOptions/checkoutProTab" />
     </isif>
+
 </isloop>

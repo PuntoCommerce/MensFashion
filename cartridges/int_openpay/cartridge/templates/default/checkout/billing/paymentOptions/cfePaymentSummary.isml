@@ -1,0 +1,5 @@
+<div class="cfe-type">
+    <span>${Resource.msg('brand.cfe', 'cfe', null)}</span> <br />
+    <span>${Resource.msg('customer.email', 'cfe', null)}</span> <span>${pdict.order.orderEmail}</span><br />
+    <span>${Resource.msg('customer.total', 'cfe', null)}</span> <span>${pdict.order.priceTotal}</span><br />
+</div>

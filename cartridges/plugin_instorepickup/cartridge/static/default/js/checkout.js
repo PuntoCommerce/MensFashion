@@ -1247,7 +1247,7 @@
           s(e, t), a(e), d(e);
         },
         updatePaymentInformation: function (e) {
-          var t = $(".payment-details"),
+            var t = $(".payment-details"),
             i = "";
           e.billing.payment &&
             e.billing.payment.selectedPaymentInstruments &&
