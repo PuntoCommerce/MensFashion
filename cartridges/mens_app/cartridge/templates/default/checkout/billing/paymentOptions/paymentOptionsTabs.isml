@@ -8,5 +8,11 @@
     <isif condition="${paymentOption.ID === 'CHECKOUT_PRO'}">
         <isinclude template="checkout/billing/paymentOptions/checkoutProTab" />
     </isif>
+    <isif condition="${paymentOption.ID === 'OpenPay'}">
+        <isinclude template="openpay/checkout/openpayTab" />
+    </isif>
+     <isif condition="${paymentOption.ID === 'CFE'}">
+        <isinclude template="cfe/checkout/cfeTab" />
+    </isif>
 
 </isloop>
