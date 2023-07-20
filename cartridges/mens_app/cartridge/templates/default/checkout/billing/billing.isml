@@ -51,7 +51,7 @@
         <!-------------------------------------------------------------------------->
         <!-- Contact Info (Email and Phone)                                       -->
         <!-------------------------------------------------------------------------->
-        <fieldset class="contact-info-block ${pdict.order.shipping[0].selectedShippingMethod.ID === 'pickup' ? '' : 'd-none'}">
+        <fieldset class="contact-info-block ${pdict.order.shipping[0].selectedShippingMethod.ID === 'pickup' ? '' : ''}">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group
