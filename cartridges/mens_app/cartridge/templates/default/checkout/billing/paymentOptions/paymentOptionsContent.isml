@@ -1,17 +1,17 @@
-<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption" status="loopSate">
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption">
     <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
         <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
     </isif>
-    <iscomment> <isif condition="${paymentOption.ID === 'MercadoPago'}">
-        <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
+    <iscomment> <isif condition="${paymentOption.ID === 'PIX'}">
+        <isinclude template="checkout/billing/paymentOptions/pixContent" />
     </isif> </iscomment>
-    <isif condition="${paymentOption.ID === 'PayPal' && pdict.paypal}">
-        <isinclude template="paypal/checkout/paypalContent" />
+    <isif condition="${paymentOption.ID === 'CHECKOUT_PRO'}">
+        <isinclude template="checkout/billing/paymentOptions/checkoutProContent" />
     </isif>
-    <isif condition="${paymentOption.ID === 'OpenPay'}">
+     <isif condition="${paymentOption.ID === 'OpenPay'}">
         <isinclude template="openpay/checkout/openpayContent" />
     </isif>
-    <isif condition="${paymentOption.ID === 'OpenPay'}">
+    <isif condition="${paymentOption.ID === 'CFE'}">
         <isinclude template="cfe/checkout/cfeContent" />
     </isif>
 </isloop>

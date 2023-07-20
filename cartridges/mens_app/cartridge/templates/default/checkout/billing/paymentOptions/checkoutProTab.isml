@@ -1,0 +1,33 @@
+<li class="nav-item real-mp-pro-li" data-method-id="${paymentOption.ID}" id="real-mp-pro-li" style="display:none;">
+    <a class="nav-link checkout-pro-tab" data-toggle="tab" href="#checkout-pro-content" role="tab">
+        <div class="check-and-label-container d-flex">
+            <div class="check-decorator-payment">
+                <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+            <div class="label-payment">
+                <span>${paymentOption.name}</span>
+            </div>
+        </div>
+        <img class="checkout-pro-option" src="${URLUtils.staticURL('/images/payment-mercado-pago.png')}" height="32"
+            alt="${paymentOption.name}" title="${paymentOption.name}" />
+    </a>
+</li>
+
+<li class="dum-mp-pro-li" id="dum-mp-pro-li" onclick='javascript:goToCheckoutWithoutAlert("${URLUtils.url('Checkout-MpBegin', 'stage', 'payment')}")'>
+<a class="nav-link" data-toggle="tab" href="#" >
+<div class="check-and-label-container d-flex float-left">
+            <div class="check-decorator-payment">
+                <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                </div>
+            </div>
+            <div class="label-payment">
+                <span>${paymentOption.name}</span>
+            </div>
+        </div>
+        <img class="checkout-pro-option float-right" src="${URLUtils.staticURL('/images/payment-mercado-pago.png')}" height="32"
+            alt="${paymentOption.name}" title="${paymentOption.name}" />
+</a>
+</li>

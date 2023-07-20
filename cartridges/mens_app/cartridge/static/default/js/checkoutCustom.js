@@ -186,7 +186,6 @@ if (selectShippingBtn) {
     updateSelectedShippingMethod();
     pickCountry();
     togglePickupForm(selectPickupBtn);
-
   });
 }
 if (selectPickupBtn) {
@@ -229,6 +228,7 @@ function updateProgressBar() {
     checkoutStep2.classList.add("active");
   }
   if (stage === "placeOrder") {
+
     checkoutDivider1.classList.add("active");
     checkoutStep2.classList.add("active");
     checkoutDivider2.classList.add("active");
@@ -236,20 +236,29 @@ function updateProgressBar() {
   }
 }
 updateProgressBar();
-if (step1Btn) {
-  step1Btn.addEventListener("click", (e) => {
-    setTimeout(() => {
-      updateProgressBar();
-    }, 1000);
+// if (step1Btn) {
+//   step1Btn.addEventListener("click", (e) => {
+//     setTimeout(() => {
+//       updateProgressBar();
+//     }, 1000);
+//   });
+// }
+// if (step2Btn) {
+//   step2Btn.addEventListener("click", (e) => {
+//     setTimeout(() => {
+//       updateProgressBar();
+//     }, 1000);
+//   });
+// }
+
+$( document ).ready(function() {
+  updateProgressBar();
+  $(".submit-shipping").click(function(){
+      setTimeout(() => {
+        updateProgressBar();
+      }, 1000);
   });
-}
-if (step2Btn) {
-  step2Btn.addEventListener("click", (e) => {
-    setTimeout(() => {
-      updateProgressBar();
-    }, 1000);
-  });
-}
+});
 
 
 // Instore pickup selector trigger
@@ -384,3 +393,16 @@ if (paypalButtonCreditCard) {
 // }
 
 // totalQuantity();
+
+function goToMpCheckout(url){
+  let confirmAction = confirm("Are you sure to edit this, you will be redirect to step 1 ?");
+  if (confirmAction) {
+    window.location.href = url; //relative to domain
+  } else {
+    //do nothing
+  }
+}
+
+function goToCheckoutWithoutAlert(url){
+  window.location.href = url; //relative to domain
+}

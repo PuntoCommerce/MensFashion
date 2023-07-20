@@ -5,12 +5,16 @@
     <!----------------------------------------------------------------------------------->
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
-        assets.addJs('/js/checkout.js');
+        assets.addJs('https://sdk.mercadopago.com/js/v2');
+        assets.addJs('/js/mp-checkout.js');
+        assets.addJs('/js/store-checkout.js');
         assets.addJs('/js/accordion.js');
-        assets.addJs('/js/checkoutCp.js')
         assets.addCss('/css/checkout/checkout.css');
-        assets.addCss('/css/checkout/popup.css')
     </isscript>
+
+    <div class="custom_loader" id="custom_loader" style="display:none;">
+        <span>Loading...</span>
+    </div>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
         <isinclude template="reporting/reportingUrls" />
@@ -21,7 +25,6 @@
             ${Resource.msg('title.checkout', 'checkout', null)}
         </h1>
     </iscomment>
-
     <div class="checkout_top">
         <div>
             <p class="checkout_top_text"><img class="mr-3 checkout_top_img"
@@ -31,28 +34,15 @@
             <p class="ml-4">Resumen del pedido</p>
         </div>
     </div>
-    <ul class="checkout__stepper">
-        <li class="checkout__stepper--item">
-            <h3 id="checkoutStep1" class="checkout__stepper--item-circle checkout__stepper--item-circle-current">1</h3>
-            <p class="checkout__stepper--item-title">Envío</p>
-        </li>
-        <div id="checkoutStepDivider1" class="checkout__stepper--divider"></div>
-        <li class="checkout__stepper--item">
-            <h3 id="checkoutStep2" class="checkout__stepper--item-circle">2</h3>
-            <p class="checkout__stepper--item-title">Pago</p>
-        </li>
-        <div id="checkoutStepDivider2" class="checkout__stepper--divider"></div>
-        <li class="checkout__stepper--item">
-            <h3 id="checkoutStep3" class="checkout__stepper--item-circle">3</h3>
-            <p class="checkout__stepper--item-title">Realizar Pedido</p>
-        </li>
-    </ul>
     <div class="container-promo-ms">
+        <p class="title-promo-ms">${Resource.msg('title.checkout.promo.ms', 'checkout', null)}</p><img
+            src="${URLUtils.staticURL('/images/logo-pp-check.png')}" alt="Meses sin intereses PP" />
         <p class="title-promo-ms">${Resource.msg('title.checkout.promo.ms', 'checkout', null)}</p><img
             src="${URLUtils.staticURL('/images/logo-pp-check.png')}" alt="Meses sin intereses PP" />
     </div>
     <div class="d-flex justify-content-center checkout-container">
         <div class="col-sm-12 col-lg-10">
+
             <div id="checkout-main" class="container data-checkout-stage <isif condition="
                 ${pdict.order.usingMultiShipping && pdict.order.shipping.length > 1}">multi-ship</isif>"
                 data-customer-type="${pdict.customer.registeredUser ? 'registered' : 'guest'}"
@@ -76,9 +66,6 @@
                         <div class="alert alert-danger error-message" style="" role="alert">
                            <span id="modal-check" class="error-message-text"></span>
                         </div>
-                        <iscomment> <div class="alert alert-danger error-message" style="" role="alert">
-                           <button type="" id="modal-check" class="error-message-text error-message-text-popup" onclick="closeAlertModal()"></button>
-                        </div> </iscomment>
 
                         <!-- Step 1: Customer -->
                         <iscomment>We only allow edits for non-registered customers</iscomment>
@@ -103,28 +90,37 @@
 
 
                         <!-- Step 3: Payment and Billing-->
+                        <fieldset class="mp-error-messages"
+                            data-mp-error-messages="${JSON.stringify(pdict.mercadopago.errorMessages)}" />
+                        <fieldset class="mp-text-messages"
+                            data-mp-text-messages="${JSON.stringify(pdict.mercadopago.textMessages)}" />
+                        <fieldset class="js-mp-form"
+                            data-mp-preferences="${JSON.stringify(pdict.mercadopago.preferences)}" />
+
                         <isinclude template="checkout/billing/billing" />
                         <div class="card payment-summary">
                             <div class="card-header">
-                                <h2 class="card-header-custom">${Resource.msg('heading.payment.review', 'checkout', null)}</h2>
+                                <h2 class="pull-left card-header-custom left-manage">${Resource.msg('heading.payment', 'checkout', null)}
+                                </h2>
+                                <iscomment> <button class="edit-button pull-right"
+                                        aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
                             </div>
 
                             <div class="card-body row">
                                 <div
-                                    class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
+                                    class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-shipping">
                                     <isinclude template="checkout/shipping/shippingSummaryCheckout" />
 
-
-                                    <iscomment> <button class="custom_edit-button" id="custom-edit-shipping"
-                                            aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
+                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
+
                                 <div
-                                    class="col-6 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
+                                    class="col-12 col-lg-6 mb-5 checkout-summary-container checkout-summary-container-payment">
                                     <isinclude template="checkout/billing/billingSummaryCheckout" />
-                                    <button class="edit-button custom_edit-button"
-                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step.payment', 'checkout', null)}</button>
-                                    <iscomment> <button class="custom_edit-button" id="custom-edit-payment"
-                                            aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button> </iscomment>
+
+                                    <button onclick="goToMpCheckout('${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}')" class="custom_edit-button"
+                                        aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
                                 </div>
                             </div>
                         </div>
@@ -134,9 +130,9 @@
                         <!-- Checkout Workflow Buttons -->
                         <!----------------------------------------------------------------------------------->
                         <div class="card col">
-                            <div class="card-body">
+                            <div class="card-body p-0">
                                 <div class="row steps-container">
-                                    <div class="next-step-button col-12">
+                                    <div class="next-step-button col-12 p-0">
                                         <div class="mb-sm-5">
 
                                             <button
@@ -159,9 +155,12 @@
                                                 type="submit" name="submit"
                                                 value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
                                             </button>
-                                            <iscomment> <button
-                                                    class="btn btn--gray btn__small text-uppercase btn-block place-order">Prueba</button>
-                                            </iscomment>
+                                            <iscomment> <a href="${URLUtils.url('Checkout-MpBegin', 'stage', 'placeOrder')}"
+                                                class="btn btn--gray btn__small text-uppercase btn-block place-order"
+                                                data-action="${URLUtils.url('CheckoutServices-PlaceOrder')}"
+                                                type="submit" name="submit"
+                                                value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
+                                            </a> </iscomment>
                                         </div>
                                     </div>
                                 </div>
@@ -233,6 +232,126 @@
         </div>
     </div>
 
+
     <isinclude template="checkout/shipping/shippingAddressTemplate" />
 
 </isdecorate>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- script for stepper and other checkout -->
+<script>
+function updateCheckoutState(){
+    const stepShipping = document.querySelector("#checkout-main");
+
+    const checkoutStep2 = document.querySelector("#checkoutStep2");
+    const checkoutStep3 = document.querySelector("#checkoutStep3");
+    const checkoutDivider1 = document.querySelector("#checkoutStepDivider1");
+    const checkoutDivider2 = document.querySelector("#checkoutStepDivider2");
+
+    let stage;
+    if (stepShipping) {
+        stage = stepShipping.dataset.checkoutStage;
+    };
+
+    if (stage === "shipping") {
+        console.log('shipping')
+    }
+    if (stage === "payment") {
+
+        console.log('payment')
+    }
+    if (stage === "placeOrder") {
+
+        console.log('placeOrder')
+        //$('#custom_loader').show();        
+        // var url = $('.place-order').attr('href');
+        // goToMpCheckout(url)
+
+        removejscssfile("store-checkout.js", "js")
+        
+    }
+}
+$( document ).ready(function() {
+
+setInterval(updateCheckoutState, 2000);
+
+});
+
+$( document ).ready(function() {
+
+    localStorage.setItem('customCardNumber', '');
+    localStorage.setItem('customCardType', '');
+
+    $("#cardNumber").blur(function(){
+
+        setTimeout(() => {
+
+            var select = $('.dwfrm_billing_creditCardFields_installments select');
+
+            // Check if attribute is present in options
+            var attributeExists = select.find('option').attr('data-formatted') !== undefined;
+
+            if (attributeExists) {
+                //do nothing
+            } else {
+                updateInstallments();
+            }
+
+        }, 1000);
+    
+    });
+
+});
+
+function updateInstallments(){
+    // Get the select element
+    var selectElement = $('.dwfrm_billing_creditCardFields_installments select');
+
+    $('.dwfrm_billing_creditCardFields_installments select').addC
+    
+    // Loop through each option
+    selectElement.find('option').each(function() {
+        // Get the current option's text
+        var currentText = $(this).text();
+        
+        var modifiedText = divideNumbersBy100(currentText);
+        
+        $(this).text(modifiedText);
+        $(this).attr('data-formatted', 'yes');
+
+    });
+}
+
+function divideNumbersBy100(inputString) {
+  // Regular expression pattern to match numbers in the string
+  var numberPattern = /\d{1,3}(?:,\d{3})*(\.\d+)?/g;
+
+  // Find all numbers in the string and divide them by 100
+  var modifiedString = inputString.replace(numberPattern, function(match) {
+    var number = parseFloat(match.replace(',', ''));
+    return (number / 100).toFixed(2); // Convert back to string with 2 decimal places
+  });
+ 
+  var firstFourElements = modifiedString.substr(0, 4);
+
+  // Convert the extracted elements to a number and multiply by 100
+  var result = Number(firstFourElements) * 100;
+  
+  var removeFirstFour = modifiedString.substring(4);
+  
+  return result + removeFirstFour;
+}
+
+
+function removejscssfile(filename, filetype){
+    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+    var allsuspects=document.getElementsByTagName(targetelement)
+    for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+    if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+        allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+    }
+}
+
+</script>

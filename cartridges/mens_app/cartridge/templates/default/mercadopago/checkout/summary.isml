@@ -1,0 +1,25 @@
+<div class="mercado-pago-type">
+    <iscomment> <span>${Resource.msg('msg.payment.type.credit', 'confirmation', null)}
+            ${payment.type}</span>
+</div>
+<div class="credit-card-number">
+    ${payment.maskedCreditCardNumber}
+</div>
+<div class="credit-card-expiration-date">
+    <span>${Resource.msg('msg.card.type.ending', 'confirmation', null)}
+        ${payment.expirationMonth}/${payment.expirationYear}</span> </iscomment>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <span class="confirmaion_total">
+                ${pdict.order.priceTotal + ' (IVA incluido)'}
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <span class="confirmaion_paypal_user">
+                ${pdict.order.orderEmail}
+            </span>
+        </div>
+    </div>
+</div>
