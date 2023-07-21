@@ -26,6 +26,30 @@
         }
       },
       {
+        "@type-id": "custom.salesCloud.sendOrdersRoberts",
+        "@supports-parallel-execution": "false",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Send Orders to SalesCloud Roberts",
+        "module": "mens_app/cartridge/scripts/salescloud/jobs/sendOrdersRoberts.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {},
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All orders were checked"
+            }
+          ]
+        }
+      },
+      {
         "@type-id": "custom.salesCloud.importInventory",
         "@supports-parallel-execution": "false",
         "@supports-site-context": "true",
