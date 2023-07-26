@@ -98,7 +98,7 @@
        <p>${Resource.msg('msg.cookies', 'checkout', null)}: <u><a href="https://www.mensfashion.com.mx/on/demandware.store/Sites-MensFashion-Site/es/PDrender-Show?page=aviso">${Resource.msg('msg.cookies.link', 'checkout', null)}</a></u></p>
        
     </div>
-     <button onclick="closeAlertPromotion()" class="checkout-alert-register-card-close" type="">
+     <button onclick="closeAlertCookies()" class="checkout-alert-register-card-close" type="">
         <p>X</p>
       </button>
     </div>

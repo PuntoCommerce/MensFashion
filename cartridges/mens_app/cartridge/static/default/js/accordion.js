@@ -159,8 +159,6 @@ function checkoutRedirectLogin() {
 function closeAlertPromotion() {
     const checkout = document.getElementById("checkout-alert");
     const home = document.getElementById("homepage-alert");
-    const popupCheckout = document.getElementById("modal-check");
-    const isClose = localStorage.getItem("modal-check");
 
     if (checkout) {
         checkout.classList.add("d-none");
@@ -171,7 +169,13 @@ function closeAlertPromotion() {
         sessionStorage.setItem("homeAlertRegister", true);
     }
 
-    if (popupCheckout || isClose === false) {
+    
+}
+
+function closeAlertCookies(){
+    const popupCheckout = document.getElementById("modal-check");
+
+    if (popupCheckout) {
         popupCheckout.classList.add("d-none");
         sessionStorage.setItem("checkoutPopupAlert", true);
     }
