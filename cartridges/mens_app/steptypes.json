@@ -567,6 +567,64 @@
           ]
         }
       },
+      {
+        "@type-id": "custom.merge.AttributesAndCategoriesAndCustomPath",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge XML attributes and categories for Catalog coming from Sales Cloud, this job can have multiple custom field path for save final file, catalog id and folder to merge",
+        "module": "mens_app/cartridge/scripts/jobs/mergeAttributesAndCategoriesAndCustomPath.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "path",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/products",
+              "description": "Foldel Path to merge XML, default: '/src/catalogRobert/products'",
+              "@trim": true
+            },
+            {
+              "@name": "pathSaveFileName",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/",
+              "description": "Foldel Path to save final merged file, default: '/src/catalog/' must end with '/'",
+              "@trim": true
+            },
+            {
+              "@name": "fileName",
+              "@type": "string",
+              "@required": "true",
+              "default-value": "finalProducts.xml",
+              "description": "File name to final merge, default: finalProducts.xml, must end with .xml",
+              "@trim": true
+            },
+            {
+              "@name": "catalogProductID",
+              "@type": "string",
+              "@required": "true",
+              "description": "id of the catalog to merge products",
+              "@trim": true
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All GOOD!"
+            }
+          ]
+        }
+      },
     ]
   }
 }
