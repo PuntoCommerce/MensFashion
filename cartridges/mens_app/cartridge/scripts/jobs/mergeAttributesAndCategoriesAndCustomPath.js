@@ -29,11 +29,9 @@ module.exports.execute = (args) => {
 
     let xmlCountElement = Object.keys(xmlnamespaceDeclarations).length;
     for (let i = 0; i < xmlCountElement; i++) {
-      let linea = xmlnamespaceDeclarations[i];
-      let Vallinea = JSON.stringify(linea);
 
       //Si es linea de atributo general
-      if(Vallinea.startsWith('"<variation-attribute '))
+      if(JSON.stringify(xmlnamespaceDeclarations[i]).startsWith('"<variation-attribute '))
       {
         let xmlAttributeTemp = xmlnamespaceDeclarations[i].attributes();
         let valorAttributeNameTemp = xmlAttributeTemp[0] 
@@ -62,9 +60,7 @@ module.exports.execute = (args) => {
         let xmlDescednantTempCount = Object.keys(xmlDescendantTemp).length;
         for (let x = 0; x < xmlDescednantTempCount; x++) 
         {
-          let lineaDescendat = xmlDescendantTemp[x];
-          let vallineaDescendat = JSON.stringify(lineaDescendat);
-          if(vallineaDescendat.startsWith('"<variation-attribute-value '))
+          if(JSON.stringify(xmlDescendantTemp[x]).startsWith('"<variation-attribute-value '))
           {
             let attributeValue = xmlDescendantTemp[x].attributes();
 
