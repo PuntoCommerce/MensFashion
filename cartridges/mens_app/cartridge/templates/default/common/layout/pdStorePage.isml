@@ -37,7 +37,7 @@
 </head>
 
 <body id="body-scroll">
-    
+
     <isif condition="${pdict.action === 'Checkout-oAuth'}">
     <iselse/>
         <iscontentasset aid="top-banner-promo" />
@@ -48,7 +48,7 @@
     <isinclude template="/components/header/pdStorePageHeader" />
     <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}"
         data-gtmpageview="${pdict.action}">
-        
+
         <div role="main" id="maincontent">
             <isreplace/>
         </div>
@@ -57,53 +57,56 @@
     <div class="error-messaging"></div>
     <div class="modal-background"></div>
     <div class="add-item-pdp-alert"></div>
-  <iscomment>   <div id="${pdict.page.ID}-alert" class="${pdict.page.ID}-alert-register d-none">
-        <div class="homepage-alert-register__card">
-            <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </button>
-            <label id="redirectlogin" class="d-none"
-                data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
+    <iscomment>
+        <div id="${pdict.page.ID}-alert" class="${pdict.page.ID}-alert-register d-none">
+            <div class="homepage-alert-register__card">
+                <button onclick="closeAlertPromotion()" class="homepage-alert-register__card__close" type="">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+                <label id="redirectlogin" class="d-none"
+                    data-href="${URLUtils.url('Login-Show', 'action', 'register')}"></label>
 
-            <div class="homepage-alert-register__card__info">
-                <span class="homepage-alert-register__card__info__title">¡ESTAMOS ESTRENANDO</span>
-                <span class="homepage-alert-register__card__info__title title2">NUEVA PÁGINA!</span>
-                <span class="homepage-alert-register__card__info__text">
-                    Nos renovamos para brindarte la mejor experiencia de compra, festeja con nosotros y regístrate
-                    nuevamente para ganarte
-                </span>
-                <span class="homepage-alert-register__card__info__text text2">
-                    ¡Un cupón con valor de $200 pesos!
-                </span>
-                <span class="homepage-alert-register__card__info__text">
-                    Úsalo en tu primera compra en línea.
-                </span>
-                <span class="homepage-alert-register__card__info__text--small">
-                    *Válido únicamente en tu primera compra, compra mínima de $1,000. Vigencia 30 días a partir de
-                    recibido, consulta términos y condiciones.
-                </span>
-                <a href="#" onclick="homeRedirectLogin()" class="homepage-alert-register__card__info__link">CREAR
-                    CUENTA</a>
-            </div>
-            <div class="homepage-alert-register__card__image">
-                <img src="${URLUtils.staticURL('images/alert-home-image-change.png')}" alt="homeAlert">
+                <div class="homepage-alert-register__card__info">
+                    <span class="homepage-alert-register__card__info__title">¡ESTAMOS ESTRENANDO</span>
+                    <span class="homepage-alert-register__card__info__title title2">NUEVA PÁGINA!</span>
+                    <span class="homepage-alert-register__card__info__text">
+                        Nos renovamos para brindarte la mejor experiencia de compra, festeja con nosotros y regístrate
+                        nuevamente para ganarte
+                    </span>
+                    <span class="homepage-alert-register__card__info__text text2">
+                        ¡Un cupón con valor de $200 pesos!
+                    </span>
+                    <span class="homepage-alert-register__card__info__text">
+                        Úsalo en tu primera compra en línea.
+                    </span>
+                    <span class="homepage-alert-register__card__info__text--small">
+                        *Válido únicamente en tu primera compra, compra mínima de $1,000. Vigencia 30 días a partir de
+                        recibido, consulta términos y condiciones.
+                    </span>
+                    <a href="#" onclick="homeRedirectLogin()" class="homepage-alert-register__card__info__link">CREAR
+                        CUENTA</a>
+                </div>
+                <div class="homepage-alert-register__card__image">
+                    <img src="${URLUtils.staticURL('images/alert-home-image-change.png')}" alt="homeAlert">
+                </div>
             </div>
         </div>
-    </div> </iscomment>
+    </iscomment>
     <div id="modal-check" class="checkout-popup-alert">
-    <div class="checkout-popup-alert-card">
-       
-      <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
-       <div class="checkout-popup-alert-card-info">
-       <p>${Resource.msg('msg.cookies', 'checkout', null)}: <u><a href="https://www.mensfashion.com.mx/on/demandware.store/Sites-MensFashion-Site/es/PDrender-Show?page=aviso">${Resource.msg('msg.cookies.link', 'checkout', null)}</a></u></p>
-       
+        <div class="checkout-popup-alert-card">
+
+            <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
+            <div class="checkout-popup-alert-card-info">
+                <p>${Resource.msg('msg.cookies', 'checkout', null)}: <u><a
+                            href="https://www.mensfashion.com.mx/on/demandware.store/Sites-MensFashion-Site/es/PDrender-Show?page=aviso">${Resource.msg('msg.cookies.link', 'checkout', null)}</a></u></p>
+
+            </div>
+            <button onclick="closeAlertCookies()" class="checkout-alert-register-card-close" type="">
+                <p>X</p>
+            </button>
+        </div>
+
     </div>
-     <button onclick="closeAlertCookies()" class="checkout-alert-register-card-close" type="">
-        <p>X</p>
-      </button>
-    </div>
-   
-</div>
 
     <iscontentasset aid="cookie_hint" />
     <!--[if lt IE 10]>
@@ -125,7 +128,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VG8CP5" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->   
+    <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

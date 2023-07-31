@@ -168,7 +168,6 @@ function closeAlertPromotion() {
         home.classList.add("d-none");
         sessionStorage.setItem("homeAlertRegister", true);
     }
-
     
 }
 
