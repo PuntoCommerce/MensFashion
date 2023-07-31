@@ -64,7 +64,7 @@ module.exports.execute = (args) => {
         {
           let lineaDescendat = xmlDescendantTemp[x];
           let vallineaDescendat = JSON.stringify(lineaDescendat);
-          if(lineaDescendat.startsWith('"<variation-attribute-value '))
+          if(vallineaDescendat.startsWith('"<variation-attribute-value '))
           {
             let attributeValue = xmlDescendantTemp[x].attributes();
 
