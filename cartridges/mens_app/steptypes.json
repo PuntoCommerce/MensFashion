@@ -538,18 +538,17 @@
               "@trim": true
             },
             {
-              "@name": "pricebookID",
+              "@name": "startLineRemove",
               "@type": "string",
               "@required": "true",
-              "description": "id of the pricebook to merge prices",
+              "description": "Line to be remove",
               "@trim": true
             },
             {
-              "@name": "pricebookName",
+              "@name": "startLineNew",
               "@type": "string",
               "@required": "true",
-              "default-value": "Standard Price Book",
-              "description": "name of the pricebook default 'Standard Price Book'",
+              "description": "new start line",
               "@trim": true
             }
           ]
