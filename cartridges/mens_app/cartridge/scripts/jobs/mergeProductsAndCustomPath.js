@@ -11,6 +11,7 @@ module.exports.execute = (args) => {
 
   let endFile = "</catalog>";
   let dirList = dir.listFiles().iterator();
+  // let dirList2 = dir.listFiles().iterator();
 
   let file;
   let finalString = "";
@@ -24,10 +25,10 @@ module.exports.execute = (args) => {
     auxString = file.readString().replace(startFile, "");
     auxString = auxString.replace(endFile, "");
 
-    if (auxString.startsWith("<variation-attribute")) {
-      assigmentsAndAttributes = auxString;
-      auxString = "";
-    }
+    // if (auxString.startsWith("<variation-attribute")) {
+    //   assigmentsAndAttributes = auxString;
+    //   auxString = "";
+    // }
 
     if (isFirst) {
       auxString = startFile + auxString;
@@ -37,7 +38,25 @@ module.exports.execute = (args) => {
     finalWritter.writeLine(auxString);
     file.close();
   }
-  finalWritter.writeLine(assigmentsAndAttributes);
+
+
+
+
+
+  // finalWritter.writeLine(assigmentsAndAttributes);
   finalWritter.writeLine(endFile);
   finalWritter.close();
 };
+
+  // while (dirList2.hasNext()) {
+  //   file = FileReader(dirList2.next());
+
+  //   auxString = file.readString().replace(startFile, "");
+  //   auxString = auxString.replace(endFile, "");
+
+  //   if (auxString.startsWith("<variation-attribute")  || auxString.startsWith("<category-assignment")) {
+  //     assigmentsAndAttributes = auxString;
+  //     auxString = "";
+  //     finalWritter.writeLine(assigmentsAndAttributes);
+  //   }
+  // }

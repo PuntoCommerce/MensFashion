@@ -102,30 +102,151 @@ module.exports.execute = (args) => {
     finalWritter.writeLine('</variation-attribute-values></variation-attribute>');
   }
 
-  //Generar category assignment
-  while (dirCategoryAsigment.hasNext()){
-    file = FileReader(dirCategoryAsigment.next());
-    fileString = file.readString();
-
-    let firstPositionProduct = fileString.indexOf('<category-assignment');
-    let endPositionProduct = fileString.indexOf('</catalog>');
-    finalWritter.writeLine(fileString.slice(firstPositionProduct, endPositionProduct));
-  }
-
   let endFileProducts = '</catalog>';
   finalWritter.writeLine(endFileProducts);
   finalWritter.close();
 
+  //Dejar todo en una linea para que no tenga errores de saldo de linea
+  let reReadFile2 = new File(File.IMPEX + args.pathSaveFileName + args.fileName);
+  let reFile2 = FileReader(reReadFile2);
+  let stringFile2 = reFile2.readString();
+  stringFile2 = stringFile2.replace(/[\r\n]/gm, '');
+  let writterFile2 = new FileWriter(reReadFile2);
+  writterFile2.writeLine(stringFile2);
+  writterFile2.close();
 
-  
-  let reReadFile = new File(File.IMPEX + args.pathSaveFileName + args.fileName);
-  let reFile = FileReader(reReadFile);
-
-  let stringFile = reFile.readString();
-  stringFile = stringFile.replace(/[\r\n]/gm, '');
 
 
-  let writterFile = new FileWriter(reReadFile);
-  writterFile.writeLine(stringFile);
-  writterFile.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //Generar category assignment
+  let finalCatAssig = null;
+  let finalCatAssigWritter = null;
+  // finalCatAssigWritter.writeLine(startProduct);
+
+  let countDivididor = 0;
+  let countCantidadDividas = 0;
+  let contadorAux = 0;
+
+  while (dirCategoryAsigment.hasNext()){
+    contadorAux = contadorAux+1;
+    if(countDivididor == 0){
+      finalCatAssig = new File(File.IMPEX + args.pathSaveFileName + countCantidadDividas + args.fileName);
+      finalCatAssigWritter = new FileWriter(finalCatAssig);
+      finalCatAssigWritter.writeLine(startProduct);
+    }
+
+
+    file = FileReader(dirCategoryAsigment.next());
+    fileString = file.readString();
+    let firstPositionProduct = fileString.indexOf('<category-assignment');
+    let endPositionProduct = fileString.indexOf('</catalog>');
+    let stringAuxiliar = fileString.slice(firstPositionProduct, endPositionProduct);
+    finalCatAssigWritter.writeLine(stringAuxiliar);
+
+    if(dirCategoryAsigment.hasNext() == false)
+    {
+      finalCatAssigWritter.writeLine(endFileProducts);
+      finalCatAssigWritter.close();
+
+      let reReadFile = new File(File.IMPEX + args.pathSaveFileName + countCantidadDividas + args.fileName);
+      let reFile = FileReader(reReadFile);
+      let stringFile = reFile.readString();
+      stringFile = stringFile.replace(/[\r\n]/gm, '');
+      let writterFile = new FileWriter(reReadFile);
+      writterFile.writeLine(stringFile);
+      writterFile.close();
+      countCantidadDividas = countCantidadDividas+1;
+      countDivididor = -1;
+    }
+    else if(countDivididor == 20){
+      finalCatAssigWritter.writeLine(endFileProducts);
+      finalCatAssigWritter.close();
+
+      let reReadFile = new File(File.IMPEX + args.pathSaveFileName + countCantidadDividas + args.fileName);
+      let reFile = FileReader(reReadFile);
+      let stringFile = reFile.readString();
+      stringFile = stringFile.replace(/[\r\n]/gm, '');
+      let writterFile = new FileWriter(reReadFile);
+      writterFile.writeLine(stringFile);
+      writterFile.close();
+      countCantidadDividas = countCantidadDividas+1;
+      countDivididor = -1;
+    }
+    countDivididor = countDivididor + 1;
+    let testtt = '0';
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // while (dirCategoryAsigment.hasNext()){
+  //   file = FileReader(dirCategoryAsigment.next());
+  //   fileString = file.readString();
+  //   //Objeto
+  //   let XMLObject = XML(fileString);
+  //   let xmlnamespaceDeclarations = XMLObject.elements();
+  //   let xmlCountElement = Object.keys(xmlnamespaceDeclarations).length;
+  //   for (let i = 0; i < xmlCountElement; i++) {
+  //     //Si es linea de atributo general
+  //     if(xmlnamespaceDeclarations[i].toString().startsWith('<category-assignment '))
+  //     {
+  //       let variableVulnerable = xmlnamespaceDeclarations[i];
+  //       let tesssto = "";
+  //       let xmlDescendantTemp = xmlnamespaceDeclarations[i].descendants();
+  //       let xmlDescednantTempCount = Object.keys(xmlDescendantTemp).length;
+  //       for (let x = 0; x < xmlDescednantTempCount; x++) 
+  //       {
+          
+  //       }
+      
+  //     }
+  //   }
+
+
+
+  //   let testtt = '0';
+  // }
+
+  // finalCatAssigWritter.writeLine(endFileProducts);
+  // finalCatAssigWritter.close();
 };
+
+
+// let firstPositionProduct = fileString.indexOf('<category-assignment');
+// let endPositionProduct = fileString.indexOf('</catalog>');
+// let stringAuxiliar = fileString.slice(firstPositionProduct, endPositionProduct);
