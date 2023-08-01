@@ -567,6 +567,71 @@
         }
       },
       {
+        "@type-id": "custom.merge.PricebooksAndCustomPath2",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "Merge all pricebooks created for SalesCloud with a custom path",
+        "module": "mens_app/cartridge/scripts/jobs/mergePricebooksAndCustomPath.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {
+          "parameter": [
+            {
+              "@name": "path",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalogPricebook/StandardPriceBook",
+              "description": "Foldel Path to merge XML, default: '/src/catalogPricebook/StandardPriceBook'",
+              "@trim": true
+            },
+            {
+              "@name": "pathSaveFileName",
+              "@type": "string",
+              "@required": "false",
+              "default-value": "/src/catalog/",
+              "description": "Foldel Path to save final merged file, default: '/src/catalog/' must end with '/'",
+              "@trim": true
+            },
+            {
+              "@name": "fileName",
+              "@type": "string",
+              "@required": "true",
+              "default-value": "finalPricebook.xml",
+              "description": "File name to final merge, default: finalPricebook.xml, must end with .xml",
+              "@trim": true
+            },
+            {
+              "@name": "startLineRemove",
+              "@type": "string",
+              "@required": "true",
+              "description": "Line to be remove",
+              "@trim": true
+            },
+            {
+              "@name": "startLineNew",
+              "@type": "string",
+              "@required": "true",
+              "description": "new start line",
+              "@trim": true
+            }
+          ]
+        },
+        "status-codes": {
+          "status": [
+            {
+              "@code": "ERROR",
+              "description": "An error occurs, please re-run the job or contact Support"
+            },
+            {
+              "@code": "FINISHED",
+              "description": "All Good"
+            }
+          ]
+        }
+      },
+      {
         "@type-id": "custom.merge.AttributesAndCategoriesAndCustomPath",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
