@@ -336,7 +336,7 @@ function updateList(stores) {
                             </div>
                             <div class="sub-item">
                               <span class="direction">${store.address},</span>
-                              <br>
+                        
                               <span class="postalCode">${
                                   store.postalCode
                               }</span>

@@ -7452,19 +7452,28 @@ a .oauth-facebook--button {
 /*Design map list*/
 #map-list{
   padding-top: 8%;
+  height: auto;
 }
 
 #map-list #listing {
-    height: 80% !important;
+    height: 100% !important;
     background: #ffffff !important;
-    margin: 20px 0 0 0;
     overflow: hidden;
-    max-height: 500px;
+}
+
+.details .sub-item,
+.storelocator #listing .item .sub-item{
+  padding: 0 !important;
 }
 
 .container-us-stores {
     background-color: #ffffff;
     margin-left: 20px;
+    height: auto;
+}
+
+#details-hours td{
+  display: unset;
 }
 
 .text-us-stores {
@@ -7489,7 +7498,7 @@ a .oauth-facebook--button {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: 30px;
     margin-bottom: 10px;
     font-family: "Avenir-Next";
