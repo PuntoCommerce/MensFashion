@@ -8,13 +8,10 @@ const SystemObjectMgr = require("dw/object/SystemObjectMgr");
 const CustomerMgr = require("dw/customer/CustomerMgr");
 
 
-
-
 server.append("SubmitShipping", (req, res, next) => {
   const coCustomerForm = server.forms.getForm("coCustomer");
   const viewData = res.getViewData();
   const shippingInfo = server.forms.getForm("shipping").shippingAddress.addressFields;
- /*  const inter = server.forms.getForm("shipping").shippingAddress; */
   const currentBasket = BasketMgr.getCurrentBasket();
 
 
@@ -45,6 +42,35 @@ server.append('SubmitShipping', (req, res, next) => {
       serverErrors: [],
       error: true
     });
+  }
+
+  next();
+})
+
+server.append('SubmitShipping', (req, res, next) => {
+  const form = server.forms.getForm('shipping');
+  const formErrors = COHelpers.validateShippingForm(form);
+
+  const viewData = res.getViewData()
+
+  if (viewData.shippingMethod !== 'pickup') {
+    if (Object.keys(formErrors).length > 0) {
+
+      res.json({
+        form: form,
+        fieldErrors: [formErrors],
+        serverErrors: [],
+        error: true
+      });
+
+      return next();
+    }
+
+    viewData.address.numExt = form.shippingAddress.addressFields.numExt.value;
+    viewData.address.numInt = form.shippingAddress.addressFields.numInt.value;
+    viewData.address.reference = form.shippingAddress.addressFields.reference.value;
+
+    return next();
   }
 
   next();
