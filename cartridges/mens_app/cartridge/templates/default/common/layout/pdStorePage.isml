@@ -94,7 +94,9 @@
     </iscomment>
     <div id="modal-check" class="checkout-popup-alert">
         <div class="checkout-popup-alert-card">
-
+            <button onclick="closeAlertCookiesX()" class="checkout-alert-register-card-closex" type="">
+                <p>x</p>
+            </button>
             <label class="d-none" data-href="${URLUtils.url('Login-Show')}"></label>
             <div class="checkout-popup-alert-card-info">
                 <p>${Resource.msg('msg.cookies', 'checkout', null)}: <u><a
@@ -102,7 +104,7 @@
 
             </div>
             <button onclick="closeAlertCookies()" class="checkout-alert-register-card-close" type="">
-                <p>X</p>
+                <p>${Resource.msg('txt.button.error.popup', 'checkout', null)}</p>
             </button>
         </div>
 
@@ -121,7 +123,7 @@
     ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter', pdict) || ''}
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
 
-    <isinclude template="/components/chatSales" />
+    <iscomment> <isinclude template="/components/chatSales" /> </iscomment>
     <script src="https://534006487.recs.igodigital.com/a/v2/534006487/cart/recommend.js?cart=skus"
         type="text/javascript"> </script>
 

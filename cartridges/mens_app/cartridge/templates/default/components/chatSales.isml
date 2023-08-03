@@ -1,4 +1,4 @@
-<style type='text/css'>
+<iscomment> <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #ABA4A4;
 		font-family: "Salesforce Sans", sans-serif;
@@ -64,4 +64,4 @@
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
+</script> </iscomment>
