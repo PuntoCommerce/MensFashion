@@ -6408,6 +6408,20 @@ del {
     .product-edit {
         position: initial;
     }
+
+    .chatWP{
+      text-align: right !important;
+      width: 50px !important;
+    }
+
+    .chatWP a{
+      display: contents !important;
+    }
+
+    .chatWP .span-wp{
+      display: none;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -7451,19 +7465,19 @@ a .oauth-facebook--button {
 
 /*Design map list*/
 #map-list{
-  padding-top: 8%;
   height: auto;
+  margin-top: 55px;
 }
 
 #map-list #listing {
-    height: 100% !important;
+    height: 83% !important;
     background: #ffffff !important;
     overflow: hidden;
 }
 
-.details .sub-item,
-.storelocator #listing .item .sub-item{
-  padding: 0 !important;
+#map-list #search-storelocator {
+  margin-top: 0 !important;
+
 }
 
 .container-us-stores {
@@ -7498,7 +7512,7 @@ a .oauth-facebook--button {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
     margin-left: 30px;
     margin-bottom: 10px;
     font-family: "Avenir-Next";
@@ -7772,4 +7786,22 @@ a .oauth-facebook--button {
 .category-pantalones .txt-hover-promo-gradu,
 .category-trajes .txt-hover-promo-sacopanta {
     display: none;
+}
+
+.chatWP{
+  width: 140px;
+  position: fixed !important;
+  Top: 80%;
+  right: 0;
+  background-color: #65D072;
+  color: #FFFFFF;
+  border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+}
+
+.chatWP a{
+  color: #FFFFFF;
+  display: inline-flex;
+  width: 130px;
 }
