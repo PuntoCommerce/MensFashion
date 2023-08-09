@@ -57,7 +57,7 @@
         </div>
   
     <div class="chatWP">
-        <a href="https://api.whatsapp.com/send?phone=+52%201%205532659932&text=¡Hola Men's Fashion!"> <img src="${URLUtils.staticURL('/images/icon-whatsapp.svg')}" />
+        <a href="https://wa.me/+5215532659932?text=¡Hola%20Men's%20Fashion!"> <img src="${URLUtils.staticURL('/images/icon-whatsapp.svg')}" />
         <span class="span-wp">Iniciar WhatsApp</span></a>
     </div>
         <div class="row goToUp hidden">

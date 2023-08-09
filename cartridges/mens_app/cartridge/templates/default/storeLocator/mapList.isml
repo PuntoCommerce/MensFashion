@@ -1,13 +1,15 @@
 
 <isdecorate template="common/layout/page">
+<isscript>
+    
+</isscript>
   <div class="container-all-stores">
      <div class="title-stores">
         <h2 class="">TODAS LAS TIENDAS</h2>
     </div>
     <div class="container-stores col-12">
-  
+    
     <isloop items=${pdict.storelocator.stores} var="stores">
-       
             <ul class="ul-stores">
                 <li class=""><p class="p-store">${stores.name}</p></li>
                 <li class="container-address">

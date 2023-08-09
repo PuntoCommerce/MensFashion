@@ -1664,6 +1664,23 @@ footer .socialMedia-paymentMethods {
         align-items: center;
         height: 72px !important;
     }
+
+    #map-list {
+        margin-top: 2rem;
+    }
+
+    #map{
+        margin-top: 2rem;
+    }
+
+    .container-us-stores{
+        min-height: auto;
+    }
+
+    .storelocator-container {
+        min-height: 72rem;
+    }
+
 }
 
 /* Menu */
@@ -6409,19 +6426,19 @@ del {
         position: initial;
     }
 
-    .chatWP{
-      text-align: right !important;
-      width: 50px !important;
+    .chatWP {
+        text-align: right !important;
+        width: 50px !important;
+        padding: 5px !important;
     }
 
-    .chatWP a{
-      display: contents !important;
+    .chatWP a {
+        display: contents !important;
     }
 
-    .chatWP .span-wp{
-      display: none;
+    .chatWP .span-wp {
+        display: none;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -7324,12 +7341,12 @@ a .oauth-facebook--button {
         width: 100%;
     }
 
-    .checkout-alert-register-card-close{
-      width: 121px;
+    .checkout-alert-register-card-close {
+        width: 121px;
     }
 
-    .checkout-alert-register-card-closex{
-      top: -2%;
+    .checkout-alert-register-card-closex {
+        top: -2%;
     }
 
     .checkout__stepper {
@@ -7464,9 +7481,12 @@ a .oauth-facebook--button {
 }
 
 /*Design map list*/
-#map-list{
-  height: auto;
-  margin-top: 55px;
+#map-list {
+    height: auto;
+}
+
+#map-list #search-storelocator{
+    margin-bottom: 0px !important;
 }
 
 #map-list #listing {
@@ -7476,8 +7496,7 @@ a .oauth-facebook--button {
 }
 
 #map-list #search-storelocator {
-  margin-top: 0 !important;
-
+    margin-top: 0 !important;
 }
 
 .container-us-stores {
@@ -7486,8 +7505,8 @@ a .oauth-facebook--button {
     height: auto;
 }
 
-#details-hours td{
-  display: unset;
+#details-hours td {
+    display: unset;
 }
 
 .text-us-stores {
@@ -7512,7 +7531,7 @@ a .oauth-facebook--button {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 0;
+    margin-top: 35px;
     margin-left: 30px;
     margin-bottom: 10px;
     font-family: "Avenir-Next";
@@ -7788,20 +7807,34 @@ a .oauth-facebook--button {
     display: none;
 }
 
-.chatWP{
-  width: 140px;
-  position: fixed !important;
-  Top: 80%;
-  right: 0;
-  background-color: #65D072;
-  color: #FFFFFF;
-  border-top-left-radius: 50px;
+.chatWP {
+    width: 127px;
+    height: 52px;
+    position: fixed !important;
+    top: 80%;
+    right: 0;
+    background-color: #8599ab;
+    opacity: 90%;
+    color: #ffffff;
+    border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     text-align: center;
+    font-family: "Avenir-LT-Std";
 }
 
-.chatWP a{
-  color: #FFFFFF;
-  display: inline-flex;
-  width: 130px;
+.chatWP a {
+    color: #ffffff;
+    display: inline-flex;
+    width: 130px;
+    font-size: 12px;
+    padding: 3px 5px 5px 10px;
+}
+
+.chatWP img {
+    display: flex;
+    margin: 0 5px 0 5px;
+}
+
+.chatWP span {
+    text-align: left;
 }
