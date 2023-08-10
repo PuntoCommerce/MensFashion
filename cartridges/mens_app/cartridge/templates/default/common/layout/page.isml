@@ -73,7 +73,7 @@
     </iscomment>
     ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter', pdict) || ''}
     <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
-    <isinclude template="/components/chatSales" />
+    <iscomment> <isinclude template="/components/chatSales" /> </iscomment>
 
     <script src="https://534006487.recs.igodigital.com/a/v2/534006487/cart/recommend.js?cart=skus"
         type="text/javascript"> </script>

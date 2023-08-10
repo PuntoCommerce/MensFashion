@@ -1,3 +1,15 @@
+/*
+========================================== Close message cookies =========================================
+
+● This IIFE function checks if the localstorage has the variable "closeMessage" with a value of true.
+● If the value is true, the cookies message will no longer be displayed on the screen.
+● In order for the message to be displayed again, it is necessary to delete the cookies from the browser.
+● The variable "closeMessage" in localstorage will take the value of true when the event is executed by pressing the x of the alert.
+===============================================================================================================*/
+
+
+// ==========================================================================================================
+
 const accordion = document.querySelectorAll("#accordion-content");
 
 accordion.forEach((item, index) => {
@@ -171,15 +183,6 @@ function closeAlertPromotion() {
     
 }
 
-function closeAlertCookies(){
-    const popupCheckout = document.getElementById("modal-check");
-
-    if (popupCheckout) {
-        popupCheckout.classList.add("d-none");
-        sessionStorage.setItem("checkoutPopupAlert", true);
-    }
-}
-
 if (
     sessionStorage.getItem("homeAlertRegister") === null &&
     document.getElementById("homepage-alert")
@@ -190,11 +193,6 @@ if (
     document.getElementById("checkout-alert")
 )
     document.getElementById("checkout-alert").classList.remove("d-none");
-if (
-    sessionStorage.getItem("checkoutPopupAlert") === null &&
-    document.getElementById("modal-check")
-)
-    document.getElementById("modal-check").classList.remove("d-none");
 
 function categoryBreadcums(e) {
     setTimeout(() => {
@@ -231,3 +229,64 @@ if (productId) {
         }, 500);
     });
 }
+
+// ==================================================== BUTTONS CLOSE COOKIES======================================================
+
+var showCookie = false;
+
+const popupCheckout = document.getElementById("modal-check");
+
+const btnCloseMessageCookies = document.querySelector(".checkout-alert-register-card-close");
+
+(function () {
+
+    const storage = localStorage.getItem("closeMessage");
+
+    if (storage) {  
+
+        popupCheckout.classList.add("d-none");
+        
+    } else {
+
+        popupCheckout.classList.remove("d-none");
+
+    }
+
+})();
+
+btnCloseMessageCookies.addEventListener("click", function () {
+
+    localStorage.setItem("closeMessage", true);
+
+    popupCheckout.classList.add("d-none");
+
+});
+
+var showCookie2 = false;
+const popupCheckout2 = document.getElementById("modal-check");
+
+const btnCloseMessageCookiesx = document.querySelector(".checkout-alert-register-card-closex");
+
+(function () {
+
+    const storage = localStorage.getItem("closeMessage");
+
+    if (storage) {  
+
+        popupCheckout2.classList.add("d-none");
+        
+    } else {
+
+        popupCheckout2.classList.remove("d-none");
+
+    }
+
+})();
+
+btnCloseMessageCookiesx.addEventListener("click", function () {
+
+    localStorage.setItem("closeMessage", true);
+
+    popupCheckout2.classList.add("d-none");
+
+});

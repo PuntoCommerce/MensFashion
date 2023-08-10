@@ -55,7 +55,11 @@
                 </div>
             </div>
         </div>
-
+  
+    <div class="chatWP">
+        <a href="https://wa.me/+5215532659932?text=¡Hola%20Men's%20Fashion!"> <img src="${URLUtils.staticURL('/images/icon-whatsapp.svg')}" />
+        <span class="span-wp">Iniciar WhatsApp</span></a>
+    </div>
         <div class="row goToUp hidden">
             <div class="col-lg-4 col-sm-5 push-sm-7 push-lg-8 social">
                 <isslot id="footer-column-m" description="Content in column 1 of the Footer" context="global" />
