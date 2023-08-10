@@ -7807,6 +7807,9 @@ a .oauth-facebook--button {
     display: none;
 }
 
+.custom_promotional_price_plp, .default_product_cls {
+  display: flex;
+}
 .chatWP {
     width: 127px;
     height: 52px;
@@ -7837,4 +7840,69 @@ a .oauth-facebook--button {
 
 .chatWP span {
     text-align: left;
+}
+
+.custom_promotional_price_plp .plp_sales {
+    color: #FF0000;
+}
+
+.original_sales_plp font {
+    color: #231F20;
+}
+
+.price_on_pdp {
+    margin-right: 18px;
+}
+.price_on_pdp span {
+    color:  rgba(68, 68, 68, 0.5);
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.price .strike-through {
+    color: rgba(68, 68, 68, 0.5);
+}
+
+.price_on_pdp + .original_sales_plp {
+    font-size: 20px !important;
+    font-weight: 350 !important;
+}
+
+.product-detail .original_sales_plp {
+    font-size: 20px !important;
+    font-weight: 350 !important;
+    color: black;
+}
+
+.product-detail .promotion-item-container .promotion-item {
+    font-size: 18px;
+    display: flex;
+    width: 68px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: red;
+    padding: 4px 0 0 0;
+    color: white;
+    font-weight: bold;
+    margin-left: 24px;
+    height: unset;
+}
+
+.product-detail .prices_cls {
+    flex-direction: unset;
+    align-items: baseline;
+}
+
+.product-detail .otherPromotion {
+    width: auto !important;
+    padding: 4px 15px 0px 15px !important;
+}
+
+.product-detail .prices_cls_two {
+    flex-direction: column;
+}
+
+.product-detail .prices_cls_two .promotion-item {
+    margin-left: 0 !important;
 }
