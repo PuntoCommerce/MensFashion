@@ -10,6 +10,7 @@
     <div class="container-stores col-12">
     
     <isloop items=${pdict.storelocator.stores} var="stores">
+    <p>${JSON.stringify(stores)}</p>
             <ul class="ul-stores">
                 <li class=""><p class="p-store">${stores.name}</p></li>
                 <li class="container-address">

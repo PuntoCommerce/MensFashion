@@ -132,7 +132,7 @@ server.get('MapList', function (req, res, next) {
   );
 
   let storeList = [];
-  
+
   while (stores.hasNext()) {
     let store = stores.next();
     storeList.push({
@@ -144,7 +144,7 @@ server.get('MapList', function (req, res, next) {
       postalCode: store.postalCode,
       phone: store.phone,
       latitude: store.latitude,
-      longitude: store.longitude,
+      longitude: store.longitude
     });
       /* 
        if (store.stateCode === "Aguascalientes" || store.stateCode === "AGUASCALIENTES") {
