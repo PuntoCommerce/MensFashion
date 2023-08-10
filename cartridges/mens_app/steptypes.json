@@ -375,6 +375,30 @@
         }
       },
       {
+        "@type-id": "custom.unzipRoberts",
+        "@supports-parallel-execution": "true",
+        "@supports-site-context": "true",
+        "@supports-organization-context": "true",
+        "description": "unzip all zip file",
+        "module": "mens_app/cartridge/scripts/jobs/unzipRoberts.js",
+        "function": "execute",
+        "transactional": "true",
+        "timeout-in-seconds": "900",
+        "parameters": {},
+        "status-codes": {
+            "status": [
+                {
+                    "@code": "ERROR",
+                    "description": "An error occurs, please re-run the job or contact Support"
+                },
+                {
+                    "@code": "FINISHED",
+                    "description": "All orders were checked"
+                }
+            ]
+        }
+      },
+      {
         "@type-id": "custom.googleFeed",
         "@supports-parallel-execution": "true",
         "@supports-site-context": "true",
