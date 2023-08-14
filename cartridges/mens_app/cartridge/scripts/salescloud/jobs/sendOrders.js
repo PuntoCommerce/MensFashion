@@ -23,14 +23,29 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
         
         var store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
-        return {
-            pickUpStoreId: store.ID,
-            storeShippingStreet: store.address1,
-            storeShippingPostalCode: store.postalCode,
-            storeShippingCity: store.city,
-            storeShippingState: store.stateCode,
-            shippingCost: shipment.shippingTotalNetPrice.value,
-        };
+        if(store)
+        {
+            return {
+                pickUpStoreId: store.ID,
+                storeShippingStreet: store.address1,
+                storeShippingPostalCode: store.postalCode,
+                storeShippingCity: store.city,
+                storeShippingState: store.stateCode,
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
+        else
+        {
+            return {
+                pickUpStoreId: "NOEXISTE",
+                storeShippingStreet: "NOEXISTE",
+                storeShippingPostalCode: "NOEXISTE",
+                storeShippingCity: "NOEXISTE",
+                storeShippingState: "NOEXISTE",
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
+        
     }
     return {
         // shippingStreet:`${shipment.shippingAddress.address1} ${shipment.shippingAddress.suite}`,
@@ -205,15 +220,15 @@ module.exports.execute = () => {
 
         logger.debug("body: ", JSON.stringify(body));
         
-        // //Mandar orden
-        // salesOrderId = sendOrder(body, token);
+        //Mandar orden
+        salesOrderId = sendOrder(body, token);
 
-        // if (!salesOrderId.error) {
-        //     Transaction.wrap(() => {
-        //         order.custom.SalesCloudOrderId = salesOrderId;
-        //     });
-        // } else {
-        //     logger.error("OrderError {0}", JSON.stringify(body));
-        // }
+        if (!salesOrderId.error) {
+            Transaction.wrap(() => {
+                order.custom.SalesCloudOrderId = salesOrderId;
+            });
+        } else {
+            logger.error("OrderError {0}", JSON.stringify(body));
+        }
     }
 };
