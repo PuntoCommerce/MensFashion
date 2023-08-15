@@ -17,14 +17,28 @@ const handleShipment = (shipment, shippingPriceAdjustment) => {
     if (shipment.shippingMethodID == "pickup") {
         var store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
-        return {
-            pickUpStoreId: store.ID,
-            storeShippingStreet: store.address1,
-            storeShippingPostalCode: store.postalCode,
-            storeShippingCity: store.city,
-            storeShippingState: store.stateCode,
-            shippingCost: shipment.shippingTotalNetPrice.value,
-        };
+        if(store)
+        {
+            return {
+                pickUpStoreId: store.ID,
+                storeShippingStreet: store.address1,
+                storeShippingPostalCode: store.postalCode,
+                storeShippingCity: store.city,
+                storeShippingState: store.stateCode,
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
+        else
+        {
+            return {
+                pickUpStoreId: "NOEXISTE",
+                storeShippingStreet: "NOEXISTE",
+                storeShippingPostalCode: "NOEXISTE",
+                storeShippingCity: "NOEXISTE",
+                storeShippingState: "NOEXISTE",
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
     }
     return {
         // shippingStreet:`${shipment.shippingAddress.address1} ${shipment.shippingAddress.suite}`,
