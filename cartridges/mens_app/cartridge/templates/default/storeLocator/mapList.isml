@@ -1,5 +1,52 @@
 
 <isdecorate template="common/layout/page">
+  <section>
+    <div class="text-center">
+      <h2 class="font-weight-bold">TODAS LAS TIENDAS</h2>
+    </div>
+    <div class="c-margin-table-stores pt-4">
+      <isloop items=${pdict.storelocator.stores.body.data} var="stores">
+        <div class="row my-2">
+          <div class="col-sl-12 col-md-6 col-lg-12 col-xl-12 text-left conteiner-title-state">
+            <p><strong>${stores.lowercase}</strong></p>
+          </div>
+          
+        </div>
+        <div class="row mx-2">
+          <isloop items=${stores.stores} var="store">
+            <div class="col-sl-12 col-md-6 col-lg-4 col-xl-4">
+              <table class="mx-5 my-2">
+                <tr>
+                  <td colspan="2" class="mt-2">
+                    <p class="font-weight-light c-font-size-less-90">${store.name}</p>
+                  </td>
+                </tr>
+                <tr class="align-baseline">
+                  <td >
+                    <img class="" alt="" src="${URLUtils.staticURL('/images/store_locator.svg')}" />
+                  </td>
+                  <td >
+                    <p class="font-weight-light c-font-size-less-75">${store.address} C.P: ${store.postalCode}, ${store.city}</p>
+                  </td>
+                </tr>
+                <tr class="align-baseline">
+                  <td>
+                    <img alt="" src="${URLUtils.staticURL('/images/phone.svg')}" />
+                  </td>
+                  <td>
+                    <p class="font-weight-light c-font-size-less-75">Tel: ${store.phone}</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </isloop>
+        </div>
+      </isloop>
+    </div>
+  </section>
+</isdecorate>
+
+<iscomment> <isdecorate template="common/layout/page">
 <isscript>
     
 </isscript>
@@ -36,4 +83,4 @@
        
 </div>
   </div>
-</isdecorate>
+</isdecorate> </iscomment>

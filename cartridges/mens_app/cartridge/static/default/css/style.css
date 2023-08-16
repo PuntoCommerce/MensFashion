@@ -437,8 +437,7 @@ html {
  */
 body {
     color: #000000;
-    font: normal 125%/1.4 "Avenir-LT-Std", "Avenir-Next",
-        "Avenir-LT-Std-BlackOblique", "AvenirLTStd-Heavy";
+    font: "Avenir-LT-Std" !important;
 }
 
 h1,
@@ -448,7 +447,7 @@ h4,
 h5,
 html,
 body {
-    font-family: "Avenir-LT-Std";
+    font-family: "Avenir-LT-Std" !important;
     font-style: "normal";
 }
 
@@ -7906,4 +7905,22 @@ a .oauth-facebook--button {
 
 .product-detail .prices_cls_two .promotion-item {
     margin-left: 0 !important;
+}
+
+.c-margin-table-stores {
+    margin-left: 2.5rem !important;
+    margin-right: 2.5rem !important;
+    background-color: #F3F3F3;
+}
+
+.c-font-size-less-90 {
+    font-size: .90rem !important;
+}
+
+.c-font-size-less-75 {
+    font-size: .75rem !important;
+}
+
+.conteiner-title-state{
+    padding-left: 5rem;
 }
