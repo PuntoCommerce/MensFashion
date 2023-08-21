@@ -54,12 +54,13 @@
             </iscomment>
             <div class="row prices-size-guide-container">
                 <!-- Prices -->
+                <div class="prices col-lg-12">
 
-                
-                <div class="prices col-lg-12 prices_cls <isif condition="${product.promotions.length > 1}">prices_cls_two</isif>">
                     <isset name="price" value="${product.price}" scope="page" />
+
                     <isinclude template="product/components/pricing/main" />
                     <isinclude template="product/components/promotionsPdp" />
+
                 </div>
                 <iscomment>
                     <!-- Trigger Modal Sizes Guide -->

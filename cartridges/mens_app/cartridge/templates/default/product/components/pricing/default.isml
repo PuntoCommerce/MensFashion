@@ -1,56 +1,41 @@
-<span class="default_product_cls">
+<span class="prices-container">
     <isset name="finalOrigPrice" value="${price}" scope="page" />
-    <isif condition="${product.promotional_price != null}">
-        <span class="custom_promotional_price custom_promotional_price_plp">
-            <isif condition="${finalOrigPrice.sales !== null}">
-
-                <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
-                <span class="strike-through list">
-                    <span class="value" content="${price.decimalPrice}">
-                        <isinclude template="/product/components/pricing/formatted" />
-                    </span>
-                </span>
-                <iscomment> <span class="font10t10"> -</span> </iscomment>
-            </isif>
-
-            <span class="sales plp_sales">
-                ${product.promotion_pr}
-            </span>
-        </span>
-    </isif>
-
-    <isif condition="${finalOrigPrice.list !== null}">
-        <isset name="price" value="${finalOrigPrice.list}" scope="page" />
-        <span class="strike-through list price_on_pdp">
-            <span class="value" content="${price.decimalPrice}">
-                <span class="sr-only">
-                    ${Resource.msg('label.price.reduced.from', 'pricing', null)}
-                </span>
-                <isinclude template="/product/components/pricing/formatted" />
-                <span class="sr-only">
-                    ${Resource.msg('label.price.to', 'pricing', null)}
-                </span>
-            </span>
-        </span>
-    </isif>
-
-
-    <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
-    <isif condition="${product.promotional_price != null}">
+    
+    <isif condition="${finalOrigPrice.list}">
+        <div class="stikePriceCont">
+            <div class="strike-price">
+            
+                <isif condition="${finalOrigPrice.list !== null}">
+                    <isset name="price" value="${finalOrigPrice.list}" scope="page" />
+                    <del>
+                        <span class="strike-through list">
+                            <span class="value" content="${price.decimalPrice}">
+                                <isinclude template="/product/components/pricing/formatted" />
+                            </span>
+                        </span>
+                    </del>
+                </isif>
+            </div>
+        </div>
     <iselse/>
-        <span class="original_sales sales original_sales_plp">
+    </isif>
+    <div class="sales-price">
+        <isset name="price" value="${finalOrigPrice.sales}" scope="page" />
+        <span class="sales">
             <isif condition="${isLowPrice == 'range-low'}">
-                <span class="value" content="${price.decimalPrice}"></span>
+                <span class="value" content="${price.decimalPrice}">
             </isif>
             <isif condition="${isLowPrice == 'range-high'}">
-                <span class="value" content="${price.decimalPrice}"></span>
+                <span class="value" content="${price.decimalPrice}">
             </isif>
             <isif condition="${isLowPrice == null}">
-                <span class="value" content="${price.decimalPrice}"></span>
+                <span class="value" content="${price.decimalPrice}">
             </isif>
             <isinclude template="/product/components/pricing/formatted" />
         </span>
-    </isif>
-
-
+    </div>
 </span>
+</span>
+
+<!--- only applies in hot sale --->
+<iscomment> <img class="img-hotSale-pdp" src="${URLUtils.staticURL('/images/hot-sale.svg')}" alt="Hot sale"/> </iscomment>
