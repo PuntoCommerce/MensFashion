@@ -1,0 +1,70 @@
+<iscomment>
+    <div class="site-search">
+        <form role="search" action="${URLUtils.url('Search-Show')}" method="get" name="simpleSearch">
+            <input class="form-control search-field" type="text" name="q" value=""
+                placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}" role="combobox"
+                aria-describedby="search-assistive-text" aria-haspopup="listbox" aria-owns="search-results"
+                aria-expanded="false" aria-autocomplete="list" aria-activedescendant="" aria-controls="search-results"
+                aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}" autocomplete="off" />
+            <button type="reset" name="reset-button" class="fa fa-times reset-button d-none"
+                aria-label="${Resource.msg('label.header.search.clear', 'common', null)}"></button>
+            <button type="submit" name="search-button" class="fa fa-search"
+                aria-label="${Resource.msg('label.header.search.go', 'common', null)}"></button>
+            <div class="suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}"></div>
+            <input type="hidden" value="${pdict.locale}" name="lang">
+        </form>
+    </div>
+</iscomment>
+
+<div class="box-search" style="display:none;">
+    <div class="">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+                <div class="search-part">
+                    <div class="form-group">
+                        <iscomment> <img src="${URLUtils.staticURL('images/search-magnifier.svg')}" class="magnifier-right"
+                            alt="icon"> </iscomment>
+                            <iscomment> <button type="submit" name="search-button" class="fa fa-search"
+                                aria-label="${Resource.msg('label.header.search.go', 'common', null)}"></button> </iscomment>
+
+                        <iscomment> <input type="email" class="form-control" placeholder="traj" id="exampleInputEmail1"
+                                aria-describedby="emailHelp"> </iscomment>
+
+                        <!-- -->
+
+                        <form class="w-100" role="search" action="${URLUtils.url('Search-Show')}" method="get" name="simpleSearch">
+                           <div class="cross-search">
+                            <img src="${URLUtils.staticURL('images/search-magnifier.svg')}" class="magnifier-right"
+                            alt="icon">
+                            <input class="form-control search-field" type="text" name="q" value=""
+                                placeholder="${Resource.msg('label.header.searchwatermark', 'common', null)}"
+                                role="combobox" aria-describedby="search-assistive-text" aria-haspopup="listbox"
+                                aria-owns="search-results" aria-expanded="false" aria-autocomplete="list"
+                                aria-activedescendant="" aria-controls="search-results"
+                                aria-label="${Resource.msg('simplesearch.searchtext', 'common', null)}"
+                                autocomplete="off" />
+                            <iscomment> <button type="reset" name="reset-button" class="fa fa-times reset-button d-none"
+                                aria-label="${Resource.msg('label.header.search.clear', 'common', null)}"></button>
+                            <button type="submit" name="search-button" class="fa fa-search"
+                                aria-label="${Resource.msg('label.header.search.go', 'common', null)}"></button> </iscomment>
+                             <img src="${URLUtils.staticURL('images/cross.svg')}" class="search-cross" alt="icon">
+                           
+                            <div class="quieres suggestions-wrapper" data-url="${URLUtils.url('SearchServices-GetSuggestions', 'q')}">
+                              </div>
+                            
+                             </div>
+                            <input type="hidden" value="${pdict.locale}" name="lang">
+                        </form>
+
+                        <!-- -->
+
+
+                        <iscomment> <img src="${URLUtils.staticURL('images/cross.svg')}" class="search-cross" alt="icon"> </iscomment>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-3"></div>
+        </div>
+    </div>
+</div>

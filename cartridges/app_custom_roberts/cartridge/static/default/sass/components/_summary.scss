@@ -1,0 +1,135 @@
+.summary {
+ &__images {
+  .second {
+   display: none;
+  }
+  &:hover {
+   .first {
+    display: none;
+   }
+   .second {
+    display: block;
+   }
+  }
+ }
+
+ .tile-body {
+  padding-top: $spacing-medium;
+ }
+ &__name {
+  font-family: nth($text-font-stack, $avenir-Next);
+
+  a {
+   color: $text-color-black !important;
+  }
+ }
+ &__pricing {
+  .price {
+   .range {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.875em;
+   }
+  }
+ }
+ &__swatches {
+  align-items: flex-end;
+  display: flex;
+  
+  .swatches{
+    display: flex;
+    align-items: center;
+  }
+
+  .swatch-border-circle {
+   border: 1px solid #000;
+   border-radius: 28px;
+   width: 28px;
+   height: 28px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .swatch-circle {
+   height: 22px;
+   margin: 5px 0;
+   width: 22px;
+  }
+
+  .color-swatches {
+   min-height: 0 !important;
+  }
+ }
+
+ &__footer {
+  padding-top: $spacing-small-medium;
+  // display: none;
+  visibility: visible;
+ }
+
+ @include respond(tab-port) {
+  &__footer {
+   // display: none;
+   visibility: hidden;
+  }
+  &:hover {
+   .summary__footer {
+    // display: block;
+    visibility: visible;
+   }
+  }
+ }
+}
+
+.swatch-border-circle {
+ border: 1px solid #000;
+ border-radius: 28px;
+ width: 28px;
+ height: 28px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ .swatch-value {
+  height: 22px !important;
+  width: 22px !important;
+  margin-right: 0 !important;
+  margin-left: 0;
+ }
+}
+
+.swatch-value {
+  height: 22px !important;
+  width: 22px !important;
+  margin-left: 10px;
+ }
+
+/// productTileImage
+.wishlist {
+ position: absolute;
+ top: 1rem;
+ right: 1rem;
+ cursor: pointer;
+ height: auto;
+
+ &__Unselected,
+ &__Selected {
+  display: none;
+
+  &--show {
+   display: block;
+  }
+ }
+}
+
+@media (max-width: 543px) {
+ .summary__swatches {
+  .swatch-border-circle {
+   .swatch-circle {
+    height: 18px;
+    width: 18px;
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+<iscomment> <div class="minicart-total"> </iscomment>
+    <a class="minicart-link" href="${URLUtils.https('Cart-Show')}"
+        title="${Resource.msgf('minicart.count', 'common', null, pdict.quantityTotal)}"
+        aria-label="${Resource.msgf('minicart.count', 'common', null, pdict.quantityTotal)}" aria-haspopup="true">
+        <img src="${URLUtils.staticURL('/images/cart.svg')}" alt="icon" />
+       <isif condition="${pdict.quantityTotal > 0}">
+        <span class="minicart-quantity-container custom-cart-css" style="display:block;">
+            <span class="minicart-quantity">
+                <isprint value="${pdict.quantityTotal}" formatter="##" />
+            </span>
+        </span>
+       </isif>
+    </a>
+    <iscomment> <ul class="dropdown-menu-custom megamenu" role="menu" aria-hidden="true" aria-label="ropa" style="display: none;"  id="popover"></ul> </iscomment>
+<iscomment> </div> </iscomment>
+
+<iscomment> <div class="popover popover-bottom"></div> </iscomment>

@@ -1,0 +1,59 @@
+<!--- Close button --->
+<iscomment> <div class="filter-header">
+    <div class="header-bar d-md-block clearfix">
+        <div class="pull-left d-md-block result-count">
+            <isinclude template="search/resultsCount" />
+        </div>
+        <button class="pull-right close">
+            <span>${Resource.msg('button.close', 'search', null)}</span>
+            <i class="fa fa-close"></i>
+        </button>
+    </div>
+</div> </iscomment>
+
+<!--- Results count and Reset button --->
+<iscomment> <isif condition="${pdict.productSearch.productIds.length > 0}">
+    <div>
+        <div class="secondary-bar col-12 offset-sm-4 offset-md-0 col-sm-4 col-md-12">
+            <button class="reset btn btn-block btn-outline-primary" data-href="${pdict.productSearch.resetLink}">
+                ${Resource.msg('link.reset', 'search', null)}
+            </button>
+        </div>
+    </div>
+</isif> </iscomment>
+
+<div>
+    <ul class="refinements border-rights">
+         <iscomment> <isprint value="${JSON.stringify(pdict.resultRefine)}" /> </iscomment>
+        <isloop items="${pdict.resultRefine.refinements}" var="refinement">
+            <li class="card collapsible-sm refinement refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}" onclick='openFilter("desktop-refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}")'>
+                ${refinement.displayName}
+            </li>
+               
+            <div class="collapse main-class-filter card-body content value" id="desktop-refinement-${refinement.displayName.toLowerCase().replace(/ /g, '-')}">
+                    <!--- CATEGORY REFINEMENTS --->
+                    <isif condition="${refinement.isCategoryRefinement}">
+                        <isset name="categories" value="${refinement.values}" scope="page" />
+                        <isinclude template="search/refinements/categories" />
+                    </isif>
+
+                    <!--- ATTRIBUTE REFINEMENTS --->
+                    <isif condition="${refinement.isAttributeRefinement || refinement.isPromotionRefinement}">
+                        <isinclude template="search/refinements/attributes" />
+                    </isif>
+
+                    <!--- PRICE REFINEMENTS --->
+                    <isif condition="${refinement.isPriceRefinement}">
+                        <isinclude template="search/refinements/prices" />
+                    </isif>
+                     <p class="clear-cross reset" data-href="${pdict.productSearch.resetLink}" > Clear filters <a href="javascript:closeFilter()"><img class="cr-left" src="${URLUtils.staticURL('/images/cross.svg')}" alt="logo"/></a></p>
+                    
+
+                </div>
+
+        </isloop>
+      
+    </ul>
+</div>
+
+<input type="hidden" nam="deviceType" value="desktop" />

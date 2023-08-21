@@ -1,0 +1,19 @@
+.landing-text {
+  display: block;
+}
+.landing-text p {
+  font-family: 'Avenir-Next';
+}
+
+.landing-text-align-left p {
+  text-align: left;
+}
+.landing-text-align-center p {
+  text-align: center;
+}
+.landing-text-align-right p {
+  text-align: right;
+}
+.landing-text-align-justify p {
+  text-align: justify;
+}

@@ -1,0 +1,134 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+<section class="common-space pt-0">
+    <div class="container">
+        <div class="row">
+            <h2 class="comprar text-center w-100">${pdict.heading}</h2>
+            <iscomment> Desktop Visual Section </iscomment>
+            <iscomment> VERTICAL LEFT WITH TWO HORIZONTAL START </iscomment>
+            <isif condition="${pdict.selectCategroyGrid == 'Vertical left with two horizontal'}">
+                <div class="col-sm-6 col-lg-4 d-flex mobile-category-zero">
+                    <a href="${pdict.urlCat1}">
+                        <div class="trajes trajes-mobile">
+                            <h2>${pdict.textCat1}</h2>
+                            <img src="${pdict.imageCat1.src.desktop}" alt="image" class="d-none d-lg-block d-sm-block w100sm" />
+                            <img src="${pdict.mobimageCat1.src.desktop}" alt="image" class="d-lg-none d-sm-none"
+                                style="width:100%;" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-8 col-sm-6 col-lg-8">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-lg-12 mobile-category-zero">
+                            <a href="${pdict.urlCat2}">
+                                <div class="sacos d-none d-lg-block d-sm-block"
+                                    style="background-image: url(${pdict.imageCat2.src.desktop});">
+                                    <h2>${pdict.textCat2}</h2>
+                                </div>
+                                <div class="trajes d-lg-none d-sm-none trajes-view-on-mobile trajes-shirts">
+                                    <img src="${pdict.mobimageCat2.src.desktop}" alt="image" class="d-lg-none"
+                                        style="width:100%;" />
+                                    <h2>${pdict.textCat2}</h2>
+                                </div>
+                             </a>
+                            <!-- <img src="${URLUtils.staticURL('/images/sacos.jpg')}" alt="image"> -->
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-lg-12 mobile-category-zero">
+                            <!-- <img src="${URLUtils.staticURL('/images/polos.jpg')}" alt="image"> -->
+                            <a href="${pdict.urlCat3}">
+                                <div class="polos d-none d-lg-block d-sm-block"
+                                    style="background-image: url(${pdict.imageCat3.src.desktop});">
+                                    <h2>${pdict.textCat3}</h2>
+                                </div>
+                                <div class="trajes trajes-mobile d-lg-none d-sm-none">
+                                    <h2>${pdict.textCat3}</h2>
+                                    <img src="${pdict.mobimageCat3.src.desktop}" alt="image" style="width:100%;" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </isif>
+            <iscomment> VERTICAL LEFT WITH TWO HORIZONTAL END </iscomment>
+
+            <iscomment> VERTICAL RIGHT WITH TWO HORIZONTAL START </iscomment>
+            <isif condition="${pdict.selectCategroyGrid == 'Vertical right with two horizontal'}">
+                <div class="col-xs-8 col-sm-8 col-lg-8">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <a href="${pdict.urlCat2}">
+                                <div class="sacos d-none d-lg-block"
+                                    style="background-image: url(${pdict.imageCat2.src.desktop});">
+                                    <h2>${pdict.textCat2}</h2>
+                                </div>
+                                <div class="trajes d-lg-none">
+                                    <img src="${pdict.mobimageCat2.src.desktop}" alt="image" class="d-lg-none"
+                                        style="width:100%;" />
+                                    <h2>${pdict.textCat2}</h2>
+                                </div>
+                            </a>
+                            <!-- <img src="${URLUtils.staticURL('/images/sacos.jpg')}" alt="image"> -->
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <!-- <img src="${URLUtils.staticURL('/images/polos.jpg')}" alt="image"> -->
+                            <a href="${pdict.urlCat3}">
+                                <div class="polos d-none d-lg-block"
+                                    style="background-image: url(${pdict.imageCat3.src.desktop});">
+                                    <h2>${pdict.textCat3}</h2>
+                                </div>
+                                <div class="trajes d-lg-none">
+                                    <h2>${pdict.textCat3}</h2>
+                                    <img src="${pdict.mobimageCat3.src.desktop}" alt="image" style="width:100%;" />
+
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4">
+                    <a href="${pdict.urlCat1}">
+                        <div class="trajes">
+                            <h2>${pdict.textCat1}</h2>
+                            <img src="${pdict.imageCat1.src.desktop}" alt="image" class="d-none d-lg-block" />
+                            <img src="${pdict.mobimageCat1.src.desktop}" alt="image" class="d-lg-none"
+                                style="width:100%;" />
+                        </div>
+                    </a>
+                </div>
+            </isif>
+            <iscomment> VERTICAL RIGHT WITH TWO HORIZONTAL END </iscomment>
+
+            <iscomment> THEREE VERTICAL IMAGES START </iscomment>
+            <isif condition="${pdict.selectCategroyGrid == 'three verticals'}">
+                <div class="col-xs-4 col-sm-4 col-lg-4">
+                    <a href="${pdict.urlCat1}">
+                        <div class="trajes">
+                            <h2>${pdict.textCat1}</h2>
+                            <img src="${pdict.imageCat1.src.desktop}" alt="image" class="d-none d-lg-block" />
+                            <img src="${pdict.mobimageCat1.src.desktop}" alt="image" class="d-lg-none"
+                                style="width:100%;" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4">
+                    <a href="${pdict.urlCat2}">
+                        <div class="sacos d-none d-lg-block" style="background-image: url(${pdict.imageCat2.src.desktop});">
+                            <h2>${pdict.textCat2}</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-lg-4">
+                    <!-- <img src="${URLUtils.staticURL('/images/polos.jpg')}" alt="image"> -->
+                    <a href="${pdict.urlCat3}">
+                        <div class="polos d-none d-lg-block" style="background-image: url(${pdict.imageCat3.src.desktop});">
+                            <h2>${pdict.textCat3}</h2>
+                        </div>
+                    </a>
+                </div>
+            </isif>
+            <iscomment> THREE VERTICAL IMAGES END </iscomment>
+        </div>
+
+    </div>
+</section>

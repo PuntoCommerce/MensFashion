@@ -1,0 +1,8 @@
+fieldset.shipping-method-block:has(input[checked][value="pickup"])
+  div.row.autofill-custompickup {
+  display: none;
+}
+fieldset.shipping-method-block:has(input[checked][value="pickup"])
+  div.row.show-custompickup {
+  display: block !important;
+}

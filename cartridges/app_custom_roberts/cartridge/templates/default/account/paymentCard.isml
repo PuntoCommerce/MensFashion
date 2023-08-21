@@ -1,0 +1,31 @@
+<div class="account-box">
+    <div class="inner-accout">
+        <p>${Resource.msg('label.payment', 'account', null)}</p>
+
+        <isif condition="${pdict.payment}">
+            <a href="${pdict.viewSavedPaymentsUrl}" class="pull-right"
+                aria-label="${Resource.msg('label.payment.viewsavedpaymentmethods', 'account', null)}">
+                <img class="mb-2" src="${URLUtils.staticURL('/images/edit-icon.svg')}"
+                    alt="Métodos de pago" /></a>
+        </isif>
+    </div>
+    <isif condition="${pdict.payment}">
+        <div class="profile-detail">
+            <iscomment> <div class="d-flex justify-content-center"> </iscomment>
+                <isset name="payment" value="${pdict.payment}" scope="page">
+                    <isinclude template="account/payment/savedPayment" />
+            <iscomment> </div> </iscomment>
+        </div>
+    <iselse>
+        <div class="profile-detail">
+           <h3>Agregar nueva tarjeta</h3>
+        </div>    
+    </isif>
+    <isif condition="${pdict.addPaymentUrl}">
+        <div class="dashed-line">
+            <img class="vertical-bottom" src="${URLUtils.staticURL('/images/plus-icon.svg')}" alt="Agregar nuevo" />
+            <a href="${pdict.addPaymentUrl}" class="card-link"
+                aria-label="${Resource.msg('label.payment.addnewpayment', 'payment', null)}">${Resource.msg('link.addnew', 'account', null)}</a>
+        </div>
+    </isif>
+</div>

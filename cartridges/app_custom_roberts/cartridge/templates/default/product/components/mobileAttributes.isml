@@ -1,0 +1,76 @@
+<iscomment>
+    <isif condition="${product.attributes && product.attributes.length}">
+</iscomment>
+<div class="card">
+    <div class="card-header collapsed" aria-expanded="false" data-toggle="collapse" data-target="#collapsible-attributes-1"
+            aria-controls="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}">
+        <span class="title" >
+            ${Resource.msg('label.attributes', 'product', null)}
+        </span>
+        <span class="accicon">
+            <i class="fas fa-angle-down rotate-icon"></i>
+        </span>
+        <iscomment>
+            <h2 class="title d-none d-sm-block">
+                ${Resource.msg('label.attributes', 'product', null)}
+            </h2>
+        </iscomment>
+    </div>
+    <div class="collapse" id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}"  data-parent="#accordion_two">
+        <div class="card-body">
+            <isloop items="${product.attributes}" var="attrGroup">
+                <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                    <iscomment> <h3 class="attribute-name">
+                        ${attrGroup.name}
+                    </h3> </iscomment>
+                    <ul>
+                        <isloop items="${attrGroup.attributes}" var="attr">
+                            <li class="attribute-values">
+                                ${attr.label}:
+                                <isloop items="${attr.value}" var="value">
+                                    ${value}
+                                </isloop>
+                            </li>
+                        </isloop>
+                    </ul>
+                </isif>
+            </isloop>
+        </div>
+    </div>
+</div>
+<iscomment>
+    </isif>
+</iscomment>
+
+<iscomment>
+    <div class="card">
+        <div class="card-header" data-toggle="collapse"
+            data-target="#collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}"
+            aria-expanded="true">
+            <span class="title">${Resource.msg('label.description', 'product', null)} </span>
+            <span class="accicon">
+                <i class="fas fa-angle-down rotate-icon"></i>
+            </span>
+        </div>
+        <div id="collapsible-attributes-${loopState && loopState.count ? loopState.count : '1'}" class="collapse show"
+            data-parent="#accordions">
+            <div class="card-body">
+                <isloop items="${product.attributes}" var="attrGroup">
+                    <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                        <h3 class="attribute-name">
+                            ${attrGroup.name}
+                        </h3>
+                        <isloop items="${attrGroup.attributes}" var="attr">
+                            <li class="attribute-values">
+                                ${attr.label}:
+                                <isloop items="${attr.value}" var="value">
+                                    ${value}
+                                </isloop>
+                            </li>
+                        </isloop>
+                    </isif>
+                </isloop>
+            </div>
+        </div>
+    </div>
+</iscomment>

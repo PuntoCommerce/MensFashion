@@ -1,0 +1,16 @@
+<div class="col-md-6">
+    <div class="single-detail-images">
+        <div class="row ipadblock">
+            <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                <iscomment> <isif condition = "${image.index < 2}"> </iscomment>
+                <div class="col-md-6 padding-r0">
+                    <div class="pro-images-detail">
+                        <img src="${image.url}" class="d-block img-fluid" alt="${image.alt} image number ${image.index}" itemprop="image" />
+                    </div>
+                </div>
+                <iscomment> </isif> </iscomment>
+            </isloop>
+
+        </div>
+    </div>
+</div>

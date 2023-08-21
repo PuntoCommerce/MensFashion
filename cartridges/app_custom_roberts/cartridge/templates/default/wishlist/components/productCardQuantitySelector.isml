@@ -1,0 +1,23 @@
+<div class="quantity-form-wishlist">
+    <label class="line-item-pricing-info quantity-label"
+        for="quantity-${item.UUID}">${Resource.msg('field.selectquantity', 'cart', null)}</label>
+    <iscomment> <select class="form-control quantity custom-select" data-uuid="${item.UUID}" data-pid="${item.pid}"
+        data-pre-select-qty="${item.qty}" id="quantity-${item.UUID}" name="quantity">
+        <isloop begin="${item.minOrderQuantity}" end="${item.maxOrderQuantity}" status="status">
+            <isif condition="${item.qty === status.index}">
+                <option selected>${status.index}</option>
+            <iselse/>
+                <option>${status.index}</option>
+            </isif>
+        </isloop>
+    </select> </iscomment>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button class="btn btn-sm" type="button"><i class="fas fa-minus"></i></button>
+        </div>
+        <input type="text"  class="form-control" value="1">
+         <div class="input-group-append">
+            <button class="btn btn-sm" type="button"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+</div>

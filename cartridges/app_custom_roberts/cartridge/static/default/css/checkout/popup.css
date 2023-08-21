@@ -1,0 +1,10 @@
+/* #modal-check {
+  display: none;
+}
+fieldset.shipment-selector-btns.no-padding:has(
+    button[class="shipping-check-card h-100 w-100 pickup active"]
+  )
+  #modal-check {
+  display: flex;
+} */
+

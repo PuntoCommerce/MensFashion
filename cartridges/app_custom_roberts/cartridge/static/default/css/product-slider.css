@@ -1,0 +1,32 @@
+#carouselExampleIndicators{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    background: #f2f2f2;
+}
+.full-screen {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-indicators li {
+    max-width: 100%;
+    height: 104px;
+    width: 70px;
+    opacity: 0.5;
+    background-size: cover;
+    border-radius: 0px;
+    margin-bottom: 80px;
+}
+
+.carousel-indicators li.active {
+    opacity: 1;
+}
+
+.single-detail-images {
+    cursor: zoom-in;
+}

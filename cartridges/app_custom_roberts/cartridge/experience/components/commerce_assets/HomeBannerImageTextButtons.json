@@ -1,0 +1,89 @@
+{
+  "name": "Home Banner Assets",
+  "description": "Image Text and Buttons to redirect to other pages",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "imageText",
+      "name": "Image Tile No Margins Desktop",
+      "description": "This is a simple Image Tile component where you drag and drop it into any layout component ",
+      "attribute_definitions": [
+        {
+          "id": "backgroundImage",
+          "name": "Background Image",
+          "description": "Background Image for the component",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "mobbackgroundImage",
+          "name": "Mobile Device Background Image",
+          "description": "Mobile Device Background Image for the component",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "bannerTextOne",
+          "name": "Text1",
+          "description": "Text1 for the component",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id": "bannerTextTwo",
+          "name": "Text2",
+          "description": "Text2 for the component",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "bannerTextlocation",
+      "name": "Banner Text Location Select",
+      "description": "Banner Type Selection",
+      "attribute_definitions": [
+        {
+          "id": "selectTextlocation",
+          "name": "Text Location",
+          "description": "Choose text locaton banner to display",
+          "type": "enum",
+          "values": [
+            "Left-top",
+            "Left-center",
+            "Left-bottom",
+            "top",
+            "center",
+            "bottom",
+            "Right-top",
+            "Right-center",
+            "Right-bottom"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "description": "Buttons to be displayed in the component",
+      "attribute_definitions": [
+        {
+          "id": "buttonUrl",
+          "name": "URL",
+          "description": "URL for the button",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "buttonText",
+          "name": "Text",
+          "description": "Text for the button",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

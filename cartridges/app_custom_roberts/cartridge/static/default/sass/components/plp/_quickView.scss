@@ -1,0 +1,24 @@
+.modal-content {
+  font-family: "Avenir-Next";
+}
+
+.quick-view-dialog .modal-header {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+.modal-body .product-name {
+  font-family: "Avenir-LT-Std";
+  line-height: 1.5 !important;
+}
+
+.modal-footer .add-to-cart-global {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.modal-footer .add-to-cart-globa:hover {
+  background-color: #000000 !important;
+  color: #ffffff;
+}

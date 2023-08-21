@@ -1,0 +1,1248 @@
+.emptycart {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.emptycart h2 {
+    color: #0a3356;
+    font-family: "Minion Pro";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.m60 {
+    margin-top: 60px;
+}
+
+.login-tabs {
+    background: #8599ab;
+    border-radius: 10px;
+    padding: 3px;
+    border-bottom: 0px;
+    margin-bottom: 27px;
+}
+
+.login-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.login-tabs .nav-link {
+    height: 43px;
+    color: #fff;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0px;
+    line-height: 25px;
+}
+
+.login-tabs .active {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+    height: 43px;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    line-height: 20px;
+}
+
+.login-tabs .nav-item {
+    width: 50%;
+}
+
+.m24px {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.men-fashions-p {
+    margin-bottom: 6px;
+    margin-top: 24px;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.sing-in-socail {
+    padding: 9px 24px;
+    border: 1px solid #0a3356;
+    border-radius: 4px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #0a3356;
+    width: 100%;
+    display: block;
+    margin-top: 18px;
+    text-decoration: none !important;
+}
+.sing-in-socail:hover {
+    color: #0a3356;
+}
+
+.sing-in-socail img {
+    margin-right: 12px;
+}
+
+.toppop {
+    margin-top: 170px;
+}
+
+.border20 {
+    border-radius: 20px;
+}
+
+.modal-header {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    border-bottom: 1px solid #8599ab;
+    padding: 12px 30px 12px 30px;
+
+}
+.modal-body {
+    padding: 24px 30px 30px 30px;
+}
+.modal-body p {
+    color: #000;
+    font-family: Avenir LT Std;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.model-width{
+    max-width: 496px;
+    margin-top: 60px;
+}
+
+.victor-thank {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #64656a;
+    margin-top: 42px;
+    margin-bottom: 30px;
+}
+
+.enviaremos {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 350;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+}
+
+.thankyou-box {
+    border: 1px solid #8599ab;
+    border-radius: 10px;
+    padding: 30px 60px;
+    width: 100%;
+    margin-top: 42px;
+}
+
+.without-log {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.fit-bot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.in-flx {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 42px;
+    margin-bottom: 30px;
+}
+
+.in-flx p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding-left: 10px;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.pro-thank {
+    width: 50px;
+    height: 70px;
+}
+.mb-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.address-box {
+    background: #f7f1ed;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.address-box h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.home-icon {
+    vertical-align: bottom;
+}
+.address-pera {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.account-box {
+    border: 1px solid #8599ab;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.inner-accout {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #8599ab;
+    padding: 12px 12px 12px 30px;
+}
+
+.profile-detail h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.profile-detail p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.profile-detail p:last-child {
+    margin-bottom: 0px;
+}
+
+
+.profile-detail {
+    padding: 30px;
+}
+
+.inner-accout p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+.dashed-line {
+    border-top: 1px dashed #8599ab;
+    padding: 20px;
+    text-align: center;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3356;
+}
+
+.vertical-bottom {
+    vertical-align: bottom;
+}
+
+.d-flexinline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comparebox {
+    display: flex;
+}
+
+.comparebox-img {
+    width: 150px;
+    height: 225px;
+}
+.comparebox-img-custom {
+    width: 100%;
+    /* height: 225px; */
+    margin-bottom: 5px;
+}
+.compare-left {
+    padding-left: 20px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.compare-left p {
+    margin-bottom: 6px;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #000000;
+    width: 100%;
+}
+
+.flex-socail {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+.flex-socail h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3356;
+}
+
+.socails-icons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.products-names {
+    position: relative;
+    max-width: 100%;
+    width: 380px;
+    height: 570px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 6px;
+}
+
+.products-names h2 {
+    position: absolute;
+}
+
+.products-names h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 1.5px 1.5px 3px #000000;
+}
+
+.category-size-img {
+    width: 380px;
+    height: 570px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.list-filter ul {
+    list-style: none;
+    margin: 20px 55px;
+}
+
+.list-filter ul li {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0a3356;
+    margin-bottom: 12px;
+}
+
+.range {
+    max-width: 25%;
+    margin-top: 20px;
+    margin-left: 112px;
+}
+
+.targetDiv {
+    display: none;
+}
+
+.animate-bg {
+    border-width: 0.5px 0px;
+    border-style: solid;
+    border-color: #8599ab;
+    position: absolute;
+    z-index: 999999;
+    background: #fff;
+    width: 100%;
+    min-height: 123px;
+}
+
+.filter-size-box {
+    list-style: none;
+    margin: 20px 70px;
+}
+
+.filter-size-box ul {
+    max-width: 50%;
+}
+
+.filter-size-box ul li {
+    list-style: none;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    border: 1px solid #8599ab;
+    color: #000000;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 18px 15px 0;
+}
+
+.customrange {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customrange label,
+.range p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #0a3356;
+}
+
+.range-input {
+    background: #fff;
+    border: solid 1px #0a3356;
+    border-radius: 8px;
+    height: 0px;
+    width: 356px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+    margin-bottom: 15px;
+}
+
+.showSingle {
+    cursor: pointer;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #0a3356;
+}
+
+.right-cross-part {
+    display: flex;
+}
+
+.cross-icon {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.right-cross-part {
+    display: flex;
+    margin-right: 105px;
+    position: absolute;
+    right: 0;
+    top: 23px;
+    opacity: 0;
+}
+
+.animate-bg .right-cross-part {
+    opacity: 1;
+}
+
+.right-cross-part span {
+    margin-right: 15px;
+}
+
+/* .Filtrar-por {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.2em;
+    color: #0a3356;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+} */
+
+.overlay-filter {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-filter a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-filter a:hover,
+.overlay-filter a:focus {
+    color: #f1f1f1;
+}
+
+.overlay-filter .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    z-index: 9;
+}
+
+.aplicar-filtros h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0a3356;
+    margin-right: 25px;
+    margin-left: 15px;
+}
+
+.aplicar-filtros h4 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #606060;
+}
+
+.aplicar-filtros {
+    display: flex;
+    margin-top: 30px;
+    border-bottom: 1px solid #8599ab;
+    padding-bottom: 15px;
+}
+
+.search-icon-down {
+    cursor: pointer;
+}
+
+.box-search {
+    display: none;
+}
+
+/* .box-search {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    padding: 15px;
+} */
+
+.search-part {
+    margin-top: 30px;
+}
+
+.quieres h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0a3356;
+    margin-top: 30px;
+}
+
+.quieres p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0a3356;
+    margin-top: 18px;
+}
+
+.product-search h2 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0a3356;
+    margin-bottom: 18px;
+}
+
+.product-search p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0a3356;
+    margin-bottom: 9px;
+}
+
+.product-search {
+    border-top: 1px solid #8599ab;
+    padding-top: 18px;
+}
+
+.cross-search {
+    display: flex;
+}
+
+.magnifier-right {
+    padding-right: 15px;
+}
+
+.search-cross {
+    padding-left: 15px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(15%) sepia(14%) saturate(5947%)
+        hue-rotate(182deg) brightness(98%) contrast(95%);
+}
+
+.navbar-fixed .box-search {
+    top: 65px;
+}
+
+.image-box-new-varation {
+    height: 398px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.image-box-new-varation img {
+    width: 100%;
+    height: 398px;
+    object-fit: cover;
+    object-position: top;
+}
+.edit-name {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    color: #0a3356;
+    margin-bottom: 30px;
+}
+
+.donde-bg {
+    background: #f7f1ed;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.heading-donde-estas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.heading-donde-estas h2 {
+    font-family: "Minion Pro";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    leading-trim: both;
+    text-edge: cap;
+    color: #0a3356;
+}
+
+.location-form input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    border-radius: 0px;
+    background-color: transparent;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding-left: 0px;
+}
+
+.location-form input::placeholder {
+    color: red;
+    opacity: 1;
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.location-form input:-ms-input-placeholder {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.location-form input::-ms-input-placeholder {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.location-form input:focus {
+    background: transparent;
+    box-shadow: none;
+    border-color: #000;
+}
+
+.location-map-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-address h3 {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.map-address p {
+    font-family: "Avenir LT Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #000000;
+    text-align: left;
+    display: flex;
+    max-width: 88%;
+}
+
+.map-address img {
+    margin-right: 15px;
+}
+
+.map-address {
+    cursor: pointer;
+    padding-left: 24px;
+    margin-bottom: 34px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.w-donde {
+    max-width: 100%;
+}
+
+.mapscroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 446px;
+}
+
+.selected-map {
+    background-color: #fff;
+}
+
+.reload-icon {
+    padding-left: 15px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .right-space {
+        padding-right: 40px;
+    }
+    .border-lefts {
+        padding-left: 40px;
+    }
+
+    .image-box img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+    
+    }
+
+    .pro-padding img {
+        width: 100%;
+    }
+    .image-box-new-varation {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    #map-list {
+        height: auto !important;
+    }
+    #search-storelocator div {
+        justify-content: space-between !important;
+    }
+
+    #map-list #search-storelocator,
+    #map-list {
+        margin-top: 0px !important;
+    }
+
+    .pro-padding img {
+        width: 100%;
+    }
+
+    .image-box img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .sacos{
+        background-position: center center;
+    }
+
+    .Left-top {
+        left: 20% !important;
+    }
+
+    .ocasion-right {
+        padding-left: 0px;
+    }
+
+    .common-space {
+        padding: 50px 0px;
+    }
+
+    .image-box-new-varation {
+        height: 379px;
+        margin-bottom: 0;
+    }
+
+    .navbar-fixed .box-search {
+        top: 54px;
+    }
+}
+
+@media (max-width: 767px) {
+    .lanscaps-w {
+        max-width: 100%;
+    }
+
+    .flex-direction-reverse {
+        flex-direction: column-reverse;
+    }
+
+    #map-list #search-storelocator div {
+        padding: 0;
+        justify-content: space-between !important;
+    }
+
+    #map-list #search-storelocator {
+        margin-top: 0;
+        height: auto !important;
+    }
+
+    #map-list {
+        width: 100%;
+        height: auto !important;
+        margin-top: 0px;
+    }
+
+    #map {
+        min-width: 100%;
+        margin-top: 0px !important;
+        min-height: 500px;
+    }
+
+    .storelocator {
+        display: block;
+    }
+    .storelocator-container {
+        padding-right: 0px;
+    }
+
+    .flex-direction-map {
+        flex-direction: column-reverse;
+    }
+
+    .w-donde {
+        max-width: 100%;
+        padding-left: 23px;
+    }
+
+    .navbar-fixed .box-search {
+        top: 50px;
+    }
+    .right-cross-part span,
+    .cross-icon {
+        display: none;
+    }
+
+    .range {
+        max-width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .list-filter ul {
+        list-style: none;
+        margin: 10px 0px;
+        text-align: left;
+    }
+    .filter-card {
+        border-bottom: 1px solid #8599ab !important;
+        border-radius: 0;
+        line-height: 40px;
+        border-radius: 0px;
+    }
+
+    .filter-header {
+        padding: 0px 5px;
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #0a3356;
+    }
+
+    .filter-header .accicon {
+        font-size: 13px;
+        color: #0a3356;
+    }
+
+    .filter-size-box {
+        margin: 10px 0px;
+    }
+
+    .filter-header .title {
+        font-family: "Avenir LT Std";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #0a3356;
+    }
+
+    .filter-size-box ul {
+        max-width: 100%;
+        padding-left: 0px!important;
+        text-align: left;
+    }
+
+    
+    .filter-size-box .boxli-talla{
+        width: max-content;
+        padding: 0;
+    }
+
+    .filter-size-box .boxli-talla button{
+        line-height: 0px;
+    }
+
+    .list-filter ul li {
+        font-size: 14px;
+    }
+    .polos-new-img {
+        background-image: url("../images/polos-new.jpg") !important;
+    }
+
+    .pr-6 {
+        padding-right: 3px;
+    }
+
+    .pl-6 {
+        padding-left: 3px;
+    }
+
+    .products-names {
+        margin-bottom: 6px;
+        height: 300px;
+    }
+
+    .fit-heights {
+        height: 400px;
+    }
+    .pr0 {
+        padding-right: 0px;
+    }
+    .sacos {
+        height: 200px;
+        margin-bottom: 10px;
+        background-position: center;
+    }
+    .polos {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .sacos h2 {
+        padding-left: 11px;
+        font-size: 12px;
+    }
+
+    .polos h2 {
+        padding-right: 10px;
+        font-size: 12px;
+    }
+
+    .padding-mobile {
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+
+    .trajes {
+        min-height: 200px;
+        background-position: 100% 10%;
+    }
+
+    .trajes h2 {
+        font-size: 12px;
+    }
+
+    .socails-icons img {
+        width: 17px;
+        height: 17px;
+        margin-right: 4px;
+    }
+    .address-box {
+        margin-bottom: 0;
+    }
+    .margin-topdetalles {
+        margin-top: 30px;
+    }
+    .victor-thank {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .enviaremos {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .thankyou-box {
+        margin-top: 24px;
+        padding: 30px 30px;
+    }
+    .comparebox-img {
+        width: 100px;
+        height: 150px;
+    }
+    .compare-left p {
+        font-size: 14px;
+    }
+    .profile-detail {
+        padding: 30px 15px;
+    }
+    .form-sign-in label {
+        text-align: left;
+    }
+
+    .pagar-18 {
+        margin-bottom: 18px !important;
+    }
+    .olvidaste-p {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h2.revisar {
+        border-top: 1px solid grey;
+        margin-top: 30px;
+        margin-bottom: 18px;
+        padding-top: 25px;
+    }
+}
+
+.storelocator,
+#map-list {
+    flex-wrap: nowrap;
+    max-width: 100vw;
+    background: #f7f1ed;
+}
+form.location-form {
+    width: 100%;
+}
+.storelocator {
+    margin-top: 0px;
+    flex-wrap: nowrap;
+    align-items: self-end;
+    /* margin-bottom: 100px; */
+}
+
+#map-list {
+    min-width: 100%;
+}
+
+#map-list #search-storelocator {
+    height: auto;
+    background: #f7f1ed;
+    margin-bottom: 20px;
+    max-height: auto;
+    width: 100%;
+    padding: 15px 12px 0px 20px;
+}
+
+.storelocator #listing .item {
+    padding-top: 0;
+}
+
+#map {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.storelocator-container {
+    max-width: 100vw;
+    /* background: #f7f1ed; */
+    min-height: fit-content;
+    margin-bottom: 100px;
+}
+.storelocator #listing {
+    overflow-y: scroll;
+    padding-inline-start: 0px;
+    max-height: 550px;
+}
+
+.sub-item img {
+    display: flex;
+    width: 24px;
+    height: 17px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.name {
+    color: #000;
+    /* H5 Heavy */
+    font-size: 16px !important;
+    font-family: Avenir LT Std !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}
+
+#storelocator-search {
+    background-color: #f7f1ed;
+}
+
+.popup {
+    border: none !important;
+    background: #f7f1ed;
+}
+.custom-pdp-breadcrum li a{
+    margin-bottom: 24px !important;
+}

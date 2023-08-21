@@ -1,0 +1,3 @@
+<a class="w-100 sing-in-socail" href="${URLUtils.url('Login-Logout')}">
+    ${Resource.msg('link.header.logout', 'account', null)}
+</a>

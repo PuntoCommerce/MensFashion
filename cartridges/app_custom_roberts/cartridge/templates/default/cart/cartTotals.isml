@@ -1,0 +1,27 @@
+<div class="sub-texts">
+    <p>${Resource.msg('label.shipping.cost','cart',null)}</p>
+    <p class="color-blue-text">${pdict.totals.totalShippingCost}</p>
+</div>
+
+<!--- Shipping Discount --->
+<div class="sub-texts <isif condition="${pdict.totals.shippingLevelDiscountTotal.value === 0}">hide-shipping-discount</isif>">
+    <p>${Resource.msg('label.shipping.discount', 'common', null)}</p>
+    <p class="text-right shipping-discount-total">- ${pdict.totals.shippingLevelDiscountTotal.formatted}</p>
+</div>
+
+<!-- Sales Tax -->
+<div class="sub-texts">
+    <p>${Resource.msg('label.sales.tax','cart',null)}</p>
+    <p class="text-right tax-total">${pdict.totals.totalTax}</p>
+</div>
+
+<!--- Order Discount --->
+<div class="sub-texts <isif condition="${pdict.totals.orderLevelDiscountTotal.value === 0}">hide-order-discount</isif>">
+    <p>${Resource.msg('label.order.discount', 'common', null)}</p>
+    <p class="text-right order-discount-total"> - ${pdict.totals.orderLevelDiscountTotal.formatted}</p>
+</div>
+
+<div class="sub-texts">
+    <p class="precio-total">${Resource.msg('label.estimatedtotal','cart',null)}</strong>
+    <p class="precio-total grand-total">${pdict.totals.grandTotal}</p>
+</div>

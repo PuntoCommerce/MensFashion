@@ -1,0 +1,50 @@
+{
+  "name": "Made to you extent section",
+  "description": "This is a layout component for Made to you extent section.",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "madeYouExtentMain",
+      "name": "Made You Extent Layout",
+      "description": "Made You Extent Layout Primarily Created for Homepage",
+      "attribute_definitions": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "description": "Heading",
+          "type": "markup",
+          "required": true
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "description": "Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "description": "description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "description": "Button Text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "buttonUrl",
+          "name": "Button URL",
+          "description": "Button URL",
+          "type": "url",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

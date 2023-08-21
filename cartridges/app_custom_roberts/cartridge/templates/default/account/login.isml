@@ -1,0 +1,52 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('header.hero.image.login', 'login', null)}</h1>
+                        <!--<p class="d-none d-xs-none d-sm-block d-md-block d-lg-block">¿Necesitas ayuda? Marca: 1-800-555-0199</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="top-manage">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="offset-lg-2 col-xs-12 col-sm-6 col-lg-4 right-space">
+                    <ul class="nav nav-tabs login-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">Inicia sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">Crear cuenta</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <isinclude template="account/components/loginForm" />
+                            <isinclude template="account/password/requestPasswordResetModal" />
+                            <isinclude template="account/components/oauth" />
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <isinclude template="account/components/registerForm" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 border-lefts">
+                    <isinclude template="account/components/trackOrderForm" />
+                </div>
+            </div>
+        </div>
+    </section>
+</isdecorate>

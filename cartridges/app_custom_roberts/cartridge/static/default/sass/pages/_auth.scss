@@ -1,0 +1,139 @@
+a {
+ &:hover {
+  text-decoration: none;
+ }
+
+ .oauth-google,
+ .oauth-facebook {
+  &--button {
+   border: 1px solid #000;
+   border-radius: 3px;
+   height: 40px;
+   font-size: 18px;
+   width: 100%;
+   background: none;
+   white-space: nowrap;
+
+   &:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all ease 0.2s;
+   }
+  }
+ }
+
+ .oauth-google {
+  &--button {
+   margin-bottom: 16px;
+  }
+ }
+ .oauth-facebook {
+  &--button {
+   margin-bottom: 30px;
+  }
+ }
+}
+
+.oauth-google .fa.fa-google,
+.oauth-google--button span,
+.oauth-facebook .fa.fa-facebook-official,
+.oauth-facebook--button {
+ color: #000000;
+}
+
+.oauth-facebook--button:hover .fa.fa-facebook-official,
+.oauth-google--button:hover .fa.fa-google,
+.oauth-google--button span:hover {
+ color: #ffffff;
+}
+
+.oauth-google--button span,
+.oauth-facebook--button span {
+ font-family: nth($text-font-stack, $avenir-Next) !important;
+}
+
+.login-form-nav {
+ margin: auto;
+ margin-top: 13px;
+ width: 508px;
+}
+
+.trackorder {
+ margin: auto;
+ margin-top: 13px;
+ width: 508px;
+}
+
+.reset-password-form {
+ margin: auto;
+
+ .request-password-body {
+  p {
+   font-size: 14px !important;
+  }
+ }
+ .send-email-btn {
+  .btn-email {
+   background-color: #d9d9d9;
+   color: #000 !important;
+   margin-top: 20px;
+   border: none;
+   border-radius: 3px;
+   height: 34px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-transform: uppercase;
+   font-size: 16px;
+   transition: all ease 0.2s;
+
+   &:hover {
+    color: #fff !important;
+    background: #000;
+   }
+  }
+ }
+}
+
+.remember-me{
+  display: flex !important;
+  align-items: center;
+}
+
+.remember-check-input{
+  width: 17px;
+  height: 17px;
+  margin-top: 0 !important;
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 991px) {
+ .login-form-nav,
+ .trackorder {
+  width: auto;
+  padding: 10px;
+ }
+}
+
+@media (max-width: 543px) {
+ .login-page {
+  .breadcrumb {
+   margin: 0;
+   margin-left: 13px;
+  }
+ }
+}
+
+@media (max-width: 376px) {
+ .oauth-google--button span,
+ .oauth-facebook--button span {
+  font-size: 12px;
+ }
+}
+
+@media (max-width: 356px) {
+ .oauth-google--button span,
+ .oauth-facebook--button span {
+  font-size: 10px;
+ }
+}

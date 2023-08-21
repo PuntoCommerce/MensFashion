@@ -1,0 +1,19 @@
+<div class="row cart-and-ipay">
+    <div class="col-sm-12">
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}" />
+        <input type="hidden" id="buy-now-url" class="buy-now-url"
+            value="${URLUtils.url('Checkout-oAuth').toString()}" />
+        <iscomment> <button id="buy-now-btn" class="comprar-btn-detail add-to-cart buy-now btn tooltipAddToCart" data-toggle="modal"
+            data-target="#chooseBonusProductModal" data-pid="${product.id}"
+            ${!product.readyToOrder || !product.available ? "disabled" : ""}>
+            ${Resource.msg('button.buynow', 'common', null)}
+            <span class="tooltiptext">${Resource.msg('tooltip.addtocart.disabled.button', 'pdp', null)}</span>
+        </button> </iscomment>
+        <button id="buy-now-btn" class="comprar-btn-detail add-to-cart buy-now btn tooltipAddToCart" data-toggle="modal"
+            data-target="#chooseBonusProductModal" data-pid="${product.id}">
+            COMPRAR AHORA
+        </button>
+
+        <isinclude template="product/components/addToCartButtonExtension" />
+    </div>
+</div>

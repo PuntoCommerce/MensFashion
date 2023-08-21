@@ -1,0 +1,50 @@
+<div class="accordion" id="accordion_two">
+    <iscomment> <div class="row product-attributes collapsible-xs">
+      
+    </div> </iscomment>
+
+    <isif condition="${product.attributes && product.attributes.length}">
+        <hr class="d-sm-none">
+    </isif>
+    <div class="card">
+        <div class="card-header" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+            <span class="title">${Resource.msg('label.description', 'product', null)} </span>
+            <span class="accicon">
+                <i class="fas fa-angle-down rotate-icon"></i>
+            </span>
+        </div>
+        <div id="collapseOne" class="collapse show" data-parent="#accordion_two">
+            <div class="card-body">
+                <isinclude template="product/components/description" />
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo">
+            <span class="title">${Resource.msg('label.details', 'product', null)}</span>
+            <span class="accicon">
+                <i class="fas fa-angle-down rotate-icon"></i>
+            </span>
+        </div>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion_two">
+            <div class="card-body">
+                <isinclude template="product/components/details" />
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false">
+            <span class="title">Cambios y Devoluciones</span>
+            <span class="accicon">
+                <i class="fas fa-angle-down rotate-icon"></i>
+            </span>
+        </div>
+        <div id="collapseThree" class="collapse" data-parent="#accordion_two">
+            <div class="card-body">
+                <isprint value="${pdict.product_return_info_txt}" encoding="off" />
+            </div>
+        </div>
+    </div>
+      <isinclude template="product/components/attributes" />
+</div>

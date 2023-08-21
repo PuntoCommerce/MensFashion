@@ -1,0 +1,49 @@
+<isdecorate template="common/layout/accountPage">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1 class="myAccount-title m-0">${Resource.msg('header.hero.image.login', 'login', null)}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="top-manage">
+        <div class="container-fluid"> 
+            <div class="row">
+                <div class="offset-lg-2 col-xs-12 col-sm-6 col-lg-4 right-space">
+                    <a href="${URLUtils.url('Login-Show')}" class="pagar w-100 mt-0 crea-bottom">${Resource.msg('label.input.login.createaccount', 'login', null)}</a>
+                    <p class="crear-una">${Resource.msg('label.input.login.createaccountmsg', 'login', null)}</p>
+                    <div class="points-bullets">
+                        <p>
+                            <img src="${URLUtils.staticURL('/images/tick.svg')}" alt="icon"> ${Resource.msg('label.input.login.createaccountstep1', 'login', null)}
+                        </p>
+                        <p>
+                            <img src="${URLUtils.staticURL('/images/tick.svg')}" alt="icon"> ${Resource.msg('label.input.login.createaccountstep2', 'login', null)}
+                        </p>
+                        <p>
+                            <img src="${URLUtils.staticURL('/images/tick.svg')}" alt="icon"> ${Resource.msg('label.input.login.createaccountstep3', 'login', null)}
+                        </p>
+                        <hr class="historial-line">
+                        <a href="${URLUtils.url('Checkout-Begin', 'stage', 'shipping')}" class="pagar continua w-100 crea-bottom">${Resource.msg('label.input.login.guestbtn', 'login', null)}</a>
+
+                        <p>${Resource.msg('label.input.login.guestmsg', 'login', null)}</p>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 border-lefts">
+                    <h2 class="inicia">${Resource.msg('header.hero.image.login', 'login', null)}</h2>
+                    <p class="crear-una">${Resource.msg('header.form.login.msg', 'login', null)}</p>
+                    <isinclude template="account/components/loginForm" />
+                </div>
+            </div>
+        </div>
+    </section>
+</isdecorate>

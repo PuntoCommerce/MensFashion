@@ -1,0 +1,38 @@
+<isset name="shippingAddress" value="${pdict.forms.shippingForm.shippingAddress}" scope="page" />
+<div class="row mt-4 leading-lines shipping-method-list"
+    data-select-shipping-method-url="${URLUtils.https('CheckoutShippingServices-SelectShippingMethod')}"
+    data-action-url="${URLUtils.https('CheckoutShippingServices-UpdateShippingMethodsList')}">
+    <input name="shipmentUUID" type="hidden" value="${shippingModel.UUID}" />
+    <isloop items="${shippingModel.applicableShippingMethods}" var="shippingMethod">
+        <div class="col-xs-12 col-sm-6 col-lg-6 d-flex">
+            <div class="radiobox1">
+                <isinclude template="checkout/shipping/selectedShippingMethod" />
+                <isif condition="${shippingMethod.displayName=='Home Delivery'}">
+                    <img src="${URLUtils.staticURL('images/bus-icon.svg')}" alt="icon">
+                <iselse>
+                    <img src="${URLUtils.staticURL('images/bag.svg')}" alt="icon">
+                </isif>
+                <h3> <span class="display-name">${shippingMethod.displayName}</span></h3>
+                <p>Recibirás tu pedido en la dirección que elijas</p>
+            </div>
+        </div>
+    </isloop>
+</div>
+
+<!---------------------------------------------------------------------------------->
+<!-- Template used by client to redraw shipping methods                           -->
+<!---------------------------------------------------------------------------------->
+<div id="shipping-method-template" style="display:none;">
+    <div class="form-check col-9 start-lines">
+        <input type="radio" class="form-check-input"
+            id="shippingMethodRadioButton-${shippingModel.UUID}${lineItem ? '-' + lineItem.UUID : ''}">
+        <label class="form-check-label shipping-method-option"
+            for="shippingMethodRadioButton-${shippingModel.UUID}${lineItem ? '-' + lineItem.UUID : ''}">
+            <span class="display-name"></span>
+            <span class="text-muted arrival-time" style="display:none"></span>
+        </label>
+    </div>
+    <div class="col-3 text-right shipping-method-pricing end-lines">
+        <span class="shipping-cost"></span>
+    </div>
+</div>

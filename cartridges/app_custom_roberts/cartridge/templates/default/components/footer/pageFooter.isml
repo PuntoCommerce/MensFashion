@@ -1,0 +1,209 @@
+<iscomment>
+	<isinclude template="experience/components/commerce_layouts/newsLetterSection" />
+</iscomment>
+<div class="experience-commerce_layouts-newsLetterSection">
+	<section class="common-space bordertop text-center">
+		<div class="container">
+			<div class="row">
+				<iscontentasset aid="newsletter_heading" />
+				<iscontentasset aid="newsletter_textfield" />
+				<iscontentasset aid="newsletter_discount" />
+				<iscontentasset aid="newsletter_mob_paragraph" />
+			</div>
+		</div>
+	</section>
+</div>
+
+<footer class="footer-common-space">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <iscontentasset aid="footer-column-1" />
+      </div>
+      <div class="col-6 col-md-4">
+        <iscontentasset aid="footer-column-2" />
+      </div>
+      <div class="col-6 col-md-4">
+        <iscontentasset aid="footer-column-3" />
+      </div>
+      <div class="col-md-12">
+        <iscontentasset aid="social-icon" />
+        <iscomment>
+          <div class="socail-icons">
+            <a><img src="${URLUtils.staticURL('/images/play.svg')}" alt="icon"></a>
+            <a><img src="${URLUtils.staticURL('/images/facebook.svg')}" alt="icon"></a>
+            <a><img src="${URLUtils.staticURL('/images/instagram.svg')}" alt="icon"></a>
+          </div>
+        </iscomment>
+      </div>
+    </div>
+  </div>
+  
+    <div class="chatWP">
+        <a href="https://wa.me/+5215534434878?text=¡Hola%20Robert's!"> <img src="${URLUtils.staticURL('/images/icon-whatsapp.svg')}" />
+        <span class="span-wp">Iniciar WhatsApp</span></a>
+    </div>
+</footer>
+<section class="copy-right">
+	<iscontentasset aid="footer-copyright" />
+</section>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<iscomment> <script src="${URLUtils.staticURL('js/jquery.min.js')}"></script> </iscomment>
+<script>
+	if(screen.width<900){
+		$('.filtros').html('');
+	}
+	else{
+		$('#mobile-filter').html('');
+		
+	}
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 75) {
+        $('.navbar').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 75) {
+        $('.navbar').removeClass('navbar-fixed');
+      }
+    });
+    jQuery(document).ready(function(){
+      if('${pdict.page.ID}' == 'homepage'){
+      }
+      else{
+         $(".login-right > li > .user").removeClass('user');
+         $('.navbar').removeClass('navbar-light ');
+         $('.navbar').addClass('navbar-other logoheader');
+      }
+      if('${pdict.page.ID}' == 'homepage'){
+           $(".dropdown").hover(
+              function() {
+                  $('.navbar').addClass('navbar-other');
+              },
+              function() {
+                $('.navbar').removeClass('navbar-other');
+                          });
+      }
+       else{
+      $(".dropdown").hover(
+                  function() {
+                    // $('.navbar').addClass('navbar-other');
+                    // $('.navbar').addClass('navbar-other-dropdown');
+                    // $('.dropdown').children('ul').removeClass('d-block');
+                    // $(this).children('ul').addClass('d-block');
+                  },
+                  function() {
+                      // setTimeout(() => {
+                      //   $('.navbar').removeClass('navbar-other');
+                      //   $('.dropdown').children('ul').removeClass('d-block');
+                      // }, 4000);
+                    // $('.navbar').removeClass('navbar-fixed');
+                    // $('.navbar').removeClass('navbar-other');
+                    // $('.dropdown-menu', this).stop(true).delay(2000).slideUp(500);
+              });
+              
+      }
+     
+      $(".minicart").hover(
+          function(){ $('#popover').show();
+          },
+          function() { $('#popover').hide();
+        });
+    });
+    $(document).ready(function(){
+        let url = '${URLUtils.https('Cart-Countlist')}';
+         $.ajax({
+            url:url,
+            success:function(response){
+                console.log(response.count);
+                $("#popover").html(response.count);
+            }
+        });
+    });
+    </script>
+<!--search box-->
+<script>
+   $(document).ready(function(){
+      /**MEGA MENU HIDE / SHOW SECTION */
+      $('.display-menu-data').click(function(){
+          let category = $(this).attr('data-id');
+          let subid = $(this).attr('data-subid');
+          let closeid = $(this).attr('data-close-id');
+          let i= 0;
+           let height= $('.'+category+' div .'+category+'-hide').height();
+          if(closeid=='0'){
+            $('.'+category+' div .'+category+'-hide').hide();
+            $('.'+subid+'-'+category+'-sub-category').addClass('display-flex');
+            i++;
+             $("."+category).css({'min-height':height+30});
+          }
+          else{
+            $('.'+closeid).removeClass('display-flex');
+            $('.'+category+' div .'+category+'-hide').show();
+            $("."+category).removecss({'height':''});
+          }
+          return false;
+      });
+     $('.level-one').on('click',function(){
+        let id = $(this).attr('id');
+        window.location =$('#'+id).attr('href');
+    })
+      $('.search-icon-down').click(function() {
+      $(".box-search").addClass("fullbox");
+
+      if ($('.box-search').is(':hidden')) {
+          $('.box-search').show();
+        
+          $('.navbar').addClass('navbar-other');
+      }
+
+     else {
+        $('.box-search').hide();
+        $('.navbar').removeClass('navbar-other');
+      }
+
+      });
+
+       $('.search-cross').click(function() {
+        $('.box-search').hide();
+        $('.navbar').removeClass('navbar-other');
+       }); 
+    });
+</script>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+     $('.navbar-toggler-icon').click(function() {
+      $(".navbar-brand ,.mobile-cross").addClass("logo-color");
+       });
+    });
+
+     $('.moble-cross-icon').click(function() {
+        $('.collapse.show').hide();
+      });
+
+
+     $('.menu-button').click(function() {
+     $('.addnew-side').addClass('crosstoggles', 5000);
+     $('body').addClass('overflow-hidescroll');
+
+       });
+
+     $('.cross-menu').click(function() {
+     $('.addnew-side').removeClass('crosstoggles');
+     $(".navbar-brand ,.mobile-cross").removeClass("logo-color");
+     $('body').removeClass('overflow-hidescroll');
+       });
+
+
+      
+
+
+</script>

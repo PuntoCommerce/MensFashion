@@ -1,0 +1,3 @@
+<div class="pdp-link">
+    <h4><a class="link" href="${pdict.urls.product}">${product.productName}</a></h4>
+</div>

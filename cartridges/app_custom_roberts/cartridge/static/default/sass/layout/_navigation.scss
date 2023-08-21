@@ -1,0 +1,466 @@
+.navbar-header .country-selector,
+.navbar-header .favorites,
+.navbar-header .minicart,
+.navbar-header .navbar-toggler,
+.navbar-header .user {
+  line-height: 1.5;
+  margin: 1.125em 0 0 0.5em;
+  height: auto;
+}
+
+.store-locator {
+  display: inline-block;
+  margin: 1.125em 0 0 0.5em;
+}
+
+.actionIcons {
+  min-width: 178px;
+}
+
+/* .navbar-header {
+    height: 65px;
+} */
+
+
+.main-menu,
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.hover-underline {
+  height: 1px;
+  width: 0%;
+  background-color: #000000;
+  transition: width 0.1s;
+}
+
+
+#menuDesk .nav-item:hover .hover-underline,
+#menuDesk .nav-item a:hover .hover-underline{
+  width: 100%;
+}
+
+.customNav .nav-item .nav-link:hover .hover-underline, .customNav .nav-item .nav-link:focus .hover-underline{
+  width: 50%;
+}
+
+#menuDesk .nav-item.last_category_item .hover-underline {
+  background-color: #ff0000;
+}
+
+#menuDesk .dropdown-menu-content a:hover {
+  color: #ff0000 !important;
+}
+
+#menuDesk .nav-item.last_category_item a {
+  color: #ff0000;
+}
+
+.sub-category-item.item {
+  margin-bottom: 3px;
+}
+
+#menuDesk .nav-item.last_category_item .sub-category-item a {
+  color: #000000;
+}
+
+#menuDesk .dropdown-menu .category-item.item a, #menuDesk .dropdown-menu .sub-category-item.item a{
+  color: #000000;
+  font-family: 'Avenir-Next';
+  font-size: 14px;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.5);
+}
+
+#menuDesk .nav-item .nav-link.dropdown-toggle{
+  color: #000000;
+  font-size: 14px;
+  font-family: "Avenir-Bold" !important;
+}
+
+.catTitle a{
+  font-family: "Avenir-Bold" !important;
+}
+
+.nav.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* #menuDesk .dropdown-menu .category-item.item a .hover-underline {
+  display: ;
+} */
+/* 
+#menuDesk .nav:is(:last-child) a {
+    color: #ff0000 !important;
+} */
+#searcHeaderResponsive,
+#searcHeader {
+  background-color: transparent;
+  border: none;
+  padding-top: 3px;
+}
+
+#searcHeaderResponsive::after,
+#searcHeader::after {
+  content: url(../images/search.svg);
+}
+
+.search-field-responsive,
+.search-field {
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+  border-radius: 0 !important;
+  width: 308px;
+  height: 30px !important;
+}
+
+.site-search .reset-button {
+  top: auto;
+  padding-bottom: 4px;
+}
+
+/* .search-field-responsive {
+    margin-top: 5px !important;
+} */
+.form-control:focus {
+  box-shadow: none !important;
+  color: #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+.suggestions {
+  top: 15px;
+  right: -86px;
+}
+
+.suggestions .children:hover {
+  background-color: #231f20 !important;
+}
+
+.suggestions .children span,
+.suggestions .children a {
+  color: #000000 !important;
+}
+
+.suggestions .children:hover span,
+.suggestions .children:hover a {
+  color: #ffffff !important;
+}
+
+.suggestions .noImageItem div {
+  margin-left: 16.66667% !important;
+  /* No Image margin */
+}
+
+.suggestions .children img {
+  width: 26px !important;
+  height: 26px !important;
+  margin: 0px 17px !important;
+}
+
+.suggestions .header {
+  border: none !important;
+  color: #979797 !important;
+}
+
+.borderTopHeader:not(:first-child) {
+  border-top: 0.5px solid #000000 !important;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.suggestions-desk {
+  display: block;
+}
+
+.suggestions-responsive {
+  display: none;
+}/* 
+
+.suggestions-responsive .item {
+  padding-right: 10%;
+} */
+
+.suggestions {
+  font-size: 13px;
+}
+
+// .brand {
+//   padding-top: 20px;
+// }
+
+.suggestions .header div,
+.suggestions .children div,
+.suggestions span.name,
+.search input::placeholder {
+  font-family: "Avenir-LT-Std";
+}
+
+/* MOBILE */
+@media (max-width: 543px) {
+  .suggestions-responsive {
+    top: inherit;
+  }
+}
+
+@media (max-width: 991px) {
+  .suggestions-desk {
+    display: none;
+  }
+
+  .actionIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .navbar-toggler {
+    line-height: 0px !important;
+    height: auto;
+  }
+
+  .site-search .reset-button {
+    padding-bottom: 7px;
+  }
+
+  .suggestions-responsive {
+    display: block;
+    border: none;
+  }
+
+  .search-desk {
+    display: none !important;
+  }
+
+  .store-locator {
+    display: none;
+  }
+
+  .actionIcons {
+    min-width: 120px;
+  }
+
+  .brand {
+    width: 200px !important;
+    left: 15%;
+  }
+
+  .navbar-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 72px !important;
+  }
+}
+
+/* Menu */
+
+.dropdown-menu {
+  position: fixed !important;
+  width: 100vw;
+}
+
+
+.dropdown-menu-content {
+  width: 65%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.dropdown-menu .category-item {
+  font-weight: bold;
+}
+
+/*#customMenu:hover{
+  border-top: 0.3px solid rgba(68, 68, 68, 0.5);
+}*/
+
+.dropdown-menu .subcategories {
+  padding-inline-start: 0px;
+}
+
+.nav-link::after {
+  display: none;
+}
+
+.nav-link.dropdown-toggle,
+.nav-link {
+  font-family: nth($text-font-stack, $avenir-Next) !important;
+}
+
+#openCustomMenu {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+#menuDesk {
+  display: flex;
+  justify-content: center;
+}
+
+#menuResponsive {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  #openCustomMenu {
+    display: block;
+  }
+
+  #menuDesk {
+    display: none;
+  }
+
+  #menuResponsive {
+    display: block;
+  }
+
+  .brand {
+    padding-top: 0;
+  }
+
+  #customMenuResponsive {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    flex-direction: column;
+    background-color: #ffffff !important;
+    width: 80vw;
+    overflow: auto;
+  }
+
+  #customMenuResponsive ul {
+    padding-inline-start: 0px;
+  }
+
+  #customMenuResponsive .nav-link {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #customMenuResponsive a {
+    color: #000000 !important;
+    font-family: "Avenir-LT-Std";
+    font-size: 14px;
+  }
+
+  .subCategory-item .toggle-subcategories {
+    right: 10%;
+  }
+
+  #menu-container {
+    padding-top: 10px;
+  }
+
+  .chat-boot {
+    margin-right: -5px;
+  }
+
+  #actions-icons .items .nav-item {
+    text-transform: uppercase;
+  }
+
+  #customMenuResponsive .category-title {
+    font-family: nth($text-font-stack,$avenir-LT-Std)!important;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    text-align: left; 
+  } 
+
+  #customMenuResponsive #image-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 172px;
+  }
+
+  #customMenuResponsive .close-button {
+    padding: 10px;
+  }
+
+  #customMenuResponsive {
+    height: 100vh;
+
+    .sub-items {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      background: #ffffff;
+    }
+    .toggle-category-button {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .toggle-category-button img {
+      transform: rotate(-90deg);
+    }
+    .toggle-category-button.back img {
+      transform: rotate(90deg);
+      margin-right: 10px;
+    }
+
+    .toggle-category-button.back span {
+      color: #000000;
+    }
+
+    .toggle-category-button.back {
+      margin-bottom: 20px;
+    }
+    .nav-link.parent {
+      // font-weight: 800;
+    }
+    #actions-icons {
+      margin-top: 30px;
+    }
+    #actions-icons img {
+      margin-right: 10px;
+    }
+
+    .category-title {
+      // font-family: nth($text-font-stack, $avenir-LT-Black);
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+  }
+}
+
+/// Animations
+
+/***** View menu responsive with animation  *****/
+.viewMenu {
+  transform: translateX(0);
+  animation-name: moveInRight;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+
+/***** View menu responsive with animation  *****/
+.viewMenuOut {
+  transform: translateX(0);
+  animation-name: moveInLeft;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+
+/***** View menu responsive with animation  *****/
+.closeMenu {
+  animation-name: moveInLeftOut;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}

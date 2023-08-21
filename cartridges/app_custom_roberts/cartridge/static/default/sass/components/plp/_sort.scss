@@ -1,0 +1,36 @@
+.sort {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin: 0 $spacing-small 0 0;
+        width: auto;
+    }
+
+    .custom-select {
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/down-arrow-circle.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        border: none;
+        padding: 0;
+        font-size: 0 !important;
+        
+        &::-ms-expand {
+            display: none; /*Evita que se muestre la flecha por defecto en versiones de IE*/
+        }
+
+        option {
+            width: 150px;
+            white-space:pre-wrap;
+            word-wrap: break-word;
+        }
+    }
+
+}

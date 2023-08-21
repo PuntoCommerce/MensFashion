@@ -1,0 +1,66 @@
+<div class="form-check form-check-inline border-payment dummy-paypal">
+    <a class="nav-link" href="${URLUtils.url('Checkout-Begin', 'stage', 'payment')}">
+        <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 20px;width: 20px;position: relative;">
+                        <div class="inner-circle"
+                            style="background: #0a3356;border-radius: 50%;height: 13px;width: 13px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label cursor-pointer" for="paypalRadio">Pago con PayPal </span>
+                </div>
+            </div>
+            <img src="${URLUtils.staticURL('/images/paypay-logo.svg')}" alt="Pago con PayPal" title="Pago con PayPal"
+                class="float-right" />
+        </div>
+    </a>
+</div>
+<div id="mp-checkout-pro-a" class="form-check form-check-inline border-payment">
+    <a class="nav-link" href="${URLUtils.url('Checkout-MpBegin', 'stage', 'payment')}">
+        <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 24px;width: 24px;position: relative;">
+                        <div class="inner-circle d-none"
+                            style="background: #0a3356;border-radius: 50%;height: 16px;width: 16px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label" for="inlineRadio3">Mercado pago </span>
+                </div>
+            </div>
+
+            <img class="checkout-pro-option" src="${URLUtils.staticURL('/images/payment-mercado-pago.png')}" height="32"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</div>
+<div class="form-check form-check-inline border-payment" id="mp-checkout-pro-main" data-method-id="${paymentOption.ID}"
+    style="display:none;">
+    <a class="nav-link checkout-pro-tab" data-toggle="tab" href="#checkout-pro-content" role="tab">
+        <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 20px;width: 20px;position: relative;">
+                        <div class="inner-circle d-none"
+                            style="background: #0a3356;border-radius: 50%;height: 13px;width: 13px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label" for="inlineRadio3">Mercado pago </span>
+                </div>
+            </div>
+            <img class="checkout-pro-option" src="${URLUtils.staticURL('/images/payment-mercado-pago.png')}" height="32"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</div>
+

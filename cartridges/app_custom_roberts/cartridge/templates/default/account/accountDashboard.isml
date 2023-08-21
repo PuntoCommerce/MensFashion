@@ -1,0 +1,29 @@
+<isdecorate template="common/layout/page">
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/account/dashboard.css');
+    </isscript>
+    <!--Close navbar -->
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('page.heading.dashboard', 'account', null)}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Breadcrumbs--->
+    <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+    <div class="container">
+
+        <isinclude template="account/dashboardProfileCards" />
+    </div>
+</isdecorate>

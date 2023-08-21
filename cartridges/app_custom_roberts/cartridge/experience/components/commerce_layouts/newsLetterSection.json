@@ -1,0 +1,50 @@
+{
+  "name": "News Letter Section",
+  "description": "This is a layout component for News Letter Section.",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "newsLetterMain",
+      "name": "News Letter Layout",
+      "description": "News Letter Layout Primarily Created for Homepage",
+      "attribute_definitions": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "description": "Heading",
+          "type": "markup",
+          "required": true
+        },
+        {
+          "id": "inputPlaceHolder",
+          "name": "Input Placeholder",
+          "description": "Input Placeholder",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "descriptionStart",
+          "name": "Description Start Part",
+          "description": "Description Start Part",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "descriptionMiddle",
+          "name": "Description Middle Highlighted Part",
+          "description": "Description Middle Highlighted Part",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "descriptionEnd",
+          "name": "Description End Part",
+          "description": "Description End Part",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

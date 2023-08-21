@@ -1,0 +1,33 @@
+<div class="cantidad quantity-form">
+<p class="cart-heading-black line-item-pricing-info quantity-label" for="quantity-${lineItem.UUID}">${Resource.msg('field.selectquantity','cart',null)}</p>
+<iscomment> <label class="line-item-pricing-info quantity-label" for="quantity-${lineItem.UUID}">${Resource.msg('field.selectquantity','cart',null)}</label> </iscomment>
+
+<iscomment> <div id="qty">
+    <button type="button" id="sub" class="sub">
+    <img src="${URLUtils.staticURL('/images/line-icon.svg')}" alt="line">
+    </button>
+    <input type="number" id="1" value="${lineItem.quantity}" min="1" max="3" />
+    <button type="button" id="add" class="add">
+    <img src="${URLUtils.staticURL('/images/plus.svg')}" alt="icon">
+    </button>
+</div> </iscomment>
+
+    <select id="cart-qty-select" class="form-control quantity custom-select"
+            data-uuid="${lineItem.UUID}"
+            data-pid="${lineItem.id}"
+            data-action="${pdict.actionUrls.updateQuantityUrl}"
+            data-pre-select-qty="${lineItem.quantity}"
+            id="quantity-${lineItem.UUID}"
+            name="quantity-${lineItem.UUID}"
+            aria-label="quantity: ${StringUtils.formatInteger(lineItem.quantity)}">
+        <isloop begin="${lineItem.quantityOptions.minOrderQuantity}"
+                end="${lineItem.quantityOptions.maxOrderQuantity}"
+                status="status">
+            <isif condition="${lineItem.quantity === status.index}">
+                <option selected>${status.index}</option>
+            <iselse/>
+                <option>${status.index}</option>
+            </isif>
+        </isloop>
+    </select>
+</div>

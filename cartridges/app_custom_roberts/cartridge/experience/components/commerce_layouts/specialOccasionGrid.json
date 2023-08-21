@@ -1,0 +1,90 @@
+{
+  "name": "special Occasion Grid",
+  "description": "This is a layout component for special Occasion Grid.",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "rightImage",
+      "name": "Special Occasion Layout",
+      "description": "Special Occasion Layout Primarily Created for Homepage",
+      "attribute_definitions": [
+        {
+          "id": "rightSideImage",
+          "name": "Right Side Main Image",
+          "description": "Right Side Main Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "mobSideImage",
+          "name": "Mobile Top Main Image",
+          "description": "Mobile top Main Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "headTitle",
+          "name": "Head Title",
+          "description": "Head Title for the component",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "headSubTitle",
+          "name": "Head Sub Title",
+          "description": "Head Sub Title for the component",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "description": "Description for the component",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "description": "Text for the button",
+          "type": "string",
+          "required": false
+        }
+        ,
+        {
+          "id": "buttonUrl",
+          "name": "Button URL",
+          "description": "URL for the button",
+          "type": "url",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "highlightProduct",
+      "name": "Select Product to highlight",
+      "description": "Select Product to highlight",
+      "attribute_definitions": [
+        {
+          "id": "product1",
+          "name": "Product1",
+          "type": "product",
+          "required": true,
+          "dynamic_lookup":{
+              "aspect_attribute_alias": "product"
+          }
+        },
+        {
+          "id": "product2",
+          "name": "Product2",
+          "type": "product",
+          "required": true,
+          "dynamic_lookup":{
+              "aspect_attribute_alias": "product"
+          }
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

@@ -1,0 +1,11 @@
+<span onclick="addToWishlist(this)" data-pid="${product.id}"
+    data-url="${URLUtils.url('Wishlist-AddProduct')}">
+    <i class="far fa-heart grey-heart"></i>    
+  
+</span>
+<iscomment> <button type="submit" class="btn btn-block btn-outline-primary" onclick="addToWishlist(this)" data-pid="${product.id}"
+    data-url="${URLUtils.url('Wishlist-AddProduct')}">
+    <i class="fa fa-heart"></i>    
+    <span>${Resource.msg('button.add_to_wishlist.txt', 'wishlist', null)}</span>
+</button> </iscomment>
+<script src="${URLUtils.staticURL('js/customWishlist.js')}"></script>

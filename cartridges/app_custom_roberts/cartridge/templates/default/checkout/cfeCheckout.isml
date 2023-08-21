@@ -1,0 +1,316 @@
+<isdecorate template="common/layout/accountPage">
+    <!----------------------------------------------------------------------------------->
+    <!-- Load Static Assets -->
+    <!----------------------------------------------------------------------------------->
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('https://sdk.mercadopago.com/js/v2');
+        assets.addJs('/js/mp-checkout.js');
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addCss('css/mercadopago.css');
+    </isscript>
+
+    <div class="veil custom_loader">
+        <div class="underlay" style="position:fixed;">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="wizard">
+                    <div class="wizard-inner">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <!--<div class="connecting-line"></div> -->
+                            <li role="presentation" class="step1_li active">
+                                <a href="#checkoutStep1" data-toggle="tab" aria-controls="step1" role="tab"
+                                    aria-expanded="true">
+                                    <span class="round-tab">1</span>
+                                </a>
+                                <p>Envío</p>
+                            </li>
+                            <li role="presentation" class="step2_li disabled">
+                                <a href="#checkoutStep2" data-toggle="tab" aria-controls="step2" role="tab"
+                                    aria-expanded="false">
+                                    <span class="round-tab">2</span>
+                                </a>
+                                <p>Pago</p>
+                            </li>
+                            <li role="presentation" class="step3_li disabled">
+                                <a href="#checkoutStep3" data-toggle="tab" aria-controls="step3" role="tab">
+                                    <span class="round-tab">3</span>
+                                </a>
+                                <p>Realizar pedido</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <iscomment>
+        <h1 class="page-title">
+            ${Resource.msg('title.checkout', 'checkout', null)}
+        </h1>
+    </iscomment>
+    <div class="login-box">
+        <div id="checkout-main" class="container data-checkout-stage <isif condition=" ${pdict.order.usingMultiShipping && pdict.order.shipping.length > 1}">multi-ship</isif>" data-customer-type="${pdict.customer.registeredUser ? 'registered' : 'guest'}" data-checkout-stage="${pdict.currentStage}"
+            data-checkout-get-url="${URLUtils.https('CheckoutServices-Get')}">
+            <!----------------------------------------------------------------------------------->
+            <!-- Help and Phone -->
+            <!----------------------------------------------------------------------------------->
+            <iscomment>
+                <div class="row hidden-xs-down">
+                    <div class="col-12 col-sm-5 offset-sm-7 col-md-5 offset-md-7">
+                        <div class="text-center">
+                            <span>${Resource.msg('info.need.help', 'cart', null)}</span>
+                            <span><a href="tel:${Resource.msg('info.phone.number', 'common', null)}">${Resource.msg('info.phone.number', 'common', null)}</a></span>
+                        </div>
+                    </div>
+                </div>
+            </iscomment>
+
+            <div class="row d-sm-none">
+                <div class="col-12">
+                    <span class="grand-total-label">${Resource.msgf('label.number.items.in.cart', 'cart', null, pdict.order.items.totalQuantity)}</span>
+                    <span class="grand-total-price">${pdict.order.totals.subTotal}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="steps-left">
+                        <h2 class="metodo">Método de envío</h2>
+                        <p class="elige">Elige dónde hacer la entrega</p>
+                        <iscomment> SHIPPING METHOD LIST START </iscomment>
+                        <isset name="shippingModel" value="${pdict.order.shipping[0]}" scope="page" />
+                        <isinclude template="checkout/shipping/shippingMethod" />
+                        <iscomment> SHIPPING MEHTOD LIST END </iscomment>
+
+                        <input type="hidden" id="selected_shipping_method" name="selected_shipping_method" value="${shippingModel.selectedShippingMethod.ID}" >
+
+                        <!----------------------------------------------------------------------------------->
+                        <!-- Checkout Forms: Shipping, Payment, Coupons, Billing, etc -->
+                        <!----------------------------------------------------------------------------------->
+
+                        <div class="alert alert-danger error-message" role="alert">
+                            <p class="error-message-text"></p>
+                        </div>
+
+                        <div id="Home-delivery" class="<isif condition="
+                            ${shippingModel.selectedShippingMethod.ID === 'pickup'}">d-none</isif>">
+                            <isinclude template="checkout/shipping/shipping" />
+                        </div>
+                        <div id="Pickup" class="<isif condition="
+                            ${shippingModel.selectedShippingMethod.ID === 'homedelivery'}">d-none</isif>">
+
+                        </div>
+                        <!-- Step 1: Customer -->
+                        <iscomment>We only allow edits for non-registered customers</iscomment>
+                        <isif condition="${!pdict.customer.registeredUser}">
+                            <isinclude template="checkout/customer/customer" />
+                        </isif>
+                        <iscomment>
+                            <div class="card customer-summary">
+                                <div class="card-header clearfix">
+                                    <h2 class="pull-left card-header-custom">${Resource.msg('heading.checkout.customer', 'checkout', null)}</h2>
+                                    <isif condition="${!pdict.customer.registeredUser}">
+                                        <button class="edit-button pull-right"
+                                            aria-label="${Resource.msg('action.edit.step.msg.customer', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                                    </isif>
+                                </div>
+                                <div class="card-body">
+                                    <isinclude template="checkout/customer/customerSummary" />
+                                </div>
+                            </div>
+                        </iscomment>
+
+                        <!-- Step 2: Shipping -->
+                        <iscomment>
+                            <isinclude template="checkout/shipping/shipping" />
+                        </iscomment>
+                        <div class="card shipping-summary">
+                            <div class="card-header clearfix">
+                                <h2 class="pull-left card-header-custom">${Resource.msg('heading.checkout.shipping', 'checkout', null)}</h2>
+                                <button class="edit-button pull-right"
+                                    aria-label="${Resource.msg('action.edit.step.msg.shipping', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                            </div>
+                            <div class="card-body">
+                                <isinclude template="checkout/shipping/shippingSummaryCheckout" />
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment and Billing-->
+                        <fieldset class="mp-error-messages" data-mp-error-messages="${JSON.stringify(pdict.mercadopago.errorMessages)}" />
+                        <fieldset class="mp-text-messages" data-mp-text-messages="${JSON.stringify(pdict.mercadopago.textMessages)}" />
+                        <fieldset class="js-mp-form" data-mp-preferences="${JSON.stringify(pdict.mercadopago.preferences)}" />
+
+                        <isinclude template="checkout/billing/billing" />
+                        <div class="card payment-summary">
+                            <div class="card-header clearfix">
+                                <h2 class="pull-left card-header-custom">${Resource.msg('heading.payment', 'checkout', null)}
+                                </h2>
+                                <button class="edit-button pull-right"
+                                    aria-label="${Resource.msg('action.edit.step.msg.payment', 'checkout', null)}">${Resource.msg('action.edit.step', 'checkout', null)}</button>
+                            </div>
+
+                            <div class="card-body">
+                                <isinclude template="checkout/billing/billingSummaryCheckout" />
+                            </div>
+                        </div>
+
+
+                        <!----------------------------------------------------------------------------------->
+                        <!-- Checkout Workflow Buttons -->
+                        <!----------------------------------------------------------------------------------->
+                        <div class="row">
+                            <div class="col-12 next-step-button">
+                                <div class="mb-sm-3">
+                                    <button class="proceder submit-shipping" type="submit"
+                                        name="submit" value="submit-shipping" <isif
+                                        condition="${pdict.order.usingMultiShipping && !pdict.order.shippable}">disabled
+                                        </isif>>
+                                        ${Resource.msg('button.next.payment', 'checkout', null)}
+                                    </button>
+
+                                    <button class="proceder margin-top submit-payment" type="submit" name="submit"
+                                        value="submit-payment">
+                                        ${Resource.msg('button.next.place.order', 'checkout', null)}
+                                    </button>
+
+                                    <button class="btn btn-primary btn-block place-order"
+                                        data-action="${URLUtils.url('CheckoutServices-PlaceOrder')}" type="submit"
+                                        name="submit" value="place-order">${Resource.msg('button.place.order', 'checkout', null)}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!----------------------------------------------------------------------------------->
+                <!-- Order Totals, Details and Summary -->
+                <!----------------------------------------------------------------------------------->
+                <div class="col-sm-5">
+
+                    <div class="steps-right">
+                        <div class="resumen">
+                            <h3>${Resource.msg('heading.order.summary', 'checkout', null)}</h3>
+                            <isinclude template="checkout/orderTotalSummary" />
+                        </div>
+                    </div>
+
+                    <isinclude template="checkout/orderProductSummary" />
+
+                    <div class="necesitas">
+                        <h2>${Resource.msg('label.need.help', 'checkout', null)}</h2>
+                        <p>${Resource.msg('label.need.help.description', 'checkout', null)}
+                        </br>
+                        ${Resource.msg('label.need.help.description2', 'checkout', null)}
+                        </p>                          
+                        <img src="${URLUtils.staticURL('/images/WhatsApp Icon.svg')}" alt="icon" class="mb-3">
+                        <h3>${Resource.msg('label.need.help.phone', 'checkout', null)}</h3>
+                        <p>${Resource.msg('label.need.help.schedule', 'checkout', null)} </br>
+                        ${Resource.msg('label.need.help.schedule2', 'checkout', null)}
+                        </p>
+                        <p><a href="#">${Resource.msg('label.need.help.email', 'checkout', null)}</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <isinclude template="checkout/shipping/shippingAddressTemplate" />
+    </div>
+</isdecorate>
+
+<!-- script for stepper and other checkout -->
+<script>
+function updateCheckoutState(){
+    const stepShipping = document.querySelector("#checkout-main");
+
+    const checkoutStep2 = document.querySelector("#checkoutStep2");
+    const checkoutStep3 = document.querySelector("#checkoutStep3");
+    const checkoutDivider1 = document.querySelector("#checkoutStepDivider1");
+    const checkoutDivider2 = document.querySelector("#checkoutStepDivider2");
+
+    let stage;
+    if (stepShipping) {
+        stage = stepShipping.dataset.checkoutStage;
+    };
+
+    if (stage === "shipping") {
+        $('.payment-form').hide();
+        // $('.shipping-method-list').hide();
+    }
+    if (stage === "payment") {
+        const cfeTab = document.querySelector('.nav-link.cfe-tab')
+        const checkoutUrlBegin = cfeTab.dataset.url
+
+        $( ".cfe-tab" ).trigger( "click" );
+        $('.payment-information').attr('data-payment-method-id', 'CFE');
+
+        //hide a and show li for pro
+        $('#cfe-checkout-pro-a').hide();
+        $('#cfe-checkout-pro-main').show();
+
+        $('.shipping-summary').hide();
+        $('.shipping-method-list').hide();
+
+        $('.step2_li').removeClass('disabled');
+        $('.step2_li').addClass('active');
+        $('.payment-form').show();
+        $('.inner-circle2').removeClass("d-none");
+        $('.nav-link.cfe-tab').attr('href', checkoutUrlBegin)
+        cfeTab.addEventListener('click',() => {
+            window.location.replace(checkoutUrlBegin)
+        })
+
+        var selected_shipping_method = $('#selected_shipping_method').val();
+
+        //show address on pickup condition only
+        if(selected_shipping_method == 'pickup'){
+            $('.billing-address-block').show();        
+            $('.contact-info-block').show();
+        }
+    }
+    if (stage === "placeOrder") {
+        $('.step3_li').removeClass('disabled');
+        $('.step3_li').addClass('active');
+    }
+}
+$( document ).ready(function() {
+
+    $("div[data-method-id|='CREDIT_CARD']").hide();
+
+    $("#cfe_payment_radio").prop("checked", true);
+    $('#cfe-checkout-pro-main').addClass('inactiveLink');
+
+    updateCheckoutState();
+    $(".submit-shipping").click(function(){
+        setTimeout(() => {
+            updateCheckoutState();
+        }, 1000);
+    });
+
+    $('.custom_loader').hide();
+
+    $(".dummy-paypal").click(function(){
+        $('.custom_loader').show();
+    });
+});
+function redirectPaymentUrl(url){
+
+    const response = confirm("Are you sure you want to select , it will return to the step 1. ");
+
+    if (response) {
+        $('.custom_loader').show();
+        window.location.replace(url);
+    }
+}
+</script>

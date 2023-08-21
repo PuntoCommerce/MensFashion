@@ -1,0 +1,33 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/imageTextButtons.css');
+</isscript>
+
+<iscomment>
+  <div class="ITBC-container" style="height: ${pdict.layoutSize.componentSize}">
+</iscomment>
+<div class="ITBC-container">
+  <img class="d-none d-md-block" style="object-position:${pdict.backgroundImage.focalPointX} ${pdict.backgroundImage.focalPointY};filter: brightness(${pdict.imageBrightness});"
+    src="${pdict.backgroundImage.src.desktop}" alt="backgroud image" />
+  <img class="d-sm-block d-md-none" style="object-position:${pdict.backgroundImageMobile.focalPointX} ${pdict.backgroundImageMobile.focalPointY};filter: brightness(${pdict.imageBrightness});"
+    src="${pdict.backgroundImageMobile.src.desktop}" alt="backgroud image Mobile" />
+  <div class="ITBC-content cust-row" style="${pdict.layoutSize.itemsLayout.content}">
+    <div class="markup-wrapper col-lg-8"
+      style="align-items: ${pdict.markupLayout == 'left' ? 'start' : pdict.markupLayout == 'center' ? 'center' : 'end'};">
+      <div class="ITBC-markup">
+        <isprint value="${pdict.text}" encoding="off" />
+      </div>
+    </div>
+    <div class="ITBC-buttons align-button-${pdict.align_button}" style="flex-direction: ${pdict.layoutSize.itemsLayout.buttons}">
+      <isloop items="${pdict.buttons}" var="button" status="loopstatus">
+        <isif condition="${button.active}">
+          <a class="with display-${pdict.display_button} margin-top-${pdict.marginT}" href="${button.url}">
+            <button class="btn-ITBC" type="button">
+              <span class="text-banner-button">${button.text}</span>
+            </button>
+          </a>
+        </isif>
+      </isloop>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="nav navbar-nav m-auto" role="menu">
+       
+        <isif condition="${pdict.categories}">
+            <isloop items="${pdict.categories}" var="category">
+             <iscomment> <isprint value="${JSON.stringify(category)}" /> </iscomment>
+                <isif condition="${category.subCategories}">
+                    <li class="dropdown menu-large nav-item" role="presentation">
+                        <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />" id="${category.id}"
+                        class="nav-link text-uppercase dropdown-toggle level-one" role="button" data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false" tabindex="0">${category.name}</a>
+                        <isset name="menuItem" value="${category}" scope="page" />
+                        <iscomment> <isprint value="${JSON.stringify(menuItem)}"/> </iscomment>
+                        <isinclude template="components/header/menuItem" />
+                    </li>
+                <iselse/>
+                    <li class="dropdown menu-large nav-item" role="presentation">
+                        <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />" id="${category.id}"
+                        class="nav-link" role="link" tabindex="0">${category.name}
+                        </a>
+                    </li>
+                </isif>
+            </isloop>
+        </isif>
+        <iscomment>
+            <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
+            <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
+        </iscomment>
+    </ul>
+    <iscomment> <span class="mobile-list d-xs-block d-sm-none d-md-none">
+            <li>
+                <a href="/">
+                    <img src="${URLUtils.staticURL('/images/profile.svg')}" alt="icon" /> Mi Cuenta
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <img src="${URLUtils.staticURL('/images/cart.svg')}" alt="icon" /> Mi Cuenta
+                </a>
+            </li>
+
+        </span> </iscomment>
+</div>
+<ul class="nav-mobile">
+
+    <li class="menu-container">
+        <input id="menu-toggle" type="checkbox" />
+        <ul class="menu-sidebar">
+            <isif condition="${pdict.categories}">
+                <isloop items="${pdict.categories}" var="category">
+                    <isif condition="${category.subCategories}">
+                        <li>
+                            <input type="checkbox" id="sub-${category.id}" class="submenu-toggle" />
+                            <span><a href="${category.url}">${category.name}</a></span>
+                            <label class="arrow right" for="sub-${category.id}"><img src="${URLUtils.staticURL('/images/chevron-right.svg')}"" alt=""></label>
+                            
+                            <ul class="menu-sub">
+                                <li class="menu-sub-title">
+                                    <label class="arrow left" for="sub-${category.id}">
+                                    <img src="${URLUtils.staticURL('/images/chevron-left.svg')}"" alt="arrow icon">
+                                    </label>
+                                    <span class="center-subcategory-menu">
+                                    <a href="${category.url}">${category.name}</a>
+                                    </span>
+                                </li>
+                                <isset name="menuItem" value="${category}" scope="page" />
+                                <isinclude template="components/header/Mobilemenuitem" />
+                            </ul>
+                        </li>
+                    <iselse/>
+                        <li><a href="<isprint value=" ${category.url}"
+                                encoding="htmldoublequote" />">${category.name}</a></li>
+                    </isif>
+                </isloop>
+            </isif>
+            <li class="top-line-mobile">
+                <a href="${URLUtils.https('Login-Show')}">
+                    <img src="${URLUtils.staticURL('/images/user.svg')}" alt="icon" /> Mi Cuenta
+                </a>
+            </li>
+            <li>
+                <a href="${URLUtils.https('Cart-Show')}">
+                    <img src="${URLUtils.staticURL('/images/shopping-cart.svg')}" alt="icon" /> Mi Carrito
+                </a>
+            </li>
+
+        </ul>
+    </li>
+
+</ul>
+<!-- -->
+
+<iscomment>
+    <nav class="navbar navbar-expand-md bg-inverse col-12">
+        <div class="close-menu clearfix d-lg-none">
+            <div class="back pull-left">
+                <button role="button" aria-label="${Resource.msg('label.header.menu.back', 'common', null)}">
+                    <span class="caret-left"></span>
+                    ${Resource.msg('link.header.menu.back', 'common', null)}
+                </button>
+            </div>
+            <div class="close-button pull-right">
+                <button role="button" aria-label="${Resource.msg('label.header.menu.close', 'common', null)}">
+                    ${Resource.msg('link.header.menu.close', 'common', null)}
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+        <div class="menu-group" role="navigation">
+            <ul class="nav navbar-nav" role="menu">
+                <isif condition="${pdict.categories}">
+                    <isloop items="${pdict.categories}" var="category">
+                        <isif condition="${category.subCategories}">
+                            <li class="nav-item dropdown" role="presentation">
+                                <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />"
+                                id="${category.id}" class="nav-link dropdown-toggle" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                tabindex="0">${category.name}</a>
+                                <isset name="menuItem" value="${category}" scope="page" />
+                                <isinclude template="components/header/menuItem" />
+                            </li>
+                        <iselse/>
+                            <li class="nav-item" role="presentation">
+                                <a href="<isprint value=" ${category.url}" encoding="htmldoublequote" />"
+                                id="${category.id}" class="nav-link" role="link" tabindex="0">${category.name}</a>
+                            </li>
+                        </isif>
+                    </isloop>
+                </isif>
+                <isinclude url="${URLUtils.url('Account-Header', 'mobile', true)}" />
+                <isinclude url="${URLUtils.url('Page-Locale', 'mobile', true)}" />
+            </ul>
+        </div>
+    </nav>
+</iscomment>

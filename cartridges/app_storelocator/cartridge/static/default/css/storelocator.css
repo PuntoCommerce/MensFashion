@@ -23,7 +23,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0px;
-  background: #F5F5F5;
+  /* background: #F5F5F5; */
   min-height: 850px;
 }
 
@@ -43,7 +43,7 @@ body {
 
 #map-list {
   padding-right: 0px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   height: 730px;
   width: 25%;
@@ -58,7 +58,7 @@ body {
   height: 15%;
   width: 90%;
   background: #F3F3F3;
-  margin-top: 90px;
+  /* margin-top: 90px; */
   margin-bottom: 20px;
 }
 
@@ -79,8 +79,8 @@ body {
 }
 
 .storelocator #listing .item {
-  padding: 10px;
-  margin: 0 15px;
+  padding: 15px;
+  margin: 0 5px;
 }
 #details-hours span {
   position: relative;
@@ -96,8 +96,15 @@ body {
 #storelocator-search::placeholder,
 .storelocator .sub-item span,
 .storelocator #listing .item .name {
+  font-family: 'Avenir LT Std';
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
-  font-family: "Avenir-Next";
+  line-height: 23px;
+  color: #000000;
+  text-align: left;
+  display: flex;
+  max-width: 100%;
 }
 
 .details .sub-item,

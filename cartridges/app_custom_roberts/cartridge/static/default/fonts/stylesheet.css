@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-BoldCnIt.eot');
+    src: url('MinionPro-BoldCnIt.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-BoldCnIt.woff2') format('woff2'),
+        url('MinionPro-BoldCnIt.woff') format('woff'),
+        url('MinionPro-BoldCnIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-Bold.eot');
+    src: url('MinionPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-Bold.woff2') format('woff2'),
+        url('MinionPro-Bold.woff') format('woff'),
+        url('MinionPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-BoldCn.eot');
+    src: url('MinionPro-BoldCn.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-BoldCn.woff2') format('woff2'),
+        url('MinionPro-BoldCn.woff') format('woff'),
+        url('MinionPro-BoldCn.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-BoldIt.eot');
+    src: url('MinionPro-BoldIt.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-BoldIt.woff2') format('woff2'),
+        url('MinionPro-BoldIt.woff') format('woff'),
+        url('MinionPro-BoldIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-Medium.eot');
+    src: url('MinionPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-Medium.woff2') format('woff2'),
+        url('MinionPro-Medium.woff') format('woff'),
+        url('MinionPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-Regular.eot');
+    src: url('MinionPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-Regular.woff2') format('woff2'),
+        url('MinionPro-Regular.woff') format('woff'),
+        url('MinionPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-MediumIt.eot');
+    src: url('MinionPro-MediumIt.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-MediumIt.woff2') format('woff2'),
+        url('MinionPro-MediumIt.woff') format('woff'),
+        url('MinionPro-MediumIt.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-It.eot');
+    src: url('MinionPro-It.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-It.woff2') format('woff2'),
+        url('MinionPro-It.woff') format('woff'),
+        url('MinionPro-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-Semibold.eot');
+    src: url('MinionPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-Semibold.woff2') format('woff2'),
+        url('MinionPro-Semibold.woff') format('woff'),
+        url('MinionPro-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-SemiboldIt.eot');
+    src: url('MinionPro-SemiboldIt.eot?#iefix') format('embedded-opentype'),
+        url('MinionPro-SemiboldIt.woff2') format('woff2'),
+        url('MinionPro-SemiboldIt.woff') format('woff'),
+        url('MinionPro-SemiboldIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+

@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-10 col-sm-11"> <h6 class="wishlist-header">${item.name}</h6></div>
+    <div class="col-2 col-sm-1">
+        <isif condition=${!pdict.wishlist.publicView}>
+            <!--- remove wishlist icon--->
+            <div class="d-lg-none d-none">
+                <!---hide lg and xl--->
+                <a href="javascript:void(0)" type="button" class="remove-btn remove-from-wishlist"
+                    data-url="${URLUtils.url('Wishlist-RemoveProduct', 'pid', item.pid)}" <isif
+                    condition="${item.variantAttributes}">
+                    aria-label="${Resource.msgf('wishlist.remove.item.variant', 'wishlist', null, item.name, item.variantAttributes)}">
+                    <iselse>
+                        aria-label="${Resource.msgf('wishlist.remove.item', 'wishlist', null, item.name)}">
+        </isif>
+        <img src="${URLUtils.staticURL('images/delete.svg')}" alt="Remove" />
+        </a>
+    </div>
+    <div class="hidden-md-down">
+        <!---hide medium, sm, xs--->
+        <a href="javascript:void(0)" onclick="removeFromWishlist(this)" class="remove-btn-lg remove-from-wishlist"
+            data-url="${URLUtils.url('Wishlist-RemoveProduct', 'pid', item.pid)}" <isif
+            condition="${item.variantAttributes}">
+            aria-label="${Resource.msgf('wishlist.remove.item.variant', 'wishlist', null, item.name, item.variantAttributes)}">
+            <iselse>
+                aria-label="${Resource.msgf('wishlist.remove.item', 'wishlist', null, item.name)}">
+                </isif>
+              <img src="${URLUtils.staticURL('images/delete.svg')}" alt="Remove" />
+        </a>
+    </div>
+    </isif>
+</div>
+</div>

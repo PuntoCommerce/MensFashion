@@ -1,0 +1,27 @@
+<div class="account-box">
+    <div class="inner-accout">
+        <p>${Resource.msg('label.addressbook','account',null)}</p>
+        <isif condition="${pdict.account.preferredAddress}">
+            <a href="${URLUtils.url('Address-List')}" class="pull-right" aria-label="${Resource.msg('label.addressbook.viewaddress','account',null)}">
+            <img class="mb-2" src="${URLUtils.staticURL('/images/edit-icon.svg')}" alt="Envío a domicilio" /></a>
+        </isif>
+    </div>
+    <isif condition="${pdict.account.preferredAddress}">
+        <div class="profile-detail">
+            <div>
+                <h3>${Resource.msg('label.addressbook.defaultaddress','account',null)}</h3>
+                <p>${pdict.account.preferredAddress.address.ID} <br>
+                    ${pdict.account.preferredAddress.address.firstName} ${pdict.account.preferredAddress.address.lastName}
+                <br>${pdict.account.preferredAddress.address.address1}
+                <br>${pdict.account.preferredAddress.address.city}, ${pdict.account.preferredAddress.address.stateCode} ${pdict.account.preferredAddress.address.postalCode}
+                <br>${pdict.account.preferredAddress.address.phone}</p>
+            </div>
+        </div>
+    </isif>
+    <div class="dashed-line">
+        <img class="vertical-bottom" src="${URLUtils.staticURL('/images/plus-icon.svg')}" alt="Agregar nuevo" />
+        <a href="${URLUtils.url('Address-AddAddress')}" aria-label="${Resource.msg('label.addressbook.addnewaddress','account',null)}">
+            ${Resource.msg('label.addressbook.addnewaddress','account',null)}
+        </a>
+    </div>
+</div>

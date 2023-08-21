@@ -1,0 +1,14 @@
+.product-breadcrumb {
+    a {
+        font-size: 12px;
+        font-family: 'Avenir-Next';
+        text-transform: initial;
+    }
+    .breadcrumb li {
+        & a {
+            color: #979797;
+            letter-spacing: 1px;
+        }
+
+    }
+}

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+        <!---Profile--->
+        <isinclude template="account/profileCard" />
+
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <!---Password--->
+            <isinclude template="account/passwordCard" />
+        </isif>
+
+        <!---Address Book--->
+        <isinclude template="account/addressBookCard" />
+       
+    </div>
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+        <!---Order History--->
+        <isif condition="${pdict.account.orderHistory}">
+            <isset name="order" value="${pdict.account.orderHistory}" scope="page" />
+            <isinclude template="account/order/orderHistoryCard" />
+        </isif>
+        <!---Payment--->
+        <isinclude template="account/paymentCard" />
+        <!---Paypal payment block--->
+        <iscomment> <isif condition="${pdict.paypal && (!empty(pdict.paypal.savedBA) || pdict.paypal.billingAgreementEnabled)}">
+            <isinclude template="account/paypal/paymentPaypal" />
+        </isif> </iscomment>
+        <isif condition="${pdict.account.wishlist}">
+            <!---Wishlist--->
+            <div class="wishlist-account-card"
+                data-error-msg="${Resource.msg('wishlist.removefromwishlist.failure.msg', 'wishlist', null)}">
+                <isinclude template="account/wishlist/listCards" />
+            </div>
+        </isif>
+        
+        <!---Log out--->
+        <isinclude template="account/logoutCard" />
+    </div>
+</div>

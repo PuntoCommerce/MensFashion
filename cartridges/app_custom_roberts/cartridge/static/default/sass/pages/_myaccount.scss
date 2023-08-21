@@ -1,0 +1,305 @@
+.accountBtns {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+
+        .btn-cancel {
+            background: none;
+            border: 1px solid #000;
+        }
+    }
+
+    .btn-cancel,
+    .btn-save {
+        height: 40px;
+        color: #000;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 1070px) {
+        display: block;
+    }
+}
+
+.address {
+    &--labels {
+        font-family: $font-family-bold;
+    }
+}
+
+.card-wishlist {
+    margin-top: 53px;
+}
+
+.card-header.wishlist-owner {
+    background: #64656a;
+    color: #fff;
+    height: auto;
+    font-family: $font-family-bold;
+    border-radius: 3px;
+}
+
+.card.card-product-info {
+    margin-top: 14px;
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+}
+
+.card-product-info {
+    &__body {
+        &--image {
+            padding: 0;
+
+            .product-image {
+                height: 196px;
+                margin-left: 34px;
+                margin-right: 16px;
+            }
+        }
+
+        &--attributes {
+            p {
+                line-height: 22px;
+                font-size: 16px;
+            }
+        }
+
+        &--edit {
+            span {
+                color: red;
+                text-decoration: underline;
+                font-size: 16px;
+                line-height: 44px;
+            }
+        }
+
+        &--price-container {
+            padding: 0 96px 0 66px;
+
+            .line-item-price-info,
+            .line-item-pricing-info {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .quantity.custom-select {
+                width: 111px;
+            }
+
+            .sales,
+            .strike-through {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &__footer {
+        &--btn-add-cart {
+            background: #d9d9d9;
+            border: none;
+            width: 219px;
+            height: 40px;
+            font-family: $font-family-bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+            margin-right: 8px;
+            color: #000;
+        }
+    }
+}
+
+.card-header-body {
+    margin: 24px 34px 11px 34px;
+
+    .remove-from-wishlist {
+        background: #fff;
+        border: none;
+    }
+}
+
+.line-dotted {
+    border-top: 1px solid gray;
+    margin: 26px 22px;
+}
+
+.card-myaccount {
+    flex: 0 0 66.66667%;
+    margin-top: 15px;
+
+    &--buttons-container {
+        width: 70%;
+        display: flex;
+        margin: 0 auto 64px auto;
+    }
+
+    @media (max-width: 768px) {
+        flex: 100%;
+
+        &--buttons-container {
+            width: 100%;
+        }
+
+        .container.account-sections .row {
+            border: 1px solid red;
+        }
+
+        .wl-social-sharing {
+            padding: 0;
+        }
+
+        .order-top {
+            margin-top: 14px;
+        }
+
+        .card-wishlist {
+            margin-top: 10px;
+        }
+
+        .card-product-info {
+            &__body {
+                &--price-container {
+                    .quantity-form-wishlist {
+                        display: grid;
+                    }
+                }
+            }
+
+            &__footer {
+                display: flex;
+                justify-content: flex-end;
+
+                &--btn-add-cart {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-top: 19px;
+                }
+            }
+        }
+
+        .product-card-price {
+            margin-top: 17px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .line-dotted {
+            display: none;
+        }
+
+        &__editAddress{
+            .card-header{
+                height: 35px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.show-password-button {
+    background: none;
+    border: none;
+    float: right;
+    font-size: 18px;
+}
+
+.show-password-button:focus {
+    outline: 0;
+}
+
+.register-btn {
+    margin: 35px auto 9px auto;
+    width: 100%;
+    height: 34px;
+    padding: 0;
+    background: #d9d9d9;
+    color: #000000 !important;
+    border: none;
+    font-family: "Avenir-LT-Std";
+    font-weight: 400;
+    font-size: 14px;
+
+    &:hover {
+        background-color: #000000;
+        color: #ffffff !important;
+    }
+}
+
+
+//Padding in back to my account btn
+.back-to-my-account {
+    padding: 38px;
+
+    @include respond(phone) {
+        padding: 43px;
+    }
+}
+
+////
+.order-top .order-history-form-group {
+    position: static;
+
+    .card-make-default-link {
+        a {
+            color: #2D64FC;
+            font-family: $font-family-normal;
+        }
+    }
+}
+
+.backBtn {
+    a {
+        color: #2D64FC;
+        font-family: $font-family-normal;
+    }
+}
+
+#myaccount {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+}
+
+
+.order-list-container .card-header.clearfix,
+.order-list-container .card-body,
+.order-list-container .card-footer {
+    width: 100%;
+}
+
+
+a.see-order-btn {
+    color: black !important;
+    text-decoration: underline !important;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+.order-confirm-create-account {
+    background: none !important;
+    .card-header{
+        background: none !important;
+    }
+}
+
+.container_confirmation{
+    background: none !important;
+
+    .card-header{
+        background: none !important;
+    }
+}

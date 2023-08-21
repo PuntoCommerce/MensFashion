@@ -73,7 +73,7 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
   } else if (OPResponse.balance < totalGrossPrice ) {
     let invalidPaymentMethod = Resource.msg(
       "error.payment.fail",
-      "creditCard",
+      "cfe",
       null
     );
     return {
@@ -95,7 +95,7 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
   } else if (OPResponse.responseCode == -31) {
     let invalidPaymentMethod = Resource.msg(
       "error.payment.card",
-      "creditCard",
+      "cfe",
       null
     );
     return {
@@ -106,7 +106,7 @@ function Handle(basket, paymentInformation, paymentMethodID, req) {
   } else if (OPResponse.responseCode == -36) {
     let invalidPaymentMethod = Resource.msg(
       "error.payment.nip",
-      "creditCard",
+      "cfe",
       null
     );
     return {

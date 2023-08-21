@@ -1,0 +1,32 @@
+<isif condition="${price.type === 'tiered'}">
+    <div class="price">
+        <isinclude template="/product/components/pricing/tiered" />
+    </div>
+<iselseif condition="${price.type === 'range'}">
+    <div class="price">
+        <isinclude template="/product/components/pricing/range" />
+    </div>
+<iselse>
+    <div class="price cart-price-number-">
+        <isset name="isLowPrice" value="${}" scope="page" />
+        <isinclude template="/product/components/pricing/default" />
+    </div>
+</isif>
+<isif condition="${product.promotions.length > 0}">
+
+    <div class="highlight-container mb-1">
+        <isloop items="${product.promotions}" var="promotion" status="promdet">
+            <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
+                <div>
+
+                </div>
+            <iselseif condition="${promotion.name !== null}" />
+                <span class="promotion-item">${promotion.name}</span>
+            <iselse/>
+                <span class="promotion-item">${promotion.calloutMsg}</span>
+
+            </isif>
+
+        </isloop>
+    </div>
+</isif>

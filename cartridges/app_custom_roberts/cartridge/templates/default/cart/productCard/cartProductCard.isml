@@ -1,0 +1,60 @@
+<isset name="hasEmbeddedBonusProducts" value="${lineItem.bonusProductLineItemUUID === 'bonus'}" scope="page" />
+<isset name="bonusproductlineitem" value="${hasEmbeddedBonusProducts ? 'bonus-product-line-item' : ''}" scope="page" />
+<isset name="bonuslineitemrow" value="${hasEmbeddedBonusProducts ? 'bonus-line-item-row' : ''}" scope="page" />
+
+<div class="loops ${bonusproductlineitem} uuid-${lineItem.UUID}">
+    <!--- name and remove buttons --->
+    <isinclude template="cart/productCard/cartProductCardHeader" />
+
+    <div class="flex-cart-list ${bonuslineitemrow}">
+        <div class="imag-blocks">
+            <img class="product-image" src="${lineItem.images.small[0].url}" alt="${lineItem.images.small[0].alt}"
+                title="${lineItem.images.small[0].title}">
+        </div>
+        <div class="color-selected">
+            <div>
+                <isloop items="${lineItem.variationAttributes}" var="attribute">
+                    <p class="cart-heading-black ${attribute.displayName}-${lineItem.UUID}">
+                        ${attribute.displayName}: ${attribute.displayValue}</p>
+                </isloop>
+                <isloop items="${lineItem.options}" var="option">
+                    <isif condition="${!!option}" />
+                    <div class="lineItem-options-values" data-option-id="${option.optionId}"
+                        data-value-id="${option.selectedValueId}">
+                        <p class="line-item-attributes">${option.displayName}</p>
+                    </div>
+                    </isif>
+                </isloop>
+                <isinclude template="cart/productCard/cartProductCardAvailability" />
+            </div>
+        </div>
+        <div class="break"></div>
+        <!-- break -->
+        <iscomment> <div class="precio">
+            <p class="cart-heading-black">Precio:</p>
+            <p class="line-through">$6,990</p>
+            <p class="cart-f-price">$3,495</p>
+        </div>
+        <div class="cantidad">
+            <p class="cart-heading-black">Cantidad:</p>
+            <div id="qty">
+                <button type="button" id="sub" class="sub">
+                    <img src="images/line-icon.svg" alt="line">
+                </button>
+                <input type="number" id="1" value="1" min="1" max="3" />
+                <button type="button" id="add" class="add">
+                    <img src="images/plus.svg" alt="icon">
+                </button>
+            </div>
+        </div>
+        <div class="total-prices">
+            <p class="cart-heading-black">Total:</p>
+            <p class="cart-f-price">$3,495</p>
+        </div> </iscomment>
+        <isinclude template="cart/productCard/cartProductCardProductPrice" />
+    </div>
+
+    <isif condition="${lineItem.bonusProductLineItemUUID === 'bonus'}">
+        <isinclude template="cart/productCard/cartEmbeddedBonusProducts" />
+    </isif>
+</div>

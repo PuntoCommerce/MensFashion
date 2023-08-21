@@ -1,0 +1,75 @@
+<ul class="dropdown-menu megamenu ${category.id}" role="menu" aria-hidden="true" aria-label="${category.id}">
+    <div class="row">
+        <isset value="${category.id}" name="cat"  scope="page"/>
+        <isloop items="${menuItem.subCategories}" var="category">
+
+            <isif condition="${category.subCategories}">
+                <li class="col-md-2 dropdown-item ${cat}-hide">
+                    <ul>
+                        <li class="dropdown-header text-uppercase" role="presentation" data-id="${category.id}">
+                            <a href="${category.url}" id="${category.id}" role="menuitem" class="dropdown-link"  tabindex="0">${category.name}</a>
+                        </li>
+                        <isloop items="${category.subCategories}" var="SubCategory">
+                            <iscomment>
+                                <isprint value="${JSON.stringify(SubCategory)}" />
+                            </iscomment>
+                            <isif condition="${SubCategory.subCategories}">
+                                <li class="display-menu-data" data-id="${cat}" data-subid="${SubCategory.id}" data-close-id="0"> <a href="javascript:void(0)" id="${SubCategory.id}">${SubCategory.name} <span class="submenu-arrow"> > </span> </a> </li>
+                            <iselse>
+                                <li data-id="${cat}"> <a href="${SubCategory.url}" id="${SubCategory.id}">${SubCategory.name}</a></li>
+                            </isif>
+                        </isloop>
+                    </ul>
+                </li>
+                <isloop items="${category.subCategories}" var="SubCategory">
+                <isif condition="${SubCategory.subCategories}">
+             
+                <div class="row d-none submenu-category ${ SubCategory.id+'-'+cat}-sub-category">
+                    <ul class="submenu-list">
+                        <li class="col-md-1" >
+                            <img src="${URLUtils.staticURL('/images/left-arrow.svg')}" alt="icon" class="display-menu-data" data-close-id="${SubCategory.id+'-'+cat+'-sub-category'}" data-id="${cat}" />
+                        </li>
+                        <li class="col-md-10 dropdown-item">
+                            <ul>
+                                <li class="sub-dropdown-header text-uppercase">
+                                <a href="${SubCategory.url}" id="${SubCategory.id}">${SubCategory.name}</a>
+                                </li>
+                                <isloop items="${SubCategory.subCategories}" var="SubCategory1">
+                                    <li> <a href="${SubCategory1.url}" id="${SubCategory1.id}">${SubCategory1.name}</a></li>
+                                </isloop>
+                            </ul>
+                        </li>
+                        <li class="col-md-1" data-close-id="${SubCategory.id+'-'+cat+'-sub-category'}" data-id="${cat}">
+                            <img src="${URLUtils.staticURL('/images/cross.svg')}" alt="icon" class="display-menu-data"  data-close-id="${SubCategory.id+'-'+cat+'-sub-category'}" data-id="${cat}" />
+                        </li>
+                    </ul>
+                </div>
+                </isif>
+                 </isloop>
+            </isif>
+        </isloop>
+        <isloop items="${menuItem.subCategories}" var="category">
+            <isif condition="${!category.subCategories}">
+                <li class="col-md-2 dropdown-item ${cat}-hide">
+                    <ul>
+                        <li class="dropdown-header custom" role="presentation">
+                            <a href="${category.url}" id="${category.id}" role="menuitem" class="dropdown-link"  tabindex="0">${category.name}</a>
+                        </li>
+                    </ul>
+                </li>
+            </isif>
+        </isloop>
+    </div>
+</ul>
+<script>
+
+// $(document).ready(function(){
+//     $('li').click(function(){
+//         let category = $(this).attr('data-id');
+//         let subid = $(this).attr('subid');
+//         alert();
+//         $('.'+category+' div .'+category+'-hide').hide();
+//         $('.'+subid+'-'+category+'-sub-category').css({'display':'flex!important'});
+//     });
+// });
+</script>

@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Avenir-LT-Std", "Avenir-Next", "Avenir-LT-Std-BlackOblique",
+  "AvenirLTStd-Heavy";
+$font-family-bold: "AvenirLTStd-Heavy";
+$font-family-bold-2: "Avenir-bold";
+$font-family-bold-italic: "Avenir-LT-Std-BlackOblique";
+$font-family-normal: "Avenir-Next";
+$font-family-normal2: "Avenir-LT-Std";
+
+/// Index font family Avenir Std
+/// @type length
+$avenir-LT-Std: 1;
+
+/// Index font family Avenir Next
+/// @type length
+$avenir-Next: 2;
+
+/// Index font family Avenir Black
+/// @type length
+$avenir-LT-Black: 3;
+
+/// Index font family Avenir Black
+/// @type length
+$avenir-LT-Heavy: 4;
+
+///Font style
+/// @type string
+$font-style: "normal";
+
+/// Main brand color
+/// @type Color
+$brand-color: #fa4238;
+
+/// Dark main brand color
+/// @type Color
+$brand-color-dark: #ab0e06;
+
+/// Light Grey
+/// @type Color
+$light-grey: #d8d8d8;
+
+/// Light Medium Grey
+/// @type Color
+$light-mid-grey: #979797;
+
+/// Medium Grey
+/// @type Color
+$mid-grey: #64656a;
+
+/// Dark Grey
+/// @type Color
+$dark-grey: #393939;
+
+/// Blue
+/// @type Color
+$blue-color: #0079c0;
+
+/// Blue links
+/// @type Color
+$blue-color-links: #007bdb;
+
+/// Black general color
+/// @type Color
+$text-color-black: #000000;
+
+/// White general color
+/// @type Color
+$white-color: #ffffff;
+
+/// Fonts size H1
+/// @type Length
+$font-size-h1: 55px;
+
+/// Fonts size H2
+/// @type Length
+$font-size-h2: 40px;
+
+/// Fonts size H3
+/// @type Length
+$font-size-h3: 32px;
+
+/// Fonts size Heading PLP
+/// @type Length
+$font-size-heading-plp: 30px;
+
+/// Fonts size H4
+/// @type Length
+$font-size-h4: 28px;
+
+/// Fonts size H5
+/// @type Length
+$font-size-h5: 20px;
+
+/// Fonts size H5 and Paragraph
+/// @type Length
+$font-size-h5-and-paragraph: 16px;
+
+/// Fonts size filters
+/// @type Length
+$font-size-filters: 15px;
+
+$font-size-minimal: 14px;
+
+/// Fonts size breadcrumb
+/// @type Length
+$font-size-breadcrumb: 14px;
+
+/// Line height H1
+/// @type Length
+$line-height-h1: 75.13px;
+
+/// Line height H2
+/// @type Length
+$line-height-h2: 54.64px;
+
+/// Line height H3
+/// @type Length
+$line-height-h3: 43.71px;
+
+/// Line height H4
+/// @type Length
+$line-height-h4: 38.25px;
+
+/// Line height Heading PLP
+/// @type Length
+$line-height-heading-plp: 34px;
+
+/// Line height H5 and Paragraph
+/// @type Length
+$line-height-h5-and-paragraph: 21.86px;
+
+/// Line height H5 and Paragraph
+/// @type Length
+$spacing-30: 30px;
+
+/// Line height H5 and Paragraph
+/// @type Length
+$max-width: 1444px;
+
+$font-weight-bolder: 900;
+
+$spacing-x-small: 6px;
+$spacing-x-small-bigger: 8px;
+$spacing-small: 12px;
+$spacing-small-medium: 18px;
+$spacing-medium: 24px;
+$spacing-medium-large: 36px;
+$spacing-medium-x-large: 45px;
+$spacing-medium-larger: 65px;
+$spacing-large: 72px;

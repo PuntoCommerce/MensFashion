@@ -1,0 +1,70 @@
+<form action="${pdict.actionUrl}" class="login form-sign-in" method="POST" name="login-form">
+    <div class="form-group required">
+        <label class="form-control-label" for="login-form-email">
+            <span class="checkout__text--auth">
+                ${Resource.msg('label.input.login.email', 'login', null)} <iscomment> <span
+                    class="checkout__text--auth-required">Requerido</span> </iscomment>
+            </span>
+            <iscomment> <span class="checkout__text--space">
+                    ${Resource.msg('label.input.login.required', 'login', null)}
+                </span> </iscomment>
+        </label>
+        <input type="email" id="login-form-email" required aria-required="true"
+            class="checkout__form form-control required" aria-describedby="form-email-error" name="loginEmail">
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+    <div class="form-group required passwordLabel checkout">
+        <label class="checkout__text--auth">
+            ${Resource.msg('label.input.login.password', 'login', null)} <iscomment> <span
+                class="checkout__text--auth-required">Requerido</span> </iscomment>
+        </label>
+        <iscomment> <span class="checkout__text--space">
+                ${Resource.msg('label.input.login.required', 'login', null)}
+            </span> </iscomment>
+        <span class="eye-icon">
+            <input type="password" id="login-form-password" required aria-required="true"
+                class="checkout__form form-control show-password required" aria-describedby="form-password-error"
+                name="loginPassword">
+            <img src="${URLUtils.staticURL('/images/eye.svg')}" class="hide" data-id="login-form-password" alt="show password">
+        </span>
+        <div class="invalid-feedback" id="form-password-error"></div>
+    </div>
+
+
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+
+    <div class="clearfix">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="pull-left forgot-password">
+                    <a class="d-sm-none olvidaste-p" href="${URLUtils.url('Account-PasswordReset')}"
+                        title="${Resource.msg('link.login.forgotpassword', 'login', null)}"  data-toggle="modal" data-target="#requestPasswordResetModal">
+                        ${Resource.msg('link.login.forgotpassword', 'login', null)}
+                    </a>
+
+                    <a id="password-reset" class="d-none d-sm-block hidden-xs-down olvidaste-p"
+                        title="${Resource.msg('link.login.forgotpassword', 'login', null)}" data-toggle="modal"
+                        href="${URLUtils.url('Account-PasswordResetDialogForm')}"
+                        data-target="#requestPasswordResetModal">
+                        ${Resource.msg('link.login.forgotpassword', 'login', null)}
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="custom-control custom-radio custom-control-inline pull-right remember-me">
+                    <input type="radio" class="form-check-input remember-check-input" id="rememberMe"
+                        name="loginRememberMe" value="true" <isif condition="${pdict.rememberMe}">checked</isif> >
+                    <label class="form-check-label" for="rememberMe">
+                        ${Resource.msg('label.checkbox.login.rememberme', 'login', null)}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit"
+        class="mb-4 btn btn--gray btn__small text-uppercase pagar">${Resource.msg('button.text.loginform', 'login', null)}</button>
+
+</form>

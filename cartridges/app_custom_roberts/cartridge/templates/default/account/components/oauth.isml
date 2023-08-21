@@ -1,0 +1,12 @@
+<form action="" class="login-oauth" method="post" name="login-oauth-form">
+    <a href="${URLUtils.https('Login-OAuthLogin', 'oauthProvider', 'Google', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}"
+        class="sing-in-socail oauth-google" role="button" aria-pressed="true">
+        <img src="${URLUtils.staticURL('/images/google.svg')}" alt="icon">
+        <span>${Resource.msg('button.text.oauth.google', 'login', null)}</span>
+    </a>
+    <a href="${URLUtils.https('Login-OAuthLogin', 'oauthProvider', 'Facebook', 'oauthLoginTargetEndPoint', pdict.oAuthReentryEndpoint)}"
+        class="sing-in-socail oauth-facebook" role="button" aria-pressed="true">
+        <img src="${URLUtils.staticURL('/images/facebook-icon.svg')}" alt="icon">
+        <span>${Resource.msg('button.text.oauth.facebook', 'login', null)}</span>
+    </a>
+</form>

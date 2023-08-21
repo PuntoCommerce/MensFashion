@@ -1,0 +1,36 @@
+{
+    "name": "Robert's Custom Size Container",
+    "description": "This component render a custom size container",
+    "group": "commerce_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "containerWidth",
+            "attribute_definitions": [
+                {
+                    "id": "width",
+                    "name": "Container width",
+                    "description": "Container % width releated to the parent container full width",
+                    "type": "enum",
+                    "values": [
+                        "95",
+                        "90",
+                        "85",
+                        "80",
+                        "75",
+                        "70",
+                        "65",
+                        "60"
+                    ],
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id": "customSizeContainer",
+            "name": "Container",
+            "component_type_exclusions": []
+        }
+    ]
+}

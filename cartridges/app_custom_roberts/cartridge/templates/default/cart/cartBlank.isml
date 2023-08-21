@@ -1,0 +1,37 @@
+<section class="segur-space">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="seguir">
+                    <h3>
+                        <a class="continue-shopping-link" href="${URLUtils.url('Home-Show')}"
+                            title="${Resource.msg('link.continue.shopping', 'cart', null)}">
+                            ${Resource.msg('link.continue.shopping', 'cart', null)}
+                        </a>
+                    </h3>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="seguir-other text-center">
+                    <h3>${Resource.msgf('label.number.items.in.cart', 'cart', null, pdict.numItems)}</h3>
+                </div>
+            </div>
+            <div class="col-md-5"></div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container" style="min-height:550px;">
+        <div class="row">
+            <div class="emptycart pt-5">
+                <h2 class="mb-5">${Resource.msg('info.cart.empty.msg', 'cart', null)}</h2>
+                <a class="pagar m60continue-shopping-link" href="${URLUtils.url('Home-Show')}"
+                    title="${Resource.msg('link.continue.shopping', 'cart', null)}">
+                    ${Resource.msg('link.continue.shopping', 'cart', null)}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<isif condition="${ refinementValue.presentationId != null }">
+    <li class="color-attribute ${!refinementValue.selectable ? 'disabled' : ''}">
+        <button data-href="${refinementValue.url}" <isif condition="${!refinementValue.selectable}">disabled</isif> >
+            <isif condition="${refinementValue.selected && refinementValue.selectable}">
+                <i class="fas fa-check"></i>
+            <iselse>
+                <i class="fas fa-fw"></i>
+            </isif>
+            <span>${refinementValue.displayValue}</span>
+            <iscomment> <span class="${refinementValue.swatchId.toLowerCase()} swatch-circle color-value swatch-mark
+                <isif condition="${refinementValue.selected && refinementValue.selectable}">selected</isif>
+                <isif condition="${!refinementValue.selectable}">disabled</isif>"
+            >
+            </span>
+            <span id="${refinementValue.swatchId}-assistive" class="sr-only selected-assistive-text">
+                ${refinementValue.selected && refinementValue.selectable ? Resource.msg('msg.assistive.selected.text', 'common', null) : ''}
+                ${refinementValue.title}
+            </span> </iscomment>
+        </button>
+    </li>
+</isif>

@@ -1,0 +1,18 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<section class="common-space pt-0">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="heading-medida text-center w-100">
+        <isprint value="${pdict.heading}" encoding="off" />
+      </div>
+      <img src="${pdict.image.src.desktop}" class="img-fluid m-auto mt-3" alt="image">
+      <div class="medida-pera text-center">
+      <p>${pdict.description}</p>
+      <a  class="ver-ahora m-auto" href="${pdict.buttonUrl}">${pdict.buttonText}</a>
+    </div>
+  </div>
+  </div>
+</section>

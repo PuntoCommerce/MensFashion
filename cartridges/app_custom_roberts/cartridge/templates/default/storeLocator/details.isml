@@ -1,0 +1,62 @@
+<isset name="leftLayout" value="${pdict.storelocator.layout === "left" ? false : true}" scope="page" />
+<div class="modal fade ${leftLayout ? " modal-left" : "modal-right"}" id="storeDetailModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <isinclude template="/components/modules" sf-toolkit="off" />
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-center  ">
+        <h5 class="modal-title" id="details-name"></h5>
+        <button type="button" id="close-modal-st" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body details">
+        <div>
+          <img id="details-image" src="" alt="">
+          <div id="details-image-default" >
+            <iscontentasset aid="storelocator-details-logo" />  
+          </div>
+        </div>
+
+        <div class="d-flex sub-item">
+          <div class="d-flex justify-content-start align-items-center mr-3">
+            <img src="${pdict.storelocator.icons.address}" alt="">
+          </div>
+          <div id="details-address" >
+          </div>
+        </div>
+        
+        <div class="d-flex sub-item">
+          <div class="d-flex justify-content-start align-items-center mr-3">
+            <img src="${pdict.storelocator.icons.phone}" alt="">
+          </div>
+          <div id="details-phone" >
+          </div>
+        </div>
+        
+        <div class="d-flex sub-item">
+          <div class="d-flex justify-content-start align-items-center mr-3">
+            <img src="${pdict.storelocator.icons.mail}" alt="">
+          </div>
+          <div id="details-email" ></div>
+        </div>
+
+        <div class="d-flex sub-item">
+          <div class="d-flex justify-content-start align-items-center mr-3">
+            <img src="${pdict.storelocator.icons.clock}" alt="">
+          </div>
+          <div id="details-hours" open-label="${Resource.msg('details.store.open', 'storelocator', null)}" close-label="${Resource.msg('details.store.closed', 'storelocator', null)}" class="sub-item">
+          </div>  
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <div>
+          <button type="button" id="route" error-lable="${Resource.msg("error.show.route", "storelocator", null)}"  >${Resource.msg('details.show.route', 'storelocator', null)}</button>
+        </div>
+        <a type="button" id="go-to-maps" href="" target="_blank">${Resource.msg('details.open.maps', 'storelocator', null)}</a>
+      </div>
+    </div>
+  </div>
+  <div id="urlStoreDetails" data-url="${URLUtils.url("StoreLocator-Store")}"></div>
+</div>

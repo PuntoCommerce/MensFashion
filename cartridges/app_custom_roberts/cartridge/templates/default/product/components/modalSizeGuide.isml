@@ -1,0 +1,46 @@
+<isloop items="${pdict.breadcrumbs}" var="breadcrumbValue" status="loopState">
+    <isif condition="${loopState.last}">
+        <isif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('pantalon')}">
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-pantalon')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('playera')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-playera')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sueter')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-sueter')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sueteres')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-sueter')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('chamarra')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-chamarra')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('zapato')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-zapato')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('chaleco')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-chaleco')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('saco')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-saco')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('sacos')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-saco')}" />
+
+        <iselseif condition="${breadcrumbValue.htmlValue.toLowerCase().includes('camisa')}" />
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide-camisa')}" />
+
+        <iselseif condition="${!breadcrumbValue.htmlValue.toLowerCase().includes('pantalon') && 
+            !breadcrumbValue.htmlValue.toLowerCase().includes('playera') || !breadcrumbValue.htmlValue.toLowerCase().includes('pantalón') &&
+            !breadcrumbValue.htmlValue.toLowerCase().includes('sueter') || !breadcrumbValue.htmlValue.toLowerCase().includes('suéter') &&
+            !breadcrumbValue.htmlValue.toLowerCase().includes('chamarra') && 
+            !breadcrumbValue.htmlValue.toLowerCase().includes('zapato') && 
+            !breadcrumbValue.htmlValue.toLowerCase().includes('chaleco') && 
+            !breadcrumbValue.htmlValue.toLowerCase().includes('saco') && 
+            !breadcrumbValue.htmlValue.toLowerCase().includes('camisa')
+            }"/>
+            <isinclude url="${URLUtils.url('Page-Include', 'cid', 'modal-size-guide')}" />
+
+        </isif>
+    </isif>
+</isloop>

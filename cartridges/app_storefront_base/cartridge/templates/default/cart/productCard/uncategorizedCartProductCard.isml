@@ -6,7 +6,7 @@
 <div class="card product-info ${bonusproductlineitem} uuid-${lineItem.UUID}">
     <!--- name and remove buttons --->
     <isinclude template="cart/productCard/cartProductCardHeader" />
-    
+
     <div class="row ${bonuslineitemrow}">
         <div class="col-lg-5">
             <div class="row">
