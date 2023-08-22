@@ -11,20 +11,41 @@ const getPorcentage = (cant, total) => {
 };
 
 const handleShipment = (shipment, shippingPriceAdjustment) => {
+    const logger2 = Logger.getLogger("Sales", "Sales");
     const { suffix, suite } = shipment.shippingAddress;
     const interior = suffix != null ? suffix : "-";
     const exteriot = suite != null ? suite : "-";
+    // logger2.debug("shipment.shippingAddress:: " + JSON.stringify(shipment));
+
+    Logger.info("tipo envio: " + shipment.shippingMethodID);
+    Logger.info("shipment.shippingAddress.lastName: " + shipment.shippingAddress.lastName);
     if (shipment.shippingMethodID == "pickup") {
+        
         var store = StoreMgr.getStore(shipment.shippingAddress.lastName);
 
-        return {
-            pickUpStoreId: store.ID,
-            storeShippingStreet: store.address1,
-            storeShippingPostalCode: store.postalCode,
-            storeShippingCity: store.city,
-            storeShippingState: store.stateCode,
-            shippingCost: shipment.shippingTotalNetPrice.value,
-        };
+        if(store)
+        {
+            return {
+                pickUpStoreId: store.ID,
+                storeShippingStreet: store.address1,
+                storeShippingPostalCode: store.postalCode,
+                storeShippingCity: store.city,
+                storeShippingState: store.stateCode,
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
+        else
+        {
+            return {
+                pickUpStoreId: "NOEXISTE",
+                storeShippingStreet: "NOEXISTE",
+                storeShippingPostalCode: "NOEXISTE",
+                storeShippingCity: "NOEXISTE",
+                storeShippingState: "NOEXISTE",
+                shippingCost: shipment.shippingTotalNetPrice.value,
+            };
+        }
+        
     }
     return {
         // shippingStreet:`${shipment.shippingAddress.address1} ${shipment.shippingAddress.suite}`,
@@ -72,8 +93,10 @@ const handlePayment = (payment) => {
 
 module.exports.execute = () => {
     const logger = Logger.getLogger("Sales", "Sales");
+    Logger.info("Iniciando debugg");
+
     var currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() - 15);
+    currentDate.setDate(currentDate.getDate() - 30);
 
     var orders = OrderMgr.searchOrders(
         "creationDate > {0} AND custom.SalesCloudOrderId = {1} AND (paymentStatus = {2} OR custom.paypalPaymentMethod != {1})",
@@ -89,9 +112,13 @@ module.exports.execute = () => {
     var body;
     var salesOrderId;
     while (orders.hasNext()) {
+        
+
         order = orders.next();
+        Logger.info("La orden es no: " + order.orderNo);
         order = OrderMgr.getOrder(order.orderNo);
 
+        
         var discounts = 0;
         var pAdjustment;
         var priceAdjustments = order.priceAdjustments.iterator();
@@ -150,6 +177,10 @@ module.exports.execute = () => {
                 .slice(customerName.length / 2, customerName.length)
                 .join(" ");
         }
+
+        logger.info(order.defaultShipment.shippingAddress.lastName);
+        
+
 
         var defaultShipment = order.defaultShipment;
         var paymentTransaction = order.paymentTransaction;

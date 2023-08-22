@@ -3,6 +3,7 @@ const Site = require("dw/system/Site");
 const SystemObjectMgr = require("dw/object/SystemObjectMgr");
 const StoreMgr = require("dw/catalog/StoreMgr");
 const URLUtils = require("dw/web/URLUtils");
+const { getStores } = require("~/cartridge/scripts/helpers/helpers.js");
 
 server.get("Start", (req, res, next) => {
   const currentSite = Site.getCurrent();
@@ -131,326 +132,28 @@ server.get('MapList', function (req, res, next) {
     null
   );
 
-  let storeList = [];
-  
-  while (stores.hasNext()) {
-    let store = stores.next();
-    storeList.push({
-      id: store.ID,
-      name: store.name,
-      address: store.address1,
-      city: store.city,
-      state: store.stateCode,
-      postalCode: store.postalCode,
-      phone: store.phone,
-      latitude: store.latitude,
-      longitude: store.longitude,
-    });
-      /* 
-       if (store.stateCode === "Aguascalientes" || store.stateCode === "AGUASCALIENTES") {
-      
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Ciudad de México") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      
-      if (store.stateCode === "Coahuila") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Chihuahua") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "DF") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Estado de México" || store.stateCode === "EDO MÉX" || store.stateCode === "MEX") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Guerrero") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Durango") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Baja California") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Hidalgo" || store.stateCode === "HGO") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Jalisco") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Michoacán") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Morelos") {
-        
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Nuevo León") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Oaxaca") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Puebla") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Querétaro" || store.stateCode === "QRO") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Puebla") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "San Luis Potosí") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Sonora") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Tlaxcala") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Veracruz") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      }
-      if (store.stateCode === "Zacatecas") {
-        storeList.push({
-          id: store.ID,
-          name: store.name,
-          address: store.address1,
-          city: store.city,
-          state: store.stateCode,
-          postalCode: store.postalCode,
-          phone: store.phone,
-          latitude: store.latitude,
-          longitude: store.longitude,
-        });
-      } */
-  }
+  var storeList = [];
 
+  try {
+    var states = getStores(stores);
+    storeList = {
+      code: 200,
+      status: "ok",
+      body: {
+        msg: "Get all codes states",
+        data: states
+      }
+    }
+  } catch (error) {
+    storeList = {
+      code: 500,
+      status: "Internal Server Error",
+      body: {
+        msg: error,
+        data: []
+      }
+    }
+  }
 
   const clusterMarker = URLUtils.staticURL(
     "/images/storelocator/clusterMarker.svg"
