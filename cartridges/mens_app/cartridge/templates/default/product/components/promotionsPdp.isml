@@ -29,7 +29,7 @@
                              <iselseif condition="${promotion.id === "sales999"}" />
                             <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name !== null}" />
-                                <span class="promotion-item">${promotion.name}</span>
+                                <span class="promotion-item otherPromotion">${promotion.name}</span>
                             <iselseif condition="${promotion.calloutMsg === ""}" />
                                   <div class="d-none">
                                     
