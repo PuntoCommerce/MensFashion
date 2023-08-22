@@ -8078,6 +8078,8 @@ li.selectable.actives {
 }
 .promotions_on_bundle {
     margin-top: 24px;
+    display: flex;
+    justify-content: left;
 }
 
 .product-detail .promotion-item-container .promotion-item {
@@ -8088,6 +8090,16 @@ li.selectable.actives {
 .promotions_on_bundle .promotion-item {
     background-color: #000 !important;
     margin-left: 0px !important;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white !important;
+    font-weight: bold;
+    height: unset;
+    padding: 6px 12px 0px !important;
+    width: auto !important;
 }
 
 .color_pb_class {
