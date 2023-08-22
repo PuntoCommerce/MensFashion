@@ -6,7 +6,7 @@
 
     
 
-    <div class="promotion-item-container"> 
+    
         <isloop items="${product.promotions}" var="promotion" status="promdet">
         <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
                             <div class="d-none">
