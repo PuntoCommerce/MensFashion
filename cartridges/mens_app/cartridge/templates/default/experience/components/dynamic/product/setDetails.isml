@@ -18,28 +18,56 @@
 <!-- Modal Size Guide -->
 <isinclude template="product/components/modalSizeGuide" />
 
-<div class="container product-detail product-set-detail" data-pid="${product.id}">
+<div class="container-fluid product-detail product-set-detail" data-pid="${product.id}">
     <!-- Product Name -->
     <div class="row">
-        <div class="col-12 text-center">
-            <h1 class="product-name">${product.productName}</h1>
-        </div>
+        <iscomment>
+            <div class="col-12 text-center">
+                <h1 class="product-name">${product.productName}</h1>
+            </div>
+        </iscomment>
     </div>
 
     <isinclude template="product/components/setItems" />
 
-    <hr class="col-11 separator-set-price" />
+    <iscomment>
+        <hr class="col-11 separator-set-price" />
+    </iscomment>
 
     <!-- Quantity -->
-    <div class="col-md-5 m-auto prices-add-to-cart-actions bundle-footer">
-        <isset name="product" value="${productCopy}" scope="page" />
-        <!-- Prices -->
-        <div class="mb-3">
-            <isinclude template="product/components/pricing/setPrice" />
+    <iscomment> <div class="row">
+        <div class="col-md-6 p-0">&nbsp;</div>
+        <div class="col-md-6 prices-add-to-cart-actions bundle-footer">
+            <isset name="product" value="${productCopy}" scope="page" />
+            
+            
+                <div class="mb-3">
+                    <isinclude template="product/components/pricing/setPrice" />
+                </div>
+            
+            
+            <div class="mb-3">
+                <isinclude template="product/components/addToCartGlobal" />
+            </div>
         </div>
-        <!-- Cart and [Optionally] Apple Pay -->
-        <div class="mb-3">
-            <isinclude template="product/components/addToCartGlobal" />
+    </div> </iscomment>
+
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 display_none_mobile">
+            <div class="single-detail-images prices-add-to-cart-actions bundle-footer">
+                <div class="row ipadblock">
+                    &nbsp;
+                    <isset name="product" value="${productCopy}" scope="page" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 row justify-content-center h-100 pb_details_section">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 addtocartglobal_btn">
+                <isinclude template="product/components/addToCartGlobal" />
+            </div>
         </div>
     </div>
+
 </div>

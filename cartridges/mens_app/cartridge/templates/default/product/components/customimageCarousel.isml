@@ -1,0 +1,48 @@
+<div class="primary-images d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+    <div class="single-detail-images">
+        <div class="row ipadblock">
+            <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                <isif condition = "${image.index < 2}">
+                <div class="col-md-6 carousel-padding">
+                    <div class="pro-images-detail">
+                        <img src="${image.url}" class="d-block img-fluid" alt="${image.alt} image number ${image.index}" itemprop="image" />
+                    </div>
+                    <span class="bundle-pd">Separate</span>
+                </div>
+                </isif>
+            </isloop>
+
+        </div>
+    </div>
+</div>
+<div class="primary-images d-block d-xs-block d-sm-block d-md-block d-lg-none d-xl-none col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mobile-0">
+    <div id="pdpCarousel-${product.id}" class="carousel slide" data-interval="0" data-prev="${Resource.msg('button.previous', 'common', null)}" data-next="${Resource.msg('button.next', 'common', null)}">
+        <isif condition="${product.images['large'].length > 1}">
+            <ol class="carousel-indicators" aria-hidden="true">
+                <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                    <li data-target="${"#"}pdpCarousel-${product.id}" data-slide-to="${loopStatus.index}" class='<isif condition="${loopStatus.index == 0}">active</isif>'>
+                    </li>
+                </isloop>
+            </ol>
+        </isif>
+
+        <div class="carousel-inner" role="listbox">
+            <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                <div class='carousel-item <isif condition="${loopStatus.index == 0}">active</isif>'>
+                    <img src="${image.url}" class="d-block img-fluid" alt="${image.alt} image number ${image.index}" itemprop="image" />
+                </div>
+                <span class="bundle-pd">Separate</span>
+            </isloop>
+        </div>
+        <iscomment> <isif condition="${product.images['large'].length > 1}">
+            <a class="carousel-control-prev" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="prev">
+                <span class="fa icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">${Resource.msg('button.previous', 'common', null)}</span>
+            </a>
+            <a class="carousel-control-next" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="next">
+                <span class="fa icon-next" aria-hidden="true"></span>
+                <span class="sr-only">${Resource.msg('button.next', 'common', null)}</span>
+            </a>
+        </isif> </iscomment>
+    </div>
+</div>

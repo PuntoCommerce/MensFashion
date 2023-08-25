@@ -1,11 +1,12 @@
 <isset name="product" value="${typeof product === 'undefined' || empty(product) ? pdict.product : product}"
     scope="page" />
 <isif condition="${product.promotions}">
+    <div class="promotion-item-container">
 
 
     
 
-    <div class="promotion-item-container"> 
+    
         <isloop items="${product.promotions}" var="promotion" status="promdet">
         <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
                             <div class="d-none">
@@ -16,9 +17,9 @@
                                                      promotion.name === "-50%" || promotion.name === "-55%" || promotion.name === "-60%" || promotion.name === "-65%" ||
                                                      promotion.name === "-70%" || promotion.name === "-75%" || promotion.name === "-80%" || promotion.name === "-85%" ||
                                                      promotion.name === "-90%" || promotion.name === "-95%"}" />
-                            <span class="promotion-item promotion-item-desc 000">${promotion.name.replace('de descuento', '')}</span>
+                            <span class="promotion-item promotion-item-desc">${promotion.name.replace('de descuento', '')}</span>
                             <iselseif condition="${promotion.name === "1 prenda -20%" || promotion.name === "2 prendas -30%" || promotion.name === "3 prendas -40%"}" />
-                            <span class="promotion-item promotion-item-desc 101">${promotion.name}</span>
+                            <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name === "Camisa y accesorio de regalo"}" />
                                   <span class="promotion-item promotion-item-grad container-txt-promo id-${promotion.id}">${promotion.name}
                                   <span class="txt-hover-promo-gradu">${Resource.msg('mensage.promo.graduation', 'pdp', null)}
@@ -27,11 +28,11 @@
                                   </span>
                                   </span>
                              <iselseif condition="${promotion.name === "Precio final"}" />
-                            <span class="promotion-item promotion-item-desc 789">${promotion.name}</span>
+                            <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name === "4 x $999"}" />
-                            <span class="promotion-item promotion-item-desc 456">${promotion.name}</span>
+                            <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                              <iselseif condition="${promotion.id === "sales999"}" />
-                            <span class="promotion-item promotion-item-desc 123">${promotion.name}</span>
+                            <span class="promotion-item promotion-item-desc">${promotion.name}</span>
                             <iselseif condition="${promotion.name !== null}" />
                                 <span class="promotion-item otherPromotion">${promotion.name}</span>
                             <iselseif condition="${promotion.calloutMsg === ""}" />

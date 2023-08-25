@@ -144,15 +144,11 @@
         <!-- Attribute Values Drop Down Menu -->
         <select class="custom_select_option custom-select form-control select-${attr.id}"
             id="${attr.id}-${loopState && loopState.count ? loopState.count : '1'}" ${product.productType === "variant" && isBundle ? "disabled" : ""}>
-            <option value="talla" selected="selected">
-                ${Resource.msg('label.select.talla', 'common', null)} ${attr.displayName}
-            </option>
             <isloop items="${attr.values}" var="attrValue">
                 <option value="${attrValue.url}" data-attr-value="${attrValue.value}" ${!attrValue.selectable ? 'disabled' : ''}>
                     ${attrValue.displayValue}
                 </option>
             </isloop>
-           
         </select>
          <img class="arrow-input-pdp" src="${URLUtils.staticURL('/images/arrow-right.svg')}" alt="Promo CA"/>
     </div>

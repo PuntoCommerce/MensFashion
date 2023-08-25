@@ -1,11 +1,5 @@
 <div class="row cart-and-ipay" onclick="showAlertItemCart(this)">
-    <div class="col-sm-12">
-        <iscomment> <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart add-to-cart-custom" data-toggle="modal"
-            data-target="#chooseBonusProductModal" data-pid="${product.id}" ${!product.readyToOrder || !product.available ? "disabled" : ""} data-gtmdata="${JSON.stringify(product.gtmData)}"
-            data-gtmga4data="${JSON.stringify(product.gtmGA4Data)}">
-            ${Resource.msg('tooltip.addtocart.disabled.button', 'pdp', null)}
-        </button> </iscomment>
-
+    <div class="col-sm-12 add_to_cart_btn">
         <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
         <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart" data-toggle="modal"
             data-target="#chooseBonusProductModal" data-pid="${product.id}"  ${!product.readyToOrder || !product.available ? "disabled" : ""} data-gtmdata="${JSON.stringify(product.gtmData)}"

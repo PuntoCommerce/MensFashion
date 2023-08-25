@@ -10,7 +10,6 @@
                         <isinclude template="/product/components/pricing/formatted" />
                     </span>
                 </span>
-                <iscomment> <span class="font10t10"> -</span> </iscomment>
             </isif>
 
             <span class="sales plp_sales">

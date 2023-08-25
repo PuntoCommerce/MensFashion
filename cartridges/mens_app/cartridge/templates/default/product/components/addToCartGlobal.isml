@@ -1,4 +1,4 @@
-<div class="row cart-and-ipay">
+<iscomment> <div class="row cart-and-ipay">
     <div class="col-sm-12 p-0">
     
         <button class="add-to-cart btn-block btn-add-cart tooltipAddToCart add-to-cart-custom a" data-toggle="modal"
@@ -16,5 +16,18 @@
         </button>
  
         <isinclude template="product/components/addToCartButtonExtension" />
+    </div>
+</div> </iscomment>
+
+<div class="row cart-and-ipay cart_and_ipay">
+    <div class="col-sm-12 p-0 cart_and_ipay_mobile add_to_cart_btn">
+        <input type="hidden" class="add-to-cart-url" value="${pdict.addToCartUrl}">
+        <button id="add_to_cart_global" class="add-to-cart-global comprar-btn-detail anadir" data-pid="${product.id}"  ${!product.available ? "disabled" : ""}>
+            <isif condition="${product.productType === 'set' || product.productType === 'bundle'}">
+                ${Resource.msg('button.addtocart', 'common', null)}
+            <iselse>
+                ${Resource.msg('button.addtocart', 'common', null)}
+            </isif>
+        </button>
     </div>
 </div>

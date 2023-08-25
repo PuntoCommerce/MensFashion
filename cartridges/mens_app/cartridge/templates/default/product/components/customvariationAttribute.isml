@@ -1,0 +1,72 @@
+                                                                                               <iscomment>
+
+Template Notes:
+
+- This template is intended to be referenced from an <isinclude> tag within an <isloop> in another
+  source template.  The <isloop> is expected to have a "status" attribute, named "attributeStatus".
+- ${attributeStatus.last} is checked to see whether a particular attribute row should include the
+  Quantity drop-down menu
+
+</iscomment>
+<div class="attribute mt-2 attribute_pb">
+    <isif condition="${attr.swatchable}">
+
+        <iscomment> <!-- Select <Attribute> Label -->
+        <span class="${attr.id} non-input-label">
+            ${Resource.msg('label.select', 'common', null)} ${attr.displayName}
+        </span>
+
+        <!-- Circular Swatch Image Attribute Values -->
+        <isloop items="${attr.values}" var="attrValue">
+            <isif condition="${!(isBundle && product.productType === 'variant' && !attrValue.selected) }">
+                <button class="color-attribute"
+                        aria-label="${Resource.msg('label.select', 'common', null)} ${attr.displayName} ${attrValue.displayValue}"
+                        aria-describedby="${attrValue.id}"
+                        data-url="${attrValue.url}" ${ product.productType === "variant" && isBundle ? "disabled" : "" }
+                >
+                    <span data-attr-value="${attrValue.value}"
+                          class="
+                              ${attr.id}-value
+                              swatch-circle
+                              swatch-value
+                              ${attrValue.selected ? 'selected' : ''}
+                              ${attrValue.selectable ? 'selectable' : 'unselectable'}
+                          "
+                          style="background-image: url(${attrValue.images['swatch'].length > 0 ? attrValue.images['swatch'][0].url : ''})"
+                    >
+                    </span>
+                    <span id="${attrValue.id}" class="sr-only selected-assistive-text">
+                        ${attrValue.selected ? Resource.msg('msg.assistive.selected.text', 'common', null) : ''}
+                    </span>
+                </button>
+            </isif>
+        </isloop>  </iscomment>
+
+    <iselse>
+        <!-- Select <Attribute> Label -->
+        <iscomment> <label class="${attr.id}" for="${attr.id}-${loopState && loopState.count ? loopState.count : '1' }">
+            ${Resource.msg('label.select', 'common', null)} ${attr.displayName}
+        </label> </iscomment>
+
+        <iscomment> <isprint value="${JSON.stringify(attr.values)}" /> </iscomment>
+
+        <div class="list-talla pb_list_talla">
+            <iscomment> <isprint value="${JSON.stringify(attr.values)}" /> </iscomment>
+            <isset name="index" value="1" scope="page" />
+            <ul class="row select-${attr.id} ${product.id}" id="${attr.id}-${loopState && loopState.count ? loopState.count : '1' }" ${ product.productType === "variant" && isBundle ? "disabled" : "" } >
+            <iscomment> <isprint value="${JSON.stringify(attr.values)}" /> </iscomment>
+                <isloop items="${attr.values}" var="attrValue">
+                    <div class="col-4 col-md-4 col-sm-3 pb_loop_div">
+                    <li  data-pid="${product.id}" class="${attrValue.selected ? 'actives' : ''} ${attrValue.selectable ? 'selectable' : 'nonSelectable'}"  data-select-id="select-${attr.id}" data-index-id="${index++}" value="${attrValue.url}" data-attr-value="${attrValue.value}" > ${attrValue.displayValue}</li>
+                    </div>
+                </isloop>
+            </ul>
+        </div>
+                <iscomment> <option value="${attrValue.url}" data-attr-value="${attrValue.value}"
+                    ${!attrValue.selectable ? 'disabled' : ''}
+                    ${attrValue.selected ? 'selected' : ''}
+                >
+                    ${attrValue.displayValue}
+                </option> </iscomment>
+    </isif>
+</div>

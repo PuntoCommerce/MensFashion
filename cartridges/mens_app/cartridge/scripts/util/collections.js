@@ -202,3 +202,4 @@ module.exports = {
     every: every,
     findPromotions: findPromotions
 };
+
