@@ -1,0 +1,23 @@
+<isif condition="${pdict.name === null}">
+    <div class="user">
+        <a href="${URLUtils.https('Login-Show')}" role="button"
+            aria-label="${Resource.msg('label.header.loginbutton', 'account', null)}">
+            <img src="${URLUtils.staticURL('/images/profile.svg')}" alt="icon" />
+            <iscomment> <span class="user-message">${Resource.msg('link.header.login', 'account', null)}</span>
+            </iscomment>
+        </a>
+    </div>
+<iselse/>
+
+    <a href="javascript:void(0)" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        <img src="${URLUtils.staticURL('/images/profile.svg')}" alt="icon" />
+
+    </a>
+    <ul>
+        <li><a href="${URLUtils.https('Account-Show')}" role="menuitem" tabindex="-1">${Resource.msg('link.header.myaccount', 'account', null)}</a></li>
+        <li><a href="${URLUtils.url('Order-History')}" role="menuitem" tabindex="-1">${Resource.msg('label.myorders', 'account', null)}</a></li>
+        <li><a href="${URLUtils.url('Wishlist-Show')}" role="menuitem" tabindex="-1">${Resource.msg('label.wishlist', 'account', null)}</a></li>
+        <li><a href="${URLUtils.url('Login-Logout')}" role="menuitem" tabindex="-1">${Resource.msg('link.header.logout', 'account', null)}</a></li>
+    </ul>
+</isif>

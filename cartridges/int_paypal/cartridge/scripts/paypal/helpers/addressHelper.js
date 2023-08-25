@@ -139,11 +139,10 @@ addressHelper.getBAShippingAddress = function (shippingAddress) {
  * @param  {dw.order.Basket} basket - Current users's basket
  * @param  {Object} billingAddress user's billing address
  */
-addressHelper.updateBABillingAddress = function (basket, billingAddress) {
+addressHelper.updateBABillingAddress = function (basket, billingAddress, billing_address) {
     var {
         first_name,
         last_name,
-        billing_address,
         phone,
         email
     } = billingAddress;
@@ -152,7 +151,17 @@ addressHelper.updateBABillingAddress = function (basket, billingAddress) {
         var billing = basket.getBillingAddress() || basket.createBillingAddress();
         billing.setFirstName(first_name || '');
         billing.setLastName(last_name || '');
-        billing.setCountryCode(billing_address.country_code);
+        // billing.setCountryCode(billing_address.country_code);
+        // billing.setCity(billing_address.city || '');
+        // billing.setAddress1(billing_address.line1 || '');
+        // billing.setAddress2(billing_address.line2 || '');
+        // billing.setPostalCode(billing_address.postal_code || '');
+        // billing.setStateCode(billing_address.state || '');
+        if (empty(billing_address.country_code)) {
+            billing.setCountryCode('');
+        }else{
+            billing.setCountryCode(billing_address.country_code);
+        }
         billing.setCity(billing_address.city || '');
         billing.setAddress1(billing_address.line1 || '');
         billing.setAddress2(billing_address.line2 || '');

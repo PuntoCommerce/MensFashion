@@ -1,0 +1,813 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/pdpAddToCartUX.js');
+    assets.addJs('/js/productDetail.js');
+    assets.addCss('/css/product/detail.css');
+</isscript>
+
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/product-slider.css')}">
+
+<!-- Owl Stylesheets -->
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/owl.carousel.min.css')}">
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/owl.theme.default.min.css')}">
+
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="isQuickView" value="${false}" scope="page" />
+<isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
+<isobject object="${product.raw}" view="detail" />
+
+<!-- Custom Template starts -->
+<div id="blur-background"></div>
+<!-- Modal Size Guide -->
+<isinclude template="product/components/modalSizeGuide" />
+
+
+<section class="d-none d-xs-none d-sm-block d-md-block">
+    <div class="container-fluid">
+        <div class="breadcums pdp-breadcrumbs">
+            <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+        </div>
+    </div>
+</section>
+
+<!-- Image slider Starts -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div class="position-relative" style="z-index: 2;">
+     <a class="float-right" id="close_product_slider"><i class="fas fa-times"></i></a>
+ </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  <isscript>
+     dynamicCounter = 0;
+  </isscript>
+    <isloop items="${product.images['large']}" var="image" status="loopStatus" >
+        <li data-target="#carouselExampleIndicators" data-slide-to="${dynamicCounter}" class="active">
+            <img class="d-block w-100" src="${image.url}" alt="${image.alt}">      
+        </li>
+        <isscript>
+    dynamicCounter = dynamicCounter + 1;
+  </isscript>
+    </isloop>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+    <isloop items="${product.images['large']}" var="image" status="loopStatus">
+        <div class="carousel-item">
+            <img class="d-block w-100" src="${image.url}" alt="${image.alt}">      
+        </div>
+    </isloop>
+
+  </div>
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+<!-- Image slider Ends -->
+<section>
+    <div class="container-fluid product-detail product-wrapper" data-pid="${product.id}">
+        <div class="row">
+            <div class="col-md-6 sticky-sidebar">
+                <div class="single-detail-images">
+                    <div class="row">
+                        <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                            <div class="col-md-6 carousel-padding">
+                                <div class="pro-images-detail">
+                                    <img src="${image.url}" alt="${image.alt} image number ${image.index}"
+                                        itemprop="image" />
+                                </div>
+                            </div>
+                        </isloop>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 row justify-content-md-center margin-pdp-0">
+                <div class="detail-products d-none d-xs-none d-sm-block d-md-block col-md-8">
+                    <div class="sticky-sidebar1">
+                        <h1>${product.productName}</h1>
+                        <div class="price-detail">
+                            <!-- Prices -->
+                            <div class="prices pdp-percentage">
+                                <isset name="price" value="${product.price}" scope="page" />
+                                <div class="row mb-2">
+                                    <div class="col-10">
+                                        <isinclude template="product/components/pricing/main" />
+
+                                    </div>
+                                    <div class="col-2 text-right">
+                                        <iscomment> <i class="far fa-heart grey-heart"></i> </iscomment>
+                                        <isinclude template="wishlist/components/addToWishListButton" />
+                                    </div>
+                                </div>
+                            </div>
+                            <iscomment>
+                                <p class="discount-price-detail">$6,990</p> - <p class="price-final">$3,495</p>
+                            </iscomment>
+                        </div>
+                        <div class="justify-space">
+                            <iscomment>
+                                <p class="discount-price-detailpage">%50</p>
+                            </iscomment>
+
+                            <!-- Add to wishlist -->
+                            <iscomment>
+                                <p>
+                                    <isinclude template="wishlist/components/addToWishListButton" />
+                                </p>
+                            </iscomment>
+                        </div>
+                        <div class="selecciona">
+                            <p>Selecciona tu talla</p>
+                            <p class="Tallas" data-toggle="modal" data-target="#guiaDeTallas">
+                                ${Resource.msg('size.guide', 'common', null)}</p>
+                        </div>
+
+                        <iscomment>
+                            <isset name="isBundle" value="${false}" scope="page" />
+                            <isset name="loopState" value="{count: 1}" scope="page" />
+                            <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                                <div class="row" data-attr="${attr.id}">
+                                    <div class="col-12">
+                                        <isinclude template="product/components/variationAttribute" />
+                                    </div>
+                                </div>
+                            </isloop>
+                        </iscomment>
+
+                        <!-- Attributes -->
+                        <div class="">
+                            <!-- Attributes and Quantity -->
+                            <isinclude template="product/components/mainAttributes" />
+
+              <isset name="isBundle" value="${false}" scope="page" />
+              <isset name="loopState" value="{count: 1}" scope="page" />
+              <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                <div class="row" data-attr="${attr.id}">
+                  <div class="col-12">
+                    <div class="d-none" id="${product.id}">
+                      <isinclude template="product/components/variationAttribute" />
+                    </div>
+                    <isinclude template="product/components/customvariationAttribute" />
+                  </div>
+
+                                    <isif condition="${attributeStatus.last && !isBundle}">
+                                        <!-- Quantity Drop Down Menu -->
+                                        <div class="attribute quantity col-4" style="display:none;">
+                                            <isinclude template="product/components/quantity" />
+                                        </div>
+                                    </isif>
+                                </div>
+                            </isloop>
+
+                            <isif condition="${!product.variationAttributes}">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="simple-quantity">
+                                            <isinclude template="product/components/quantity" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </isif>
+
+                            <div class="product-options">
+                                <isif condition="${product.options && product.options.length > 0}">
+                                    <isinclude template="product/components/options" />
+                                </isif>
+                            </div>
+
+                            <!-- Size Chart -->
+                            <isif condition="${product.variationAttributes && product.sizeChartId}">
+                                <div class="row">
+                                    <div class="size-chart col-12">
+                                        <isinclude template="product/components/sizeChart" />
+                                    </div>
+                                </div>
+                            </isif>
+
+                            <!-- Product Availability -->
+                            <isinclude template="product/components/productAvailability" />
+
+                            <!-- Applicable Promotions -->
+                            <div class="row">
+                                <div class="col-12 promotions">
+                                    <isinclude template="product/components/promotions" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Attributes ends -->
+
+                        <iscomment> <a href="/" class="comprar-btn-detail" style="margin-top: 30px"> COMPRAR AHORA </a>
+                        </iscomment>
+                        <isinclude template="product/components/buyNowProduct" />
+                        <!-- Cart and [Optionally] Apple Pay -->
+                        <isinclude template="product/components/addToCartProduct" />
+                        <div class="click-collect mt-5 mb-5">
+                            <a href="/">CLICK & COLLECT</a>
+                            <a href="/">ENVÍO GRATIS</a>
+                        </div>
+
+                        <!-- Description and details section -->
+                        <div>
+                            <isslot id="cts-recommendations-m" description="Complete the set products" context="global"
+                                context-object="${pdict.product.raw}" />
+                        </div>
+
+                        <isset name="loopState" value="{count: 1}" scope="page" />
+                        <isinclude template="product/components/descriptionAndDetails" />
+                        <!-- Description and details section -->
+                        <iscomment>
+                            <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                                <isinclude template="product/components/colorAttribute" />
+                            </isloop>
+                        </iscomment>
+                    </div>
+                </div>
+                <!--Mobile Design-->
+                <!--<div class="mobile-productsdetails"><div class="accordion" id="accordion_two"><div class="card"><div class="card-header" data-toggle="collapse" data-target="/collapse1" aria-expanded="true"><span class="title"><span class="accicon"><img src="${URLUtils.staticURL('/images/mobile-arrow-icon.svg')}" class="rotate-icon" alt="icon"></span><br>Ver Detalles
+                          </span></div><div id="collapse1" class="collapse show" data-parent="/accordion_two"><div class="card-body"><div class="mob-detalles"><h2>Traje Calderoni Gris Oxford Contemporany</h2><div class="inline-mob-price"><div class="d-flex  justify-content-end"><p class="underline-price">$6,990</p><p class="f-price"> - 3,495</p></div><p class="w50-offer">-50%</p></div></div><div class="btn-mob-detail"><a href="/" class="comprar-btn-detail">SELECCIONAR TALLA</a><i class="far fa-heart"></i></div></div></div></div><div class="card"><div class="card-header collapsed" data-toggle="collapse" data-target="/collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="title"><span class="accicon"><img src="${URLUtils.staticURL('/images/mobile-arrow-icon.svg')}" class="rotate-icon" alt="icon"></span><br>Ver Menos
+                          </span></div><div id="collapseTwo" class="collapse" data-parent="/accordion_two"><div class="card-body">
+                               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                            </div></div></div></div></div> -->
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</section>
+
+<section class="common-space d-none d-xs-none d-sm-block d-md-block d-lg-block">
+    <div class="container-fluid p-0">
+        <div class="row m-0">
+            <h2 class="comprar text-center w-100">seleccionado para ti</h2>
+            <div id="product-cross-sell" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="products-single mobgrid">
+                        <div class="bg-singlebox grid-list">
+                            <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}" alt="image">
+                        </div>
+                        <div class="left-move">
+                            <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                            <div class="d-flex mt6">
+                                <p class="discount-price">$6,990</p>
+                                <p class="final-price">$3,495</p>
+                            </div>
+                            <div class="tag-percentage"> %50 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Mobile View-->
+<section class="d-xs-none d-sm-none d-md-none d-lg-none">
+    <div class="col-md-12">
+        <div class="fit-bottom">
+            <button class="fas purgex text-center w-100 ver-text-font">Ver Detalles </button>
+            <div class="pureyad">
+                <div class="mobile-pureyad">
+                    <div class="row">
+                        <div class="col-6"> <span class="mob-detalles">
+                                <h2>${product.productName}</h2>
+                            </span></div>
+                        <div class="col-6 pl-0">
+                            <div class="product-detail-price">
+                                <isset name="price" value="${product.price}" scope="page" />
+                                <isinclude template="product/components/pricing/main" />
+                            </div>
+                        </div>
+                    </div>
+                    <iscomment>
+                        <div class="mob-detalles mb-2">
+
+                            <h2>${product.productName}</h2>
+                            <div class="inline-mob-price">
+                                <div class="d-flex  justify-content-end">
+                                    <div class="prices">
+                                        <isset name="price" value="${product.price}" scope="page" />
+                                        <isinclude template="product/components/pricing/main" />
+                                    </div>
+
+                                    <p class="underline-price">$6,990</p>
+                                    <p class="f-price"> - 3,495</p>
+                                    <p class="w50-offer">-50%</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </iscomment>
+                    <div class="row mt-1">
+                        <iscomment>
+                            <div class="btn-mob-detail">
+                        </iscomment>
+                        <div class="col-10">
+                            <a href="javascript:openMobileSelect()" class="comprar-btn-detail-select">SELECCIONAR
+                                TALLA</a>
+                        </div>
+                        <div class="col-2 text-center">
+                            <isinclude template="wishlist/components/addToWishListButton" />
+                        </div>
+                        <iscomment>
+                    </div>
+                    </iscomment>
+                </div>
+                <div class="click-collect mt-4">
+                    <a href="javascript:void(0)">CLICK & COLLECT</a>
+                    <a href="javascript:void(0)">ENVÍO GRATIS</a>
+                </div>
+
+                <!-- Description and details section -->
+                <div>
+                    <isslot id="cts-recommendations-m" description="Complete the set products" context="global"
+                        context-object="${pdict.product.raw}" />
+                </div>
+
+                <isset name="loopState" value="{count: 1}" scope="page" />
+                <isinclude template="product/components/mobile/mobileDescriptionAndDetails" />
+                <!-- Description and details section -->
+            </div>
+            <!-- mobile select size -->
+
+
+            <div class="common-space ">
+                <div class="container-fluid p-0">
+                    <div class="row m-0">
+                        <h2 class="comprar text-center w-100">seleccionado para ti</h2>
+                        <div id="mobile-slider-products" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="products-single">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products-single">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products-single">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products-single">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products-single mobgrid">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="products-single mobgrid">
+                                    <div class="bg-singlebox grid-list">
+                                        <img src="${URLUtils.staticURL('/images/RB00154276-full_back-RAW-2 1.jpg')}"
+                                            alt="image">
+                                    </div>
+                                    <div class="left-move">
+                                        <h4>Traje Calderoni Gris Oxford Contemporany</h4>
+                                        <div class="d-flex mt6">
+                                            <p class="discount-price">$6,990</p>
+                                            <p class="final-price">$3,495</p>
+                                        </div>
+                                        <div class="tag-percentage"> %50 </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile_select_size_main" class="mobile_select_size_main padding-corner"
+            style="display:none;max-width: 100%;overflow: hidden;background: #fff;max-height: 145px;overflow-y: auto;max-height: 90vh;border-top: 1px solid;border-radius: 10px 10px;">
+            <div class="mobile_select_size_wrapper" style="padding: 15px 25px;">
+                <!-- cross -->
+                <div id="cross-mobile-select" onclick="closeMobileSelect();">
+                    <p>Selecciona tu talla</p>
+                    <img src="${URLUtils.staticURL('/images/cross.svg')}" alt="">
+                </div>
+                <!-- Attributes -->
+                <div class="">
+                    <!-- Attributes and Quantity -->
+                    <isinclude template="product/components/mainAttributes" />
+
+                    <isset name="isBundle" value="${false}" scope="page" />
+                    <isset name="loopState" value="{count: 1}" scope="page" />
+                    <isloop items="${product.variationAttributes}" var="attr" status="attributeStatus">
+                        <div class="row" data-attr="${attr.id}">
+                            <div class="col-12 mobile-s-select-p">
+                                <div class="d-none">
+                                    <isinclude template="product/components/variationAttribute" />
+                                </div>
+                                <isinclude template="product/components/customvariationAttribute" />
+                            </div>
+
+                            <isif condition="${attributeStatus.last && !isBundle}">
+                                <!-- Quantity Drop Down Menu -->
+                                <div class="attribute quantity col-4" style="display: none;">
+                                    <isinclude template="product/components/quantity" />
+                                </div>
+                            </isif>
+                        </div>
+                    </isloop>
+
+                    <isif condition="${!product.variationAttributes}">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="simple-quantity">
+                                    <isinclude template="product/components/quantity" />
+                                </div>
+                            </div>
+                        </div>
+                    </isif>
+
+                    <div class="product-options">
+                        <isif condition="${product.options && product.options.length > 0}">
+                            <isinclude template="product/components/options" />
+                        </isif>
+                    </div>
+
+                    <!-- Size Chart -->
+                    <isif condition="${product.variationAttributes && product.sizeChartId}">
+                        <div class="row">
+                            <div class="size-chart col-12">
+                                <isinclude template="product/components/sizeChart" />
+                            </div>
+                        </div>
+                    </isif>
+
+                    <!-- Product Availability -->
+                    <isinclude template="product/components/productAvailability" />
+
+                    <!-- Applicable Promotions -->
+                    <div class="row">
+                        <div class="col-12 promotions">
+                            <isinclude template="product/components/promotions" />
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Attributes ends -->
+
+
+                <div class="row selecciona">
+                    <div class="col-12 p-0">
+                        <p class="Tallas pull-right" style="font-size: 15px;" data-toggle="modal"
+                            data-target="#guiaDeTallas">
+                            ${Resource.msg('size.guide', 'common', null)}</p>
+                    </div>
+                </div>
+
+                <iscomment> <a href="/" class="comprar-btn-detail" style="margin-top: 30px"> COMPRAR AHORA </a>
+                </iscomment>
+                <isinclude template="product/components/mobile/mobileBuyNowProduct" />
+                <!-- Cart and [Optionally] Apple Pay -->
+                <isinclude template="product/components/mobile/mobileAddToCartProduct" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Mobile view -->
+
+
+
+<!-- Custom Template Ends -->
+
+</isobject>
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="${URLUtils.staticURL('/js/bootstrap.min.js')}"></script>
+<script src="${URLUtils.staticURL('/js/jquery.min.js')}"></script>
+<script src="${URLUtils.staticURL('/js/owl.carousel.js')}"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+      $('#product-cross-sell').owlCarousel({
+        margin: 5,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        autoWidth: false,
+        nav: true,
+        loop: true,
+        dots: true,
+        items: 4,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+            dots: false
+          },
+          600: {
+            items: 1,
+            nav: false,
+            dots: false
+          },
+          1000: {
+            items: 4,
+            nav: false,
+            dots: false,
+            loop: false
+          },
+          1600: {
+            items: 4,
+             nav: false,
+            loop: false
+          }
+        }
+      });
+
+    $(".single-detail-images").click(function(){
+        $('#carouselExampleIndicators').show();
+    });
+
+    $("#close_product_slider").click(function(){
+        $('#carouselExampleIndicators').hide();
+    });
+    })
+    </script>
+
+<script type="text/javascript">
+      $('#mobile-slider-products').owlCarousel({
+        margin: 5,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
+        autoWidth: false,
+        nav: false,
+        loop: true,
+        dots: false,
+        responsive: {
+          0: {
+            items: 2,
+            nav: true
+          },
+          600: {
+            items: 2,
+            nav: false
+          },
+          1000: {
+            items: 4,
+            nav: false,
+            dots: false,
+            loop: false
+          }
+        }
+      })
+    </script>
+<script type="text/javascript">
+      jQuery(document).ready(function() {
+        $(".dropdown").hover(function() {
+          // $('.dropdown-menu', this).fadeIn("fast");
+        }, function() {
+          // $('.dropdown-menu', this).fadeOut("fast");
+        });
+        $('.grey-heart').click(function(){
+           $(this).addClass('added-fav');
+        });
+    
+        var settings = {
+          "url": "${URLUtils.https('Wishlist-isAdded')}",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "data": JSON.stringify({
+              "pid": '${product.id}'
+          }),
+        };
+        $.ajax(settings).done(function (response) {
+         
+          if(response.isAdded > 0){
+            $('.fa-heart').addClass('added-fav');
+          }
+        });
+      });
+    </script>
+
+<script type="text/javascript">
+      var text = $('.pureyad'),
+        btn = $('.purgex'),
+        h = text[0].scrollHeight;
+      if (h > 120) {
+        btn.addClass('less');
+        btn.css('display', 'block');
+      }
+      btn.click(function(e) {
+            e.stopPropagation();
+          let height = ($(window).height()-150);
+          // console.log('height - ',height);
+            if (btn.hasClass('less')) {
+              btn.removeClass('less');
+              btn.addClass('more');
+              btn.text('Ver Menos','images/mobile-arrow-icon.svg');
+                text.animate({
+                  'max-height': height+'px'
+                }, 1000);
+                $('#blur-background').addClass('blur-background');
+              }
+              else {
+                btn.addClass('less');
+                btn.removeClass('more');
+                btn.text('Ver Detalles');
+                text.animate({
+                  'max-height': '100px'
+                }, 1000);
+                $('#blur-background').removeClass('blur-background');
+              }
+            });
+            function openMobileSelect(){
+              var element = document.getElementById('mobile_select_size_main');
+              element.style.display = "block";
+              // $('.fit-bottom').css({'z-index':'0'});
+              $('.pureyad').hide();
+              $('.purgex').hide();
+              console.log( "click close" );
+            }
+            function closeMobileSelect(){
+              var element = document.getElementById('mobile_select_size_main');
+              element.style.display = "none";
+              $('.pureyad').show();
+              $('.purgex').show();
+
+              console.log( "open close" );
+              // $('.fit-bottom').css({'z-index':'999'});
+            }
+    </script>
+
+<script type="text/javascript">
+  
+  var $item = $('.carousel-item'); 
+var $wHeight = $(window).height();
+$item.eq(0).addClass('active');
+$item.height($wHeight); 
+$item.addClass('full-screen');
+
+$('.carousel img').each(function() {
+  var $src = $(this).attr('src');
+  var $color = $(this).attr('data-color');
+  $(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  $(this).remove();
+});
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
+
+$('.carousel').carousel({
+  interval: 6000,
+  pause: "false",
+});
+</script>

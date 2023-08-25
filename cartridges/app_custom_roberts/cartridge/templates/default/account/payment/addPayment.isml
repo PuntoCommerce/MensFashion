@@ -1,0 +1,44 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/paymentInstruments.js');
+        assets.addCss('/css/account/payment.css');
+    </isscript>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('page.heading.payments', 'payment', null)}</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Breadcrumbs--->
+    <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+    <div class="container account-sections">
+
+        <div class="row justify-content-center">
+            <div class="col-md-offset-2 col-md-8 card-myaccount">
+                <div class="account-box">
+                    <div class="inner-accout">
+                        <isif condition="${pdict.UUID}">
+                            <p>${Resource.msg('label.payment.editpayment', 'payment', null)}</p>
+                            <iselse>
+                                <p>${Resource.msg('label.payment.addnewpayment', 'payment', null)}</p>
+                        </isif>
+                    </div>
+                    <div class="profile-detail">
+                        <isinclude template="account/payment/paymentForm" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center">
+                <a href="${URLUtils.url('Account-Show')}" class="back-link">${Resource.msg('link.profile.backtomyaccount', 'account', null)}</a>
+            </div>
+        </div>
+</isdecorate>

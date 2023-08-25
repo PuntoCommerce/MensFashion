@@ -1,0 +1,35 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/wishlist.css');
+        assets.addJs('/js/wishlist.js');
+        assets.addJs('/js/customWishlist.js');
+        assets.addJs('/js/productDetail.js');
+        assets.addCss('/css/login.css');
+        assets.addJs('/js/login.js');
+    </isscript>
+  <div class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('wishlist.hero.image.header', 'wishlist', null)}</h1>
+                        <!--<p class="d-none d-xs-none d-sm-block d-md-block d-lg-block">¿Necesitas ayuda? Marca: 1-800-555-0199</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid ${pdict.loggedIn ? '' : 'login-page'}">
+        <!---Breadcrumbs--->
+        <div class="mt-5 mb-1">
+        <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
+        </div>
+        <isif condition="${pdict.loggedIn}">
+            <isinclude template="wishlist/components/wishlist" />
+        <iselse>
+            <isinclude template="wishlist/components/login" />
+        </isif>
+    </div>
+</isdecorate>

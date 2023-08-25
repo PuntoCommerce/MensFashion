@@ -1,0 +1,85 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<isdecorate template="common/layout/pdStorePage">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/experience/storePage.css');
+        assets.addCss('/css/bootstrap.min.css');
+        assets.addCss('/css/style.css');
+        assets.addCss('/css/responsive.css');
+        assets.addCss('/css/new-design.css');
+        assets.addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+    </isscript>
+
+    <div class="storepage" id="${pdict.page.ID}">
+        <div class="container-fluid">
+            <div class="row">
+                <isprint value="${pdict.regions.main.setClassName("").render()}" encoding="off" />
+            </div>
+            <div class="row">
+                <isprint value="${pdict.regions.legalnotice.setClassName("").render()}" encoding="off" />
+            </div>
+        </div>
+    </div>
+</isdecorate>
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="${URLUtils.staticURL('js/jquery.min.js')}"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 75) {
+        $('.navbar').removeClass('color-change');
+      }
+      if ($(window).scrollTop() < 75) {
+        $('.navbar').removeClass('navbar-fixed');
+        $('.navbar').addClass('color-change');
+      }
+    });
+    jQuery(document).ready(function(){
+      if('${pdict.page.ID}' == 'homepage'){
+      }
+      else{
+         $('.navbar').removeClass('navbar-light');
+         $('.navbar').addClass('navbar-other');
+      }
+    
+        $('.container-fluid').click(function(){
+          if($('nav').hasClass('navbar-other-dropdown')==true){
+              $('.dropdown').children('ul').removeClass('d-block');
+              $('.navbar').removeClass('navbar-other');
+              $('.navbar').addClass('navbar-other-dropdown');
+          }
+      });
+      $(".minicart").hover(
+          function(){ $('#popover').show();
+          },
+          function() { $('#popover').hide();
+        });
+    });
+    $(document).ready(function(){
+        let url = '${URLUtils.https('Cart-MiniCartShow')}';
+         $.ajax({
+            url:url,
+            success:function(response){
+                console.log(response);
+                $("#popover").html(response);
+            }
+        });
+    });
+    </script>

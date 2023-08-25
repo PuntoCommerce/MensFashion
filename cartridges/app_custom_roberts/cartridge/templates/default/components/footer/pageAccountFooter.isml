@@ -1,0 +1,118 @@
+<iscomment>
+    <isinclude template="experience/components/commerce_layouts/newsLetterSection" />
+</iscomment>
+<footer class="copy-right bottomfit">
+    <div class="container">
+        <div class="row">
+            <p>Pagos seguros</p>
+            <div class="text-center visa-cards">
+                <img src="${URLUtils.staticURL('images/Visa.svg')}" alt="icon">
+                <img src="${URLUtils.staticURL('images/Mastercard.svg')}" alt="icon">
+                <img src="${URLUtils.staticURL('images/Paypal.svg')}" alt="icon">
+                <img src="${URLUtils.staticURL('images/MercadoPago.svg')}" alt="icon">
+                <p>Derechos Reservados © 2023 Robert’s.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="${URLUtils.staticURL('js/jquery.min.js')}"></script>
+
+<script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 75) {
+        $('.navbar').addClass('navbar-fixed');
+      }
+      if ($(window).scrollTop() < 75) {
+        $('.navbar').removeClass('navbar-fixed');
+      }
+    });
+    
+    jQuery(document).ready(function(){
+        if ($(window).scrollTop() > 75) {
+        $('.navbar').addClass('navbar-fixed');
+      }
+      if('${pdict.page.ID}' == 'homepage'){
+      }
+      else{
+         $('.navbar').removeClass('navbar-light ');
+         $('.navbar').addClass('navbar-other logoheader');
+      }
+      $('.container-fluid').click(function(){
+          if($('nav').hasClass('navbar-other-dropdown')==true){
+              $('.dropdown').children('ul').removeClass('d-block');
+              $('.navbar').removeClass('navbar-other');
+              $('.navbar').addClass('navbar-other-dropdown');
+          }
+      });
+      $(".minicart").hover(
+          function(){ $('#popover').show();
+          },
+          function() { $('#popover').hide();
+        });
+    });
+    $(document).ready(function(){
+          /**MEGA MENU HIDE / SHOW SECTION */
+      $('.display-menu-data').click(function(){
+          let category = $(this).attr('data-id');
+          let subid = $(this).attr('data-subid');
+          let closeid = $(this).attr('data-close-id');
+          let i= 0;
+          if(closeid=='0'){
+            $('.'+category+' div .'+category+'-hide').hide();
+            $('.'+subid+'-'+category+'-sub-category').addClass('display-flex');
+            i++;
+          }
+          else{
+            $('.'+closeid).removeClass('display-flex');
+            $('.'+category+' div .'+category+'-hide').show();
+          }
+          return false;
+      });
+      $('.level-one').on('click',function(){
+        let id = $(this).attr('id');
+        window.location =$('#'+id).attr('href');
+    })
+        // let url = '${URLUtils.https('Cart-MiniCartShow')}';
+        //  $.ajax({
+        //     url:url,
+        //     success:function(response){
+        //         // console.log(response);
+        //         $("#popover").html(response);
+        //     }
+        // });
+    });
+    </script>
+<script type="text/javascript">
+   $(document).ready(function(){
+      $('.search-icon-down').click(function() {
+      $(".box-search").addClass("fullbox");
+
+      if ($('.box-search').is(':hidden')) {
+          $('.box-search').show();
+        
+          $('.navbar').addClass('navbar-other');
+      }
+
+     else {
+        $('.box-search').hide();
+        $('.navbar').removeClass('navbar-other');
+      }
+
+      });
+
+       $('.search-cross').click(function() {
+        $('.box-search').hide();
+        $('.navbar').removeClass('navbar-other');
+       }); 
+    });
+</script>

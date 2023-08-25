@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  text-align: center;
+  width: 100%;
+  border-radius: 0;
+  padding: $spacing-small;
+
+  font-family: nth($text-font-stack, $avenir-LT-Std);
+  font-size: $font-size-h5;
+
+  background-color: $white-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-primary,
+  &--gray {
+    background-color: $light-grey;
+    color: $text-color-black !important;
+    font-family: $font-family-bold;
+
+    &:hover {
+      background-color: $text-color-black;
+      color: $white-color !important;
+    }
+  }
+
+  &--dark {
+    background-color: $text-color-black;
+    color: $white-color !important;
+    &:hover {
+      background-color: $white-color;
+      color: $text-color-black !important;
+      border: 1px solid $text-color-black;
+    }
+  }
+
+  &__small {
+    font-size: $font-size-minimal;
+    padding: $spacing-x-small;
+  }
+
+  &__small-b {
+    font-size: $font-size-minimal;
+    padding: $spacing-x-small-bigger;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-add-wishlist{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,51 @@
+<iscomment>
+    <isprint value="${JSON.stringify(pdict.productSearch.refinements)}" />
+</iscomment>
+<div>
+    <ul class="refinements">
+<isloop items="${pdict.productSearch.refinements}" var="refinement">
+    <div class="card filter-card">
+        <div class="card-header filter-header" data-toggle="collapse" data-target="${'#' + refinement.displayName}"
+            aria-expanded="false">
+            <span class="title">${refinement.displayName}</span> <span class="accicon">
+                <i class="fas fa-angle-down rotate-icon"></i>
+            </span>
+        </div>
+        <isset name="categories" value="${refinement.values}" scope="page" />
+        <!--- CATEGORY REFINEMENTS --->
+        <isif condition="${refinement.isCategoryRefinement}">
+            <div id="${refinement.displayName}" class="collapse show" data-parent="#accordion_two">
+                <div class="card-body">
+                    <div class="filter-size-box">
+                        <isinclude template="search/mobile/refinements/categories" />
+                    </div>
+                </div>
+            </div>
+        </isif>
+        <!--- ATTRIBUTE REFINEMENTS --->
+        <isif condition="${refinement.isAttributeRefinement || refinement.isPromotionRefinement}">
+            <div id="${refinement.displayName}" class="collapse" data-parent="#accordion_two">
+
+                <div class="card-body">
+                    <div class="filter-size-box">
+                        <isinclude template="search/mobile/refinements/attributes" />
+                    </div>
+                </div>
+            </div>
+        </isif>
+        <!--- PRICE REFINEMENTS --->
+        <isif condition="${refinement.isPriceRefinement}">
+            <div id="${refinement.displayName}" class="collapse" data-parent="#accordion_two">
+                <div class="card-body">
+                    <div class="filter-size-box">
+                        <isinclude template="search/refinements/prices" />
+                    </div>
+                </div>
+            </div>
+        </isif>
+    </div>
+
+</isloop>
+</ul>
+
+</div>

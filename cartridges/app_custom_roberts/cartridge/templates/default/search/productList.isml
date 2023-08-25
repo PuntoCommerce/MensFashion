@@ -1,0 +1,260 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/search.js');
+    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
+    assets.addCss('/css/search.css');
+    assets.addCss('/css/experience/components/commerceLayouts/productList.css');
+</isscript>
+<div class="tab-pane container active" id="product-search-results" role="tabpanel" aria-labelledby="product-tab"
+   style="max-width: 100%;">
+   <!--No Fill Bannner section -->
+   <isif condition="${pdict.productSearch.searchKeywords != ''}">
+      <section class="text-center">
+         <div class="container">
+            <div class="row">
+               <div class="Trajes-no-fill">
+                  <h1 class="text-capitalize">${pdict.productSearch.searchKeywords ? pdict.productSearch.searchKeywords : ''}</h1>
+               </div>
+            </div>
+         </div>
+      </section>
+   </isif>
+   <isif condition="${pdict.selectBannerType == 'No-Banner'}">
+      <section class="text-center">
+         <div class="container">
+            <div class="row">
+               <div class="Trajes-no-fill">
+                  <h1>${pdict.categoryId}</h1>
+               </div>
+            </div>
+         </div>
+      </section>
+   </isif>
+   <!--Close No Fill Bannner section -->
+   <!-- Fill Bannner section -->
+   <isif condition="${pdict.selectBannerType == 'Full-banner'}">
+      <section class="text-center set-middle banner-category"
+         style="background-image:url('${pdict.fullBannerImage.src.desktop}');">
+         <div class="container-fluid">
+            <div class="row m-0">
+               <div class="Trajes-no-fill">
+                  <h1>${pdict.categoryId}</h1>
+               </div>
+            </div>
+         </div>
+      </section>
+   </isif>
+   <!--Close Fill Bannner section -->
+   <isif condition="${pdict.selectBannerType == 'Visual-Filter'}">
+      <!-- Visual Filter Bannner section -->
+      <section>
+         <div class="container-fluid p-0">
+            <div class="row m-0">
+               <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 pl-0 mob-r">
+                  <div class="trajes-single">
+                     <div>
+                        <isprint value="${pdict.visualFilterText}" encoding="off" />
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xs-8 col-sm-8 col-lg-8 col-md-8 d-none d-xs-none d-sm-none d-md-block">
+                  <div class="row">
+                     <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                        <div class="pro-img">
+                           <a href="${pdict.category1Url}">
+                              <img src="${pdict.category1Image.src.desktop}" alt="image">
+                           </a>
+                        </div>
+                        <p class="name-category"><a href="${pdict.category1Url}">${pdict.category1Text}</a></p>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                        <div class="pro-img">
+                           <a href="${pdict.category2Url}">
+                              <img src="${pdict.category2Image.src.desktop}" alt="image">
+                           </a>
+                        </div>
+                        <p class="name-category"><a href="${pdict.category2Url}">${pdict.category2Text}</a></p>
+                     </div>
+                     <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4">
+                        <div class="pro-img">
+                           <a href="${pdict.category3Url}">
+                              <img src="${pdict.category3Image.src.desktop}" alt="image">
+                           </a>
+                        </div>
+                        <p class="name-category"><a href="${pdict.category3Url}">${pdict.category3Text}</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </isif>
+   <!-- Close Visual Filter Bannner section -->
+   <section class="d-none d-xs-none d-sm-block d-md-block">
+      <!--Breadcrumbs-->
+      <div class="container-fluid">
+         <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+      </div>
+   </section>
+   <iscomment> MOBILE FILTER START </iscomment>
+   <div id="mobile-filter" class="overlay-filter d-xs-block d-sm-none d-md-none d-lg-none">
+      <div class="aplicar-filtros ">
+         <h3>Aplicar filtros</h3>
+         <iscomment> <h4>Borrar filtros</h4> </iscomment>
+         <h4 class="clear-cross reset" data-href="${pdict.productSearch.resetLink+'&deviceType=mobile'}" > Clear filters <a href="javascript:closeFilter()"></h4>
+      </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+         <div class="accordion refinements-ss" id="accordion_two">
+            <isset name="mobileFilter" value="mobile" scope="request" />
+            <isinclude template="search/mobile/mobilesearchRefineBar" />
+            <input type="hidden" name="deviceType" value="mobile"/>
+         </div>
+      </div>
+   </div>
+   <section class="bearkpoint-spaces">
+      <div class="container-fluid">
+         <input type="hidden" value="true" name="pageRefresh"/>
+         <div class="row">
+            <div class="col-12 col-sm-12 col-md-5 d-none d-xs-none d-sm-block d-md-block ipad-w100 ">
+               <div class="filtros">
+                  <h4>FILTROS:</h4>
+                  <isinclude template="search/searchRefineBar" />
+                  <isinclude template="search/filterBar" />
+               </div>
+            </div>
+            <div class="d-xs-block d-sm-none d-md-none col-4 col-xs-3 p-0">
+               <p class="Filtrar-por" onclick="openNav()">Filtrar por:</p>
+            </div>
+            <div class="col-3 col-sm-6 col-md-2 text-center product-count filter-header">
+             
+                  <iscomment> 109 Productos </iscomment>
+                  <isinclude template="search/resultsCount" />
+               
+            </div>
+            <div class="col-5 col-sm-6 col-md-5 ipad-w65 mobile-p-0">
+               <div class="right-grids">
+                  <ul class="nav nav-pills tabs-4">
+                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#" onclick="changeLayout('2')" role="tab"
+                           aria-controls="pills-flamingo" aria-selected="false">
+                           <!--<img src="${URLUtils.staticURL('/images/grid-icon.svg')}" class="d-none d-xs-none d-sm-block d-md-block" alt="icon"> -->
+                           <div class="desktop-grid d-none d-xs-none d-sm-block d-md-block"></div>
+                           <!--  <img src="${URLUtils.staticURL('/images/mobile-grid.svg')}" class="d-xs-block d-sm-none d-md-none" alt="icon"> -->
+
+                           <div class="mobile-grid d-xs-block d-sm-none d-md-none"></div>
+
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#" onclick="changeLayout('4')" role="tab"
+                           aria-controls="pills-cuckoo" aria-selected="true">
+
+                           <div class="list-desktop d-none d-xs-none d-sm-block d-md-block"></div>
+                           <!--   <img src="${URLUtils.staticURL('/images/list-icon.svg')}" class="d-none d-xs-none d-sm-block d-md-block" alt="icon"> -->
+                           <!--   <img src="${URLUtils.staticURL('/images/mobile-grid3.svg')}" class="d-xs-block d-sm-none d-md-none" alt="icon"> -->
+                           <div class="mobile-gridnext d-xs-block d-sm-none d-md-none"></div>
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="form-group select-options">TEST
+                     <!-- -->
+                     <isinclude template="search/sortOrderMenu" />
+                     <!-- -->
+
+                     <iscomment> <select class="form-control" id="sel1">
+                           <option>Ordenar Por</option>
+                           <option>2</option>
+                           <option>3</option>
+                           <option>4</option>
+                        </select> </iscomment>
+                     <input type="hidden" value="4" id="product-layout-type" />
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+      </div>
+   </section>
+   <script>
+function openNav() {
+  document.getElementById("mobile-filter").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mobile-filter").style.width = "0%";
+}
+</script>
+   <!-- products starts -->
+   <div class="col-12 col-md-12 col-lg-12 m-t60 p-0">
+      <div class="tab-content mt-3">
+         <div class="tab-pane fade show" id="flamingo" role="tabpanel" aria-labelledby="flamingo-tab">
+            <isif condition="${pdict.productSearch.productIds.length > 0}">
+
+               <iscomment> Product Grid </iscomment>
+               <div class="product-grid product-grid-two row m-0" itemtype="http://schema.org/SomeProducts"
+                  itemid="#product">
+                  <isinclude template="experience/components/dynamic/customProductList/productGrid" />
+               </div>
+            </isif>
+         </div>
+         <div class="tab-pane fade show active" id="cuckoo" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row-d m-0">
+               <div class="product-grid product-grid-four row m-0" itemtype="http://schema.org/SomeProducts"
+                  itemid="#product">
+                  <isinclude template="experience/components/dynamic/customProductList/mobile/productGrid" />
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- products ends -->
+
+   <div class="paginations">
+      <iscomment> <a href="/" class="button-common">VER MÁS</a> </iscomment>
+      <iscomment>
+         <p><i class="fas fa-chevron-left"></i> Página 1 de 10 <i class="fas fa-chevron-right"></i></p>
+      </iscomment>
+   </div>
+
+
+</div>
+
+<script src="${URLUtils.staticURL('js/jquery.min.js')}"></script>
+<script>
+function changeLayout(layout) {
+   if(layout == 4){
+      $('#product-layout-type').val(4);
+      $("#flamingo").hide();
+      $("#cuckoo").show();
+      $('[name=sort-order]').trigger('change');
+   }else{
+      $('#product-layout-type').val(2);
+      $("#flamingo").show();
+      $("#cuckoo").hide();
+      $('[name=sort-order]').trigger('change');
+   }
+}
+function openFilter(value) {
+
+   var hideElements = document.getElementsByClassName('main-class-filter');
+   //hideElement.style.display = "none";
+
+   for (let i = 0; i < hideElements.length; i++) {
+      const hideElement = hideElements[i];
+      hideElement.style.display = "none";      
+   }
+
+   var element = document.getElementById(value);
+   element.style.display = "block";
+}
+function closeFilter(){
+   var hideElements = document.getElementsByClassName('main-class-filter');
+   //hideElement.style.display = "none";
+
+   for (let i = 0; i < hideElements.length; i++) {
+      const hideElement = hideElements[i];
+      hideElement.style.display = "none";      
+   }
+}
+</script>

@@ -1,0 +1,27 @@
+<div class="account-box">
+    <div class="inner-accout">
+        <p>${Resource.msg('label.profile', 'account', null)}</p>
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+            <a href="${URLUtils.url('Account-EditProfile')}" class="pull-right"
+                aria-label="${Resource.msg('label.profile.edit', 'account', null)}">
+                <img class="mb-2" src="${URLUtils.staticURL('/images/edit-icon.svg')}" alt="Envío a domicilio" /></a>
+        </isif>
+    </div>
+    <div class="profile-detail">
+        <h3>${Resource.msg('label.profile.firstname', 'account', null)}</h3>
+        <p>${pdict.account.profile.firstName}</p>
+        <h3>${Resource.msg('label.profile.lastname', 'account', null)}</h3>
+        <p>${pdict.account.profile.lastName}</p>
+
+        <h3>${Resource.msg('label.profile.email', 'account', null)}</h3>
+        <p>${pdict.account.profile.email}</p>
+
+        <isif condition="${!pdict.account.isExternallyAuthenticated}">
+
+        <h3>${Resource.msg('label.profile.phone', 'account', null)}</h3>
+        <p>${pdict.account.profile.phone}</p>
+
+        </isif>
+
+    </div>
+</div>

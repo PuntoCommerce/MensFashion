@@ -1,0 +1,112 @@
+<isdecorate template="/common/layout/accountPage">
+    <iscomment>
+        <isdecorate template="/experience/pages/threeRowStorePage">
+    </iscomment>
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/cart.css');
+    </isscript>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <div class="cart-error-messaging cart-error">
+        <isif condition="${pdict.valid.error && pdict.items.length !== 0}">
+            <div class="alert alert-danger alert-dismissible valid-cart-error fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                ${pdict.valid.message}
+            </div>
+        </isif>
+    </div>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('title.cart', 'cart', null)}</h1>
+                        <p class="hide-in-mobile">
+                            <span>${Resource.msg('info.need.help', 'cart', null)}</span>
+                            <span><a class="help-phone-number"
+                                    href="tel:${Resource.msg('info.phone.number', 'common', null)}">${Resource.msg('info.phone.number', 'common', null)}</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <isif condition="${pdict.items.length === 0}">
+        <iscomment> <div class="container-fluid cart-empty"> </iscomment>
+            <isinclude template="cart/cartBlank" />
+        <iscomment> </div> </iscomment>
+    </isif>
+    <isif condition="${pdict.items.length > 0}">
+        <div class="cart cart-page mb-5">
+            <section class="segur-space">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="seguir">
+                                <h3>
+                                    <a class="continue-shopping-link" href="${URLUtils.url('Home-Show')}"
+                                        title="${Resource.msg('link.continue.shopping', 'cart', null)}">
+                                        ${Resource.msg('link.continue.shopping', 'cart', null)}
+                                    </a>
+                                </h3>
+                                <h3>${Resource.msgf('label.number.items.in.cart', 'cart', null, pdict.numItems)}</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-5"></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-1 hide-div-ipad"></div>
+                        <div class="col-md-5 ipad-col-7">
+                            <isloop items="${pdict.items}" var="lineItem">
+                                <isif condition="${lineItem.productType === 'bundle'}">
+                                    <isinclude template="cart/productCard/cartBundleCard" />
+                                <iselse/>
+                                    <isif condition="${lineItem.noProduct === true}">
+                                        <iscomment>
+                                            <isinclude template="cart/productCard/uncategorizedCartProductCard" />
+                                        </iscomment>
+                                    <iselse/>
+                                        <isinclude template="cart/productCard/cartProductCard" />
+                                    </isif>
+                                </isif>
+                            </isloop>
+                            <isinclude template="cart/cartApproachingDiscount" />
+                        </div>
+                       <div class="col-md-1 hide-div-ipad"></div>
+                        <div class="col-md-5">
+                            <div class="tienes-sect">
+                                <h3> ¿Tienes un código de promoción?</h3>
+                                <isinclude template="cart/cartPromoCode" />
+                                <div class="coupons-and-promos">
+                                    <isinclude template="cart/cartCouponDisplay" />
+                                </div>
+                                <div class="row">
+                                    <isinclude template="cart/cartShippingMethodSelection" />
+                                </div>
+                                <isinclude template="cart/cartTotals" />
+                                <div class="row">
+                                    <div class="col-12 checkout-continue">
+                                        <isinclude template="cart/checkoutButtons" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <isinclude template="cart/cartRemoveProductModal" />
+            </section>
+        </div>
+    </isif>
+
+</isdecorate>

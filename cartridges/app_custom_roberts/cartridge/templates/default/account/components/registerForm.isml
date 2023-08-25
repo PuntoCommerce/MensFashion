@@ -1,0 +1,134 @@
+<form action="${pdict.createAccountUrl}" class="registration form-sign-in" id="register-form" method="POST" name="${pdict.profileForm.htmlName}">
+    <div class="form-group <isif condition=" ${!!pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
+        <label class="" for="registration-form-fname">
+            <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-fname"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-fname-error" <isprint value=${pdict.profileForm.customer.firstname.attributes}
+            encoding="off" />>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+    <div class="form-group  <isif condition=" ${!!pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-lname">
+            <isprint value="${pdict.profileForm.customer.lastname.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-lname"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-lname-error" <isprint value=${pdict.profileForm.customer.lastname.attributes}
+            encoding="off" />>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-phone">
+            <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
+        </label>
+        <input type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" maxlength="10" class="form-control" id="registration-form-phone"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-phone-error" <isprint value=${pdict.profileForm.customer.phone.attributes}
+            encoding="off" />
+
+        >
+        <div class="invalid-feedback" id="form-phone-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.customer.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-email">
+            <isprint value="${pdict.profileForm.customer.email.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-email"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-email-error" <isprint value=${pdict.profileForm.customer.email.attributes}
+            encoding="off" />>
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.customer.emailconfirm.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-email-confirm">
+            <isprint value="${pdict.profileForm.customer.emailconfirm.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="registration-form-email-confirm"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.50orless', 'forms', null)}"
+            aria-describedby="form-email-confirm-error" <isprint
+            value=${pdict.profileForm.customer.emailconfirm.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-email-confirm-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.login.password.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-password">
+            <isprint value="${pdict.profileForm.login.password.label}" encoding="htmlcontent" />
+        </label>
+        <iscomment> <button onclick="showPassword()" class="show-password-button" type="button">
+            <img src="${URLUtils.staticURL('images/checkout/show_password.svg')}" alt="show password">
+        </button> </iscomment>
+        <span class="eye-icon">
+        <input type="password" class="form-control show-password" id="registration-form-password"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
+            aria-describedby="form-password-error" autocomplete="off" <isprint
+            value=${pdict.profileForm.login.password.attributes} encoding="off" />>
+        <img src="${URLUtils.staticURL('/images/eye.svg')}" class="hide" data-id="registration-form-password" alt="show password">
+        </span> 
+            <div class="passwordLeyendCont">
+                <span class="checkout__text passwordLeyend">
+                  <small class="telephone-size">  ${Resource.msg('label.input.login.leyend', 'login', null)} </small>
+                </span>
+            </div>
+        <div class="invalid-feedback" id="form-password-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition=" ${!!pdict.profileForm.login.passwordconfirm.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-password-confirm">
+            <isprint value="${pdict.profileForm.login.passwordconfirm.label}" encoding="htmlcontent" />
+        </label>
+        <input type="password" class="form-control show-password" id="registration-form-password-confirm"
+            data-missing-error="${Resource.msg('error.message.required', 'forms', null)}"
+            data-range-error="${Resource.msg('error.message.8_255characters', 'forms', null)}"
+            aria-describedby="form-password-confirm-error" autocomplete="off" <isprint
+            value=${pdict.profileForm.login.passwordconfirm.attributes} encoding="off" />>
+            <div class="passwordLeyendCont">
+                <span class="checkout__text passwordLeyend">
+                    <small class="telephone-size">  ${Resource.msg('label.input.login.leyend', 'login', null)} </small>
+                </span>
+            </div>    
+        <div class="invalid-feedback" id="form-password-confirm-error"></div>
+    </div>
+
+    <div class="form-group custom-control custom-checkbox m24px">
+        <input type="checkbox" class="form-check-input-reg" id="add-to-email-list" <isprint
+            value=${pdict.profileForm.customer.addtoemaillist.attributes} encoding="off" />
+        >
+        <label class="form-check-label custom-checkout-class" for="add-to-email-list">
+            ${Resource.msg('page.register.add.wishlist', 'registration', null)}
+        </label>
+    </div>
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+
+    <button type="submit" class=" pagar btn-block register-btn">
+        ${Resource.msg('button.createaccount.registration', 'registration', null)}
+    </button>
+    <p class="men-fashions-p">
+        ${Resource.msg('description.privacypolicy.registration', 'registration', null)}
+    </p>
+    <p class="olvidaste-p">
+        <a href="${URLUtils.https('PageRender-Show?page=noticeofprivacy')}">
+            ${Resource.msg('link.privacypolicy.registration', 'registration', null)}
+        </a>
+    </p>
+</form>

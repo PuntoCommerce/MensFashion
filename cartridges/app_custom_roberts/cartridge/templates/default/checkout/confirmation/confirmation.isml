@@ -1,0 +1,140 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/checkout/checkout.css');
+        assets.addJs('/js/checkoutRegistration.js');
+    </isscript>
+
+    <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+        <isinclude template="reporting/reportingUrls" />
+    </isif>
+
+    <iscomment>
+        <div class="hero slant-down hero-confirmation">
+            <h1 class="page-title">${Resource.msg('title.thank.you.page', 'confirmation', null)}</h1>
+        </div>
+    </iscomment>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="wizard">
+                    <div class="wizard-inner">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab"
+                                    aria-expanded="true">
+                                    <span class="round-tab">1</span>
+                                </a>
+                                <p>Envío</p>
+                            </li>
+                            <li role="presentation" class="active">
+                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab"
+                                    aria-expanded="false">
+                                    <span class="round-tab">2</span>
+                                </a>
+                                <p>Pago</p>
+                            </li>
+                            <li role="presentation" class="active">
+                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab">
+                                    <span class="round-tab">3</span>
+                                </a>
+                                <p>Realizar pedido</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img class="img-fluid w-100" src="${URLUtils.staticURL('images/Rectangle1503.jpg')}" alt="image">
+    <div class="login-box pb-5 ">
+        <div class="container receipt  <isif condition=" ${pdict.order.shipping.length > 1}">multi-ship</isif>">
+            <div class="row ">
+                <div class="${pdict.returningCustomer ? 'col-sm-12' : 'col-sm-12'} text-center">
+                    <h2 class="victor-thank">${Resource.msg('msg.placed.order.thank.you', 'confirmation', null)}</h2>
+
+                    <isif condition="${pdict.order.orderEmail}">
+                    <p class="enviaremos">Enviaremos un correo electrónico a <strong>${pdict.order.orderEmail}</strong>
+                        con los detalles de tu compra.</p>
+                    </isif>
+                    
+                    <iscomment> <isif condition="${pdict.order.orderEmail}">
+                        <p class="order-thank-you-email-msg">
+                            <isprint
+                                value="${Resource.msgf('info.receive.email.confirmation', 'confirmation', null, pdict.order.orderEmail)}"
+                                encoding="htmlcontent" />
+                        </p>
+                    </isif> </iscomment>
+                </div>
+            </div>
+            <div class="row">
+
+                <isif condition="${pdict.returningCustomer === false && pdict.order.orderEmail}">
+                    <div class="col-sm-12">
+                        <div class="thankyou-box">
+                            <div class="row">
+                                <div class="col-sm-6 offset-sm-3 offset-md-0 push-md-6">
+                                    <isinclude template="checkout/confirmation/confirmationCreateAccount" />
+                                </div>
+                                <div class="col-sm-6 text-center ">
+                                    <isloop items="${pdict.order.shipping}" var="shippingModel">
+                                        <isloop items="${shippingModel.productLineItems.items}" var="lineItem">
+                                            <div class="row">
+                                                <isinclude template="checkout/productCard/productCardCustom" />
+                                            </div>
+                                        </isloop>
+                                    </isloop>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <iselse>
+                    <div class="col-sm-6 text-center ">
+                        <div class="thankyou-box">
+                            <isloop items="${pdict.order.shipping}" var="shippingModel">
+                                <isloop items="${shippingModel.productLineItems.items}" var="lineItem">
+                                    <div class="row">
+                                        <isinclude template="checkout/productCard/productCardCustom" />
+                                    </div>
+                                </isloop>
+                            </isloop>
+                        </div>
+                    </div>
+                </isif>
+                <div class="col-sm-6 text-center ">
+
+                    <div class="address-box">
+                        <span
+                            class="summary-section-label billing-addr-label">${Resource.msg('label.order.billing.address', 'confirmation', null)}</span><br />
+                        <isif condition="${pdict.order.billing.billingAddress.address !== null}">
+                            <isset name="address" value="${pdict.order.billing.billingAddress.address}" scope="page" />
+                            <iselse>
+                                <isset name="address" value="{}" scope="page" />
+                        </isif>
+                        <isinclude template="checkout/addressSummary" />
+                        <isif condition="${pdict.order.orderEmail !== null}">
+                            <span class="order-summary-email">${pdict.order.orderEmail}</span>
+                            <iselse>
+                                <span class="order-summary-email"></span>
+                        </isif>
+                        <br />
+                        <isif condition="${pdict.order.billing.billingAddress.address !== null}">
+                            <span class="order-summary-phone">${pdict.order.billing.billingAddress.address.phone}</span>
+                            <iselse>
+                                <span class="order-summary-phone"></span>
+                        </isif>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center ">
+                    <div class="address-box">
+                        <span
+                            class="summary-section-label payment-info-label">${Resource.msg('label.order.payment.info', 'confirmation', null)}</span><br />
+                        <isinclude template="checkout/billing/paymentOptions/paymentOptionsSummary" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</isdecorate>

@@ -33,7 +33,7 @@
                     <p class="line-item-price-info">${Resource.msg('label.each.item.price','cart',null)}</p>
                     <span class="value">${productLineItem.bonusUnitPrice}</span>
                 </div>
-                <div class="col-4 col-lg-3 line-item-quantity">
+                <div class="line-item-quantity">
                     <p class="line-item-price-info">${Resource.msg('field.selectquantity','cart',null)}</p>
                     <p><isprint value="${productLineItem.quantity}" formatter="#"/></p>
                 </div>

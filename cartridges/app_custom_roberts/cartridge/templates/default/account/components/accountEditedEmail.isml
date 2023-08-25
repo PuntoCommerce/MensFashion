@@ -1,0 +1,282 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <style type="text/css">
+ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        @font-face {
+            font-family: "Avenir-LT-Std";
+            src: url("../fonts/AvenirLTStd-Light.otf") format("opentype");
+        }
+        body{
+            font-family: 'Avenir LT Std';
+            color: #0A3356;
+        }
+
+       footer {
+            width: 100%;
+            text-align: center;
+            color: #0A3356;
+        }
+
+        footer p {
+            padding-top: 1rem;
+        }
+
+        .legal-footer {
+            width: 100%;
+            text-align: center;
+        }
+
+        .legal-footer p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .msg-footer-img {
+            padding-top: 1rem;
+        }
+
+        .logo-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .logo-footer-img {
+            width: 90px;
+        }
+
+        .legal-footer-text{
+            color: #0A3356;
+        }
+
+        .email-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .banner-email-body{
+            width: 100%
+        }
+
+        .email-main {
+            margin: 0;
+            color:#0A3356;
+        }
+
+        .hr-email {
+            background-color: #0A3356;
+            height: 2px;
+            width: 80%;
+        }
+
+        .email-title {
+            padding: 40px 50px;
+            text-align: center;
+            display: grid;
+        }
+
+        .email-title span {
+            color: #0A3356;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        h1{
+            color: #0A3356;
+        }
+
+        .logo-body {
+            text-align: center;
+        }
+
+        .divider-footer {
+            width: 100%;
+        }
+
+        .logo-footer {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .logo-footer-img {
+            width: 90px;
+        }
+
+        .pay-footer-text {
+            color: #ffffff;
+            font-size: 14px;
+            margin: 10px;
+            padding: 0 5rem;
+            text-align: center;
+        }
+
+        .pay-methods {
+            margin: 0 auto;
+            width: fit-content;
+
+        }
+
+        .pay-methods img {
+            width: 30px;
+            height: auto;
+        }
+
+        .email-main p,
+        .email-main h1 {
+            margin: 0 auto;
+            max-width: 90%;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .email-main h1 {
+            font-size: 20px;
+        }
+
+        .email-main p {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .email-main p a{
+            font-size: 14px;
+            color: #000000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        table {
+            margin: 10px auto 10px auto;
+            width: 100%;
+        }
+
+        .btn-email{
+            width: 200px;
+            height: 39px;
+            background-color: #0a3356;
+            color: #ffffff;
+            border: none;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .text-container{
+            margin: 59px 0 99px 0;
+        }
+
+        @media only screen and (max-width:480px) {
+            .email-container {
+                max-width: 100%;
+                padding: 0px;
+            }
+
+            .email-main p,
+            .email-main h1 {
+                max-width: 100%;
+            }
+
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="email-container">
+        <div class="email-main">
+            <table>
+                <tr>
+                    <td>
+                        <div class="logo-body">
+                            <img class="logo-email-body"  src="${URLUtils.httpsStatic('/images/img-email/RobertsLogo.png')}"
+                                alt="logo Robert's" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                <div>
+                     <hr class="hr-email">
+                </div>
+                </td>
+                </tr>
+                <tr class="email-title">
+                    <td>
+                        <span>¡Tus datos fueron modificados!</span>
+                    </td>
+                </tr>                
+                <tr>
+                    <td style="padding-bottom: 50px;">
+                        <h1>
+                            ${Resource.msg('email.msg.edited.dear', 'account', null)}&nbsp;${pdict.firstName}&nbsp;${pdict.lastName}
+                        </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 25px;">
+                        <p style="color:#000;">${Resource.msg('email.msg.edited.body1', 'account', null)}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 60px; text-align: center;">
+                        <a href="${pdict.url}" target="_blank"><button class="btn-email" type="">${Resource.msg('link.account.redirect', 'account', null)}</button></a>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-bottom: 15px;">
+                        <p style="color:#A3A3A3;">${Resource.msg('email.msg.edited.body2', 'account', null)}</p>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                <div>
+                     <hr class="hr-email">
+                </div>
+                </td>
+                </tr>
+            </table>    
+        </div>      
+        <footer>
+            <div class="msg-footer">
+                <p class="legal-footer-text">${Resource.msg('msg.atention', 'confirmation', null)}</p>
+            </div>
+            <div class="msg-footer">
+                <p class="legal-footer-text">${Resource.msg('msg.atention.phone', 'confirmation', null)}</p>
+            </div>
+            <div class="legal-footer">
+                <p class="legal-footer-text">${Resource.msg('msg.email.direction', 'confirmation', null)}</p>
+            </div>
+            <div class="msg-footer-img">
+                <img class="img-yt" src="${URLUtils.httpsStatic('/images/img-email/youtube.png')}"
+                    alt="Social links roberts" />
+                <img class="img-fb" src="${URLUtils.httpsStatic('/images/img-email/facebook.png')}"
+                    alt="Social links roberts" />
+                <img class="img-inst" src="${URLUtils.httpsStatic('/images/img-email/instagram.png')}"
+                    alt="Social links roberts" />
+                <img class="img-wt" src="${URLUtils.httpsStatic('/images/img-email/ri_whatsapp-fill.png')}"
+                    alt="Social links roberts" />
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+

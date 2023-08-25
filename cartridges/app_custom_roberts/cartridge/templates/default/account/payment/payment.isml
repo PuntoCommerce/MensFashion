@@ -1,0 +1,40 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addJs('/js/paymentInstruments.js');
+        assets.addCss('/css/account/payment.css');
+    </isscript>
+    <section class="cart-bg">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carrito">
+                        <h1>${Resource.msg('page.heading.payments', 'payment', null)}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---Breadcrumbs--->
+    <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+    <div class="container account-sections">
+        <isinclude template="account/payment/deletePaymentModal" />
+
+        <isif condition="${pdict.noSavedPayments}">
+            <div class="row justify-content-center h3 no-saved-payments">
+                <p>${Resource.msg('msg.no.saved.payments', 'payment', null)}</p>
+            </div>
+        </isif>
+        <isinclude template="account/payment/savedPayments" />
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-offset-2 col-md-4 text-center">
+                <isif condition="${pdict.addPaymentUrl}">
+                   <a href="${pdict.addPaymentUrl}" class="back-link" aria-label="${Resource.msg('label.payment.addnewpayment', 'payment', null)}">${Resource.msg('button.addnew', 'payment', null)}</a>
+                </isif>
+            </div>
+            <div class="col-md-4 backBtn backPay">
+                <a href="${URLUtils.url('Account-Show')}" class="pagar-account" style="color:white;">${Resource.msg('link.profile.backtomyaccount', 'account', null)}</a>
+            </div>
+        </div>
+    </div>
+</isdecorate>

@@ -1,0 +1,96 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<section class="common-space">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-sm-12 col-lg-5 d-flex">
+                <div class="col-sm-12 image-box d-flex p-0">
+                    <img src="${pdict.rightSideImage.src.desktop}" class="desktopshow" alt="product image" />
+                    <img src="${pdict.mobSideImage.src.desktop}" class="mobileshow" alt="product image"/>
+                    <div class="ocasion-right-mob d-lg-none d-sm-block">
+                        <h3>${pdict.headTitle}</h3>
+                        <h2>${pdict.headSubTitle}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-7 d-flex">
+                <div class="ocasion-right">
+                    <h3 class="d-none d-lg-block d-sm-none">${pdict.headTitle}</h3>
+                    <h2 class="d-none d-lg-block d-sm-none">${pdict.headSubTitle}</h2>
+                    <p class="pera-space">${pdict.description}
+                    </p>
+                    <a class="button-common" href="${pdict.buttonUrl}" >${pdict.buttonText}</a>
+                    <div class="row m-42 ocasion-mobile-cls">
+                        <isset name="product" value="${pdict.product}" scope="page" />
+                        <iscomment> <isprint value="${JSON.stringify(product)}" /> </iscomment>
+                        
+                        <div class="col-6 col-md-6 product-img">
+                        <a href="${pdict.canonicalUrl}">
+                            <img src="${product.images.small[0].absURL}" alt="image">
+                            <div class="special-ocasion-align">
+                                <h4>${product.productName}</h4>
+                                <div class="d-flex">
+                                <isif condition="${product.price.list !== null}">
+                                    <p class="discount-price"><span>$</span>${product.price.list.decimalPrice }</p>
+                                </isif>
+                                    <p class="final-price"><span>$</span>${product.price.sales.decimalPrice }</p>
+                                </div>
+                                <isif condition="${product.promotions.length > 0}">
+
+                                <div class="tag-percentage">
+                                    <isloop items="${product.promotions}" var="promotion" status="promdet">
+                                        <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
+                                            <div>
+
+                                            </div>
+                                        <iselseif condition="${promotion.name !== null}" />
+                                            ${promotion.name}
+                                        <iselse/>
+                                        </isif>
+                                    </isloop>
+                                </div>
+                            </isif>
+                            </div>
+                            </a>
+                        </div>
+
+                        <isset name="product2" value="${pdict.product2}" scope="page" />
+
+                        
+                        <div class="col-6 col-md-6 product-img">
+                        <a href="${pdict.canonicalUrl2}">
+                            <img src="${product2.images.small[0].absURL}" alt="image">
+                            <div class="special-ocasion-align">
+                                <h4>${product2.productName}</h4>
+                                <div class="d-flex">
+                                <isif condition="${product2.price.list !== null}">
+                                    <p class="discount-price"><span>$</span>${product2.price.list.decimalPrice }</p>
+                                </isif>
+                                    <p class="final-price"><span>$</span>${product2.price.sales.decimalPrice }</p>
+                                </div>
+                                <isif condition="${product2.promotions.length > 0}">
+
+                                <div class="tag-percentage">
+                                    <isloop items="${product2.promotions}" var="promotion" status="promdet">
+                                        <isif condition="${promotion.name === null && promotion.calloutMsg === null}">
+                                            <div>
+
+                                            </div>
+                                        <iselseif condition="${promotion.name !== null}" />
+                                            ${promotion.name}
+                                        <iselse/>
+                                        </isif>
+                                    </isloop>
+                                </div>
+                            </isif>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

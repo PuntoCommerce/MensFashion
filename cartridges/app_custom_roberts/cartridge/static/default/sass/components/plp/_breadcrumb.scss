@@ -1,0 +1,39 @@
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+}
+.plp-tools__item {
+
+    @media (max-width:390px) {
+        padding-right: 0;
+    }
+    
+    &--breadcrums {
+        padding: 0;
+        display: flex;
+        margin: 0;
+        font-family: $font-family-normal !important;
+
+        li {
+            list-style: none;
+
+            .item, .last-item {
+                color: $light-mid-grey!important;
+                font-size: $font-size-breadcrumb;
+            }
+            .item {
+                
+                &::after {
+                    content: "/";
+                    padding: 0 $spacing-x-small;
+                }
+            }
+
+            .last-item {
+                color: $text-color-black!important;
+            }
+        }
+        
+    }
+
+}

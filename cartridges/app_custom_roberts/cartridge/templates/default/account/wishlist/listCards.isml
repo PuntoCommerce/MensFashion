@@ -1,0 +1,28 @@
+<div class="account-box">
+    <div class="inner-accout">
+        <p class="pull-left">${Resource.msg('label.wishlist', 'account', null)}</p>
+        <isif condition="${pdict.account.wishlist && pdict.account.wishlist.length > 0}">
+            <a href="${URLUtils.url('Wishlist-Show')}" class="pull-right"><img class="mb-2" src="${URLUtils.staticURL('/images/eye-icon.svg')}"
+                            alt="Lista de Deseos" /></a>
+        </isif>
+    </div>
+    <div class="profile-detail">
+        <isif condition="${pdict.account.wishlist && pdict.account.wishlist.length > 0}">
+            <!---product cards--->
+            <isloop items="${pdict.account.wishlist}" var="item">
+                <isinclude template="account/wishlist/listCard" />
+            </isloop>
+            <iselse>
+                <div class="text-center empty-wishlist-msg">
+                    ${Resource.msg('wishlist.empty.text', 'wishlist', null)}
+                </div>
+            </iselse>
+        </isif>
+    </div>
+    <isif condition="${pdict.account.wishlist && pdict.account.wishlist.length > 0}">
+        <div class="dashed-line">
+            <isset name="shareLinks" value="${pdict.socialLinks}" scope="page" />
+            <isinclude template="wishlist/components/socialsharing" />
+        </div>
+    </isif>
+</div>

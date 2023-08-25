@@ -1,0 +1,53 @@
+<div class="account-wishlist-item ${item.pid}">
+    <div class="row">
+        <div class="col-sm-3">
+            <img class="comparebox-img-custom" src="${item.imageObj.small[0].url}" alt="${item.imageObj.small[0].alt}"
+                title="${item.imageObj.small[0].title}">
+        </div>
+        <div class="col-sm-8">
+            <h3> ${item.name}</h3>
+            <div class="flex-end">
+                <isloop items="${item.variationAttributes}" var="attribute">
+                    <isloop items="${attribute.values}" var="eachValue">
+                        <isif condition="${!!eachValue.selected}" />
+                        <p class="line-item-attributes">${attribute.displayName}: ${eachValue.displayValue}</p>
+                        </isif>
+                    </isloop>
+                </isloop>
+                <isif condition="${item.options}" />
+                <isloop items="${item.options}" var="option">
+                    <isif condition="${!!option}" />
+                    <p class="line-item-attributes">${option.displayName}:${option.displayValue}</p>
+                    </isif>
+                </isloop>
+                </isif>
+                <div class="line-item-availability availability-${item.UUID}">
+                    <isloop items="${item.availability.messages}" var="message">
+                        <p class="line-item-attributes">${message}</p>
+                    </isloop>
+                    <isif condition="${item.availability.inStockDate}">
+                        <p class="line-item-attributes line-item-instock-date">
+                            ${item.availability.inStockDate}
+                        </p>
+                    </isif>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sm-1">
+                <a href="javascript:void(0)" class="remove-btn" onclick="removeFromWishlist(this)"
+                    data-pid="${item.pid}" data-url="${URLUtils.url('Wishlist-RemoveProductAccount', 'pid', item.pid)}"
+                    <isif condition="${item.variantAttributes}">
+                    aria-label="${Resource.msgf('wishlist.remove.item.variant', 'wishlist', null, item.name, item.variantAttributes)}">
+                    <iselse>
+                        aria-label="${Resource.msgf('wishlist.remove.item', 'wishlist', null, item.name)}">
+                        </isif>
+                        <img src="${URLUtils.staticURL('images/delete.svg')}"  alt="remove button"/>
+                </a>
+            </div>
+    </div>
+</div>
+
+
+
+<script src="${URLUtils.staticURL('js/customWishlist.js')}"></script>

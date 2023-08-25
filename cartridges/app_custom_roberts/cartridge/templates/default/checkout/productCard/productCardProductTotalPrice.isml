@@ -1,0 +1,1 @@
+<p class="mb-0 item-total-${lineItem.UUID}">${lineItem.priceTotal.price}</p>

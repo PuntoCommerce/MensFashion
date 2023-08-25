@@ -1,0 +1,50 @@
+{
+  "name": "Custom Tailored Section",
+  "description": "This is a layout component for Custom Tailored Section.",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "customTailoredMain",
+      "name": "Custom Tailored Layout",
+      "description": "Custom tailored Layout Primarily Created for Homepage",
+      "attribute_definitions": [
+        {
+          "id": "leftImage",
+          "name": "Left Image",
+          "description": "Left Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "heading",
+          "name": "Heading",
+          "description": "Heading",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "description",
+          "name": "description",
+          "description": "description",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "description": "Button Text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "buttonUrl",
+          "name": "Button URL",
+          "description": "Button URL",
+          "type": "url",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

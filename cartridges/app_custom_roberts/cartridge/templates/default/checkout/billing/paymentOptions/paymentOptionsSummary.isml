@@ -1,0 +1,19 @@
+<div class="payment-details">
+    <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+        <isif condition="${payment.paymentMethod === 'CREDIT_CARD'}">
+            <isinclude template="checkout/billing/paymentOptions/creditCardSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'PayPal'}">
+            <isinclude template="paypal/checkout/paypalSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'CHECKOUT_PRO'}">
+            <isinclude template="checkout/billing/paymentOptions/checkoutProSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'CFE'}">
+            <isinclude template="checkout/billing/paymentOptions/cfePaymentSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'OpenPay'}">
+            <isinclude template="checkout/billing/paymentOptions/openpaySummary" />
+        </isif>
+    </isloop>
+</div>

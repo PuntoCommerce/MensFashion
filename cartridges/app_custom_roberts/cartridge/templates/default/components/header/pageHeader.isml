@@ -1,0 +1,53 @@
+<header>
+    <iscomment>
+        <isinclude template="/components/header/skipNav" />
+    </iscomment>
+    <isif condition="${pdict.regions.headerbanner}">
+        <!-- Campaign Banner Component renders here -->
+        <isprint value="${pdict.regions.headerbanner.render()}" encoding="off" />
+    </isif>
+  
+    <nav class="navbar navbar-expand-lg navbar-light new-navbar ${pdict.page.ID}">
+        <div class="container-fluid">
+            <div class="row w-100 reverse-mob">
+                <iscomment> <a class="navbar-brand logoheader" href="/">
+                        <img src="${URLUtils.staticURL('/images/logo.svg')}" alt="logo" />
+                    </a> </iscomment>
+                <a class="navbar-brand" href="${URLUtils.url('Home-Show')}"
+                    title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+                           'global.home', 'common', null))}">
+                    <img style="width:200px;" src="${URLUtils.staticURL('/images/logo-v1.svg')}"
+                        alt="${Resource.msg('global.storename', 'common', null)}" />
+                </a>
+                <label for="menu-toggle" class="menu-button">
+                    <span class="navbar-toggler-icon"></span>
+                </label>
+                <iscomment> <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> </iscomment>
+                <!-- include nav -->
+                <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}" />
+                <!-- include nav -->
+                <ul class="login-right">
+                    <li>
+                        <a href="${URLUtils.https('Cart-Show')}">
+                            <img src="${URLUtils.staticURL('/images/search-icon.svg')}" alt="icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <isinclude url="${URLUtils.url('Account-Header')}" />
+                        <isprint value="${breadcrumbValue.htmlValue}" />
+                    </li>
+                    <li class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                        <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                        <iscomment>
+                            <isinclude template="/components/header/miniCart" />
+                        </iscomment>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -108,11 +108,11 @@ server.append('SubmitPayment',
                 });
                 // if account is changed to different one we update billing address and email
                 if (baFromPaymentInstrument.email !== activeBA.email) {
-                    var { billing_info, err: BADetailsError } = getBADetails(paypalPaymentInstrument);
+                    var { shipping_address, billing_info, err: BADetailsError } = getBADetails(paypalPaymentInstrument);
                     if (BADetailsError) {
                         return errorHandle.call(this, req, res, BADetailsError);
                     }
-                    updateBABillingAddress(basket, billing_info);
+                    updateBABillingAddress(basket, billing_info, shipping_address);
                     session.privacy.paypalPayerEmail = billing_info.email;
                 } else {
                     session.privacy.paypalPayerEmail = paypalPaymentInstrument.custom.currentPaypalEmail;

@@ -1,0 +1,20 @@
+<div class="col-sm-7 product-card-price">
+    <div class="row">
+        <!---item unit price --->
+        <div class="col-4 col-sm-3">
+            <p class="line-item-price-info">${Resource.msg('label.each.item.price', 'cart', null)}</p>
+            <isset name="price" value="${item.priceObj}" scope="page" />
+            <isinclude template="/product/components/pricing/defaultWishlist" />
+        </div>
+        <!--- quantity --->
+        <div class="col-4 line-item-quantity">
+            <isinclude template="wishlist/components/productCardQuantitySelector" />
+        </div>
+        <div class="col-4 col-sm-5 total-prices">
+            <p class="cart-heading-black">Total:</p>
+            <p class="cart-f-price">
+                <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+            </p>
+        </div>
+    </div>
+</div>

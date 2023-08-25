@@ -1,0 +1,21 @@
+<div class="custom-pickup-form" id="custom-pickup-form">
+    <label for="search-store-custom" class="form-control-label">${Resource.msg('label.find.store', 'storeLocator', null)}<span class="pickupRequired">${Resource.msg('label.required', 'storeLocator', null)}</span></label>
+    <input class="form-control mb-3" type="text" name="search-store" value="" id="search-store-custom"
+        data-url="${URLUtils.url('Stores-CustomFindStores')}" data-product-id='${JSON.stringify(productItem)}'>
+    <div class="pickup-btns-container mb-2">
+        <button type="button" id="user-location-search-store">
+            Usar mi ubicaccion
+        </button>
+        <button type="button" id="clear-search-store">&times;</button>
+    </div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=${pdict.pickup.googleMapsApi}&libraries=places&callback=initAutocomplete&v=weekly"
+        defer></script>
+    <div id="custom-pickup-results">
+    </div>
+</div>
+<div class="custom-pickup-summary mt-2 mb-2 justify-content-between d-flex d-none" id="custom-pickup-summary" default-store="${JSON.stringify(pdict.pickup.selectedStore)}">
+    <div id="custom-pickup-summary-store">
+        
+    </div>
+</div>

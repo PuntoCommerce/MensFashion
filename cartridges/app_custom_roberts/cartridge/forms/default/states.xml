@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+	<field formid="stateCode" label="label.input.state" type="string" mandatory="true" binding="stateCode" missing-error="address.state.missing" value-error="address.field.invalid" parse-error="error.message.required">
+		<options>
+			<option optionid="" 		label="resource.select" 			value=""/>
+
+			<!-- regular US states -->
+			<option optionid="AGS" 	    label="state.mx.aguascalientes" 	value="AGS"/>
+			<option optionid="BC" 	    label="state.mx.bajacalifornia" 	value="BC"/>
+			<option optionid="BCS" 	    label="state.mx.bajacaliforniasur" 	value="BCS"/>
+			<option optionid="CAMP" 	label="state.mx.campeche" 			value="CAMP"/>
+			<option optionid="CHIS" 	label="state.mx.chiapas" 			value="CHIS"/>
+			<option optionid="CHIH" 	label="state.mx.chihuahua" 			value="CHIH"/>
+			<option optionid="COAH" 	label="state.mx.coahuila" 			value="COAH"/>
+			<option optionid="COL"    	label="state.mx.colima" 			value="COL"/>
+			<option optionid="CDMX" 	label="state.mx.ciudaddemexico" 	value="CDMX"/>
+			<option optionid="DGO" 		label="state.mx.durango" 			value="DGO"/>
+			<option optionid="GTO" 		label="state.mx.guanajuato" 		value="GTO"/>
+			<option optionid="GRO" 		label="state.mx.guerrero" 			value="GRO"/>
+			<option optionid="HGO" 		label="state.mx.hidalgo" 			value="HGO"/>
+			<option optionid="JAL" 		label="state.mx.jalisco" 			value="JAL"/>
+			<option optionid="MEX" 		label="state.mx.edomex" 			value="MEX"/>
+			<option optionid="MICH"		label="state.mx.michoacan" 			value="MICH"/>
+			<option optionid="MOR"		label="state.mx.morelos" 			value="MOR"/>
+			<option optionid="NAY"		label="state.mx.nayarit" 			value="NAY"/>
+			<option optionid="NL"		label="state.mx.nuevoleon" 			value="NL"/>
+			<option optionid="OAX"		label="state.mx.oaxaca" 			value="OAX"/>
+			<option optionid="PUE"		label="state.mx.puebla" 			value="PUE"/>
+			<option optionid="QRO"		label="state.mx.queretaro" 			value="QRO"/>
+			<option optionid="QR"		label="state.mx.quintanaroo" 		value="QR"/>
+			<option optionid="SLP"		label="state.mx.sanluispotosi" 		value="SLP"/>
+			<option optionid="SIN"		label="state.mx.sinaloa"			value="SIN"/>
+			<option optionid="SON"		label="state.mx.sonora" 			value="SON"/>
+			<option optionid="TAB"		label="state.mx.tabasco" 			value="TAB"/>
+			<option optionid="TAMPS"	label="state.mx.tamaulipas" 		value="TAMPS"/>
+			<option optionid="TLAX"		label="state.mx.tlaxcala" 			value="TLAX"/>
+			<option optionid="VER"		label="state.mx.veracruz" 			value="VER"/>
+			<option optionid="YUC"		label="state.mx.yucatan" 			value="YUC"/>
+			<option optionid="ZAC"		label="state.mx.zacatecas" 			value="ZAC"/>
+
+			<!-- Other -->
+			<!-- <option optionid="OTRO" label="state.mx.other" 				value="OTRO"/> -->
+		</options>
+	</field>
+</form>

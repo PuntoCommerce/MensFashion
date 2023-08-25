@@ -1,0 +1,17 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+<div class="">
+  <img class="d-none d-lg-block" src="${pdict.backgroundImage.src.desktop}" alt="backgroud image" />
+  <img class="d-lg-none" src="${pdict.mobbackgroundImage.src.desktop}" alt="backgroud image" />
+  <div class="carousel-caption ${pdict.selectTextlocation}">
+      <h3>
+        ${pdict.bannerTextOne}
+      </h3>
+      <h2>
+      ${pdict.bannerTextTwo}
+      </h2>
+    <a class="btn-banner" href="${pdict.buttonUrl}">${pdict.buttonText}</a>
+  </div>
+</div>

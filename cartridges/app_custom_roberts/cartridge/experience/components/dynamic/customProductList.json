@@ -1,0 +1,130 @@
+{
+  "name": "Robert's Product Listing Layout",
+  "description": "Robert's Product Listing Layout",
+  "group": "dynamic",
+  "attribute_definition_groups": [
+    {
+      "id": "productList",
+      "name": "Settings",
+      "description": "Product List Settings",
+      "attribute_definitions": [
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "category",
+          "required": true,
+          "dynamic_lookup":{
+              "aspect_attribute_alias": "category"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bannerType",
+      "name": "Banner Type Selection",
+      "description": "Banner Type Selection",
+      "attribute_definitions": [
+        {
+          "id":"selectBannerType",
+          "name": "Banner Types",
+          "description": "Choose type banner to display",
+          "type": "enum",
+          "values": ["Visual-Filter", "Full-banner", "No-Banner"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "visualFilterBanner",
+      "name": "Visual Filter Type Banner",
+      "description": "Visual Filter Type Banner",
+      "attribute_definitions": [
+        {
+          "id":"visualFilterText",
+          "name": "Text",
+          "description": "Test to display on banner",
+          "type": "markup",
+          "required": false
+        },
+        {
+          "id":"category1Image",
+          "name": "Category 1 Image",
+          "description": "category 1 Image",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id":"category1Text",
+          "name": "Category 1 Text",
+          "description": "category 1 Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"category1Url",
+          "name": "Category 1 URL",
+          "description": "category 1 URL",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id":"category2Image",
+          "name": "Category 2 Image",
+          "description": "category 2 Image",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id":"category2Text",
+          "name": "Category 2 Text",
+          "description": "category 2 Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"category2Url",
+          "name": "Category 2 URL",
+          "description": "category 2 URL",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id":"category3Image",
+          "name": "Category 3 Image",
+          "description": "category 3 Image",
+          "type": "image",
+          "required": false
+        },
+        {
+          "id":"category3Text",
+          "name": "Category 3 Text",
+          "description": "category 3 Text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "id":"category3Url",
+          "name": "Category 3 URL",
+          "description": "category 1 URL",
+          "type": "url",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "fullBanner",
+      "name": "Full Banner",
+      "description": "Banner Type Selection",
+      "attribute_definitions": [
+        {
+          "id":"fullBannerImage",
+          "name": "Full Banner Image",
+          "description": "Choose Full Banner Image to display",
+          "type": "image",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}

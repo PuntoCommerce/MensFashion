@@ -1,0 +1,25 @@
+<isloop items="${menuItem.subCategories}" var="category">
+    <isif condition="${category.subCategories}">
+        <li>
+            <input type="checkbox" id="sub-${category.id}" class="submenu-toggle" />
+            <span><a href="${category.url}">${category.name}</a></span>
+            <label class="arrow right" for="sub-${category.id}"><img src="${URLUtils.staticURL('/images/chevron-right.svg')}"" alt=""></label>
+            <ul class="menu-sub">
+                <li class="menu-sub-title">
+                    <label class="arrow left" for="sub-${category.id}"><img src="${URLUtils.staticURL('/images/chevron-left.svg')}"" alt=""></label>
+                    <span class="center-subcategory-menu"><a href="${category.url}">${category.name}</a></span>
+                </li>
+                <isset name="menuItem" value="${category}" scope="page" />
+                <isinclude template="components/header/Mobilemenuitem" />
+            </ul>
+        </li>
+    <iselse>
+        <li><a href="${category.url}">${category.name}</a></li>
+    </isif>
+
+</isloop>
+<iscomment> <isloop items="${menuItem.subCategories}" var="category">
+    <isif condition="${!category.subCategories}">
+        <li><a href="${category.url}">${category.name}</a></li>
+    </isif>
+</isloop> </iscomment>

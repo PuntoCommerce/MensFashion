@@ -1,0 +1,132 @@
+{
+  "name": "Visual category Grid",
+  "description": "This is a layout component for Visual category Grid.",
+  "group": "commerce_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "visualCategoryMain",
+      "name": "Visual Category Layout",
+      "description": "Visual Category  Layout Primarily Created for Homepage",
+      "attribute_definitions": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "description": "Heading",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "imageCat1",
+          "name": "Image category 1",
+          "description": "Image category 1",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "mobimageCat1",
+          "name": "Mobile image category 1",
+          "description": "Mobile Image Category 1 ",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "textCat1",
+          "name": "Text category 1",
+          "description": "Text category 1",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "urlCat1",
+          "name": "URL category 1",
+          "description": "URL category 1",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "imageCat2",
+          "name": "Image category 2",
+          "description": "Image category 2",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "mobimageCat2",
+          "name": "Mobile image category 2",
+          "description": "Mobile Image Category 2 ",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "textCat2",
+          "name": "Text category 2",
+          "description": "Text category 2",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "urlCat2",
+          "name": "URL category 2",
+          "description": "URL category 2",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "imageCat3",
+          "name": "Image category 3",
+          "description": "Image category 3",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "mobimageCat3",
+          "name": "Mobile image category 3",
+          "description": "Mobile Image Category 3 ",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "textCat3",
+          "name": "Text category 3",
+          "description": "Text category 3",
+          "type": "string",
+          "required": true
+        },
+        {
+          "id": "urlCat3",
+          "name": "URL category 3",
+          "description": "URL category 3",
+          "type": "url",
+          "required": false
+        },
+            {
+              "id": "selectCategroyGrid",
+              "name": "Visual category Grid",
+              "description": "Choose Visual category Grid type",
+              "type": "enum",
+              "values": [
+                "Vertical left with two horizontal",
+                "Vertical right with two horizontal",
+                "three verticals"
+              ],
+              "required": true
+            },
+        
+            {
+              "id": "selectMobileCategroyGrid",
+              "name": "Mobile Visual category Grid",
+              "description": "Choose Mobile Visual category Grid type",
+              "type": "enum",
+              "values": [
+                "One Vertical left and Two horizontal",
+                "Vertical right with two horizontal",
+                "Two vertical and one horizontal down"
+              ],
+              "required": true
+            }
+          
+      ]
+    }
+  ],
+  "region_definitions": []
+}

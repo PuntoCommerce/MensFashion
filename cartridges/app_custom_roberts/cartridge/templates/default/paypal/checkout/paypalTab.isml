@@ -1,0 +1,8 @@
+<div class="form-check form-check-inline border-payment ">
+    <a class="nav-link paypal-tab" data-toggle="tab" href="#paypal-content" role="tab">
+        <input class="form-check-input common_payment_radio" type="radio" name="inlineRadioOptions" id="paypal_payment_radio" value=" option3">
+        <iscomment> <span>${paymentOption.name}</span> </iscomment>
+        <label class="form-check-label" for="inlineRadio3">Pago con PayPal </label>
+        <img src="${URLUtils.staticURL('/images/paypay-logo.svg')}" alt="${paymentOption.name}" title="${paymentOption.name}" class="float-right">
+    </a>
+</div>

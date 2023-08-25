@@ -1,41 +1,51 @@
-<isset name="cfe" value="${pdict.forms.billingForm.CFE}" scope="page" />
+<isset name="cfe" value="${pdict.forms.billingForm.cfe}" scope="page" />
 <div class="tab-pane cfe-pay-content" id="cfe-pay-content" role="tabpanel">
    <div id="payment-form-cfe">
       <p> ${Resource.msg('heading.checkout.CFEPayment.card', 'checkout', null)}</p>
       <fieldset class="payment-form-fields">
          <input type="hidden" name="use_card_points" id="use_card_points" value="false">
-         <input type="hidden" class="form-control" name="${pdict.forms.billingForm.paymentMethod.htmlName}"
-            value="CFE">
+         <input type="hidden" class="form-control" name="${pdict.forms.billingForm.paymentMethod.htmlName}" value="CFE">
          <div class="pymnt-itm card active">
             <div class="pymnt-cntnt">
                <div class="row">
+               <div class="d-flex flex-column col-12 form-group">
+                     <label class="form-control-label">${Resource.msg('field.credit.card.number', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                        placeholder="${Resource.msg('placeholder.input.cfe.number', 'cfe_payment', null)}" <isprint
+                        value=${cfe.card_number.attributes} encoding="off" />
+                     <isprint value=${cfe.card_number_cfe.attributes} encoding="off" />
+                     >
+                  </div>
+
                   <div class="d-flex flex-column col-12 form-group">
-                     <label class="form-control-label">${Resource.msg('field.credit.card.name', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                     <label class="form-control-label">${Resource.msg('field.credit.card.id', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
                         placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
                         value=${cfe.name_cfe.attributes} encoding="off" />
                      >
                   </div>
+                  <iscomment>
+                     <div class="d-flex flex-column col-12 form-group">
+                        <label class="form-control-label">${Resource.msg('field.credit.card.PIN', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
+                           placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
+                           value=${cfe.name_cfe.attributes} encoding="off" />
+                        >
+                     </div>
+                  </iscomment>
+
                   <div class="d-flex flex-column col-12 form-group">
-                     <label class="form-control-label">${Resource.msg('field.credit.card.name2', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
-                        placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
-                        value=${cfe.name_cfe.attributes} encoding="off" />
-                     >
-                  </div>
-                  <div class="d-flex flex-column col-12 form-group">
-                     <label class="form-control-label">${Resource.msg('field.credit.card.PIN', 'creditCard', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label><input class="form-control"
-                        placeholder="${Resource.msg('placeholder.input.cfe.name', 'cfe_payment', null)}" <isprint
-                        value=${cfe.name_cfe.attributes} encoding="off" />
+                     <label class="form-control-label">${Resource.msg('placeholder.input.cfe.nip', 'cfe_payment', null)}<span>${Resource.msg('field.credit.card.required', 'creditCard', null)}</span></label>
+                     <button onclick="showPassword()" class="show-password-checkout" type="button">
+                        <img src="${URLUtils.staticURL('images/checkout/show_password.svg')}" alt="show password">
+                     </button>
+                     <input type="password" class="form-control show-password"
+                        placeholder="${Resource.msg('placeholder.input.cfe.nip', 'cfe_payment', null)}" <isprint
+                        value=${cfe.cvv_cfe.attributes} encoding="off" />
                      >
                   </div>
                </div>
             </div>
          </div>
-          <input id="device_session_id_field" style="visibility: hidden;" <isprint
+         <input id="device_session_id_field_cfe" style="visibility: hidden;" <isprint
             value=${cfe.device_session_id.attributes} encoding="off" /> >
       </fieldset>
    </div>
 </div>
-<isscript>
-   var assets = require('*/cartridge/scripts/assets.js');
-   assets.addJs('/js/openpay.js');
-</isscript>

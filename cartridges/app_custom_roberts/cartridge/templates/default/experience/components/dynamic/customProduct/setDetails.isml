@@ -1,0 +1,60 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/productDetail.js');
+    assets.addCss('/css/product/detail.css');
+</isscript>
+
+<iscomment>
+    It is necessary to set both "set" and "product" to pdict.product here as the downstream.
+</iscomment>
+
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="productCopy" value="${pdict.product}" scope="page" />
+<isset name="isBundle" value="${false}" scope="page" />
+<isset name="isProductSet" value="${true}" scope="page" />
+<isset name="isQuickView" value="${false}" scope="page" />
+<isobject object="${product.raw}" view="detail" />
+
+<div class="container-fluid product-detail product-set-detail" data-pid="${product.id}">
+    <div class="row">
+        <div class="col-12">
+            <!---Breadcrumbs--->
+            <div class="product-breadcrumb">
+                <isinclude template="components/breadcrumbs/pageBreadcrumbs" />
+            </div>
+            <!-- Product Name -->
+            <iscomment>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="product-name">${product.productName}</h1>
+                    </div>
+                </div>
+            </iscomment>
+        </div>
+    </div>
+    <iscomment>
+        <hr>
+    </iscomment>
+    <iscomment>
+        <div class="row">
+            <div class="col-12">
+                <h4>${Resource.msg('label.set.contains', 'product', null)}</h4>
+            </div>
+        </div>
+    </iscomment>
+    <isinclude template="product/components/setItems" />
+    <iscomment>
+        <hr>
+    </iscomment>
+   
+    <div class="col-sm-6 offset-sm-6 bundle-footer row justify-content-md-center">
+        <!-- Quantity -->
+        <div class="detail-products  prices-add-to-cart-actions detail-products bundle-product col-sm-9">
+            <isset name="product" value="${productCopy}" scope="page" />
+            <!-- Prices -->
+            <isinclude template="product/components/buyNowProduct" />
+            <!-- Cart and [Optionally] Apple Pay -->
+            <isinclude template="product/components/addToCartGlobal" />
+        </div>
+    </div>
+</div>

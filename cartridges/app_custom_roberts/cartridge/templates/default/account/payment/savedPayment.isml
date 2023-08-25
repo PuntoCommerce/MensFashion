@@ -1,0 +1,3 @@
+<h3>${Resource.msg('label.payment.credit','account',null)}</h3>
+<p>${payment.maskedCreditCardNumber} <br>  ${payment.creditCardType}</p>
+

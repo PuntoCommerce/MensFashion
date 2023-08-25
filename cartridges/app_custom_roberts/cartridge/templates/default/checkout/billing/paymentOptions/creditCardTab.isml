@@ -1,0 +1,7 @@
+<div class="form-check form-check-inline border-payment" data-method-id="${paymentOption.ID}">
+    <a class="nav-link credit-card-tab" data-toggle="tab" href="#credit-card-content" role="tab">
+        <input class="form-check-input common_payment_radio" type="radio" name="inlineRadioOptions" id="inlineRadio3" value=" option3">
+        <label class="form-check-label" for="inlineRadio3">Pago con tarjeta de crédito/débito </label>
+        <img src="${URLUtils.staticURL('/images/payment-card.svg')}" alt="${paymentOption.name}" title="${paymentOption.name}" class="float-right">
+    </a>
+</div>

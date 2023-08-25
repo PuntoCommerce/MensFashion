@@ -1,0 +1,9 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/landingText.css');
+</isscript>
+
+<span style="font-size:${pdict.fontSize}"
+    class="landing-text landing-text-align-${pdict.textAlign} mb-${pdict.marginBottom} mt-${pdict.marginTop}">
+    <isprint value="${pdict.text}" encoding="off" />
+</span>

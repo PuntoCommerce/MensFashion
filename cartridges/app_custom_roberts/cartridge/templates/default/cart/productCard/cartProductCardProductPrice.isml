@@ -1,0 +1,47 @@
+<iscomment> <div class="precio">
+    <p class="cart-heading-black">Precio:</p>
+    <p class="line-through">$6,990</p>
+    <p class="cart-f-price">$3,495</p>
+</div> </iscomment>
+<!---item price--->
+<div class="precio line-item-price-${lineItem.UUID}">
+    <iscomment> <p class="cart-heading-black">Precio:</p> </iscomment>
+    <p class="cart-heading-black">${Resource.msg('label.each.item.price', 'cart', null)}</p>
+    <isset name="price" value="${lineItem.price}" scope="page" />    
+    <iscomment> <p class="line-through">
+    $6,990
+    </p> </iscomment>
+    <p class="cart-f-price">
+    <isinclude template="/product/components/pricing/main" />
+    <iscomment> ${price.formatted} </iscomment>
+    <iscomment> <span class="sr-only">
+        ${Resource.msg('label.price.to', 'pricing', null)}
+    </span> </iscomment>
+    </p>
+</div>
+
+<iscomment> <div class="cantidad">
+    <p class="cart-heading-black">Cantidad:</p>
+    <div id="qty">
+        <button type="button" id="sub" class="sub">
+            <img src="images/line-icon.svg" alt="line">
+        </button>
+        <input type="number" id="1" value="1" min="1" max="3" />
+        <button type="button" id="add" class="add">
+            <img src="images/plus.svg" alt="icon">
+        </button>
+    </div>
+</div> </iscomment>
+
+<!--- quantity --->
+<div class="line-item-quantity quantity-selected">
+    <isinclude template="checkout/productCard/productCardQuantitySelector" />
+</div>
+
+<!--- line item total price --->
+<div class="total-prices">
+    <p class="cart-heading-black">Total:</p>
+    <p class="cart-f-price">
+        <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+    </p>
+</div>

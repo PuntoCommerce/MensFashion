@@ -1,0 +1,72 @@
+<div id="cfe-checkout-pro-a" class="form-check form-check-inline border-payment" data-method-id="${paymentOption.ID}">
+     <a class="nav-link" href="${URLUtils.url('Checkout-CFEBegin', 'stage', 'payment')}">
+        <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 24px;width: 24px;position: relative;">
+                        <div class="inner-circle2 d-none"
+                            style="background: #0a3356;border-radius: 50%;height: 16px;width: 16px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label" for="inlineRadio3">Pago con tarjeta CFE </span>
+                </div>
+            </div>
+
+            <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/img-cfe.png')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</div>
+
+
+<div class="form-check form-check-inline border-payment" id="cfe-checkout-pro-main" data-method-id="${paymentOption.ID}"
+    style="display:none;">
+    <a class="nav-link cfe-tab" data-toggle="tab" href="#cfe-pay-content" role="tabpanel">
+       <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 24px;width: 24px;position: relative;">
+                        <div class="inner-circle2 d-none"
+                            style="background: #0a3356;border-radius: 50%;height: 16px;width: 16px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label" for="inlineRadio3">Pago con tarjeta CFE </span>
+                </div>
+            </div>
+
+            <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/img-cfe.png')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</div>
+
+
+<iscomment> <div id="mp-checkout-pro-a" class="form-check form-check-inline border-payment" data-method-id="${paymentOption.ID}">
+    <a class="nav-link cfe-tab" data-toggle="tab" href="#cfe-pay-content" role="tab">
+        <div class="anchor-container" style="display:flex; align-items: center; justify-content:space-between;">
+            <div class="radio-label" style="display:flex; align-items: center;">
+                <div class="check-decorator-payment" style="margin-right:5px;">
+                    <div class="outer-circle"
+                        style="background: #fff;border: 1px solid #d0d0d0;border-radius: 50%;height: 24px;width: 24px;position: relative;">
+                        <div class="inner-circle d-none"
+                            style="background: #0a3356;border-radius: 50%;height: 16px;width: 16px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%)">
+                        </div>
+                    </div>
+                </div>
+                <div class="label-payment">
+                    <span class="form-check-label" for="inlineRadio3">Pago con tarjeta CFE </span>
+                </div>
+            </div>
+
+            <img class="credit-card-option" width="100px" src="${URLUtils.staticURL('/images/img-cfe.png')}"
+                alt="${paymentOption.name}" title="${paymentOption.name}" />
+        </div>
+    </a>
+</div> </iscomment>
+

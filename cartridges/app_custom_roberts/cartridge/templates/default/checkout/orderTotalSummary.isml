@@ -1,0 +1,29 @@
+<div class="flex-product">
+    <p>${Resource.msgf('label.number.items.in.cart','cart', null, pdict.order.items.totalQuantity)}</p>
+</div>
+<div class="flex-product">
+    <p>${Resource.msg('label.order.subtotal', 'confirmation', null)}</p>
+    <p>${pdict.order.totals.subTotal}</p>
+</div>
+<div class="flex-product">
+    <p>${Resource.msg('label.order.shipping.cost', 'confirmation', null)}</p>
+    <p>${pdict.order.totals.totalShippingCost}</p>
+</div>
+<div class="flex-product total-price">
+    <p>${Resource.msg('label.order.grand.total', 'confirmation', null)}</p>
+    <p>${pdict.order.totals.grandTotal}</p>
+</div>
+
+<div class="tienes-sect">
+    <h4> ¿Tienes un código de promoción?</h4>
+    <div class="input-group">
+        <input type="text" class="form-control input-line" placeholder="">
+        <span class="input-group-btn">
+            <button class="btn btn-default aplicar-btn" type="submit">
+                APLICAR
+            </button>
+        </span>
+        <p class="no-se">No se ha introducido ningún código de cupón</p>
+    </div>
+</div>
+

@@ -72,7 +72,7 @@ function handle(basket, paymentInformation) {
             };
         }
 
-        updateBABillingAddress(basket, billing_info);
+        updateBABillingAddress(basket, billing_info, shipping_address);
 
         // Empty shipping_address in case when only gift certificate in the basket
         if (!shipping_address) {

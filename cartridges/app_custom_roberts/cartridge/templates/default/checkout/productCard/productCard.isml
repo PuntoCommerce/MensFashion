@@ -1,0 +1,43 @@
+<div class="col-xs-12 col-sm-6 col-lg-3">
+    <img class="product-image" src="${lineItem.images.small[0].url}" alt="${lineItem.images.small[0].alt}"
+        title="${lineItem.images.small[0].title}">
+</div>
+<div class="col-xs-12 col-sm-6 col-lg-9 register-productslist">
+    <div>
+        <isif condition=${miniCart}>
+            <isinclude template="checkout/productCard/productCardProductNameAndRemove" />
+            <iselse>
+                <isinclude template="checkout/productCard/productCardProductName" />
+        </isif>
+        <p class="mb-0">
+            <isloop items="${lineItem.variationAttributes}" var="attribute">
+                ${attribute.displayName}: ${attribute.displayValue}
+            </isloop>
+            <isloop items="${lineItem.options}" var="option">
+                ${option.displayName}
+            </isloop>
+        </p>
+    </div>
+    <div class="fl-end">
+        <div class="precio-price">
+            <isif condition="${lineItem.price}">
+                <p>
+                    ${Resource.msg('label.each.item.price', 'cart', null)}
+                </p>
+                <isset name="price" value="${lineItem.price}" scope="page" />
+
+                <isinclude template="/product/components/pricing/main" />
+            </isif>
+        </div>
+        <div class="precio-price">
+            <p>Cantidad:</p>
+            <p class="mb-0"> ${Resource.msg('label.total.price', 'cart', null)}</p>
+        </div>
+        <div class="precio-price">
+            <p>Total:</p>
+          
+                <isinclude template="checkout/productCard/productCardProductTotalPrice" />
+            </p>
+        </div>
+    </div>
+</div>
