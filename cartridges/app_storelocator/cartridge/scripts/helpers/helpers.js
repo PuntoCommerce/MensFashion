@@ -1,156 +1,132 @@
 var predefinedStores = [
     {
         lowercase: "Ciudad de México",
-        capital: "Ciudad de México",
         stores: [],
         index: 0,
     },
     {
-        lowercase: "DF",
-        capital: "DF",
+        lowercase: "Df",
         stores: [],
         index: 1,
     },
     {
         lowercase: "Estado de México",
-        capital: "EDO MÉX",
-        abbreviation: "MEX",
         stores: [],
         index: 2,
     },
     {
         lowercase: "Aguascalientes",
-        capital: "AGUASCALIENTES",
         stores: [],
         index: 3,
     },
-    {
-        lowercase: "Coahuila",
-        capital: "Coahuila",
+   /*  {
+        lowercase: "Baja California",
         stores: [],
         index: 4,
     },
-    {
+     {
         lowercase: "Chihuahua",
-        capital: "Chihuahua",
         stores: [],
         index: 5,
     },
     {
-        lowercase: "Guanajuato",
-        abbreviation: "GTO",
-        capital: "GUANAJUATO",
+        lowercase: "Coahuila",
         stores: [],
         index: 6,
     },
     {
-        lowercase: "Guerrero",
-        capital: "Guerrero",
+        lowercase: "Durango",
         stores: [],
         index: 7,
     },
+     
     {
-        lowercase: "Durango",
-        capital: "Durango",
-        stores: [],
-        index: 8,
-    },
-    {
-        lowercase: "Baja California",
-        capital: "Baja California",
+        lowercase: "Guerrero",
         stores: [],
         index: 9,
     },
-    {
-        lowercase: "Hidalgo",
-        abbreviation: "HGO",
-        stores: [],
-        index: 10,
-    },
-    {
-        lowercase: "Jalisco",
-        capital: "Jalisco",
-        stores: [],
-        index: 11,
-    },
-    {
-        lowercase: "Jalisco",
-        capital: "Jalisco",
-        stores: [],
-        index: 12,
-    },
-    {
-        lowercase: "Michoacán",
-        capital: "Michoacán",
+     {
+        lowercase: "Morelos",
         stores: [],
         index: 13,
     },
     {
-        lowercase: "Morelos",
-        capital: "Morelos",
-        stores: [],
-        index: 14,
-    },
-    {
-        lowercase: "Morelos",
-        capital: "Morelos",
+        lowercase: "Oaxaca",
         stores: [],
         index: 15,
     },
-    {
-        lowercase: "Nuevo León",
-        capital: "Nuevo León",
-        stores: [],
-        index: 16,
-    },
-    {
-        lowercase: "Oaxaca",
-        capital: "Oaxaca",
-        stores: [],
-        index: 17,
-    },
-    {
-        lowercase: "Puebla",
-        capital: "Puebla",
-        stores: [],
-        index: 18,
-    },
-    {
-        lowercase: "Querétaro",
-        abbreviation: "QRO",
+     {
+        lowercase: "Sonora",
         stores: [],
         index: 19,
     },
-    {
-        lowercase: "San Luis Potosí",
-        capital: "San Luis Potosí",
-        stores: [],
-        index: 20,
-    },
-    {
-        lowercase: "Sonora",
-        capital: "Sonora",
+     {
+        lowercase: "Veracruz",
         stores: [],
         index: 21,
     },
     {
-        lowercase: "Tlaxcala",
-        capital: "Tlaxcala",
+        lowercase: "Zacatecas",
         stores: [],
         index: 22,
     },
+    */
+    
     {
-        lowercase: "Veracruz",
-        capital: "Veracruz",
+        lowercase: "Guanajuato",
         stores: [],
-        index: 23,
+        index: 4,
     },
     {
-        lowercase: "Zacatecas",
-        capital: "Zacatecas",
+        lowercase: "Hidalgo",
         stores: [],
-        index: 24,
+        index: 5,
     },
+    
+    {
+        lowercase: "Jalisco",
+        stores: [],
+        index: 6,
+    },
+    {
+        lowercase: "Michoacán",
+        stores: [],
+        index: 7,
+    },
+   
+    {
+        lowercase: "Nuevo León",
+        stores: [],
+        index: 8,
+    },
+    
+    {
+        lowercase: "Puebla",
+        stores: [],
+        index: 9,
+    },
+    {
+        lowercase: "Querétaro",
+        stores: [],
+        index: 10,
+    },
+    {
+        lowercase: "San Luis Potosí",
+        stores: [],
+        index: 11,
+    },
+   
+    {
+        lowercase: "Tlaxcala",
+        stores: [],
+        index: 12,
+    },
+    {
+        lowercase: "Toluca",
+        stores: [],
+        index: 13,
+    },
+   
 ];
 
 function getListCodesStates(options) {

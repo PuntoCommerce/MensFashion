@@ -1,14 +1,14 @@
 
 <isdecorate template="common/layout/page">
   <section>
-    <div class="text-center">
+    <div class="text-center container-title-stores">
       <h2 class="font-weight-bold">TODAS LAS TIENDAS</h2>
     </div>
     <div class="c-margin-table-stores pt-4">
       <isloop items=${pdict.storelocator.stores.body.data} var="stores">
         <div class="row my-2">
           <div class="col-sl-12 col-md-6 col-lg-12 col-xl-12 text-left conteiner-title-state">
-            <p><strong>${stores.lowercase}</strong></p>
+            <p class="${stores.lowercase}"><strong>${stores.lowercase}</strong></p>
           </div>
           
         </div>

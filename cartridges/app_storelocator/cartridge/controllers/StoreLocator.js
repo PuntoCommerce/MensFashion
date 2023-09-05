@@ -3,6 +3,7 @@ const Site = require("dw/system/Site");
 const SystemObjectMgr = require("dw/object/SystemObjectMgr");
 const StoreMgr = require("dw/catalog/StoreMgr");
 const URLUtils = require("dw/web/URLUtils");
+const { getStores } = require("~/cartridge/scripts/helpers/helpers.js");
 
 server.get("Start", (req, res, next) => {
   const currentSite = Site.getCurrent();
@@ -131,26 +132,28 @@ server.get('MapList', function (req, res, next) {
     null
   );
 
-  let storeList = [];
+  var storeList = [];
 
-
-  while (stores.hasNext()) {
-    let store = stores.next();
-    
-      
-      storeList.push({
-        id: store.ID,
-        name: store.name,
-        address: store.address1,
-        city: store.city,
-        state: store.stateCode,
-        postalCode: store.postalCode,
-        phone: store.phone,
-        latitude: store.latitude,
-        longitude: store.longitude,
-      });
+  try {
+    var states = getStores(stores);
+    storeList = {
+      code: 200,
+      status: "ok",
+      body: {
+        msg: "Get all codes states",
+        data: states
+      }
+    }
+  } catch (error) {
+    storeList = {
+      code: 500,
+      status: "Internal Server Error",
+      body: {
+        msg: error,
+        data: []
+      }
+    }
   }
-
 
   const clusterMarker = URLUtils.staticURL(
     "/images/storelocator/clusterMarker.svg"

@@ -4163,15 +4163,24 @@ header nav.homepage:hover {
   width: 40px;
 }
 
-.checkout-alert-register-card-close{
+.checkout-alert-register-card-close {
+  background: transparent;
+  border: 1px solid #000000;
+  color: black;
+  height: 28px;
+  width: 243px;
+  margin-top: 10px;
+}
+
+.checkout-alert-register-card-closex{
   background: transparent;
   border: none;
   color: black;
   height: 10px;
   width: 10px;
   position: absolute;
-  right: 41%;
-  top: 37%;
+  top: 16rem;
+  right: 39rem;
 }
 
 .checkout-alert-register-card-close  p{
@@ -7476,6 +7485,7 @@ a .oauth-facebook--button {
   }
   .btn-map-list{
     display: block;
+    margin-top: 11rem !important;
   }
 
   .title-stores h2{
@@ -8237,4 +8247,129 @@ li.selectable.actives {
 
 .conteiner-title-state{
     padding-left: 5rem;
+}
+
+.c-margin-table-stores .Df{
+  display: none;
+}
+
+.container-title-stores{
+  padding: 10px;
+}
+
+.container-title-stores h2{
+  font-size: 32px;
+}
+
+/*Design mobile chat whatsApp & popup-cookies*/
+@media (max-width: 991px) {
+    .chatWP {
+        text-align: right !important;
+        width: 50px !important;
+        padding: 5px 5px 5px 2px !important;
+        height: 50px;
+        top: 60%;
+    }
+    
+
+    .chatWP a {
+        display: contents !important;
+    }
+
+    .chatWP .span-wp {
+        display: none;
+    }
+
+    .checkout-popup-alert {
+      width: 100%;
+      left: 50% !important;
+      top: 85% !important;
+  }
+
+  .checkout-popup-alert-card {
+      width: 100% !important;
+      height: 150px !important;
+      padding: 0;
+  }
+
+  .checkout-popup-alert-card-info {
+      padding: 0 10px;
+      width: 100%;
+      height: 100px;
+  }
+
+  .checkout-popup-alert-card-info p{
+    margin-bottom: 0 !important
+  }
+
+  .checkout-alert-register-card-close {
+    width: 121px;
+    margin-top: 0 !important;
+}
+
+.checkout-alert-register-card-closex {
+    top: 16.5rem;
+    right: 1.5rem;
+}
+
+#map-list #search-storelocator{
+  height: 10%;
+  background-color: #F7F1ED;
+}
+
+#storelocator-search {
+  width: 100%;
+}
+
+.storelocator-container{
+  min-height: 100rem;
+  margin-right: -30px !important;
+  padding-right: 5px;
+}
+
+#map {
+  width: 100% !important;
+  
+}
+
+#map-list{
+  height: 100% !important;
+  margin-top:  4rem;
+  padding-top: 0 !important;
+  margin-bottom: 20px;
+}
+
+#map-list #listing {
+  min-height: 700px;
+}
+.container-list table{
+  margin-left: 0 !important;
+}
+
+.conteiner-title-state{
+  padding-left: 2rem !important;
+}
+
+.c-margin-table-stores{
+  margin: 0 1rem !important;
+}
+
+.c-margin-table-stores table{
+  margin: 0 0 0 10px !important;
+}
+
+.add-to-cart-messages {
+  z-index: 1000;
+  bottom: 0 !important;
+  margin-left: 0 !important;
+}
+
+.span.original_sales.sales{
+  font-size: 10px !important;
+}
+
+.img-home{
+  top: 170px !important;
+  left: 24% !important;
+}
 }
