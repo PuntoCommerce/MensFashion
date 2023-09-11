@@ -193,7 +193,7 @@ module.exports.execute = () => {
                 shippingPriceAdjustment
             ),
             paymentInfo: handlePayment(paymentTransaction),
-            oppName: "2"+ order.orderNo,
+            oppName: order.orderNo,
             cadena: "Robert's",
             // Robert's
             OrderDiscountDetailsTotal: discounts,
