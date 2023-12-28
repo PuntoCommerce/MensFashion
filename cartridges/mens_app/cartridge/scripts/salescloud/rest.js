@@ -1,6 +1,7 @@
 const ServiceCredential = require("dw/svc/ServiceCredential");
 const LocalServiceRegistry = require("dw/svc/LocalServiceRegistry");
 const Resource = require("dw/web/Resource");
+const Logger = require("dw/system/Logger");
 
 /**
  * Create URL for a call
@@ -69,13 +70,17 @@ module.exports = (function () {
       var result;
       try {
         result = restService.setThrowOnError().call(data);
+        
+
       } catch (error) {
         return {error: true, detail: error};
         throw new Error();
       }
       if (result.isOk()) {
+        Logger.info("isOk: " + result);
         return restService.response;
       } else {
+        Logger.info("error: " + result);
         return {error: true, detail: result};
       }
     },

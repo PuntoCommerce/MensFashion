@@ -108,6 +108,8 @@ module.exports.execute = () => {
 
     const token = getToken();
 
+    Logger.info("token: " + JSON.stringify(token));
+
     var order;
     var body;
     var salesOrderId;
@@ -218,16 +220,20 @@ module.exports.execute = () => {
             pricebookId: pricebook,
         };
 
-        logger.debug("body: ", JSON.stringify(body));
+        Logger.info("body: " + JSON.stringify(body));
         
         //Mandar orden
         salesOrderId = sendOrder(body, token);
+
+        Logger.info("Result Raw: " + JSON.stringify(salesOrderId));
+
 
         if (!salesOrderId.error) {
             Transaction.wrap(() => {
                 order.custom.SalesCloudOrderId = salesOrderId;
             });
         } else {
+
             logger.error("OrderError {0}", JSON.stringify(body));
         }
     }
